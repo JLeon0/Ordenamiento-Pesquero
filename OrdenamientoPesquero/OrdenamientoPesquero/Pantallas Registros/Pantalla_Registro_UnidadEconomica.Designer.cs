@@ -34,8 +34,8 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.sepada_escudologosiglas_450x85;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Image = global::OrdenamientoPesquero.Properties.Resources.sepada_escudologosiglas_450x85;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(894, 84);

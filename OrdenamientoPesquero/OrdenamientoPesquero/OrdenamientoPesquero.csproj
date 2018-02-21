@@ -52,28 +52,28 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pantalla_registro_embarcacion.cs">
+    <Compile Include="Pantallas Registros\Pantalla_registro_embarcacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pantalla_registro_embarcacion.Designer.cs">
+    <Compile Include="Pantallas Registros\Pantalla_registro_embarcacion.Designer.cs">
       <DependentUpon>Pantalla_registro_embarcacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pantalla_Registro_UnidadEconomica.cs">
+    <Compile Include="Pantallas Registros\Pantalla_Registro_UnidadEconomica.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pantalla_Registro_UnidadEconomica.Designer.cs">
+    <Compile Include="Pantallas Registros\Pantalla_Registro_UnidadEconomica.Designer.cs">
       <DependentUpon>Pantalla_Registro_UnidadEconomica.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pantalla_Registro_Usuario.cs">
+    <Compile Include="Pantallas Registros\Pantalla_Registro_Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pantalla_Registro_Usuario.Designer.cs">
+    <Compile Include="Pantallas Registros\Pantalla_Registro_Usuario.Designer.cs">
       <DependentUpon>Pantalla_Registro_Usuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pantalla_Regitro_permiso.cs">
+    <Compile Include="Pantallas Registros\Pantalla_Regitro_permiso.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Pantalla_Regitro_permiso.Designer.cs">
+    <Compile Include="Pantallas Registros\Pantalla_Regitro_permiso.Designer.cs">
       <DependentUpon>Pantalla_Regitro_permiso.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
@@ -81,10 +81,10 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pantalla_Registro_UnidadEconomica.resx">
+    <EmbeddedResource Include="Pantallas Registros\Pantalla_Registro_UnidadEconomica.resx">
       <DependentUpon>Pantalla_Registro_UnidadEconomica.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Pantalla_Regitro_permiso.resx">
+    <EmbeddedResource Include="Pantallas Registros\Pantalla_Regitro_permiso.resx">
       <DependentUpon>Pantalla_Regitro_permiso.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -112,6 +112,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\sepada-escudologosiglas_450x85.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sepada-escudologosiglas_450x851.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
