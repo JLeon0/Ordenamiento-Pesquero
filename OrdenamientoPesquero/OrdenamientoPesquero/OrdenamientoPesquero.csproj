@@ -58,6 +58,12 @@
     <Compile Include="Pantalla_registro_embarcacion.Designer.cs">
       <DependentUpon>Pantalla_registro_embarcacion.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantalla_Registro_UnidadEconomica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantalla_Registro_UnidadEconomica.Designer.cs">
+      <DependentUpon>Pantalla_Registro_UnidadEconomica.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantalla_Registro_Usuario.cs">
       <SubType>Form</SubType>
     </Compile>
