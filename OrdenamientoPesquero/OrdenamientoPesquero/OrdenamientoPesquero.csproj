@@ -70,6 +70,12 @@
     <Compile Include="Pantalla_Registro_Usuario.Designer.cs">
       <DependentUpon>Pantalla_Registro_Usuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantalla_Regitro_permiso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantalla_Regitro_permiso.Designer.cs">
+      <DependentUpon>Pantalla_Regitro_permiso.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">
