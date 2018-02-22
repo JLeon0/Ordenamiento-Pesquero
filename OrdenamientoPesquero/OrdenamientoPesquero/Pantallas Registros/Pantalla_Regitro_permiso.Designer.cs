@@ -296,7 +296,7 @@
             this.textBox4.Multiline = true;
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(616, 61);
-            this.textBox4.TabIndex = 22;
+            this.textBox4.TabIndex = 8;
             // 
             // label11
             // 
@@ -382,7 +382,7 @@
             this.numericUpDown1.Location = new System.Drawing.Point(329, 923);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(80, 26);
-            this.numericUpDown1.TabIndex = 30;
+            this.numericUpDown1.TabIndex = 12;
             // 
             // label19
             // 
@@ -411,7 +411,7 @@
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(606, 83);
-            this.textBox9.TabIndex = 50;
+            this.textBox9.TabIndex = 11;
             // 
             // textBox10
             // 
@@ -420,7 +420,7 @@
             this.textBox10.Multiline = true;
             this.textBox10.Name = "textBox10";
             this.textBox10.Size = new System.Drawing.Size(616, 61);
-            this.textBox10.TabIndex = 52;
+            this.textBox10.TabIndex = 7;
             // 
             // label28
             // 
@@ -438,7 +438,7 @@
             this.numericUpDown2.Location = new System.Drawing.Point(356, 618);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(80, 26);
-            this.numericUpDown2.TabIndex = 53;
+            this.numericUpDown2.TabIndex = 9;
             // 
             // groupBox1
             // 
@@ -468,7 +468,7 @@
             this.dateTimePicker4.Location = new System.Drawing.Point(516, 105);
             this.dateTimePicker4.Name = "dateTimePicker4";
             this.dateTimePicker4.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker4.TabIndex = 16;
+            this.dateTimePicker4.TabIndex = 6;
             // 
             // label38
             // 
@@ -486,7 +486,7 @@
             this.dateTimePicker3.Location = new System.Drawing.Point(516, 59);
             this.dateTimePicker3.Name = "dateTimePicker3";
             this.dateTimePicker3.Size = new System.Drawing.Size(200, 26);
-            this.dateTimePicker3.TabIndex = 14;
+            this.dateTimePicker3.TabIndex = 4;
             // 
             // comboBox9
             // 
@@ -495,7 +495,7 @@
             this.comboBox9.Location = new System.Drawing.Point(576, 16);
             this.comboBox9.Name = "comboBox9";
             this.comboBox9.Size = new System.Drawing.Size(140, 26);
-            this.comboBox9.TabIndex = 13;
+            this.comboBox9.TabIndex = 2;
             // 
             // comboBox8
             // 
@@ -504,7 +504,7 @@
             this.comboBox8.Location = new System.Drawing.Point(123, 61);
             this.comboBox8.Name = "comboBox8";
             this.comboBox8.Size = new System.Drawing.Size(140, 26);
-            this.comboBox8.TabIndex = 12;
+            this.comboBox8.TabIndex = 3;
             // 
             // textBox14
             // 
@@ -512,7 +512,7 @@
             this.textBox14.Location = new System.Drawing.Point(123, 103);
             this.textBox14.Name = "textBox14";
             this.textBox14.Size = new System.Drawing.Size(192, 26);
-            this.textBox14.TabIndex = 11;
+            this.textBox14.TabIndex = 5;
             // 
             // textBox13
             // 
@@ -520,7 +520,7 @@
             this.textBox13.Location = new System.Drawing.Point(123, 20);
             this.textBox13.Name = "textBox13";
             this.textBox13.Size = new System.Drawing.Size(192, 26);
-            this.textBox13.TabIndex = 10;
+            this.textBox13.TabIndex = 1;
             // 
             // label33
             // 
@@ -606,7 +606,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.Size = new System.Drawing.Size(745, 148);
-            this.dataGridView1.TabIndex = 56;
+            this.dataGridView1.TabIndex = 13;
             // 
             // dataGridView2
             // 
@@ -620,7 +620,7 @@
             this.dataGridView2.Name = "dataGridView2";
             this.dataGridView2.RowHeadersVisible = false;
             this.dataGridView2.Size = new System.Drawing.Size(745, 131);
-            this.dataGridView2.TabIndex = 57;
+            this.dataGridView2.TabIndex = 10;
             // 
             // dataGridViewTextBoxColumn1
             // 
