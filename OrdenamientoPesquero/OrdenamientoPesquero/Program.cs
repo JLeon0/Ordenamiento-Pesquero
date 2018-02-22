@@ -17,6 +17,7 @@ namespace OrdenamientoPesquero
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Pantalla_Regitro_permiso());
+            Application.Run(new Pantalla_Registro_UnidadEconomica());
         }
     }
 }

@@ -17,19 +17,9 @@ namespace OrdenamientoPesquero
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void Pantalla_Registro_UnidadEconomica_Load(object sender, EventArgs e)
         {
-
-        }
-
-        private void radioButton1_CheckedChanged(object sender, EventArgs e)
-        {
-            gbFed.Enabled = true;
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            gbFed.Enabled = false;
+            txtFecha.Text = DateTime.Today.ToString("dd/MM/yyyy");
         }
     }
 }
