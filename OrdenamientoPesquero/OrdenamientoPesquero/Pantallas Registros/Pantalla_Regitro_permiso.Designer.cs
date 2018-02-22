@@ -60,54 +60,42 @@
             this.label18 = new System.Windows.Forms.Label();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.comboBox5 = new System.Windows.Forms.ComboBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.textBox9 = new System.Windows.Forms.TextBox();
             this.textBox10 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label29 = new System.Windows.Forms.Label();
-            this.label30 = new System.Windows.Forms.Label();
-            this.label31 = new System.Windows.Forms.Label();
-            this.label32 = new System.Windows.Forms.Label();
-            this.label33 = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label35 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label34 = new System.Windows.Forms.Label();
-            this.label36 = new System.Windows.Forms.Label();
-            this.label37 = new System.Windows.Forms.Label();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
-            this.textBox11 = new System.Windows.Forms.TextBox();
-            this.textBox12 = new System.Windows.Forms.TextBox();
-            this.textBox13 = new System.Windows.Forms.TextBox();
-            this.textBox14 = new System.Windows.Forms.TextBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
-            this.comboBox9 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker4 = new System.Windows.Forms.DateTimePicker();
             this.label38 = new System.Windows.Forms.Label();
+            this.dateTimePicker3 = new System.Windows.Forms.DateTimePicker();
+            this.comboBox9 = new System.Windows.Forms.ComboBox();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
+            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.textBox13 = new System.Windows.Forms.TextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Matricula = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Marcamotor = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Potencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -406,106 +394,6 @@
             this.label19.TabIndex = 31;
             this.label19.Text = "Comentarios";
             // 
-            // label20
-            // 
-            this.label20.AutoSize = true;
-            this.label20.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(73, 999);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(70, 19);
-            this.label20.TabIndex = 32;
-            this.label20.Text = "Nombre";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(288, 999);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(78, 19);
-            this.label21.TabIndex = 33;
-            this.label21.Text = "Matricula";
-            // 
-            // label22
-            // 
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(484, 999);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(103, 19);
-            this.label22.TabIndex = 34;
-            this.label22.Text = "Marca Motor";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(462, 1051);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(136, 26);
-            this.textBox6.TabIndex = 37;
-            // 
-            // comboBox5
-            // 
-            this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(41, 1056);
-            this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(148, 21);
-            this.comboBox5.TabIndex = 38;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Location = new System.Drawing.Point(198, 743);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(184, 21);
-            this.comboBox6.TabIndex = 46;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(462, 738);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(317, 26);
-            this.textBox5.TabIndex = 45;
-            // 
-            // numericUpDown3
-            // 
-            this.numericUpDown3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown3.Location = new System.Drawing.Point(59, 744);
-            this.numericUpDown3.Name = "numericUpDown3";
-            this.numericUpDown3.Size = new System.Drawing.Size(62, 26);
-            this.numericUpDown3.TabIndex = 44;
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(546, 694);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(123, 19);
-            this.label23.TabIndex = 43;
-            this.label23.Text = "Caracteristicas";
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(261, 694);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(43, 19);
-            this.label24.TabIndex = 42;
-            this.label24.Text = "Tipo";
-            // 
-            // label25
-            // 
-            this.label25.AutoSize = true;
-            this.label25.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(55, 694);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(78, 19);
-            this.label25.TabIndex = 41;
-            this.label25.Text = "Cantidad";
-            // 
             // label26
             // 
             this.label26.AutoSize = true;
@@ -516,36 +404,10 @@
             this.label26.TabIndex = 39;
             this.label26.Text = "Artes o equipos de pesca autorizados:";
             // 
-            // textBox7
-            // 
-            this.textBox7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(254, 1051);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(155, 26);
-            this.textBox7.TabIndex = 47;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(652, 999);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(109, 19);
-            this.label27.TabIndex = 48;
-            this.label27.Text = "Potencia H.P.";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(656, 1051);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(136, 26);
-            this.textBox8.TabIndex = 49;
-            // 
             // textBox9
             // 
             this.textBox9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(173, 816);
+            this.textBox9.Location = new System.Drawing.Point(170, 819);
             this.textBox9.Multiline = true;
             this.textBox9.Name = "textBox9";
             this.textBox9.Size = new System.Drawing.Size(606, 83);
@@ -600,35 +462,69 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Datos del Permiso";
             // 
-            // label29
+            // dateTimePicker4
             // 
-            this.label29.AutoSize = true;
-            this.label29.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label29.Location = new System.Drawing.Point(6, 22);
-            this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(94, 18);
-            this.label29.TabIndex = 0;
-            this.label29.Text = "No. Permiso";
+            this.dateTimePicker4.Location = new System.Drawing.Point(516, 105);
+            this.dateTimePicker4.Name = "dateTimePicker4";
+            this.dateTimePicker4.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker4.TabIndex = 16;
             // 
-            // label30
+            // label38
             // 
-            this.label30.AutoSize = true;
-            this.label30.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(6, 61);
-            this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(101, 18);
-            this.label30.TabIndex = 1;
-            this.label30.Text = "Expedido en:";
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.Location = new System.Drawing.Point(429, 107);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(52, 18);
+            this.label38.TabIndex = 15;
+            this.label38.Text = "Hasta:";
             // 
-            // label31
+            // dateTimePicker3
             // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(6, 105);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(68, 18);
-            this.label31.TabIndex = 2;
-            this.label31.Text = "Vigencia";
+            this.dateTimePicker3.Location = new System.Drawing.Point(516, 59);
+            this.dateTimePicker3.Name = "dateTimePicker3";
+            this.dateTimePicker3.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker3.TabIndex = 14;
+            // 
+            // comboBox9
+            // 
+            this.comboBox9.FormattingEnabled = true;
+            this.comboBox9.Location = new System.Drawing.Point(576, 16);
+            this.comboBox9.Name = "comboBox9";
+            this.comboBox9.Size = new System.Drawing.Size(140, 22);
+            this.comboBox9.TabIndex = 13;
+            // 
+            // comboBox8
+            // 
+            this.comboBox8.FormattingEnabled = true;
+            this.comboBox8.Location = new System.Drawing.Point(123, 61);
+            this.comboBox8.Name = "comboBox8";
+            this.comboBox8.Size = new System.Drawing.Size(140, 22);
+            this.comboBox8.TabIndex = 12;
+            // 
+            // textBox14
+            // 
+            this.textBox14.Location = new System.Drawing.Point(123, 103);
+            this.textBox14.Name = "textBox14";
+            this.textBox14.Size = new System.Drawing.Size(192, 20);
+            this.textBox14.TabIndex = 11;
+            // 
+            // textBox13
+            // 
+            this.textBox13.Location = new System.Drawing.Point(123, 20);
+            this.textBox13.Name = "textBox13";
+            this.textBox13.Size = new System.Drawing.Size(192, 20);
+            this.textBox13.TabIndex = 10;
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(429, 61);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(51, 18);
+            this.label33.TabIndex = 4;
+            this.label33.Text = "El dia:";
             // 
             // label32
             // 
@@ -640,15 +536,35 @@
             this.label32.TabIndex = 3;
             this.label32.Text = "Para pesquería de:";
             // 
-            // label33
+            // label31
             // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(429, 61);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(51, 18);
-            this.label33.TabIndex = 4;
-            this.label33.Text = "El dia:";
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(6, 105);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(68, 18);
+            this.label31.TabIndex = 2;
+            this.label31.Text = "Vigencia";
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.Location = new System.Drawing.Point(6, 61);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(101, 18);
+            this.label30.TabIndex = 1;
+            this.label30.Text = "Expedido en:";
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.Location = new System.Drawing.Point(6, 22);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(94, 18);
+            this.label29.TabIndex = 0;
+            this.label29.Text = "No. Permiso";
             // 
             // pictureBox2
             // 
@@ -671,127 +587,80 @@
             this.label35.Text = "DIRECCION GENERAL PARA ORDENAMIENTO PESQUERO Y ACUICOLA\r\nPERMISO DE PESCA COMERCI" +
     "AL PARA EMBARCACIONES MENORES";
             // 
-            // groupBox2
+            // dataGridView1
             // 
-            this.groupBox2.Controls.Add(this.textBox12);
-            this.groupBox2.Controls.Add(this.textBox11);
-            this.groupBox2.Controls.Add(this.comboBox7);
-            this.groupBox2.Controls.Add(this.label34);
-            this.groupBox2.Controls.Add(this.label36);
-            this.groupBox2.Controls.Add(this.label37);
-            this.groupBox2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(37, 107);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(739, 128);
-            this.groupBox2.TabIndex = 56;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Datos de la unidad economica";
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Nombre,
+            this.Matricula,
+            this.Marcamotor,
+            this.Potencia});
+            this.dataGridView1.Location = new System.Drawing.Point(48, 960);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(745, 148);
+            this.dataGridView1.TabIndex = 56;
             // 
-            // label34
+            // dataGridView2
             // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label34.Location = new System.Drawing.Point(429, 35);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(77, 18);
-            this.label34.TabIndex = 6;
-            this.label34.Text = "Domicilio:";
+            this.dataGridView2.AllowUserToAddRows = false;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewComboBoxColumn1,
+            this.dataGridViewTextBoxColumn2});
+            this.dataGridView2.Location = new System.Drawing.Point(46, 662);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersVisible = false;
+            this.dataGridView2.Size = new System.Drawing.Size(745, 131);
+            this.dataGridView2.TabIndex = 57;
             // 
-            // label36
+            // dataGridViewTextBoxColumn1
             // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label36.Location = new System.Drawing.Point(6, 83);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(141, 18);
-            this.label36.TabIndex = 5;
-            this.label36.Text = "Titular del permiso";
+            this.dataGridViewTextBoxColumn1.HeaderText = "Cantidad";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
             // 
-            // label37
+            // dataGridViewComboBoxColumn1
             // 
-            this.label37.AutoSize = true;
-            this.label37.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label37.Location = new System.Drawing.Point(6, 35);
-            this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(108, 18);
-            this.label37.TabIndex = 4;
-            this.label37.Text = "Clave R.N.P.A.";
+            this.dataGridViewComboBoxColumn1.HeaderText = "Tipo";
+            this.dataGridViewComboBoxColumn1.Name = "dataGridViewComboBoxColumn1";
+            this.dataGridViewComboBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewComboBoxColumn1.Width = 242;
             // 
-            // comboBox7
+            // dataGridViewTextBoxColumn2
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Location = new System.Drawing.Point(148, 31);
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(150, 22);
-            this.comboBox7.TabIndex = 7;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Caracteristicas";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.Width = 400;
             // 
-            // textBox11
+            // Nombre
             // 
-            this.textBox11.Location = new System.Drawing.Point(148, 80);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(367, 20);
-            this.textBox11.TabIndex = 8;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Width = 242;
             // 
-            // textBox12
+            // Matricula
             // 
-            this.textBox12.Location = new System.Drawing.Point(506, 31);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(227, 20);
-            this.textBox12.TabIndex = 9;
+            this.Matricula.HeaderText = "Matricula";
+            this.Matricula.Name = "Matricula";
+            this.Matricula.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Matricula.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Matricula.Width = 200;
             // 
-            // textBox13
+            // Marcamotor
             // 
-            this.textBox13.Location = new System.Drawing.Point(123, 20);
-            this.textBox13.Name = "textBox13";
-            this.textBox13.Size = new System.Drawing.Size(192, 20);
-            this.textBox13.TabIndex = 10;
+            this.Marcamotor.HeaderText = "Marca motor";
+            this.Marcamotor.Name = "Marcamotor";
+            this.Marcamotor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Marcamotor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Marcamotor.Width = 200;
             // 
-            // textBox14
+            // Potencia
             // 
-            this.textBox14.Location = new System.Drawing.Point(123, 103);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(192, 20);
-            this.textBox14.TabIndex = 11;
-            // 
-            // comboBox8
-            // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(123, 61);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(140, 22);
-            this.comboBox8.TabIndex = 12;
-            // 
-            // comboBox9
-            // 
-            this.comboBox9.FormattingEnabled = true;
-            this.comboBox9.Location = new System.Drawing.Point(576, 16);
-            this.comboBox9.Name = "comboBox9";
-            this.comboBox9.Size = new System.Drawing.Size(140, 22);
-            this.comboBox9.TabIndex = 13;
-            // 
-            // dateTimePicker3
-            // 
-            this.dateTimePicker3.Location = new System.Drawing.Point(516, 59);
-            this.dateTimePicker3.Name = "dateTimePicker3";
-            this.dateTimePicker3.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker3.TabIndex = 14;
-            // 
-            // dateTimePicker4
-            // 
-            this.dateTimePicker4.Location = new System.Drawing.Point(516, 105);
-            this.dateTimePicker4.Name = "dateTimePicker4";
-            this.dateTimePicker4.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker4.TabIndex = 16;
-            // 
-            // label38
-            // 
-            this.label38.AutoSize = true;
-            this.label38.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(429, 107);
-            this.label38.Name = "label38";
-            this.label38.Size = new System.Drawing.Size(52, 18);
-            this.label38.TabIndex = 15;
-            this.label38.Text = "Hasta:";
+            this.Potencia.HeaderText = "Potencia HP";
+            this.Potencia.Name = "Potencia";
             // 
             // Pantalla_Regitro_permiso
             // 
@@ -802,8 +671,9 @@
             this.AutoScrollMinSize = new System.Drawing.Size(20, 20);
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(845, 553);
-            this.Controls.Add(this.groupBox2);
+            this.ClientSize = new System.Drawing.Size(845, 606);
+            this.Controls.Add(this.dataGridView2);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label35);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox1);
@@ -811,21 +681,7 @@
             this.Controls.Add(this.textBox10);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.textBox9);
-            this.Controls.Add(this.textBox8);
-            this.Controls.Add(this.label27);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.comboBox6);
-            this.Controls.Add(this.textBox5);
-            this.Controls.Add(this.numericUpDown3);
-            this.Controls.Add(this.label23);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.label25);
             this.Controls.Add(this.label26);
-            this.Controls.Add(this.comboBox5);
-            this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.label22);
-            this.Controls.Add(this.label21);
-            this.Controls.Add(this.label20);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.label18);
@@ -860,15 +716,15 @@
             this.Name = "Pantalla_Regitro_permiso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pantalla_Regitro_permiso";
+            this.Load += new System.EventHandler(this.Pantalla_Regitro_permiso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -907,21 +763,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.ComboBox comboBox5;
-        private System.Windows.Forms.ComboBox comboBox6;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.TextBox textBox8;
         private System.Windows.Forms.TextBox textBox9;
         private System.Windows.Forms.TextBox textBox10;
         private System.Windows.Forms.Label label28;
@@ -934,10 +776,6 @@
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.Label label36;
-        private System.Windows.Forms.Label label37;
         private System.Windows.Forms.DateTimePicker dateTimePicker4;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.DateTimePicker dateTimePicker3;
@@ -945,8 +783,14 @@
         private System.Windows.Forms.ComboBox comboBox8;
         private System.Windows.Forms.TextBox textBox14;
         private System.Windows.Forms.TextBox textBox13;
-        private System.Windows.Forms.TextBox textBox12;
-        private System.Windows.Forms.TextBox textBox11;
-        private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Matricula;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Marcamotor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Potencia;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
     }
 }
