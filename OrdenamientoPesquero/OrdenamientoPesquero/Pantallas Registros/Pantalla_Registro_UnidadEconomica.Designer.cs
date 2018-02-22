@@ -50,6 +50,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbOrgPes = new System.Windows.Forms.GroupBox();
+            this.gbFed = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtFecha = new System.Windows.Forms.TextBox();
+            this.cbRNPA = new System.Windows.Forms.ComboBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
@@ -71,24 +82,13 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.cbRNPA = new System.Windows.Forms.ComboBox();
-            this.txtFecha = new System.Windows.Forms.TextBox();
-            this.gbFed = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbOrgPes.SuspendLayout();
+            this.gbFed.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
-            this.gbFed.SuspendLayout();
             this.SuspendLayout();
             // 
             // textBox7
@@ -96,7 +96,7 @@
             this.textBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox7.Enabled = false;
             this.textBox7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(701, 172);
+            this.textBox7.Location = new System.Drawing.Point(684, 172);
             this.textBox7.Name = "textBox7";
             this.textBox7.Size = new System.Drawing.Size(176, 26);
             this.textBox7.TabIndex = 53;
@@ -119,7 +119,7 @@
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(391, 153);
+            this.label13.Location = new System.Drawing.Point(382, 153);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(79, 18);
             this.label13.TabIndex = 51;
@@ -129,7 +129,7 @@
             // 
             this.textBox6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(394, 172);
+            this.textBox6.Location = new System.Drawing.Point(385, 172);
             this.textBox6.Name = "textBox6";
             this.textBox6.Size = new System.Drawing.Size(262, 26);
             this.textBox6.TabIndex = 50;
@@ -160,7 +160,7 @@
             // 
             this.maskedTextBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.maskedTextBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(775, 122);
+            this.maskedTextBox1.Location = new System.Drawing.Point(758, 122);
             this.maskedTextBox1.Mask = "99999";
             this.maskedTextBox1.Name = "maskedTextBox1";
             this.maskedTextBox1.Size = new System.Drawing.Size(57, 26);
@@ -173,7 +173,7 @@
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(772, 103);
+            this.label11.Location = new System.Drawing.Point(755, 103);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(45, 18);
             this.label11.TabIndex = 46;
@@ -184,7 +184,7 @@
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(391, 103);
+            this.label10.Location = new System.Drawing.Point(382, 103);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(320, 18);
             this.label10.TabIndex = 45;
@@ -194,7 +194,7 @@
             // 
             this.textBox4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBox4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(394, 122);
+            this.textBox4.Location = new System.Drawing.Point(385, 122);
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(330, 26);
             this.textBox4.TabIndex = 44;
@@ -227,7 +227,7 @@
             // 
             this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.textBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(701, 72);
+            this.textBox2.Location = new System.Drawing.Point(684, 72);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(176, 26);
             this.textBox2.TabIndex = 41;
@@ -238,7 +238,7 @@
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(698, 53);
+            this.label8.Location = new System.Drawing.Point(681, 53);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(45, 18);
             this.label8.TabIndex = 40;
@@ -269,7 +269,7 @@
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(650, 26);
+            this.label5.Location = new System.Drawing.Point(633, 26);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 17);
             this.label5.TabIndex = 36;
@@ -280,7 +280,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(123, 29);
+            this.label3.Location = new System.Drawing.Point(115, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -307,7 +307,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(880, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(863, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
@@ -341,10 +341,129 @@
             this.gbOrgPes.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbOrgPes.Location = new System.Drawing.Point(9, 103);
             this.gbOrgPes.Name = "gbOrgPes";
-            this.gbOrgPes.Size = new System.Drawing.Size(880, 375);
+            this.gbOrgPes.Size = new System.Drawing.Size(863, 375);
             this.gbOrgPes.TabIndex = 54;
             this.gbOrgPes.TabStop = false;
             this.gbOrgPes.Text = "DATOS GENERALES DE LA ORGANIZACIÓN PESQUERA";
+            // 
+            // gbFed
+            // 
+            this.gbFed.Controls.Add(this.maskedTextBox6);
+            this.gbFed.Controls.Add(this.label22);
+            this.gbFed.Controls.Add(this.textBox9);
+            this.gbFed.Controls.Add(this.label23);
+            this.gbFed.Controls.Add(this.label24);
+            this.gbFed.Controls.Add(this.textBox11);
+            this.gbFed.Location = new System.Drawing.Point(11, 234);
+            this.gbFed.Name = "gbFed";
+            this.gbFed.Size = new System.Drawing.Size(883, 115);
+            this.gbFed.TabIndex = 58;
+            this.gbFed.TabStop = false;
+            // 
+            // maskedTextBox6
+            // 
+            this.maskedTextBox6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maskedTextBox6.Location = new System.Drawing.Point(658, 84);
+            this.maskedTextBox6.Mask = "000-000-0000";
+            this.maskedTextBox6.Name = "maskedTextBox6";
+            this.maskedTextBox6.Size = new System.Drawing.Size(100, 21);
+            this.maskedTextBox6.TabIndex = 52;
+            // 
+            // label22
+            // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(6, 65);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(290, 16);
+            this.label22.TabIndex = 61;
+            this.label22.Text = "Nombre del Representante de la Federación";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox9.Location = new System.Drawing.Point(9, 84);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(623, 20);
+            this.textBox9.TabIndex = 51;
+            this.textBox9.Tag = "";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(655, 67);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(54, 15);
+            this.label23.TabIndex = 62;
+            this.label23.Text = "Telefono";
+            // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(6, 19);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(295, 16);
+            this.label24.TabIndex = 59;
+            this.label24.Text = "Nombre de la Federación a la que Pertenece";
+            // 
+            // textBox11
+            // 
+            this.textBox11.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox11.Location = new System.Drawing.Point(9, 38);
+            this.textBox11.Name = "textBox11";
+            this.textBox11.Size = new System.Drawing.Size(623, 20);
+            this.textBox11.TabIndex = 50;
+            this.textBox11.Tag = "";
+            // 
+            // txtFecha
+            // 
+            this.txtFecha.Enabled = false;
+            this.txtFecha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFecha.Location = new System.Drawing.Point(717, 22);
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Size = new System.Drawing.Size(139, 26);
+            this.txtFecha.TabIndex = 57;
+            // 
+            // cbRNPA
+            // 
+            this.cbRNPA.FormattingEnabled = true;
+            this.cbRNPA.Location = new System.Drawing.Point(200, 21);
+            this.cbRNPA.Name = "cbRNPA";
+            this.cbRNPA.Size = new System.Drawing.Size(121, 28);
+            this.cbRNPA.TabIndex = 56;
+            this.toolTip1.SetToolTip(this.cbRNPA, "Ingrese o Seleccione el RNPA de la Unidad Económica");
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(102, 204);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(84, 24);
+            this.radioButton2.TabIndex = 55;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Privado";
+            this.toolTip1.SetToolTip(this.radioButton2, "Seleccione si la Unidad Pesquera si NO pertenece a una Federación");
+            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(11, 204);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(74, 24);
+            this.radioButton1.TabIndex = 54;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Social";
+            this.toolTip1.SetToolTip(this.radioButton1, "Seleccione si la Unidad Pesquera si pertenece a una Federación");
+            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
             // 
             // groupBox2
             // 
@@ -559,7 +678,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(883, 178);
+            this.tabPage1.Size = new System.Drawing.Size(883, 310);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             // 
@@ -572,125 +691,6 @@
             this.tabPage2.Size = new System.Drawing.Size(883, 310);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
-            // 
-            // radioButton1
-            // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(11, 204);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(74, 24);
-            this.radioButton1.TabIndex = 54;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Social";
-            this.toolTip1.SetToolTip(this.radioButton1, "Seleccione si la Unidad Pesquera si pertenece a una Federación");
-            this.radioButton1.UseVisualStyleBackColor = true;
-            this.radioButton1.CheckedChanged += new System.EventHandler(this.radioButton1_CheckedChanged);
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(102, 204);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(84, 24);
-            this.radioButton2.TabIndex = 55;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Privado";
-            this.toolTip1.SetToolTip(this.radioButton2, "Seleccione si la Unidad Pesquera si NO pertenece a una Federación");
-            this.radioButton2.UseVisualStyleBackColor = true;
-            this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
-            // 
-            // cbRNPA
-            // 
-            this.cbRNPA.FormattingEnabled = true;
-            this.cbRNPA.Location = new System.Drawing.Point(200, 21);
-            this.cbRNPA.Name = "cbRNPA";
-            this.cbRNPA.Size = new System.Drawing.Size(121, 28);
-            this.cbRNPA.TabIndex = 56;
-            this.toolTip1.SetToolTip(this.cbRNPA, "Ingrese o Seleccione el RNPA de la Unidad Económica");
-            // 
-            // txtFecha
-            // 
-            this.txtFecha.Enabled = false;
-            this.txtFecha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtFecha.Location = new System.Drawing.Point(717, 22);
-            this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(139, 26);
-            this.txtFecha.TabIndex = 57;
-            // 
-            // gbFed
-            // 
-            this.gbFed.Controls.Add(this.maskedTextBox6);
-            this.gbFed.Controls.Add(this.label22);
-            this.gbFed.Controls.Add(this.textBox9);
-            this.gbFed.Controls.Add(this.label23);
-            this.gbFed.Controls.Add(this.label24);
-            this.gbFed.Controls.Add(this.textBox11);
-            this.gbFed.Location = new System.Drawing.Point(11, 234);
-            this.gbFed.Name = "gbFed";
-            this.gbFed.Size = new System.Drawing.Size(883, 115);
-            this.gbFed.TabIndex = 58;
-            this.gbFed.TabStop = false;
-            // 
-            // maskedTextBox6
-            // 
-            this.maskedTextBox6.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox6.Location = new System.Drawing.Point(658, 84);
-            this.maskedTextBox6.Mask = "000-000-0000";
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(100, 21);
-            this.maskedTextBox6.TabIndex = 52;
-            // 
-            // label22
-            // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(6, 65);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(290, 16);
-            this.label22.TabIndex = 61;
-            this.label22.Text = "Nombre del Representante de la Federación";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(9, 84);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(623, 20);
-            this.textBox9.TabIndex = 51;
-            this.textBox9.Tag = "";
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(655, 67);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(54, 15);
-            this.label23.TabIndex = 62;
-            this.label23.Text = "Telefono";
-            // 
-            // label24
-            // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(6, 19);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(295, 16);
-            this.label24.TabIndex = 59;
-            this.label24.Text = "Nombre de la Federación a la que Pertenece";
-            // 
-            // textBox11
-            // 
-            this.textBox11.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(9, 38);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(623, 20);
-            this.textBox11.TabIndex = 50;
-            this.textBox11.Tag = "";
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -712,12 +712,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbOrgPes.ResumeLayout(false);
             this.gbOrgPes.PerformLayout();
+            this.gbFed.ResumeLayout(false);
+            this.gbFed.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
-            this.gbFed.ResumeLayout(false);
-            this.gbFed.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
