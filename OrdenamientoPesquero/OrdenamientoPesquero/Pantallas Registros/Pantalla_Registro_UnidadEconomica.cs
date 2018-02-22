@@ -21,5 +21,15 @@ namespace OrdenamientoPesquero
         {
 
         }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            gbFed.Enabled = true;
+        }
+
+        private void radioButton2_CheckedChanged(object sender, EventArgs e)
+        {
+            gbFed.Enabled = false;
+        }
     }
 }
