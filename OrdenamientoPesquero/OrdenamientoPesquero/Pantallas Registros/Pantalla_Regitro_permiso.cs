@@ -16,5 +16,10 @@ namespace OrdenamientoPesquero
         {
             InitializeComponent();
         }
+
+        private void Pantalla_Regitro_permiso_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
