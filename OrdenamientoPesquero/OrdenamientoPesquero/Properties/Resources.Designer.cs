@@ -63,6 +63,26 @@ namespace OrdenamientoPesquero.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap flechaabajo {
+            get {
+                object obj = ResourceManager.GetObject("flechaabajo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap flechaarriba {
+            get {
+                object obj = ResourceManager.GetObject("flechaarriba", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap sepada_escudologosiglas_450x85 {
             get {
                 object obj = ResourceManager.GetObject("sepada-escudologosiglas_450x85", resourceCulture);
