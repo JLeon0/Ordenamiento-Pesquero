@@ -26,23 +26,25 @@ namespace OrdenamientoPesquero
             cbRNPA.Focus();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void pBReubicar_Click(object sender, EventArgs e)
         {
             if (!escondido)
             {
                 gbOrgPes.Height -= 312;
-                btnReubicar.Location = new Point(btnReubicar.Location.X, btnReubicar.Location.Y - 300);
+                pBReubicar.Location = new Point(pBReubicar.Location.X, pBReubicar.Location.Y - 300);
                 tabControl1.Location = new Point(tabControl1.Location.X, tabControl1.Location.Y - 300);
                 escondido = true;
-                btnReubicar.Text = "MOSTRAR";
+                pBReubicar.BackgroundImage = Properties.Resources.flechaabajo;
+                toolTip1.SetToolTip(pBReubicar, "Mostrar Información");
             }
             else
             {
                 gbOrgPes.Height += 312;
-                btnReubicar.Location = new Point(btnReubicar.Location.X, btnReubicar.Location.Y + 300);
+                pBReubicar.Location = new Point(pBReubicar.Location.X, pBReubicar.Location.Y + 300);
                 tabControl1.Location = new Point(tabControl1.Location.X, tabControl1.Location.Y + 300);
                 escondido = false;
-                btnReubicar.Text = "ESCONDER";
+                pBReubicar.BackgroundImage = Properties.Resources.flechaarriba;
+                toolTip1.SetToolTip(pBReubicar, "Esconder Información");
             }
         }
     }

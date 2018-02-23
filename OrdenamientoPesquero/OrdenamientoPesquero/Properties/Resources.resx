@@ -121,4 +121,10 @@
   <data name="sepada-escudologosiglas_450x85" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\sepada-escudologosiglas_450x851.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="flechaarriba" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flechaarriba.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="flechaabajo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\flechaabajo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
 </root>
