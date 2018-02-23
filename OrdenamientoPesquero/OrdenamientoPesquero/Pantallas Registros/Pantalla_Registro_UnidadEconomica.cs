@@ -31,5 +31,10 @@ namespace OrdenamientoPesquero
         {
             gbFed.Enabled = false;
         }
+
+        private void btnReubicar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

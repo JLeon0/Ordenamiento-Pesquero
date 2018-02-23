@@ -337,7 +337,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1127, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(1110, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
@@ -1065,7 +1065,7 @@
             this.btnReubicar.TabIndex = 100;
             this.btnReubicar.Text = "ESCONDER";
             this.btnReubicar.UseVisualStyleBackColor = true;
-            this.btnReubicar.Click += new System.EventHandler(this.button1_Click);
+            this.btnReubicar.Click += new System.EventHandler(this.btnReubicar_Click);
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -1085,7 +1085,6 @@
             this.Name = "Pantalla_Registro_UnidadEconomica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ordenamiento Pesquero";
-            this.Load += new System.EventHandler(this.Pantalla_Registro_UnidadEconomica_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbOrgPes.ResumeLayout(false);
             this.gbOrgPes.PerformLayout();
