@@ -17,7 +17,7 @@ namespace OrdenamientoPesquero
         public Pantalla_Registro_UnidadEconomica()
         {
             InitializeComponent();
-            this.Height = System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height - 21;
+            this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
         }
 
         private void Pantalla_Registro_UnidadEconomica_Load(object sender, EventArgs e)
