@@ -1136,7 +1136,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1245, 714);
+            this.ClientSize = new System.Drawing.Size(1245, 749);
             this.ControlBox = false;
             this.Controls.Add(this.pbActualizar);
             this.Controls.Add(this.pbRegistrar);
