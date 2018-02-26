@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
+using Microsoft.VisualBasic;
 
 
 namespace OrdenamientoPesquero
@@ -62,16 +63,17 @@ namespace OrdenamientoPesquero
             if (radioButton0.Checked)
             {
                 ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
-                exito=proc.Registrar_Unidad(ue);
+                exito = proc.Registrar_Unidad(ue);
             }
             else if (radioButton1.Checked)
             {
                 ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
                 exito = proc.Registrar_Unidad(ue);
             }
-            if (exito==1)
+            if (exito == 1)
             {
-                showMessage("EXITOSAMENTE CARGADO ;)", 10000);  /* 1 segundo = 1000 */
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("HI"); /* 1 segundo = 1000 */
             }
         }
 
@@ -79,25 +81,10 @@ namespace OrdenamientoPesquero
         {
 
         }
-        private void showMessage(string msg, int duration)
+        public void CloseIt()
         {
-            using (Timer t = new Timer())
-            {
-                Timer time = new Timer();
-                time.Interval = duration;
-                time.Tick += timeTick;  /* Evento enlazado */
-
-                time.Start();
-
-                /* Muestras el texto en el MB */
-                MessageBox.Show(msg);
-            }
-        }
-
-        private void timeTick(object sender, EventArgs e)
-        {
-            (sender as Timer).Stop();  /* Detiene el Timer */
-            SendKeys.Send("{ESC}"); /* Hace la simulación de la tecla Escape, también puedes usar {ENTER} */
+            System.Threading.Thread.Sleep(2000);
+            System.Windows.Forms.SendKeys.SendWait(" ");
         }
     }
 }
