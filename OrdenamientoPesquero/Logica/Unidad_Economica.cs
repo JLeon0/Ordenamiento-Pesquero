@@ -4,27 +4,27 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OrdenamientoPesquero.Clases_Entidad
+namespace Logica
 {
     public class Unidad_Economica
     {
-        string RNPA { get; set; }
-        string NOMBRE { get; set; }
-        string TIPO { get; set; }
-        string CALLE { get; set; }
-        string RFC { get; set; }
-        string COLONIA { get; set; }
-        string LOCALIDAD { get; set; }
-        string MUNICIPIO { get; set; }
-        string CP { get; set; }
-        string CORREO { get; set; }
-        string TELEFONO { get; set; }
-        string PRESIDENTE { get; set; }
-        string TESORERO { get; set; }
-        string SECRETARIO { get; set; }
-        string TELPRES { get; set; }
-        string TELTESOR { get; set; }
-        string TELSECRE { get; set; }
+        public string RNPA { get; set; }
+        public string NOMBRE { get; set; }
+        public string TIPO { get; set; }
+        public string CALLE { get; set; }
+        public string RFC { get; set; }
+        public string COLONIA { get; set; }
+        public string LOCALIDAD { get; set; }
+        public string MUNICIPIO { get; set; }
+        public string CP { get; set; }
+        public string CORREO { get; set; }
+        public string TELEFONO { get; set; }
+        public string PRESIDENTE { get; set; }
+        public string TESORERO { get; set; }
+        public string SECRETARIO { get; set; }
+        public string TELPRES { get; set; }
+        public string TELTESOR { get; set; }
+        public string TELSECRE { get; set; }
         public Unidad_Economica()
         {
              RNPA = "";
@@ -63,7 +63,7 @@ namespace OrdenamientoPesquero.Clases_Entidad
             CORREO = cORREO;
             TELEFONO = tELEFONO;
             PRESIDENTE = pRESIDENTE;
-            TESORERO = TESORERO;
+            TESORERO = tESORERO;
             SECRETARIO = sECRETARIO;
             TELPRES = tELPRES;
             TELTESOR = tELTESOR;

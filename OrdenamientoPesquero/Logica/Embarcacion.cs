@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OrdenamientoPesquero.Clases_Entidad
-{
+namespace Logica
+{ 
     class Embarcacion
     {
         string Nombre { get; set; }

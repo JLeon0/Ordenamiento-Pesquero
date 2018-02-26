@@ -29,41 +29,41 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtEstado = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtMunicipio = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.txtLocalidad = new System.Windows.Forms.TextBox();
+            this.mtbCP = new System.Windows.Forms.MaskedTextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.txtColonia = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtCalleNum = new System.Windows.Forms.TextBox();
+            this.txtRFC = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.gbOrgPes = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox5 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbTelefono = new System.Windows.Forms.MaskedTextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.textBox14 = new System.Windows.Forms.TextBox();
+            this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.gbFed = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox6 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbTelRepFed = new System.Windows.Forms.MaskedTextBox();
             this.label22 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.txtNomRepFed = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
-            this.textBox11 = new System.Windows.Forms.TextBox();
+            this.txtNomFed = new System.Windows.Forms.TextBox();
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.cbRNPA = new System.Windows.Forms.ComboBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton0 = new System.Windows.Forms.RadioButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Permisos = new System.Windows.Forms.TabPage();
             this.textBox19 = new System.Windows.Forms.TextBox();
@@ -102,17 +102,17 @@
             this.label25 = new System.Windows.Forms.Label();
             this.Directiva = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbTelTeso = new System.Windows.Forms.MaskedTextBox();
+            this.mtbTelSec = new System.Windows.Forms.MaskedTextBox();
+            this.mtbTelPres = new System.Windows.Forms.MaskedTextBox();
             this.label18 = new System.Windows.Forms.Label();
-            this.textBox12 = new System.Windows.Forms.TextBox();
+            this.txtTesor = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.txtSecre = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.txtPresidente = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.Pescadores = new System.Windows.Forms.TabPage();
             this.Embarcaciones = new System.Windows.Forms.TabPage();
@@ -139,15 +139,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // textBox7
+            // txtEstado
             // 
-            this.textBox7.Enabled = false;
-            this.textBox7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(675, 172);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(176, 26);
-            this.textBox7.TabIndex = 14;
-            this.textBox7.Text = "Baja California Sur";
+            this.txtEstado.Enabled = false;
+            this.txtEstado.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEstado.Location = new System.Drawing.Point(675, 172);
+            this.txtEstado.Name = "txtEstado";
+            this.txtEstado.Size = new System.Drawing.Size(176, 26);
+            this.txtEstado.TabIndex = 14;
+            this.txtEstado.Text = "Baja California Sur";
             // 
             // label14
             // 
@@ -171,15 +171,15 @@
             this.label13.TabIndex = 51;
             this.label13.Text = "Municipio:";
             // 
-            // textBox6
+            // txtMunicipio
             // 
-            this.textBox6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(370, 172);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(262, 26);
-            this.textBox6.TabIndex = 13;
-            this.textBox6.Tag = "";
-            this.toolTip1.SetToolTip(this.textBox6, "Ingrese el Municipio de la Organización Pesquera");
+            this.txtMunicipio.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMunicipio.Location = new System.Drawing.Point(370, 172);
+            this.txtMunicipio.Name = "txtMunicipio";
+            this.txtMunicipio.Size = new System.Drawing.Size(262, 26);
+            this.txtMunicipio.TabIndex = 13;
+            this.txtMunicipio.Tag = "";
+            this.toolTip1.SetToolTip(this.txtMunicipio, "Ingrese el Municipio de la Organización Pesquera");
             // 
             // label12
             // 
@@ -191,26 +191,26 @@
             this.label12.TabIndex = 49;
             this.label12.Text = "Localidad:";
             // 
-            // textBox5
+            // txtLocalidad
             // 
-            this.textBox5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(9, 172);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(333, 26);
-            this.textBox5.TabIndex = 12;
-            this.textBox5.Tag = "";
-            this.toolTip1.SetToolTip(this.textBox5, "Ingrese la Localidad de la Organización Pesquera");
+            this.txtLocalidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLocalidad.Location = new System.Drawing.Point(9, 172);
+            this.txtLocalidad.Name = "txtLocalidad";
+            this.txtLocalidad.Size = new System.Drawing.Size(333, 26);
+            this.txtLocalidad.TabIndex = 12;
+            this.txtLocalidad.Tag = "";
+            this.toolTip1.SetToolTip(this.txtLocalidad, "Ingrese la Localidad de la Organización Pesquera");
             // 
-            // maskedTextBox1
+            // mtbCP
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(749, 122);
-            this.maskedTextBox1.Mask = "99999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(57, 26);
-            this.maskedTextBox1.TabIndex = 11;
-            this.toolTip1.SetToolTip(this.maskedTextBox1, "Ingrese el Codigo Postal de la Organización Pesquera");
-            this.maskedTextBox1.ValidatingType = typeof(int);
+            this.mtbCP.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbCP.Location = new System.Drawing.Point(749, 122);
+            this.mtbCP.Mask = "99999";
+            this.mtbCP.Name = "mtbCP";
+            this.mtbCP.Size = new System.Drawing.Size(57, 26);
+            this.mtbCP.TabIndex = 11;
+            this.toolTip1.SetToolTip(this.mtbCP, "Ingrese el Codigo Postal de la Organización Pesquera");
+            this.mtbCP.ValidatingType = typeof(int);
             // 
             // label11
             // 
@@ -232,15 +232,15 @@
             this.label10.TabIndex = 45;
             this.label10.Text = "Colonia / fraccionamiento o campo pesquero";
             // 
-            // textBox4
+            // txtColonia
             // 
-            this.textBox4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(370, 122);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(330, 26);
-            this.textBox4.TabIndex = 10;
-            this.textBox4.Tag = "";
-            this.toolTip1.SetToolTip(this.textBox4, "Ingrese la Colonia o campo pesquero de la Organización Pesquera");
+            this.txtColonia.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtColonia.Location = new System.Drawing.Point(370, 122);
+            this.txtColonia.Name = "txtColonia";
+            this.txtColonia.Size = new System.Drawing.Size(330, 26);
+            this.txtColonia.TabIndex = 10;
+            this.txtColonia.Tag = "";
+            this.toolTip1.SetToolTip(this.txtColonia, "Ingrese la Colonia o campo pesquero de la Organización Pesquera");
             // 
             // label9
             // 
@@ -254,24 +254,24 @@
             this.label9.TabIndex = 43;
             this.label9.Text = "Calle y número:";
             // 
-            // textBox3
+            // txtCalleNum
             // 
-            this.textBox3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(11, 122);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(333, 26);
-            this.textBox3.TabIndex = 9;
-            this.textBox3.Tag = "";
-            this.toolTip1.SetToolTip(this.textBox3, "Ingrese la calle y número de la Organización");
+            this.txtCalleNum.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCalleNum.Location = new System.Drawing.Point(11, 122);
+            this.txtCalleNum.Name = "txtCalleNum";
+            this.txtCalleNum.Size = new System.Drawing.Size(333, 26);
+            this.txtCalleNum.TabIndex = 9;
+            this.txtCalleNum.Tag = "";
+            this.toolTip1.SetToolTip(this.txtCalleNum, "Ingrese la calle y número de la Organización");
             // 
-            // textBox2
+            // txtRFC
             // 
-            this.textBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(675, 72);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(176, 26);
-            this.textBox2.TabIndex = 8;
-            this.toolTip1.SetToolTip(this.textBox2, "Ingrese el RFC de la Organización Pesquera");
+            this.txtRFC.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtRFC.Location = new System.Drawing.Point(675, 72);
+            this.txtRFC.Name = "txtRFC";
+            this.txtRFC.Size = new System.Drawing.Size(176, 26);
+            this.txtRFC.TabIndex = 8;
+            this.toolTip1.SetToolTip(this.txtRFC, "Ingrese el RFC de la Organización Pesquera");
             // 
             // label8
             // 
@@ -293,15 +293,15 @@
             this.label7.TabIndex = 39;
             this.label7.Text = "Nombre de la Organización Pesquera:";
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(9, 72);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(623, 26);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Tag = "";
-            this.toolTip1.SetToolTip(this.textBox1, "Ingrese el nombre de la Organización Pesquera");
+            this.txtNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(9, 72);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(623, 26);
+            this.txtNombre.TabIndex = 4;
+            this.txtNombre.Tag = "";
+            this.toolTip1.SetToolTip(this.txtNombre, "Ingrese el nombre de la Organización Pesquera");
             // 
             // label5
             // 
@@ -338,32 +338,32 @@
             // 
             // gbOrgPes
             // 
-            this.gbOrgPes.Controls.Add(this.maskedTextBox5);
+            this.gbOrgPes.Controls.Add(this.mtbTelefono);
             this.gbOrgPes.Controls.Add(this.label20);
-            this.gbOrgPes.Controls.Add(this.textBox14);
+            this.gbOrgPes.Controls.Add(this.txtCorreo);
             this.gbOrgPes.Controls.Add(this.label21);
             this.gbOrgPes.Controls.Add(this.gbFed);
             this.gbOrgPes.Controls.Add(this.txtFecha);
             this.gbOrgPes.Controls.Add(this.cbRNPA);
-            this.gbOrgPes.Controls.Add(this.radioButton2);
             this.gbOrgPes.Controls.Add(this.radioButton1);
+            this.gbOrgPes.Controls.Add(this.radioButton0);
             this.gbOrgPes.Controls.Add(this.label7);
             this.gbOrgPes.Controls.Add(this.label11);
-            this.gbOrgPes.Controls.Add(this.textBox7);
+            this.gbOrgPes.Controls.Add(this.txtEstado);
             this.gbOrgPes.Controls.Add(this.label5);
-            this.gbOrgPes.Controls.Add(this.textBox1);
+            this.gbOrgPes.Controls.Add(this.txtNombre);
             this.gbOrgPes.Controls.Add(this.label14);
             this.gbOrgPes.Controls.Add(this.label8);
             this.gbOrgPes.Controls.Add(this.label4);
             this.gbOrgPes.Controls.Add(this.label13);
-            this.gbOrgPes.Controls.Add(this.textBox2);
-            this.gbOrgPes.Controls.Add(this.textBox6);
-            this.gbOrgPes.Controls.Add(this.textBox3);
+            this.gbOrgPes.Controls.Add(this.txtRFC);
+            this.gbOrgPes.Controls.Add(this.txtMunicipio);
+            this.gbOrgPes.Controls.Add(this.txtCalleNum);
             this.gbOrgPes.Controls.Add(this.label12);
             this.gbOrgPes.Controls.Add(this.label9);
-            this.gbOrgPes.Controls.Add(this.textBox5);
-            this.gbOrgPes.Controls.Add(this.textBox4);
-            this.gbOrgPes.Controls.Add(this.maskedTextBox1);
+            this.gbOrgPes.Controls.Add(this.txtLocalidad);
+            this.gbOrgPes.Controls.Add(this.txtColonia);
+            this.gbOrgPes.Controls.Add(this.mtbCP);
             this.gbOrgPes.Controls.Add(this.label10);
             this.gbOrgPes.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbOrgPes.Location = new System.Drawing.Point(12, 101);
@@ -373,15 +373,15 @@
             this.gbOrgPes.TabStop = false;
             this.gbOrgPes.Text = "DATOS GENERALES DE LA ORGANIZACIÓN PESQUERA";
             // 
-            // maskedTextBox5
+            // mtbTelefono
             // 
-            this.maskedTextBox5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox5.Location = new System.Drawing.Point(674, 234);
-            this.maskedTextBox5.Mask = "(999)000-0000";
-            this.maskedTextBox5.Name = "maskedTextBox5";
-            this.maskedTextBox5.Size = new System.Drawing.Size(117, 26);
-            this.maskedTextBox5.TabIndex = 16;
-            this.toolTip1.SetToolTip(this.maskedTextBox5, "Ingrese el Telefono de la Organización");
+            this.mtbTelefono.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTelefono.Location = new System.Drawing.Point(674, 234);
+            this.mtbTelefono.Mask = "(999)000-0000";
+            this.mtbTelefono.Name = "mtbTelefono";
+            this.mtbTelefono.Size = new System.Drawing.Size(117, 26);
+            this.mtbTelefono.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.mtbTelefono, "Ingrese el Telefono de la Organización");
             // 
             // label20
             // 
@@ -395,15 +395,15 @@
             this.label20.TabIndex = 61;
             this.label20.Text = "Dirección de correo electrónico";
             // 
-            // textBox14
+            // txtCorreo
             // 
-            this.textBox14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox14.Location = new System.Drawing.Point(11, 234);
-            this.textBox14.Name = "textBox14";
-            this.textBox14.Size = new System.Drawing.Size(623, 26);
-            this.textBox14.TabIndex = 15;
-            this.textBox14.Tag = "";
-            this.toolTip1.SetToolTip(this.textBox14, "Ingrese el correo de la Organización");
+            this.txtCorreo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCorreo.Location = new System.Drawing.Point(11, 234);
+            this.txtCorreo.Name = "txtCorreo";
+            this.txtCorreo.Size = new System.Drawing.Size(623, 26);
+            this.txtCorreo.TabIndex = 15;
+            this.txtCorreo.Tag = "";
+            this.toolTip1.SetToolTip(this.txtCorreo, "Ingrese el correo de la Organización");
             // 
             // label21
             // 
@@ -417,27 +417,27 @@
             // 
             // gbFed
             // 
-            this.gbFed.Controls.Add(this.maskedTextBox6);
+            this.gbFed.Controls.Add(this.mtbTelRepFed);
             this.gbFed.Controls.Add(this.label22);
-            this.gbFed.Controls.Add(this.textBox9);
+            this.gbFed.Controls.Add(this.txtNomRepFed);
             this.gbFed.Controls.Add(this.label23);
             this.gbFed.Controls.Add(this.label24);
-            this.gbFed.Controls.Add(this.textBox11);
+            this.gbFed.Controls.Add(this.txtNomFed);
             this.gbFed.Location = new System.Drawing.Point(11, 279);
             this.gbFed.Name = "gbFed";
             this.gbFed.Size = new System.Drawing.Size(883, 115);
             this.gbFed.TabIndex = 58;
             this.gbFed.TabStop = false;
             // 
-            // maskedTextBox6
+            // mtbTelRepFed
             // 
-            this.maskedTextBox6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox6.Location = new System.Drawing.Point(658, 84);
-            this.maskedTextBox6.Mask = "000-000-0000";
-            this.maskedTextBox6.Name = "maskedTextBox6";
-            this.maskedTextBox6.Size = new System.Drawing.Size(100, 26);
-            this.maskedTextBox6.TabIndex = 19;
-            this.toolTip1.SetToolTip(this.maskedTextBox6, "Ingrese el número del Representante de la Federación");
+            this.mtbTelRepFed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTelRepFed.Location = new System.Drawing.Point(658, 84);
+            this.mtbTelRepFed.Mask = "000-000-0000";
+            this.mtbTelRepFed.Name = "mtbTelRepFed";
+            this.mtbTelRepFed.Size = new System.Drawing.Size(100, 26);
+            this.mtbTelRepFed.TabIndex = 19;
+            this.toolTip1.SetToolTip(this.mtbTelRepFed, "Ingrese el número del Representante de la Federación");
             // 
             // label22
             // 
@@ -451,15 +451,15 @@
             this.label22.TabIndex = 61;
             this.label22.Text = "Nombre del Representante de la Federación";
             // 
-            // textBox9
+            // txtNomRepFed
             // 
-            this.textBox9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox9.Location = new System.Drawing.Point(9, 84);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(623, 26);
-            this.textBox9.TabIndex = 18;
-            this.textBox9.Tag = "";
-            this.toolTip1.SetToolTip(this.textBox9, "Ingrese el nombre del Representante de la Federación");
+            this.txtNomRepFed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomRepFed.Location = new System.Drawing.Point(9, 84);
+            this.txtNomRepFed.Name = "txtNomRepFed";
+            this.txtNomRepFed.Size = new System.Drawing.Size(623, 26);
+            this.txtNomRepFed.TabIndex = 18;
+            this.txtNomRepFed.Tag = "";
+            this.toolTip1.SetToolTip(this.txtNomRepFed, "Ingrese el nombre del Representante de la Federación");
             // 
             // label23
             // 
@@ -483,15 +483,15 @@
             this.label24.TabIndex = 59;
             this.label24.Text = "Nombre de la Federación a la que Pertenece";
             // 
-            // textBox11
+            // txtNomFed
             // 
-            this.textBox11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox11.Location = new System.Drawing.Point(9, 38);
-            this.textBox11.Name = "textBox11";
-            this.textBox11.Size = new System.Drawing.Size(623, 26);
-            this.textBox11.TabIndex = 17;
-            this.textBox11.Tag = "";
-            this.toolTip1.SetToolTip(this.textBox11, "Ingrese el nombre de la Federación");
+            this.txtNomFed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomFed.Location = new System.Drawing.Point(9, 38);
+            this.txtNomFed.Name = "txtNomFed";
+            this.txtNomFed.Size = new System.Drawing.Size(623, 26);
+            this.txtNomFed.TabIndex = 17;
+            this.txtNomFed.Tag = "";
+            this.toolTip1.SetToolTip(this.txtNomFed, "Ingrese el nombre de la Federación");
             // 
             // txtFecha
             // 
@@ -511,31 +511,32 @@
             this.cbRNPA.TabIndex = 1;
             this.toolTip1.SetToolTip(this.cbRNPA, "Ingrese o Seleccione el RNPA de la Unidad Económica");
             // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton2.Location = new System.Drawing.Point(439, 22);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(104, 28);
-            this.radioButton2.TabIndex = 3;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Privado";
-            this.toolTip1.SetToolTip(this.radioButton2, "Seleccione si la Unidad Pesquera si NO pertenece a una Federación");
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(348, 22);
+            this.radioButton1.Location = new System.Drawing.Point(439, 22);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(89, 28);
-            this.radioButton1.TabIndex = 2;
+            this.radioButton1.Size = new System.Drawing.Size(104, 28);
+            this.radioButton1.TabIndex = 3;
             this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Social";
-            this.toolTip1.SetToolTip(this.radioButton1, "Seleccione si la Unidad Pesquera si pertenece a una Federación");
+            this.radioButton1.Text = "Privado";
+            this.toolTip1.SetToolTip(this.radioButton1, "Seleccione si la Unidad Pesquera si NO pertenece a una Federación");
             this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton0
+            // 
+            this.radioButton0.AutoSize = true;
+            this.radioButton0.Checked = true;
+            this.radioButton0.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radioButton0.Location = new System.Drawing.Point(348, 22);
+            this.radioButton0.Name = "radioButton0";
+            this.radioButton0.Size = new System.Drawing.Size(89, 28);
+            this.radioButton0.TabIndex = 2;
+            this.radioButton0.TabStop = true;
+            this.radioButton0.Text = "Social";
+            this.toolTip1.SetToolTip(this.radioButton0, "Seleccione si la Unidad Pesquera si pertenece a una Federación");
+            this.radioButton0.UseVisualStyleBackColor = true;
             // 
             // tabControl1
             // 
@@ -910,17 +911,17 @@
             // 
             this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.maskedTextBox4);
-            this.groupBox2.Controls.Add(this.maskedTextBox3);
-            this.groupBox2.Controls.Add(this.maskedTextBox2);
+            this.groupBox2.Controls.Add(this.mtbTelTeso);
+            this.groupBox2.Controls.Add(this.mtbTelSec);
+            this.groupBox2.Controls.Add(this.mtbTelPres);
             this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.textBox12);
+            this.groupBox2.Controls.Add(this.txtTesor);
             this.groupBox2.Controls.Add(this.label19);
             this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.textBox10);
+            this.groupBox2.Controls.Add(this.txtSecre);
             this.groupBox2.Controls.Add(this.label17);
             this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.textBox8);
+            this.groupBox2.Controls.Add(this.txtPresidente);
             this.groupBox2.Controls.Add(this.label15);
             this.groupBox2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(17, 16);
@@ -929,32 +930,32 @@
             this.groupBox2.TabIndex = 64;
             this.groupBox2.TabStop = false;
             // 
-            // maskedTextBox4
+            // mtbTelTeso
             // 
-            this.maskedTextBox4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox4.Location = new System.Drawing.Point(658, 124);
-            this.maskedTextBox4.Mask = "000-000-0000";
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(100, 26);
-            this.maskedTextBox4.TabIndex = 47;
+            this.mtbTelTeso.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTelTeso.Location = new System.Drawing.Point(658, 124);
+            this.mtbTelTeso.Mask = "000-000-0000";
+            this.mtbTelTeso.Name = "mtbTelTeso";
+            this.mtbTelTeso.Size = new System.Drawing.Size(100, 26);
+            this.mtbTelTeso.TabIndex = 47;
             // 
-            // maskedTextBox3
+            // mtbTelSec
             // 
-            this.maskedTextBox3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(658, 81);
-            this.maskedTextBox3.Mask = "000-000-0000";
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(100, 26);
-            this.maskedTextBox3.TabIndex = 45;
+            this.mtbTelSec.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTelSec.Location = new System.Drawing.Point(658, 81);
+            this.mtbTelSec.Mask = "000-000-0000";
+            this.mtbTelSec.Name = "mtbTelSec";
+            this.mtbTelSec.Size = new System.Drawing.Size(100, 26);
+            this.mtbTelSec.TabIndex = 45;
             // 
-            // maskedTextBox2
+            // mtbTelPres
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(658, 35);
-            this.maskedTextBox2.Mask = "000-000-0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(100, 26);
-            this.maskedTextBox2.TabIndex = 43;
+            this.mtbTelPres.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTelPres.Location = new System.Drawing.Point(658, 35);
+            this.mtbTelPres.Mask = "000-000-0000";
+            this.mtbTelPres.Name = "mtbTelPres";
+            this.mtbTelPres.Size = new System.Drawing.Size(100, 26);
+            this.mtbTelPres.TabIndex = 43;
             // 
             // label18
             // 
@@ -968,15 +969,15 @@
             this.label18.TabIndex = 51;
             this.label18.Text = "Nombre del tesorero";
             // 
-            // textBox12
+            // txtTesor
             // 
-            this.textBox12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox12.Location = new System.Drawing.Point(9, 125);
-            this.textBox12.Name = "textBox12";
-            this.textBox12.Size = new System.Drawing.Size(623, 26);
-            this.textBox12.TabIndex = 46;
-            this.textBox12.Tag = "";
-            this.toolTip1.SetToolTip(this.textBox12, "Ingrese el nombre del Tesorero");
+            this.txtTesor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTesor.Location = new System.Drawing.Point(9, 125);
+            this.txtTesor.Name = "txtTesor";
+            this.txtTesor.Size = new System.Drawing.Size(623, 26);
+            this.txtTesor.TabIndex = 46;
+            this.txtTesor.Tag = "";
+            this.toolTip1.SetToolTip(this.txtTesor, "Ingrese el nombre del Tesorero");
             // 
             // label19
             // 
@@ -1000,15 +1001,15 @@
             this.label16.TabIndex = 47;
             this.label16.Text = "Nombre del secretario";
             // 
-            // textBox10
+            // txtSecre
             // 
-            this.textBox10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox10.Location = new System.Drawing.Point(9, 81);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(623, 26);
-            this.textBox10.TabIndex = 44;
-            this.textBox10.Tag = "";
-            this.toolTip1.SetToolTip(this.textBox10, "Ingrese el nombre del Secretario");
+            this.txtSecre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSecre.Location = new System.Drawing.Point(9, 81);
+            this.txtSecre.Name = "txtSecre";
+            this.txtSecre.Size = new System.Drawing.Size(623, 26);
+            this.txtSecre.TabIndex = 44;
+            this.txtSecre.Tag = "";
+            this.toolTip1.SetToolTip(this.txtSecre, "Ingrese el nombre del Secretario");
             // 
             // label17
             // 
@@ -1032,15 +1033,15 @@
             this.label6.TabIndex = 43;
             this.label6.Text = "Nombre del presidente";
             // 
-            // textBox8
+            // txtPresidente
             // 
-            this.textBox8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox8.Location = new System.Drawing.Point(9, 35);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(623, 26);
-            this.textBox8.TabIndex = 42;
-            this.textBox8.Tag = "";
-            this.toolTip1.SetToolTip(this.textBox8, "Ingrese el nombre del Presidente de la Organización Económica");
+            this.txtPresidente.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPresidente.Location = new System.Drawing.Point(9, 35);
+            this.txtPresidente.Name = "txtPresidente";
+            this.txtPresidente.Size = new System.Drawing.Size(623, 26);
+            this.txtPresidente.TabIndex = 42;
+            this.txtPresidente.Tag = "";
+            this.toolTip1.SetToolTip(this.txtPresidente, "Ingrese el nombre del Presidente de la Organización Económica");
             // 
             // label15
             // 
@@ -1177,22 +1178,22 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtEstado;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtMunicipio;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.TextBox txtLocalidad;
+        private System.Windows.Forms.MaskedTextBox mtbCP;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox txtColonia;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtCalleNum;
+        private System.Windows.Forms.TextBox txtRFC;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtNombre;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -1200,35 +1201,35 @@
         private System.Windows.Forms.GroupBox gbOrgPes;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.GroupBox gbFed;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox6;
+        private System.Windows.Forms.MaskedTextBox mtbTelRepFed;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox txtNomRepFed;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox textBox11;
+        private System.Windows.Forms.TextBox txtNomFed;
         private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.ComboBox cbRNPA;
-        private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton0;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage Permisos;
         private System.Windows.Forms.TabPage Directiva;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox5;
+        private System.Windows.Forms.MaskedTextBox mtbTelefono;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox textBox14;
+        private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox mtbTelTeso;
+        private System.Windows.Forms.MaskedTextBox mtbTelSec;
+        private System.Windows.Forms.MaskedTextBox mtbTelPres;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox textBox12;
+        private System.Windows.Forms.TextBox txtTesor;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox10;
+        private System.Windows.Forms.TextBox txtSecre;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox txtPresidente;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TabPage Pescadores;
         private System.Windows.Forms.GroupBox groupBox1;

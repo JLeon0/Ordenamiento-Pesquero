@@ -40,13 +40,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Embarcacion.cs" />
+    <Compile Include="Permiso.cs" />
+    <Compile Include="Pescador.cs" />
+    <Compile Include="Unidad_Economica.cs" />
     <Compile Include="Procedimientos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\OrdenamientoPesquero\OrdenamientoPesquero.csproj">
-      <Project>{26b25b8a-91b1-4fe6-b432-7b44611d744c}</Project>
-      <Name>OrdenamientoPesquero</Name>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{8e15fc49-4a3b-493e-b73b-cb5dd5a6d4f3}</Project>
+      <Name>CapaDatos</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

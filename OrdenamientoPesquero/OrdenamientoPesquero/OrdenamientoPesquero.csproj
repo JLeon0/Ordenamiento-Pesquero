@@ -46,10 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clases Entidad\Embarcacion.cs" />
-    <Compile Include="Clases Entidad\Permiso.cs" />
-    <Compile Include="Clases Entidad\Pescador.cs" />
-    <Compile Include="Clases Entidad\Unidad_Economica.cs" />
     <Compile Include="OrdPesqueroDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -138,6 +134,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\actualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{d48b06ec-8515-4ab1-87c2-0b6c56b225d6}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

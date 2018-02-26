@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace OrdenamientoPesquero.Clases_Entidad
+namespace Logica
 {
     class Pescador
     {
@@ -84,7 +84,7 @@ namespace OrdenamientoPesquero.Clases_Entidad
             ESCOLARIDAD = eSCOLARIDAD;
             TIP_SANG = tIP_SANG;
             SEXO = sEXO;
-            LUG_NACIMI = =lUG_NACIMI;
+            LUG_NACIMI = lUG_NACIMI;
             FECH_NACIMI = fECH_NACIMI;
             CALLENUM = cALLENUM;
             COLONIA = cOLONIA;

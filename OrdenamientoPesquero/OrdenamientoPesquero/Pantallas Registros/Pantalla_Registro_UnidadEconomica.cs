@@ -7,12 +7,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Logica;
+
 
 namespace OrdenamientoPesquero
 {
     public partial class Pantalla_Registro_UnidadEconomica : Form
     {
         bool escondido = false;
+        Unidad_Economica ue;
+        Procedimientos proc = new Procedimientos();
 
         public Pantalla_Registro_UnidadEconomica()
         {
@@ -54,6 +58,15 @@ namespace OrdenamientoPesquero
 
         private void pbRegistrar_Click(object sender, EventArgs e)
         {
+            if (radioButton0.Checked)
+            {
+                ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
+                proc.Registrar_Unidad(ue);
+            }
+            else if (radioButton1.Checked)
+            {
+                ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
+            }
 
         }
 
