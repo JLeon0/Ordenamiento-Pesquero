@@ -15,7 +15,43 @@ namespace OrdenamientoPesquero.Clases_Entidad
         string MARCA { get; set; }
         string HP { get; set; }
         string MUNICIPIO { get; set; }
-        string FECHACHIPEADO { get; set; }
-        string NUMREGISTRO { get; set; }
+        public Embarcacion()
+        {
+            Nombre = "";
+            Matricula = "";
+            RNPA = "";
+            AVID = "";
+            MARCA = "";
+            HP = "";
+            MUNICIPIO = "";
+        }
+        public Embarcacion(string nombre,
+        string matricula,
+        string rNPA,
+        string aVID,
+        string mARCA,
+        string hP,
+        string mUNICIPIO)
+        {
+            Nombre = nombre;
+            Matricula = matricula;
+            RNPA = rNPA;
+            AVID = aVID;
+            MARCA = mARCA;
+            HP = hP;
+            MUNICIPIO = mUNICIPIO;
+        }
+        public void Registrar()
+        {
+
+        }
+        public void Actualizar()
+        {
+
+        }
+        public void Eliminar()
+        {
+
+        }
     }
 }
