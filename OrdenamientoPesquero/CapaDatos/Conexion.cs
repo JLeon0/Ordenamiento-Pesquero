@@ -20,15 +20,5 @@ namespace CapaDatos
         {
             conexion = new SqlConnection(obtenertconexion());
         }
-
-        public void ejecutar(SqlCommand cmd)
-        {
-            conexion.Open();
-            cmd.Connection = conexion;
-            cmd.ExecuteNonQuery();
-            cmd.Connection.Close();
-            conexion.Close();
-        }
-
     }
 }
