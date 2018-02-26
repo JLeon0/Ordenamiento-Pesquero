@@ -12,23 +12,13 @@ namespace CapaDatos
     {
         public SqlConnection conexion;
 
-        //public static string obtenertconexion()
-        //{
-            //return Properties.Settings.Default.cadenaconexion;
-        //}
-        //public conexionBD()
-        //{
-          //  conexion = new SqlConnection(obtenertconexion());
-        //}
-
-        public void ejecutar(SqlCommand cmd)
+        public static string obtenertconexion()
         {
-            conexion.Open();
-            cmd.Connection = conexion;
-            cmd.ExecuteNonQuery();
-            cmd.Connection.Close();
-            conexion.Close();
+            return Properties.Settings.Default.OrdPesqueroConnectionString;
         }
-
+        public Conexion()
+        {
+            conexion = new SqlConnection(obtenertconexion());
+        }
     }
 }
