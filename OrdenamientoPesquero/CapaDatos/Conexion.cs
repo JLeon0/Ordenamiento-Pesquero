@@ -12,14 +12,14 @@ namespace CapaDatos
     {
         public SqlConnection conexion;
 
-        //public static string obtenertconexion()
-        //{
-            //return Properties.Settings.Default.cadenaconexion;
-        //}
-        //public conexionBD()
-        //{
-          //  conexion = new SqlConnection(obtenertconexion());
-        //}
+        public static string obtenertconexion()
+        {
+            return Properties.Settings.Default.OrdPesqueroConnectionString;
+        }
+        public Conexion()
+        {
+            conexion = new SqlConnection(obtenertconexion());
+        }
 
         public void ejecutar(SqlCommand cmd)
         {

@@ -66,6 +66,8 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Permisos = new System.Windows.Forms.TabPage();
+            this.textBox19 = new System.Windows.Forms.TextBox();
+            this.label27 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewComboBoxColumn1 = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -115,13 +117,11 @@
             this.Pescadores = new System.Windows.Forms.TabPage();
             this.Embarcaciones = new System.Windows.Forms.TabPage();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pbActualizar = new System.Windows.Forms.PictureBox();
             this.pbRegistrar = new System.Windows.Forms.PictureBox();
             this.pBReubicar = new System.Windows.Forms.PictureBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label27 = new System.Windows.Forms.Label();
-            this.textBox19 = new System.Windows.Forms.TextBox();
             this.gbOrgPes.SuspendLayout();
             this.gbFed.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -318,7 +318,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(141, 35);
+            this.label3.Location = new System.Drawing.Point(133, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -576,6 +576,22 @@
             this.Permisos.Size = new System.Drawing.Size(905, 368);
             this.Permisos.TabIndex = 0;
             this.Permisos.Text = "Permisos";
+            // 
+            // textBox19
+            // 
+            this.textBox19.Location = new System.Drawing.Point(813, 22);
+            this.textBox19.Name = "textBox19";
+            this.textBox19.Size = new System.Drawing.Size(69, 26);
+            this.textBox19.TabIndex = 69;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(771, 26);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(47, 18);
+            this.label27.TabIndex = 68;
+            this.label27.Text = "Folio:";
             // 
             // dataGridView2
             // 
@@ -1056,15 +1072,6 @@
             this.Embarcaciones.Text = "Embarcaciones";
             this.Embarcaciones.UseVisualStyleBackColor = true;
             // 
-            // groupBox1
-            // 
-            this.groupBox1.Location = new System.Drawing.Point(944, 101);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(244, 100);
-            this.groupBox1.TabIndex = 101;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
-            // 
             // pbActualizar
             // 
             this.pbActualizar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.actualizar;
@@ -1101,6 +1108,15 @@
             this.toolTip1.SetToolTip(this.pBReubicar, "Esconder Información");
             this.pBReubicar.Click += new System.EventHandler(this.pBReubicar_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(944, 101);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(244, 100);
+            this.groupBox1.TabIndex = 101;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1110,25 +1126,9 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 14);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1000, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(983, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(771, 26);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(47, 18);
-            this.label27.TabIndex = 68;
-            this.label27.Text = "Folio:";
-            // 
-            // textBox19
-            // 
-            this.textBox19.Location = new System.Drawing.Point(813, 22);
-            this.textBox19.Name = "textBox19";
-            this.textBox19.Size = new System.Drawing.Size(69, 26);
-            this.textBox19.TabIndex = 69;
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
