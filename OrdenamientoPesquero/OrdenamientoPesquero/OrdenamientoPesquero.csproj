@@ -50,11 +50,10 @@
     <Compile Include="Clases Entidad\Permiso.cs" />
     <Compile Include="Clases Entidad\Pescador.cs" />
     <Compile Include="Clases Entidad\Unidad_Economica.cs" />
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="OrdPesqueroDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet.xsd</DependentUpon>
     </Compile>
     <Compile Include="Pantallas Registros\Pantalla_registro_embarcacion.cs">
       <SubType>Form</SubType>
@@ -82,9 +81,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas Registros\Pantalla_Registro_UnidadEconomica.resx">
       <DependentUpon>Pantalla_Registro_UnidadEconomica.cs</DependentUpon>
     </EmbeddedResource>
@@ -101,6 +97,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="OrdPesqueroDataSet.xsc">
+      <DependentUpon>OrdPesqueroDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet.xss">
+      <DependentUpon>OrdPesqueroDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -125,6 +132,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\flechaabajo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
