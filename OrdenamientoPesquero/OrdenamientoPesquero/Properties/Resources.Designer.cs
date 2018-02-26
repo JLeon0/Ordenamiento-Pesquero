@@ -63,6 +63,16 @@ namespace OrdenamientoPesquero.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap actualizar {
+            get {
+                object obj = ResourceManager.GetObject("actualizar", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap flechaabajo {
             get {
                 object obj = ResourceManager.GetObject("flechaabajo", resourceCulture);
@@ -76,6 +86,16 @@ namespace OrdenamientoPesquero.Properties {
         internal static System.Drawing.Bitmap flechaarriba {
             get {
                 object obj = ResourceManager.GetObject("flechaarriba", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap registrar {
+            get {
+                object obj = ResourceManager.GetObject("registrar", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

@@ -13,7 +13,7 @@ namespace OrdenamientoPesquero
     public partial class Pantalla_Registro_UnidadEconomica : Form
     {
         bool escondido = false;
-        
+
         public Pantalla_Registro_UnidadEconomica()
         {
             InitializeComponent();
@@ -33,6 +33,8 @@ namespace OrdenamientoPesquero
                 gbOrgPes.Height -= 312;
                 pBReubicar.Location = new Point(pBReubicar.Location.X, pBReubicar.Location.Y - 300);
                 tabControl1.Location = new Point(tabControl1.Location.X, tabControl1.Location.Y - 300);
+                pbActualizar.Location = new Point(pbActualizar.Location.X, pbActualizar.Location.Y - 300);
+                pbRegistrar.Location = new Point(pbRegistrar.Location.X, pbRegistrar.Location.Y - 300);
                 escondido = true;
                 pBReubicar.BackgroundImage = Properties.Resources.flechaabajo;
                 toolTip1.SetToolTip(pBReubicar, "Mostrar Información");
@@ -42,10 +44,22 @@ namespace OrdenamientoPesquero
                 gbOrgPes.Height += 312;
                 pBReubicar.Location = new Point(pBReubicar.Location.X, pBReubicar.Location.Y + 300);
                 tabControl1.Location = new Point(tabControl1.Location.X, tabControl1.Location.Y + 300);
+                pbActualizar.Location = new Point(pbActualizar.Location.X, pbActualizar.Location.Y + 300);
+                pbRegistrar.Location = new Point(pbRegistrar.Location.X, pbRegistrar.Location.Y + 300);
                 escondido = false;
                 pBReubicar.BackgroundImage = Properties.Resources.flechaarriba;
                 toolTip1.SetToolTip(pBReubicar, "Esconder Información");
             }
+        }
+
+        private void pbRegistrar_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pbActualizar_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
