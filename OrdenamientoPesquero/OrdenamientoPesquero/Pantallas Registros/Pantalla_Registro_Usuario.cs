@@ -19,8 +19,7 @@ namespace OrdenamientoPesquero
 
         }
 
-        private void Pantalla_Registro_Usuario_Load(object sender, EventArgs e)
-        {textBox1.ForeColor
+        private void Pantalla_Registro_Usuario_Load(object sender, EventArgs e) {
 
         }
     }

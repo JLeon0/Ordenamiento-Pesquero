@@ -23,6 +23,13 @@ namespace OrdenamientoPesquero
         {
             InitializeComponent();
             this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
+
+            foreach (TextBox ctr in gbOrgPes.Controls.OfType<TextBox>())
+            {
+                gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].ForeColor = Color.FromArgb(123, 133, 142);
+                gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].BackColor = Color.FromArgb(36, 50, 61);
+
+            }
         }
 
         private void Pantalla_Registro_UnidadEconomica_Load(object sender, EventArgs e)
@@ -126,6 +133,8 @@ namespace OrdenamientoPesquero
 
         private void Pantalla_Registro_UnidadEconomica_Load_1(object sender, EventArgs e)
         {
+          
+
             Permisos.BackColor = Color.FromArgb(26, 177, 136);
             this.BackColor = Color.FromArgb(36, 50, 61);
             Resumen.BackColor = Color.FromArgb(118, 50, 63);
