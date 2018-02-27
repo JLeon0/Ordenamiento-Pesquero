@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace OrdenamientoPesquero
 {
     public partial class Pantalla_Registro_Usuario : Form
@@ -15,6 +16,12 @@ namespace OrdenamientoPesquero
         public Pantalla_Registro_Usuario()
         {
             InitializeComponent();
+
+        }
+
+        private void Pantalla_Registro_Usuario_Load(object sender, EventArgs e)
+        {textBox1.ForeColor
+
         }
     }
 }
