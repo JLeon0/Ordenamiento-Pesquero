@@ -86,5 +86,20 @@ namespace OrdenamientoPesquero
             System.Threading.Thread.Sleep(2000);
             System.Windows.Forms.SendKeys.SendWait(" ");
         }
+
+        private void mtbCP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                if (mtbCP.Text.Length != 5)
+                {
+
+                }
+            }
+        }
     }
 }

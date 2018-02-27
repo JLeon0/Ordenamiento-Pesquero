@@ -117,10 +117,11 @@
             this.Pescadores = new System.Windows.Forms.TabPage();
             this.Embarcaciones = new System.Windows.Forms.TabPage();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pbActualizar = new System.Windows.Forms.PictureBox();
             this.pbRegistrar = new System.Windows.Forms.PictureBox();
             this.pBReubicar = new System.Windows.Forms.PictureBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbOrgPes.SuspendLayout();
             this.gbFed.SuspendLayout();
@@ -136,6 +137,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRegistrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBReubicar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -211,6 +213,7 @@
             this.mtbCP.TabIndex = 11;
             this.toolTip1.SetToolTip(this.mtbCP, "Ingrese el Codigo Postal de la Organización Pesquera");
             this.mtbCP.ValidatingType = typeof(int);
+            this.mtbCP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.mtbCP_KeyPress);
             // 
             // label11
             // 
@@ -318,7 +321,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(125, 35);
+            this.label3.Location = new System.Drawing.Point(117, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -338,6 +341,7 @@
             // 
             // gbOrgPes
             // 
+            this.gbOrgPes.Controls.Add(this.pictureBox2);
             this.gbOrgPes.Controls.Add(this.mtbTelefono);
             this.gbOrgPes.Controls.Add(this.label20);
             this.gbOrgPes.Controls.Add(this.txtCorreo);
@@ -1073,6 +1077,15 @@
             this.Embarcaciones.Text = "Embarcaciones";
             this.Embarcaciones.UseVisualStyleBackColor = true;
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(944, 101);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(244, 100);
+            this.groupBox1.TabIndex = 101;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
+            // 
             // pbActualizar
             // 
             this.pbActualizar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.actualizar;
@@ -1109,14 +1122,17 @@
             this.toolTip1.SetToolTip(this.pBReubicar, "Esconder Información");
             this.pBReubicar.Click += new System.EventHandler(this.pBReubicar_Click);
             // 
-            // groupBox1
+            // pictureBox2
             // 
-            this.groupBox1.Location = new System.Drawing.Point(944, 101);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(244, 100);
-            this.groupBox1.TabIndex = 101;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox2.Location = new System.Drawing.Point(813, 125);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox2.TabIndex = 102;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -1127,7 +1143,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 14);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(966, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(949, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
@@ -1137,7 +1153,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1245, 749);
+            this.ClientSize = new System.Drawing.Size(1262, 749);
             this.ControlBox = false;
             this.Controls.Add(this.pbActualizar);
             this.Controls.Add(this.pbRegistrar);
@@ -1170,6 +1186,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRegistrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBReubicar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1271,5 +1288,6 @@
         private System.Windows.Forms.PictureBox pbActualizar;
         private System.Windows.Forms.TextBox textBox19;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
