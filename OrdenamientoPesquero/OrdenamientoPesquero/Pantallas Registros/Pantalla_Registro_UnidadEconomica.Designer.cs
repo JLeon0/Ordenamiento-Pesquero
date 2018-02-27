@@ -183,7 +183,7 @@
             // 
             // txtMunicipio
             // 
-            this.txtMunicipio.BackColor = System.Drawing.Color.Turquoise;
+            this.txtMunicipio.BackColor = System.Drawing.Color.Silver;
             this.txtMunicipio.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMunicipio.ForeColor = System.Drawing.Color.DarkGray;
             this.txtMunicipio.Location = new System.Drawing.Point(370, 172);
@@ -206,7 +206,7 @@
             // 
             // txtLocalidad
             // 
-            this.txtLocalidad.BackColor = System.Drawing.Color.Turquoise;
+            this.txtLocalidad.BackColor = System.Drawing.Color.Silver;
             this.txtLocalidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLocalidad.ForeColor = System.Drawing.Color.DarkGray;
             this.txtLocalidad.Location = new System.Drawing.Point(9, 172);
@@ -252,7 +252,7 @@
             // 
             // txtColonia
             // 
-            this.txtColonia.BackColor = System.Drawing.Color.Turquoise;
+            this.txtColonia.BackColor = System.Drawing.Color.Silver;
             this.txtColonia.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtColonia.ForeColor = System.Drawing.Color.DarkGray;
             this.txtColonia.Location = new System.Drawing.Point(370, 122);
@@ -277,7 +277,7 @@
             // 
             // txtCalleNum
             // 
-            this.txtCalleNum.BackColor = System.Drawing.Color.Turquoise;
+            this.txtCalleNum.BackColor = System.Drawing.Color.Silver;
             this.txtCalleNum.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCalleNum.ForeColor = System.Drawing.Color.DarkGray;
             this.txtCalleNum.Location = new System.Drawing.Point(11, 122);
@@ -290,7 +290,7 @@
             // 
             // txtRFC
             // 
-            this.txtRFC.BackColor = System.Drawing.Color.Turquoise;
+            this.txtRFC.BackColor = System.Drawing.Color.Silver;
             this.txtRFC.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRFC.ForeColor = System.Drawing.Color.DarkGray;
             this.txtRFC.Location = new System.Drawing.Point(675, 72);
@@ -324,7 +324,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.BackColor = System.Drawing.Color.Turquoise;
+            this.txtNombre.BackColor = System.Drawing.Color.Silver;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.DarkGray;
@@ -433,7 +433,7 @@
             // 
             // txtCorreo
             // 
-            this.txtCorreo.BackColor = System.Drawing.Color.Turquoise;
+            this.txtCorreo.BackColor = System.Drawing.Color.Silver;
             this.txtCorreo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.DarkGray;
             this.txtCorreo.Location = new System.Drawing.Point(11, 234);
@@ -538,7 +538,7 @@
             // 
             // txtFecha
             // 
-            this.txtFecha.BackColor = System.Drawing.Color.Turquoise;
+            this.txtFecha.BackColor = System.Drawing.Color.Silver;
             this.txtFecha.Enabled = false;
             this.txtFecha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFecha.ForeColor = System.Drawing.Color.DarkGray;
@@ -550,12 +550,12 @@
             // 
             // cbRNPA
             // 
-            this.cbRNPA.BackColor = System.Drawing.Color.Turquoise;
+            this.cbRNPA.BackColor = System.Drawing.Color.Silver;
             this.cbRNPA.ForeColor = System.Drawing.Color.DarkGray;
             this.cbRNPA.FormattingEnabled = true;
-            this.cbRNPA.Location = new System.Drawing.Point(200, 21);
+            this.cbRNPA.Location = new System.Drawing.Point(209, 21);
             this.cbRNPA.Name = "cbRNPA";
-            this.cbRNPA.Size = new System.Drawing.Size(121, 28);
+            this.cbRNPA.Size = new System.Drawing.Size(163, 28);
             this.cbRNPA.TabIndex = 1;
             this.toolTip1.SetToolTip(this.cbRNPA, "Ingrese o Seleccione el RNPA de la Unidad Económica");
             this.cbRNPA.Leave += new System.EventHandler(this.cbRNPA_Leave);
@@ -564,7 +564,7 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(439, 22);
+            this.radioButton1.Location = new System.Drawing.Point(529, 23);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(104, 28);
             this.radioButton1.TabIndex = 3;
@@ -578,7 +578,7 @@
             this.radioButton0.AutoSize = true;
             this.radioButton0.Checked = true;
             this.radioButton0.Font = new System.Drawing.Font("Bookman Old Style", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton0.Location = new System.Drawing.Point(348, 22);
+            this.radioButton0.Location = new System.Drawing.Point(438, 23);
             this.radioButton0.Name = "radioButton0";
             this.radioButton0.Size = new System.Drawing.Size(89, 28);
             this.radioButton0.TabIndex = 2;
