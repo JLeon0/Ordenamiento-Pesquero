@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
 using Microsoft.VisualBasic;
-
+using System.Text.RegularExpressions;
 
 namespace OrdenamientoPesquero
 {
@@ -85,6 +85,69 @@ namespace OrdenamientoPesquero
         {
             System.Threading.Thread.Sleep(2000);
             System.Windows.Forms.SendKeys.SendWait(" ");
+        }
+
+        private void mtbCP_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsDigit(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void mtbCP_TextChanged(object sender, EventArgs e)
+        {
+            if (mtbCP.Text.Length != 5)
+            {
+                pictureBox2.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+            }
+            else
+            {
+                pictureBox2.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+            }
+        }
+
+        private void txtRFC_TextChanged(object sender, EventArgs e)
+        {
+            if (Regex.IsMatch(this.txtRFC.Text, @"^([A-Z\s]{4})\d{6}([A-Z\w]{3})$"))
+            {
+                pictureBox3.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+            }
+            else
+            {
+                pictureBox3.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+            }
+            
+        }
+
+        private void Pantalla_Registro_UnidadEconomica_Load_1(object sender, EventArgs e)
+        {
+            Permisos.BackColor = Color.FromArgb(26, 177, 136);
+            this.BackColor = Color.FromArgb(36, 50, 61);
+            Resumen.BackColor = Color.FromArgb(118, 50, 63);
+            txtNombre.ForeColor = Color.FromArgb(123,133,142);
+            txtNombre.BackColor = Color.FromArgb(36, 50, 61);
+        }
+
+        private void cbRNPA_Leave(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void txtCorreo_TextChanged(object sender, EventArgs e)
+        {
+            if(Regex.IsMatch(txtCorreo.Text,    @"^(?("")("".+?""@)|(([0-9a-zA-Z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-zA-Z])@))" + @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,6}))$"))
+            {
+                pictureBox4.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+            }
+            else
+            {
+                pictureBox4.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+            }
         }
     }
 }
