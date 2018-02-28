@@ -23,7 +23,9 @@ namespace OrdenamientoPesquero
         {
             InitializeComponent();
             this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
-
+            this.Width = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width);
+            tabControl1.Width= Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width*.992);
+            Resumen.Width = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width * .296);
             foreach (TextBox ctr in gbOrgPes.Controls.OfType<TextBox>())
             {
                 gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].ForeColor = Color.FromArgb(123, 133, 142);
@@ -80,13 +82,38 @@ namespace OrdenamientoPesquero
             if (exito == 1)
             {
                 (new System.Threading.Thread(CloseIt)).Start();
-                MessageBox.Show("HI"); /* 1 segundo = 1000 */
+                MessageBox.Show("Registrado exitosamente"); /* 1 segundo = 1000 */
+            }
+            else
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Error durante el registro"); /* 1 segundo = 1000 */
             }
         }
 
         private void pbActualizar_Click(object sender, EventArgs e)
         {
-
+            int exito = 0;
+            if (radioButton0.Checked)
+            {
+                ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
+                exito = proc.Actualizar_Unidad(ue);
+            }
+            else if (radioButton1.Checked)
+            {
+                ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
+                exito = proc.Actualizar_Unidad(ue);
+            }
+            if (exito == 1)
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Actualizado exitosamente"); /* 1 segundo = 1000 */
+            }
+            else
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Error durante la actualizacion"); /* 1 segundo = 1000 */
+            }
         }
         public void CloseIt()
         {

@@ -20,7 +20,7 @@ namespace CapaDatos
         public Conexion()
         {
             con = new SqlConnection(obtenertconexion());
-            //con.Open();
+            con.Open();
         }
 
 

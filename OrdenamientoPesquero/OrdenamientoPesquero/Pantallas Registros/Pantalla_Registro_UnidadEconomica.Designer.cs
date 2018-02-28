@@ -148,7 +148,7 @@
             // 
             // txtEstado
             // 
-            this.txtEstado.BackColor = System.Drawing.Color.Turquoise;
+            this.txtEstado.BackColor = System.Drawing.Color.Honeydew;
             this.txtEstado.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEstado.Enabled = false;
             this.txtEstado.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -184,10 +184,12 @@
             // 
             // txtMunicipio
             // 
-            this.txtMunicipio.BackColor = System.Drawing.Color.Turquoise;
+            this.txtMunicipio.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtMunicipio.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMunicipio.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMunicipio.ForeColor = System.Drawing.Color.DarkGray;
             this.txtMunicipio.Location = new System.Drawing.Point(370, 172);
+            this.txtMunicipio.MaxLength = 20;
             this.txtMunicipio.Name = "txtMunicipio";
             this.txtMunicipio.Size = new System.Drawing.Size(262, 26);
             this.txtMunicipio.TabIndex = 13;
@@ -207,10 +209,12 @@
             // 
             // txtLocalidad
             // 
-            this.txtLocalidad.BackColor = System.Drawing.Color.Turquoise;
+            this.txtLocalidad.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtLocalidad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtLocalidad.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLocalidad.ForeColor = System.Drawing.Color.DarkGray;
             this.txtLocalidad.Location = new System.Drawing.Point(9, 172);
+            this.txtLocalidad.MaxLength = 30;
             this.txtLocalidad.Name = "txtLocalidad";
             this.txtLocalidad.Size = new System.Drawing.Size(333, 26);
             this.txtLocalidad.TabIndex = 12;
@@ -254,10 +258,12 @@
             // 
             // txtColonia
             // 
-            this.txtColonia.BackColor = System.Drawing.Color.Turquoise;
+            this.txtColonia.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtColonia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtColonia.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtColonia.ForeColor = System.Drawing.Color.DarkGray;
             this.txtColonia.Location = new System.Drawing.Point(370, 122);
+            this.txtColonia.MaxLength = 50;
             this.txtColonia.Name = "txtColonia";
             this.txtColonia.Size = new System.Drawing.Size(330, 26);
             this.txtColonia.TabIndex = 10;
@@ -279,10 +285,12 @@
             // 
             // txtCalleNum
             // 
-            this.txtCalleNum.BackColor = System.Drawing.Color.Turquoise;
+            this.txtCalleNum.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtCalleNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCalleNum.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCalleNum.ForeColor = System.Drawing.Color.DarkGray;
             this.txtCalleNum.Location = new System.Drawing.Point(11, 122);
+            this.txtCalleNum.MaxLength = 50;
             this.txtCalleNum.Name = "txtCalleNum";
             this.txtCalleNum.Size = new System.Drawing.Size(333, 26);
             this.txtCalleNum.TabIndex = 9;
@@ -292,7 +300,8 @@
             // 
             // txtRFC
             // 
-            this.txtRFC.BackColor = System.Drawing.Color.Turquoise;
+            this.txtRFC.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtRFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRFC.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRFC.ForeColor = System.Drawing.Color.DarkGray;
             this.txtRFC.Location = new System.Drawing.Point(675, 72);
@@ -326,11 +335,12 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.BackColor = System.Drawing.Color.Silver;
+            this.txtNombre.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.txtNombre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNombre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.ForeColor = System.Drawing.Color.DarkGray;
             this.txtNombre.Location = new System.Drawing.Point(9, 72);
+            this.txtNombre.MaxLength = 100;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(623, 26);
             this.txtNombre.TabIndex = 4;
@@ -353,7 +363,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(93, 35);
+            this.label3.Location = new System.Drawing.Point(138, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -471,10 +481,12 @@
             // 
             // txtCorreo
             // 
-            this.txtCorreo.BackColor = System.Drawing.Color.Turquoise;
+            this.txtCorreo.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCorreo.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.DarkGray;
             this.txtCorreo.Location = new System.Drawing.Point(11, 234);
+            this.txtCorreo.MaxLength = 30;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(623, 26);
             this.txtCorreo.TabIndex = 15;
@@ -531,6 +543,8 @@
             // 
             // txtNomRepFed
             // 
+            this.txtNomRepFed.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtNomRepFed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomRepFed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomRepFed.Location = new System.Drawing.Point(9, 84);
             this.txtNomRepFed.Name = "txtNomRepFed";
@@ -563,7 +577,8 @@
             // 
             // txtNomFed
             // 
-            this.txtNomFed.BackColor = System.Drawing.Color.Turquoise;
+            this.txtNomFed.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtNomFed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtNomFed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNomFed.ForeColor = System.Drawing.Color.DarkGray;
             this.txtNomFed.Location = new System.Drawing.Point(9, 38);
@@ -576,7 +591,8 @@
             // 
             // txtFecha
             // 
-            this.txtFecha.BackColor = System.Drawing.Color.Turquoise;
+            this.txtFecha.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtFecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtFecha.Enabled = false;
             this.txtFecha.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFecha.ForeColor = System.Drawing.Color.DarkGray;
@@ -633,10 +649,10 @@
             this.tabControl1.Controls.Add(this.Embarcaciones);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(12, 572);
+            this.tabControl1.Location = new System.Drawing.Point(-6, 572);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(913, 406);
+            this.tabControl1.Size = new System.Drawing.Size(1227, 406);
             this.tabControl1.TabIndex = 54;
             // 
             // Permisos
@@ -662,7 +678,7 @@
             this.Permisos.Location = new System.Drawing.Point(4, 34);
             this.Permisos.Name = "Permisos";
             this.Permisos.Padding = new System.Windows.Forms.Padding(3);
-            this.Permisos.Size = new System.Drawing.Size(905, 368);
+            this.Permisos.Size = new System.Drawing.Size(1219, 368);
             this.Permisos.TabIndex = 0;
             this.Permisos.Text = "Permisos";
             // 
@@ -991,7 +1007,7 @@
             this.Directiva.Location = new System.Drawing.Point(4, 34);
             this.Directiva.Name = "Directiva";
             this.Directiva.Padding = new System.Windows.Forms.Padding(3);
-            this.Directiva.Size = new System.Drawing.Size(905, 368);
+            this.Directiva.Size = new System.Drawing.Size(1219, 368);
             this.Directiva.TabIndex = 1;
             this.Directiva.Text = "Directiva";
             // 
@@ -1014,7 +1030,7 @@
             this.groupBox2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(17, 16);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(839, 171);
+            this.groupBox2.Size = new System.Drawing.Size(1153, 171);
             this.groupBox2.TabIndex = 64;
             this.groupBox2.TabStop = false;
             // 
@@ -1147,7 +1163,7 @@
             this.Pescadores.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Pescadores.Location = new System.Drawing.Point(4, 34);
             this.Pescadores.Name = "Pescadores";
-            this.Pescadores.Size = new System.Drawing.Size(905, 368);
+            this.Pescadores.Size = new System.Drawing.Size(1219, 368);
             this.Pescadores.TabIndex = 2;
             this.Pescadores.Text = "Pescadores";
             this.Pescadores.UseVisualStyleBackColor = true;
@@ -1156,7 +1172,7 @@
             // 
             this.Embarcaciones.Location = new System.Drawing.Point(4, 34);
             this.Embarcaciones.Name = "Embarcaciones";
-            this.Embarcaciones.Size = new System.Drawing.Size(905, 368);
+            this.Embarcaciones.Size = new System.Drawing.Size(1219, 368);
             this.Embarcaciones.TabIndex = 3;
             this.Embarcaciones.Text = "Certificados de matricula";
             this.Embarcaciones.UseVisualStyleBackColor = true;
@@ -1165,7 +1181,7 @@
             // 
             this.tabPage1.Location = new System.Drawing.Point(4, 34);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(905, 368);
+            this.tabPage1.Size = new System.Drawing.Size(1219, 368);
             this.tabPage1.TabIndex = 4;
             this.tabPage1.Text = "Expediente";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -1208,9 +1224,13 @@
             // 
             // Resumen
             // 
-            this.Resumen.Location = new System.Drawing.Point(944, 101);
+            this.Resumen.BackColor = System.Drawing.Color.Transparent;
+            this.Resumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Resumen.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Resumen.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.Resumen.Location = new System.Drawing.Point(944, 3);
             this.Resumen.Name = "Resumen";
-            this.Resumen.Size = new System.Drawing.Size(244, 100);
+            this.Resumen.Size = new System.Drawing.Size(283, 510);
             this.Resumen.TabIndex = 101;
             this.Resumen.TabStop = false;
             this.Resumen.Text = "Resumen";
@@ -1224,7 +1244,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 14);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(898, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(851, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
@@ -1235,7 +1255,6 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1245, 749);
-            this.ControlBox = false;
             this.Controls.Add(this.pbActualizar);
             this.Controls.Add(this.pbRegistrar);
             this.Controls.Add(this.pBReubicar);
@@ -1244,10 +1263,11 @@
             this.Controls.Add(this.gbOrgPes);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.pictureBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Pantalla_Registro_UnidadEconomica";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Ordenamiento Pesquero";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Pantalla_Registro_UnidadEconomica_Load_1);
             this.gbOrgPes.ResumeLayout(false);
             this.gbOrgPes.PerformLayout();
