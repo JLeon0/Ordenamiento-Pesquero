@@ -18,10 +18,25 @@ namespace OrdenamientoPesquero
         bool escondido = false;
         Unidad_Economica ue;
         Procedimientos proc = new Procedimientos();
+        DataSet ds = new DataSet();
 
         public Pantalla_Registro_UnidadEconomica()
         {
+            //
+            // Cargo los datos del combobox
+            //
+
+            //
+            // cargo la lista de items para el autocomplete
+            //
+            //cbRNPA.AutoCompleteCustomSource = proc.Obtener_todas_unidades("").;
+            //cbRNPA.AutoCompleteMode = AutoCompleteMode.Suggest;
+            //cbRNPA.AutoCompleteSource = AutoCompleteSource.CustomSource;
             InitializeComponent();
+            DataTable dt = proc.Obtener_todas_unidades("");
+            cbRNPA.DataSource = dt;
+            cbRNPA.DisplayMember = "RNPA";
+            cbRNPA.ValueMember = "RNPA";
             this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
             this.Width = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width);
             tabControl1.Width= Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width*.992);
@@ -144,10 +159,42 @@ namespace OrdenamientoPesquero
                 pictureBox2.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
             }
         }
-
+        public bool validarrfc(string rfc)
+        {
+            if (Regex.IsMatch(rfc, @"^([A-Z\s]{4})\d{6}([A-Z\w]{3})$"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool validarcurp(string rfc)
+        {
+            if (Regex.IsMatch(rfc, @"^([A - Z][AEIOUX][A - Z]{ 2}\d{ 2} (?: 0[1 - 9] | 1[0 - 2])(?:0[1 - 9][12]\d | 3[01])[HM](?:AS | B[CS] | C[CLMSH] | D[FG] | G[TR] | HG | JC | M[CNS] | N[ETL] | OC | PL | Q[TR] | S[PLR] | T[CSL] | VZ | YN | ZS)[B - DF - HJ - NP - TV - Z]{ 3}[A-Z\d])(\d)$"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool validarCorreo(string correo)
+        {
+            if (Regex.IsMatch(correo, @"^(?("")("".+?""@)|(([0-9a-zA-Z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-zA-Z])@))" + @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,6}))$"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         private void txtRFC_TextChanged(object sender, EventArgs e)
         {
-            if (Regex.IsMatch(this.txtRFC.Text, @"^([A-Z\s]{4})\d{6}([A-Z\w]{3})$"))
+            if (validarrfc(txtRFC.Text))
             {
                 pictureBox3.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
             }
@@ -176,13 +223,27 @@ namespace OrdenamientoPesquero
 
         private void txtCorreo_TextChanged(object sender, EventArgs e)
         {
-            if(Regex.IsMatch(txtCorreo.Text,    @"^(?("")("".+?""@)|(([0-9a-zA-Z]((\.(?!\.))|[-!#\$%&'\*\+/=\?\^`\{\}\|~\w])*)(?<=[0-9a-zA-Z])@))" + @"(?(\[)(\[(\d{1,3}\.){3}\d{1,3}\])|(([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,6}))$"))
+            if(validarCorreo(txtCorreo.Text))
             {
                 pictureBox4.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
             }
             else
             {
                 pictureBox4.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+            }
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            if (proc.Eliminar_Unidad(cbRNPA.Text) == 1)
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Eliminado exitosamente"); /* 1 segundo = 1000 */
+            }
+            else
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Error durante eliminacion"); /* 1 segundo = 1000 */
             }
         }
     }
