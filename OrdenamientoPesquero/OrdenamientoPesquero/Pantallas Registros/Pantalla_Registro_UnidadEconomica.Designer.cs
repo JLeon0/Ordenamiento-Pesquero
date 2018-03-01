@@ -118,8 +118,60 @@
             this.txtPresidente = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.Pescadores = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.label35 = new System.Windows.Forms.Label();
+            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton7 = new System.Windows.Forms.RadioButton();
+            this.radioButton8 = new System.Windows.Forms.RadioButton();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.Municipio = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.CP = new System.Windows.Forms.MaskedTextBox();
+            this.label45 = new System.Windows.Forms.Label();
+            this.Colonia = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
+            this.CalleYNum = new System.Windows.Forms.TextBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.RFC = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.CURP = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.FechaNac = new System.Windows.Forms.DateTimePicker();
+            this.label50 = new System.Windows.Forms.Label();
+            this.LugarNac = new System.Windows.Forms.TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.NombrePesc = new System.Windows.Forms.TextBox();
+            this.label54 = new System.Windows.Forms.Label();
             this.Embarcaciones = new System.Windows.Forms.TabPage();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.Expediente = new System.Windows.Forms.TabPage();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pbActualizar = new System.Windows.Forms.PictureBox();
             this.pbRegistrar = new System.Windows.Forms.PictureBox();
@@ -140,6 +192,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.Directiva.SuspendLayout();
             this.groupBox2.SuspendLayout();
+            this.Pescadores.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRegistrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBReubicar)).BeginInit();
@@ -363,7 +421,7 @@
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(138, 31);
+            this.label3.Location = new System.Drawing.Point(97, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -647,18 +705,21 @@
             this.tabControl1.Controls.Add(this.Directiva);
             this.tabControl1.Controls.Add(this.Pescadores);
             this.tabControl1.Controls.Add(this.Embarcaciones);
-            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.Expediente);
+            this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControl1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tabControl1.Location = new System.Drawing.Point(-6, 572);
+            this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.tabControl1.Location = new System.Drawing.Point(1, 572);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1227, 406);
             this.tabControl1.TabIndex = 54;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // Permisos
             // 
             this.Permisos.AutoScroll = true;
-            this.Permisos.BackColor = System.Drawing.Color.DarkGreen;
+            this.Permisos.BackColor = System.Drawing.Color.Transparent;
             this.Permisos.Controls.Add(this.textBox19);
             this.Permisos.Controls.Add(this.label27);
             this.Permisos.Controls.Add(this.dataGridView2);
@@ -675,6 +736,7 @@
             this.Permisos.Controls.Add(this.textBox18);
             this.Permisos.Controls.Add(this.label25);
             this.Permisos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Permisos.ForeColor = System.Drawing.Color.White;
             this.Permisos.Location = new System.Drawing.Point(4, 34);
             this.Permisos.Name = "Permisos";
             this.Permisos.Padding = new System.Windows.Forms.Padding(3);
@@ -1004,6 +1066,7 @@
             this.Directiva.BackColor = System.Drawing.Color.DarkCyan;
             this.Directiva.Controls.Add(this.groupBox2);
             this.Directiva.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Directiva.ForeColor = System.Drawing.Color.White;
             this.Directiva.Location = new System.Drawing.Point(4, 34);
             this.Directiva.Name = "Directiva";
             this.Directiva.Padding = new System.Windows.Forms.Padding(3);
@@ -1160,7 +1223,10 @@
             // Pescadores
             // 
             this.Pescadores.AutoScroll = true;
+            this.Pescadores.Controls.Add(this.groupBox4);
+            this.Pescadores.Controls.Add(this.groupBox7);
             this.Pescadores.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pescadores.ForeColor = System.Drawing.Color.White;
             this.Pescadores.Location = new System.Drawing.Point(4, 34);
             this.Pescadores.Name = "Pescadores";
             this.Pescadores.Size = new System.Drawing.Size(1219, 368);
@@ -1168,8 +1234,521 @@
             this.Pescadores.Text = "Pescadores";
             this.Pescadores.UseVisualStyleBackColor = true;
             // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.textBox7);
+            this.groupBox4.Controls.Add(this.label34);
+            this.groupBox4.Controls.Add(this.textBox8);
+            this.groupBox4.Controls.Add(this.label35);
+            this.groupBox4.Controls.Add(this.textBox9);
+            this.groupBox4.Controls.Add(this.label36);
+            this.groupBox4.Controls.Add(this.label37);
+            this.groupBox4.Controls.Add(this.label39);
+            this.groupBox4.Controls.Add(this.label40);
+            this.groupBox4.Controls.Add(this.groupBox1);
+            this.groupBox4.Controls.Add(this.groupBox6);
+            this.groupBox4.Controls.Add(this.groupBox5);
+            this.groupBox4.Controls.Add(this.textBox5);
+            this.groupBox4.Controls.Add(this.textBox6);
+            this.groupBox4.Controls.Add(this.textBox4);
+            this.groupBox4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox4.Location = new System.Drawing.Point(14, 344);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(894, 289);
+            this.groupBox4.TabIndex = 7;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Relación Pescador-Embarcación";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Enabled = false;
+            this.textBox7.Location = new System.Drawing.Point(389, 260);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(184, 25);
+            this.textBox7.TabIndex = 26;
+            this.textBox7.Text = "Baja California Sur";
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(321, 263);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(58, 17);
+            this.label34.TabIndex = 24;
+            this.label34.Text = "Estado:";
+            // 
+            // textBox8
+            // 
+            this.textBox8.Location = new System.Drawing.Point(106, 260);
+            this.textBox8.Name = "textBox8";
+            this.textBox8.Size = new System.Drawing.Size(209, 25);
+            this.textBox8.TabIndex = 27;
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Location = new System.Drawing.Point(17, 263);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(72, 17);
+            this.label35.TabIndex = 25;
+            this.label35.Text = "Municipio:";
+            // 
+            // textBox9
+            // 
+            this.textBox9.Location = new System.Drawing.Point(230, 228);
+            this.textBox9.Name = "textBox9";
+            this.textBox9.Size = new System.Drawing.Size(343, 25);
+            this.textBox9.TabIndex = 23;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(17, 231);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(211, 17);
+            this.label36.TabIndex = 22;
+            this.label36.Text = "Localidad y/o campo pesquero:";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Location = new System.Drawing.Point(586, 158);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(70, 17);
+            this.label37.TabIndex = 4;
+            this.label37.Text = "Matricula:";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(16, 201);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(236, 17);
+            this.label39.TabIndex = 4;
+            this.label39.Text = "Nombre del Sitio de Desembarque:";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Location = new System.Drawing.Point(16, 158);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(190, 17);
+            this.label40.TabIndex = 4;
+            this.label40.Text = "Nombre de la Embarcación:";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.radioButton6);
+            this.groupBox1.Controls.Add(this.radioButton10);
+            this.groupBox1.Location = new System.Drawing.Point(353, 97);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(308, 54);
+            this.groupBox1.TabIndex = 3;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Cuerpo de agua donde realiza la pesca";
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Location = new System.Drawing.Point(146, 24);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(157, 21);
+            this.radioButton6.TabIndex = 0;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "Aguas continentales";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            // 
+            // radioButton10
+            // 
+            this.radioButton10.AutoSize = true;
+            this.radioButton10.Location = new System.Drawing.Point(6, 24);
+            this.radioButton10.Name = "radioButton10";
+            this.radioButton10.Size = new System.Drawing.Size(134, 21);
+            this.radioButton10.TabIndex = 0;
+            this.radioButton10.TabStop = true;
+            this.radioButton10.Text = "Ribereño marino";
+            this.radioButton10.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.radioButton5);
+            this.groupBox6.Controls.Add(this.radioButton7);
+            this.groupBox6.Controls.Add(this.radioButton8);
+            this.groupBox6.Location = new System.Drawing.Point(10, 97);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(308, 54);
+            this.groupBox6.TabIndex = 2;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Ocupación laboral en la embarcación";
+            // 
+            // radioButton5
+            // 
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(230, 24);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(79, 21);
+            this.radioButton5.TabIndex = 0;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Ninguna";
+            this.radioButton5.UseVisualStyleBackColor = true;
+            // 
+            // radioButton7
+            // 
+            this.radioButton7.AutoSize = true;
+            this.radioButton7.Location = new System.Drawing.Point(124, 24);
+            this.radioButton7.Name = "radioButton7";
+            this.radioButton7.Size = new System.Drawing.Size(86, 21);
+            this.radioButton7.TabIndex = 0;
+            this.radioButton7.TabStop = true;
+            this.radioButton7.Text = "Ayudante";
+            this.radioButton7.UseVisualStyleBackColor = true;
+            // 
+            // radioButton8
+            // 
+            this.radioButton8.AutoSize = true;
+            this.radioButton8.Location = new System.Drawing.Point(6, 24);
+            this.radioButton8.Name = "radioButton8";
+            this.radioButton8.Size = new System.Drawing.Size(88, 21);
+            this.radioButton8.TabIndex = 0;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Text = "Operador";
+            this.radioButton8.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.radioButton2);
+            this.groupBox5.Controls.Add(this.radioButton4);
+            this.groupBox5.Controls.Add(this.radioButton3);
+            this.groupBox5.Controls.Add(this.radioButton9);
+            this.groupBox5.Location = new System.Drawing.Point(10, 24);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(641, 54);
+            this.groupBox5.TabIndex = 1;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Tipo de Pescador:";
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(326, 24);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(116, 21);
+            this.radioButton2.TabIndex = 0;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Permisionario";
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(482, 24);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(159, 21);
+            this.radioButton4.TabIndex = 0;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Trabajador Temporal";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(142, 24);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(132, 21);
+            this.radioButton3.TabIndex = 0;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Libre Tradicional";
+            this.radioButton3.UseVisualStyleBackColor = true;
+            // 
+            // radioButton9
+            // 
+            this.radioButton9.AutoSize = true;
+            this.radioButton9.Location = new System.Drawing.Point(6, 24);
+            this.radioButton9.Name = "radioButton9";
+            this.radioButton9.Size = new System.Drawing.Size(102, 21);
+            this.radioButton9.TabIndex = 0;
+            this.radioButton9.TabStop = true;
+            this.radioButton9.Text = "Organizado";
+            this.radioButton9.UseVisualStyleBackColor = true;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(662, 155);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(181, 25);
+            this.textBox5.TabIndex = 12;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(254, 197);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(319, 25);
+            this.textBox6.TabIndex = 12;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(208, 154);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(365, 25);
+            this.textBox4.TabIndex = 12;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.maskedTextBox2);
+            this.groupBox7.Controls.Add(this.label41);
+            this.groupBox7.Controls.Add(this.textBox3);
+            this.groupBox7.Controls.Add(this.label42);
+            this.groupBox7.Controls.Add(this.Municipio);
+            this.groupBox7.Controls.Add(this.label43);
+            this.groupBox7.Controls.Add(this.textBox1);
+            this.groupBox7.Controls.Add(this.label44);
+            this.groupBox7.Controls.Add(this.CP);
+            this.groupBox7.Controls.Add(this.label45);
+            this.groupBox7.Controls.Add(this.Colonia);
+            this.groupBox7.Controls.Add(this.label46);
+            this.groupBox7.Controls.Add(this.CalleYNum);
+            this.groupBox7.Controls.Add(this.label47);
+            this.groupBox7.Controls.Add(this.RFC);
+            this.groupBox7.Controls.Add(this.label48);
+            this.groupBox7.Controls.Add(this.CURP);
+            this.groupBox7.Controls.Add(this.label49);
+            this.groupBox7.Controls.Add(this.FechaNac);
+            this.groupBox7.Controls.Add(this.label50);
+            this.groupBox7.Controls.Add(this.LugarNac);
+            this.groupBox7.Controls.Add(this.label51);
+            this.groupBox7.Controls.Add(this.label52);
+            this.groupBox7.Controls.Add(this.label53);
+            this.groupBox7.Controls.Add(this.NombrePesc);
+            this.groupBox7.Controls.Add(this.label54);
+            this.groupBox7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox7.Location = new System.Drawing.Point(14, 15);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(894, 323);
+            this.groupBox7.TabIndex = 6;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Información General del Pescador";
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(686, 286);
+            this.maskedTextBox2.Mask = "000-000-0000";
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(114, 26);
+            this.maskedTextBox2.TabIndex = 22;
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Location = new System.Drawing.Point(620, 289);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(70, 18);
+            this.label41.TabIndex = 21;
+            this.label41.Text = "Teléfono:";
+            // 
+            // textBox3
+            // 
+            this.textBox3.Enabled = false;
+            this.textBox3.Location = new System.Drawing.Point(382, 286);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(191, 26);
+            this.textBox3.TabIndex = 20;
+            this.textBox3.Text = "Baja California Sur";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(314, 289);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(62, 18);
+            this.label42.TabIndex = 19;
+            this.label42.Text = "Estado:";
+            // 
+            // Municipio
+            // 
+            this.Municipio.Location = new System.Drawing.Point(99, 286);
+            this.Municipio.Name = "Municipio";
+            this.Municipio.Size = new System.Drawing.Size(209, 26);
+            this.Municipio.TabIndex = 20;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Location = new System.Drawing.Point(10, 289);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(79, 18);
+            this.label43.TabIndex = 19;
+            this.label43.Text = "Municipio:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(99, 254);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(474, 26);
+            this.textBox1.TabIndex = 18;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Location = new System.Drawing.Point(10, 257);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(81, 18);
+            this.label44.TabIndex = 17;
+            this.label44.Text = "Localidad:";
+            // 
+            // CP
+            // 
+            this.CP.Location = new System.Drawing.Point(667, 222);
+            this.CP.Mask = "99999";
+            this.CP.Name = "CP";
+            this.CP.Size = new System.Drawing.Size(72, 26);
+            this.CP.TabIndex = 16;
+            this.CP.ValidatingType = typeof(int);
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Location = new System.Drawing.Point(620, 225);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(41, 18);
+            this.label45.TabIndex = 15;
+            this.label45.Text = "C. P.";
+            // 
+            // Colonia
+            // 
+            this.Colonia.Location = new System.Drawing.Point(99, 222);
+            this.Colonia.Name = "Colonia";
+            this.Colonia.Size = new System.Drawing.Size(474, 26);
+            this.Colonia.TabIndex = 14;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Location = new System.Drawing.Point(10, 225);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(66, 18);
+            this.label46.TabIndex = 13;
+            this.label46.Text = "Colonia:";
+            // 
+            // CalleYNum
+            // 
+            this.CalleYNum.Location = new System.Drawing.Point(134, 190);
+            this.CalleYNum.Name = "CalleYNum";
+            this.CalleYNum.Size = new System.Drawing.Size(474, 26);
+            this.CalleYNum.TabIndex = 12;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(10, 193);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(118, 18);
+            this.label47.TabIndex = 11;
+            this.label47.Text = "Calle y Número:";
+            // 
+            // RFC
+            // 
+            this.RFC.Location = new System.Drawing.Point(345, 143);
+            this.RFC.Name = "RFC";
+            this.RFC.Size = new System.Drawing.Size(186, 26);
+            this.RFC.TabIndex = 10;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(287, 146);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(45, 18);
+            this.label48.TabIndex = 9;
+            this.label48.Text = "RFC:";
+            // 
+            // CURP
+            // 
+            this.CURP.Location = new System.Drawing.Point(70, 143);
+            this.CURP.Name = "CURP";
+            this.CURP.Size = new System.Drawing.Size(186, 26);
+            this.CURP.TabIndex = 8;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Location = new System.Drawing.Point(7, 146);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(57, 18);
+            this.label49.TabIndex = 7;
+            this.label49.Text = "CURP:";
+            // 
+            // FechaNac
+            // 
+            this.FechaNac.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaNac.Location = new System.Drawing.Point(623, 86);
+            this.FechaNac.Name = "FechaNac";
+            this.FechaNac.Size = new System.Drawing.Size(226, 26);
+            this.FechaNac.TabIndex = 6;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label50.Location = new System.Drawing.Point(193, 115);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(179, 16);
+            this.label50.TabIndex = 5;
+            this.label50.Text = "Localidad, Municipio, Estado.";
+            // 
+            // LugarNac
+            // 
+            this.LugarNac.Location = new System.Drawing.Point(178, 86);
+            this.LugarNac.Name = "LugarNac";
+            this.LugarNac.Size = new System.Drawing.Size(430, 26);
+            this.LugarNac.TabIndex = 4;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Location = new System.Drawing.Point(620, 65);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(157, 18);
+            this.label51.TabIndex = 3;
+            this.label51.Text = "Fecha de Nacimiento";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Location = new System.Drawing.Point(7, 89);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(162, 18);
+            this.label52.TabIndex = 3;
+            this.label52.Text = "Lugar de Nacimiendo:";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label53.Location = new System.Drawing.Point(193, 52);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(338, 16);
+            this.label53.TabIndex = 2;
+            this.label53.Text = "Nombre(s)          Apellido Paterno          Apellido Materno";
+            // 
+            // NombrePesc
+            // 
+            this.NombrePesc.Location = new System.Drawing.Point(178, 23);
+            this.NombrePesc.Name = "NombrePesc";
+            this.NombrePesc.Size = new System.Drawing.Size(430, 26);
+            this.NombrePesc.TabIndex = 1;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Location = new System.Drawing.Point(7, 26);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(165, 18);
+            this.label54.TabIndex = 0;
+            this.label54.Text = "Nombre del Pescador:";
+            // 
             // Embarcaciones
             // 
+            this.Embarcaciones.ForeColor = System.Drawing.Color.White;
             this.Embarcaciones.Location = new System.Drawing.Point(4, 34);
             this.Embarcaciones.Name = "Embarcaciones";
             this.Embarcaciones.Size = new System.Drawing.Size(1219, 368);
@@ -1177,14 +1756,15 @@
             this.Embarcaciones.Text = "Certificados de matricula";
             this.Embarcaciones.UseVisualStyleBackColor = true;
             // 
-            // tabPage1
+            // Expediente
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 34);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Size = new System.Drawing.Size(1219, 368);
-            this.tabPage1.TabIndex = 4;
-            this.tabPage1.Text = "Expediente";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.Expediente.ForeColor = System.Drawing.Color.White;
+            this.Expediente.Location = new System.Drawing.Point(4, 34);
+            this.Expediente.Name = "Expediente";
+            this.Expediente.Size = new System.Drawing.Size(1219, 368);
+            this.Expediente.TabIndex = 4;
+            this.Expediente.Text = "Expediente";
+            this.Expediente.UseVisualStyleBackColor = true;
             // 
             // pbActualizar
             // 
@@ -1230,7 +1810,7 @@
             this.Resumen.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Resumen.Location = new System.Drawing.Point(944, 3);
             this.Resumen.Name = "Resumen";
-            this.Resumen.Size = new System.Drawing.Size(283, 510);
+            this.Resumen.Size = new System.Drawing.Size(283, 597);
             this.Resumen.TabIndex = 101;
             this.Resumen.TabStop = false;
             this.Resumen.Text = "Resumen";
@@ -1244,7 +1824,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 14);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(851, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(820, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
@@ -1288,6 +1868,17 @@
             this.Directiva.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
+            this.Pescadores.ResumeLayout(false);
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.groupBox6.PerformLayout();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRegistrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBReubicar)).EndInit();
@@ -1395,6 +1986,58 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage Expediente;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton radioButton7;
+        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton9;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox Municipio;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.MaskedTextBox CP;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.TextBox Colonia;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.TextBox CalleYNum;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.TextBox RFC;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.TextBox CURP;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.DateTimePicker FechaNac;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.TextBox LugarNac;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.TextBox NombrePesc;
+        private System.Windows.Forms.Label label54;
     }
 }
