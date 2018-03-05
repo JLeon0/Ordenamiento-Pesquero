@@ -8,7 +8,6 @@ namespace Logica
 {
     public class Pescador
     {
-        public string COD_REG = "";
         public string NOMBRE = "";
         public string AP_PAT = "";
         public string AP_MAT = "";
@@ -31,7 +30,6 @@ namespace Logica
         public string MATRICULA = "";
         public Pescador()
         {
-             COD_REG = "";
              NOMBRE = "";
              AP_PAT = "";
              AP_MAT = "";
@@ -53,7 +51,7 @@ namespace Logica
              CUERPO_DE_AGUA = "";
              MATRICULA = "";
         }
-        public Pescador(string cOD_REG,
+        public Pescador(
         string nOMBRE,
         string aP_PAT,
         string aP_MAT,
@@ -75,7 +73,6 @@ namespace Logica
         string cUERPO_DE_AGUA,
         string mATRICULA)
         {
-            COD_REG = cOD_REG;
             NOMBRE = nOMBRE;
             AP_PAT = aP_PAT;
             AP_MAT = aP_MAT;
