@@ -55,9 +55,6 @@
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.txtNomFed = new System.Windows.Forms.TextBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.mtbTelefono = new System.Windows.Forms.MaskedTextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -105,54 +102,52 @@
             this.CertMatri = new System.Windows.Forms.TabPage();
             this.Pescadores = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.EstadoEmbarcacionPesc = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
+            this.MunicipioEmbarcacionPesc = new System.Windows.Forms.TextBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
+            this.LocalidadPesqueroPesc = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.CuerpoDeAguaPesc = new System.Windows.Forms.GroupBox();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.OcupacionEnEmbarPesc = new System.Windows.Forms.GroupBox();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.TipoPesc = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.MatriculaPesc = new System.Windows.Forms.TextBox();
+            this.SitioDesembPesc = new System.Windows.Forms.TextBox();
+            this.NombreEmbPesc = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.ApeMatPescador = new System.Windows.Forms.TextBox();
-            this.ApePatPescador = new System.Windows.Forms.TextBox();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.TelefonoPesc = new System.Windows.Forms.MaskedTextBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.EstadoPesc = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
-            this.Municipio = new System.Windows.Forms.TextBox();
+            this.MunicipioPesc = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LocalidadPesc = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
-            this.CP = new System.Windows.Forms.MaskedTextBox();
+            this.CPPesc = new System.Windows.Forms.MaskedTextBox();
             this.label45 = new System.Windows.Forms.Label();
-            this.Colonia = new System.Windows.Forms.TextBox();
+            this.ColoniaPesc = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
-            this.CalleYNum = new System.Windows.Forms.TextBox();
+            this.CalleYNumPesc = new System.Windows.Forms.TextBox();
             this.label47 = new System.Windows.Forms.Label();
-            this.RFC = new System.Windows.Forms.TextBox();
+            this.RFCPesc = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
-            this.CURP = new System.Windows.Forms.TextBox();
+            this.CURPPesc = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
-            this.FechaNac = new System.Windows.Forms.DateTimePicker();
+            this.FechaNacPesc = new System.Windows.Forms.DateTimePicker();
             this.label50 = new System.Windows.Forms.Label();
-            this.LugarNac = new System.Windows.Forms.TextBox();
+            this.LugarNacPesc = new System.Windows.Forms.TextBox();
             this.label51 = new System.Windows.Forms.Label();
             this.label52 = new System.Windows.Forms.Label();
             this.label53 = new System.Windows.Forms.Label();
@@ -174,6 +169,7 @@
             this.label15 = new System.Windows.Forms.Label();
             this.Expediente = new System.Windows.Forms.TabPage();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.Resumen = new System.Windows.Forms.GroupBox();
             this.VerPermisos = new System.Windows.Forms.PictureBox();
             this.eliminarPermiso = new System.Windows.Forms.PictureBox();
             this.actualizarPermiso = new System.Windows.Forms.PictureBox();
@@ -182,12 +178,20 @@
             this.pbActualizar = new System.Windows.Forms.PictureBox();
             this.pbRegistrar = new System.Windows.Forms.PictureBox();
             this.pBReubicar = new System.Windows.Forms.PictureBox();
-            this.Resumen = new System.Windows.Forms.GroupBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ApePatPescador = new System.Windows.Forms.TextBox();
+            this.ApeMatPescador = new System.Windows.Forms.TextBox();
+            this.label55 = new System.Windows.Forms.Label();
+            this.MasculinoPesc = new System.Windows.Forms.RadioButton();
+            this.FemeninoPesc = new System.Windows.Forms.RadioButton();
+            this.label56 = new System.Windows.Forms.Label();
+            this.EscolaridadPesc = new System.Windows.Forms.ComboBox();
+            this.label57 = new System.Windows.Forms.Label();
+            this.TSangrePesc = new System.Windows.Forms.TextBox();
             this.gbOrgPes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Permisos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposPescaPerm)).BeginInit();
@@ -197,9 +201,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.Pescadores.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox6.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.CuerpoDeAguaPesc.SuspendLayout();
+            this.OcupacionEnEmbarPesc.SuspendLayout();
+            this.TipoPesc.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.Directiva.SuspendLayout();
             this.gbDirectiva.SuspendLayout();
@@ -211,6 +215,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRegistrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBReubicar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -433,7 +440,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(62, 29);
+            this.label3.Location = new System.Drawing.Point(80, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -566,42 +573,6 @@
             this.txtNomFed.TabIndex = 105;
             this.txtNomFed.Tag = "";
             this.toolTip1.SetToolTip(this.txtNomFed, "Ingrese el nombre de la Federación");
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox4.Location = new System.Drawing.Point(640, 234);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(23, 21);
-            this.pictureBox4.TabIndex = 104;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox3.Location = new System.Drawing.Point(828, 77);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(23, 21);
-            this.pictureBox3.TabIndex = 103;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox2.Location = new System.Drawing.Point(828, 127);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 21);
-            this.pictureBox2.TabIndex = 102;
-            this.pictureBox2.TabStop = false;
             // 
             // mtbTelefono
             // 
@@ -1094,37 +1065,37 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.textBox7);
+            this.groupBox4.Controls.Add(this.EstadoEmbarcacionPesc);
             this.groupBox4.Controls.Add(this.label34);
-            this.groupBox4.Controls.Add(this.textBox8);
+            this.groupBox4.Controls.Add(this.MunicipioEmbarcacionPesc);
             this.groupBox4.Controls.Add(this.label35);
-            this.groupBox4.Controls.Add(this.textBox9);
+            this.groupBox4.Controls.Add(this.LocalidadPesqueroPesc);
             this.groupBox4.Controls.Add(this.label36);
             this.groupBox4.Controls.Add(this.label37);
             this.groupBox4.Controls.Add(this.label39);
             this.groupBox4.Controls.Add(this.label40);
-            this.groupBox4.Controls.Add(this.groupBox1);
-            this.groupBox4.Controls.Add(this.groupBox6);
-            this.groupBox4.Controls.Add(this.groupBox5);
-            this.groupBox4.Controls.Add(this.textBox5);
-            this.groupBox4.Controls.Add(this.textBox6);
-            this.groupBox4.Controls.Add(this.textBox4);
+            this.groupBox4.Controls.Add(this.CuerpoDeAguaPesc);
+            this.groupBox4.Controls.Add(this.OcupacionEnEmbarPesc);
+            this.groupBox4.Controls.Add(this.TipoPesc);
+            this.groupBox4.Controls.Add(this.MatriculaPesc);
+            this.groupBox4.Controls.Add(this.SitioDesembPesc);
+            this.groupBox4.Controls.Add(this.NombreEmbPesc);
             this.groupBox4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(14, 344);
+            this.groupBox4.Location = new System.Drawing.Point(14, 403);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(894, 289);
+            this.groupBox4.Size = new System.Drawing.Size(894, 287);
             this.groupBox4.TabIndex = 7;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Relación Pescador-Embarcación";
             // 
-            // textBox7
+            // EstadoEmbarcacionPesc
             // 
-            this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(389, 260);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(184, 25);
-            this.textBox7.TabIndex = 26;
-            this.textBox7.Text = "Baja California Sur";
+            this.EstadoEmbarcacionPesc.Enabled = false;
+            this.EstadoEmbarcacionPesc.Location = new System.Drawing.Point(389, 260);
+            this.EstadoEmbarcacionPesc.Name = "EstadoEmbarcacionPesc";
+            this.EstadoEmbarcacionPesc.Size = new System.Drawing.Size(184, 25);
+            this.EstadoEmbarcacionPesc.TabIndex = 26;
+            this.EstadoEmbarcacionPesc.Text = "Baja California Sur";
             // 
             // label34
             // 
@@ -1135,12 +1106,12 @@
             this.label34.TabIndex = 24;
             this.label34.Text = "Estado:";
             // 
-            // textBox8
+            // MunicipioEmbarcacionPesc
             // 
-            this.textBox8.Location = new System.Drawing.Point(106, 260);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(209, 25);
-            this.textBox8.TabIndex = 27;
+            this.MunicipioEmbarcacionPesc.Location = new System.Drawing.Point(106, 260);
+            this.MunicipioEmbarcacionPesc.Name = "MunicipioEmbarcacionPesc";
+            this.MunicipioEmbarcacionPesc.Size = new System.Drawing.Size(209, 25);
+            this.MunicipioEmbarcacionPesc.TabIndex = 27;
             // 
             // label35
             // 
@@ -1151,12 +1122,12 @@
             this.label35.TabIndex = 25;
             this.label35.Text = "Municipio:";
             // 
-            // textBox9
+            // LocalidadPesqueroPesc
             // 
-            this.textBox9.Location = new System.Drawing.Point(230, 228);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(343, 25);
-            this.textBox9.TabIndex = 23;
+            this.LocalidadPesqueroPesc.Location = new System.Drawing.Point(230, 228);
+            this.LocalidadPesqueroPesc.Name = "LocalidadPesqueroPesc";
+            this.LocalidadPesqueroPesc.Size = new System.Drawing.Size(343, 25);
+            this.LocalidadPesqueroPesc.TabIndex = 23;
             // 
             // label36
             // 
@@ -1170,7 +1141,7 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(586, 158);
+            this.label37.Location = new System.Drawing.Point(586, 165);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(70, 17);
             this.label37.TabIndex = 4;
@@ -1188,22 +1159,22 @@
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(16, 158);
+            this.label40.Location = new System.Drawing.Point(16, 165);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(190, 17);
             this.label40.TabIndex = 4;
             this.label40.Text = "Nombre de la Embarcación:";
             // 
-            // groupBox1
+            // CuerpoDeAguaPesc
             // 
-            this.groupBox1.Controls.Add(this.radioButton6);
-            this.groupBox1.Controls.Add(this.radioButton10);
-            this.groupBox1.Location = new System.Drawing.Point(353, 97);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(308, 54);
-            this.groupBox1.TabIndex = 3;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Cuerpo de agua donde realiza la pesca";
+            this.CuerpoDeAguaPesc.Controls.Add(this.radioButton6);
+            this.CuerpoDeAguaPesc.Controls.Add(this.radioButton10);
+            this.CuerpoDeAguaPesc.Location = new System.Drawing.Point(353, 97);
+            this.CuerpoDeAguaPesc.Name = "CuerpoDeAguaPesc";
+            this.CuerpoDeAguaPesc.Size = new System.Drawing.Size(308, 54);
+            this.CuerpoDeAguaPesc.TabIndex = 3;
+            this.CuerpoDeAguaPesc.TabStop = false;
+            this.CuerpoDeAguaPesc.Text = "Cuerpo de agua donde realiza la pesca";
             // 
             // radioButton6
             // 
@@ -1227,17 +1198,17 @@
             this.radioButton10.Text = "Ribereño marino";
             this.radioButton10.UseVisualStyleBackColor = true;
             // 
-            // groupBox6
+            // OcupacionEnEmbarPesc
             // 
-            this.groupBox6.Controls.Add(this.radioButton5);
-            this.groupBox6.Controls.Add(this.radioButton7);
-            this.groupBox6.Controls.Add(this.radioButton8);
-            this.groupBox6.Location = new System.Drawing.Point(10, 97);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(308, 54);
-            this.groupBox6.TabIndex = 2;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Ocupación laboral en la embarcación";
+            this.OcupacionEnEmbarPesc.Controls.Add(this.radioButton5);
+            this.OcupacionEnEmbarPesc.Controls.Add(this.radioButton7);
+            this.OcupacionEnEmbarPesc.Controls.Add(this.radioButton8);
+            this.OcupacionEnEmbarPesc.Location = new System.Drawing.Point(10, 97);
+            this.OcupacionEnEmbarPesc.Name = "OcupacionEnEmbarPesc";
+            this.OcupacionEnEmbarPesc.Size = new System.Drawing.Size(308, 54);
+            this.OcupacionEnEmbarPesc.TabIndex = 2;
+            this.OcupacionEnEmbarPesc.TabStop = false;
+            this.OcupacionEnEmbarPesc.Text = "Ocupación laboral en la embarcación";
             // 
             // radioButton5
             // 
@@ -1272,18 +1243,18 @@
             this.radioButton8.Text = "Operador";
             this.radioButton8.UseVisualStyleBackColor = true;
             // 
-            // groupBox5
+            // TipoPesc
             // 
-            this.groupBox5.Controls.Add(this.radioButton2);
-            this.groupBox5.Controls.Add(this.radioButton4);
-            this.groupBox5.Controls.Add(this.radioButton3);
-            this.groupBox5.Controls.Add(this.radioButton9);
-            this.groupBox5.Location = new System.Drawing.Point(10, 24);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(641, 54);
-            this.groupBox5.TabIndex = 1;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Tipo de Pescador:";
+            this.TipoPesc.Controls.Add(this.radioButton2);
+            this.TipoPesc.Controls.Add(this.radioButton4);
+            this.TipoPesc.Controls.Add(this.radioButton3);
+            this.TipoPesc.Controls.Add(this.radioButton9);
+            this.TipoPesc.Location = new System.Drawing.Point(10, 24);
+            this.TipoPesc.Name = "TipoPesc";
+            this.TipoPesc.Size = new System.Drawing.Size(641, 54);
+            this.TipoPesc.TabIndex = 1;
+            this.TipoPesc.TabStop = false;
+            this.TipoPesc.Text = "Tipo de Pescador:";
             // 
             // radioButton2
             // 
@@ -1329,52 +1300,59 @@
             this.radioButton9.Text = "Organizado";
             this.radioButton9.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // MatriculaPesc
             // 
-            this.textBox5.Location = new System.Drawing.Point(662, 155);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(181, 25);
-            this.textBox5.TabIndex = 12;
+            this.MatriculaPesc.Location = new System.Drawing.Point(662, 162);
+            this.MatriculaPesc.Name = "MatriculaPesc";
+            this.MatriculaPesc.Size = new System.Drawing.Size(181, 25);
+            this.MatriculaPesc.TabIndex = 12;
             // 
-            // textBox6
+            // SitioDesembPesc
             // 
-            this.textBox6.Location = new System.Drawing.Point(254, 197);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(319, 25);
-            this.textBox6.TabIndex = 12;
+            this.SitioDesembPesc.Location = new System.Drawing.Point(254, 197);
+            this.SitioDesembPesc.Name = "SitioDesembPesc";
+            this.SitioDesembPesc.Size = new System.Drawing.Size(319, 25);
+            this.SitioDesembPesc.TabIndex = 12;
             // 
-            // textBox4
+            // NombreEmbPesc
             // 
-            this.textBox4.Location = new System.Drawing.Point(208, 154);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(365, 25);
-            this.textBox4.TabIndex = 12;
+            this.NombreEmbPesc.Location = new System.Drawing.Point(208, 162);
+            this.NombreEmbPesc.Name = "NombreEmbPesc";
+            this.NombreEmbPesc.Size = new System.Drawing.Size(365, 25);
+            this.NombreEmbPesc.TabIndex = 12;
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.TSangrePesc);
+            this.groupBox7.Controls.Add(this.label57);
+            this.groupBox7.Controls.Add(this.EscolaridadPesc);
+            this.groupBox7.Controls.Add(this.label56);
+            this.groupBox7.Controls.Add(this.FemeninoPesc);
+            this.groupBox7.Controls.Add(this.MasculinoPesc);
+            this.groupBox7.Controls.Add(this.label55);
             this.groupBox7.Controls.Add(this.ApeMatPescador);
             this.groupBox7.Controls.Add(this.ApePatPescador);
-            this.groupBox7.Controls.Add(this.maskedTextBox2);
+            this.groupBox7.Controls.Add(this.TelefonoPesc);
             this.groupBox7.Controls.Add(this.label41);
-            this.groupBox7.Controls.Add(this.textBox3);
+            this.groupBox7.Controls.Add(this.EstadoPesc);
             this.groupBox7.Controls.Add(this.label42);
-            this.groupBox7.Controls.Add(this.Municipio);
+            this.groupBox7.Controls.Add(this.MunicipioPesc);
             this.groupBox7.Controls.Add(this.label43);
-            this.groupBox7.Controls.Add(this.textBox1);
+            this.groupBox7.Controls.Add(this.LocalidadPesc);
             this.groupBox7.Controls.Add(this.label44);
-            this.groupBox7.Controls.Add(this.CP);
+            this.groupBox7.Controls.Add(this.CPPesc);
             this.groupBox7.Controls.Add(this.label45);
-            this.groupBox7.Controls.Add(this.Colonia);
+            this.groupBox7.Controls.Add(this.ColoniaPesc);
             this.groupBox7.Controls.Add(this.label46);
-            this.groupBox7.Controls.Add(this.CalleYNum);
+            this.groupBox7.Controls.Add(this.CalleYNumPesc);
             this.groupBox7.Controls.Add(this.label47);
-            this.groupBox7.Controls.Add(this.RFC);
+            this.groupBox7.Controls.Add(this.RFCPesc);
             this.groupBox7.Controls.Add(this.label48);
-            this.groupBox7.Controls.Add(this.CURP);
+            this.groupBox7.Controls.Add(this.CURPPesc);
             this.groupBox7.Controls.Add(this.label49);
-            this.groupBox7.Controls.Add(this.FechaNac);
+            this.groupBox7.Controls.Add(this.FechaNacPesc);
             this.groupBox7.Controls.Add(this.label50);
-            this.groupBox7.Controls.Add(this.LugarNac);
+            this.groupBox7.Controls.Add(this.LugarNacPesc);
             this.groupBox7.Controls.Add(this.label51);
             this.groupBox7.Controls.Add(this.label52);
             this.groupBox7.Controls.Add(this.label53);
@@ -1383,181 +1361,167 @@
             this.groupBox7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.Location = new System.Drawing.Point(14, 15);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(894, 323);
+            this.groupBox7.Size = new System.Drawing.Size(894, 371);
             this.groupBox7.TabIndex = 6;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Información General del Pescador";
             // 
-            // ApeMatPescador
+            // TelefonoPesc
             // 
-            this.ApeMatPescador.Location = new System.Drawing.Point(582, 23);
-            this.ApeMatPescador.Name = "ApeMatPescador";
-            this.ApeMatPescador.Size = new System.Drawing.Size(194, 26);
-            this.ApeMatPescador.TabIndex = 24;
-            // 
-            // ApePatPescador
-            // 
-            this.ApePatPescador.Location = new System.Drawing.Point(382, 23);
-            this.ApePatPescador.Name = "ApePatPescador";
-            this.ApePatPescador.Size = new System.Drawing.Size(194, 26);
-            this.ApePatPescador.TabIndex = 23;
-            // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(686, 286);
-            this.maskedTextBox2.Mask = "000-000-0000";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(114, 26);
-            this.maskedTextBox2.TabIndex = 22;
+            this.TelefonoPesc.Location = new System.Drawing.Point(686, 328);
+            this.TelefonoPesc.Mask = "000-000-0000";
+            this.TelefonoPesc.Name = "TelefonoPesc";
+            this.TelefonoPesc.Size = new System.Drawing.Size(114, 26);
+            this.TelefonoPesc.TabIndex = 22;
             // 
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(620, 289);
+            this.label41.Location = new System.Drawing.Point(620, 331);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(70, 18);
             this.label41.TabIndex = 21;
             this.label41.Text = "Teléfono:";
             // 
-            // textBox3
+            // EstadoPesc
             // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(382, 286);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(191, 26);
-            this.textBox3.TabIndex = 20;
-            this.textBox3.Text = "Baja California Sur";
+            this.EstadoPesc.Enabled = false;
+            this.EstadoPesc.Location = new System.Drawing.Point(382, 328);
+            this.EstadoPesc.Name = "EstadoPesc";
+            this.EstadoPesc.Size = new System.Drawing.Size(191, 26);
+            this.EstadoPesc.TabIndex = 20;
+            this.EstadoPesc.Text = "Baja California Sur";
             // 
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(314, 289);
+            this.label42.Location = new System.Drawing.Point(314, 331);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(62, 18);
             this.label42.TabIndex = 19;
             this.label42.Text = "Estado:";
             // 
-            // Municipio
+            // MunicipioPesc
             // 
-            this.Municipio.Location = new System.Drawing.Point(99, 286);
-            this.Municipio.Name = "Municipio";
-            this.Municipio.Size = new System.Drawing.Size(209, 26);
-            this.Municipio.TabIndex = 20;
+            this.MunicipioPesc.Location = new System.Drawing.Point(99, 328);
+            this.MunicipioPesc.Name = "MunicipioPesc";
+            this.MunicipioPesc.Size = new System.Drawing.Size(209, 26);
+            this.MunicipioPesc.TabIndex = 20;
             // 
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(10, 289);
+            this.label43.Location = new System.Drawing.Point(10, 331);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(79, 18);
             this.label43.TabIndex = 19;
             this.label43.Text = "Municipio:";
             // 
-            // textBox1
+            // LocalidadPesc
             // 
-            this.textBox1.Location = new System.Drawing.Point(99, 254);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(474, 26);
-            this.textBox1.TabIndex = 18;
+            this.LocalidadPesc.Location = new System.Drawing.Point(99, 296);
+            this.LocalidadPesc.Name = "LocalidadPesc";
+            this.LocalidadPesc.Size = new System.Drawing.Size(474, 26);
+            this.LocalidadPesc.TabIndex = 18;
             // 
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(10, 257);
+            this.label44.Location = new System.Drawing.Point(10, 299);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(81, 18);
             this.label44.TabIndex = 17;
             this.label44.Text = "Localidad:";
             // 
-            // CP
+            // CPPesc
             // 
-            this.CP.Location = new System.Drawing.Point(667, 222);
-            this.CP.Mask = "99999";
-            this.CP.Name = "CP";
-            this.CP.Size = new System.Drawing.Size(72, 26);
-            this.CP.TabIndex = 16;
-            this.CP.ValidatingType = typeof(int);
+            this.CPPesc.Location = new System.Drawing.Point(667, 264);
+            this.CPPesc.Mask = "99999";
+            this.CPPesc.Name = "CPPesc";
+            this.CPPesc.Size = new System.Drawing.Size(72, 26);
+            this.CPPesc.TabIndex = 16;
+            this.CPPesc.ValidatingType = typeof(int);
             // 
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(620, 225);
+            this.label45.Location = new System.Drawing.Point(620, 267);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(41, 18);
             this.label45.TabIndex = 15;
             this.label45.Text = "C. P.";
             // 
-            // Colonia
+            // ColoniaPesc
             // 
-            this.Colonia.Location = new System.Drawing.Point(99, 222);
-            this.Colonia.Name = "Colonia";
-            this.Colonia.Size = new System.Drawing.Size(474, 26);
-            this.Colonia.TabIndex = 14;
+            this.ColoniaPesc.Location = new System.Drawing.Point(99, 264);
+            this.ColoniaPesc.Name = "ColoniaPesc";
+            this.ColoniaPesc.Size = new System.Drawing.Size(474, 26);
+            this.ColoniaPesc.TabIndex = 14;
             // 
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(10, 225);
+            this.label46.Location = new System.Drawing.Point(10, 267);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(66, 18);
             this.label46.TabIndex = 13;
             this.label46.Text = "Colonia:";
             // 
-            // CalleYNum
+            // CalleYNumPesc
             // 
-            this.CalleYNum.Location = new System.Drawing.Point(134, 190);
-            this.CalleYNum.Name = "CalleYNum";
-            this.CalleYNum.Size = new System.Drawing.Size(474, 26);
-            this.CalleYNum.TabIndex = 12;
+            this.CalleYNumPesc.Location = new System.Drawing.Point(134, 232);
+            this.CalleYNumPesc.Name = "CalleYNumPesc";
+            this.CalleYNumPesc.Size = new System.Drawing.Size(474, 26);
+            this.CalleYNumPesc.TabIndex = 12;
             // 
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(10, 193);
+            this.label47.Location = new System.Drawing.Point(10, 235);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(118, 18);
             this.label47.TabIndex = 11;
             this.label47.Text = "Calle y Número:";
             // 
-            // RFC
+            // RFCPesc
             // 
-            this.RFC.Location = new System.Drawing.Point(345, 143);
-            this.RFC.Name = "RFC";
-            this.RFC.Size = new System.Drawing.Size(186, 26);
-            this.RFC.TabIndex = 10;
+            this.RFCPesc.Location = new System.Drawing.Point(307, 143);
+            this.RFCPesc.Name = "RFCPesc";
+            this.RFCPesc.Size = new System.Drawing.Size(186, 26);
+            this.RFCPesc.TabIndex = 10;
             // 
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(287, 146);
+            this.label48.Location = new System.Drawing.Point(263, 146);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(45, 18);
             this.label48.TabIndex = 9;
             this.label48.Text = "RFC:";
             // 
-            // CURP
+            // CURPPesc
             // 
-            this.CURP.Location = new System.Drawing.Point(70, 143);
-            this.CURP.Name = "CURP";
-            this.CURP.Size = new System.Drawing.Size(186, 26);
-            this.CURP.TabIndex = 8;
+            this.CURPPesc.Location = new System.Drawing.Point(70, 143);
+            this.CURPPesc.Name = "CURPPesc";
+            this.CURPPesc.Size = new System.Drawing.Size(186, 26);
+            this.CURPPesc.TabIndex = 8;
             // 
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(7, 146);
+            this.label49.Location = new System.Drawing.Point(6, 146);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(57, 18);
             this.label49.TabIndex = 7;
             this.label49.Text = "CURP:";
             // 
-            // FechaNac
+            // FechaNacPesc
             // 
-            this.FechaNac.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FechaNac.Location = new System.Drawing.Point(623, 86);
-            this.FechaNac.Name = "FechaNac";
-            this.FechaNac.Size = new System.Drawing.Size(226, 26);
-            this.FechaNac.TabIndex = 6;
+            this.FechaNacPesc.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaNacPesc.Location = new System.Drawing.Point(623, 86);
+            this.FechaNacPesc.Name = "FechaNacPesc";
+            this.FechaNacPesc.Size = new System.Drawing.Size(226, 26);
+            this.FechaNacPesc.TabIndex = 6;
             // 
             // label50
             // 
@@ -1569,12 +1533,12 @@
             this.label50.TabIndex = 5;
             this.label50.Text = "Localidad, Municipio, Estado.";
             // 
-            // LugarNac
+            // LugarNacPesc
             // 
-            this.LugarNac.Location = new System.Drawing.Point(178, 86);
-            this.LugarNac.Name = "LugarNac";
-            this.LugarNac.Size = new System.Drawing.Size(430, 26);
-            this.LugarNac.TabIndex = 4;
+            this.LugarNacPesc.Location = new System.Drawing.Point(178, 86);
+            this.LugarNacPesc.Name = "LugarNacPesc";
+            this.LugarNacPesc.Size = new System.Drawing.Size(430, 26);
+            this.LugarNacPesc.TabIndex = 4;
             // 
             // label51
             // 
@@ -1791,6 +1755,19 @@
             this.Expediente.Text = "Expediente";
             this.Expediente.UseVisualStyleBackColor = true;
             // 
+            // Resumen
+            // 
+            this.Resumen.BackColor = System.Drawing.Color.Transparent;
+            this.Resumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Resumen.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Resumen.ForeColor = System.Drawing.Color.White;
+            this.Resumen.Location = new System.Drawing.Point(944, 1);
+            this.Resumen.Name = "Resumen";
+            this.Resumen.Size = new System.Drawing.Size(283, 602);
+            this.Resumen.TabIndex = 101;
+            this.Resumen.TabStop = false;
+            this.Resumen.Text = "Resumen";
+            // 
             // VerPermisos
             // 
             this.VerPermisos.BackColor = System.Drawing.Color.White;
@@ -1891,18 +1868,41 @@
             this.toolTip1.SetToolTip(this.pBReubicar, "Esconder Información");
             this.pBReubicar.Click += new System.EventHandler(this.pBReubicar_Click);
             // 
-            // Resumen
+            // pictureBox4
             // 
-            this.Resumen.BackColor = System.Drawing.Color.Transparent;
-            this.Resumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Resumen.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Resumen.ForeColor = System.Drawing.Color.White;
-            this.Resumen.Location = new System.Drawing.Point(944, 1);
-            this.Resumen.Name = "Resumen";
-            this.Resumen.Size = new System.Drawing.Size(283, 602);
-            this.Resumen.TabIndex = 101;
-            this.Resumen.TabStop = false;
-            this.Resumen.Text = "Resumen";
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox4.Location = new System.Drawing.Point(640, 234);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox4.TabIndex = 104;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox3.Location = new System.Drawing.Point(828, 77);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox3.TabIndex = 103;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox2.Location = new System.Drawing.Point(828, 127);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox2.TabIndex = 102;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -1913,9 +1913,87 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(724, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(758, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
+            // 
+            // ApePatPescador
+            // 
+            this.ApePatPescador.Location = new System.Drawing.Point(382, 23);
+            this.ApePatPescador.Name = "ApePatPescador";
+            this.ApePatPescador.Size = new System.Drawing.Size(194, 26);
+            this.ApePatPescador.TabIndex = 23;
+            // 
+            // ApeMatPescador
+            // 
+            this.ApeMatPescador.Location = new System.Drawing.Point(582, 23);
+            this.ApeMatPescador.Name = "ApeMatPescador";
+            this.ApeMatPescador.Size = new System.Drawing.Size(194, 26);
+            this.ApeMatPescador.TabIndex = 24;
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.Location = new System.Drawing.Point(499, 146);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(48, 18);
+            this.label55.TabIndex = 25;
+            this.label55.Text = "Sexo:";
+            // 
+            // MasculinoPesc
+            // 
+            this.MasculinoPesc.AutoSize = true;
+            this.MasculinoPesc.Location = new System.Drawing.Point(553, 144);
+            this.MasculinoPesc.Name = "MasculinoPesc";
+            this.MasculinoPesc.Size = new System.Drawing.Size(96, 22);
+            this.MasculinoPesc.TabIndex = 26;
+            this.MasculinoPesc.TabStop = true;
+            this.MasculinoPesc.Text = "Masculino";
+            this.MasculinoPesc.UseVisualStyleBackColor = true;
+            // 
+            // FemeninoPesc
+            // 
+            this.FemeninoPesc.AutoSize = true;
+            this.FemeninoPesc.Location = new System.Drawing.Point(655, 144);
+            this.FemeninoPesc.Name = "FemeninoPesc";
+            this.FemeninoPesc.Size = new System.Drawing.Size(96, 22);
+            this.FemeninoPesc.TabIndex = 27;
+            this.FemeninoPesc.TabStop = true;
+            this.FemeninoPesc.Text = "Femenino";
+            this.FemeninoPesc.UseVisualStyleBackColor = true;
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.Location = new System.Drawing.Point(7, 194);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(96, 18);
+            this.label56.TabIndex = 28;
+            this.label56.Text = "Escolaridad:";
+            // 
+            // EscolaridadPesc
+            // 
+            this.EscolaridadPesc.FormattingEnabled = true;
+            this.EscolaridadPesc.Location = new System.Drawing.Point(106, 191);
+            this.EscolaridadPesc.Name = "EscolaridadPesc";
+            this.EscolaridadPesc.Size = new System.Drawing.Size(153, 26);
+            this.EscolaridadPesc.TabIndex = 29;
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(278, 194);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(128, 18);
+            this.label57.TabIndex = 30;
+            this.label57.Text = "Tippo de Sangre:";
+            // 
+            // TSangrePesc
+            // 
+            this.TSangrePesc.Location = new System.Drawing.Point(412, 191);
+            this.TSangrePesc.Name = "TSangrePesc";
+            this.TSangrePesc.Size = new System.Drawing.Size(81, 26);
+            this.TSangrePesc.TabIndex = 31;
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -1923,7 +2001,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1279, 749);
+            this.ClientSize = new System.Drawing.Size(1262, 749);
             this.Controls.Add(this.VerPermisos);
             this.Controls.Add(this.eliminarPermiso);
             this.Controls.Add(this.actualizarPermiso);
@@ -1945,9 +2023,6 @@
             this.Load += new System.EventHandler(this.Pantalla_Registro_UnidadEconomica_Load);
             this.gbOrgPes.ResumeLayout(false);
             this.gbOrgPes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.Permisos.ResumeLayout(false);
             this.Permisos.PerformLayout();
@@ -1960,12 +2035,12 @@
             this.Pescadores.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox6.ResumeLayout(false);
-            this.groupBox6.PerformLayout();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            this.CuerpoDeAguaPesc.ResumeLayout(false);
+            this.CuerpoDeAguaPesc.PerformLayout();
+            this.OcupacionEnEmbarPesc.ResumeLayout(false);
+            this.OcupacionEnEmbarPesc.PerformLayout();
+            this.TipoPesc.ResumeLayout(false);
+            this.TipoPesc.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             this.Directiva.ResumeLayout(false);
@@ -1979,6 +2054,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRegistrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBReubicar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -2078,52 +2156,52 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private System.Windows.Forms.TabPage Expediente;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox EstadoEmbarcacionPesc;
         private System.Windows.Forms.Label label34;
-        private System.Windows.Forms.TextBox textBox8;
+        private System.Windows.Forms.TextBox MunicipioEmbarcacionPesc;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.TextBox textBox9;
+        private System.Windows.Forms.TextBox LocalidadPesqueroPesc;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox CuerpoDeAguaPesc;
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.RadioButton radioButton10;
-        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox OcupacionEnEmbarPesc;
         private System.Windows.Forms.RadioButton radioButton5;
         private System.Windows.Forms.RadioButton radioButton7;
         private System.Windows.Forms.RadioButton radioButton8;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox TipoPesc;
         private System.Windows.Forms.RadioButton radioButton2;
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton9;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox MatriculaPesc;
+        private System.Windows.Forms.TextBox SitioDesembPesc;
+        private System.Windows.Forms.TextBox NombreEmbPesc;
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox TelefonoPesc;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox EstadoPesc;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.TextBox Municipio;
+        private System.Windows.Forms.TextBox MunicipioPesc;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox LocalidadPesc;
         private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.MaskedTextBox CP;
+        private System.Windows.Forms.MaskedTextBox CPPesc;
         private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.TextBox Colonia;
+        private System.Windows.Forms.TextBox ColoniaPesc;
         private System.Windows.Forms.Label label46;
-        private System.Windows.Forms.TextBox CalleYNum;
+        private System.Windows.Forms.TextBox CalleYNumPesc;
         private System.Windows.Forms.Label label47;
-        private System.Windows.Forms.TextBox RFC;
+        private System.Windows.Forms.TextBox RFCPesc;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox CURP;
+        private System.Windows.Forms.TextBox CURPPesc;
         private System.Windows.Forms.Label label49;
-        private System.Windows.Forms.DateTimePicker FechaNac;
+        private System.Windows.Forms.DateTimePicker FechaNacPesc;
         private System.Windows.Forms.Label label50;
-        private System.Windows.Forms.TextBox LugarNac;
+        private System.Windows.Forms.TextBox LugarNacPesc;
         private System.Windows.Forms.Label label51;
         private System.Windows.Forms.Label label52;
         private System.Windows.Forms.Label label53;
@@ -2142,5 +2220,12 @@
         private System.Windows.Forms.PictureBox VerPermisos;
         private System.Windows.Forms.TextBox ApeMatPescador;
         private System.Windows.Forms.TextBox ApePatPescador;
+        private System.Windows.Forms.TextBox TSangrePesc;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.ComboBox EscolaridadPesc;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.RadioButton FemeninoPesc;
+        private System.Windows.Forms.RadioButton MasculinoPesc;
+        private System.Windows.Forms.Label label55;
     }
 }
