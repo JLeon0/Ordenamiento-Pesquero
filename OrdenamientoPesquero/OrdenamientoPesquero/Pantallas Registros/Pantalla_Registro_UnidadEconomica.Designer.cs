@@ -181,11 +181,11 @@
             this.label15 = new System.Windows.Forms.Label();
             this.Expediente = new System.Windows.Forms.TabPage();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.VerPermisos = new System.Windows.Forms.PictureBox();
-            this.eliminarPermiso = new System.Windows.Forms.PictureBox();
-            this.actualizarPermiso = new System.Windows.Forms.PictureBox();
+            this.Ver = new System.Windows.Forms.PictureBox();
+            this.Eliminar = new System.Windows.Forms.PictureBox();
+            this.Actualizar = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.registrarPermiso = new System.Windows.Forms.PictureBox();
+            this.Registrar = new System.Windows.Forms.PictureBox();
             this.pbActualizar = new System.Windows.Forms.PictureBox();
             this.pbRegistrar = new System.Windows.Forms.PictureBox();
             this.pBReubicar = new System.Windows.Forms.PictureBox();
@@ -210,11 +210,11 @@
             this.groupBox7.SuspendLayout();
             this.Directiva.SuspendLayout();
             this.gbDirectiva.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VerPermisos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eliminarPermiso)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actualizarPermiso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ver)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Eliminar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registrarPermiso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Registrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRegistrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBReubicar)).BeginInit();
@@ -440,7 +440,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(62, 29);
+            this.label3.Location = new System.Drawing.Point(44, 29);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -1869,42 +1869,42 @@
             this.Expediente.Text = "Expediente";
             this.Expediente.UseVisualStyleBackColor = true;
             // 
-            // VerPermisos
+            // Ver
             // 
-            this.VerPermisos.BackColor = System.Drawing.Color.White;
-            this.VerPermisos.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ver;
-            this.VerPermisos.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.VerPermisos.Location = new System.Drawing.Point(970, 894);
-            this.VerPermisos.Name = "VerPermisos";
-            this.VerPermisos.Size = new System.Drawing.Size(70, 70);
-            this.VerPermisos.TabIndex = 113;
-            this.VerPermisos.TabStop = false;
-            this.toolTip1.SetToolTip(this.VerPermisos, "Ver Permisos");
+            this.Ver.BackColor = System.Drawing.Color.White;
+            this.Ver.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ver;
+            this.Ver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Ver.Location = new System.Drawing.Point(970, 894);
+            this.Ver.Name = "Ver";
+            this.Ver.Size = new System.Drawing.Size(70, 70);
+            this.Ver.TabIndex = 113;
+            this.Ver.TabStop = false;
+            this.toolTip1.SetToolTip(this.Ver, "Ver Permisos");
             // 
-            // eliminarPermiso
+            // Eliminar
             // 
-            this.eliminarPermiso.BackColor = System.Drawing.Color.White;
-            this.eliminarPermiso.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
-            this.eliminarPermiso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.eliminarPermiso.Location = new System.Drawing.Point(970, 797);
-            this.eliminarPermiso.Name = "eliminarPermiso";
-            this.eliminarPermiso.Size = new System.Drawing.Size(70, 70);
-            this.eliminarPermiso.TabIndex = 113;
-            this.eliminarPermiso.TabStop = false;
-            this.toolTip1.SetToolTip(this.eliminarPermiso, "Eliminar Permiso");
+            this.Eliminar.BackColor = System.Drawing.Color.White;
+            this.Eliminar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
+            this.Eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Eliminar.Location = new System.Drawing.Point(970, 797);
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Size = new System.Drawing.Size(70, 70);
+            this.Eliminar.TabIndex = 113;
+            this.Eliminar.TabStop = false;
+            this.toolTip1.SetToolTip(this.Eliminar, "Eliminar Permiso");
             // 
-            // actualizarPermiso
+            // Actualizar
             // 
-            this.actualizarPermiso.BackColor = System.Drawing.Color.White;
-            this.actualizarPermiso.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.actualizar;
-            this.actualizarPermiso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.actualizarPermiso.Location = new System.Drawing.Point(970, 699);
-            this.actualizarPermiso.Name = "actualizarPermiso";
-            this.actualizarPermiso.Size = new System.Drawing.Size(70, 70);
-            this.actualizarPermiso.TabIndex = 112;
-            this.actualizarPermiso.TabStop = false;
-            this.toolTip1.SetToolTip(this.actualizarPermiso, "Actualizar Permiso");
-            this.actualizarPermiso.Click += new System.EventHandler(this.actualizarPermiso_Click);
+            this.Actualizar.BackColor = System.Drawing.Color.White;
+            this.Actualizar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.actualizar;
+            this.Actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Actualizar.Location = new System.Drawing.Point(970, 699);
+            this.Actualizar.Name = "Actualizar";
+            this.Actualizar.Size = new System.Drawing.Size(70, 70);
+            this.Actualizar.TabIndex = 112;
+            this.Actualizar.TabStop = false;
+            this.toolTip1.SetToolTip(this.Actualizar, "Actualizar Permiso");
+            this.Actualizar.Click += new System.EventHandler(this.actualizarPermiso_Click);
             // 
             // pictureBox5
             // 
@@ -1918,18 +1918,18 @@
             this.toolTip1.SetToolTip(this.pictureBox5, "Eliminar Unidad Economica");
             this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
-            // registrarPermiso
+            // Registrar
             // 
-            this.registrarPermiso.BackColor = System.Drawing.Color.White;
-            this.registrarPermiso.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.registrar;
-            this.registrarPermiso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.registrarPermiso.Location = new System.Drawing.Point(970, 609);
-            this.registrarPermiso.Name = "registrarPermiso";
-            this.registrarPermiso.Size = new System.Drawing.Size(70, 70);
-            this.registrarPermiso.TabIndex = 111;
-            this.registrarPermiso.TabStop = false;
-            this.toolTip1.SetToolTip(this.registrarPermiso, "Guardar Permiso");
-            this.registrarPermiso.Click += new System.EventHandler(this.registrarPermiso_Click);
+            this.Registrar.BackColor = System.Drawing.Color.White;
+            this.Registrar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.registrar;
+            this.Registrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Registrar.Location = new System.Drawing.Point(970, 609);
+            this.Registrar.Name = "Registrar";
+            this.Registrar.Size = new System.Drawing.Size(70, 70);
+            this.Registrar.TabIndex = 111;
+            this.Registrar.TabStop = false;
+            this.toolTip1.SetToolTip(this.Registrar, "Guardar Permiso");
+            this.Registrar.Click += new System.EventHandler(this.Registrar_Click);
             // 
             // pbActualizar
             // 
@@ -1992,7 +1992,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(724, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(690, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
@@ -2003,11 +2003,11 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1262, 749);
-            this.Controls.Add(this.VerPermisos);
-            this.Controls.Add(this.eliminarPermiso);
-            this.Controls.Add(this.actualizarPermiso);
+            this.Controls.Add(this.Ver);
+            this.Controls.Add(this.Eliminar);
+            this.Controls.Add(this.Actualizar);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.registrarPermiso);
+            this.Controls.Add(this.Registrar);
             this.Controls.Add(this.pbActualizar);
             this.Controls.Add(this.pbRegistrar);
             this.Controls.Add(this.pBReubicar);
@@ -2050,11 +2050,11 @@
             this.Directiva.ResumeLayout(false);
             this.gbDirectiva.ResumeLayout(false);
             this.gbDirectiva.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.VerPermisos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.eliminarPermiso)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.actualizarPermiso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ver)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Eliminar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.registrarPermiso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Registrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRegistrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBReubicar)).EndInit();
@@ -2215,10 +2215,10 @@
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox txtNomFed;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox eliminarPermiso;
-        private System.Windows.Forms.PictureBox actualizarPermiso;
-        private System.Windows.Forms.PictureBox registrarPermiso;
-        private System.Windows.Forms.PictureBox VerPermisos;
+        private System.Windows.Forms.PictureBox Eliminar;
+        private System.Windows.Forms.PictureBox Actualizar;
+        private System.Windows.Forms.PictureBox Registrar;
+        private System.Windows.Forms.PictureBox Ver;
         private System.Windows.Forms.TextBox ApeMatPescador;
         private System.Windows.Forms.TextBox ApePatPescador;
         private System.Windows.Forms.TextBox TSangrePesc;

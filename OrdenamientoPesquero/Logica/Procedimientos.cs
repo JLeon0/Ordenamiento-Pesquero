@@ -34,17 +34,27 @@ namespace Logica
         #endregion
 
         //Permisos
-        #region
+        #region Permisos
         public int Registrar_Permiso(Permiso perm)
         {
             string[] Parametros = { "@folio", "@rnpa", "@npermiso", "@pesqueria", "@lugarexpedicion", "@diaexpedicion", "@finvigencia", "@zonapesca", "@sitiosdesembarque", "@observaciones" };
             return c.Ejecutar("RegistrarPermiso", Parametros, perm.FOLIO, perm.RNPA, perm.NPERMISO, perm.PESQUERIA, perm.LUGAR, perm.DIAEXP, perm.FINVIGENCIA, perm.ZONAPESC, perm.SITIOS, perm.OBSERVACIONES);
         }
+        public int Actualizar_Permiso(Permiso perm)
+        {
+            string[] Parametros = { "@folio", "@rnpa", "@npermiso", "@pesqueria", "@lugarexpedicion", "@diaexpedicion", "@finvigencia", "@zonapesca", "@sitiosdesembarque", "@observaciones" };
+            return c.Ejecutar("ActualizarPermiso", Parametros, perm.FOLIO, perm.RNPA, perm.NPERMISO, perm.PESQUERIA, perm.LUGAR, perm.DIAEXP, perm.FINVIGENCIA, perm.ZONAPESC, perm.SITIOS, perm.OBSERVACIONES);
+        }
+        #endregion
+
+
         public DataTable Obtener_todas_unidades(string RNPA)
         {
             string[] Parametros = { "@rnpa" };
             return c.getDatosTabla("ObtenerDatos", Parametros, RNPA);
         }
+
+        #region Pescador
         public int Registrar_Pescador(Pescador PES)
         {
             string[] Parametros = {"@nombre", "@appat", "@apmat", "@curp", "@rfc", "@escolaridad", "@tiposangre", "@sexo", "@lugarnacimiento", "@fechanac", "@callenum", "@colonia", "@munici", "@codpos", "@tel", "@tipo", "@ocupacion", "@cuerpo", "@matricula" };
