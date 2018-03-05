@@ -18,6 +18,7 @@ namespace OrdenamientoPesquero
         bool escondido = false;
         Unidad_Economica ue;
         Permiso perm;
+        Pescador pes;
 
         Procedimientos proc = new Procedimientos();
         DataSet ds = new DataSet();
@@ -145,7 +146,10 @@ namespace OrdenamientoPesquero
                 MessageBox.Show("Error durante el registro"); /* 1 segundo = 1000 */
             }
         }
-
+        public void registrarpesador()
+        {
+            pes = new Pescador();
+        }
         private void registrarPermiso_Click(object sender, EventArgs e)
         {
             int exito = 0;
