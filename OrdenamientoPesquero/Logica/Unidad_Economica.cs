@@ -69,17 +69,5 @@ namespace Logica
             TELTESOR = tELTESOR;
             TELSECRE = tELSECRE;
         }
-        public void Registrar()
-        {
-
-        }
-        public void Actualizar()
-        {
-
-        }
-        public void Eliminar()
-        {
-
-        }
     }
 }
