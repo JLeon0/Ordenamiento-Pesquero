@@ -6,29 +6,29 @@ using System.Threading.Tasks;
 
 namespace Logica
 {
-    class Pescador
+    public class Pescador
     {
-        string COD_REG = "";
-        string NOMBRE = "";
-        string AP_PAT = "";
-        string AP_MAT = "";
-        string CURP = "";
-        string RFC = "";
-        string ESCOLARIDAD = "";
-        string TIP_SANG = "";
-        string SEXO = "";
-        string LUG_NACIMI = "";
-        string FECH_NACIMI = "";
-        string CALLENUM = "";
-        string COLONIA = "";
-        string LOCALIDAD = "";
-        string MUNICIPIO = "";
-        string CP = "";
-        string TEL = "";
-        string TIPO_PESC = "";
-        string OCP_LABORAL = "";
-        string CUERPO_DE_AGUA = "";
-        string MATRICULA = "";
+        public string COD_REG = "";
+        public string NOMBRE = "";
+        public string AP_PAT = "";
+        public string AP_MAT = "";
+        public string CURP = "";
+        public string RFC = "";
+        public string ESCOLARIDAD = "";
+        public string TIP_SANG = "";
+        public string SEXO = "";
+        public string LUG_NACIMI = "";
+        public string FECH_NACIMI = "";
+        public string CALLENUM = "";
+        public string COLONIA = "";
+        public string LOCALIDAD = "";
+        public string MUNICIPIO = "";
+        public string CP = "";
+        public string TEL = "";
+        public string TIPO_PESC = "";
+        public string OCP_LABORAL = "";
+        public string CUERPO_DE_AGUA = "";
+        public string MATRICULA = "";
         public Pescador()
         {
              COD_REG = "";
