@@ -182,6 +182,8 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ApePatPescador = new System.Windows.Forms.TextBox();
+            this.ApeMatPescador = new System.Windows.Forms.TextBox();
             this.gbOrgPes.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Permisos.SuspendLayout();
@@ -629,9 +631,12 @@
             // cbRNPA
             // 
             this.cbRNPA.BackColor = System.Drawing.Color.White;
+            this.cbRNPA.DropDownHeight = 200;
             this.cbRNPA.ForeColor = System.Drawing.Color.Black;
             this.cbRNPA.FormattingEnabled = true;
+            this.cbRNPA.IntegralHeight = false;
             this.cbRNPA.Location = new System.Drawing.Point(209, 21);
+            this.cbRNPA.MaxDropDownItems = 5;
             this.cbRNPA.Name = "cbRNPA";
             this.cbRNPA.Size = new System.Drawing.Size(163, 28);
             this.cbRNPA.TabIndex = 1;
@@ -1311,6 +1316,8 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.ApeMatPescador);
+            this.groupBox7.Controls.Add(this.ApePatPescador);
             this.groupBox7.Controls.Add(this.maskedTextBox2);
             this.groupBox7.Controls.Add(this.label41);
             this.groupBox7.Controls.Add(this.textBox3);
@@ -1522,7 +1529,7 @@
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(620, 65);
+            this.label51.Location = new System.Drawing.Point(620, 68);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(157, 18);
             this.label51.TabIndex = 3;
@@ -1543,15 +1550,16 @@
             this.label53.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label53.Location = new System.Drawing.Point(193, 52);
             this.label53.Name = "label53";
-            this.label53.Size = new System.Drawing.Size(338, 16);
+            this.label53.Size = new System.Drawing.Size(526, 16);
             this.label53.TabIndex = 2;
-            this.label53.Text = "Nombre(s)          Apellido Paterno          Apellido Materno";
+            this.label53.Text = "Nombre(s)                                  Apellido Paterno                      " +
+    "           Apellido Materno";
             // 
             // NombrePesc
             // 
             this.NombrePesc.Location = new System.Drawing.Point(178, 23);
             this.NombrePesc.Name = "NombrePesc";
-            this.NombrePesc.Size = new System.Drawing.Size(430, 26);
+            this.NombrePesc.Size = new System.Drawing.Size(194, 26);
             this.NombrePesc.TabIndex = 1;
             // 
             // label54
@@ -1895,6 +1903,20 @@
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
+            // ApePatPescador
+            // 
+            this.ApePatPescador.Location = new System.Drawing.Point(382, 23);
+            this.ApePatPescador.Name = "ApePatPescador";
+            this.ApePatPescador.Size = new System.Drawing.Size(194, 26);
+            this.ApePatPescador.TabIndex = 23;
+            // 
+            // ApeMatPescador
+            // 
+            this.ApeMatPescador.Location = new System.Drawing.Point(582, 23);
+            this.ApeMatPescador.Name = "ApeMatPescador";
+            this.ApeMatPescador.Size = new System.Drawing.Size(194, 26);
+            this.ApeMatPescador.TabIndex = 24;
+            // 
             // Pantalla_Registro_UnidadEconomica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2118,5 +2140,7 @@
         private System.Windows.Forms.PictureBox actualizarPermiso;
         private System.Windows.Forms.PictureBox registrarPermiso;
         private System.Windows.Forms.PictureBox VerPermisos;
+        private System.Windows.Forms.TextBox ApeMatPescador;
+        private System.Windows.Forms.TextBox ApePatPescador;
     }
 }
