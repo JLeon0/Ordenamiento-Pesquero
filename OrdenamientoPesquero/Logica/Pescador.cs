@@ -94,17 +94,5 @@ namespace Logica
             CUERPO_DE_AGUA = cUERPO_DE_AGUA;
             MATRICULA = mATRICULA;
         }
-        public void Registrar()
-        {
-
-        }
-        public void Actualizar()
-        {
-
-        }
-        public void Eliminar()
-        {
-
-        }
     }
 }

@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Logica
 { 
-    class Embarcacion
+    public class Embarcacion
     {
-        string Nombre { get; set; }
-        string Matricula { get; set; }
-        string RNPA { get; set; }
-        string AVID { get; set; }
-        string MARCA { get; set; }
-        string HP { get; set; }
-        string MUNICIPIO { get; set; }
+        public string Nombre { get; set; }
+        public string Matricula { get; set; }
+        public string RNPA { get; set; }
+        public string AVID { get; set; }
+        public string MARCA { get; set; }
+        public string HP { get; set; }
+        public string MUNICIPIO { get; set; }
         public Embarcacion()
         {
             Nombre = "";
@@ -40,18 +40,6 @@ namespace Logica
             MARCA = mARCA;
             HP = hP;
             MUNICIPIO = mUNICIPIO;
-        }
-        public void Registrar()
-        {
-
-        }
-        public void Actualizar()
-        {
-
-        }
-        public void Eliminar()
-        {
-
         }
     }
 }
