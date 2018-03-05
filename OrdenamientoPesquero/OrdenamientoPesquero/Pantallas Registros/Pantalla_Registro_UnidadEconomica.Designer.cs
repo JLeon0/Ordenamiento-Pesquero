@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -129,6 +130,8 @@
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.ApeMatPescador = new System.Windows.Forms.TextBox();
+            this.ApePatPescador = new System.Windows.Forms.TextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label41 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -170,7 +173,7 @@
             this.txtPresidente = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.Expediente = new System.Windows.Forms.TabPage();
-            this.toolTip1 = new System.Windows.Forms.ToolTip();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.VerPermisos = new System.Windows.Forms.PictureBox();
             this.eliminarPermiso = new System.Windows.Forms.PictureBox();
             this.actualizarPermiso = new System.Windows.Forms.PictureBox();
@@ -181,8 +184,6 @@
             this.pBReubicar = new System.Windows.Forms.PictureBox();
             this.Resumen = new System.Windows.Forms.GroupBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ApePatPescador = new System.Windows.Forms.TextBox();
-            this.ApeMatPescador = new System.Windows.Forms.TextBox();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -1387,6 +1388,20 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Información General del Pescador";
             // 
+            // ApeMatPescador
+            // 
+            this.ApeMatPescador.Location = new System.Drawing.Point(582, 23);
+            this.ApeMatPescador.Name = "ApeMatPescador";
+            this.ApeMatPescador.Size = new System.Drawing.Size(194, 26);
+            this.ApeMatPescador.TabIndex = 24;
+            // 
+            // ApePatPescador
+            // 
+            this.ApePatPescador.Location = new System.Drawing.Point(382, 23);
+            this.ApePatPescador.Name = "ApePatPescador";
+            this.ApePatPescador.Size = new System.Drawing.Size(194, 26);
+            this.ApePatPescador.TabIndex = 23;
+            // 
             // maskedTextBox2
             // 
             this.maskedTextBox2.Location = new System.Drawing.Point(686, 286);
@@ -1902,27 +1917,13 @@
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
-            // ApePatPescador
-            // 
-            this.ApePatPescador.Location = new System.Drawing.Point(382, 23);
-            this.ApePatPescador.Name = "ApePatPescador";
-            this.ApePatPescador.Size = new System.Drawing.Size(194, 26);
-            this.ApePatPescador.TabIndex = 23;
-            // 
-            // ApeMatPescador
-            // 
-            this.ApeMatPescador.Location = new System.Drawing.Point(582, 23);
-            this.ApeMatPescador.Name = "ApeMatPescador";
-            this.ApeMatPescador.Size = new System.Drawing.Size(194, 26);
-            this.ApeMatPescador.TabIndex = 24;
-            // 
             // Pantalla_Registro_UnidadEconomica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1262, 749);
+            this.ClientSize = new System.Drawing.Size(1279, 749);
             this.Controls.Add(this.VerPermisos);
             this.Controls.Add(this.eliminarPermiso);
             this.Controls.Add(this.actualizarPermiso);

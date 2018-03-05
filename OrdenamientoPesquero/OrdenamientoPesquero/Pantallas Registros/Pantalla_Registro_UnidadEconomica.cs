@@ -148,7 +148,7 @@ namespace OrdenamientoPesquero
         }
         public void registrarpesador()
         {
-            pes = new Pescador();
+            //pes = new Pescador(NombrePesc, ApePatPescador, ApeMatPescador, CURP, RFC, esc);
         }
         private void registrarPermiso_Click(object sender, EventArgs e)
         {
