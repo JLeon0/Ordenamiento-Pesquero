@@ -18,7 +18,8 @@ namespace OrdenamientoPesquero
         bool escondido = false;
         Unidad_Economica ue;
         Permiso perm;
-
+        Pescador pes;
+        int exito = 0;
         Procedimientos proc = new Procedimientos();
         DataSet ds = new DataSet();
         DataTable dt = null;
@@ -145,31 +146,89 @@ namespace OrdenamientoPesquero
                 MessageBox.Show("Error durante el registro"); /* 1 segundo = 1000 */
             }
         }
+        public int registrarpescador(bool registrar)
+        {
+            string sexo = "";
+            string tipo_pes = "";
+            string ocupacion = "";
+            string cuerpo = "";
+            foreach (CheckBox item in groupBox7.Controls)
+            {
+                if (item.Checked)
+                {
+                    sexo = item.Text;
+                }
+            }
+            foreach (CheckBox item in TipoPesc.Controls)
+            {
+                if (item.Checked)
+                {
+                    tipo_pes = item.Text;
+                }
+            }
+            foreach (CheckBox item in OcupacionEnEmbarPesc.Controls)
+            {
+                if (item.Checked)
+                {
+                    ocupacion = item.Text;
+                }
+            }
+            foreach (CheckBox item in CuerpoDeAguaPesc.Controls)
+            {
+                if (item.Checked)
+                {
+                    cuerpo = item.Text;
+                }
+            }
+            pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text, RFCPesc.Text, EscolaridadPesc.Text, TSangrePesc.Text, sexo,LugarNacPesc.Text,FechaNacPesc.Text, CalleYNumPesc.Text, ColoniaPesc.Text, LocalidadPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, MatriculaPesc.Text);
+            if (registrar)
+            {
+                return proc.Registrar_Pescador(pes);
+            }
+            else
+            {
+                return proc.Actualizar_Pescador(pes);
+            }
+        }
 
         private void registrarPermiso_Click(object sender, EventArgs e)
         {
-            int exito = 0;
-            string[] Hoy = diaExpPer.Value.ToShortDateString().Split('/');
-            string diaExp = "";
-            int i = 2;
-            while (i >= 0)
+            if (Pescadores.Focused)
             {
-                diaExp += Hoy[i];
-                if (i > 0) { diaExp += "/"; }
-                i--;
+                exito=registrarpescador(true);
             }
-            string[] Hasta = finVigenciaPer.Value.ToShortDateString().Split('/');
-            string finVig = "";
-            i = 2;
-            while (i >= 0)
-            {
-                finVig += Hasta[i];
-                if (i > 0) { finVig += "/"; }
-                i--;
-            }
-            perm = new Permiso(FolioPer.Text, cbRNPA.Text, nPer.Text, PesqueriaPer.Text, LugarExpPer.Text, diaExp, finVig, ZonaPescaPerm.Text, SitiosDesemPer.Text, ObservacionesPem.Text);
-            exito = proc.Registrar_Permiso(perm);
+            else if (Permisos.Focused)
+                {
+                string[] Hoy = diaExpPer.Value.ToShortDateString().Split('/');
+                string diaExp = "";
+                int i = 2;
+                while (i >= 0)
+                {
+                    diaExp += Hoy[i];
+                    if (i > 0) { diaExp += "/"; }
+                    i--;
+                }
+                string[] Hasta = finVigenciaPer.Value.ToShortDateString().Split('/');
+                string finVig = "";
+                i = 2;
+                while (i >= 0)
+                {
+                    finVig += Hasta[i];
+                    if (i > 0) { finVig += "/"; }
+                    i--;
+                }
+                perm = new Permiso(FolioPer.Text, cbRNPA.Text, nPer.Text, PesqueriaPer.Text, LugarExpPer.Text, diaExp, finVig, ZonaPescaPerm.Text, SitiosDesemPer.Text, ObservacionesPem.Text);
+                exito = proc.Registrar_Permiso(perm);
 
+            }
+            else if (Directiva.Focused)
+            {
+
+            }
+            else if (CertMatri.Focused)
+            {
+                
+            }
             if (exito == 1)
             {
                 (new System.Threading.Thread(CloseIt)).Start();
@@ -180,6 +239,8 @@ namespace OrdenamientoPesquero
                 (new System.Threading.Thread(CloseIt)).Start();
                 MessageBox.Show("Error durante el registro"); /* 1 segundo = 1000 */
             }
+            exito = 0;
+
         }
         #endregion
 
