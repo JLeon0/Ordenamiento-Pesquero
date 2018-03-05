@@ -180,7 +180,16 @@ namespace OrdenamientoPesquero
                     cuerpo = item.Text;
                 }
             }
-            pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text, RFCPesc.Text, EscolaridadPesc.Text, TSangrePesc.Text, sexo,LugarNacPesc.Text,FechaNacPesc.Text, CalleYNumPesc.Text, ColoniaPesc.Text, LocalidadPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, MatriculaPesc.Text);
+            string[] fecha = FechaNacPesc.Value.ToShortDateString().Split('/');
+            string fechaNac = "";
+            int i = 2;
+            while (i >= 0)
+            {
+                fechaNac += fecha[i];
+                if (i > 0) { fechaNac += "/"; }
+                i--;
+            }
+            pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text, RFCPesc.Text, EscolaridadPesc.Text, TSangrePesc.Text, sexo,LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, LocalidadPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, MatriculaPesc.Text);
             if (registrar)
             {
                 return proc.Registrar_Pescador(pes);
@@ -198,7 +207,7 @@ namespace OrdenamientoPesquero
                 exito=registrarpescador(true);
             }
             else if (Permisos.Focused)
-                {
+            { 
                 string[] Hoy = diaExpPer.Value.ToShortDateString().Split('/');
                 string diaExp = "";
                 int i = 2;
