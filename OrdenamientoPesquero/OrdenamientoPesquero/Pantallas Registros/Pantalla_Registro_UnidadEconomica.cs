@@ -461,5 +461,57 @@ namespace OrdenamientoPesquero
         {
             VigenciaPerm.Text = DiferenciaFechas(finVigenciaPer.Value, diaExpPer.Value);
         }
+
+        private void actualizarPermiso_Click(object sender, EventArgs e)
+        {
+            if (Pescadores.Focused)
+            {
+                exito = registrarpescador(false);
+            }
+            else if (Permisos.Focused)
+            {
+                string[] Hoy = diaExpPer.Value.ToShortDateString().Split('/');
+                string diaExp = "";
+                int i = 2;
+                while (i >= 0)
+                {
+                    diaExp += Hoy[i];
+                    if (i > 0) { diaExp += "/"; }
+                    i--;
+                }
+                string[] Hasta = finVigenciaPer.Value.ToShortDateString().Split('/');
+                string finVig = "";
+                i = 2;
+                while (i >= 0)
+                {
+                    finVig += Hasta[i];
+                    if (i > 0) { finVig += "/"; }
+                    i--;
+                }
+                perm = new Permiso(FolioPer.Text, cbRNPA.Text, nPer.Text, PesqueriaPer.Text, LugarExpPer.Text, diaExp, finVig, ZonaPescaPerm.Text, SitiosDesemPer.Text, ObservacionesPem.Text);
+                exito = proc.Registrar_Permiso(perm);
+
+            }
+            else if (Directiva.Focused)
+            {
+
+            }
+            else if (CertMatri.Focused)
+            {
+
+            }
+            if (exito == 1)
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Registrado exitosamente"); /* 1 segundo = 1000 */
+            }
+            else
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Error durante el registro"); /* 1 segundo = 1000 */
+            }
+            exito = 0;
+
+        }
     }
 }

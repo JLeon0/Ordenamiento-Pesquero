@@ -1904,6 +1904,7 @@
             this.actualizarPermiso.TabIndex = 112;
             this.actualizarPermiso.TabStop = false;
             this.toolTip1.SetToolTip(this.actualizarPermiso, "Actualizar Permiso");
+            this.actualizarPermiso.Click += new System.EventHandler(this.actualizarPermiso_Click);
             // 
             // pictureBox5
             // 
