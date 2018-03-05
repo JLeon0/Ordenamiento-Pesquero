@@ -17,42 +17,25 @@ namespace OrdenamientoPesquero
     {
         bool escondido = false;
         Unidad_Economica ue;
+
         Procedimientos proc = new Procedimientos();
         DataSet ds = new DataSet();
+        DataTable dt = null;
 
         public Pantalla_Registro_UnidadEconomica()
         {
-            //
-            // Cargo los datos del combobox
-            //
-
-            //
-            // cargo la lista de items para el autocomplete
-            //
-            //cbRNPA.AutoCompleteCustomSource = proc.Obtener_todas_unidades("").;
-            //cbRNPA.AutoCompleteMode = AutoCompleteMode.Suggest;
-            //cbRNPA.AutoCompleteSource = AutoCompleteSource.CustomSource;
             InitializeComponent();
-            DataTable dt = proc.Obtener_todas_unidades("");
-            cbRNPA.DataSource = dt;
-            cbRNPA.DisplayMember = "RNPA";
-            cbRNPA.ValueMember = "RNPA";
             this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
             this.Width = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width);
-            tabControl1.Width= Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width*.992);
-            Resumen.Width = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width * .296);
-            foreach (TextBox ctr in gbOrgPes.Controls.OfType<TextBox>())
-            {
-                gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].ForeColor = Color.FromArgb(123, 133, 142);
-                gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].BackColor = Color.FromArgb(36, 50, 61);
 
-            }
-        }
+        }  
 
         private void Pantalla_Registro_UnidadEconomica_Load(object sender, EventArgs e)
         {
             txtFecha.Text = DateTime.Today.ToString("dd/MM/yyyy");
             cbRNPA.Focus();
+            PintarGroupBox();
+            CargarRNPA();
         }
 
         private void pBReubicar_Click(object sender, EventArgs e)
@@ -84,23 +67,18 @@ namespace OrdenamientoPesquero
         private void pbRegistrar_Click(object sender, EventArgs e)
         {
             int exito = 0;
-            if (radioButton0.Checked)
-            {
+            if (radioButton0.Checked){
+                ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
+                exito = proc.Registrar_Unidad(ue);
+            } else if (radioButton1.Checked) {
                 ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
                 exito = proc.Registrar_Unidad(ue);
             }
-            else if (radioButton1.Checked)
-            {
-                ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
-                exito = proc.Registrar_Unidad(ue);
-            }
-            if (exito == 1)
-            {
+            CargarRNPA();
+            if (exito == 1){
                 (new System.Threading.Thread(CloseIt)).Start();
                 MessageBox.Show("Registrado exitosamente"); /* 1 segundo = 1000 */
-            }
-            else
-            {
+            } else {
                 (new System.Threading.Thread(CloseIt)).Start();
                 MessageBox.Show("Error durante el registro"); /* 1 segundo = 1000 */
             }
@@ -130,6 +108,82 @@ namespace OrdenamientoPesquero
                 MessageBox.Show("Error durante la actualizacion"); /* 1 segundo = 1000 */
             }
         }
+
+
+       
+
+        private void cbRNPA_Leave(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            DialogResult Si = MessageBox.Show("¿Desea eliminar esta Unidad Económica?", "ADVERTENCIA", MessageBoxButtons.YesNo);
+            if (Si == DialogResult.Yes)
+            {
+                if (proc.Eliminar_Unidad(cbRNPA.Text) == 1)
+                {
+                    (new System.Threading.Thread(CloseIt)).Start();
+                    MessageBox.Show("Eliminado exitosamente"); /* 1 segundo = 1000 */
+                }
+                else
+                {
+                    (new System.Threading.Thread(CloseIt)).Start();
+                    MessageBox.Show("Error durante eliminacion"); /* 1 segundo = 1000 */
+                }
+                CargarRNPA();
+            }
+        }
+
+
+        //Cargar Datos
+        bool cargando = true;
+        private void CargarRNPA()
+        {
+            cbRNPA.DataSource = dt;
+            dt = proc.Obtener_todas_unidades("");
+            cbRNPA.DataSource = dt;
+            cbRNPA.DisplayMember = "RNPA";
+            cbRNPA.ValueMember = "RNPA";            
+            cbRNPA.Text = "";
+            cargando = false;
+        }
+
+        private void LlenarCampos()
+        {
+            if (!cargando)
+            {
+                dt = proc.Obtener_todas_unidades(cbRNPA.Text);
+                int tipo = 0;
+                foreach (DataRow fila in dt.Rows)
+                {
+                    txtNombre.Text = fila["NOMBRE"].ToString();
+                    txtRFC.Text = fila["RFC"].ToString();
+                    txtCalleNum.Text = fila["CALLEYNUM"].ToString();
+                    txtColonia.Text = fila["COLONIA"].ToString();
+                    txtLocalidad.Text = fila["LOCALIDAD"].ToString();
+                    txtMunicipio.Text = fila["MUNICIO"].ToString();
+                    mtbCP.Text = fila["CODIGO_POSTAL"].ToString();
+                    txtCorreo.Text = fila["CORREO"].ToString();
+                    mtbTelefono.Text = fila["TELEFONO"].ToString();
+                    txtPresidente.Text = fila["PRESIDENTE"].ToString();
+                    txtSecre.Text = fila["SECRETARIO"].ToString();
+                    txtTesor.Text = fila["TESORERO"].ToString();
+                    mtbTelPres.Text = fila["TEL_PRES"].ToString();
+                    mtbTelSec.Text = fila["TEL_SECRE"].ToString();
+                    mtbTelTeso.Text = fila["TEL_TESOR"].ToString();
+                    //tipo = Convert.ToInt32(fila["TIPO"]);
+                }
+                if (tipo == 0)
+                { radioButton0.Checked = true; }
+                else { radioButton1.Checked = true; }
+            }
+        }
+
+        //Validaciones
+        #region
+
         public void CloseIt()
         {
             System.Threading.Thread.Sleep(2000);
@@ -159,17 +213,6 @@ namespace OrdenamientoPesquero
                 pictureBox2.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
             }
         }
-        public bool validarrfc(string rfc)
-        {
-            if (Regex.IsMatch(rfc, @"^([A-Z\s]{4})\d{6}([A-Z\w]{3})$"))
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
         public bool validarcurp(string rfc)
         {
             if (Regex.IsMatch(rfc, @"^([A - Z][AEIOUX][A - Z]{ 2}\d{ 2} (?: 0[1 - 9] | 1[0 - 2])(?:0[1 - 9][12]\d | 3[01])[HM](?:AS | B[CS] | C[CLMSH] | D[FG] | G[TR] | HG | JC | M[CNS] | N[ETL] | OC | PL | Q[TR] | S[PLR] | T[CSL] | VZ | YN | ZS)[B - DF - HJ - NP - TV - Z]{ 3}[A-Z\d])(\d)$"))
@@ -192,6 +235,7 @@ namespace OrdenamientoPesquero
                 return false;
             }
         }
+
         private void txtRFC_TextChanged(object sender, EventArgs e)
         {
             if (validarrfc(txtRFC.Text))
@@ -202,28 +246,24 @@ namespace OrdenamientoPesquero
             {
                 pictureBox3.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
             }
-            
+
         }
 
-        private void Pantalla_Registro_UnidadEconomica_Load_1(object sender, EventArgs e)
+        public bool validarrfc(string rfc)
         {
-          
-
-            Permisos.BackColor = Color.FromArgb(26, 177, 136);
-            this.BackColor = Color.FromArgb(36, 50, 61);
-            Resumen.BackColor = Color.FromArgb(118, 50, 63);
-            txtNombre.ForeColor = Color.FromArgb(123,133,142);
-            txtNombre.BackColor = Color.FromArgb(36, 50, 61);
-        }
-
-        private void cbRNPA_Leave(object sender, EventArgs e)
-        {
-            
+            if (Regex.IsMatch(rfc, @"^([A-Z\s]{4})\d{6}([A-Z\w]{3})$"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
         private void txtCorreo_TextChanged(object sender, EventArgs e)
         {
-            if(validarCorreo(txtCorreo.Text))
+            if (validarCorreo(txtCorreo.Text))
             {
                 pictureBox4.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
             }
@@ -233,18 +273,38 @@ namespace OrdenamientoPesquero
             }
         }
 
-        private void pictureBox5_Click(object sender, EventArgs e)
+        #endregion
+
+        //Pintar los groupBox
+        private void PintarGroupBox()
         {
-            if (proc.Eliminar_Unidad(cbRNPA.Text) == 1)
+            this.BackColor = Color.FromArgb(36, 50, 61);
+            Resumen.BackColor = Color.FromArgb(118, 50, 63);
+
+            tabControl1.Width = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width * .985);
+            Resumen.Width = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width * .296);
+
+            foreach (TextBox ctr in gbOrgPes.Controls.OfType<TextBox>())
             {
-                (new System.Threading.Thread(CloseIt)).Start();
-                MessageBox.Show("Eliminado exitosamente"); /* 1 segundo = 1000 */
+                gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].ForeColor = Color.FromArgb(160, 160, 160);
+                gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].BackColor = Color.FromArgb(36, 50, 61);
+
             }
-            else
+            foreach (MaskedTextBox ctr in gbOrgPes.Controls.OfType<MaskedTextBox>())
             {
-                (new System.Threading.Thread(CloseIt)).Start();
-                MessageBox.Show("Error durante eliminacion"); /* 1 segundo = 1000 */
+                gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].ForeColor = Color.FromArgb(60, 160, 160);
+                gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].BackColor = Color.FromArgb(36, 50, 61);
+
             }
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        }
+
+        private void cbRNPA_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            LlenarCampos();
         }
     }
 }

@@ -49,6 +49,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.gbOrgPes = new System.Windows.Forms.GroupBox();
+            this.mtbTelRepFed = new System.Windows.Forms.MaskedTextBox();
+            this.label22 = new System.Windows.Forms.Label();
+            this.txtNomRepFed = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.txtNomFed = new System.Windows.Forms.TextBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -56,13 +62,6 @@
             this.label20 = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
-            this.gbFed = new System.Windows.Forms.GroupBox();
-            this.mtbTelRepFed = new System.Windows.Forms.MaskedTextBox();
-            this.label22 = new System.Windows.Forms.Label();
-            this.txtNomRepFed = new System.Windows.Forms.TextBox();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.txtNomFed = new System.Windows.Forms.TextBox();
             this.txtFecha = new System.Windows.Forms.TextBox();
             this.cbRNPA = new System.Windows.Forms.ComboBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -104,7 +103,7 @@
             this.textBox18 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.Directiva = new System.Windows.Forms.TabPage();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gbDirectiva = new System.Windows.Forms.GroupBox();
             this.mtbTelTeso = new System.Windows.Forms.MaskedTextBox();
             this.mtbTelSec = new System.Windows.Forms.MaskedTextBox();
             this.mtbTelPres = new System.Windows.Forms.MaskedTextBox();
@@ -170,19 +169,19 @@
             this.label53 = new System.Windows.Forms.Label();
             this.NombrePesc = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
-            this.Embarcaciones = new System.Windows.Forms.TabPage();
+            this.CertMatri = new System.Windows.Forms.TabPage();
             this.Expediente = new System.Windows.Forms.TabPage();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pbActualizar = new System.Windows.Forms.PictureBox();
             this.pbRegistrar = new System.Windows.Forms.PictureBox();
             this.pBReubicar = new System.Windows.Forms.PictureBox();
             this.Resumen = new System.Windows.Forms.GroupBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            this.gbFed.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.Permisos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
@@ -191,7 +190,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.Directiva.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.gbDirectiva.SuspendLayout();
             this.Pescadores.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -201,6 +200,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRegistrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBReubicar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -420,8 +420,10 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(97, 32);
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(54, 30);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -441,6 +443,13 @@
             // 
             // gbOrgPes
             // 
+            this.gbOrgPes.BackColor = System.Drawing.Color.Transparent;
+            this.gbOrgPes.Controls.Add(this.mtbTelRepFed);
+            this.gbOrgPes.Controls.Add(this.label22);
+            this.gbOrgPes.Controls.Add(this.txtNomRepFed);
+            this.gbOrgPes.Controls.Add(this.label23);
+            this.gbOrgPes.Controls.Add(this.label24);
+            this.gbOrgPes.Controls.Add(this.txtNomFed);
             this.gbOrgPes.Controls.Add(this.pictureBox4);
             this.gbOrgPes.Controls.Add(this.pictureBox3);
             this.gbOrgPes.Controls.Add(this.pictureBox2);
@@ -448,7 +457,6 @@
             this.gbOrgPes.Controls.Add(this.label20);
             this.gbOrgPes.Controls.Add(this.txtCorreo);
             this.gbOrgPes.Controls.Add(this.label21);
-            this.gbOrgPes.Controls.Add(this.gbFed);
             this.gbOrgPes.Controls.Add(this.txtFecha);
             this.gbOrgPes.Controls.Add(this.cbRNPA);
             this.gbOrgPes.Controls.Add(this.radioButton1);
@@ -472,12 +480,82 @@
             this.gbOrgPes.Controls.Add(this.mtbCP);
             this.gbOrgPes.Controls.Add(this.label10);
             this.gbOrgPes.Font = new System.Drawing.Font("Bookman Old Style", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbOrgPes.Location = new System.Drawing.Point(12, 101);
+            this.gbOrgPes.ForeColor = System.Drawing.Color.White;
+            this.gbOrgPes.Location = new System.Drawing.Point(12, 98);
             this.gbOrgPes.Name = "gbOrgPes";
             this.gbOrgPes.Size = new System.Drawing.Size(913, 412);
             this.gbOrgPes.TabIndex = 54;
             this.gbOrgPes.TabStop = false;
             this.gbOrgPes.Text = "DATOS GENERALES DE LA ORGANIZACIÓN PESQUERA";
+            // 
+            // mtbTelRepFed
+            // 
+            this.mtbTelRepFed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTelRepFed.Location = new System.Drawing.Point(659, 339);
+            this.mtbTelRepFed.Mask = "000-000-0000";
+            this.mtbTelRepFed.Name = "mtbTelRepFed";
+            this.mtbTelRepFed.Size = new System.Drawing.Size(116, 26);
+            this.mtbTelRepFed.TabIndex = 107;
+            this.toolTip1.SetToolTip(this.mtbTelRepFed, "Ingrese el número del Representante de la Federación");
+            // 
+            // label22
+            // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(7, 321);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(343, 19);
+            this.label22.TabIndex = 109;
+            this.label22.Text = "Nombre del Representante de la Federación";
+            // 
+            // txtNomRepFed
+            // 
+            this.txtNomRepFed.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtNomRepFed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNomRepFed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomRepFed.Location = new System.Drawing.Point(10, 340);
+            this.txtNomRepFed.Name = "txtNomRepFed";
+            this.txtNomRepFed.Size = new System.Drawing.Size(623, 26);
+            this.txtNomRepFed.TabIndex = 106;
+            this.txtNomRepFed.Tag = "";
+            this.toolTip1.SetToolTip(this.txtNomRepFed, "Ingrese el nombre del Representante de la Federación");
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(656, 323);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(66, 18);
+            this.label23.TabIndex = 110;
+            this.label23.Text = "Telefono";
+            // 
+            // label24
+            // 
+            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(7, 275);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(344, 19);
+            this.label24.TabIndex = 108;
+            this.label24.Text = "Nombre de la Federación a la que Pertenece";
+            // 
+            // txtNomFed
+            // 
+            this.txtNomFed.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.txtNomFed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNomFed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomFed.ForeColor = System.Drawing.Color.DarkGray;
+            this.txtNomFed.Location = new System.Drawing.Point(10, 294);
+            this.txtNomFed.Name = "txtNomFed";
+            this.txtNomFed.Size = new System.Drawing.Size(623, 26);
+            this.txtNomFed.TabIndex = 105;
+            this.txtNomFed.Tag = "";
+            this.toolTip1.SetToolTip(this.txtNomFed, "Ingrese el nombre de la Federación");
             // 
             // pictureBox4
             // 
@@ -563,90 +641,6 @@
             this.label21.TabIndex = 62;
             this.label21.Text = "Telefono de la cooperativa";
             // 
-            // gbFed
-            // 
-            this.gbFed.Controls.Add(this.mtbTelRepFed);
-            this.gbFed.Controls.Add(this.label22);
-            this.gbFed.Controls.Add(this.txtNomRepFed);
-            this.gbFed.Controls.Add(this.label23);
-            this.gbFed.Controls.Add(this.label24);
-            this.gbFed.Controls.Add(this.txtNomFed);
-            this.gbFed.Location = new System.Drawing.Point(11, 279);
-            this.gbFed.Name = "gbFed";
-            this.gbFed.Size = new System.Drawing.Size(883, 115);
-            this.gbFed.TabIndex = 58;
-            this.gbFed.TabStop = false;
-            // 
-            // mtbTelRepFed
-            // 
-            this.mtbTelRepFed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbTelRepFed.Location = new System.Drawing.Point(658, 84);
-            this.mtbTelRepFed.Mask = "000-000-0000";
-            this.mtbTelRepFed.Name = "mtbTelRepFed";
-            this.mtbTelRepFed.Size = new System.Drawing.Size(100, 26);
-            this.mtbTelRepFed.TabIndex = 19;
-            this.toolTip1.SetToolTip(this.mtbTelRepFed, "Ingrese el número del Representante de la Federación");
-            // 
-            // label22
-            // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(6, 65);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(343, 19);
-            this.label22.TabIndex = 61;
-            this.label22.Text = "Nombre del Representante de la Federación";
-            // 
-            // txtNomRepFed
-            // 
-            this.txtNomRepFed.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtNomRepFed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNomRepFed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomRepFed.Location = new System.Drawing.Point(9, 84);
-            this.txtNomRepFed.Name = "txtNomRepFed";
-            this.txtNomRepFed.Size = new System.Drawing.Size(623, 26);
-            this.txtNomRepFed.TabIndex = 18;
-            this.txtNomRepFed.Tag = "";
-            this.toolTip1.SetToolTip(this.txtNomRepFed, "Ingrese el nombre del Representante de la Federación");
-            // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(655, 67);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(66, 18);
-            this.label23.TabIndex = 62;
-            this.label23.Text = "Telefono";
-            // 
-            // label24
-            // 
-            this.label24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(6, 19);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(344, 19);
-            this.label24.TabIndex = 59;
-            this.label24.Text = "Nombre de la Federación a la que Pertenece";
-            // 
-            // txtNomFed
-            // 
-            this.txtNomFed.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.txtNomFed.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtNomFed.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNomFed.ForeColor = System.Drawing.Color.DarkGray;
-            this.txtNomFed.Location = new System.Drawing.Point(9, 38);
-            this.txtNomFed.Name = "txtNomFed";
-            this.txtNomFed.Size = new System.Drawing.Size(623, 26);
-            this.txtNomFed.TabIndex = 17;
-            this.txtNomFed.Tag = "";
-            this.toolTip1.SetToolTip(this.txtNomFed, "Ingrese el nombre de la Federación");
-            this.txtNomFed.Leave += new System.EventHandler(this.cbRNPA_Leave);
-            // 
             // txtFecha
             // 
             this.txtFecha.BackColor = System.Drawing.SystemColors.ButtonFace;
@@ -662,14 +656,15 @@
             // 
             // cbRNPA
             // 
-            this.cbRNPA.BackColor = System.Drawing.Color.Silver;
-            this.cbRNPA.ForeColor = System.Drawing.Color.DarkGray;
+            this.cbRNPA.BackColor = System.Drawing.Color.White;
+            this.cbRNPA.ForeColor = System.Drawing.Color.Black;
             this.cbRNPA.FormattingEnabled = true;
             this.cbRNPA.Location = new System.Drawing.Point(209, 21);
             this.cbRNPA.Name = "cbRNPA";
             this.cbRNPA.Size = new System.Drawing.Size(163, 28);
             this.cbRNPA.TabIndex = 1;
             this.toolTip1.SetToolTip(this.cbRNPA, "Ingrese o Seleccione el RNPA de la Unidad Económica");
+            this.cbRNPA.SelectedIndexChanged += new System.EventHandler(this.cbRNPA_SelectedIndexChanged);
             this.cbRNPA.Leave += new System.EventHandler(this.cbRNPA_Leave);
             // 
             // radioButton1
@@ -702,24 +697,23 @@
             // tabControl1
             // 
             this.tabControl1.Controls.Add(this.Permisos);
-            this.tabControl1.Controls.Add(this.Directiva);
+            this.tabControl1.Controls.Add(this.CertMatri);
             this.tabControl1.Controls.Add(this.Pescadores);
-            this.tabControl1.Controls.Add(this.Embarcaciones);
+            this.tabControl1.Controls.Add(this.Directiva);
             this.tabControl1.Controls.Add(this.Expediente);
-            this.tabControl1.DrawMode = System.Windows.Forms.TabDrawMode.OwnerDrawFixed;
             this.tabControl1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.tabControl1.Location = new System.Drawing.Point(1, 572);
+            this.tabControl1.Location = new System.Drawing.Point(1, 570);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1227, 406);
+            this.tabControl1.Size = new System.Drawing.Size(1204, 406);
             this.tabControl1.TabIndex = 54;
             this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // Permisos
             // 
             this.Permisos.AutoScroll = true;
-            this.Permisos.BackColor = System.Drawing.Color.Transparent;
+            this.Permisos.BackColor = System.Drawing.Color.White;
             this.Permisos.Controls.Add(this.textBox19);
             this.Permisos.Controls.Add(this.label27);
             this.Permisos.Controls.Add(this.dataGridView2);
@@ -736,11 +730,11 @@
             this.Permisos.Controls.Add(this.textBox18);
             this.Permisos.Controls.Add(this.label25);
             this.Permisos.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Permisos.ForeColor = System.Drawing.Color.White;
+            this.Permisos.ForeColor = System.Drawing.Color.Black;
             this.Permisos.Location = new System.Drawing.Point(4, 34);
             this.Permisos.Name = "Permisos";
             this.Permisos.Padding = new System.Windows.Forms.Padding(3);
-            this.Permisos.Size = new System.Drawing.Size(1219, 368);
+            this.Permisos.Size = new System.Drawing.Size(1196, 368);
             this.Permisos.TabIndex = 0;
             this.Permisos.Text = "Permisos";
             // 
@@ -1063,44 +1057,44 @@
             // Directiva
             // 
             this.Directiva.AutoScroll = true;
-            this.Directiva.BackColor = System.Drawing.Color.DarkCyan;
-            this.Directiva.Controls.Add(this.groupBox2);
+            this.Directiva.BackColor = System.Drawing.Color.White;
+            this.Directiva.Controls.Add(this.gbDirectiva);
             this.Directiva.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Directiva.ForeColor = System.Drawing.Color.White;
+            this.Directiva.ForeColor = System.Drawing.Color.Black;
             this.Directiva.Location = new System.Drawing.Point(4, 34);
             this.Directiva.Name = "Directiva";
             this.Directiva.Padding = new System.Windows.Forms.Padding(3);
-            this.Directiva.Size = new System.Drawing.Size(1219, 368);
+            this.Directiva.Size = new System.Drawing.Size(1196, 368);
             this.Directiva.TabIndex = 1;
             this.Directiva.Text = "Directiva";
             // 
-            // groupBox2
+            // gbDirectiva
             // 
-            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.gbDirectiva.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBox2.Controls.Add(this.mtbTelTeso);
-            this.groupBox2.Controls.Add(this.mtbTelSec);
-            this.groupBox2.Controls.Add(this.mtbTelPres);
-            this.groupBox2.Controls.Add(this.label18);
-            this.groupBox2.Controls.Add(this.txtTesor);
-            this.groupBox2.Controls.Add(this.label19);
-            this.groupBox2.Controls.Add(this.label16);
-            this.groupBox2.Controls.Add(this.txtSecre);
-            this.groupBox2.Controls.Add(this.label17);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.txtPresidente);
-            this.groupBox2.Controls.Add(this.label15);
-            this.groupBox2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(17, 16);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(1153, 171);
-            this.groupBox2.TabIndex = 64;
-            this.groupBox2.TabStop = false;
+            this.gbDirectiva.Controls.Add(this.mtbTelTeso);
+            this.gbDirectiva.Controls.Add(this.mtbTelSec);
+            this.gbDirectiva.Controls.Add(this.mtbTelPres);
+            this.gbDirectiva.Controls.Add(this.label18);
+            this.gbDirectiva.Controls.Add(this.txtTesor);
+            this.gbDirectiva.Controls.Add(this.label19);
+            this.gbDirectiva.Controls.Add(this.label16);
+            this.gbDirectiva.Controls.Add(this.txtSecre);
+            this.gbDirectiva.Controls.Add(this.label17);
+            this.gbDirectiva.Controls.Add(this.label6);
+            this.gbDirectiva.Controls.Add(this.txtPresidente);
+            this.gbDirectiva.Controls.Add(this.label15);
+            this.gbDirectiva.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbDirectiva.Location = new System.Drawing.Point(17, 16);
+            this.gbDirectiva.Name = "gbDirectiva";
+            this.gbDirectiva.Size = new System.Drawing.Size(1136, 171);
+            this.gbDirectiva.TabIndex = 64;
+            this.gbDirectiva.TabStop = false;
             // 
             // mtbTelTeso
             // 
             this.mtbTelTeso.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbTelTeso.Location = new System.Drawing.Point(658, 124);
+            this.mtbTelTeso.Location = new System.Drawing.Point(658, 131);
             this.mtbTelTeso.Mask = "000-000-0000";
             this.mtbTelTeso.Name = "mtbTelTeso";
             this.mtbTelTeso.Size = new System.Drawing.Size(100, 26);
@@ -1130,7 +1124,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(6, 106);
+            this.label18.Location = new System.Drawing.Point(6, 110);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(151, 18);
             this.label18.TabIndex = 51;
@@ -1139,7 +1133,7 @@
             // txtTesor
             // 
             this.txtTesor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTesor.Location = new System.Drawing.Point(9, 125);
+            this.txtTesor.Location = new System.Drawing.Point(9, 131);
             this.txtTesor.Name = "txtTesor";
             this.txtTesor.Size = new System.Drawing.Size(623, 26);
             this.txtTesor.TabIndex = 46;
@@ -1150,7 +1144,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(655, 108);
+            this.label19.Location = new System.Drawing.Point(657, 110);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(66, 18);
             this.label19.TabIndex = 52;
@@ -1223,16 +1217,16 @@
             // Pescadores
             // 
             this.Pescadores.AutoScroll = true;
+            this.Pescadores.BackColor = System.Drawing.Color.White;
             this.Pescadores.Controls.Add(this.groupBox4);
             this.Pescadores.Controls.Add(this.groupBox7);
             this.Pescadores.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pescadores.ForeColor = System.Drawing.Color.White;
+            this.Pescadores.ForeColor = System.Drawing.Color.Black;
             this.Pescadores.Location = new System.Drawing.Point(4, 34);
             this.Pescadores.Name = "Pescadores";
-            this.Pescadores.Size = new System.Drawing.Size(1219, 368);
+            this.Pescadores.Size = new System.Drawing.Size(1196, 368);
             this.Pescadores.TabIndex = 2;
             this.Pescadores.Text = "Pescadores";
-            this.Pescadores.UseVisualStyleBackColor = true;
             // 
             // groupBox4
             // 
@@ -1746,31 +1740,32 @@
             this.label54.TabIndex = 0;
             this.label54.Text = "Nombre del Pescador:";
             // 
-            // Embarcaciones
+            // CertMatri
             // 
-            this.Embarcaciones.ForeColor = System.Drawing.Color.White;
-            this.Embarcaciones.Location = new System.Drawing.Point(4, 34);
-            this.Embarcaciones.Name = "Embarcaciones";
-            this.Embarcaciones.Size = new System.Drawing.Size(1219, 368);
-            this.Embarcaciones.TabIndex = 3;
-            this.Embarcaciones.Text = "Certificados de matricula";
-            this.Embarcaciones.UseVisualStyleBackColor = true;
+            this.CertMatri.ForeColor = System.Drawing.Color.White;
+            this.CertMatri.Location = new System.Drawing.Point(4, 34);
+            this.CertMatri.Name = "CertMatri";
+            this.CertMatri.Size = new System.Drawing.Size(1196, 368);
+            this.CertMatri.TabIndex = 3;
+            this.CertMatri.Text = "Cert. Matr.";
+            this.CertMatri.UseVisualStyleBackColor = true;
             // 
             // Expediente
             // 
             this.Expediente.ForeColor = System.Drawing.Color.White;
             this.Expediente.Location = new System.Drawing.Point(4, 34);
             this.Expediente.Name = "Expediente";
-            this.Expediente.Size = new System.Drawing.Size(1219, 368);
+            this.Expediente.Size = new System.Drawing.Size(1196, 368);
             this.Expediente.TabIndex = 4;
             this.Expediente.Text = "Expediente";
             this.Expediente.UseVisualStyleBackColor = true;
             // 
             // pbActualizar
             // 
+            this.pbActualizar.BackColor = System.Drawing.Color.Transparent;
             this.pbActualizar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.actualizar;
             this.pbActualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbActualizar.Location = new System.Drawing.Point(103, 516);
+            this.pbActualizar.Location = new System.Drawing.Point(103, 514);
             this.pbActualizar.Name = "pbActualizar";
             this.pbActualizar.Size = new System.Drawing.Size(50, 50);
             this.pbActualizar.TabIndex = 106;
@@ -1780,9 +1775,10 @@
             // 
             // pbRegistrar
             // 
+            this.pbRegistrar.BackColor = System.Drawing.Color.Transparent;
             this.pbRegistrar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.registrar;
             this.pbRegistrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pbRegistrar.Location = new System.Drawing.Point(33, 516);
+            this.pbRegistrar.Location = new System.Drawing.Point(33, 514);
             this.pbRegistrar.Name = "pbRegistrar";
             this.pbRegistrar.Size = new System.Drawing.Size(50, 50);
             this.pbRegistrar.TabIndex = 105;
@@ -1792,9 +1788,10 @@
             // 
             // pBReubicar
             // 
+            this.pBReubicar.BackColor = System.Drawing.Color.Transparent;
             this.pBReubicar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.flechaarriba;
             this.pBReubicar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pBReubicar.Location = new System.Drawing.Point(874, 518);
+            this.pBReubicar.Location = new System.Drawing.Point(874, 516);
             this.pBReubicar.Name = "pBReubicar";
             this.pBReubicar.Size = new System.Drawing.Size(51, 48);
             this.pBReubicar.TabIndex = 104;
@@ -1807,13 +1804,24 @@
             this.Resumen.BackColor = System.Drawing.Color.Transparent;
             this.Resumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Resumen.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Resumen.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.Resumen.Location = new System.Drawing.Point(944, 3);
+            this.Resumen.ForeColor = System.Drawing.Color.White;
+            this.Resumen.Location = new System.Drawing.Point(944, 1);
             this.Resumen.Name = "Resumen";
-            this.Resumen.Size = new System.Drawing.Size(283, 597);
+            this.Resumen.Size = new System.Drawing.Size(283, 602);
             this.Resumen.TabIndex = 101;
             this.Resumen.TabStop = false;
             this.Resumen.Text = "Resumen";
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Location = new System.Drawing.Point(164, 514);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox5.TabIndex = 107;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
             // 
             // pictureBox1
             // 
@@ -1822,9 +1830,9 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.sepada_escudologosiglas_450x85;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(12, 14);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(820, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(735, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
@@ -1833,8 +1841,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1245, 749);
+            this.BackColor = System.Drawing.Color.Black;
+            this.ClientSize = new System.Drawing.Size(1262, 749);
+            this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.pbActualizar);
             this.Controls.Add(this.pbRegistrar);
             this.Controls.Add(this.pBReubicar);
@@ -1848,14 +1857,12 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Ordenamiento Pesquero";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.Pantalla_Registro_UnidadEconomica_Load_1);
+            this.Load += new System.EventHandler(this.Pantalla_Registro_UnidadEconomica_Load);
             this.gbOrgPes.ResumeLayout(false);
             this.gbOrgPes.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            this.gbFed.ResumeLayout(false);
-            this.gbFed.PerformLayout();
             this.tabControl1.ResumeLayout(false);
             this.Permisos.ResumeLayout(false);
             this.Permisos.PerformLayout();
@@ -1866,8 +1873,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.Directiva.ResumeLayout(false);
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.gbDirectiva.ResumeLayout(false);
+            this.gbDirectiva.PerformLayout();
             this.Pescadores.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -1882,6 +1889,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbActualizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbRegistrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBReubicar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1912,13 +1920,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.GroupBox gbOrgPes;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.GroupBox gbFed;
-        private System.Windows.Forms.MaskedTextBox mtbTelRepFed;
-        private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.TextBox txtNomRepFed;
-        private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.TextBox txtNomFed;
         private System.Windows.Forms.TextBox txtFecha;
         private System.Windows.Forms.ComboBox cbRNPA;
         private System.Windows.Forms.RadioButton radioButton1;
@@ -1930,7 +1931,7 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox gbDirectiva;
         private System.Windows.Forms.MaskedTextBox mtbTelTeso;
         private System.Windows.Forms.MaskedTextBox mtbTelSec;
         private System.Windows.Forms.MaskedTextBox mtbTelPres;
@@ -1977,7 +1978,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox18;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.TabPage Embarcaciones;
+        private System.Windows.Forms.TabPage CertMatri;
         private System.Windows.Forms.PictureBox pBReubicar;
         private System.Windows.Forms.PictureBox pbRegistrar;
         private System.Windows.Forms.PictureBox pbActualizar;
@@ -2039,5 +2040,12 @@
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.TextBox NombrePesc;
         private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.MaskedTextBox mtbTelRepFed;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox txtNomRepFed;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.TextBox txtNomFed;
+        private System.Windows.Forms.PictureBox pictureBox5;
     }
 }
