@@ -12,6 +12,9 @@ namespace Logica
     public class Procedimientos
     {
         Conexion c = new Conexion();
+
+        //Unidades Económicas
+        #region
         public int Registrar_Unidad(Unidad_Economica UE)
         {
             string[] Parametros = { "@rnpa", "@Nombre", "@Rfc", "@calleynum", "@colonia", "@localidad", "@municipio", "@cp", "@presidente", "@secretario", "@tesorero", "@telpres", "@telsecre", "@teltesor", "@correo", "@telefono", "@Tipo" };
@@ -28,10 +31,20 @@ namespace Logica
             string[] Parametros = { "@rnpa" };
             return c.Ejecutar("Eliminarunidad", Parametros, RNPA);
         }
+        #endregion
+
+        //Permisos
+        #region
+        public int Registrar_Permiso(Permiso perm)
+        {
+            string[] Parametros = { "@folio", "@rnpa", "@npermiso", "@pesqueria", "@lugarexpedicion", "@diaexpedicion", "@finvigencia", "@zonapesca", "@sitiosdesembarque", "@observaciones" };
+            return c.Ejecutar("RegistrarPermiso", Parametros, perm.FOLIO, perm.RNPA, perm.NPERMISO, perm.PESQUERIA, perm.LUGAR, perm.DIAEXP, perm.FINVIGENCIA, perm.ZONAPESC, perm.SITIOS, perm.OBSERVACIONES);
+        }
         public DataTable Obtener_todas_unidades(string RNPA)
         {
             string[] Parametros = { "@rnpa" };
             return c.getDatosTabla("ObtenerDatos", Parametros, RNPA);
         }
+        #endregion
     }
 }

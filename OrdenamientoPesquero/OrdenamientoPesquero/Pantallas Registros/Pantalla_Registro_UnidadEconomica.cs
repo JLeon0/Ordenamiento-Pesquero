@@ -17,6 +17,7 @@ namespace OrdenamientoPesquero
     {
         bool escondido = false;
         Unidad_Economica ue;
+        Permiso perm;
 
         Procedimientos proc = new Procedimientos();
         DataSet ds = new DataSet();
@@ -64,25 +65,7 @@ namespace OrdenamientoPesquero
             }
         }
 
-        private void pbRegistrar_Click(object sender, EventArgs e)
-        {
-            int exito = 0;
-            if (radioButton0.Checked){
-                ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
-                exito = proc.Registrar_Unidad(ue);
-            } else if (radioButton1.Checked) {
-                ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
-                exito = proc.Registrar_Unidad(ue);
-            }
-            CargarRNPA();
-            if (exito == 1){
-                (new System.Threading.Thread(CloseIt)).Start();
-                MessageBox.Show("Registrado exitosamente"); /* 1 segundo = 1000 */
-            } else {
-                (new System.Threading.Thread(CloseIt)).Start();
-                MessageBox.Show("Error durante el registro"); /* 1 segundo = 1000 */
-            }
-        }
+      
 
         private void pbActualizar_Click(object sender, EventArgs e)
         {
@@ -135,9 +118,74 @@ namespace OrdenamientoPesquero
                 CargarRNPA();
             }
         }
+        //Registros
+        #region
+        private void pbRegistrar_Click(object sender, EventArgs e)
+        {
+            int exito = 0;
+            if (radioButton0.Checked)
+            {
+                ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
+                exito = proc.Registrar_Unidad(ue);
+            }
+            else if (radioButton1.Checked)
+            {
+                ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
+                exito = proc.Registrar_Unidad(ue);
+            }
+            CargarRNPA();
+            if (exito == 1)
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Registrado exitosamente"); /* 1 segundo = 1000 */
+            }
+            else
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Error durante el registro"); /* 1 segundo = 1000 */
+            }
+        }
+
+        private void registrarPermiso_Click(object sender, EventArgs e)
+        {
+            int exito = 0;
+            string[] Hoy = diaExpPer.Value.ToShortDateString().Split('/');
+            string diaExp = "";
+            int i = 2;
+            while (i >= 0)
+            {
+                diaExp += Hoy[i];
+                if (i > 0) { diaExp += "/"; }
+                i--;
+            }
+            string[] Hasta = finVigenciaPer.Value.ToShortDateString().Split('/');
+            string finVig = "";
+            i = 2;
+            while (i >= 0)
+            {
+                finVig += Hasta[i];
+                if (i > 0) { finVig += "/"; }
+                i--;
+            }
+            perm = new Permiso(FolioPer.Text, cbRNPA.Text, nPer.Text, PesqueriaPer.Text, LugarExpPer.Text, diaExp, finVig, ZonaPescaPerm.Text, SitiosDesemPer.Text, ObservacionesPem.Text);
+            exito = proc.Registrar_Permiso(perm);
+
+            if (exito == 1)
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Registrado exitosamente"); /* 1 segundo = 1000 */
+            }
+            else
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Error durante el registro"); /* 1 segundo = 1000 */
+            }
+        }
+        #endregion
 
 
         //Cargar Datos
+        #region
         bool cargando = true;
         private void CargarRNPA()
         {
@@ -180,9 +228,44 @@ namespace OrdenamientoPesquero
                 else { radioButton1.Checked = true; }
             }
         }
+        #endregion
 
         //Validaciones
         #region
+        private String DiferenciaFechas(DateTime newdt, DateTime olddt)
+        {
+            Int32 anios;
+            Int32 meses;
+            Int32 dias;
+            String str = "";
+
+            anios = (newdt.Year - olddt.Year);
+            meses = (newdt.Month - olddt.Month);
+            dias = (newdt.Day - olddt.Day);
+
+            if (dias < 0)
+            {
+                meses -= 1;
+                dias += DateTime.DaysInMonth(newdt.Year, newdt.Month);
+            }
+            if (meses < 0)
+            {
+                anios -= 1;
+                meses += 12;
+            }
+            if (anios < 0)
+            {
+                return "Fecha Invalida";
+            }
+            if (anios > 0)
+                str = str + anios.ToString() + " años ";
+            if (meses > 0)
+                str = str + meses.ToString() + " meses ";
+            if (dias > 0)
+                str = str + dias.ToString() + " dias ";
+
+            return str;
+        }
 
         public void CloseIt()
         {
@@ -292,19 +375,21 @@ namespace OrdenamientoPesquero
             }
             foreach (MaskedTextBox ctr in gbOrgPes.Controls.OfType<MaskedTextBox>())
             {
-                gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].ForeColor = Color.FromArgb(60, 160, 160);
+                gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].ForeColor = Color.FromArgb(160, 160, 160);
                 gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].BackColor = Color.FromArgb(36, 50, 61);
 
             }
         }
 
-        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-        }
 
         private void cbRNPA_SelectedIndexChanged(object sender, EventArgs e)
         {
             LlenarCampos();
+        }
+
+        private void diaExpPer_ValueChanged(object sender, EventArgs e)
+        {
+            VigenciaPerm.Text = DiferenciaFechas(finVigenciaPer.Value, diaExpPer.Value);
         }
     }
 }

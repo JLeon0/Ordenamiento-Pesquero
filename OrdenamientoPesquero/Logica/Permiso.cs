@@ -6,18 +6,18 @@ using System.Threading.Tasks;
 
 namespace Logica
 {
-    class Permiso
+    public class Permiso
     {
-        string FOLIO { get; set; }
-        string RNPA { get; set; }
-        string NPERMISO { get; set; }
-        string PESQUERIA { get; set; }
-        string LUGAR { get; set; }
-        string DIAEXP { get; set; }
-        string FINVIGENCIA { get; set; }
-        string ZONAPESC { get; set; }
-        string SITIOS { get; set; }
-        string OBSERVACIONES { get; set; }
+        public string FOLIO { get; set; }
+        public string RNPA { get; set; }
+        public string NPERMISO { get; set; }
+        public string PESQUERIA { get; set; }
+        public string LUGAR { get; set; }
+        public string DIAEXP { get; set; }
+        public string FINVIGENCIA { get; set; }
+        public string ZONAPESC { get; set; }
+        public string SITIOS { get; set; }
+        public string OBSERVACIONES { get; set; }
         public Permiso()
         {
             FOLIO = "";
@@ -43,18 +43,6 @@ namespace Logica
             ZONAPESC = zonapesca;
             SITIOS = sitios;
             OBSERVACIONES = obs;
-        }
-        public void Registrar()
-        {
-            
-        }
-        public void Actualizar()
-        {
-
-        }
-        public void Eliminar()
-        {
-
         }
     }
 }
