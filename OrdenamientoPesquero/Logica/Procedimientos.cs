@@ -13,8 +13,7 @@ namespace Logica
     {
         Conexion c = new Conexion();
 
-        //Unidades Económicas
-        #region
+        #region UnidadEconomica
         public int Registrar_Unidad(Unidad_Economica UE)
         {
             string[] Parametros = { "@rnpa", "@Nombre", "@Rfc", "@calleynum", "@colonia", "@localidad", "@municipio", "@cp", "@presidente", "@secretario", "@tesorero", "@telpres", "@telsecre", "@teltesor", "@correo", "@telefono", "@Tipo" };
@@ -33,7 +32,7 @@ namespace Logica
         }
         #endregion
 
-        //Permisos
+
         #region Permisos
         public int Registrar_Permiso(Permiso perm)
         {
@@ -78,6 +77,8 @@ namespace Logica
             return c.Ejecutar("EliminarPescador", Parametros, CURP);
         }
         #endregion
+
+
         #region Embarcacion
         public int Registrar_Embarcacion(Embarcacion EMB)
         {
@@ -95,6 +96,20 @@ namespace Logica
         {
             string[] Parametros = { "@matricula" };
             return c.Ejecutar("EliminarEmbarca", Parametros, Matricula);
+        }
+        #endregion
+
+        #region Resumen
+        public DataTable Resumen(string RNPA)
+        {
+            string[] Parametros = { "@RNPA" };
+            return c.getDatosTabla("Resumen", Parametros, RNPA);
+        }
+
+        public DataTable ResumenPesqueria (string RNPA)
+        {
+            string[] Parametros = { "@RNPA" };
+            return c.getDatosTabla("Pesquerias", Parametros, RNPA);
         }
         #endregion
     }
