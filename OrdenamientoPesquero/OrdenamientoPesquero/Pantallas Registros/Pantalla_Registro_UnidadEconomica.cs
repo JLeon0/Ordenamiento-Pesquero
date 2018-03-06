@@ -236,6 +236,66 @@ namespace OrdenamientoPesquero
         #endregion
 
 
+        #region Eliminaciones
+        private void EliminarUnidad_Click(object sender, EventArgs e)
+        {
+            DialogResult Si = MessageBox.Show("¿Desea eliminar esta Unidad Económica?", "ADVERTENCIA", MessageBoxButtons.YesNo);
+            if (Si == DialogResult.Yes)
+            {
+                if (proc.Eliminar_Unidad(cbRNPA.Text) == 1)
+                {
+                    (new System.Threading.Thread(CloseIt)).Start();
+                    MessageBox.Show("Eliminado exitosamente"); /* 1 segundo = 1000 */
+                }
+                else
+                {
+                    (new System.Threading.Thread(CloseIt)).Start();
+                    MessageBox.Show("Error durante eliminacion"); /* 1 segundo = 1000 */
+                }
+                CargarRNPA();
+            }
+        }
+
+        private void Eliminar_Click(object sender, EventArgs e)
+        {
+            if (Pescadores.Focused)
+            {
+                DialogResult Si = MessageBox.Show("¿Desea eliminar este Pescador?", "ADVERTENCIA", MessageBoxButtons.YesNo);
+                if (Si == DialogResult.Yes)
+                {
+                    exito = proc.Eliminar_Pescador(CURPPesc.Text);
+                }
+            }
+            else if (Permisos.Focused)
+            {
+                DialogResult Si = MessageBox.Show("¿Desea eliminar este Permiso?", "ADVERTENCIA", MessageBoxButtons.YesNo);
+                if (Si == DialogResult.Yes)
+                {
+                    exito = proc.Eliminar_Permiso(nPer.Text);
+                }
+            }
+            else if (Directiva.Focused)
+            {
+
+            }
+            else if (CertMatri.Focused)
+            {
+
+            }
+            if (exito == 1)
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Eliminado exitosamente"); /* 1 segundo = 1000 */
+            }
+            else
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Error durante eliminacion"); /* 1 segundo = 1000 */
+            }
+        }
+        #endregion
+
+
         #region Cargar Datos
         bool cargando = true;
         private void CargarRNPA()
@@ -300,6 +360,7 @@ namespace OrdenamientoPesquero
         private void cbRNPA_SelectedIndexChanged(object sender, EventArgs e)
         {
             LlenarCampos();
+            Resumenes(cbRNPA.Text);
         }
 
         private String DiferenciaFechas(DateTime newdt, DateTime olddt)
@@ -371,7 +432,51 @@ namespace OrdenamientoPesquero
                 pictureBox8.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
             }
         }
+        private void TelefonoPesc_TextChanged(object sender, EventArgs e)
+        {
+            if (TelefonoPesc.Text.Contains(' ') || TelefonoPesc.Text.Length != 5)
+            {
+                pictureBox5.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+            }
+            else
+            {
+                pictureBox5.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+            }
+        }
 
+        private void mtbTelefono_TextChanged(object sender, EventArgs e)
+        {
+            if (mtbTelefono.Text.Contains(' ') || mtbTelefono.Text.Length != 13)
+            {
+                pictureBox10.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+            }
+            else
+            {
+                pictureBox10.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+            }
+        }
+        private void CorreoPesc_TextChanged(object sender, EventArgs e)
+        {
+            if (validarCorreo(CorreoPesc.Text))
+            {
+                pictureBox6.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+            }
+            else
+            {
+                pictureBox6.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+            }
+        }
+        private void mtbTelRepFed_TextChanged(object sender, EventArgs e)
+        {
+            if (mtbTelRepFed.Text.Contains(' ') || mtbTelRepFed.Text.Length != 13)
+            {
+                pictureBox11.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+            }
+            else
+            {
+                pictureBox11.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+            }
+        }
         private void CURPPesc_TextChanged(object sender, EventArgs e)
         {
             if (validarcurp(CURPPesc.Text))
@@ -455,6 +560,24 @@ namespace OrdenamientoPesquero
 
         #endregion
 
+
+        #region Resumenes
+        public void Resumenes(string RNPA)
+        {
+            dt = proc.Resumen(cbRNPA.Text);
+            TotalPermisos.Text = dt.Rows[0]["PERMISOS"].ToString();
+            TotalSocios.Text = dt.Rows[0]["SOCIOS"].ToString();
+            TotalEsfuerzos.Text = dt.Rows[0]["ESFUERZOS PESQUEROS"].ToString();
+            
+            dt = proc.ResumenPesqueria(cbRNPA.Text);
+            TotalPesquerias.Items.Clear();
+            foreach (DataRow fila in dt.Rows)
+            {
+                TotalPesquerias.Items.Add(fila["PESQUERIA"].ToString());
+            }
+        }
+        #endregion
+
         //Pintar los groupBox
         private void PintarGroupBox()
         {
@@ -478,85 +601,10 @@ namespace OrdenamientoPesquero
             }
         }
 
-        private void EliminarUnidad_Click(object sender, EventArgs e)
-        {
-            DialogResult Si = MessageBox.Show("¿Desea eliminar esta Unidad Económica?", "ADVERTENCIA", MessageBoxButtons.YesNo);
-            if (Si == DialogResult.Yes)
-            {
-                if (proc.Eliminar_Unidad(cbRNPA.Text) == 1)
-                {
-                    (new System.Threading.Thread(CloseIt)).Start();
-                    MessageBox.Show("Eliminado exitosamente"); /* 1 segundo = 1000 */
-                }
-                else
-                {
-                    (new System.Threading.Thread(CloseIt)).Start();
-                    MessageBox.Show("Error durante eliminacion"); /* 1 segundo = 1000 */
-                }
-                CargarRNPA();
-            }
-        }
+        
 
-        private void Eliminar_Click(object sender, EventArgs e)
-        {
-            if (Pescadores.Focused)
-            {
-                DialogResult Si = MessageBox.Show("¿Desea eliminar este Pescador?", "ADVERTENCIA", MessageBoxButtons.YesNo);
-                if (Si == DialogResult.Yes)
-                {
-                    exito = proc.Eliminar_Pescador(CURPPesc.Text);
-                }
-            }
-            else if (Permisos.Focused)
-            {
-                DialogResult Si = MessageBox.Show("¿Desea eliminar este Permiso?", "ADVERTENCIA", MessageBoxButtons.YesNo);
-                if (Si == DialogResult.Yes)
-                {
-                    exito = proc.Eliminar_Permiso(nPer.Text);
-                }
-            }
-            else if (Directiva.Focused)
-            {
+     
 
-            }
-            else if (CertMatri.Focused)
-            {
-
-            }
-            if (exito == 1)
-            {
-                (new System.Threading.Thread(CloseIt)).Start();
-                MessageBox.Show("Eliminado exitosamente"); /* 1 segundo = 1000 */
-            }
-            else
-            {
-                (new System.Threading.Thread(CloseIt)).Start();
-                MessageBox.Show("Error durante eliminacion"); /* 1 segundo = 1000 */
-            }
-        }
-
-        private void CorreoPesc_TextChanged(object sender, EventArgs e)
-        {
-            if (validarCorreo(CorreoPesc.Text))
-            {
-                pictureBox6.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
-            }
-            else
-            {
-                pictureBox6.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
-            }
-        }
-
-        private void TelefonoPesc_TextChanged(object sender, EventArgs e)
-        {
-            if (TelefonoPesc.Text.Contains(' ') || TelefonoPesc.Text.Length != 5)
-            {
-                pictureBox5.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
-            }
-            else
-            {
-                pictureBox5.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
-            }
-        }
+        
     }
 }
