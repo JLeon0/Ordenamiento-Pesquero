@@ -48,7 +48,7 @@ namespace Logica
         public int Eliminar_Permiso(String Numpermiso)
         {
             string[] Parametros = { "@Npermiso" };
-            return c.Ejecutar("EliminarPermiso", Parametros, Numpermiso);
+            return c.Ejecutar(" EliminarPermiso", Parametros, Numpermiso);
         }
         #endregion
 
