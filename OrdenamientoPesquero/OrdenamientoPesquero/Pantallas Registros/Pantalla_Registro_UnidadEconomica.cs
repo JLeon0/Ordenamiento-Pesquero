@@ -19,6 +19,7 @@ namespace OrdenamientoPesquero
         Unidad_Economica ue;
         Permiso perm;
         Pescador pes;
+        Embarcacion Emb;
         int exito = 0;
         Procedimientos proc = new Procedimientos();
         DataSet ds = new DataSet();
@@ -94,6 +95,11 @@ namespace OrdenamientoPesquero
             else if (Permisos.Focused)
             {
                 exito = AccionesPermiso(true);
+                for (int i = 0; i < dgvEmbarcacionesPerm.RowCount; i++)
+                {
+                    Emb = new Embarcacion(dgvEmbarcacionesPerm[0, i].Value.ToString(), dgvEmbarcacionesPerm[1, i].Value.ToString(), dgvEmbarcacionesPerm[3, i].Value.ToString(), dgvEmbarcacionesPerm[2, i].Value.ToString());
+                    proc.Registrar_Embarcacion(Emb);
+                }
             }
             else if (Directiva.Focused)
             {
@@ -506,7 +512,7 @@ namespace OrdenamientoPesquero
                 DialogResult Si = MessageBox.Show("¿Desea eliminar este Permiso?", "ADVERTENCIA", MessageBoxButtons.YesNo);
                 if (Si == DialogResult.Yes)
                 {
-                    //exito = proc.Eliminar_Permiso(nPer.Text);
+                    exito = proc.Eliminar_Permiso(nPer.Text);
                 }
             }
             else if (Directiva.Focused)
