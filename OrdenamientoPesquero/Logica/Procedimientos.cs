@@ -45,6 +45,11 @@ namespace Logica
             string[] Parametros = { "@folio", "@rnpa", "@npermiso", "@pesqueria", "@lugarexpedicion", "@diaexpedicion", "@finvigencia", "@zonapesca", "@sitiosdesembarque", "@observaciones" };
             return c.Ejecutar("ActualizarPermiso", Parametros, perm.FOLIO, perm.RNPA, perm.NPERMISO, perm.PESQUERIA, perm.LUGAR, perm.DIAEXP, perm.FINVIGENCIA, perm.ZONAPESC, perm.SITIOS, perm.OBSERVACIONES);
         }
+        public int Eliminar_Permiso(String Numpermiso)
+        {
+            string[] Parametros = { "@Npermiso" };
+            return c.Ejecutar("EliminarPermiso", Parametros, Numpermiso);
+        }
         #endregion
 
 
@@ -71,6 +76,25 @@ namespace Logica
         {
             string[] Parametros = { "@curp" };
             return c.Ejecutar("EliminarPescador", Parametros, CURP);
+        }
+        #endregion
+        #region Embarcacion
+        public int Registrar_Embarcacion(Embarcacion EMB)
+        {
+            string[] Parametros = {"@matricula", "@nombre", "@rnpaemb", "@numchip", "@RegNUm", "@FechaExped", "@Fechachipeo", "@RNPATIT", "@munici", "@motorHP", "@motormarca","@eslora", "@manga", "@puntal", "@arqueobruto", "@arqueoneto", "@tonelaje", "@Observaciones"};
+            return c.Ejecutar("RegistrarEmbarca", Parametros, EMB.Matricula, EMB.Nombre, EMB.RNP, EMB.AVID, EMB.REGISTRONUM, EMB.FECHAEXP, EMB.FECHACHIPEADO, EMB.RNPATITULAR, EMB.MUNICIPIO, EMB.HP, EMB.MARCA, EMB.ESLORA, EMB.MANGA, EMB.PUNTAL, EMB.ARQUEOBRUTO, EMB.ARQUEONETO, EMB.TONELAJE, EMB.OBSERVACIONES);
+
+        }
+        public int Actualizar_Embarcacion(Embarcacion EMB)
+        {
+            string[] Parametros = { "@matricula", "@nombre", "@rnpaemb", "@numchip", "@RegNUm", "@FechaExped", "@Fechachipeo", "@RNPATIT", "@munici", "@motorHP", "@motormarca", "@eslora", "@manga", "@puntal", "@arqueobruto", "@arqueoneto", "@tonelaje", "@Observaciones" };
+            return c.Ejecutar("ActualizarEmbacacion", Parametros, EMB.Matricula, EMB.Nombre, EMB.RNP, EMB.AVID, EMB.REGISTRONUM, EMB.FECHAEXP, EMB.FECHACHIPEADO, EMB.RNPATITULAR, EMB.MUNICIPIO, EMB.HP, EMB.MARCA, EMB.ESLORA, EMB.MANGA, EMB.PUNTAL, EMB.ARQUEOBRUTO, EMB.ARQUEONETO, EMB.TONELAJE, EMB.OBSERVACIONES);
+
+        }
+        public int Eliminar_Embarcacion(String Matricula)
+        {
+            string[] Parametros = { "@matricula" };
+            return c.Ejecutar("EliminarEmbarca", Parametros, Matricula);
         }
         #endregion
     }
