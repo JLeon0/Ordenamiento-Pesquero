@@ -385,7 +385,7 @@ namespace OrdenamientoPesquero
         }
         public bool validarcurp(string rfc)
         {
-            if (Regex.IsMatch(rfc, @"^([A - Z][AEIOUX][A - Z]{ 2}\d{ 2} (?: 0[1 - 9] | 1[0 - 2])(?:0[1 - 9][12]\d | 3[01])[HM](?:AS | B[CS] | C[CLMSH] | D[FG] | G[TR] | HG | JC | M[CNS] | N[ETL] | OC | PL | Q[TR] | S[PLR] | T[CSL] | VZ | YN | ZS)[B - DF - HJ - NP - TV - Z]{ 3}[A-Z\d])(\d)$"))
+            if (Regex.IsMatch(rfc, @"^([A-Z\s]{4})\d{6}([A-Z\w]{6})([0-9A-Z]{1})([0-9]{1})$"))
             {
                 return true;
             }
@@ -544,6 +544,18 @@ namespace OrdenamientoPesquero
             else
             {
                 pictureBox6.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+            }
+        }
+
+        private void TelefonoPesc_TextChanged(object sender, EventArgs e)
+        {
+            if (TelefonoPesc.Text.Contains(' ') || TelefonoPesc.Text.Length != 5)
+            {
+                pictureBox5.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+            }
+            else
+            {
+                pictureBox5.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
             }
         }
     }
