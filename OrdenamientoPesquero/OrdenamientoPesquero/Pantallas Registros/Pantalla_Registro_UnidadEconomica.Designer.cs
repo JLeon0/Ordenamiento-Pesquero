@@ -49,6 +49,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.gbOrgPes = new System.Windows.Forms.GroupBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.mtbTelRepFed = new System.Windows.Forms.MaskedTextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txtNomRepFed = new System.Windows.Forms.TextBox();
@@ -209,6 +210,7 @@
             this.label59 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbOrgPes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -478,6 +480,7 @@
             // gbOrgPes
             // 
             this.gbOrgPes.BackColor = System.Drawing.Color.Transparent;
+            this.gbOrgPes.Controls.Add(this.pictureBox12);
             this.gbOrgPes.Controls.Add(this.mtbTelRepFed);
             this.gbOrgPes.Controls.Add(this.label22);
             this.gbOrgPes.Controls.Add(this.txtNomRepFed);
@@ -523,6 +526,19 @@
             this.gbOrgPes.TabIndex = 54;
             this.gbOrgPes.TabStop = false;
             this.gbOrgPes.Text = "DATOS GENERALES DE LA ORGANIZACIÓN PESQUERA";
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Black;
+            this.pictureBox12.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.lupa;
+            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox12.Location = new System.Drawing.Point(378, 21);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(37, 28);
+            this.pictureBox12.TabIndex = 114;
+            this.pictureBox12.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox12, "Eliminar Unidad Economica");
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
             // mtbTelRepFed
             // 
@@ -728,6 +744,7 @@
             this.cbRNPA.TabIndex = 1;
             this.toolTip1.SetToolTip(this.cbRNPA, "Ingrese o Seleccione el RNPA de la Unidad Económica");
             this.cbRNPA.SelectedIndexChanged += new System.EventHandler(this.cbRNPA_SelectedIndexChanged);
+            this.cbRNPA.TextChanged += new System.EventHandler(this.cbRNPA_TextChanged);
             // 
             // radioButton1
             // 
@@ -805,7 +822,7 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewComboBoxColumn1,
             this.dataGridViewTextBoxColumn2});
-            this.dgvEquiposPescaPerm.Location = new System.Drawing.Point(32, 429);
+            this.dgvEquiposPescaPerm.Location = new System.Drawing.Point(32, 747);
             this.dgvEquiposPescaPerm.Name = "dgvEquiposPescaPerm";
             this.dgvEquiposPescaPerm.RowHeadersVisible = false;
             this.dgvEquiposPescaPerm.Size = new System.Drawing.Size(745, 131);
@@ -839,7 +856,7 @@
             this.Matricula,
             this.Marcamotor,
             this.Potencia});
-            this.dgvEmbarcacionesPerm.Location = new System.Drawing.Point(32, 721);
+            this.dgvEmbarcacionesPerm.Location = new System.Drawing.Point(32, 1039);
             this.dgvEmbarcacionesPerm.Name = "dgvEmbarcacionesPerm";
             this.dgvEmbarcacionesPerm.RowHeadersVisible = false;
             this.dgvEmbarcacionesPerm.Size = new System.Drawing.Size(745, 148);
@@ -890,7 +907,7 @@
             this.groupBox3.Controls.Add(this.label30);
             this.groupBox3.Controls.Add(this.label29);
             this.groupBox3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(23, 6);
+            this.groupBox3.Location = new System.Drawing.Point(23, 324);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(884, 144);
             this.groupBox3.TabIndex = 67;
@@ -1028,7 +1045,7 @@
             // numericUpDown2
             // 
             this.numericUpDown2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(342, 385);
+            this.numericUpDown2.Location = new System.Drawing.Point(342, 703);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(80, 26);
             this.numericUpDown2.TabIndex = 57;
@@ -1036,7 +1053,7 @@
             // ZonaPescaPerm
             // 
             this.ZonaPescaPerm.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZonaPescaPerm.Location = new System.Drawing.Point(146, 184);
+            this.ZonaPescaPerm.Location = new System.Drawing.Point(146, 502);
             this.ZonaPescaPerm.Multiline = true;
             this.ZonaPescaPerm.Name = "ZonaPescaPerm";
             this.ZonaPescaPerm.Size = new System.Drawing.Size(616, 61);
@@ -1046,7 +1063,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(23, 187);
+            this.label28.Location = new System.Drawing.Point(23, 505);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(69, 36);
             this.label28.TabIndex = 66;
@@ -1055,7 +1072,7 @@
             // ObservacionesPem
             // 
             this.ObservacionesPem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ObservacionesPem.Location = new System.Drawing.Point(156, 586);
+            this.ObservacionesPem.Location = new System.Drawing.Point(156, 904);
             this.ObservacionesPem.Multiline = true;
             this.ObservacionesPem.Name = "ObservacionesPem";
             this.ObservacionesPem.Size = new System.Drawing.Size(606, 83);
@@ -1065,7 +1082,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(23, 392);
+            this.label26.Location = new System.Drawing.Point(23, 710);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(276, 18);
             this.label26.TabIndex = 65;
@@ -1075,7 +1092,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 586);
+            this.label1.Location = new System.Drawing.Point(23, 904);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 18);
             this.label1.TabIndex = 64;
@@ -1084,7 +1101,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(315, 690);
+            this.numericUpDown1.Location = new System.Drawing.Point(315, 1008);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(80, 26);
             this.numericUpDown1.TabIndex = 60;
@@ -1094,7 +1111,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 697);
+            this.label2.Location = new System.Drawing.Point(23, 1015);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(230, 18);
             this.label2.TabIndex = 63;
@@ -1103,7 +1120,7 @@
             // SitiosDesemPer
             // 
             this.SitiosDesemPer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SitiosDesemPer.Location = new System.Drawing.Point(146, 280);
+            this.SitiosDesemPer.Location = new System.Drawing.Point(146, 598);
             this.SitiosDesemPer.Multiline = true;
             this.SitiosDesemPer.Name = "SitiosDesemPer";
             this.SitiosDesemPer.Size = new System.Drawing.Size(616, 61);
@@ -1113,7 +1130,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(23, 283);
+            this.label25.Location = new System.Drawing.Point(23, 601);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(109, 36);
             this.label25.TabIndex = 62;
@@ -2233,7 +2250,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1262, 749);
+            this.ClientSize = new System.Drawing.Size(1296, 749);
             this.Controls.Add(this.Ver);
             this.Controls.Add(this.Eliminar);
             this.Controls.Add(this.Actualizar);
@@ -2255,6 +2272,7 @@
             this.Load += new System.EventHandler(this.Pantalla_Registro_UnidadEconomica_Load);
             this.gbOrgPes.ResumeLayout(false);
             this.gbOrgPes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -2485,5 +2503,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn Matricula;
         private System.Windows.Forms.DataGridViewComboBoxColumn Marcamotor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Potencia;
+        private System.Windows.Forms.PictureBox pictureBox12;
     }
 }
