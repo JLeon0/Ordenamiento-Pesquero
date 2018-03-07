@@ -459,7 +459,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(69, 33);
+            this.label3.Location = new System.Drawing.Point(60, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -822,7 +822,7 @@
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewComboBoxColumn1,
             this.dataGridViewTextBoxColumn2});
-            this.dgvEquiposPescaPerm.Location = new System.Drawing.Point(32, 747);
+            this.dgvEquiposPescaPerm.Location = new System.Drawing.Point(25, 444);
             this.dgvEquiposPescaPerm.Name = "dgvEquiposPescaPerm";
             this.dgvEquiposPescaPerm.RowHeadersVisible = false;
             this.dgvEquiposPescaPerm.Size = new System.Drawing.Size(745, 131);
@@ -856,7 +856,7 @@
             this.Matricula,
             this.Marcamotor,
             this.Potencia});
-            this.dgvEmbarcacionesPerm.Location = new System.Drawing.Point(32, 1039);
+            this.dgvEmbarcacionesPerm.Location = new System.Drawing.Point(25, 736);
             this.dgvEmbarcacionesPerm.Name = "dgvEmbarcacionesPerm";
             this.dgvEmbarcacionesPerm.RowHeadersVisible = false;
             this.dgvEmbarcacionesPerm.Size = new System.Drawing.Size(745, 148);
@@ -907,7 +907,7 @@
             this.groupBox3.Controls.Add(this.label30);
             this.groupBox3.Controls.Add(this.label29);
             this.groupBox3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(23, 324);
+            this.groupBox3.Location = new System.Drawing.Point(16, 21);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(884, 144);
             this.groupBox3.TabIndex = 67;
@@ -1045,7 +1045,7 @@
             // numericUpDown2
             // 
             this.numericUpDown2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(342, 703);
+            this.numericUpDown2.Location = new System.Drawing.Point(335, 400);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(80, 26);
             this.numericUpDown2.TabIndex = 57;
@@ -1053,7 +1053,7 @@
             // ZonaPescaPerm
             // 
             this.ZonaPescaPerm.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZonaPescaPerm.Location = new System.Drawing.Point(146, 502);
+            this.ZonaPescaPerm.Location = new System.Drawing.Point(139, 199);
             this.ZonaPescaPerm.Multiline = true;
             this.ZonaPescaPerm.Name = "ZonaPescaPerm";
             this.ZonaPescaPerm.Size = new System.Drawing.Size(616, 61);
@@ -1063,7 +1063,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(23, 505);
+            this.label28.Location = new System.Drawing.Point(16, 202);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(69, 36);
             this.label28.TabIndex = 66;
@@ -1072,7 +1072,7 @@
             // ObservacionesPem
             // 
             this.ObservacionesPem.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ObservacionesPem.Location = new System.Drawing.Point(156, 904);
+            this.ObservacionesPem.Location = new System.Drawing.Point(149, 601);
             this.ObservacionesPem.Multiline = true;
             this.ObservacionesPem.Name = "ObservacionesPem";
             this.ObservacionesPem.Size = new System.Drawing.Size(606, 83);
@@ -1082,7 +1082,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(23, 710);
+            this.label26.Location = new System.Drawing.Point(16, 407);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(276, 18);
             this.label26.TabIndex = 65;
@@ -1092,7 +1092,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(23, 904);
+            this.label1.Location = new System.Drawing.Point(16, 601);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(113, 18);
             this.label1.TabIndex = 64;
@@ -1101,7 +1101,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(315, 1008);
+            this.numericUpDown1.Location = new System.Drawing.Point(308, 705);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(80, 26);
             this.numericUpDown1.TabIndex = 60;
@@ -1111,7 +1111,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 1015);
+            this.label2.Location = new System.Drawing.Point(16, 712);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(230, 18);
             this.label2.TabIndex = 63;
@@ -1120,7 +1120,7 @@
             // SitiosDesemPer
             // 
             this.SitiosDesemPer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SitiosDesemPer.Location = new System.Drawing.Point(146, 598);
+            this.SitiosDesemPer.Location = new System.Drawing.Point(139, 295);
             this.SitiosDesemPer.Multiline = true;
             this.SitiosDesemPer.Name = "SitiosDesemPer";
             this.SitiosDesemPer.Size = new System.Drawing.Size(616, 61);
@@ -1130,7 +1130,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(23, 601);
+            this.label25.Location = new System.Drawing.Point(16, 298);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(109, 36);
             this.label25.TabIndex = 62;
@@ -2240,7 +2240,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(728, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(711, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
