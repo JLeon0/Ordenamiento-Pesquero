@@ -32,7 +32,7 @@ namespace OrdenamientoPesquero
             this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
             this.Width = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width);
 
-        }  
+        }
 
         private void Pantalla_Registro_UnidadEconomica_Load(object sender, EventArgs e)
         {
@@ -41,6 +41,8 @@ namespace OrdenamientoPesquero
             PintarGroupBox();
             CargarRNPA();
         }
+        
+
 
         private void pBReubicar_Click(object sender, EventArgs e)
         {
@@ -354,6 +356,45 @@ namespace OrdenamientoPesquero
 
 
         #region Validaciones
+        //Escribir en data
+        private void datagridview_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            if (dgv.CurrentCell.ColumnIndex == dgv.Columns["Matricula"].Index)
+            {
+                ComboBox cbx = (ComboBox)e.Control;
+                cbx.DropDownStyle = ComboBoxStyle.DropDown;
+                cbx.AutoCompleteSource = AutoCompleteSource.ListItems;
+                cbx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+                cbx.Validating += new CancelEventHandler(cbx_Validating);
+            }
+        }
+        void cbx_Validating(object sender, CancelEventArgs e)
+        {
+
+            DataGridViewComboBoxEditingControl cbx = sender as DataGridViewComboBoxEditingControl;
+
+            DataGridView grid = cbx.EditingControlDataGridView;
+
+            object value = cbx.Text;
+
+            // Add value to list if not there
+
+            if (cbx.Items.IndexOf(value) == -1)
+            {
+                DataGridViewComboBoxCell cboCol = (DataGridViewComboBoxCell)grid.CurrentCell;
+
+                // Must add to both the current combobox as well as the template, to avoid duplicate entries...
+
+                cbx.Items.Add(value);
+
+                cboCol.Items.Add(value);
+
+                grid.CurrentCell.Value = value;
+            }
+
+        }
+
         private void Exito(int ok)
         {
             if (ok == 1)
