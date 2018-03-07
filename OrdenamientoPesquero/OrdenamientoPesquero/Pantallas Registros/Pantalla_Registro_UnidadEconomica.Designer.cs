@@ -205,7 +205,7 @@
             this.label59 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Matricula = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Marcamotor = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Potencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbOrgPes.SuspendLayout();
@@ -457,7 +457,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(6, 33);
+            this.label3.Location = new System.Drawing.Point(-12, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -844,6 +844,7 @@
             this.dgvEmbarcacionesPerm.RowHeadersVisible = false;
             this.dgvEmbarcacionesPerm.Size = new System.Drawing.Size(745, 148);
             this.dgvEmbarcacionesPerm.TabIndex = 61;
+            this.dgvEmbarcacionesPerm.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.datagridview_EditingControlShowing);
             // 
             // groupBox3
             // 
@@ -2195,7 +2196,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(619, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(585, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
@@ -2210,6 +2211,7 @@
             this.Matricula.HeaderText = "Matricula";
             this.Matricula.Name = "Matricula";
             this.Matricula.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Matricula.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Matricula.Width = 200;
             // 
             // Marcamotor
@@ -2480,7 +2482,7 @@
         private System.Windows.Forms.Label TotalPermisos;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Matricula;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Matricula;
         private System.Windows.Forms.DataGridViewComboBoxColumn Marcamotor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Potencia;
     }
