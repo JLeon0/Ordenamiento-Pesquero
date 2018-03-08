@@ -48,19 +48,19 @@ namespace Logica
          OBSERVACIONES="";
          RNP = "";
     }
-        public Embarcacion(string nombre, string matricula, string hp, string marca)
+        public Embarcacion(string nombre, string matricula, string hp, string marca, string municipio, string rnpa)
         {
             Nombre = nombre;
             Matricula = matricula;
             REGISTRONUM = "";
-            RNPATITULAR = "";
+            RNPATITULAR = rnpa;
             AVID = "";
             FECHAEXP = "";
             FECHACHIPEADO = "";
             MARCA = marca;
             HP = hp; ;
             ESLORA = "";
-            MUNICIPIO = "";
+            MUNICIPIO = municipio;
             MANGA = "";
             PUNTAL = "";
             ARQUEOBRUTO = "";
