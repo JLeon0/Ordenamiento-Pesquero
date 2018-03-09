@@ -106,6 +106,29 @@
             this.SitiosDesemPer = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.CertMatri = new System.Windows.Forms.TabPage();
+            this.TraficoCertMat = new System.Windows.Forms.TextBox();
+            this.label66 = new System.Windows.Forms.Label();
+            this.PotenciaMotorCertMat = new System.Windows.Forms.TextBox();
+            this.PuntalCertMat = new System.Windows.Forms.TextBox();
+            this.label74 = new System.Windows.Forms.Label();
+            this.PesoMCertMat = new System.Windows.Forms.TextBox();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label69 = new System.Windows.Forms.Label();
+            this.MangaCertMat = new System.Windows.Forms.TextBox();
+            this.ArqNetoCertMat = new System.Windows.Forms.TextBox();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label68 = new System.Windows.Forms.Label();
+            this.EsloraCertMat = new System.Windows.Forms.TextBox();
+            this.label70 = new System.Windows.Forms.Label();
+            this.ArqBrutoCertMat = new System.Windows.Forms.TextBox();
+            this.label67 = new System.Windows.Forms.Label();
+            this.ServicioCertMat = new System.Windows.Forms.TextBox();
+            this.label64 = new System.Windows.Forms.Label();
+            this.TipoEmbCertMar = new System.Windows.Forms.ComboBox();
+            this.label62 = new System.Windows.Forms.Label();
+            this.NombreEmbCerMat = new System.Windows.Forms.TextBox();
+            this.label60 = new System.Windows.Forms.Label();
             this.Pescadores = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.EstadoEmbarcacionPesc = new System.Windows.Forms.TextBox();
@@ -209,6 +232,11 @@
             this.TotalPermisos = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.NMotoresCertMat = new System.Windows.Forms.NumericUpDown();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.label78 = new System.Windows.Forms.Label();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -223,6 +251,7 @@
             this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.CertMatri.SuspendLayout();
             this.Pescadores.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.CuerpoDeAguaPesc.SuspendLayout();
@@ -246,6 +275,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBReubicar)).BeginInit();
             this.Resumen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEstado
@@ -459,7 +489,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(60, 33);
+            this.label3.Location = new System.Drawing.Point(42, 33);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -1138,13 +1168,237 @@
             // 
             // CertMatri
             // 
-            this.CertMatri.ForeColor = System.Drawing.Color.White;
+            this.CertMatri.Controls.Add(this.label78);
+            this.CertMatri.Controls.Add(this.label77);
+            this.CertMatri.Controls.Add(this.label76);
+            this.CertMatri.Controls.Add(this.label75);
+            this.CertMatri.Controls.Add(this.NMotoresCertMat);
+            this.CertMatri.Controls.Add(this.TraficoCertMat);
+            this.CertMatri.Controls.Add(this.label66);
+            this.CertMatri.Controls.Add(this.PotenciaMotorCertMat);
+            this.CertMatri.Controls.Add(this.PuntalCertMat);
+            this.CertMatri.Controls.Add(this.label74);
+            this.CertMatri.Controls.Add(this.PesoMCertMat);
+            this.CertMatri.Controls.Add(this.label73);
+            this.CertMatri.Controls.Add(this.label72);
+            this.CertMatri.Controls.Add(this.label69);
+            this.CertMatri.Controls.Add(this.MangaCertMat);
+            this.CertMatri.Controls.Add(this.ArqNetoCertMat);
+            this.CertMatri.Controls.Add(this.label71);
+            this.CertMatri.Controls.Add(this.label68);
+            this.CertMatri.Controls.Add(this.EsloraCertMat);
+            this.CertMatri.Controls.Add(this.label70);
+            this.CertMatri.Controls.Add(this.ArqBrutoCertMat);
+            this.CertMatri.Controls.Add(this.label67);
+            this.CertMatri.Controls.Add(this.ServicioCertMat);
+            this.CertMatri.Controls.Add(this.label64);
+            this.CertMatri.Controls.Add(this.TipoEmbCertMar);
+            this.CertMatri.Controls.Add(this.label62);
+            this.CertMatri.Controls.Add(this.NombreEmbCerMat);
+            this.CertMatri.Controls.Add(this.label60);
+            this.CertMatri.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CertMatri.ForeColor = System.Drawing.Color.Black;
             this.CertMatri.Location = new System.Drawing.Point(4, 34);
             this.CertMatri.Name = "CertMatri";
             this.CertMatri.Size = new System.Drawing.Size(929, 551);
             this.CertMatri.TabIndex = 3;
             this.CertMatri.Text = "Cert. Matr.";
             this.CertMatri.UseVisualStyleBackColor = true;
+            // 
+            // TraficoCertMat
+            // 
+            this.TraficoCertMat.Location = new System.Drawing.Point(504, 149);
+            this.TraficoCertMat.Name = "TraficoCertMat";
+            this.TraficoCertMat.Size = new System.Drawing.Size(121, 26);
+            this.TraficoCertMat.TabIndex = 7;
+            // 
+            // label66
+            // 
+            this.label66.AutoSize = true;
+            this.label66.Location = new System.Drawing.Point(398, 157);
+            this.label66.Name = "label66";
+            this.label66.Size = new System.Drawing.Size(59, 18);
+            this.label66.TabIndex = 6;
+            this.label66.Text = "Tráfico:";
+            // 
+            // PotenciaMotorCertMat
+            // 
+            this.PotenciaMotorCertMat.Location = new System.Drawing.Point(504, 347);
+            this.PotenciaMotorCertMat.Name = "PotenciaMotorCertMat";
+            this.PotenciaMotorCertMat.Size = new System.Drawing.Size(87, 26);
+            this.PotenciaMotorCertMat.TabIndex = 5;
+            // 
+            // PuntalCertMat
+            // 
+            this.PuntalCertMat.Location = new System.Drawing.Point(504, 289);
+            this.PuntalCertMat.Name = "PuntalCertMat";
+            this.PuntalCertMat.Size = new System.Drawing.Size(87, 26);
+            this.PuntalCertMat.TabIndex = 5;
+            this.PuntalCertMat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ArqBrutoCertMat_KeyPress);
+            // 
+            // label74
+            // 
+            this.label74.AutoSize = true;
+            this.label74.Location = new System.Drawing.Point(355, 350);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(143, 18);
+            this.label74.TabIndex = 4;
+            this.label74.Text = "Potencia del Motor:";
+            // 
+            // PesoMCertMat
+            // 
+            this.PesoMCertMat.Location = new System.Drawing.Point(183, 284);
+            this.PesoMCertMat.Name = "PesoMCertMat";
+            this.PesoMCertMat.Size = new System.Drawing.Size(73, 26);
+            this.PesoMCertMat.TabIndex = 5;
+            this.PesoMCertMat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ArqBrutoCertMat_KeyPress);
+            // 
+            // label73
+            // 
+            this.label73.AutoSize = true;
+            this.label73.Location = new System.Drawing.Point(31, 350);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(150, 18);
+            this.label73.TabIndex = 4;
+            this.label73.Text = "Numero de Motores:";
+            // 
+            // label72
+            // 
+            this.label72.AutoSize = true;
+            this.label72.Location = new System.Drawing.Point(398, 297);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(55, 18);
+            this.label72.TabIndex = 4;
+            this.label72.Text = "Puntal:";
+            // 
+            // label69
+            // 
+            this.label69.AutoSize = true;
+            this.label69.Location = new System.Drawing.Point(44, 292);
+            this.label69.Name = "label69";
+            this.label69.Size = new System.Drawing.Size(101, 18);
+            this.label69.TabIndex = 4;
+            this.label69.Text = "Peso Muerto:";
+            // 
+            // MangaCertMat
+            // 
+            this.MangaCertMat.Location = new System.Drawing.Point(504, 251);
+            this.MangaCertMat.Name = "MangaCertMat";
+            this.MangaCertMat.Size = new System.Drawing.Size(87, 26);
+            this.MangaCertMat.TabIndex = 5;
+            this.MangaCertMat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ArqBrutoCertMat_KeyPress);
+            // 
+            // ArqNetoCertMat
+            // 
+            this.ArqNetoCertMat.Location = new System.Drawing.Point(183, 246);
+            this.ArqNetoCertMat.Name = "ArqNetoCertMat";
+            this.ArqNetoCertMat.Size = new System.Drawing.Size(73, 26);
+            this.ArqNetoCertMat.TabIndex = 5;
+            this.ArqNetoCertMat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ArqBrutoCertMat_KeyPress);
+            // 
+            // label71
+            // 
+            this.label71.AutoSize = true;
+            this.label71.Location = new System.Drawing.Point(398, 259);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(60, 18);
+            this.label71.TabIndex = 4;
+            this.label71.Text = "Manga:";
+            // 
+            // label68
+            // 
+            this.label68.AutoSize = true;
+            this.label68.Location = new System.Drawing.Point(44, 254);
+            this.label68.Name = "label68";
+            this.label68.Size = new System.Drawing.Size(100, 18);
+            this.label68.TabIndex = 4;
+            this.label68.Text = "Arqueo Neto:";
+            // 
+            // EsloraCertMat
+            // 
+            this.EsloraCertMat.Location = new System.Drawing.Point(504, 209);
+            this.EsloraCertMat.Name = "EsloraCertMat";
+            this.EsloraCertMat.Size = new System.Drawing.Size(87, 26);
+            this.EsloraCertMat.TabIndex = 5;
+            this.EsloraCertMat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ArqBrutoCertMat_KeyPress);
+            // 
+            // label70
+            // 
+            this.label70.AutoSize = true;
+            this.label70.Location = new System.Drawing.Point(398, 217);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(57, 18);
+            this.label70.TabIndex = 4;
+            this.label70.Text = "Eslora:";
+            // 
+            // ArqBrutoCertMat
+            // 
+            this.ArqBrutoCertMat.Location = new System.Drawing.Point(183, 207);
+            this.ArqBrutoCertMat.Name = "ArqBrutoCertMat";
+            this.ArqBrutoCertMat.Size = new System.Drawing.Size(73, 26);
+            this.ArqBrutoCertMat.TabIndex = 5;
+            this.ArqBrutoCertMat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ArqBrutoCertMat_KeyPress);
+            // 
+            // label67
+            // 
+            this.label67.AutoSize = true;
+            this.label67.Location = new System.Drawing.Point(44, 212);
+            this.label67.Name = "label67";
+            this.label67.Size = new System.Drawing.Size(104, 18);
+            this.label67.TabIndex = 4;
+            this.label67.Text = "Arqueo Bruto:";
+            // 
+            // ServicioCertMat
+            // 
+            this.ServicioCertMat.Location = new System.Drawing.Point(110, 144);
+            this.ServicioCertMat.Name = "ServicioCertMat";
+            this.ServicioCertMat.Size = new System.Drawing.Size(121, 26);
+            this.ServicioCertMat.TabIndex = 5;
+            // 
+            // label64
+            // 
+            this.label64.AutoSize = true;
+            this.label64.Location = new System.Drawing.Point(31, 147);
+            this.label64.Name = "label64";
+            this.label64.Size = new System.Drawing.Size(69, 18);
+            this.label64.TabIndex = 4;
+            this.label64.Text = "Servicio:";
+            // 
+            // TipoEmbCertMar
+            // 
+            this.TipoEmbCertMar.FormattingEnabled = true;
+            this.TipoEmbCertMar.Items.AddRange(new object[] {
+            "Lancha"});
+            this.TipoEmbCertMar.Location = new System.Drawing.Point(233, 92);
+            this.TipoEmbCertMar.Name = "TipoEmbCertMar";
+            this.TipoEmbCertMar.Size = new System.Drawing.Size(121, 26);
+            this.TipoEmbCertMar.TabIndex = 3;
+            this.TipoEmbCertMar.Text = "Lancha";
+            // 
+            // label62
+            // 
+            this.label62.AutoSize = true;
+            this.label62.Location = new System.Drawing.Point(31, 95);
+            this.label62.Name = "label62";
+            this.label62.Size = new System.Drawing.Size(161, 18);
+            this.label62.TabIndex = 2;
+            this.label62.Text = "Tipo de Embarcación:";
+            // 
+            // NombreEmbCerMat
+            // 
+            this.NombreEmbCerMat.Location = new System.Drawing.Point(233, 30);
+            this.NombreEmbCerMat.Name = "NombreEmbCerMat";
+            this.NombreEmbCerMat.Size = new System.Drawing.Size(358, 26);
+            this.NombreEmbCerMat.TabIndex = 1;
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(28, 33);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(203, 18);
+            this.label60.TabIndex = 0;
+            this.label60.Text = "Nombre de la Embarcación:";
             // 
             // Pescadores
             // 
@@ -2240,9 +2494,52 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(711, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(677, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
+            // 
+            // NMotoresCertMat
+            // 
+            this.NMotoresCertMat.Location = new System.Drawing.Point(183, 348);
+            this.NMotoresCertMat.Name = "NMotoresCertMat";
+            this.NMotoresCertMat.Size = new System.Drawing.Size(48, 26);
+            this.NMotoresCertMat.TabIndex = 8;
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(600, 217);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(41, 18);
+            this.label75.TabIndex = 9;
+            this.label75.Text = "MTS";
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(600, 259);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(41, 18);
+            this.label76.TabIndex = 9;
+            this.label76.Text = "MTS";
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(600, 297);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(41, 18);
+            this.label77.TabIndex = 9;
+            this.label77.Text = "MTS";
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(600, 350);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(36, 18);
+            this.label78.TabIndex = 9;
+            this.label78.Text = "H.P.";
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -2287,6 +2584,8 @@
             this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.CertMatri.ResumeLayout(false);
+            this.CertMatri.PerformLayout();
             this.Pescadores.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -2317,6 +2616,7 @@
             this.Resumen.ResumeLayout(false);
             this.Resumen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2504,5 +2804,33 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn Marcamotor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Potencia;
         private System.Windows.Forms.PictureBox pictureBox12;
+        private System.Windows.Forms.TextBox TraficoCertMat;
+        private System.Windows.Forms.Label label66;
+        private System.Windows.Forms.TextBox PotenciaMotorCertMat;
+        private System.Windows.Forms.TextBox PuntalCertMat;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.TextBox PesoMCertMat;
+        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.Label label69;
+        private System.Windows.Forms.TextBox MangaCertMat;
+        private System.Windows.Forms.TextBox ArqNetoCertMat;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Label label68;
+        private System.Windows.Forms.TextBox EsloraCertMat;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.TextBox ArqBrutoCertMat;
+        private System.Windows.Forms.Label label67;
+        private System.Windows.Forms.TextBox ServicioCertMat;
+        private System.Windows.Forms.Label label64;
+        private System.Windows.Forms.ComboBox TipoEmbCertMar;
+        private System.Windows.Forms.Label label62;
+        private System.Windows.Forms.TextBox NombreEmbCerMat;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.NumericUpDown NMotoresCertMat;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Label label75;
     }
 }

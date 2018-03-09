@@ -394,7 +394,28 @@ namespace OrdenamientoPesquero
             }
 
         }
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            dgvEmbarcacionesPerm.RowCount = (int)numericUpDown1.Value;
+        }
 
+        private void cbRNPA_TextChanged(object sender, EventArgs e)
+        {
+            foreach (TextBox item in gbOrgPes.Controls.OfType<TextBox>())
+            {
+                item.Text = "";
+            }
+            foreach (MaskedTextBox item in gbOrgPes.Controls.OfType<MaskedTextBox>())
+            {
+                item.Text = "";
+            }
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            LlenarCampos();
+            Resumenes(cbRNPA.Text);
+        }
         private void Exito(int ok)
         {
             if (ok == 1)
@@ -652,27 +673,17 @@ namespace OrdenamientoPesquero
             }
         }
 
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        private void ArqBrutoCertMat_KeyPress(object sender, KeyPressEventArgs e)
         {
-            dgvEmbarcacionesPerm.RowCount = (int)numericUpDown1.Value;
-        }
-
-        private void cbRNPA_TextChanged(object sender, EventArgs e)
-        {
-            foreach (TextBox item in gbOrgPes.Controls.OfType<TextBox>())
+            TextBox txt = (TextBox)sender;
+            if (Char.IsDigit(e.KeyChar) || e.KeyChar == '.' && !txt.Text.Contains("."))
             {
-                item.Text = "";
+                e.Handled = false;
             }
-            foreach (MaskedTextBox item in gbOrgPes.Controls.OfType<MaskedTextBox>())
+            else
             {
-                item.Text = "";
+                e.Handled = true;
             }
-        }
-
-        private void pictureBox12_Click(object sender, EventArgs e)
-        {
-            LlenarCampos();
-            Resumenes(cbRNPA.Text);
         }
     }
 }
