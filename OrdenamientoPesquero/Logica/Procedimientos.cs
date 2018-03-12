@@ -58,6 +58,12 @@ namespace Logica
             return c.getDatosTabla("ObtenerDatos", Parametros, RNPA);
         }
 
+        public DataTable Obtener_unidades(string RNPA)
+        {
+            string[] Parametros = { "@rnpa" };
+            return c.getDatosTabla("Obtener", Parametros, RNPA);
+        }
+
         #region Pescador
         public int Registrar_Pescador(Pescador PES)
         {

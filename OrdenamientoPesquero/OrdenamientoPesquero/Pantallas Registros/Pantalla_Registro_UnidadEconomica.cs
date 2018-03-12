@@ -84,12 +84,12 @@ namespace OrdenamientoPesquero
                     {
                         if (radioButton0.Checked)
                         {
-                            ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
+                            ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
                             exito = proc.Registrar_Unidad(ue);
                         }
                         else if (radioButton1.Checked)
                         {
-                            ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
+                            ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
                             exito = proc.Registrar_Unidad(ue);
                         }
                         CargarRNPA();
@@ -243,12 +243,12 @@ namespace OrdenamientoPesquero
                 {
                     if (radioButton0.Checked)
                     {
-                        ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
+                        ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
                         exito = proc.Actualizar_Unidad(ue);
                     }
                     else if (radioButton1.Checked)
                     {
-                        ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
+                        ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
                         exito = proc.Actualizar_Unidad(ue);
                     }
                     Exito(exito);
@@ -281,9 +281,9 @@ namespace OrdenamientoPesquero
         #region Eliminaciones
         private void EliminarUnidad_Click(object sender, EventArgs e)
         {
-            if (cargado)
+            if (existe(cbRNPA.Text))
             {
-                DialogResult Si = MessageBox.Show("¿Desea eliminar esta Unidad Económica?", "ADVERTENCIA", MessageBoxButtons.YesNo);
+                DialogResult Si = MessageBox.Show("¿Desea eliminar esta Unidad Económica?", "ADVERTENCIA", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
                 if (Si == DialogResult.Yes)
                 {
                     if (proc.Eliminar_Unidad(cbRNPA.Text) == 1)
@@ -388,7 +388,7 @@ namespace OrdenamientoPesquero
         //Escribir en data
         public bool existe(string rnpa)
         {
-            dt = proc.Obtener_todas_unidades(rnpa);
+            dt = proc.Obtener_unidades(rnpa);
             if (dt.Rows.Count==0)
             {
                 return false;
@@ -718,15 +718,18 @@ namespace OrdenamientoPesquero
         public void Resumenes(string RNPA)
         {
             dt = proc.Resumen(cbRNPA.Text);
-            TotalPermisos.Text = dt.Rows[0]["PERMISOS"].ToString();
-            TotalSocios.Text = dt.Rows[0]["SOCIOS"].ToString();
-            TotalEsfuerzos.Text = dt.Rows[0]["ESFUERZOS PESQUEROS"].ToString();
-            
-            dt = proc.ResumenPesqueria(cbRNPA.Text);
-            TotalPesquerias.Items.Clear();
-            foreach (DataRow fila in dt.Rows)
+            if (dt.Rows.Count != 0)
             {
-                TotalPesquerias.Items.Add(fila["PESQUERIA"].ToString());
+                TotalPermisos.Text = dt.Rows[0]["PERMISOS"].ToString();
+                TotalSocios.Text = dt.Rows[0]["SOCIOS"].ToString();
+                TotalEsfuerzos.Text = dt.Rows[0]["ESFUERZOS PESQUEROS"].ToString();
+
+                dt = proc.ResumenPesqueria(cbRNPA.Text);
+                TotalPesquerias.Items.Clear();
+                foreach (DataRow fila in dt.Rows)
+                {
+                    TotalPesquerias.Items.Add(fila["PESQUERIA"].ToString());
+                }
             }
         }
         #endregion
