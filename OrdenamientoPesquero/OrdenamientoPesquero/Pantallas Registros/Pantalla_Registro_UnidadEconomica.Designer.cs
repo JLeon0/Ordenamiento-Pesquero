@@ -204,19 +204,7 @@
             this.NombrePesc = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
             this.Directiva = new System.Windows.Forms.TabPage();
-            this.gbDirectiva = new System.Windows.Forms.GroupBox();
-            this.mtbTelTeso = new System.Windows.Forms.MaskedTextBox();
-            this.mtbTelSec = new System.Windows.Forms.MaskedTextBox();
-            this.mtbTelPres = new System.Windows.Forms.MaskedTextBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.txtTesor = new System.Windows.Forms.TextBox();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtSecre = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.txtPresidente = new System.Windows.Forms.TextBox();
-            this.label15 = new System.Windows.Forms.Label();
+            this.dgvDirectiva = new System.Windows.Forms.DataGridView();
             this.Expediente = new System.Windows.Forms.TabPage();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.Ver = new System.Windows.Forms.PictureBox();
@@ -237,6 +225,12 @@
             this.TotalPermisos = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
+            this.label6 = new System.Windows.Forms.Label();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -265,7 +259,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.Directiva.SuspendLayout();
-            this.gbDirectiva.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDirectiva)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Eliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).BeginInit();
@@ -276,6 +270,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBReubicar)).BeginInit();
             this.Resumen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEstado
@@ -489,7 +484,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(65, 32);
+            this.label3.Location = new System.Drawing.Point(38, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -2160,7 +2155,9 @@
             // 
             this.Directiva.AutoScroll = true;
             this.Directiva.BackColor = System.Drawing.Color.White;
-            this.Directiva.Controls.Add(this.gbDirectiva);
+            this.Directiva.Controls.Add(this.label6);
+            this.Directiva.Controls.Add(this.numericUpDown3);
+            this.Directiva.Controls.Add(this.dgvDirectiva);
             this.Directiva.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Directiva.ForeColor = System.Drawing.Color.Black;
             this.Directiva.Location = new System.Drawing.Point(4, 34);
@@ -2170,151 +2167,19 @@
             this.Directiva.TabIndex = 1;
             this.Directiva.Text = "Directiva";
             // 
-            // gbDirectiva
+            // dgvDirectiva
             // 
-            this.gbDirectiva.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.gbDirectiva.Controls.Add(this.mtbTelTeso);
-            this.gbDirectiva.Controls.Add(this.mtbTelSec);
-            this.gbDirectiva.Controls.Add(this.mtbTelPres);
-            this.gbDirectiva.Controls.Add(this.label18);
-            this.gbDirectiva.Controls.Add(this.txtTesor);
-            this.gbDirectiva.Controls.Add(this.label19);
-            this.gbDirectiva.Controls.Add(this.label16);
-            this.gbDirectiva.Controls.Add(this.txtSecre);
-            this.gbDirectiva.Controls.Add(this.label17);
-            this.gbDirectiva.Controls.Add(this.label6);
-            this.gbDirectiva.Controls.Add(this.txtPresidente);
-            this.gbDirectiva.Controls.Add(this.label15);
-            this.gbDirectiva.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDirectiva.Location = new System.Drawing.Point(17, 16);
-            this.gbDirectiva.Name = "gbDirectiva";
-            this.gbDirectiva.Size = new System.Drawing.Size(869, 171);
-            this.gbDirectiva.TabIndex = 64;
-            this.gbDirectiva.TabStop = false;
-            // 
-            // mtbTelTeso
-            // 
-            this.mtbTelTeso.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbTelTeso.Location = new System.Drawing.Point(658, 131);
-            this.mtbTelTeso.Mask = "000-000-0000";
-            this.mtbTelTeso.Name = "mtbTelTeso";
-            this.mtbTelTeso.Size = new System.Drawing.Size(100, 26);
-            this.mtbTelTeso.TabIndex = 47;
-            // 
-            // mtbTelSec
-            // 
-            this.mtbTelSec.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbTelSec.Location = new System.Drawing.Point(658, 81);
-            this.mtbTelSec.Mask = "000-000-0000";
-            this.mtbTelSec.Name = "mtbTelSec";
-            this.mtbTelSec.Size = new System.Drawing.Size(100, 26);
-            this.mtbTelSec.TabIndex = 45;
-            // 
-            // mtbTelPres
-            // 
-            this.mtbTelPres.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbTelPres.Location = new System.Drawing.Point(658, 35);
-            this.mtbTelPres.Mask = "000-000-0000";
-            this.mtbTelPres.Name = "mtbTelPres";
-            this.mtbTelPres.Size = new System.Drawing.Size(100, 26);
-            this.mtbTelPres.TabIndex = 43;
-            // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(6, 110);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(151, 18);
-            this.label18.TabIndex = 51;
-            this.label18.Text = "Nombre del tesorero";
-            // 
-            // txtTesor
-            // 
-            this.txtTesor.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTesor.Location = new System.Drawing.Point(9, 131);
-            this.txtTesor.Name = "txtTesor";
-            this.txtTesor.Size = new System.Drawing.Size(623, 26);
-            this.txtTesor.TabIndex = 46;
-            this.txtTesor.Tag = "";
-            this.toolTip1.SetToolTip(this.txtTesor, "Ingrese el nombre del Tesorero");
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(657, 110);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(66, 18);
-            this.label19.TabIndex = 52;
-            this.label19.Text = "Telefono";
-            // 
-            // label16
-            // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(6, 62);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(163, 18);
-            this.label16.TabIndex = 47;
-            this.label16.Text = "Nombre del secretario";
-            // 
-            // txtSecre
-            // 
-            this.txtSecre.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSecre.Location = new System.Drawing.Point(9, 81);
-            this.txtSecre.Name = "txtSecre";
-            this.txtSecre.Size = new System.Drawing.Size(623, 26);
-            this.txtSecre.TabIndex = 44;
-            this.txtSecre.Tag = "";
-            this.toolTip1.SetToolTip(this.txtSecre, "Ingrese el nombre del Secretario");
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(655, 64);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(66, 18);
-            this.label17.TabIndex = 48;
-            this.label17.Text = "Telefono";
-            // 
-            // label6
-            // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(6, 16);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(167, 18);
-            this.label6.TabIndex = 43;
-            this.label6.Text = "Nombre del presidente";
-            // 
-            // txtPresidente
-            // 
-            this.txtPresidente.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPresidente.Location = new System.Drawing.Point(9, 35);
-            this.txtPresidente.Name = "txtPresidente";
-            this.txtPresidente.Size = new System.Drawing.Size(623, 26);
-            this.txtPresidente.TabIndex = 42;
-            this.txtPresidente.Tag = "";
-            this.toolTip1.SetToolTip(this.txtPresidente, "Ingrese el nombre del Presidente de la Organización Económica");
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(655, 18);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(66, 18);
-            this.label15.TabIndex = 44;
-            this.label15.Text = "Telefono";
+            this.dgvDirectiva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDirectiva.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewComboBoxColumn2,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5});
+            this.dgvDirectiva.Location = new System.Drawing.Point(37, 69);
+            this.dgvDirectiva.Name = "dgvDirectiva";
+            this.dgvDirectiva.RowHeadersVisible = false;
+            this.dgvDirectiva.Size = new System.Drawing.Size(703, 131);
+            this.dgvDirectiva.TabIndex = 59;
             // 
             // Expediente
             // 
@@ -2538,9 +2403,56 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(716, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(665, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 300;
+            // 
+            // dataGridViewComboBoxColumn2
+            // 
+            this.dataGridViewComboBoxColumn2.HeaderText = "Cargo";
+            this.dataGridViewComboBoxColumn2.Items.AddRange(new object[] {
+            "Presidente",
+            "Secretario",
+            "Vocal",
+            "Tesorero"});
+            this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
+            this.dataGridViewComboBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewComboBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.dataGridViewComboBoxColumn2.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "FechaIng";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Telefono";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // numericUpDown3
+            // 
+            this.numericUpDown3.Location = new System.Drawing.Point(113, 35);
+            this.numericUpDown3.Name = "numericUpDown3";
+            this.numericUpDown3.Size = new System.Drawing.Size(54, 26);
+            this.numericUpDown3.TabIndex = 60;
+            this.numericUpDown3.ValueChanged += new System.EventHandler(this.numericUpDown3_ValueChanged);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(37, 37);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(70, 18);
+            this.label6.TabIndex = 61;
+            this.label6.Text = "Directiva";
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -2605,8 +2517,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.Directiva.ResumeLayout(false);
-            this.gbDirectiva.ResumeLayout(false);
-            this.gbDirectiva.PerformLayout();
+            this.Directiva.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDirectiva)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Eliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).EndInit();
@@ -2618,6 +2530,7 @@
             this.Resumen.ResumeLayout(false);
             this.Resumen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2658,19 +2571,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtCorreo;
         private System.Windows.Forms.Label label21;
-        private System.Windows.Forms.GroupBox gbDirectiva;
-        private System.Windows.Forms.MaskedTextBox mtbTelTeso;
-        private System.Windows.Forms.MaskedTextBox mtbTelSec;
-        private System.Windows.Forms.MaskedTextBox mtbTelPres;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.TextBox txtTesor;
-        private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox txtSecre;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtPresidente;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TabPage Pescadores;
         private System.Windows.Forms.GroupBox Resumen;
         private System.Windows.Forms.DataGridView dgvEquiposPescaPerm;
@@ -2833,5 +2733,12 @@
         private System.Windows.Forms.Label label77;
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.DataGridView dgvDirectiva;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.NumericUpDown numericUpDown3;
     }
 }

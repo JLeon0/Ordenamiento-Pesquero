@@ -16,13 +16,13 @@ namespace Logica
         #region UnidadEconomica
         public int Registrar_Unidad(Unidad_Economica UE)
         {
-            string[] Parametros = { "@rnpa", "@Nombre", "@Rfc", "@calleynum", "@colonia", "@localidad", "@municipio", "@cp", "@presidente", "@secretario", "@tesorero", "@telpres", "@telsecre", "@teltesor", "@correo", "@telefono", "@Tipo" };
-            return c.Ejecutar("RegistrarUnidad", Parametros, UE.RNPA, UE.NOMBRE, UE.RFC, UE.CALLE, UE.COLONIA, UE.LOCALIDAD, UE.MUNICIPIO, UE.CP, UE.PRESIDENTE, UE.SECRETARIO, UE.TESORERO, UE.TELPRES, UE.TELSECRE, UE.TELTESOR, UE.CORREO, UE.TELEFONO, UE.TIPO);   
+            string[] Parametros = { "@rnpa", "@Nombre", "@Rfc", "@calleynum", "@colonia", "@localidad", "@municipio", "@cp", "correo", "@telefono", "@Tipo" };
+            return c.Ejecutar("RegistrarUnidad", Parametros, UE.RNPA, UE.NOMBRE, UE.RFC, UE.CALLE, UE.COLONIA, UE.LOCALIDAD, UE.MUNICIPIO, UE.CP, UE.CORREO, UE.TELEFONO, UE.TIPO);   
         }
         public int Actualizar_Unidad(Unidad_Economica UE)
         {
-            string[] Parametros = { "@rnpa", "@Nombre", "@Rfc", "@calleynum", "@colonia", "@localidad", "@municipio", "@cp", "@presidente", "@secretario", "@tesorero", "@telpres", "@telsecre", "@teltesor", "@correo", "@telefono", "@Tipo" };
-            return c.Ejecutar("ActualizarUnidad", Parametros, UE.RNPA, UE.NOMBRE, UE.RFC, UE.CALLE, UE.COLONIA, UE.LOCALIDAD, UE.MUNICIPIO, UE.CP, UE.PRESIDENTE, UE.SECRETARIO, UE.TESORERO, UE.TELPRES, UE.TELSECRE, UE.TELTESOR, UE.CORREO, UE.TELEFONO, UE.TIPO);
+            string[] Parametros = { "@rnpa", "@Nombre", "@Rfc", "@calleynum", "@colonia", "@localidad", "@municipio", "@cp", "correo", "@telefono", "@Tipo" };
+            return c.Ejecutar("ActualizarUnidad", Parametros, UE.RNPA, UE.NOMBRE, UE.RFC, UE.CALLE, UE.COLONIA, UE.LOCALIDAD, UE.MUNICIPIO, UE.CP, UE.CORREO, UE.TELEFONO, UE.TIPO);
 
         }
         public int Eliminar_Unidad(String RNPA)
@@ -104,6 +104,7 @@ namespace Logica
         }
         #endregion
 
+
         #region Resumen
         public DataTable Resumen(string RNPA)
         {
@@ -115,6 +116,15 @@ namespace Logica
         {
             string[] Parametros = { "@RNPA" };
             return c.getDatosTabla("Pesquerias", Parametros, RNPA);
+        }
+        #endregion
+
+
+        #region Directiva
+        public int Registrar_Directiva(Directiva dir)
+        {
+            string[] Parametros = { "@RNPA", "@NOMBRE", "@CARGO", "@FECHA_ING", "@TELEFONO" };
+            return c.Ejecutar("Registrar_Directiva", Parametros, dir.RNPA, dir.Nombre, dir.Cargo, dir.Fecha_Ing, dir.Telefono);
         }
         #endregion
     }

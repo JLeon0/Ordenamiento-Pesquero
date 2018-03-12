@@ -19,12 +19,7 @@ namespace Logica
         public string CP { get; set; }
         public string CORREO { get; set; }
         public string TELEFONO { get; set; }
-        public string PRESIDENTE { get; set; }
-        public string TESORERO { get; set; }
-        public string SECRETARIO { get; set; }
-        public string TELPRES { get; set; }
-        public string TELTESOR { get; set; }
-        public string TELSECRE { get; set; }
+
         public Unidad_Economica()
         {
              RNPA = "";
@@ -38,18 +33,8 @@ namespace Logica
              CP = "";
              CORREO = "";
              TELEFONO = "";
-             PRESIDENTE = "";
-             TESORERO = "";
-             SECRETARIO = "";
-             TELPRES = "";
-             TELTESOR = "";
-             TELSECRE = "";
         }
-        public Unidad_Economica(string rNPA, string nOMBRE, string tIPO, string cALLE, string rFC, string cOLONIA, string lOCALIDAD,  string mUNICIPIO, string cP, string cORREO, string tELEFONO, string pRESIDENTE, string tESORERO,
-        string sECRETARIO,
-        string tELPRES,
-        string tELTESOR,
-        string tELSECRE)
+        public Unidad_Economica(string rNPA, string nOMBRE, string tIPO, string cALLE, string rFC, string cOLONIA, string lOCALIDAD,  string mUNICIPIO, string cP, string cORREO, string tELEFONO)
         {
             RNPA = rNPA;
             NOMBRE = nOMBRE;
@@ -62,12 +47,6 @@ namespace Logica
             CP = cP;
             CORREO = cORREO;
             TELEFONO = tELEFONO;
-            PRESIDENTE = pRESIDENTE;
-            TESORERO = tESORERO;
-            SECRETARIO = sECRETARIO;
-            TELPRES = tELPRES;
-            TELTESOR = tELTESOR;
-            TELSECRE = tELSECRE;
         }
     }
 }

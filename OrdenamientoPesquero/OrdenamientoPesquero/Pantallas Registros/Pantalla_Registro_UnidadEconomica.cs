@@ -21,6 +21,7 @@ namespace OrdenamientoPesquero
         Permiso perm;
         Pescador pes;
         Embarcacion Emb;
+        Directiva dir;
         int exito = 0;
         Procedimientos proc = new Procedimientos();
         DataSet ds = new DataSet();
@@ -79,12 +80,12 @@ namespace OrdenamientoPesquero
             {
                 if (radioButton0.Checked)
                 {
-                    ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
+                    ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
                     exito = proc.Registrar_Unidad(ue);
                 }
                 else if (radioButton1.Checked)
                 {
-                    ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
+                    ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
                     exito = proc.Registrar_Unidad(ue);
                 }
                 CargarRNPA();
@@ -109,7 +110,7 @@ namespace OrdenamientoPesquero
             }
             else if (tabControl1.SelectedTab.Name=="Directiva")
             {
-
+                exito = AccionesDirectiva();
             }
             else if (tabControl1.SelectedTab.Name=="CertMatri")
             {
@@ -199,7 +200,25 @@ namespace OrdenamientoPesquero
             if (registrar)
             { return proc.Registrar_Permiso(perm); }
             else { return proc.Actualizar_Permiso(perm); }
+        }
 
+        public int AccionesDirectiva()
+        {
+            int reg = 0;
+            for (int i = 0; i < dgvDirectiva.RowCount; i++)
+            {
+                if (dgvDirectiva[0, i].Value != null && dgvDirectiva[1,i].Value!= null && dgvDirectiva[2, i].Value != null && dgvDirectiva[3, i].Value != null)
+                {
+                    string nombre = dgvDirectiva[0, i].Value.ToString();
+                    string cargo = dgvDirectiva[1, i].Value.ToString();
+                    string fechaing = dgvDirectiva[2, i].Value.ToString();
+                    string telefono = dgvDirectiva[3, i].Value.ToString();
+
+                    dir = new Directiva(cbRNPA.Text, nombre, cargo, fechaing, telefono);
+                    reg += proc.Registrar_Directiva(dir);
+                }
+            }
+            return 0;
         }
         #endregion
 
@@ -211,12 +230,12 @@ namespace OrdenamientoPesquero
             {
                 if (radioButton0.Checked)
                 {
-                    ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
+                    ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
                     exito = proc.Actualizar_Unidad(ue);
                 }
                 else if (radioButton1.Checked)
                 {
-                    ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
+                    ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
                     exito = proc.Actualizar_Unidad(ue);
                 }
                 Exito(exito);
@@ -339,12 +358,6 @@ namespace OrdenamientoPesquero
                     mtbCP.Text = fila["CODIGO_POSTAL"].ToString();
                     txtCorreo.Text = fila["CORREO"].ToString();
                     mtbTelefono.Text = fila["TELEFONO"].ToString();
-                    txtPresidente.Text = fila["PRESIDENTE"].ToString();
-                    txtSecre.Text = fila["SECRETARIO"].ToString();
-                    txtTesor.Text = fila["TESORERO"].ToString();
-                    mtbTelPres.Text = fila["TEL_PRES"].ToString();
-                    mtbTelSec.Text = fila["TEL_SECRE"].ToString();
-                    mtbTelTeso.Text = fila["TEL_TESOR"].ToString();
                     //tipo = Convert.ToInt32(fila["TIPO"]);
                 }
                 if (tipo == 0)
@@ -405,6 +418,7 @@ namespace OrdenamientoPesquero
                 e.Handled = true;
             }
         }
+
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
             dgvEmbarcacionesPerm.RowCount = (int)numericUpDown1.Value;
@@ -420,10 +434,6 @@ namespace OrdenamientoPesquero
             {
                 item.Text = "";
             }
-        }
-        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
-        {
-            dgvEmbarcacionesPerm.RowCount = (int)numericUpDown1.Value;
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
@@ -688,6 +698,9 @@ namespace OrdenamientoPesquero
             }
         }
 
-
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+            dgvDirectiva.RowCount = (int)numericUpDown3.Value;
+        }
     }
 }
