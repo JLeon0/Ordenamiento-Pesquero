@@ -421,6 +421,10 @@ namespace OrdenamientoPesquero
                 item.Text = "";
             }
         }
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            dgvEmbarcacionesPerm.RowCount = (int)numericUpDown1.Value;
+        }
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
