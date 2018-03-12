@@ -231,6 +231,8 @@
             this.TotalPermisos = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.MatriculaCertMat = new System.Windows.Forms.TextBox();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -484,7 +486,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(29, 32);
+            this.label3.Location = new System.Drawing.Point(11, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -812,6 +814,7 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(937, 589);
             this.tabControl1.TabIndex = 54;
+            this.tabControl1.SelectedIndexChanged += new System.EventHandler(this.tabControl1_SelectedIndexChanged);
             // 
             // Permisos
             // 
@@ -942,9 +945,10 @@
             // finVigenciaPer
             // 
             this.finVigenciaPer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.finVigenciaPer.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.finVigenciaPer.Location = new System.Drawing.Point(516, 105);
             this.finVigenciaPer.Name = "finVigenciaPer";
-            this.finVigenciaPer.Size = new System.Drawing.Size(200, 26);
+            this.finVigenciaPer.Size = new System.Drawing.Size(122, 26);
             this.finVigenciaPer.TabIndex = 6;
             this.finVigenciaPer.ValueChanged += new System.EventHandler(this.diaExpPer_ValueChanged);
             // 
@@ -961,9 +965,10 @@
             // diaExpPer
             // 
             this.diaExpPer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.diaExpPer.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.diaExpPer.Location = new System.Drawing.Point(516, 59);
             this.diaExpPer.Name = "diaExpPer";
-            this.diaExpPer.Size = new System.Drawing.Size(200, 26);
+            this.diaExpPer.Size = new System.Drawing.Size(122, 26);
             this.diaExpPer.TabIndex = 4;
             this.diaExpPer.ValueChanged += new System.EventHandler(this.diaExpPer_ValueChanged);
             // 
@@ -1130,6 +1135,7 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(80, 26);
             this.numericUpDown1.TabIndex = 60;
+            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label2
             // 
@@ -1188,7 +1194,9 @@
             this.CertMatri.Controls.Add(this.label64);
             this.CertMatri.Controls.Add(this.TipoEmbCertMar);
             this.CertMatri.Controls.Add(this.label62);
+            this.CertMatri.Controls.Add(this.MatriculaCertMat);
             this.CertMatri.Controls.Add(this.NombreEmbCerMat);
+            this.CertMatri.Controls.Add(this.label15);
             this.CertMatri.Controls.Add(this.label60);
             this.CertMatri.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CertMatri.ForeColor = System.Drawing.Color.Black;
@@ -1423,7 +1431,7 @@
             // 
             // NombreEmbCerMat
             // 
-            this.NombreEmbCerMat.Location = new System.Drawing.Point(233, 30);
+            this.NombreEmbCerMat.Location = new System.Drawing.Point(236, 54);
             this.NombreEmbCerMat.Name = "NombreEmbCerMat";
             this.NombreEmbCerMat.Size = new System.Drawing.Size(358, 26);
             this.NombreEmbCerMat.TabIndex = 1;
@@ -1431,7 +1439,7 @@
             // label60
             // 
             this.label60.AutoSize = true;
-            this.label60.Location = new System.Drawing.Point(28, 33);
+            this.label60.Location = new System.Drawing.Point(31, 57);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(203, 18);
             this.label60.TabIndex = 0;
@@ -2082,9 +2090,10 @@
             // FechaNacPesc
             // 
             this.FechaNacPesc.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FechaNacPesc.Location = new System.Drawing.Point(623, 86);
+            this.FechaNacPesc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaNacPesc.Location = new System.Drawing.Point(638, 86);
             this.FechaNacPesc.Name = "FechaNacPesc";
-            this.FechaNacPesc.Size = new System.Drawing.Size(226, 26);
+            this.FechaNacPesc.Size = new System.Drawing.Size(132, 26);
             this.FechaNacPesc.TabIndex = 6;
             // 
             // label50
@@ -2247,7 +2256,7 @@
             this.Ver.Size = new System.Drawing.Size(70, 70);
             this.Ver.TabIndex = 113;
             this.Ver.TabStop = false;
-            this.toolTip1.SetToolTip(this.Ver, "Ver Permisos");
+            this.toolTip1.SetToolTip(this.Ver, "Ver");
             // 
             // Eliminar
             // 
@@ -2449,9 +2458,25 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(648, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(614, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(28, 16);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(209, 18);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Matrícula de la Embarcación:";
+            // 
+            // MatriculaCertMat
+            // 
+            this.MatriculaCertMat.Location = new System.Drawing.Point(236, 13);
+            this.MatriculaCertMat.Name = "MatriculaCertMat";
+            this.MatriculaCertMat.Size = new System.Drawing.Size(358, 26);
+            this.MatriculaCertMat.TabIndex = 1;
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -2739,5 +2764,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
+        private System.Windows.Forms.TextBox MatriculaCertMat;
+        private System.Windows.Forms.Label label15;
     }
 }

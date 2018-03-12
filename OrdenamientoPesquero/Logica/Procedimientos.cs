@@ -102,10 +102,10 @@ namespace Logica
             string[] Parametros = { "@matricula" };
             return c.Ejecutar("EliminarEmbarca", Parametros, Matricula);
         }
-        public int registrar_perm_emb(Embarcacion emb)
+        public int registrar_perm_emb(Embarcacion emb, string Permiso)
         {
-            string[] Parametros = { "@MATRI", "@NOMBRE", "@RNPA", "@MUNICIPIO", "@HP", "@MARCA" };
-            return c.Ejecutar("REGISTRO_PER_EMB", Parametros, emb.Matricula, emb.Nombre, emb.RNPATITULAR, emb.MUNICIPIO, emb.HP, emb.MARCA);
+            string[] Parametros = { "@MATRI", "@NOMBRE", "@RNPA", "@MUNICIPIO", "@HP", "@MARCA", "@PERMISO" };
+            return c.Ejecutar("REGISTRO_PER_EMB", Parametros, emb.Matricula, emb.Nombre, emb.RNPATITULAR, emb.MUNICIPIO, emb.HP, emb.MARCA, Permiso);
         }
         #endregion
 
