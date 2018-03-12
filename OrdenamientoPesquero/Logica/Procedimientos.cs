@@ -16,12 +16,12 @@ namespace Logica
         #region UnidadEconomica
         public int Registrar_Unidad(Unidad_Economica UE)
         {
-            string[] Parametros = { "@rnpa", "@Nombre", "@Rfc", "@calleynum", "@colonia", "@localidad", "@municipio", "@cp", "correo", "@telefono", "@Tipo" };
-            return c.Ejecutar("RegistrarUnidad", Parametros, UE.RNPA, UE.NOMBRE, UE.RFC, UE.CALLE, UE.COLONIA, UE.LOCALIDAD, UE.MUNICIPIO, UE.CP, UE.CORREO, UE.TELEFONO, UE.TIPO);   
+            string[] Parametros = { "@rnpa", "@Nombre", "@Rfc", "@calleynum", "@colonia", "@localidad", "@municipio", "@cp", "@correo", "@telefono", "@Tipo" };
+            return c.Ejecutar("RegistrarUnidad", Parametros, UE.RNPA, UE.NOMBRE, UE.RFC, UE.CALLE, UE.COLONIA, UE.LOCALIDAD, UE.MUNICIPIO, UE.CP, UE.CORREO, UE.TELEFONO, UE.TIPO);
         }
         public int Actualizar_Unidad(Unidad_Economica UE)
         {
-            string[] Parametros = { "@rnpa", "@Nombre", "@Rfc", "@calleynum", "@colonia", "@localidad", "@municipio", "@cp", "correo", "@telefono", "@Tipo" };
+            string[] Parametros = { "@rnpa", "@Nombre", "@Rfc", "@calleynum", "@colonia", "@localidad", "@municipio", "@cp", "@correo", "@telefono", "@Tipo" };
             return c.Ejecutar("ActualizarUnidad", Parametros, UE.RNPA, UE.NOMBRE, UE.RFC, UE.CALLE, UE.COLONIA, UE.LOCALIDAD, UE.MUNICIPIO, UE.CP, UE.CORREO, UE.TELEFONO, UE.TIPO);
 
         }

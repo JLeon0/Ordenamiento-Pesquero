@@ -699,7 +699,7 @@
             // 
             this.mtbTelefono.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbTelefono.Location = new System.Drawing.Point(674, 234);
-            this.mtbTelefono.Mask = "(999)000-0000";
+            this.mtbTelefono.Mask = "000-000-0000";
             this.mtbTelefono.Name = "mtbTelefono";
             this.mtbTelefono.Size = new System.Drawing.Size(117, 26);
             this.mtbTelefono.TabIndex = 16;
@@ -759,12 +759,12 @@
             // 
             this.cbRNPA.BackColor = System.Drawing.Color.White;
             this.cbRNPA.DropDownHeight = 200;
-            this.cbRNPA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRNPA.ForeColor = System.Drawing.Color.Black;
             this.cbRNPA.FormattingEnabled = true;
             this.cbRNPA.IntegralHeight = false;
             this.cbRNPA.Location = new System.Drawing.Point(209, 21);
             this.cbRNPA.MaxDropDownItems = 5;
+            this.cbRNPA.MaxLength = 12;
             this.cbRNPA.Name = "cbRNPA";
             this.cbRNPA.Size = new System.Drawing.Size(163, 28);
             this.cbRNPA.TabIndex = 1;
@@ -1131,7 +1131,6 @@
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(80, 26);
             this.numericUpDown1.TabIndex = 60;
-            this.numericUpDown1.ValueChanged += new System.EventHandler(this.numericUpDown1_ValueChanged);
             // 
             // label2
             // 

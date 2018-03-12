@@ -26,7 +26,7 @@ namespace OrdenamientoPesquero
         Procedimientos proc = new Procedimientos();
         DataSet ds = new DataSet();
         DataTable dt = null;
-
+        string[,] unidad = { { "0", "RFC" }, { "0", "Codigo Postal" }, { "0", "Correo Electronico" }, { "0", "Telefono de la Cooperativa" } };
         public Pantalla_Registro_UnidadEconomica()
         {
             InitializeComponent();
@@ -76,20 +76,31 @@ namespace OrdenamientoPesquero
         #region Registros
         private void RegistrarUnidad_Click(object sender, EventArgs e)
         {
-            if (!cargado)
+            if (validarunidad())
             {
-                if (radioButton0.Checked)
+                if (!existe(cbRNPA.Text))
                 {
-                    ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
-                    exito = proc.Registrar_Unidad(ue);
+                    if (!cargado)
+                    {
+                        if (radioButton0.Checked)
+                        {
+                            ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
+                            exito = proc.Registrar_Unidad(ue);
+                        }
+                        else if (radioButton1.Checked)
+                        {
+                            ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
+                            exito = proc.Registrar_Unidad(ue);
+                        }
+                        CargarRNPA();
+                        Exito(exito);
+                        cargado = true;
+                    }
                 }
-                else if (radioButton1.Checked)
+                else
                 {
-                    ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
-                    exito = proc.Registrar_Unidad(ue);
+                    MessageBox.Show("Ya esta registrado este RNPA","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 }
-                CargarRNPA();
-                Exito(exito);
             }
         }
 
@@ -226,19 +237,22 @@ namespace OrdenamientoPesquero
         #region Actualizaciones
         private void ActualizarUnidad_Click(object sender, EventArgs e)
         {
-            if (cargado)
+            if (validarunidad())
             {
-                if (radioButton0.Checked)
+                if (cargado)
                 {
-                    ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
-                    exito = proc.Actualizar_Unidad(ue);
+                    if (radioButton0.Checked)
+                    {
+                        ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
+                        exito = proc.Actualizar_Unidad(ue);
+                    }
+                    else if (radioButton1.Checked)
+                    {
+                        ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text, txtPresidente.Text, txtTesor.Text, txtSecre.Text, mtbTelPres.Text, mtbTelTeso.Text, mtbTelSec.Text);
+                        exito = proc.Actualizar_Unidad(ue);
+                    }
+                    Exito(exito);
                 }
-                else if (radioButton1.Checked)
-                {
-                    ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
-                    exito = proc.Actualizar_Unidad(ue);
-                }
-                Exito(exito);
             }
         }
         private void Actualizar_Click(object sender, EventArgs e)
@@ -331,12 +345,14 @@ namespace OrdenamientoPesquero
         bool cargando = true;
         private void CargarRNPA()
         {
+            string a = cbRNPA.Text;
             cbRNPA.DataSource = dt;
             dt = proc.Obtener_todas_unidades("");
             cbRNPA.DataSource = dt;
             cbRNPA.DisplayMember = "RNPA";
             cbRNPA.ValueMember = "RNPA";            
-            //cbRNPA.Text = "";
+            cbRNPA.Text = a;
+            txtNombre.Focus();
             cargando = false;
         }
 
@@ -370,6 +386,36 @@ namespace OrdenamientoPesquero
 
         #region Validaciones
         //Escribir en data
+        public bool existe(string rnpa)
+        {
+            dt = proc.Obtener_todas_unidades(rnpa);
+            if (dt.Rows.Count==0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
+        public bool validarunidad()
+        {
+            bool estabien = true;
+            string msg = "Los siguientes campos estan mal: \n";
+            for (int i = 0; i < 4; i++)
+            {
+                if (unidad[i,0]=="0")
+                {
+                    estabien = false;
+                    msg += "----"+unidad[i, 1]+"\n";
+                }
+            }
+            if (!estabien)
+            {
+                MessageBox.Show(msg,"Error en los datos");
+            }
+            return estabien;
+        }
         private void datagridview_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
@@ -426,15 +472,17 @@ namespace OrdenamientoPesquero
 
         private void cbRNPA_TextChanged(object sender, EventArgs e)
         {
-            foreach (TextBox item in gbOrgPes.Controls.OfType<TextBox>())
-            {
-                item.Text = "";
-            }
-            foreach (MaskedTextBox item in gbOrgPes.Controls.OfType<MaskedTextBox>())
-            {
-                item.Text = "";
-            }
+            cargado = false;
+            //foreach (TextBox item in gbOrgPes.Controls.OfType<TextBox>())
+            //{
+            //    item.Text = "";
+            //}
+            //foreach (MaskedTextBox item in gbOrgPes.Controls.OfType<MaskedTextBox>())
+            //{
+            //    item.Text = "";
+            //}
         }
+
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
@@ -511,10 +559,12 @@ namespace OrdenamientoPesquero
             if (mtbCP.Text.Contains(' ') || mtbCP.Text.Length != 5)
             {
                 pictureBox2.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+                unidad[1, 0] = "0";
             }
             else
             {
                 pictureBox2.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+                unidad[1, 0] = "1";
             }
         }
 
@@ -543,13 +593,15 @@ namespace OrdenamientoPesquero
 
         private void mtbTelefono_TextChanged(object sender, EventArgs e)
         {
-            if (mtbTelefono.Text.Contains(' ') || mtbTelefono.Text.Length != 13)
+            if (mtbTelefono.Text.Contains(' ') || mtbTelefono.Text.Length != 12)
             {
                 pictureBox10.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+                unidad[3, 0] = "0";
             }
             else
             {
                 pictureBox10.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+                unidad[3, 0] = "1";
             }
         }
         private void CorreoPesc_TextChanged(object sender, EventArgs e)
@@ -565,7 +617,7 @@ namespace OrdenamientoPesquero
         }
         private void mtbTelRepFed_TextChanged(object sender, EventArgs e)
         {
-            if (mtbTelRepFed.Text.Contains(' ') || mtbTelRepFed.Text.Length != 13)
+            if (mtbTelRepFed.Text.Contains(' ') || mtbTelRepFed.Text.Length != 12)
             {
                 pictureBox11.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
             }
@@ -613,10 +665,12 @@ namespace OrdenamientoPesquero
             if (validarrfc(txtRFC.Text))
             {
                 pictureBox3.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+                unidad[0, 0] = "1";
             }
             else
             {
                 pictureBox3.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+                unidad[0, 0] = "0";
             }
 
         }
@@ -648,10 +702,12 @@ namespace OrdenamientoPesquero
             if (validarCorreo(txtCorreo.Text))
             {
                 pictureBox4.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+                unidad[2, 0] = "1";
             }
             else
             {
                 pictureBox4.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+                unidad[2, 0] = "0";
             }
         }
 
