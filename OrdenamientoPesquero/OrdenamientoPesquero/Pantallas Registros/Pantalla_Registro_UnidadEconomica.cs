@@ -224,19 +224,19 @@ namespace OrdenamientoPesquero
         }
         private void Actualizar_Click(object sender, EventArgs e)
         {
-            if (Pescadores.Focused)
+            if (tabControl1.SelectedTab.Name == "Pescadores")
             {
                 exito = AccionesPescador(false);
             }
-            else if (Permisos.Focused)
+            else if (tabControl1.SelectedTab.Name == "Permisos")
             {
                 exito = AccionesPermiso(false);
             }
-            else if (Directiva.Focused)
+            else if (tabControl1.SelectedTab.Name == "Directiva")
             {
 
             }
-            else if (CertMatri.Focused)
+            else if (tabControl1.SelectedTab.Name == "CertMatri")
             {
 
             }
@@ -392,7 +392,18 @@ namespace OrdenamientoPesquero
 
                 grid.CurrentCell.Value = value;
             }
-
+        }
+        private void ArqBrutoCertMat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+            if (Char.IsDigit(e.KeyChar) || e.KeyChar == '.' && !txt.Text.Contains("."))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
         }
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
         {
@@ -673,17 +684,6 @@ namespace OrdenamientoPesquero
             }
         }
 
-        private void ArqBrutoCertMat_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            TextBox txt = (TextBox)sender;
-            if (Char.IsDigit(e.KeyChar) || e.KeyChar == '.' && !txt.Text.Contains("."))
-            {
-                e.Handled = false;
-            }
-            else
-            {
-                e.Handled = true;
-            }
-        }
+
     }
 }
