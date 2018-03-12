@@ -103,7 +103,7 @@ namespace OrdenamientoPesquero
                 exito = AccionesPermiso(true);
                 for (int i = 0; i < dgvEmbarcacionesPerm.RowCount; i++)
                 {
-                    Emb = new Embarcacion(dgvEmbarcacionesPerm[0, i].Value.ToString(), dgvEmbarcacionesPerm[1, i].Value.ToString(), dgvEmbarcacionesPerm[3, i].Value.ToString(), dgvEmbarcacionesPerm[2, i].Value.ToString());
+                    Emb = new Embarcacion(dgvEmbarcacionesPerm[0, i].Value.ToString(), dgvEmbarcacionesPerm[1, i].Value.ToString(), dgvEmbarcacionesPerm[3, i].Value.ToString(), dgvEmbarcacionesPerm[2, i].Value.ToString(), txtMunicipio.Text, cbRNPA.Text);
                     proc.Registrar_Embarcacion(Emb);
                 }
             }
@@ -420,6 +420,10 @@ namespace OrdenamientoPesquero
             {
                 item.Text = "";
             }
+        }
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            dgvEmbarcacionesPerm.RowCount = (int)numericUpDown1.Value;
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
