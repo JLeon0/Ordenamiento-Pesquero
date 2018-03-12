@@ -106,6 +106,11 @@
             this.SitiosDesemPer = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.CertMatri = new System.Windows.Forms.TabPage();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.NMotoresCertMat = new System.Windows.Forms.NumericUpDown();
             this.TraficoCertMat = new System.Windows.Forms.TextBox();
             this.label66 = new System.Windows.Forms.Label();
             this.PotenciaMotorCertMat = new System.Windows.Forms.TextBox();
@@ -232,11 +237,6 @@
             this.TotalPermisos = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.NMotoresCertMat = new System.Windows.Forms.NumericUpDown();
-            this.label75 = new System.Windows.Forms.Label();
-            this.label76 = new System.Windows.Forms.Label();
-            this.label77 = new System.Windows.Forms.Label();
-            this.label78 = new System.Windows.Forms.Label();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -252,6 +252,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.CertMatri.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.Pescadores.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.CuerpoDeAguaPesc.SuspendLayout();
@@ -275,7 +276,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBReubicar)).BeginInit();
             this.Resumen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEstado
@@ -489,7 +489,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(42, 33);
+            this.label3.Location = new System.Drawing.Point(74, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -764,6 +764,7 @@
             // 
             this.cbRNPA.BackColor = System.Drawing.Color.White;
             this.cbRNPA.DropDownHeight = 200;
+            this.cbRNPA.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRNPA.ForeColor = System.Drawing.Color.Black;
             this.cbRNPA.FormattingEnabled = true;
             this.cbRNPA.IntegralHeight = false;
@@ -1204,6 +1205,49 @@
             this.CertMatri.TabIndex = 3;
             this.CertMatri.Text = "Cert. Matr.";
             this.CertMatri.UseVisualStyleBackColor = true;
+            // 
+            // label78
+            // 
+            this.label78.AutoSize = true;
+            this.label78.Location = new System.Drawing.Point(600, 350);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(36, 18);
+            this.label78.TabIndex = 9;
+            this.label78.Text = "H.P.";
+            // 
+            // label77
+            // 
+            this.label77.AutoSize = true;
+            this.label77.Location = new System.Drawing.Point(600, 297);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(41, 18);
+            this.label77.TabIndex = 9;
+            this.label77.Text = "MTS";
+            // 
+            // label76
+            // 
+            this.label76.AutoSize = true;
+            this.label76.Location = new System.Drawing.Point(600, 259);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(41, 18);
+            this.label76.TabIndex = 9;
+            this.label76.Text = "MTS";
+            // 
+            // label75
+            // 
+            this.label75.AutoSize = true;
+            this.label75.Location = new System.Drawing.Point(600, 217);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(41, 18);
+            this.label75.TabIndex = 9;
+            this.label75.Text = "MTS";
+            // 
+            // NMotoresCertMat
+            // 
+            this.NMotoresCertMat.Location = new System.Drawing.Point(183, 348);
+            this.NMotoresCertMat.Name = "NMotoresCertMat";
+            this.NMotoresCertMat.Size = new System.Drawing.Size(48, 26);
+            this.NMotoresCertMat.TabIndex = 8;
             // 
             // TraficoCertMat
             // 
@@ -2494,52 +2538,9 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(677, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(733, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
-            // 
-            // NMotoresCertMat
-            // 
-            this.NMotoresCertMat.Location = new System.Drawing.Point(183, 348);
-            this.NMotoresCertMat.Name = "NMotoresCertMat";
-            this.NMotoresCertMat.Size = new System.Drawing.Size(48, 26);
-            this.NMotoresCertMat.TabIndex = 8;
-            // 
-            // label75
-            // 
-            this.label75.AutoSize = true;
-            this.label75.Location = new System.Drawing.Point(600, 217);
-            this.label75.Name = "label75";
-            this.label75.Size = new System.Drawing.Size(41, 18);
-            this.label75.TabIndex = 9;
-            this.label75.Text = "MTS";
-            // 
-            // label76
-            // 
-            this.label76.AutoSize = true;
-            this.label76.Location = new System.Drawing.Point(600, 259);
-            this.label76.Name = "label76";
-            this.label76.Size = new System.Drawing.Size(41, 18);
-            this.label76.TabIndex = 9;
-            this.label76.Text = "MTS";
-            // 
-            // label77
-            // 
-            this.label77.AutoSize = true;
-            this.label77.Location = new System.Drawing.Point(600, 297);
-            this.label77.Name = "label77";
-            this.label77.Size = new System.Drawing.Size(41, 18);
-            this.label77.TabIndex = 9;
-            this.label77.Text = "MTS";
-            // 
-            // label78
-            // 
-            this.label78.AutoSize = true;
-            this.label78.Location = new System.Drawing.Point(600, 350);
-            this.label78.Name = "label78";
-            this.label78.Size = new System.Drawing.Size(36, 18);
-            this.label78.TabIndex = 9;
-            this.label78.Text = "H.P.";
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -2586,6 +2587,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.CertMatri.ResumeLayout(false);
             this.CertMatri.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).EndInit();
             this.Pescadores.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -2616,7 +2618,6 @@
             this.Resumen.ResumeLayout(false);
             this.Resumen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

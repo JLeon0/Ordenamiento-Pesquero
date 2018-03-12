@@ -94,11 +94,11 @@ namespace OrdenamientoPesquero
 
         private void Registrar_Click(object sender, EventArgs e)
         {
-            if (Pescadores.Focused)
+            if (tabControl1.SelectedTab.Name=="Pescadores")
             {
                 exito = AccionesPescador(true);
             }
-            else if (Permisos.Focused)
+            else if (tabControl1.SelectedTab.Name == "Permisos")
             {
                 exito = AccionesPermiso(true);
                 for (int i = 0; i < dgvEmbarcacionesPerm.RowCount; i++)
@@ -107,11 +107,11 @@ namespace OrdenamientoPesquero
                     proc.Registrar_Embarcacion(Emb);
                 }
             }
-            else if (Directiva.Focused)
+            else if (tabControl1.SelectedTab.Name=="Directiva")
             {
 
             }
-            else if (CertMatri.Focused)
+            else if (tabControl1.SelectedTab.Name=="CertMatri")
             {
 
             }
