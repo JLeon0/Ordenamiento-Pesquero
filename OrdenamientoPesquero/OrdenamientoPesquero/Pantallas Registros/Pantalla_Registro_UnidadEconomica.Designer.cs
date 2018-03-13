@@ -1768,7 +1768,7 @@
             this.pictureBox9.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox9.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox9.Location = new System.Drawing.Point(262, 143);
+            this.pictureBox9.Location = new System.Drawing.Point(869, 91);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(23, 21);
             this.pictureBox9.TabIndex = 111;
@@ -2065,7 +2065,7 @@
             // 
             // CURPPesc
             // 
-            this.CURPPesc.Location = new System.Drawing.Point(70, 143);
+            this.CURPPesc.Location = new System.Drawing.Point(677, 86);
             this.CURPPesc.Name = "CURPPesc";
             this.CURPPesc.Size = new System.Drawing.Size(186, 26);
             this.CURPPesc.TabIndex = 8;
@@ -2074,7 +2074,7 @@
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(6, 146);
+            this.label49.Location = new System.Drawing.Point(623, 89);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(57, 18);
             this.label49.TabIndex = 7;
@@ -2083,9 +2083,10 @@
             // FechaNacPesc
             // 
             this.FechaNacPesc.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FechaNacPesc.Location = new System.Drawing.Point(623, 86);
+            this.FechaNacPesc.Enabled = false;
+            this.FechaNacPesc.Location = new System.Drawing.Point(9, 140);
             this.FechaNacPesc.Name = "FechaNacPesc";
-            this.FechaNacPesc.Size = new System.Drawing.Size(226, 26);
+            this.FechaNacPesc.Size = new System.Drawing.Size(277, 26);
             this.FechaNacPesc.TabIndex = 6;
             // 
             // label50
@@ -2108,7 +2109,7 @@
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(620, 68);
+            this.label51.Location = new System.Drawing.Point(7, 119);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(157, 18);
             this.label51.TabIndex = 3;

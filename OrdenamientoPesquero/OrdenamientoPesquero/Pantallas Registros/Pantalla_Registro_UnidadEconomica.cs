@@ -398,6 +398,23 @@ namespace OrdenamientoPesquero
                 return true;
             }
         }
+        public DateTime Fechanac(string curp)
+        {
+            string an = curp[4].ToString() + curp[5].ToString();
+            int año = 0, mes = 0, dia = 0;
+            año = Convert.ToInt32(an)+1900;
+            if (año<1930)
+            {
+                año += 100;
+            }
+            an = curp[6].ToString() + curp[7].ToString();
+            mes = Convert.ToInt32(an);
+            an = curp[8].ToString() + curp[9].ToString();
+            dia = Convert.ToInt32(an);
+            DateTime dti = new DateTime(año, mes, dia);
+            return dti;
+        }
+        
         public bool validarunidad()
         {
             bool estabien = true;
@@ -631,6 +648,15 @@ namespace OrdenamientoPesquero
             if (validarcurp(CURPPesc.Text))
             {
                 pictureBox9.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+                FechaNacPesc.Value = Fechanac(CURPPesc.Text);
+                if (CURPPesc.Text[10]=='H')
+                {
+                    MasculinoPesc.Checked = true;
+                }
+                else
+                {
+                    FemeninoPesc.Checked = true;
+                }
             }
             else
             {
