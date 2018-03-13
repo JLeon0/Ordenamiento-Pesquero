@@ -116,7 +116,7 @@ namespace OrdenamientoPesquero
                 for (int i = 0; i < dgvEmbarcacionesPerm.RowCount; i++)
                 {
                     Emb = new Embarcacion(dgvEmbarcacionesPerm[0, i].Value.ToString(), dgvEmbarcacionesPerm[1, i].Value.ToString(), dgvEmbarcacionesPerm[3, i].Value.ToString(), dgvEmbarcacionesPerm[2, i].Value.ToString(), txtMunicipio.Text, cbRNPA.Text);
-                    proc.Registrar_Embarcacion(Emb);
+                    proc.registrar_perm_emb(Emb, nPer.Text);
                 }
             }
             else if (tabControl1.SelectedTab.Name=="Directiva")
@@ -125,7 +125,7 @@ namespace OrdenamientoPesquero
             }
             else if (tabControl1.SelectedTab.Name=="CertMatri")
             {
-
+                exito = AccionesCertificado();
             }
             Exito(exito);
         }
@@ -229,7 +229,13 @@ namespace OrdenamientoPesquero
                     reg += proc.Registrar_Directiva(dir);
                 }
             }
-            return 0;
+            return reg;
+        }
+
+        public int AccionesCertificado()
+        {
+            Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text, cbRNPA.Text, txtMunicipio.Text, "", PotenciaMotorCertMat.Text, "", "", "", "", EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text, "", "");
+            return proc.Registrar_Embarcacion(Emb);            
         }
         #endregion
 
@@ -356,6 +362,11 @@ namespace OrdenamientoPesquero
             cargando = false;
         }
 
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            LlenarCampos();
+            Resumenes(cbRNPA.Text);
+        }
         private void LlenarCampos()
         {
             if (!cargando)
@@ -379,6 +390,20 @@ namespace OrdenamientoPesquero
                 if (tipo == 0)
                 { radioButton0.Checked = true; }
                 else { radioButton1.Checked = true; }
+
+                dt = proc.Obtener_Directiva(cbRNPA.Text);
+                numericUpDown3.Value = dgvDirectiva.RowCount = dt.Rows.Count;
+                int i = 0;
+                foreach (DataRow fila in dt.Rows)
+                {                    
+                    dgvDirectiva[0,i].Value = fila["NOMBRE"].ToString();
+                    dgvDirectiva[1, i].Value = fila["CARGO"].ToString();
+                    dgvDirectiva[2, i].Value = fila["FECHA_ING"].ToString();
+                    dgvDirectiva[3, i].Value = fila["TELEFONO"].ToString();
+                    i++;
+
+                }
+
             }
         }
         #endregion
@@ -501,11 +526,6 @@ namespace OrdenamientoPesquero
         }
 
 
-        private void pictureBox12_Click(object sender, EventArgs e)
-        {
-            LlenarCampos();
-            Resumenes(cbRNPA.Text);
-        }
         private void Exito(int ok)
         {
             if (ok == 1)
@@ -520,10 +540,7 @@ namespace OrdenamientoPesquero
             }
             exito = 0;
         }
-        private void cbRNPA_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
 
         private String DiferenciaFechas(DateTime newdt, DateTime olddt)
         {
@@ -598,7 +615,7 @@ namespace OrdenamientoPesquero
         }
         private void TelefonoPesc_TextChanged(object sender, EventArgs e)
         {
-            if (TelefonoPesc.Text.Contains(' ') || TelefonoPesc.Text.Length != 5)
+            if (TelefonoPesc.Text.Contains(' ') || TelefonoPesc.Text.Length != 12)
             {
                 pictureBox5.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
             }
@@ -722,7 +739,10 @@ namespace OrdenamientoPesquero
                 return false;
             }
         }
-
+        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
+        {
+            dgvDirectiva.RowCount = (int)numericUpDown3.Value;
+        }
         private void txtCorreo_TextChanged(object sender, EventArgs e)
         {
             if (validarCorreo(txtCorreo.Text))
@@ -736,7 +756,36 @@ namespace OrdenamientoPesquero
                 unidad[2, 0] = "0";
             }
         }
-
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (tabControl1.SelectedTab.Name == "Pescadores")
+            {
+                toolTip1.SetToolTip(Registrar, "Registrar Pescador");
+                toolTip1.SetToolTip(Actualizar, "Actualizar Pescador");
+                toolTip1.SetToolTip(Eliminar, "Eliminar Pescador");
+                toolTip1.SetToolTip(Ver, "Ver Pescadores");
+            }
+            else if (tabControl1.SelectedTab.Name == "Permisos")
+            {
+                toolTip1.SetToolTip(Registrar, "Registrar Permiso");
+                toolTip1.SetToolTip(Actualizar, "Actualizar Permiso");
+                toolTip1.SetToolTip(Eliminar, "Eliminar Permiso");
+                toolTip1.SetToolTip(Ver, "Ver Permisos");
+            }
+            else if (tabControl1.SelectedTab.Name == "Directiva")
+            {
+                toolTip1.SetToolTip(Registrar, "Registrar Directiva");
+                toolTip1.SetToolTip(Eliminar, "Eliminar Directiva");
+                toolTip1.SetToolTip(Actualizar, "Actualizar Directiva");
+            }
+            else if (tabControl1.SelectedTab.Name == "CertMatri")
+            {
+                toolTip1.SetToolTip(Registrar, "Registrar Certificado de Mátricula");
+                toolTip1.SetToolTip(Eliminar, "Eliminar Certificado de Mátricula");
+                toolTip1.SetToolTip(Actualizar, "Actualizar Certificado de Mátricula");
+                toolTip1.SetToolTip(Ver, "Ver Certificados de Mátriculas");
+            }
+        }
         #endregion
 
 
@@ -783,9 +832,6 @@ namespace OrdenamientoPesquero
             }
         }
 
-        private void numericUpDown3_ValueChanged(object sender, EventArgs e)
-        {
-            dgvDirectiva.RowCount = (int)numericUpDown3.Value;
-        }
+
     }
 }
