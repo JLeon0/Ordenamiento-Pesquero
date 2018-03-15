@@ -50,24 +50,40 @@ namespace OrdenamientoPesquero
             if (!escondido)
             {
                 gbOrgPes.Height -= 312;
+                Resumen.Height -= 300;
                 pBReubicar.Location = new Point(pBReubicar.Location.X, pBReubicar.Location.Y - 300);
                 tabControl1.Location = new Point(tabControl1.Location.X, tabControl1.Location.Y - 300);
                 ActualizarUnidad.Location = new Point(ActualizarUnidad.Location.X, ActualizarUnidad.Location.Y - 300);
+                EliminarUnidad.Location = new Point(EliminarUnidad.Location.X, EliminarUnidad.Location.Y - 300);
                 RegistrarUnidad.Location = new Point(RegistrarUnidad.Location.X, RegistrarUnidad.Location.Y - 300);
+                label65.Location = new Point(label65.Location.X + 200, label65.Location.Y - 190);
+                TotalPesquerias.Location = new Point(TotalPesquerias.Location.X + 200, TotalPesquerias.Location.Y - 190);
                 escondido = true;
                 pBReubicar.BackgroundImage = Properties.Resources.flechaabajo;
                 toolTip1.SetToolTip(pBReubicar, "Mostrar Información");
+                Registrar.Location = new Point(Registrar.Location.X, Registrar.Location.Y - 300);
+                Actualizar.Location = new Point(Actualizar.Location.X, Actualizar.Location.Y - 300);
+                Ver.Location = new Point(Ver.Location.X, Ver.Location.Y - 300);
+                Eliminar.Location = new Point(Eliminar.Location.X, Eliminar.Location.Y - 300);
             }
             else
             {
                 gbOrgPes.Height += 312;
+                Resumen.Height += 300;
                 pBReubicar.Location = new Point(pBReubicar.Location.X, pBReubicar.Location.Y + 300);
                 tabControl1.Location = new Point(tabControl1.Location.X, tabControl1.Location.Y + 300);
                 ActualizarUnidad.Location = new Point(ActualizarUnidad.Location.X, ActualizarUnidad.Location.Y + 300);
+                EliminarUnidad.Location = new Point(EliminarUnidad.Location.X, EliminarUnidad.Location.Y + 300);
                 RegistrarUnidad.Location = new Point(RegistrarUnidad.Location.X, RegistrarUnidad.Location.Y + 300);
+                label65.Location = new Point(label65.Location.X - 200, label65.Location.Y + 190);
+                TotalPesquerias.Location = new Point(TotalPesquerias.Location.X - 200, TotalPesquerias.Location.Y + 190);
                 escondido = false;
                 pBReubicar.BackgroundImage = Properties.Resources.flechaarriba;
                 toolTip1.SetToolTip(pBReubicar, "Esconder Información");
+                Registrar.Location = new Point(Registrar.Location.X, Registrar.Location.Y + 300);
+                Actualizar.Location = new Point(Actualizar.Location.X, Actualizar.Location.Y + 300);
+                Ver.Location = new Point(Ver.Location.X, Ver.Location.Y + 300);
+                Eliminar.Location = new Point(Eliminar.Location.X, Eliminar.Location.Y + 300);
             }
         }
 
@@ -234,8 +250,8 @@ namespace OrdenamientoPesquero
 
         public int AccionesCertificado()
         {
-            Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text, cbRNPA.Text, txtMunicipio.Text, "", PotenciaMotorCertMat.Text, "", "", "", "", EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text, "", "");
-            return proc.Registrar_Embarcacion(Emb);            
+            Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text, cbRNPA.Text, PotenciaMotorCertMat.Text,EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text);
+            return proc.Actualizar_Embarcacion(Emb);            
         }
         #endregion
 
@@ -441,10 +457,11 @@ namespace OrdenamientoPesquero
             }
             return estabien;
         }
+
         private void datagridview_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
-            if (dgv.CurrentCell.ColumnIndex == dgv.Columns["Matricula"].Index)
+            if (dgv.CurrentCell.ColumnIndex == dgv.Columns["Matricula"].Index || dgv.CurrentCell.ColumnIndex == dgv.Columns["Marcamotor"].Index)
             {
                 ComboBox cbx = (ComboBox)e.Control;
                 cbx.DropDownStyle = ComboBoxStyle.DropDown;
@@ -477,6 +494,7 @@ namespace OrdenamientoPesquero
                 grid.CurrentCell.Value = value;
             }
         }
+
         private void ArqBrutoCertMat_KeyPress(object sender, KeyPressEventArgs e)
         {
             TextBox txt = (TextBox)sender;
@@ -805,7 +823,5 @@ namespace OrdenamientoPesquero
 
             }
         }
-
-
     }
 }
