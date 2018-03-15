@@ -132,7 +132,9 @@
             this.label64 = new System.Windows.Forms.Label();
             this.TipoEmbCertMar = new System.Windows.Forms.ComboBox();
             this.label62 = new System.Windows.Forms.Label();
+            this.MatriculaCertMat = new System.Windows.Forms.TextBox();
             this.NombreEmbCerMat = new System.Windows.Forms.TextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
             this.Pescadores = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
@@ -231,8 +233,6 @@
             this.TotalPermisos = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.MatriculaCertMat = new System.Windows.Forms.TextBox();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -486,7 +486,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(11, 32);
+            this.label3.Location = new System.Drawing.Point(2, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -1429,12 +1429,28 @@
             this.label62.TabIndex = 2;
             this.label62.Text = "Tipo de Embarcación:";
             // 
+            // MatriculaCertMat
+            // 
+            this.MatriculaCertMat.Location = new System.Drawing.Point(236, 13);
+            this.MatriculaCertMat.Name = "MatriculaCertMat";
+            this.MatriculaCertMat.Size = new System.Drawing.Size(358, 26);
+            this.MatriculaCertMat.TabIndex = 1;
+            // 
             // NombreEmbCerMat
             // 
             this.NombreEmbCerMat.Location = new System.Drawing.Point(236, 54);
             this.NombreEmbCerMat.Name = "NombreEmbCerMat";
             this.NombreEmbCerMat.Size = new System.Drawing.Size(358, 26);
             this.NombreEmbCerMat.TabIndex = 1;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(28, 16);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(209, 18);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Matrícula de la Embarcación:";
             // 
             // label60
             // 
@@ -2458,25 +2474,9 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(614, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(597, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(28, 16);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(209, 18);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Matrícula de la Embarcación:";
-            // 
-            // MatriculaCertMat
-            // 
-            this.MatriculaCertMat.Location = new System.Drawing.Point(236, 13);
-            this.MatriculaCertMat.Name = "MatriculaCertMat";
-            this.MatriculaCertMat.Size = new System.Drawing.Size(358, 26);
-            this.MatriculaCertMat.TabIndex = 1;
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
