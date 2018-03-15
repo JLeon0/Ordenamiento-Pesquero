@@ -27,6 +27,7 @@ namespace OrdenamientoPesquero
         DataSet ds = new DataSet();
         DataTable dt = null;
         string[,] unidad = { { "0", "RFC" }, { "0", "Codigo Postal" }, { "0", "Correo Electronico" }, { "0", "Telefono de la Cooperativa" } };
+        string[,] pescador = { { "0", "CURP" }, { "0", "RFC" }, { "0", "Codigo postal" }, { "0", "Telefono" } , { "0","Correo Electronico"} };
         public Pantalla_Registro_UnidadEconomica()
         {
             InitializeComponent();
@@ -92,7 +93,7 @@ namespace OrdenamientoPesquero
         #region Registros
         private void RegistrarUnidad_Click(object sender, EventArgs e)
         {
-            if (validarunidad())
+            if (validaralgo(unidad))
             {
                 if (!existe(cbRNPA.Text))
                 {
@@ -122,7 +123,7 @@ namespace OrdenamientoPesquero
 
         private void Registrar_Click(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedTab.Name=="Pescadores")
+            if (validaralgo(pescador)&& tabControl1.SelectedTab.Name=="Pescadores")
             {
                 exito = AccionesPescador(true);
             }
@@ -259,7 +260,7 @@ namespace OrdenamientoPesquero
         #region Actualizaciones
         private void ActualizarUnidad_Click(object sender, EventArgs e)
         {
-            if (validarunidad())
+            if (validaralgo(unidad))
             {
                 if (cargado)
                 {
@@ -279,7 +280,7 @@ namespace OrdenamientoPesquero
         }
         private void Actualizar_Click(object sender, EventArgs e)
         {
-            if (tabControl1.SelectedTab.Name == "Pescadores")
+            if (validaralgo(pescador) && tabControl1.SelectedTab.Name == "Pescadores")
             {
                 exito = AccionesPescador(false);
             }
@@ -303,9 +304,9 @@ namespace OrdenamientoPesquero
         #region Eliminaciones
         private void EliminarUnidad_Click(object sender, EventArgs e)
         {
-            if (cargado)
+            if (existe(cbRNPA.Text))
             {
-                DialogResult Si = MessageBox.Show("¿Desea eliminar esta Unidad Económica?", "ADVERTENCIA", MessageBoxButtons.YesNo);
+                DialogResult Si = MessageBox.Show("¿Desea eliminar esta Unidad Económica?", "ADVERTENCIA", MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
                 if (Si == DialogResult.Yes)
                 {
                     if (proc.Eliminar_Unidad(cbRNPA.Text) == 1)
@@ -429,7 +430,7 @@ namespace OrdenamientoPesquero
         //Escribir en data
         public bool existe(string rnpa)
         {
-            dt = proc.Obtener_todas_unidades(rnpa);
+            dt = proc.Obtener_unidades(rnpa);
             if (dt.Rows.Count==0)
             {
                 return false;
@@ -439,21 +440,38 @@ namespace OrdenamientoPesquero
                 return true;
             }
         }
-        public bool validarunidad()
+        public DateTime Fechanac(string curp)
+        {
+            string an = curp[4].ToString() + curp[5].ToString();
+            int año = 0, mes = 0, dia = 0;
+            año = Convert.ToInt32(an)+1900;
+            if (año<1930)
+            {
+                año += 100;
+            }
+            an = curp[6].ToString() + curp[7].ToString();
+            mes = Convert.ToInt32(an);
+            an = curp[8].ToString() + curp[9].ToString();
+            dia = Convert.ToInt32(an);
+            DateTime dti = new DateTime(año, mes, dia);
+            return dti;
+        }
+
+        public bool validaralgo(string[,] arre)
         {
             bool estabien = true;
-            string msg = "Los siguientes campos estan mal: \n";
-            for (int i = 0; i < 4; i++)
+            string msg = "Los siguientes campos estan mal o incompletos: \n";
+            for (int i = 0; i < arre.Length/2; i++)
             {
-                if (unidad[i,0]=="0")
+                if (arre[i,0]=="0")
                 {
                     estabien = false;
-                    msg += "----"+unidad[i, 1]+"\n";
+                    msg += "----"+arre[i, 1]+"\n";
                 }
             }
             if (!estabien)
             {
-                MessageBox.Show(msg,"Error en los datos");
+                MessageBox.Show(msg,"Error en los datos",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             return estabien;
         }
@@ -608,10 +626,12 @@ namespace OrdenamientoPesquero
             if (CPPesc.Text.Contains(' ') || CPPesc.Text.Length != 5)
             {
                 pictureBox8.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+                pescador[2, 0] = "1";
             }
             else
             {
                 pictureBox8.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+                pescador[2, 0] = "0";
             }
         }
         private void TelefonoPesc_TextChanged(object sender, EventArgs e)
@@ -619,10 +639,12 @@ namespace OrdenamientoPesquero
             if (TelefonoPesc.Text.Contains(' ') || TelefonoPesc.Text.Length != 12)
             {
                 pictureBox5.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+                pescador[3, 0] = "0";
             }
             else
             {
                 pictureBox5.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+                pescador[3, 0] = "1";
             }
         }
 
@@ -644,10 +666,12 @@ namespace OrdenamientoPesquero
             if (validarCorreo(CorreoPesc.Text))
             {
                 pictureBox6.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+                pescador[4, 0] = "1";
             }
             else
             {
                 pictureBox6.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+                pescador[4, 0] = "0";
             }
         }
         private void mtbTelRepFed_TextChanged(object sender, EventArgs e)
@@ -666,10 +690,21 @@ namespace OrdenamientoPesquero
             if (validarcurp(CURPPesc.Text))
             {
                 pictureBox9.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+                pescador[0, 0] = "1";
+                FechaNacPesc.Value = Fechanac(CURPPesc.Text);
+                if (CURPPesc.Text[10]=='H')
+                {
+                    MasculinoPesc.Checked = true;
+                }
+                else
+                {
+                    FemeninoPesc.Checked = true;
+                }
             }
             else
             {
                 pictureBox9.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+                pescador[0, 0] = "0";
             }
         }
         public bool validarcurp(string rfc)
@@ -714,10 +749,13 @@ namespace OrdenamientoPesquero
             if (validarrfc(RFCPesc.Text))
             {
                 pictureBox7.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+                pescador[1, 0] = "1";
+
             }
             else
             {
                 pictureBox7.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+                pescador[1, 0] = "0";
             }
         }
         public bool validarrfc(string rfc)
