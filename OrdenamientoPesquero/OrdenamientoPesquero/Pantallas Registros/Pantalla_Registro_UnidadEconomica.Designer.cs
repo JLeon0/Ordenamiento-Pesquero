@@ -807,6 +807,7 @@
             this.tabControl1.Controls.Add(this.Pescadores);
             this.tabControl1.Controls.Add(this.Directiva);
             this.tabControl1.Controls.Add(this.Expediente);
+            this.tabControl1.Enabled = false;
             this.tabControl1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tabControl1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.tabControl1.Location = new System.Drawing.Point(1, 570);
@@ -1919,6 +1920,7 @@
             // MasculinoPesc
             // 
             this.MasculinoPesc.AutoSize = true;
+            this.MasculinoPesc.Checked = true;
             this.MasculinoPesc.Location = new System.Drawing.Point(614, 144);
             this.MasculinoPesc.Name = "MasculinoPesc";
             this.MasculinoPesc.Size = new System.Drawing.Size(96, 22);
