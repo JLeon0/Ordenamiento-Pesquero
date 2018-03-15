@@ -2392,7 +2392,7 @@
             this.TotalPesquerias.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalPesquerias.FormattingEnabled = true;
             this.TotalPesquerias.ItemHeight = 18;
-            this.TotalPesquerias.Location = new System.Drawing.Point(28, 277);
+            this.TotalPesquerias.Location = new System.Drawing.Point(26, 276);
             this.TotalPesquerias.Name = "TotalPesquerias";
             this.TotalPesquerias.Size = new System.Drawing.Size(150, 94);
             this.TotalPesquerias.TabIndex = 7;
@@ -2401,7 +2401,7 @@
             // 
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(6, 247);
+            this.label65.Location = new System.Drawing.Point(4, 246);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(172, 18);
             this.label65.TabIndex = 6;
@@ -2411,7 +2411,7 @@
             // 
             this.TotalEsfuerzos.AutoSize = true;
             this.TotalEsfuerzos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalEsfuerzos.Location = new System.Drawing.Point(42, 215);
+            this.TotalEsfuerzos.Location = new System.Drawing.Point(40, 222);
             this.TotalEsfuerzos.Name = "TotalEsfuerzos";
             this.TotalEsfuerzos.Size = new System.Drawing.Size(29, 22);
             this.TotalEsfuerzos.TabIndex = 5;
@@ -2421,7 +2421,7 @@
             // 
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(6, 189);
+            this.label63.Location = new System.Drawing.Point(4, 188);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(242, 18);
             this.label63.TabIndex = 4;
@@ -2431,7 +2431,7 @@
             // 
             this.TotalSocios.AutoSize = true;
             this.TotalSocios.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalSocios.Location = new System.Drawing.Point(42, 157);
+            this.TotalSocios.Location = new System.Drawing.Point(40, 164);
             this.TotalSocios.Name = "TotalSocios";
             this.TotalSocios.Size = new System.Drawing.Size(29, 22);
             this.TotalSocios.TabIndex = 3;
@@ -2441,7 +2441,7 @@
             // 
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(6, 130);
+            this.label61.Location = new System.Drawing.Point(4, 116);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(142, 18);
             this.label61.TabIndex = 2;
@@ -2461,7 +2461,7 @@
             // 
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.Location = new System.Drawing.Point(6, 76);
+            this.label59.Location = new System.Drawing.Point(6, 55);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(160, 18);
             this.label59.TabIndex = 0;

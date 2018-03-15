@@ -69,24 +69,9 @@ namespace Logica
             OBSERVACIONES = "";
             RNP = "";
         }
-        public Embarcacion(string nombre,
-        string matricula,
-        string rNPA,
-        string aVID,
-        string mARCA,
-        string hP,
-        string mUNICIPIO,
-        string rEGISTRONUM,
-        string fECHACHIPEADO,
-        string fECHAEXP,
-        string eSLORA,
-        string mANGA,
-        string pUNTAL,
-        string aRQUEOBRUTO,
-        string aRQUEONETO,
-        string tONELAJE,
-        string oBSERVACIONES,
-        string rNP)
+        public Embarcacion(string nombre,string matricula,string rNPA,string aVID,string mARCA,string hP,string mUNICIPIO,
+        string rEGISTRONUM,string fECHACHIPEADO,string fECHAEXP,string eSLORA,string mANGA,string pUNTAL,string aRQUEOBRUTO,
+        string aRQUEONETO,string tONELAJE,string oBSERVACIONES,string rNP)
         {
             Nombre = nombre;
             Matricula = matricula;
@@ -106,6 +91,21 @@ namespace Logica
             TONELAJE = tONELAJE;
             OBSERVACIONES = oBSERVACIONES;
             RNP = rNP;
+        }
+
+        public Embarcacion(string nombre, string matricula, string rnpa, string hp, string eslora, string manga, string puntal,
+            string arqueobruto, string arqueoneto, string tonelaje)
+        {
+            Nombre = nombre;
+            Matricula = matricula;
+            RNPATITULAR = rnpa;
+            HP = hp;
+            ESLORA = eslora;
+            MANGA = manga;
+            PUNTAL = puntal;
+            ARQUEOBRUTO = arqueobruto;
+            ARQUEONETO = arqueoneto;
+            TONELAJE = tonelaje;
         }
     }
 }

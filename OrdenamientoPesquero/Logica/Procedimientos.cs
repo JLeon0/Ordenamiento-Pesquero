@@ -99,8 +99,8 @@ namespace Logica
         }
         public int Actualizar_Embarcacion(Embarcacion EMB)
         {
-            string[] Parametros = { "@matricula", "@nombre", "@rnpaemb", "@numchip", "@RegNUm", "@FechaExped", "@Fechachipeo", "@RNPATIT", "@munici", "@motorHP", "@motormarca", "@eslora", "@manga", "@puntal", "@arqueobruto", "@arqueoneto", "@tonelaje", "@Observaciones" };
-            return c.Ejecutar("ActualizarEmbacacion", Parametros, EMB.Matricula, EMB.Nombre, EMB.RNP, EMB.AVID, EMB.REGISTRONUM, EMB.FECHAEXP, EMB.FECHACHIPEADO, EMB.RNPATITULAR, EMB.MUNICIPIO, EMB.HP, EMB.MARCA, EMB.ESLORA, EMB.MANGA, EMB.PUNTAL, EMB.ARQUEOBRUTO, EMB.ARQUEONETO, EMB.TONELAJE, EMB.OBSERVACIONES);
+            string[] Parametros = { "@matricula", "@nombre", "@RNPATIT","@motorHP", "@eslora", "@manga", "@puntal", "@arqueobruto", "@arqueoneto", "@tonelaje"};
+            return c.Ejecutar("ActualizarEmbacacion", Parametros, EMB.Matricula, EMB.Nombre,EMB.RNPATITULAR, EMB.HP, EMB.ESLORA, EMB.MANGA, EMB.PUNTAL, EMB.ARQUEOBRUTO, EMB.ARQUEONETO, EMB.TONELAJE);
 
         }
         public int Eliminar_Embarcacion(String Matricula)
