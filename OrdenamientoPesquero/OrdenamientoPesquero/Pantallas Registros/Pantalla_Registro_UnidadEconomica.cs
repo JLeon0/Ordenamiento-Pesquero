@@ -106,8 +106,12 @@ namespace OrdenamientoPesquero
                         }
                         else if (radioButton1.Checked)
                         {
-                            ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
+                            ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "1", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
                             exito = proc.Registrar_Unidad(ue);
+                        }
+                        if (exito != 0)
+                        {
+                            tabControl1.Enabled = true;
                         }
                         CargarRNPA();
                         Exito(exito);
@@ -123,9 +127,17 @@ namespace OrdenamientoPesquero
 
         private void Registrar_Click(object sender, EventArgs e)
         {
-            if (validaralgo(pescador)&& tabControl1.SelectedTab.Name=="Pescadores")
+            bool errordatos = false;
+            if (tabControl1.SelectedTab.Name=="Pescadores")
             {
-                exito = AccionesPescador(true);
+                if (!validaralgo(pescador))
+                {
+                    errordatos = true;
+                }
+                else
+                {
+                    exito = AccionesPescador(true);
+                }
             }
             else if (tabControl1.SelectedTab.Name == "Permisos")
             {
@@ -144,7 +156,10 @@ namespace OrdenamientoPesquero
             {
                 exito = AccionesCertificado();
             }
-            Exito(exito);
+            if (!errordatos)
+            {
+                Exito(exito);
+            }
         }
         #endregion
 
@@ -156,28 +171,28 @@ namespace OrdenamientoPesquero
             string tipo_pes = "";
             string ocupacion = "";
             string cuerpo = "";
-            foreach (CheckBox item in groupBox7.Controls)
+            foreach (CheckBox item in groupBox7.Controls.OfType<CheckBox>())
             {
                 if (item.Checked)
                 {
                     sexo = item.Text;
                 }
             }
-            foreach (CheckBox item in TipoPesc.Controls)
+            foreach (CheckBox item in TipoPesc.Controls.OfType<CheckBox>())
             {
                 if (item.Checked)
                 {
                     tipo_pes = item.Text;
                 }
             }
-            foreach (CheckBox item in OcupacionEnEmbarPesc.Controls)
+            foreach (CheckBox item in OcupacionEnEmbarPesc.Controls.OfType<CheckBox>())
             {
                 if (item.Checked)
                 {
                     ocupacion = item.Text;
                 }
             }
-            foreach (CheckBox item in CuerpoDeAguaPesc.Controls)
+            foreach (CheckBox item in CuerpoDeAguaPesc.Controls.OfType<CheckBox>())
             {
                 if (item.Checked)
                 {
@@ -280,9 +295,17 @@ namespace OrdenamientoPesquero
         }
         private void Actualizar_Click(object sender, EventArgs e)
         {
-            if (validaralgo(pescador) && tabControl1.SelectedTab.Name == "Pescadores")
+            bool errordatos = false;
+            if (tabControl1.SelectedTab.Name == "Pescadores")
             {
-                exito = AccionesPescador(false);
+                if (!validaralgo(pescador))
+                {
+                    errordatos = true;
+                }
+                else
+                {
+                    exito = AccionesPescador(false);
+                }
             }
             else if (tabControl1.SelectedTab.Name == "Permisos")
             {
@@ -296,8 +319,11 @@ namespace OrdenamientoPesquero
             {
 
             }
-            Exito(exito);
-        }
+            if (!errordatos)
+            {
+                Exito(exito);
+            }
+       }
         #endregion
 
 
@@ -377,6 +403,7 @@ namespace OrdenamientoPesquero
             cbRNPA.Text = a;
             txtNombre.Focus();
             cargando = false;
+                tabControl1.Enabled = true;
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
@@ -389,7 +416,10 @@ namespace OrdenamientoPesquero
             if (!cargando)
             {
                 dt = proc.Obtener_todas_unidades(cbRNPA.Text);
-                if (dt.Rows.Count == 0) { cargado = false; } else { cargado = true; }
+                if (dt.Rows.Count != 0) { cargado = true;
+                    tabControl1.Enabled = true;
+                }
+                else { cargado = false; }
                 int tipo = 0;
                 foreach (DataRow fila in dt.Rows)
                 {
@@ -534,6 +564,7 @@ namespace OrdenamientoPesquero
         private void cbRNPA_TextChanged(object sender, EventArgs e)
         {
             cargado = false;
+            tabControl1.Enabled = false;
             //foreach (TextBox item in gbOrgPes.Controls.OfType<TextBox>())
             //{
             //    item.Text = "";
