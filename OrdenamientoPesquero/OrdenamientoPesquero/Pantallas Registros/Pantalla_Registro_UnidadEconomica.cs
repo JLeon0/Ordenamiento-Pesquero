@@ -137,6 +137,7 @@ namespace OrdenamientoPesquero
                 else
                 {
                     exito = AccionesPescador(true);
+                    Resumenes(cbRNPA.Text);
                 }
             }
             else if (tabControl1.SelectedTab.Name == "Permisos")
@@ -157,7 +158,7 @@ namespace OrdenamientoPesquero
             }
             else if (tabControl1.SelectedTab.Name=="CertMatri")
             {
-                exito = AccionesCertificado();
+                exito = AccionesCertificado(true);
             }
             if (!errordatos)
             {
@@ -267,10 +268,18 @@ namespace OrdenamientoPesquero
             return reg;
         }
 
-        public int AccionesCertificado()
+        public int AccionesCertificado(bool Registro)
         {
-            Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text, cbRNPA.Text, PotenciaMotorCertMat.Text,EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text);
-            return proc.Actualizar_Embarcacion(Emb);            
+            if (Registro)
+            {
+                Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text, cbRNPA.Text, PotenciaMotorCertMat.Text, EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text);
+                return proc.Registrar_Embarcacion(Emb);
+            }
+            else
+            {
+                Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text, cbRNPA.Text, PotenciaMotorCertMat.Text, EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text);
+                return proc.Actualizar_Embarcacion(Emb);
+            }
         }
         #endregion
 
