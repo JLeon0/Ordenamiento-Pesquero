@@ -49,6 +49,26 @@ namespace Logica
             string[] Parametros = { "@Npermiso" };
             return c.Ejecutar(" EliminarPermiso", Parametros, Numpermiso);
         }
+        public DataTable ObtenerNoPermisos(string RNPA)
+        {
+            string[] Parametros = { "@rnpa" };
+            return c.getDatosTabla("NoPermisoxUnidad", Parametros, RNPA);
+        }
+        public DataTable ObtenerPermiso(int nopermiso)
+        {
+            string[] Parametros = { "@Nopermiso" };
+            return c.getDatosTabla("PermisoxNoPermiso", Parametros, nopermiso);
+        }
+        public DataTable NumeroEmbarcaciones(int nopermiso)
+        {
+            string[] Parametros = { "@Nopermiso" };
+            return c.getDatosTabla("NumeroEmbarcacionesxPermiso", Parametros, nopermiso);
+        }
+        public DataTable EmbarcacionesxPermiso(int nopermiso)
+        {
+            string[] Parametros = { "@Nopermiso" };
+            return c.getDatosTabla("EmbarcacionesxPermiso", Parametros, nopermiso);
+        }
         #endregion
 
 
