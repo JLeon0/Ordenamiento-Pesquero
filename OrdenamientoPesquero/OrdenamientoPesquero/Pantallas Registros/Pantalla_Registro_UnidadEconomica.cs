@@ -144,8 +144,11 @@ namespace OrdenamientoPesquero
                 exito = AccionesPermiso(true);
                 for (int i = 0; i < dgvEmbarcacionesPerm.RowCount; i++)
                 {
-                    Emb = new Embarcacion(dgvEmbarcacionesPerm[0, i].Value.ToString(), dgvEmbarcacionesPerm[1, i].Value.ToString(), dgvEmbarcacionesPerm[3, i].Value.ToString(), dgvEmbarcacionesPerm[2, i].Value.ToString(), txtMunicipio.Text, cbRNPA.Text);
-                    proc.registrar_perm_emb(Emb, nPer.Text);
+                    if (dgvEmbarcacionesPerm[0, i].Value != null)
+                    {
+                        Emb = new Embarcacion(dgvEmbarcacionesPerm[0, i].Value.ToString(), dgvEmbarcacionesPerm[1, i].Value.ToString(), dgvEmbarcacionesPerm[3, i].Value.ToString(), dgvEmbarcacionesPerm[2, i].Value.ToString(), txtMunicipio.Text, cbRNPA.Text);
+                        proc.registrar_perm_emb(Emb, nPer.Text);
+                    }
                 }
             }
             else if (tabControl1.SelectedTab.Name=="Directiva")
