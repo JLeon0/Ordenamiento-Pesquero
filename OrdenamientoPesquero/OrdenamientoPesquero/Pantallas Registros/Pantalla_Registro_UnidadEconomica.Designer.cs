@@ -89,7 +89,6 @@
             this.label27 = new System.Windows.Forms.Label();
             this.LugarExpPer = new System.Windows.Forms.ComboBox();
             this.VigenciaPerm = new System.Windows.Forms.TextBox();
-            this.nPer = new System.Windows.Forms.TextBox();
             this.label33 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label31 = new System.Windows.Forms.Label();
@@ -233,6 +232,7 @@
             this.TotalPermisos = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.nPer = new System.Windows.Forms.ComboBox();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -486,7 +486,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(2, 32);
+            this.label3.Location = new System.Drawing.Point(83, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -556,15 +556,15 @@
             // 
             // pictureBox12
             // 
-            this.pictureBox12.BackColor = System.Drawing.Color.Black;
-            this.pictureBox12.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.lupa;
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox12.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.lupa1;
             this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox12.Location = new System.Drawing.Point(378, 21);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(37, 28);
             this.pictureBox12.TabIndex = 114;
             this.pictureBox12.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox12, "Eliminar Unidad Economica");
+            this.toolTip1.SetToolTip(this.pictureBox12, "Buscar Unidad Economica");
             this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
             // mtbTelRepFed
@@ -921,6 +921,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.nPer);
             this.groupBox3.Controls.Add(this.finVigenciaPer);
             this.groupBox3.Controls.Add(this.label38);
             this.groupBox3.Controls.Add(this.diaExpPer);
@@ -929,7 +930,6 @@
             this.groupBox3.Controls.Add(this.label27);
             this.groupBox3.Controls.Add(this.LugarExpPer);
             this.groupBox3.Controls.Add(this.VigenciaPerm);
-            this.groupBox3.Controls.Add(this.nPer);
             this.groupBox3.Controls.Add(this.label33);
             this.groupBox3.Controls.Add(this.label32);
             this.groupBox3.Controls.Add(this.label31);
@@ -1014,14 +1014,6 @@
             this.VigenciaPerm.Name = "VigenciaPerm";
             this.VigenciaPerm.Size = new System.Drawing.Size(192, 26);
             this.VigenciaPerm.TabIndex = 5;
-            // 
-            // nPer
-            // 
-            this.nPer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nPer.Location = new System.Drawing.Point(123, 20);
-            this.nPer.Name = "nPer";
-            this.nPer.Size = new System.Drawing.Size(192, 26);
-            this.nPer.TabIndex = 1;
             // 
             // label33
             // 
@@ -2476,9 +2468,17 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(597, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(775, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
+            // 
+            // nPer
+            // 
+            this.nPer.FormattingEnabled = true;
+            this.nPer.Location = new System.Drawing.Point(123, 20);
+            this.nPer.Name = "nPer";
+            this.nPer.Size = new System.Drawing.Size(140, 26);
+            this.nPer.TabIndex = 70;
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -2486,7 +2486,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1296, 749);
+            this.ClientSize = new System.Drawing.Size(1330, 749);
             this.Controls.Add(this.Ver);
             this.Controls.Add(this.Eliminar);
             this.Controls.Add(this.Actualizar);
@@ -2611,7 +2611,6 @@
         private System.Windows.Forms.ComboBox PesqueriaPer;
         private System.Windows.Forms.ComboBox LugarExpPer;
         private System.Windows.Forms.TextBox VigenciaPerm;
-        private System.Windows.Forms.TextBox nPer;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label31;
@@ -2768,5 +2767,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.TextBox MatriculaCertMat;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox nPer;
     }
 }
