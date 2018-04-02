@@ -2497,6 +2497,7 @@
             this.pictureBox13.TabIndex = 115;
             this.pictureBox13.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox13, "Buscar Unidad Economica");
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
