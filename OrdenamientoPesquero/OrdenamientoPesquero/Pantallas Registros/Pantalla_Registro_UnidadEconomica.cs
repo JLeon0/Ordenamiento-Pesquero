@@ -277,12 +277,12 @@ namespace OrdenamientoPesquero
         {
             if (Registro)
             {
-                Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text, cbRNPA.Text, PotenciaMotorCertMat.Text, EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text);
+                Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text, cbRNPA.Text, PotenciaMotorCertMat.Text, EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text, ServicioCertMat.Text, TraficoCertMat.Text, NMotoresCertMat.Value.ToString());
                 return proc.Registrar_Embarcacion(Emb);
             }
             else
             {
-                Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text, cbRNPA.Text, PotenciaMotorCertMat.Text, EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text);
+                Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text, cbRNPA.Text, PotenciaMotorCertMat.Text, EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text, ServicioCertMat.Text, TraficoCertMat.Text, NMotoresCertMat.Value.ToString());
                 return proc.Actualizar_Embarcacion(Emb);
             }
         }
@@ -344,7 +344,7 @@ namespace OrdenamientoPesquero
             }
             else if (tabControl1.SelectedTab.Name == "CertMatri")
             {
-
+                exito = AccionesCertificado(false);
             }
             if (!errordatos)
             {
@@ -449,6 +449,7 @@ namespace OrdenamientoPesquero
             CargarPermisos();
             CertMatXUnidad(cbRNPA.Text);
             limpiarpermiso();
+            limpiarcertmat();
         }
 
         public void CertMatXUnidad(string RNPA)
@@ -1072,16 +1073,25 @@ namespace OrdenamientoPesquero
         {
             limpiarcertmat();
             dt = proc.ObtenerCertMatrXUnidad(cbRNPA.Text);
-            if(dt.Rows.Count > 0)
+            int i = dt.Rows.Count;
+            foreach (DataRow filas in dt.Rows)
             {
-                NombreEmbCerMat.Text = dt.Rows[0]["NOMBREEMBARCACION"].ToString();
-                ArqBrutoCertMat.Text = dt.Rows[0]["ARQUEOBRUTO"].ToString();
-                ArqNetoCertMat.Text = dt.Rows[0]["ARQUEONETO"].ToString();
-                EsloraCertMat.Text = dt.Rows[0]["ESLORA"].ToString();
-                MangaCertMat.Text = dt.Rows[0]["MANGA"].ToString();
-                NMotoresCertMat.Text = dt.Rows[0]["ZONAPESCA"].ToString();
-                SitiosDesemPer.Text = dt.Rows[0]["SITIOSDESEMBARQUE"].ToString();
-                ObservacionesPem.Text = dt.Rows[0]["OBSERVACIONES"].ToString();
+                string mat = filas["MATRICULA"].ToString();
+                if (mat == MatriculaCertMat.Text)
+                {
+                    NombreEmbCerMat.Text = filas["NOMBREEMBARCACION"].ToString();
+                    ArqBrutoCertMat.Text = filas["ARQUEOBRUTO"].ToString();
+                    ArqNetoCertMat.Text = filas["ARQUEONETO"].ToString();
+                    EsloraCertMat.Text = filas["ESLORA"].ToString();
+                    MangaCertMat.Text = filas["MANGA"].ToString();
+                    NMotoresCertMat.Text = filas["NMOTORES"].ToString();
+                    PesoMCertMat.Text = filas["TONELAJE"].ToString();
+                    PotenciaMotorCertMat.Text = filas["MOTORHP"].ToString();
+                    PuntalCertMat.Text = filas["PUNTAL"].ToString();
+                    ServicioCertMat.Text = filas["SERVICIO"].ToString();
+                    TraficoCertMat.Text = filas["TRAFICO"].ToString();
+                }
+                i--;
             }
         }
     }

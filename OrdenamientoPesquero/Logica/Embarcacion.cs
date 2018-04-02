@@ -27,6 +27,11 @@ namespace Logica
         public string ARQUEONETO { get; set; }
         public string TONELAJE { get; set; }
         public string OBSERVACIONES { get; set; }
+
+
+        public string SERVICIO { get; set; }
+        public string TRAFICO { get; set; }
+        public string NMOTORES { get; set; }
         public Embarcacion()
         {
          Nombre="";
@@ -94,7 +99,7 @@ namespace Logica
         }
 
         public Embarcacion(string nombre, string matricula, string rnpa, string hp, string eslora, string manga, string puntal,
-            string arqueobruto, string arqueoneto, string tonelaje)
+            string arqueobruto, string arqueoneto, string tonelaje, string servicio, string trafico, string Nmotores)
         {
             Nombre = nombre;
             Matricula = matricula;
@@ -106,6 +111,9 @@ namespace Logica
             ARQUEOBRUTO = arqueobruto;
             ARQUEONETO = arqueoneto;
             TONELAJE = tonelaje;
+            SERVICIO = servicio;
+            TRAFICO = trafico;
+            NMOTORES = Nmotores;
         }
     }
 }

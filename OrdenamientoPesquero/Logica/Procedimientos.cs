@@ -128,14 +128,14 @@ namespace Logica
         #region Embarcacion
         public int Registrar_Embarcacion(Embarcacion EMB)
         {
-            string[] Parametros = {"@matricula", "@nombre","@RNPATIT","@motorHP", "@eslora", "@manga", "@puntal", "@arqueobruto","@arqueoneto","@tonelaje"};
-            return c.Ejecutar("RegistrarEmbarca", Parametros, EMB.Matricula, EMB.Nombre, EMB.RNPATITULAR,EMB.HP, EMB.ESLORA, EMB.MANGA, EMB.PUNTAL, EMB.ARQUEOBRUTO, EMB.ARQUEONETO, EMB.TONELAJE);
+            string[] Parametros = {"@matricula", "@nombre","@RNPATIT","@motorHP", "@eslora", "@manga", "@puntal", "@arqueobruto","@arqueoneto","@tonelaje", "@servicio", "@trafico", "@nmotores" };
+            return c.Ejecutar("RegistrarEmbarca", Parametros, EMB.Matricula, EMB.Nombre, EMB.RNPATITULAR,EMB.HP, EMB.ESLORA, EMB.MANGA, EMB.PUNTAL, EMB.ARQUEOBRUTO, EMB.ARQUEONETO, EMB.TONELAJE, EMB.SERVICIO, EMB.TRAFICO, EMB.NMOTORES);
 
         }
         public int Actualizar_Embarcacion(Embarcacion EMB)
         {
-            string[] Parametros = { "@matricula", "@nombre", "@RNPATIT","@motorHP", "@eslora", "@manga", "@puntal", "@arqueobruto", "@arqueoneto", "@tonelaje"};
-            return c.Ejecutar("ActualizarEmbacacion", Parametros, EMB.Matricula, EMB.Nombre,EMB.RNPATITULAR, EMB.HP, EMB.ESLORA, EMB.MANGA, EMB.PUNTAL, EMB.ARQUEOBRUTO, EMB.ARQUEONETO, EMB.TONELAJE);
+            string[] Parametros = { "@matricula", "@nombre", "@RNPATIT","@motorHP", "@eslora", "@manga", "@puntal", "@arqueobruto", "@arqueoneto", "@tonelaje", "@servicio", "@trafico", "@nmotores"};
+            return c.Ejecutar("ActualizarEmbacacion", Parametros, EMB.Matricula, EMB.Nombre,EMB.RNPATITULAR, EMB.HP, EMB.ESLORA, EMB.MANGA, EMB.PUNTAL, EMB.ARQUEOBRUTO, EMB.ARQUEONETO, EMB.TONELAJE, EMB.SERVICIO, EMB.TRAFICO, EMB.NMOTORES);
 
         }
         public int Eliminar_Embarcacion(string Matricula)
