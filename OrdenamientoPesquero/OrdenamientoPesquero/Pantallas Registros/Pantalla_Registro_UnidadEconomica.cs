@@ -144,12 +144,15 @@ namespace OrdenamientoPesquero
                 exito = AccionesPermiso(true);
                 proc.Borrar_equipo(nPer.Text);
                 equiposdepesca();
-                for (int i = 0; i < dgvEmbarcacionesPerm.RowCount; i++)
+                if (exito == 1)
                 {
-                    if (dgvEmbarcacionesPerm[0, i].Value != null)
+                    for (int i = 0; i < dgvEmbarcacionesPerm.RowCount; i++)
                     {
-                        Emb = new Embarcacion(dgvEmbarcacionesPerm[0, i].Value.ToString(), dgvEmbarcacionesPerm[1, i].Value.ToString(), dgvEmbarcacionesPerm[3, i].Value.ToString(), dgvEmbarcacionesPerm[2, i].Value.ToString(), txtMunicipio.Text, cbRNPA.Text);
-                        proc.registrar_perm_emb(Emb, nPer.Text);
+                        if (dgvEmbarcacionesPerm[0, i].Value != null)
+                        {
+                            Emb = new Embarcacion(dgvEmbarcacionesPerm[0, i].Value.ToString(), dgvEmbarcacionesPerm[1, i].Value.ToString(), dgvEmbarcacionesPerm[3, i].Value.ToString(), dgvEmbarcacionesPerm[2, i].Value.ToString(), txtMunicipio.Text, cbRNPA.Text);
+                            proc.registrar_perm_emb(Emb, nPer.Text);
+                        }
                     }
                 }
             }
@@ -1030,6 +1033,7 @@ namespace OrdenamientoPesquero
                 dt = proc.NumeroEmbarcaciones(Convert.ToInt32(nPer.Text));
                 numericUpDown1.Value = dt.Rows.Count;
                 dt = proc.EmbarcacionesxPermiso(Convert.ToInt32(nPer.Text));
+                dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     Matricula.Items.Add(dt.Rows[i]["MATRICULA"].ToString());
@@ -1042,6 +1046,7 @@ namespace OrdenamientoPesquero
                 }
                 dt = proc.EquiposxPermiso(Convert.ToInt32(nPer.Text));
                 numericUpDown2.Value = dt.Rows.Count;
+                dgvEquiposPescaPerm.RowCount= dt.Rows.Count;
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     Tipo.Items.Add(dt.Rows[i]["TIPO"].ToString());
