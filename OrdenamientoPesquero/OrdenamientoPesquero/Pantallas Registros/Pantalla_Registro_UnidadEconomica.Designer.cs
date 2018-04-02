@@ -233,6 +233,7 @@
             this.TotalPermisos = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.BuscarPermiso = new System.Windows.Forms.PictureBox();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -273,6 +274,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBReubicar)).BeginInit();
             this.Resumen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarPermiso)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEstado
@@ -486,7 +488,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(65, 32);
+            this.label3.Location = new System.Drawing.Point(74, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -921,6 +923,7 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.BuscarPermiso);
             this.groupBox3.Controls.Add(this.nPer);
             this.groupBox3.Controls.Add(this.finVigenciaPer);
             this.groupBox3.Controls.Add(this.label38);
@@ -2477,9 +2480,23 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(741, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(758, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
+            // 
+            // BuscarPermiso
+            // 
+            this.BuscarPermiso.BackColor = System.Drawing.Color.Transparent;
+            this.BuscarPermiso.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.lupa1;
+            this.BuscarPermiso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BuscarPermiso.Image = global::OrdenamientoPesquero.Properties.Resources.lupa;
+            this.BuscarPermiso.Location = new System.Drawing.Point(278, 20);
+            this.BuscarPermiso.Name = "BuscarPermiso";
+            this.BuscarPermiso.Size = new System.Drawing.Size(37, 28);
+            this.BuscarPermiso.TabIndex = 115;
+            this.BuscarPermiso.TabStop = false;
+            this.toolTip1.SetToolTip(this.BuscarPermiso, "Buscar Unidad Economica");
+            this.BuscarPermiso.Click += new System.EventHandler(this.BuscarPermiso_Click);
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -2558,6 +2575,7 @@
             this.Resumen.ResumeLayout(false);
             this.Resumen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarPermiso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

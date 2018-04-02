@@ -416,11 +416,22 @@ namespace OrdenamientoPesquero
             cargando = false;
             tabControl1.Enabled = true;
         }
+        private void CargarPermisos()
+        {
+            string a = nPer.Text;
+            nPer.DataSource = dt;
+            dt = proc.ObtenerNoPermisos(cbRNPA.Text);
+            nPer.DataSource = dt;
+            nPer.DisplayMember = "NPERMISO";
+            nPer.ValueMember = "NPERMISO";
+            nPer.Text = a;
+        }
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
             LlenarCampos();
             Resumenes(cbRNPA.Text);
+            CargarPermisos();
 
             CertMatXUnidad(cbRNPA.Text);
         }
@@ -912,6 +923,35 @@ namespace OrdenamientoPesquero
             {
                 gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].ForeColor = Color.FromArgb(160, 160, 160);
                 gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].BackColor = Color.FromArgb(36, 50, 61);
+
+            }
+        }
+
+        private void BuscarPermiso_Click(object sender, EventArgs e)
+        {
+            dt = proc.ObtenerPermiso(Convert.ToInt32(nPer.Text));
+            if (dt.Rows.Count != 0)
+            {
+                FolioPer.Text = dt.Rows[0]["FOLIO"].ToString();
+                PesqueriaPer.Text = dt.Rows[0]["PESQUERIA"].ToString();
+                LugarExpPer.Text = dt.Rows[0]["LUGAREXPEDICION"].ToString();
+                VigenciaPerm.Text = dt.Rows[0]["FOLIO"].ToString();
+                diaExpPer.Text = dt.Rows[0]["DIAEXPEDICION"].ToString();
+                finVigenciaPer.Text = dt.Rows[0]["FINVIGENCIA"].ToString();
+                ZonaPescaPerm.Text = dt.Rows[0]["ZONAPESCA"].ToString();
+                SitiosDesemPer.Text = dt.Rows[0]["SITIOSDESEMBARQUE"].ToString();
+                ObservacionesPem.Text = dt.Rows[0]["OBSERVACIONES"].ToString();
+                dt = proc.NumeroEmbarcaciones(Convert.ToInt32(nPer.Text));
+                numericUpDown1.Value = dt.Rows.Count;
+                dt = proc.EmbarcacionesxPermiso(Convert.ToInt32(nPer.Text));
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    dgvEmbarcacionesPerm[0, i].Value = dt.Rows[i]["NOMBREEMBARCACION"].ToString();
+                    dgvEmbarcacionesPerm[1, i].Value = dt.Rows[i]["MATRICULA"].ToString();
+                    dgvEmbarcacionesPerm[2, i].Value = dt.Rows[i]["MOTORMARCA"].ToString();
+                    dgvEmbarcacionesPerm[3, i].Value = dt.Rows[i]["MOTORHP"].ToString();
+
+                }
 
             }
         }
