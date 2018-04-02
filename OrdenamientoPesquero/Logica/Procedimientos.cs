@@ -179,6 +179,12 @@ namespace Logica
             string[] Parametros = { "@RNPA", "@NOMBRE", "@CARGO", "@FECHA_ING", "@TELEFONO" };
             return c.Ejecutar("Registrar_Directiva", Parametros, dir.RNPA, dir.Nombre, dir.Cargo, dir.Fecha_Ing, dir.Telefono);
         }
+
+        public void EliminarDirectiva(string RNPA)
+        {
+            string[] Parametros = { "@rnpa" };
+            c.Ejecutar("EliminarDirectiva", Parametros, RNPA);
+        }
         #endregion
     }
 }
