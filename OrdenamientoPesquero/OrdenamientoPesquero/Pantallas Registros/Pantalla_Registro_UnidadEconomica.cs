@@ -393,6 +393,7 @@ namespace OrdenamientoPesquero
                 if (Si == DialogResult.Yes)
                 {
                     exito = proc.Eliminar_Permiso(nPer.Text);
+                    limpiarpermiso();
                 }
             }
             else if (Directiva.Focused)
