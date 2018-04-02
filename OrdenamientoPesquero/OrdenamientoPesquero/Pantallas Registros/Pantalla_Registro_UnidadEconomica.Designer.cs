@@ -773,6 +773,7 @@
             this.cbRNPA.Size = new System.Drawing.Size(163, 28);
             this.cbRNPA.TabIndex = 1;
             this.toolTip1.SetToolTip(this.cbRNPA, "Ingrese o Seleccione el RNPA de la Unidad Económica");
+            this.cbRNPA.TabStopChanged += new System.EventHandler(this.cbRNPA_TabStopChanged);
             this.cbRNPA.TextChanged += new System.EventHandler(this.cbRNPA_TextChanged);
             // 
             // radioButton1
@@ -2494,9 +2495,16 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Caracteristicas";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 400;
+            this.pictureBox13.BackColor = System.Drawing.Color.Black;
+            this.pictureBox13.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.lupa1;
+            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox13.Location = new System.Drawing.Point(278, 20);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(37, 26);
+            this.pictureBox13.TabIndex = 115;
+            this.pictureBox13.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox13, "Buscar Unidad Economica");
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
