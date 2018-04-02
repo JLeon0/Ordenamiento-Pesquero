@@ -233,7 +233,7 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Caracteristicas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -488,7 +488,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(38, 32);
+            this.label3.Location = new System.Drawing.Point(29, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -853,7 +853,7 @@
             this.dgvEquiposPescaPerm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.Tipo,
-            this.dataGridViewTextBoxColumn2});
+            this.Caracteristicas});
             this.dgvEquiposPescaPerm.Location = new System.Drawing.Point(25, 444);
             this.dgvEquiposPescaPerm.Name = "dgvEquiposPescaPerm";
             this.dgvEquiposPescaPerm.RowHeadersVisible = false;
@@ -940,6 +940,7 @@
             this.pictureBox13.TabIndex = 115;
             this.pictureBox13.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox13, "Buscar Unidad Economica");
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
             // nPer
             // 
@@ -2476,7 +2477,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(690, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(673, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
@@ -2493,18 +2494,11 @@
             this.Tipo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Tipo.Width = 242;
             // 
-            // dataGridViewTextBoxColumn2
+            // Caracteristicas
             // 
-            this.pictureBox13.BackColor = System.Drawing.Color.Black;
-            this.pictureBox13.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.lupa1;
-            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox13.Location = new System.Drawing.Point(278, 20);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(37, 26);
-            this.pictureBox13.TabIndex = 115;
-            this.pictureBox13.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox13, "Buscar Unidad Economica");
-            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
+            this.Caracteristicas.HeaderText = "Caracteristicas";
+            this.Caracteristicas.Name = "Caracteristicas";
+            this.Caracteristicas.Width = 400;
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -2795,6 +2789,6 @@
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewComboBoxColumn Tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Caracteristicas;
     }
 }
