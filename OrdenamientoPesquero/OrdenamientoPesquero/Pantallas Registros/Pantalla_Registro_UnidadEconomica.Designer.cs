@@ -233,7 +233,6 @@
             this.TotalPermisos = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.BuscarPermiso = new System.Windows.Forms.PictureBox();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -274,7 +273,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBReubicar)).BeginInit();
             this.Resumen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BuscarPermiso)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEstado
@@ -923,7 +921,6 @@
             // 
             // groupBox3
             // 
-            this.groupBox3.Controls.Add(this.BuscarPermiso);
             this.groupBox3.Controls.Add(this.nPer);
             this.groupBox3.Controls.Add(this.finVigenciaPer);
             this.groupBox3.Controls.Add(this.label38);
@@ -2484,20 +2481,6 @@
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
-            // BuscarPermiso
-            // 
-            this.BuscarPermiso.BackColor = System.Drawing.Color.Transparent;
-            this.BuscarPermiso.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.lupa1;
-            this.BuscarPermiso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BuscarPermiso.Image = global::OrdenamientoPesquero.Properties.Resources.lupa;
-            this.BuscarPermiso.Location = new System.Drawing.Point(278, 20);
-            this.BuscarPermiso.Name = "BuscarPermiso";
-            this.BuscarPermiso.Size = new System.Drawing.Size(37, 28);
-            this.BuscarPermiso.TabIndex = 115;
-            this.BuscarPermiso.TabStop = false;
-            this.toolTip1.SetToolTip(this.BuscarPermiso, "Buscar Unidad Economica");
-            this.BuscarPermiso.Click += new System.EventHandler(this.BuscarPermiso_Click);
-            // 
             // Pantalla_Registro_UnidadEconomica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2575,7 +2558,6 @@
             this.Resumen.ResumeLayout(false);
             this.Resumen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BuscarPermiso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
