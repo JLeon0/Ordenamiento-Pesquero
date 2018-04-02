@@ -990,7 +990,6 @@ namespace OrdenamientoPesquero
                 FolioPer.Text = dt.Rows[0]["FOLIO"].ToString();
                 PesqueriaPer.Text = dt.Rows[0]["PESQUERIA"].ToString();
                 LugarExpPer.Text = dt.Rows[0]["LUGAREXPEDICION"].ToString();
-                VigenciaPerm.Text = dt.Rows[0]["FOLIO"].ToString();
                 diaExpPer.Text = dt.Rows[0]["DIAEXPEDICION"].ToString();
                 finVigenciaPer.Text = dt.Rows[0]["FINVIGENCIA"].ToString();
                 ZonaPescaPerm.Text = dt.Rows[0]["ZONAPESCA"].ToString();
@@ -1001,11 +1000,22 @@ namespace OrdenamientoPesquero
                 dt = proc.EmbarcacionesxPermiso(Convert.ToInt32(nPer.Text));
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
+                    Matricula.Items.Add(dt.Rows[i]["MATRICULA"].ToString());
+                    Marcamotor.Items.Add(dt.Rows[i]["MOTORMARCA"].ToString());
                     dgvEmbarcacionesPerm[0, i].Value = dt.Rows[i]["NOMBREEMBARCACION"].ToString();
                     dgvEmbarcacionesPerm[1, i].Value = dt.Rows[i]["MATRICULA"].ToString();
                     dgvEmbarcacionesPerm[2, i].Value = dt.Rows[i]["MOTORMARCA"].ToString();
                     dgvEmbarcacionesPerm[3, i].Value = dt.Rows[i]["MOTORHP"].ToString();
 
+                }
+                dt = proc.EquiposxPermiso(Convert.ToInt32(nPer.Text));
+                numericUpDown2.Value = dt.Rows.Count;
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    Tipo.Items.Add(dt.Rows[i]["TIPO"].ToString());
+                    dgvEquiposPescaPerm[0, i].Value = dt.Rows[i]["CANTIDAD"].ToString();
+                    dgvEquiposPescaPerm[1, i].Value = dt.Rows[i]["TIPO"].ToString();
+                    dgvEquiposPescaPerm[2, i].Value = dt.Rows[i]["CARACTERISTICAS"].ToString();
                 }
 
             }

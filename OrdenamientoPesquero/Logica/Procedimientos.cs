@@ -79,6 +79,11 @@ namespace Logica
             string[] Parametros = { "@Nopermiso" };
             return c.getDatosTabla("EmbarcacionesxPermiso", Parametros, nopermiso);
         }
+        public DataTable EquiposxPermiso(int nopermiso)
+        {
+            string[] Parametros = { "@numPermiso" };
+            return c.getDatosTabla("EquiposxPermiso", Parametros, nopermiso);
+        }
         #endregion
 
 
