@@ -773,6 +773,7 @@
             this.cbRNPA.Size = new System.Drawing.Size(163, 28);
             this.cbRNPA.TabIndex = 1;
             this.toolTip1.SetToolTip(this.cbRNPA, "Ingrese o Seleccione el RNPA de la Unidad Económica");
+            this.cbRNPA.TabStopChanged += new System.EventHandler(this.cbRNPA_TabStopChanged);
             this.cbRNPA.TextChanged += new System.EventHandler(this.cbRNPA_TextChanged);
             // 
             // radioButton1

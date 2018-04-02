@@ -26,7 +26,7 @@ namespace OrdenamientoPesquero
         Procedimientos proc = new Procedimientos();
         DataSet ds = new DataSet();
         DataTable dt = null;
-        string[,] unidad = { { "0", "RFC" }, { "0", "Codigo Postal" }, { "0", "Correo Electronico" }, { "0", "Telefono de la Cooperativa" } };
+        string[,] unidad = { { "0", "RFC" }, { "0", "Codigo Postal" }, { "0", "Correo Electronico" }, { "0", "Telefono de la Cooperativa" },{"0","RNPA" } };
         string[,] pescador = { { "0", "CURP" }, { "0", "RFC" }, { "0", "Codigo postal" }, { "0", "Telefono" } , { "0","Correo Electronico"} };
         public Pantalla_Registro_UnidadEconomica()
         {
@@ -601,6 +601,14 @@ namespace OrdenamientoPesquero
         {
             cargado = false;
             tabControl1.Enabled = false;
+            if (cbRNPA.Text!="")
+            {
+                unidad[4, 0] = "1";
+            }
+            else
+            {
+                unidad[4, 0] = "0";
+            }
             //foreach (TextBox item in gbOrgPes.Controls.OfType<TextBox>())
             //{
             //    item.Text = "";
@@ -967,6 +975,11 @@ namespace OrdenamientoPesquero
             {
                 proc.Registrar_Equipo(nPer.Text, dgvEquiposPescaPerm[0, i].Value.ToString(), dgvEquiposPescaPerm[1, i].Value.ToString(), dgvEquiposPescaPerm[2, i].Value.ToString());
             }
+        }
+
+        private void cbRNPA_TabStopChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
