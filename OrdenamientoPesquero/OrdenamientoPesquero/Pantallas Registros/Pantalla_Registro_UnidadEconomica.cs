@@ -142,6 +142,8 @@ namespace OrdenamientoPesquero
             else if (tabControl1.SelectedTab.Name == "Permisos")
             {
                 exito = AccionesPermiso(true);
+                proc.Borrar_equipo(nPer.Text);
+                equiposdepesca();
                 for (int i = 0; i < dgvEmbarcacionesPerm.RowCount; i++)
                 {
                     if (dgvEmbarcacionesPerm[0, i].Value != null)
@@ -540,6 +542,18 @@ namespace OrdenamientoPesquero
                 MessageBox.Show(msg,"Error en los datos",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
             return estabien;
+        }
+        private void datagridview1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            if (dgv.CurrentCell.ColumnIndex == dgv.Columns["Tipo"].Index)
+            {
+                ComboBox cbx = (ComboBox)e.Control;
+                cbx.DropDownStyle = ComboBoxStyle.DropDown;
+                cbx.AutoCompleteSource = AutoCompleteSource.ListItems;
+                cbx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+                cbx.Validating += new CancelEventHandler(cbx_Validating);
+            }
         }
 
         private void datagridview_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
