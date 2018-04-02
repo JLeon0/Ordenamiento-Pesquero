@@ -137,7 +137,6 @@ namespace OrdenamientoPesquero
                 else
                 {
                     exito = AccionesPescador(true);
-                    Resumenes(cbRNPA.Text);
                 }
             }
             else if (tabControl1.SelectedTab.Name == "Permisos")
@@ -164,6 +163,7 @@ namespace OrdenamientoPesquero
             {
                 Exito(exito);
             }
+            Resumenes(cbRNPA.Text);
         }
         #endregion
 
@@ -407,7 +407,6 @@ namespace OrdenamientoPesquero
         private void CargarRNPA()
         {
             string a = cbRNPA.Text;
-            cbRNPA.DataSource = dt;
             dt = proc.Obtener_todas_unidades("");
             cbRNPA.DataSource = dt;
             cbRNPA.DisplayMember = "RNPA";
@@ -415,14 +414,26 @@ namespace OrdenamientoPesquero
             cbRNPA.Text = a;
             txtNombre.Focus();
             cargando = false;
-                tabControl1.Enabled = true;
+            tabControl1.Enabled = true;
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
             LlenarCampos();
             Resumenes(cbRNPA.Text);
+
+            CertMatXUnidad(cbRNPA.Text);
         }
+
+        public void CertMatXUnidad(string RNPA)
+        {
+            string a = cbRNPA.Text;
+            dt = proc.ObtenerCertMatrXUnidad(a);
+            MatriculaCertMat.DataSource = dt;
+            MatriculaCertMat.DisplayMember = "MATRICULA";
+            MatriculaCertMat.ValueMember = "MATRICULA";
+        }
+
         private void LlenarCampos()
         {
             if (!cargando)

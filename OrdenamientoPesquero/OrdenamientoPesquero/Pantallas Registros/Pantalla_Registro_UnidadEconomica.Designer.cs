@@ -81,6 +81,7 @@
             this.Marcamotor = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Potencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.nPer = new System.Windows.Forms.ComboBox();
             this.finVigenciaPer = new System.Windows.Forms.DateTimePicker();
             this.label38 = new System.Windows.Forms.Label();
             this.diaExpPer = new System.Windows.Forms.DateTimePicker();
@@ -105,6 +106,7 @@
             this.SitiosDesemPer = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.CertMatri = new System.Windows.Forms.TabPage();
+            this.MatriculaCertMat = new System.Windows.Forms.ComboBox();
             this.label78 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
@@ -131,7 +133,6 @@
             this.label64 = new System.Windows.Forms.Label();
             this.TipoEmbCertMar = new System.Windows.Forms.ComboBox();
             this.label62 = new System.Windows.Forms.Label();
-            this.MatriculaCertMat = new System.Windows.Forms.TextBox();
             this.NombreEmbCerMat = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
@@ -232,7 +233,6 @@
             this.TotalPermisos = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.nPer = new System.Windows.Forms.ComboBox();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -486,7 +486,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(83, 32);
+            this.label3.Location = new System.Drawing.Point(65, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -943,6 +943,14 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del Permiso";
             // 
+            // nPer
+            // 
+            this.nPer.FormattingEnabled = true;
+            this.nPer.Location = new System.Drawing.Point(123, 20);
+            this.nPer.Name = "nPer";
+            this.nPer.Size = new System.Drawing.Size(140, 26);
+            this.nPer.TabIndex = 70;
+            // 
             // finVigenciaPer
             // 
             this.finVigenciaPer.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1161,6 +1169,7 @@
             // 
             // CertMatri
             // 
+            this.CertMatri.Controls.Add(this.MatriculaCertMat);
             this.CertMatri.Controls.Add(this.label78);
             this.CertMatri.Controls.Add(this.label77);
             this.CertMatri.Controls.Add(this.label76);
@@ -1187,7 +1196,6 @@
             this.CertMatri.Controls.Add(this.label64);
             this.CertMatri.Controls.Add(this.TipoEmbCertMar);
             this.CertMatri.Controls.Add(this.label62);
-            this.CertMatri.Controls.Add(this.MatriculaCertMat);
             this.CertMatri.Controls.Add(this.NombreEmbCerMat);
             this.CertMatri.Controls.Add(this.label15);
             this.CertMatri.Controls.Add(this.label60);
@@ -1199,6 +1207,14 @@
             this.CertMatri.TabIndex = 3;
             this.CertMatri.Text = "Cert. Matr.";
             this.CertMatri.UseVisualStyleBackColor = true;
+            // 
+            // MatriculaCertMat
+            // 
+            this.MatriculaCertMat.FormattingEnabled = true;
+            this.MatriculaCertMat.Location = new System.Drawing.Point(236, 13);
+            this.MatriculaCertMat.Name = "MatriculaCertMat";
+            this.MatriculaCertMat.Size = new System.Drawing.Size(143, 26);
+            this.MatriculaCertMat.TabIndex = 10;
             // 
             // label78
             // 
@@ -1421,13 +1437,6 @@
             this.label62.Size = new System.Drawing.Size(161, 18);
             this.label62.TabIndex = 2;
             this.label62.Text = "Tipo de Embarcación:";
-            // 
-            // MatriculaCertMat
-            // 
-            this.MatriculaCertMat.Location = new System.Drawing.Point(236, 13);
-            this.MatriculaCertMat.Name = "MatriculaCertMat";
-            this.MatriculaCertMat.Size = new System.Drawing.Size(358, 26);
-            this.MatriculaCertMat.TabIndex = 1;
             // 
             // NombreEmbCerMat
             // 
@@ -2468,17 +2477,9 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(775, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(741, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
-            // 
-            // nPer
-            // 
-            this.nPer.FormattingEnabled = true;
-            this.nPer.Location = new System.Drawing.Point(123, 20);
-            this.nPer.Name = "nPer";
-            this.nPer.Size = new System.Drawing.Size(140, 26);
-            this.nPer.TabIndex = 70;
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -2765,8 +2766,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.TextBox MatriculaCertMat;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox nPer;
+        private System.Windows.Forms.ComboBox MatriculaCertMat;
     }
 }
