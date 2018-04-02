@@ -1028,44 +1028,47 @@ namespace OrdenamientoPesquero
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
-            limpiarpermiso();
-            dt = proc.ObtenerPermiso(Convert.ToInt32(nPer.Text));
-            if (dt.Rows.Count != 0)
+            if (nPer.Text != "")
             {
-                FolioPer.Text = dt.Rows[0]["FOLIO"].ToString();
-                PesqueriaPer.Text = dt.Rows[0]["PESQUERIA"].ToString();
-                LugarExpPer.Text = dt.Rows[0]["LUGAREXPEDICION"].ToString();
-                diaExpPer.Text = dt.Rows[0]["DIAEXPEDICION"].ToString();
-                finVigenciaPer.Text = dt.Rows[0]["FINVIGENCIA"].ToString();
-                ZonaPescaPerm.Text = dt.Rows[0]["ZONAPESCA"].ToString();
-                SitiosDesemPer.Text = dt.Rows[0]["SITIOSDESEMBARQUE"].ToString();
-                ObservacionesPem.Text = dt.Rows[0]["OBSERVACIONES"].ToString();
-                dt = proc.NumeroEmbarcaciones(Convert.ToInt32(nPer.Text));
-                numericUpDown1.Value = dt.Rows.Count;
-                dt = proc.EmbarcacionesxPermiso(Convert.ToInt32(nPer.Text));
-                dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
-                for (int i = 0; i < dt.Rows.Count; i++)
+                dt = proc.ObtenerPermiso(Convert.ToInt32(nPer.Text));
+                limpiarpermiso();
+                if (dt.Rows.Count != 0)
                 {
+                    FolioPer.Text = dt.Rows[0]["FOLIO"].ToString();
+                    PesqueriaPer.Text = dt.Rows[0]["PESQUERIA"].ToString();
+                    LugarExpPer.Text = dt.Rows[0]["LUGAREXPEDICION"].ToString();
+                    diaExpPer.Text = dt.Rows[0]["DIAEXPEDICION"].ToString();
+                    finVigenciaPer.Text = dt.Rows[0]["FINVIGENCIA"].ToString();
+                    ZonaPescaPerm.Text = dt.Rows[0]["ZONAPESCA"].ToString();
+                    SitiosDesemPer.Text = dt.Rows[0]["SITIOSDESEMBARQUE"].ToString();
+                    ObservacionesPem.Text = dt.Rows[0]["OBSERVACIONES"].ToString();
+                    dt = proc.NumeroEmbarcaciones(Convert.ToInt32(nPer.Text));
+                    numericUpDown1.Value = dt.Rows.Count;
+                    dt = proc.EmbarcacionesxPermiso(Convert.ToInt32(nPer.Text));
                     dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
-                    Matricula.Items.Add(dt.Rows[i]["MATRICULA"].ToString());
-                    Marcamotor.Items.Add(dt.Rows[i]["MOTORMARCA"].ToString());
-                    dgvEmbarcacionesPerm[0, i].Value = dt.Rows[i]["NOMBREEMBARCACION"].ToString();
-                    dgvEmbarcacionesPerm[1, i].Value = dt.Rows[i]["MATRICULA"].ToString();
-                    dgvEmbarcacionesPerm[2, i].Value = dt.Rows[i]["MOTORMARCA"].ToString();
-                    dgvEmbarcacionesPerm[3, i].Value = dt.Rows[i]["MOTORHP"].ToString();
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
+                        Matricula.Items.Add(dt.Rows[i]["MATRICULA"].ToString());
+                        Marcamotor.Items.Add(dt.Rows[i]["MOTORMARCA"].ToString());
+                        dgvEmbarcacionesPerm[0, i].Value = dt.Rows[i]["NOMBREEMBARCACION"].ToString();
+                        dgvEmbarcacionesPerm[1, i].Value = dt.Rows[i]["MATRICULA"].ToString();
+                        dgvEmbarcacionesPerm[2, i].Value = dt.Rows[i]["MOTORMARCA"].ToString();
+                        dgvEmbarcacionesPerm[3, i].Value = dt.Rows[i]["MOTORHP"].ToString();
+
+                    }
+                    dt = proc.EquiposxPermiso(Convert.ToInt32(nPer.Text));
+                    numericUpDown2.Value = dt.Rows.Count;
+                    dgvEquiposPescaPerm.RowCount = dt.Rows.Count;
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        Tipo.Items.Add(dt.Rows[i]["TIPO"].ToString());
+                        dgvEquiposPescaPerm[0, i].Value = dt.Rows[i]["CANTIDAD"].ToString();
+                        dgvEquiposPescaPerm[1, i].Value = dt.Rows[i]["TIPO"].ToString();
+                        dgvEquiposPescaPerm[2, i].Value = dt.Rows[i]["CARACTERISTICAS"].ToString();
+                    }
 
                 }
-                dt = proc.EquiposxPermiso(Convert.ToInt32(nPer.Text));
-                numericUpDown2.Value = dt.Rows.Count;
-                dgvEquiposPescaPerm.RowCount = dt.Rows.Count;
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    Tipo.Items.Add(dt.Rows[i]["TIPO"].ToString());
-                    dgvEquiposPescaPerm[0, i].Value = dt.Rows[i]["CANTIDAD"].ToString();
-                    dgvEquiposPescaPerm[1, i].Value = dt.Rows[i]["TIPO"].ToString();
-                    dgvEquiposPescaPerm[2, i].Value = dt.Rows[i]["CARACTERISTICAS"].ToString();
-                }
-
             }
         }
 
