@@ -78,6 +78,7 @@
             this.Marcamotor = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Potencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.nPer = new System.Windows.Forms.ComboBox();
             this.finVigenciaPer = new System.Windows.Forms.DateTimePicker();
             this.label38 = new System.Windows.Forms.Label();
@@ -230,10 +231,9 @@
             this.TotalPermisos = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tipo = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Caracteristicas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -246,6 +246,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposPescaPerm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbarcacionesPerm)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.CertMatri.SuspendLayout();
@@ -274,7 +275,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pBReubicar)).BeginInit();
             this.Resumen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.SuspendLayout();
             // 
             // txtEstado
@@ -488,7 +488,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(47, 32);
+            this.label3.Location = new System.Drawing.Point(29, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -853,12 +853,13 @@
             this.dgvEquiposPescaPerm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.Tipo,
-            this.dataGridViewTextBoxColumn2});
+            this.Caracteristicas});
             this.dgvEquiposPescaPerm.Location = new System.Drawing.Point(25, 444);
             this.dgvEquiposPescaPerm.Name = "dgvEquiposPescaPerm";
             this.dgvEquiposPescaPerm.RowHeadersVisible = false;
             this.dgvEquiposPescaPerm.Size = new System.Drawing.Size(745, 131);
             this.dgvEquiposPescaPerm.TabIndex = 58;
+            this.dgvEquiposPescaPerm.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.datagridview1_EditingControlShowing);
             // 
             // dgvEmbarcacionesPerm
             // 
@@ -927,6 +928,19 @@
             this.groupBox3.TabIndex = 67;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del Permiso";
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.Black;
+            this.pictureBox13.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.lupa1;
+            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox13.Location = new System.Drawing.Point(278, 20);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(37, 26);
+            this.pictureBox13.TabIndex = 115;
+            this.pictureBox13.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox13, "Buscar Unidad Economica");
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
             // nPer
             // 
@@ -2463,22 +2477,9 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(707, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(673, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackColor = System.Drawing.Color.Black;
-            this.pictureBox13.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.lupa1;
-            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox13.Location = new System.Drawing.Point(278, 20);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(37, 26);
-            this.pictureBox13.TabIndex = 115;
-            this.pictureBox13.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox13, "Buscar Unidad Economica");
-            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -2493,11 +2494,11 @@
             this.Tipo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Tipo.Width = 242;
             // 
-            // dataGridViewTextBoxColumn2
+            // Caracteristicas
             // 
-            this.dataGridViewTextBoxColumn2.HeaderText = "Caracteristicas";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.Width = 400;
+            this.Caracteristicas.HeaderText = "Caracteristicas";
+            this.Caracteristicas.Name = "Caracteristicas";
+            this.Caracteristicas.Width = 400;
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -2540,6 +2541,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbarcacionesPerm)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.CertMatri.ResumeLayout(false);
@@ -2576,7 +2578,6 @@
             this.Resumen.ResumeLayout(false);
             this.Resumen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2788,6 +2789,6 @@
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewComboBoxColumn Tipo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Caracteristicas;
     }
 }
