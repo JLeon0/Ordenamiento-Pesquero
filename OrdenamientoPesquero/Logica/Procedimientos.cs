@@ -128,7 +128,7 @@ namespace Logica
             return c.Ejecutar("ActualizarEmbacacion", Parametros, EMB.Matricula, EMB.Nombre,EMB.RNPATITULAR, EMB.HP, EMB.ESLORA, EMB.MANGA, EMB.PUNTAL, EMB.ARQUEOBRUTO, EMB.ARQUEONETO, EMB.TONELAJE);
 
         }
-        public int Eliminar_Embarcacion(String Matricula)
+        public int Eliminar_Embarcacion(string Matricula)
         {
             string[] Parametros = { "@matricula" };
             return c.Ejecutar("EliminarEmbarca", Parametros, Matricula);
@@ -138,6 +138,13 @@ namespace Logica
             string[] Parametros = { "@MATRI", "@NOMBRE", "@RNPA", "@MUNICIPIO", "@HP", "@MARCA", "@PERMISO" };
             return c.Ejecutar("REGISTRO_PER_EMB", Parametros, emb.Matricula, emb.Nombre, emb.RNPATITULAR, emb.MUNICIPIO, emb.HP, emb.MARCA, Permiso);
         }
+
+        public DataTable ObtenerCertMatrXUnidad(string RNPA)
+        {
+            string[] Parametros = { "@RNPA" };
+            return c.getDatosTabla("CertMatXUnidad", Parametros, RNPA);
+        }
+
         #endregion
 
 

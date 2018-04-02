@@ -107,6 +107,7 @@
             this.SitiosDesemPer = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.CertMatri = new System.Windows.Forms.TabPage();
+            this.MatriculaCertMat = new System.Windows.Forms.ComboBox();
             this.label78 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
@@ -133,7 +134,6 @@
             this.label64 = new System.Windows.Forms.Label();
             this.TipoEmbCertMar = new System.Windows.Forms.ComboBox();
             this.label62 = new System.Windows.Forms.Label();
-            this.MatriculaCertMat = new System.Windows.Forms.TextBox();
             this.NombreEmbCerMat = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label60 = new System.Windows.Forms.Label();
@@ -1186,6 +1186,7 @@
             // 
             // CertMatri
             // 
+            this.CertMatri.Controls.Add(this.MatriculaCertMat);
             this.CertMatri.Controls.Add(this.label78);
             this.CertMatri.Controls.Add(this.label77);
             this.CertMatri.Controls.Add(this.label76);
@@ -1212,7 +1213,6 @@
             this.CertMatri.Controls.Add(this.label64);
             this.CertMatri.Controls.Add(this.TipoEmbCertMar);
             this.CertMatri.Controls.Add(this.label62);
-            this.CertMatri.Controls.Add(this.MatriculaCertMat);
             this.CertMatri.Controls.Add(this.NombreEmbCerMat);
             this.CertMatri.Controls.Add(this.label15);
             this.CertMatri.Controls.Add(this.label60);
@@ -1224,6 +1224,14 @@
             this.CertMatri.TabIndex = 3;
             this.CertMatri.Text = "Cert. Matr.";
             this.CertMatri.UseVisualStyleBackColor = true;
+            // 
+            // MatriculaCertMat
+            // 
+            this.MatriculaCertMat.FormattingEnabled = true;
+            this.MatriculaCertMat.Location = new System.Drawing.Point(236, 13);
+            this.MatriculaCertMat.Name = "MatriculaCertMat";
+            this.MatriculaCertMat.Size = new System.Drawing.Size(143, 26);
+            this.MatriculaCertMat.TabIndex = 10;
             // 
             // label78
             // 
@@ -1446,13 +1454,6 @@
             this.label62.Size = new System.Drawing.Size(161, 18);
             this.label62.TabIndex = 2;
             this.label62.Text = "Tipo de Embarcación:";
-            // 
-            // MatriculaCertMat
-            // 
-            this.MatriculaCertMat.Location = new System.Drawing.Point(236, 13);
-            this.MatriculaCertMat.Name = "MatriculaCertMat";
-            this.MatriculaCertMat.Size = new System.Drawing.Size(358, 26);
-            this.MatriculaCertMat.TabIndex = 1;
             // 
             // NombreEmbCerMat
             // 
@@ -2783,9 +2784,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
-        private System.Windows.Forms.TextBox MatriculaCertMat;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox nPer;
-        private System.Windows.Forms.PictureBox BuscarPermiso;
+        private System.Windows.Forms.ComboBox MatriculaCertMat;
     }
 }
