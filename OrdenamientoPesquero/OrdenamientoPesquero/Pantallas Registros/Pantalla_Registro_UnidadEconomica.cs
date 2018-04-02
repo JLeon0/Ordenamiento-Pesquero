@@ -379,7 +379,7 @@ namespace OrdenamientoPesquero
 
         private void Eliminar_Click(object sender, EventArgs e)
         {
-            if (Pescadores.Focused)
+            if (tabControl1.SelectedTab.Name == "Pescadores")
             {
                 DialogResult Si = MessageBox.Show("¿Desea eliminar este Pescador?", "ADVERTENCIA", MessageBoxButtons.YesNo);
                 if (Si == DialogResult.Yes)
@@ -387,7 +387,7 @@ namespace OrdenamientoPesquero
                     exito = proc.Eliminar_Pescador(CURPPesc.Text);
                 }
             }
-            else if (Permisos.Focused)
+            else if (tabControl1.SelectedTab.Name == "Permisos")
             {
                 DialogResult Si = MessageBox.Show("¿Desea eliminar este Permiso?", "ADVERTENCIA", MessageBoxButtons.YesNo);
                 if (Si == DialogResult.Yes)
