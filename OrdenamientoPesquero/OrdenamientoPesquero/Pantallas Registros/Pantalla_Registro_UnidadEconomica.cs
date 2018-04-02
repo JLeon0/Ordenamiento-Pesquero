@@ -326,6 +326,14 @@ namespace OrdenamientoPesquero
                 exito = AccionesPermiso(false);
                 proc.Borrar_equipo(nPer.Text);
                 equiposdepesca();
+                for (int i = 0; i < dgvEmbarcacionesPerm.RowCount; i++)
+                {
+                    if (dgvEmbarcacionesPerm[0, i].Value != null)
+                    {
+                        Emb = new Embarcacion(dgvEmbarcacionesPerm[0, i].Value.ToString(), dgvEmbarcacionesPerm[1, i].Value.ToString(), dgvEmbarcacionesPerm[3, i].Value.ToString(), dgvEmbarcacionesPerm[2, i].Value.ToString(), txtMunicipio.Text, cbRNPA.Text);
+                        proc.registrar_perm_emb(Emb, nPer.Text);
+                    }
+                }
             }
             else if (tabControl1.SelectedTab.Name == "Directiva")
             {
@@ -436,8 +444,8 @@ namespace OrdenamientoPesquero
             LlenarCampos();
             Resumenes(cbRNPA.Text);
             CargarPermisos();
-
             CertMatXUnidad(cbRNPA.Text);
+            limpiarpermiso();
         }
 
         public void CertMatXUnidad(string RNPA)
@@ -623,17 +631,27 @@ namespace OrdenamientoPesquero
             {
                 unidad[4, 0] = "0";
             }
-            //foreach (TextBox item in gbOrgPes.Controls.OfType<TextBox>())
-            //{
-            //    item.Text = "";
-            //}
-            //foreach (MaskedTextBox item in gbOrgPes.Controls.OfType<MaskedTextBox>())
-            //{
-            //    item.Text = "";
-            //}
         }
 
-
+        public void limpiarpermiso()
+        {
+            foreach (TextBox item in Permisos.Controls.OfType<TextBox>())
+            {
+                item.Text = "";
+            }
+            foreach (MaskedTextBox item in Permisos.Controls.OfType<MaskedTextBox>())
+            {
+                item.Text = "";
+            }
+            foreach (DataGridView item in Permisos.Controls.OfType<DataGridView>())
+            {
+                item.RowCount = 0;
+            }
+            foreach (ComboBox item in Permisos.Controls.OfType<ComboBox>())
+            {
+                item.Text = "";
+            }
+        }
         private void Exito(int ok)
         {
             if (ok == 1)
@@ -998,6 +1016,7 @@ namespace OrdenamientoPesquero
 
         private void pictureBox13_Click(object sender, EventArgs e)
         {
+            limpiarpermiso();
             dt = proc.ObtenerPermiso(Convert.ToInt32(nPer.Text));
             if (dt.Rows.Count != 0)
             {

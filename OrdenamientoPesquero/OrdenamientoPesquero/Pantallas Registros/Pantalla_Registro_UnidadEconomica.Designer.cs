@@ -72,6 +72,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.Permisos = new System.Windows.Forms.TabPage();
             this.dgvEquiposPescaPerm = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Tipo = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Caracteristicas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvEmbarcacionesPerm = new System.Windows.Forms.DataGridView();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Matricula = new System.Windows.Forms.DataGridViewComboBoxColumn();
@@ -231,9 +234,6 @@
             this.TotalPermisos = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Tipo = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Caracteristicas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -488,7 +488,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(29, 32);
+            this.label3.Location = new System.Drawing.Point(20, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -860,6 +860,25 @@
             this.dgvEquiposPescaPerm.Size = new System.Drawing.Size(745, 131);
             this.dgvEquiposPescaPerm.TabIndex = 58;
             this.dgvEquiposPescaPerm.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.datagridview1_EditingControlShowing);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.HeaderText = "Cantidad";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            // 
+            // Tipo
+            // 
+            this.Tipo.HeaderText = "Tipo";
+            this.Tipo.Name = "Tipo";
+            this.Tipo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Tipo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Tipo.Width = 242;
+            // 
+            // Caracteristicas
+            // 
+            this.Caracteristicas.HeaderText = "Caracteristicas";
+            this.Caracteristicas.Name = "Caracteristicas";
+            this.Caracteristicas.Width = 400;
             // 
             // dgvEmbarcacionesPerm
             // 
@@ -2477,28 +2496,9 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(673, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(656, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "Cantidad";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            // 
-            // Tipo
-            // 
-            this.Tipo.HeaderText = "Tipo";
-            this.Tipo.Name = "Tipo";
-            this.Tipo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Tipo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Tipo.Width = 242;
-            // 
-            // Caracteristicas
-            // 
-            this.Caracteristicas.HeaderText = "Caracteristicas";
-            this.Caracteristicas.Name = "Caracteristicas";
-            this.Caracteristicas.Width = 400;
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
