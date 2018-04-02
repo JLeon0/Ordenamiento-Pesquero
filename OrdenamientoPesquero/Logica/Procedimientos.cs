@@ -36,8 +36,13 @@ namespace Logica
         #region Permisos
         public int Registrar_Equipo(string perm, string cantidad, string tipo, string caracteristicas)
         {
-            string[] Parametros = { "@permiso", "@cantidad", "@tipo", "@caracteristicas"};
-            return c.Ejecutar("RegistrarEquipos", Parametros, perm, cantidad, tipo, caracteristicas);
+            string[] Parametros = { "@NPERM", "@CANTIDAD", "@TIPO", "@CARACT"};
+            return c.Ejecutar("RegistrarEquiposPesca", Parametros, perm, cantidad, tipo, caracteristicas);
+        }
+        public int Borrar_equipo(string perm)
+        {
+            string[] Parametros = { "@NPERM"};
+            return c.Ejecutar("BorrarEquiposPesca", Parametros, perm);
         }
         public int Registrar_Permiso(Permiso perm)
         {

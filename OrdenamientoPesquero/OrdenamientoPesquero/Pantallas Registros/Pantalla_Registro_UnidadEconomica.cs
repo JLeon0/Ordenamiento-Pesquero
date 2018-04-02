@@ -322,6 +322,7 @@ namespace OrdenamientoPesquero
             else if (tabControl1.SelectedTab.Name == "Permisos")
             {
                 exito = AccionesPermiso(false);
+                proc.Borrar_equipo(nPer.Text);
                 equiposdepesca();
             }
             else if (tabControl1.SelectedTab.Name == "Directiva")
