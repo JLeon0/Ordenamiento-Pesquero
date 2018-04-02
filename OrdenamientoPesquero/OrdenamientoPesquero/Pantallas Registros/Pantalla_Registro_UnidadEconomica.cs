@@ -322,6 +322,7 @@ namespace OrdenamientoPesquero
             else if (tabControl1.SelectedTab.Name == "Permisos")
             {
                 exito = AccionesPermiso(false);
+                equiposdepesca();
             }
             else if (tabControl1.SelectedTab.Name == "Directiva")
             {
@@ -953,6 +954,17 @@ namespace OrdenamientoPesquero
 
                 }
 
+            }
+        }
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            dgvEquiposPescaPerm.RowCount = (int)numericUpDown2.Value;
+        }
+        public void equiposdepesca()
+        {
+            for (int i = 0; i < dgvEquiposPescaPerm.RowCount; i++)
+            {
+                proc.Registrar_Equipo(nPer.Text, dgvEquiposPescaPerm[0, i].Value.ToString(), dgvEquiposPescaPerm[1, i].Value.ToString(), dgvEquiposPescaPerm[2, i].Value.ToString());
             }
         }
     }
