@@ -257,6 +257,7 @@ namespace OrdenamientoPesquero
         public int AccionesDirectiva()
         {
             int reg = 0;
+            proc.EliminarDirectiva(cbRNPA.Text);
             for (int i = 0; i < dgvDirectiva.RowCount; i++)
             {
                 if (dgvDirectiva[0, i].Value != null && dgvDirectiva[1,i].Value!= null && dgvDirectiva[2, i].Value != null && dgvDirectiva[3, i].Value != null)
