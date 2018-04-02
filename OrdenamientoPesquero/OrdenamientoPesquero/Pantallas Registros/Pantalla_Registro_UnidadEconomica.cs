@@ -436,7 +436,6 @@ namespace OrdenamientoPesquero
             LlenarCampos();
             Resumenes(cbRNPA.Text);
             CargarPermisos();
-
             CertMatXUnidad(cbRNPA.Text);
         }
 
@@ -486,7 +485,6 @@ namespace OrdenamientoPesquero
                     dgvDirectiva[2, i].Value = fila["FECHA_ING"].ToString();
                     dgvDirectiva[3, i].Value = fila["TELEFONO"].ToString();
                     i++;
-
                 }
 
             }
