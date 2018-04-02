@@ -651,9 +651,18 @@ namespace OrdenamientoPesquero
                 item.Text = "";
             }
         }
-        private void Exito(int ok)
+
+        public void limpiarcertmat()
         {
-            if (ok == 1)
+            foreach (TextBox item in CertMatri.Controls.OfType<TextBox>())
+            {
+                item.Text = "";
+            }
+            NMotoresCertMat.Value = 0;
+        }
+        private void Exito(int ok)
+       {
+            if (ok >= 1)
             {
                 (new System.Threading.Thread(CloseIt)).Start();
                 MessageBox.Show("Registrado exitosamente"); /* 1 segundo = 1000 */
@@ -1032,6 +1041,7 @@ namespace OrdenamientoPesquero
                 dt = proc.EmbarcacionesxPermiso(Convert.ToInt32(nPer.Text));
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
+                    dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
                     Matricula.Items.Add(dt.Rows[i]["MATRICULA"].ToString());
                     Marcamotor.Items.Add(dt.Rows[i]["MOTORMARCA"].ToString());
                     dgvEmbarcacionesPerm[0, i].Value = dt.Rows[i]["NOMBREEMBARCACION"].ToString();
@@ -1042,6 +1052,7 @@ namespace OrdenamientoPesquero
                 }
                 dt = proc.EquiposxPermiso(Convert.ToInt32(nPer.Text));
                 numericUpDown2.Value = dt.Rows.Count;
+                dgvEquiposPescaPerm.RowCount = dt.Rows.Count;
                 for (int i = 0; i < dt.Rows.Count; i++)
                 {
                     Tipo.Items.Add(dt.Rows[i]["TIPO"].ToString());
@@ -1050,6 +1061,23 @@ namespace OrdenamientoPesquero
                     dgvEquiposPescaPerm[2, i].Value = dt.Rows[i]["CARACTERISTICAS"].ToString();
                 }
 
+            }
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            limpiarcertmat();
+            dt = proc.ObtenerCertMatrXUnidad(cbRNPA.Text);
+            if(dt.Rows.Count > 0)
+            {
+                NombreEmbCerMat.Text = dt.Rows[0]["NOMBREEMBARCACION"].ToString();
+                ArqBrutoCertMat.Text = dt.Rows[0]["ARQUEOBRUTO"].ToString();
+                ArqNetoCertMat.Text = dt.Rows[0]["ARQUEONETO"].ToString();
+                EsloraCertMat.Text = dt.Rows[0]["ESLORA"].ToString();
+                MangaCertMat.Text = dt.Rows[0]["MANGA"].ToString();
+                NMotoresCertMat.Text = dt.Rows[0]["ZONAPESCA"].ToString();
+                SitiosDesemPer.Text = dt.Rows[0]["SITIOSDESEMBARQUE"].ToString();
+                ObservacionesPem.Text = dt.Rows[0]["OBSERVACIONES"].ToString();
             }
         }
     }
