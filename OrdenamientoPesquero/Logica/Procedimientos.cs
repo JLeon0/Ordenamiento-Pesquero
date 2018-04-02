@@ -34,6 +34,11 @@ namespace Logica
 
 
         #region Permisos
+        public int Registrar_Equipo(string perm, string cantidad, string tipo, string caracteristicas)
+        {
+            string[] Parametros = { "@permiso", "@cantidad", "@tipo", "@caracteristicas"};
+            return c.Ejecutar("RegistrarEquipos", Parametros, perm, cantidad, tipo, caracteristicas);
+        }
         public int Registrar_Permiso(Permiso perm)
         {
             string[] Parametros = { "@folio", "@rnpa", "@npermiso", "@pesqueria", "@lugarexpedicion", "@diaexpedicion", "@finvigencia", "@zonapesca", "@sitiosdesembarque", "@observaciones" };
