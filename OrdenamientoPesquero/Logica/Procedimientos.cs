@@ -122,6 +122,16 @@ namespace Logica
             string[] Parametros = { "@curp" };
             return c.Ejecutar("EliminarPescador", Parametros, CURP);
         }
+        public DataTable Obtener_curp(string RNPA)
+        {
+            string[] Parametros = { "@RNPA" };
+            return c.getDatosTabla("CurpxUnidad", Parametros, RNPA);
+        }
+        public DataTable Obtener_Pescador(string Curp)
+        {
+            string[] Parametros = { "@Curp" };
+            return c.getDatosTabla("ObtenerPescador", Parametros, Curp);
+        }
         #endregion
 
 
