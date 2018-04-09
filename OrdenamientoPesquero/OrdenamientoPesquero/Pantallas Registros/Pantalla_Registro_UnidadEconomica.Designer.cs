@@ -197,7 +197,6 @@
             this.label47 = new System.Windows.Forms.Label();
             this.RFCPesc = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
-            this.CURPPesc = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
             this.FechaNacPesc = new System.Windows.Forms.DateTimePicker();
             this.label50 = new System.Windows.Forms.Label();
@@ -211,10 +210,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.dgvDirectiva = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Cargo = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Expediente = new System.Windows.Forms.TabPage();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.Ver = new System.Windows.Forms.PictureBox();
@@ -235,6 +230,11 @@
             this.TotalPermisos = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cargo = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CURPPesc = new System.Windows.Forms.ComboBox();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -490,7 +490,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(-14, 32);
+            this.label3.Location = new System.Drawing.Point(-6, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -1773,6 +1773,7 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.CURPPesc);
             this.groupBox7.Controls.Add(this.pictureBox9);
             this.groupBox7.Controls.Add(this.pictureBox7);
             this.groupBox7.Controls.Add(this.pictureBox5);
@@ -1805,7 +1806,6 @@
             this.groupBox7.Controls.Add(this.label47);
             this.groupBox7.Controls.Add(this.RFCPesc);
             this.groupBox7.Controls.Add(this.label48);
-            this.groupBox7.Controls.Add(this.CURPPesc);
             this.groupBox7.Controls.Add(this.label49);
             this.groupBox7.Controls.Add(this.FechaNacPesc);
             this.groupBox7.Controls.Add(this.label50);
@@ -2125,14 +2125,6 @@
             this.label48.TabIndex = 9;
             this.label48.Text = "RFC:";
             // 
-            // CURPPesc
-            // 
-            this.CURPPesc.Location = new System.Drawing.Point(70, 143);
-            this.CURPPesc.Name = "CURPPesc";
-            this.CURPPesc.Size = new System.Drawing.Size(186, 26);
-            this.CURPPesc.TabIndex = 8;
-            this.CURPPesc.TextChanged += new System.EventHandler(this.CURPPesc_TextChanged);
-            // 
             // label49
             // 
             this.label49.AutoSize = true;
@@ -2261,36 +2253,6 @@
             this.dgvDirectiva.Size = new System.Drawing.Size(703, 131);
             this.dgvDirectiva.TabIndex = 59;
             this.dgvDirectiva.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.datagridview2_EditingControlShowing);
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 300;
-            // 
-            // Cargo
-            // 
-            this.Cargo.HeaderText = "Cargo";
-            this.Cargo.Items.AddRange(new object[] {
-            "Presidente",
-            "Secretario",
-            "Vocal",
-            "Tesorero"});
-            this.Cargo.Name = "Cargo";
-            this.Cargo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Cargo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Cargo.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "FechaIng";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Telefono";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // Expediente
             // 
@@ -2515,9 +2477,47 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(588, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(605, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 300;
+            // 
+            // Cargo
+            // 
+            this.Cargo.HeaderText = "Cargo";
+            this.Cargo.Items.AddRange(new object[] {
+            "Presidente",
+            "Secretario",
+            "Vocal",
+            "Tesorero"});
+            this.Cargo.Name = "Cargo";
+            this.Cargo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cargo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Cargo.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "FechaIng";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Telefono";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            // 
+            // CURPPesc
+            // 
+            this.CURPPesc.FormattingEnabled = true;
+            this.CURPPesc.Location = new System.Drawing.Point(69, 143);
+            this.CURPPesc.Name = "CURPPesc";
+            this.CURPPesc.Size = new System.Drawing.Size(187, 26);
+            this.CURPPesc.TabIndex = 112;
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -2716,7 +2716,6 @@
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.TextBox RFCPesc;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox CURPPesc;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.DateTimePicker FechaNacPesc;
         private System.Windows.Forms.Label label50;
@@ -2811,5 +2810,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn Cargo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.ComboBox CURPPesc;
     }
 }

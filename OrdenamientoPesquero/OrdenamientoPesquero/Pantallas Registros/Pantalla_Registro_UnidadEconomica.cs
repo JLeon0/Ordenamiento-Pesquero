@@ -397,13 +397,18 @@ namespace OrdenamientoPesquero
                     limpiarpermiso();
                 }
             }
-            else if (Directiva.Focused)
+            else if (tabControl1.SelectedTab.Name == "Directiva")
             {
 
             }
-            else if (CertMatri.Focused)
+            else if (tabControl1.SelectedTab.Name == "CertMatri")
             {
-
+                DialogResult Si = MessageBox.Show("¿Desea eliminar esta embarcación?", "ADVERTENCIA", MessageBoxButtons.YesNo);
+                if (Si == DialogResult.Yes)
+                {
+                    exito = proc.Eliminar_Embarcacion(MatriculaCertMat.Text);
+                    limpiarcertmat();
+                }
             }
             if (exito == 1)
             {
