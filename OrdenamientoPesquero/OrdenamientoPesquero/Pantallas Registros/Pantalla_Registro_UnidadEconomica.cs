@@ -437,6 +437,7 @@ namespace OrdenamientoPesquero
             txtNombre.Focus();
             cargando = false;
             tabControl1.Enabled = true;
+
         }
         private void CargarPermisos()
         {
@@ -469,6 +470,10 @@ namespace OrdenamientoPesquero
             limpiarpermiso();
             limpiarcertmat();
         }
+        private void BuscarNombreOrg_Click(object sender, EventArgs e)
+        {
+
+        }
 
         public void CertMatXUnidad(string RNPA)
         {
@@ -478,6 +483,14 @@ namespace OrdenamientoPesquero
             MatriculaCertMat.DisplayMember = "MATRICULA";
             MatriculaCertMat.ValueMember = "MATRICULA";
             MatriculaCertMat.Text = "";
+        }
+
+        public void equiposdepesca()
+        {
+            for (int i = 0; i < dgvEquiposPescaPerm.RowCount; i++)
+            {
+                proc.Registrar_Equipo(nPer.Text, dgvEquiposPescaPerm[0, i].Value.ToString(), dgvEquiposPescaPerm[1, i].Value.ToString(), dgvEquiposPescaPerm[2, i].Value.ToString());
+            }
         }
 
         private void LlenarCampos()
@@ -519,6 +532,125 @@ namespace OrdenamientoPesquero
                     i++;
                 }
 
+            }
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            if (nPer.Text != "")
+            {
+                dt = proc.ObtenerPermiso(Convert.ToInt32(nPer.Text));
+                limpiarpermiso();
+                if (dt.Rows.Count != 0)
+                {
+                    FolioPer.Text = dt.Rows[0]["FOLIO"].ToString();
+                    PesqueriaPer.Text = dt.Rows[0]["PESQUERIA"].ToString();
+                    LugarExpPer.Text = dt.Rows[0]["LUGAREXPEDICION"].ToString();
+                    diaExpPer.Text = dt.Rows[0]["DIAEXPEDICION"].ToString();
+                    finVigenciaPer.Text = dt.Rows[0]["FINVIGENCIA"].ToString();
+                    ZonaPescaPerm.Text = dt.Rows[0]["ZONAPESCA"].ToString();
+                    SitiosDesemPer.Text = dt.Rows[0]["SITIOSDESEMBARQUE"].ToString();
+                    ObservacionesPem.Text = dt.Rows[0]["OBSERVACIONES"].ToString();
+                    dt = proc.NumeroEmbarcaciones(Convert.ToInt32(nPer.Text));
+                    numericUpDown1.Value = dt.Rows.Count;
+                    dt = proc.EmbarcacionesxPermiso(Convert.ToInt32(nPer.Text));
+                    dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
+                        Matricula.Items.Add(dt.Rows[i]["MATRICULA"].ToString());
+                        Marcamotor.Items.Add(dt.Rows[i]["MOTORMARCA"].ToString());
+                        dgvEmbarcacionesPerm[0, i].Value = dt.Rows[i]["NOMBREEMBARCACION"].ToString();
+                        dgvEmbarcacionesPerm[1, i].Value = dt.Rows[i]["MATRICULA"].ToString();
+                        dgvEmbarcacionesPerm[2, i].Value = dt.Rows[i]["MOTORMARCA"].ToString();
+                        dgvEmbarcacionesPerm[3, i].Value = dt.Rows[i]["MOTORHP"].ToString();
+
+                    }
+                    dt = proc.EquiposxPermiso(Convert.ToInt32(nPer.Text));
+                    numericUpDown2.Value = dt.Rows.Count;
+                    dgvEquiposPescaPerm.RowCount = dt.Rows.Count;
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        Tipo.Items.Add(dt.Rows[i]["TIPO"].ToString());
+                        dgvEquiposPescaPerm[0, i].Value = dt.Rows[i]["CANTIDAD"].ToString();
+                        dgvEquiposPescaPerm[1, i].Value = dt.Rows[i]["TIPO"].ToString();
+                        dgvEquiposPescaPerm[2, i].Value = dt.Rows[i]["CARACTERISTICAS"].ToString();
+                    }
+
+                }
+            }
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            limpiarcertmat();
+            dt = proc.ObtenerCertMatrXUnidad(cbRNPA.Text);
+            int i = dt.Rows.Count;
+            foreach (DataRow filas in dt.Rows)
+            {
+                string mat = filas["MATRICULA"].ToString();
+                if (mat == MatriculaCertMat.Text)
+                {
+                    NombreEmbCerMat.Text = filas["NOMBREEMBARCACION"].ToString();
+                    ArqBrutoCertMat.Text = filas["ARQUEOBRUTO"].ToString();
+                    ArqNetoCertMat.Text = filas["ARQUEONETO"].ToString();
+                    EsloraCertMat.Text = filas["ESLORA"].ToString();
+                    MangaCertMat.Text = filas["MANGA"].ToString();
+                    NMotoresCertMat.Text = filas["NMOTORES"].ToString();
+                    PesoMCertMat.Text = filas["TONELAJE"].ToString();
+                    PotenciaMotorCertMat.Text = filas["MOTORHP"].ToString();
+                    PuntalCertMat.Text = filas["PUNTAL"].ToString();
+                    ServicioCertMat.Text = filas["SERVICIO"].ToString();
+                    TraficoCertMat.Text = filas["TRAFICO"].ToString();
+                }
+                i--;
+            }
+        }
+
+        private void CURPPesc_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            limpiarpescador();
+            dt = proc.Obtener_Pescador(CURPPesc.Text);
+            string tipopescador = "", ocupacion = "", cuerpoagua = "";
+            foreach (DataRow filas in dt.Rows)
+            {
+                NombrePesc.Text = filas["NOMBRE"].ToString();
+                ApePatPescador.Text = filas["AP_PAT"].ToString();
+                ApeMatPescador.Text = filas["AP_MAT"].ToString();
+                RFCPesc.Text = filas["RFC"].ToString();
+                EscolaridadPesc.Text = filas["ESCOLARIDAD"].ToString();
+                TSangrePesc.Text = filas["TIPO_SANGRE"].ToString();
+                LugarNacPesc.Text = filas["LUGAR_NACIMIENTO"].ToString();
+                ColoniaPesc.Text = filas["COLONIA"].ToString();
+                CalleYNumPesc.Text = filas["CALLENUM"].ToString();
+                MunicipioPesc.Text = filas["MUNICIPIO"].ToString();
+                CPPesc.Text = filas["CODIGO_POSTAL"].ToString();
+                TelefonoPesc.Text = filas["TELEFONO"].ToString();
+                tipopescador = filas["TIPO_PESCADOR"].ToString();
+                ocupacion = filas["OCUPACION_LABORAL"].ToString();
+                cuerpoagua = filas["CUERPO_DE_AGUA"].ToString();
+                MatriculaPesc.Text = filas["MATRICULA"].ToString();
+            }
+            foreach (RadioButton boton in TipoPesc.Controls)
+            {
+                if (boton.Text == tipopescador)
+                {
+                    boton.Checked = true;
+                }
+            }
+            foreach (RadioButton boton in CuerpoDeAguaPesc.Controls)
+            {
+                if (boton.Text == cuerpoagua)
+                {
+                    boton.Checked = true;
+                }
+            }
+            foreach (RadioButton boton in OcupacionEnEmbarPesc.Controls)
+            {
+                if (boton.Text == ocupacion)
+                {
+                    boton.Checked = true;
+                }
             }
         }
         #endregion
@@ -979,6 +1111,11 @@ namespace OrdenamientoPesquero
                 toolTip1.SetToolTip(Ver, "Ver Certificados de Mátriculas");
             }
         }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            dgvEquiposPescaPerm.RowCount = (int)numericUpDown2.Value;
+        }
         #endregion
 
 
@@ -1025,173 +1162,5 @@ namespace OrdenamientoPesquero
             }
         }
 
-        private void BuscarPermiso_Click(object sender, EventArgs e)
-        {
-            dt = proc.ObtenerPermiso(Convert.ToInt32(nPer.Text));
-            if (dt.Rows.Count != 0)
-            {
-                FolioPer.Text = dt.Rows[0]["FOLIO"].ToString();
-                PesqueriaPer.Text = dt.Rows[0]["PESQUERIA"].ToString();
-                LugarExpPer.Text = dt.Rows[0]["LUGAREXPEDICION"].ToString();
-                VigenciaPerm.Text = dt.Rows[0]["FOLIO"].ToString();
-                diaExpPer.Text = dt.Rows[0]["DIAEXPEDICION"].ToString();
-                finVigenciaPer.Text = dt.Rows[0]["FINVIGENCIA"].ToString();
-                ZonaPescaPerm.Text = dt.Rows[0]["ZONAPESCA"].ToString();
-                SitiosDesemPer.Text = dt.Rows[0]["SITIOSDESEMBARQUE"].ToString();
-                ObservacionesPem.Text = dt.Rows[0]["OBSERVACIONES"].ToString();
-                dt = proc.NumeroEmbarcaciones(Convert.ToInt32(nPer.Text));
-                numericUpDown1.Value = dt.Rows.Count;
-                dt = proc.EmbarcacionesxPermiso(Convert.ToInt32(nPer.Text));
-                for (int i = 0; i < dt.Rows.Count; i++)
-                {
-                    dgvEmbarcacionesPerm[0, i].Value = dt.Rows[i]["NOMBREEMBARCACION"].ToString();
-                    dgvEmbarcacionesPerm[1, i].Value = dt.Rows[i]["MATRICULA"].ToString();
-                    dgvEmbarcacionesPerm[2, i].Value = dt.Rows[i]["MOTORMARCA"].ToString();
-                    dgvEmbarcacionesPerm[3, i].Value = dt.Rows[i]["MOTORHP"].ToString();
-
-                }
-
-            }
-        }
-        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
-        {
-            dgvEquiposPescaPerm.RowCount = (int)numericUpDown2.Value;
-        }
-        public void equiposdepesca()
-        {
-            for (int i = 0; i < dgvEquiposPescaPerm.RowCount; i++)
-            {
-                proc.Registrar_Equipo(nPer.Text, dgvEquiposPescaPerm[0, i].Value.ToString(), dgvEquiposPescaPerm[1, i].Value.ToString(), dgvEquiposPescaPerm[2, i].Value.ToString());
-            }
-        }
-
-        private void cbRNPA_TabStopChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox13_Click(object sender, EventArgs e)
-        {
-            if (nPer.Text != "")
-            {
-                dt = proc.ObtenerPermiso(Convert.ToInt32(nPer.Text));
-                limpiarpermiso();
-                if (dt.Rows.Count != 0)
-                {
-                    FolioPer.Text = dt.Rows[0]["FOLIO"].ToString();
-                    PesqueriaPer.Text = dt.Rows[0]["PESQUERIA"].ToString();
-                    LugarExpPer.Text = dt.Rows[0]["LUGAREXPEDICION"].ToString();
-                    diaExpPer.Text = dt.Rows[0]["DIAEXPEDICION"].ToString();
-                    finVigenciaPer.Text = dt.Rows[0]["FINVIGENCIA"].ToString();
-                    ZonaPescaPerm.Text = dt.Rows[0]["ZONAPESCA"].ToString();
-                    SitiosDesemPer.Text = dt.Rows[0]["SITIOSDESEMBARQUE"].ToString();
-                    ObservacionesPem.Text = dt.Rows[0]["OBSERVACIONES"].ToString();
-                    dt = proc.NumeroEmbarcaciones(Convert.ToInt32(nPer.Text));
-                    numericUpDown1.Value = dt.Rows.Count;
-                    dt = proc.EmbarcacionesxPermiso(Convert.ToInt32(nPer.Text));
-                    dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
-                    for (int i = 0; i < dt.Rows.Count; i++)
-                    {
-                        dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
-                        Matricula.Items.Add(dt.Rows[i]["MATRICULA"].ToString());
-                        Marcamotor.Items.Add(dt.Rows[i]["MOTORMARCA"].ToString());
-                        dgvEmbarcacionesPerm[0, i].Value = dt.Rows[i]["NOMBREEMBARCACION"].ToString();
-                        dgvEmbarcacionesPerm[1, i].Value = dt.Rows[i]["MATRICULA"].ToString();
-                        dgvEmbarcacionesPerm[2, i].Value = dt.Rows[i]["MOTORMARCA"].ToString();
-                        dgvEmbarcacionesPerm[3, i].Value = dt.Rows[i]["MOTORHP"].ToString();
-
-                    }
-                    dt = proc.EquiposxPermiso(Convert.ToInt32(nPer.Text));
-                    numericUpDown2.Value = dt.Rows.Count;
-                    dgvEquiposPescaPerm.RowCount = dt.Rows.Count;
-                    for (int i = 0; i < dt.Rows.Count; i++)
-                    {
-                        Tipo.Items.Add(dt.Rows[i]["TIPO"].ToString());
-                        dgvEquiposPescaPerm[0, i].Value = dt.Rows[i]["CANTIDAD"].ToString();
-                        dgvEquiposPescaPerm[1, i].Value = dt.Rows[i]["TIPO"].ToString();
-                        dgvEquiposPescaPerm[2, i].Value = dt.Rows[i]["CARACTERISTICAS"].ToString();
-                    }
-
-                }
-            }
-        }
-
-        private void pictureBox14_Click(object sender, EventArgs e)
-        {
-            limpiarcertmat();
-            dt = proc.ObtenerCertMatrXUnidad(cbRNPA.Text);
-            int i = dt.Rows.Count;
-            foreach (DataRow filas in dt.Rows)
-            {
-                string mat = filas["MATRICULA"].ToString();
-                if (mat == MatriculaCertMat.Text)
-                {
-                    NombreEmbCerMat.Text = filas["NOMBREEMBARCACION"].ToString();
-                    ArqBrutoCertMat.Text = filas["ARQUEOBRUTO"].ToString();
-                    ArqNetoCertMat.Text = filas["ARQUEONETO"].ToString();
-                    EsloraCertMat.Text = filas["ESLORA"].ToString();
-                    MangaCertMat.Text = filas["MANGA"].ToString();
-                    NMotoresCertMat.Text = filas["NMOTORES"].ToString();
-                    PesoMCertMat.Text = filas["TONELAJE"].ToString();
-                    PotenciaMotorCertMat.Text = filas["MOTORHP"].ToString();
-                    PuntalCertMat.Text = filas["PUNTAL"].ToString();
-                    ServicioCertMat.Text = filas["SERVICIO"].ToString();
-                    TraficoCertMat.Text = filas["TRAFICO"].ToString();
-                }
-                i--;
-            }
-        }
-
-        private void Resumen_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CURPPesc_SelectionChangeCommitted(object sender, EventArgs e)
-        {
-            limpiarpescador();
-            dt = proc.Obtener_Pescador(CURPPesc.Text);
-            string tipopescador = "", ocupacion = "", cuerpoagua = "";
-            foreach (DataRow filas in dt.Rows)
-            {
-                NombrePesc.Text = filas["NOMBRE"].ToString();
-                ApePatPescador.Text = filas["AP_PAT"].ToString();
-                ApeMatPescador.Text = filas["AP_MAT"].ToString();
-                RFCPesc.Text = filas["RFC"].ToString();
-                EscolaridadPesc.Text = filas["ESCOLARIDAD"].ToString();
-                TSangrePesc.Text = filas["TIPO_SANGRE"].ToString();
-                LugarNacPesc.Text = filas["LUGAR_NACIMIENTO"].ToString();
-                ColoniaPesc.Text = filas["COLONIA"].ToString();
-                CalleYNumPesc.Text = filas["CALLENUM"].ToString();
-                MunicipioPesc.Text = filas["MUNICIPIO"].ToString();
-                CPPesc.Text = filas["CODIGO_POSTAL"].ToString();
-                TelefonoPesc.Text = filas["TELEFONO"].ToString();
-                tipopescador = filas["TIPO_PESCADOR"].ToString();
-                ocupacion = filas["OCUPACION_LABORAL"].ToString();
-                cuerpoagua = filas["CUERPO_DE_AGUA"].ToString();
-                MatriculaPesc.Text = filas["MATRICULA"].ToString();
-            }
-            foreach (RadioButton boton in TipoPesc.Controls)
-            {
-                if (boton.Text == tipopescador)
-                {
-                    boton.Checked = true;
-                }
-            }
-            foreach (RadioButton boton in CuerpoDeAguaPesc.Controls)
-            {
-                if (boton.Text == cuerpoagua)
-                {
-                    boton.Checked = true;
-                }
-            }
-            foreach (RadioButton boton in OcupacionEnEmbarPesc.Controls)
-            {
-                if (boton.Text == ocupacion)
-                {
-                    boton.Checked = true;
-                }
-            }
-        }
     }
 }
