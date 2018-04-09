@@ -197,7 +197,6 @@
             this.label47 = new System.Windows.Forms.Label();
             this.RFCPesc = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
-            this.CURPPesc = new System.Windows.Forms.TextBox();
             this.label49 = new System.Windows.Forms.Label();
             this.FechaNacPesc = new System.Windows.Forms.DateTimePicker();
             this.label50 = new System.Windows.Forms.Label();
@@ -235,6 +234,7 @@
             this.Cargo = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CURPPesc = new System.Windows.Forms.ComboBox();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -1773,6 +1773,7 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.CURPPesc);
             this.groupBox7.Controls.Add(this.pictureBox9);
             this.groupBox7.Controls.Add(this.pictureBox7);
             this.groupBox7.Controls.Add(this.pictureBox5);
@@ -1805,7 +1806,6 @@
             this.groupBox7.Controls.Add(this.label47);
             this.groupBox7.Controls.Add(this.RFCPesc);
             this.groupBox7.Controls.Add(this.label48);
-            this.groupBox7.Controls.Add(this.CURPPesc);
             this.groupBox7.Controls.Add(this.label49);
             this.groupBox7.Controls.Add(this.FechaNacPesc);
             this.groupBox7.Controls.Add(this.label50);
@@ -2124,14 +2124,6 @@
             this.label48.Size = new System.Drawing.Size(45, 18);
             this.label48.TabIndex = 9;
             this.label48.Text = "RFC:";
-            // 
-            // CURPPesc
-            // 
-            this.CURPPesc.Location = new System.Drawing.Point(70, 143);
-            this.CURPPesc.Name = "CURPPesc";
-            this.CURPPesc.Size = new System.Drawing.Size(186, 26);
-            this.CURPPesc.TabIndex = 8;
-            this.CURPPesc.TextChanged += new System.EventHandler(this.CURPPesc_TextChanged);
             // 
             // label49
             // 
@@ -2519,6 +2511,14 @@
             this.dataGridViewTextBoxColumn5.HeaderText = "Telefono";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
+            // CURPPesc
+            // 
+            this.CURPPesc.FormattingEnabled = true;
+            this.CURPPesc.Location = new System.Drawing.Point(69, 143);
+            this.CURPPesc.Name = "CURPPesc";
+            this.CURPPesc.Size = new System.Drawing.Size(187, 26);
+            this.CURPPesc.TabIndex = 112;
+            // 
             // Pantalla_Registro_UnidadEconomica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2716,7 +2716,6 @@
         private System.Windows.Forms.Label label47;
         private System.Windows.Forms.TextBox RFCPesc;
         private System.Windows.Forms.Label label48;
-        private System.Windows.Forms.TextBox CURPPesc;
         private System.Windows.Forms.Label label49;
         private System.Windows.Forms.DateTimePicker FechaNacPesc;
         private System.Windows.Forms.Label label50;
@@ -2811,5 +2810,6 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn Cargo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.ComboBox CURPPesc;
     }
 }
