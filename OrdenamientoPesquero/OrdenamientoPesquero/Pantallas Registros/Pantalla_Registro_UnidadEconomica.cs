@@ -747,12 +747,12 @@ namespace OrdenamientoPesquero
             if (CPPesc.Text.Contains(' ') || CPPesc.Text.Length != 5)
             {
                 pictureBox8.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
-                pescador[2, 0] = "1";
+                pescador[2, 0] = "0";
             }
             else
             {
                 pictureBox8.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
-                pescador[2, 0] = "0";
+                pescador[2, 0] = "1";
             }
         }
         private void TelefonoPesc_TextChanged(object sender, EventArgs e)
