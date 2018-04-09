@@ -449,11 +449,22 @@ namespace OrdenamientoPesquero
             nPer.Text = a;
         }
 
+        private void CargarPescadores()
+        {
+            string rnpa = cbRNPA.Text;
+            dt = proc.Obtener_curp(rnpa);
+            CURPPesc.DataSource = dt;
+            CURPPesc.DisplayMember = "CURP";
+            CURPPesc.ValueMember = "CURP";
+            CURPPesc.Text = "";
+        }
+
         private void pictureBox12_Click(object sender, EventArgs e)
         {
             LlenarCampos();
             Resumenes(cbRNPA.Text);
             CargarPermisos();
+            CargarPescadores();
             CertMatXUnidad(cbRNPA.Text);
             limpiarpermiso();
             limpiarcertmat();
@@ -466,6 +477,7 @@ namespace OrdenamientoPesquero
             MatriculaCertMat.DataSource = dt;
             MatriculaCertMat.DisplayMember = "MATRICULA";
             MatriculaCertMat.ValueMember = "MATRICULA";
+            MatriculaCertMat.Text = "";
         }
 
         private void LlenarCampos()
@@ -670,6 +682,17 @@ namespace OrdenamientoPesquero
             foreach (DataGridView item in Permisos.Controls.OfType<DataGridView>())
             {
                 item.RowCount = 0;
+            }
+            foreach (ComboBox item in Permisos.Controls.OfType<ComboBox>())
+            {
+                item.Text = "";
+            }
+        }
+        public void limpiarpescador()
+        {
+            foreach (TextBox item in Permisos.Controls.OfType<TextBox>())
+            {
+                item.Text = "";
             }
             foreach (ComboBox item in Permisos.Controls.OfType<ComboBox>())
             {
@@ -1122,6 +1145,53 @@ namespace OrdenamientoPesquero
         private void Resumen_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void CURPPesc_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            limpiarpescador();
+            dt = proc.Obtener_Pescador(CURPPesc.Text);
+            string tipopescador = "", ocupacion = "", cuerpoagua = "";
+            foreach (DataRow filas in dt.Rows)
+            {
+                NombrePesc.Text = filas["NOMBRE"].ToString();
+                ApePatPescador.Text = filas["AP_PAT"].ToString();
+                ApeMatPescador.Text = filas["AP_MAT"].ToString();
+                RFCPesc.Text = filas["RFC"].ToString();
+                EscolaridadPesc.Text = filas["ESCOLARIDAD"].ToString();
+                TSangrePesc.Text = filas["TIPO_SANGRE"].ToString();
+                LugarNacPesc.Text = filas["LUGAR_NACIMIENTO"].ToString();
+                ColoniaPesc.Text = filas["COLONIA"].ToString();
+                CalleYNumPesc.Text = filas["CALLENUM"].ToString();
+                MunicipioPesc.Text = filas["MUNICIPIO"].ToString();
+                CPPesc.Text = filas["CODIGO_POSTAL"].ToString();
+                TelefonoPesc.Text = filas["TELEFONO"].ToString();
+                tipopescador = filas["TIPO_PESCADOR"].ToString();
+                ocupacion = filas["OCUPACION_LABORAL"].ToString();
+                cuerpoagua = filas["CUERPO_DE_AGUA"].ToString();
+                MatriculaPesc.Text = filas["MATRICULA"].ToString();
+            }
+            foreach (RadioButton boton in TipoPesc.Controls)
+            {
+                if (boton.Text == tipopescador)
+                {
+                    boton.Checked = true;
+                }
+            }
+            foreach (RadioButton boton in CuerpoDeAguaPesc.Controls)
+            {
+                if (boton.Text == cuerpoagua)
+                {
+                    boton.Checked = true;
+                }
+            }
+            foreach (RadioButton boton in OcupacionEnEmbarPesc.Controls)
+            {
+                if (boton.Text == ocupacion)
+                {
+                    boton.Checked = true;
+                }
+            }
         }
     }
 }
