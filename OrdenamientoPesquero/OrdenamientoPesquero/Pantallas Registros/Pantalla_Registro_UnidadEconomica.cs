@@ -508,7 +508,69 @@ namespace OrdenamientoPesquero
 
 
         #region Validaciones
-        //Escribir en data
+        //Escribir en data----------------------------------------------------------------------------
+        private void datagridview1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            if (dgv.CurrentCell.ColumnIndex == dgv.Columns["Tipo"].Index)
+            {
+                ComboBox cbx = (ComboBox)e.Control;
+                cbx.DropDownStyle = ComboBoxStyle.DropDown;
+                cbx.AutoCompleteSource = AutoCompleteSource.ListItems;
+                cbx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+                cbx.Validating += new CancelEventHandler(cbx_Validating);
+            }
+        }
+        private void datagridview2_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            if (dgv.CurrentCell.ColumnIndex == dgv.Columns["Cargo"].Index)
+            {
+                ComboBox cbx = (ComboBox)e.Control;
+                cbx.DropDownStyle = ComboBoxStyle.DropDown;
+                cbx.AutoCompleteSource = AutoCompleteSource.ListItems;
+                cbx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+                cbx.Validating += new CancelEventHandler(cbx_Validating);
+            }
+        }
+
+        private void datagridview_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            if (dgv.CurrentCell.ColumnIndex == dgv.Columns["Matricula"].Index || dgv.CurrentCell.ColumnIndex == dgv.Columns["Marcamotor"].Index)
+            {
+                ComboBox cbx = (ComboBox)e.Control;
+                cbx.DropDownStyle = ComboBoxStyle.DropDown;
+                cbx.AutoCompleteSource = AutoCompleteSource.ListItems;
+                cbx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+                cbx.Validating += new CancelEventHandler(cbx_Validating);
+            }
+        }
+        void cbx_Validating(object sender, CancelEventArgs e)
+        {
+
+            DataGridViewComboBoxEditingControl cbx = sender as DataGridViewComboBoxEditingControl;
+
+            DataGridView grid = cbx.EditingControlDataGridView;
+
+            object value = cbx.Text;
+
+            // Add value to list if not there
+
+            if (cbx.Items.IndexOf(value) == -1)
+            {
+                DataGridViewComboBoxCell cboCol = (DataGridViewComboBoxCell)grid.CurrentCell;
+
+                // Must add to both the current combobox as well as the template, to avoid duplicate entries...
+
+                cbx.Items.Add(value);
+
+                cboCol.Items.Add(value);
+
+                grid.CurrentCell.Value = value;
+            }
+        }
+        //-----------------------------------------------------------------------------------------
         public bool existe(string rnpa)
         {
             dt = proc.Obtener_unidades(rnpa);
@@ -556,55 +618,7 @@ namespace OrdenamientoPesquero
             }
             return estabien;
         }
-        private void datagridview1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-        {
-            DataGridView dgv = (DataGridView)sender;
-            if (dgv.CurrentCell.ColumnIndex == dgv.Columns["Tipo"].Index)
-            {
-                ComboBox cbx = (ComboBox)e.Control;
-                cbx.DropDownStyle = ComboBoxStyle.DropDown;
-                cbx.AutoCompleteSource = AutoCompleteSource.ListItems;
-                cbx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-                cbx.Validating += new CancelEventHandler(cbx_Validating);
-            }
-        }
 
-        private void datagridview_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-        {
-            DataGridView dgv = (DataGridView)sender;
-            if (dgv.CurrentCell.ColumnIndex == dgv.Columns["Matricula"].Index || dgv.CurrentCell.ColumnIndex == dgv.Columns["Marcamotor"].Index)
-            {
-                ComboBox cbx = (ComboBox)e.Control;
-                cbx.DropDownStyle = ComboBoxStyle.DropDown;
-                cbx.AutoCompleteSource = AutoCompleteSource.ListItems;
-                cbx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-                cbx.Validating += new CancelEventHandler(cbx_Validating);
-            }
-        }
-        void cbx_Validating(object sender, CancelEventArgs e)
-        {
-
-            DataGridViewComboBoxEditingControl cbx = sender as DataGridViewComboBoxEditingControl;
-
-            DataGridView grid = cbx.EditingControlDataGridView;
-
-            object value = cbx.Text;
-
-            // Add value to list if not there
-
-            if (cbx.Items.IndexOf(value) == -1)
-            {
-                DataGridViewComboBoxCell cboCol = (DataGridViewComboBoxCell)grid.CurrentCell;
-
-                // Must add to both the current combobox as well as the template, to avoid duplicate entries...
-
-                cbx.Items.Add(value);
-
-                cboCol.Items.Add(value);
-
-                grid.CurrentCell.Value = value;
-            }
-        }
 
         private void ArqBrutoCertMat_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -1098,6 +1112,11 @@ namespace OrdenamientoPesquero
                 }
                 i--;
             }
+        }
+
+        private void Resumen_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
