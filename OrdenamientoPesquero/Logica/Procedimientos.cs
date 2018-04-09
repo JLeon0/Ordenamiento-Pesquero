@@ -92,6 +92,16 @@ namespace Logica
             string[] Parametros = { "@rnpa" };
             return c.getDatosTabla("ObtenerDatos", Parametros, RNPA);
         }
+        public DataTable Obtener_todos_los_nombres()
+        {
+            string[] Parametros = {  };
+            return c.getDatosTabla("ObtenerNombres", Parametros);
+        }
+        public DataTable Obtener_unidad(string nombre)
+        {
+            string[] Parametros = { "@nombre" };
+            return c.getDatosTabla("ObtenerxNombre", Parametros, nombre);
+        }
         public DataTable Obtener_Directiva(string rnpa)
         {
             string[] Parametros = { "@rnpa" };
