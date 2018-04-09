@@ -490,7 +490,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(-6, 32);
+            this.label3.Location = new System.Drawing.Point(111, 31);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -1655,7 +1655,7 @@
             this.OcupacionEnEmbarPesc.Controls.Add(this.radioButton8);
             this.OcupacionEnEmbarPesc.Location = new System.Drawing.Point(10, 97);
             this.OcupacionEnEmbarPesc.Name = "OcupacionEnEmbarPesc";
-            this.OcupacionEnEmbarPesc.Size = new System.Drawing.Size(308, 54);
+            this.OcupacionEnEmbarPesc.Size = new System.Drawing.Size(316, 54);
             this.OcupacionEnEmbarPesc.TabIndex = 2;
             this.OcupacionEnEmbarPesc.TabStop = false;
             this.OcupacionEnEmbarPesc.Text = "Ocupación laboral en la embarcación";
@@ -2477,7 +2477,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(605, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(807, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
@@ -2514,10 +2514,12 @@
             // CURPPesc
             // 
             this.CURPPesc.FormattingEnabled = true;
-            this.CURPPesc.Location = new System.Drawing.Point(69, 143);
+            this.CURPPesc.Location = new System.Drawing.Point(59, 143);
             this.CURPPesc.Name = "CURPPesc";
-            this.CURPPesc.Size = new System.Drawing.Size(187, 26);
+            this.CURPPesc.Size = new System.Drawing.Size(197, 26);
             this.CURPPesc.TabIndex = 112;
+            this.CURPPesc.SelectionChangeCommitted += new System.EventHandler(this.CURPPesc_SelectionChangeCommitted);
+            this.CURPPesc.TextChanged += new System.EventHandler(this.CURPPesc_TextChanged);
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
