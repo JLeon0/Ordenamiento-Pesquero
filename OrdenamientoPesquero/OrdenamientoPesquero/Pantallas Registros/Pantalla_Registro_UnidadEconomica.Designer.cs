@@ -211,10 +211,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.numericUpDown3 = new System.Windows.Forms.NumericUpDown();
             this.dgvDirectiva = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewComboBoxColumn2 = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Expediente = new System.Windows.Forms.TabPage();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.Ver = new System.Windows.Forms.PictureBox();
@@ -235,6 +231,10 @@
             this.TotalPermisos = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Cargo = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
@@ -490,7 +490,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(2, 32);
+            this.label3.Location = new System.Drawing.Point(-6, 32);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -1900,7 +1900,7 @@
             this.CorreoPesc.BackColor = System.Drawing.Color.White;
             this.CorreoPesc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CorreoPesc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CorreoPesc.ForeColor = System.Drawing.Color.DarkGray;
+            this.CorreoPesc.ForeColor = System.Drawing.Color.Black;
             this.CorreoPesc.Location = new System.Drawing.Point(9, 376);
             this.CorreoPesc.MaxLength = 30;
             this.CorreoPesc.Name = "CorreoPesc";
@@ -2252,7 +2252,7 @@
             this.dgvDirectiva.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDirectiva.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn3,
-            this.dataGridViewComboBoxColumn2,
+            this.Cargo,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.dgvDirectiva.Location = new System.Drawing.Point(37, 69);
@@ -2260,36 +2260,7 @@
             this.dgvDirectiva.RowHeadersVisible = false;
             this.dgvDirectiva.Size = new System.Drawing.Size(703, 131);
             this.dgvDirectiva.TabIndex = 59;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.HeaderText = "Nombre";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.Width = 300;
-            // 
-            // dataGridViewComboBoxColumn2
-            // 
-            this.dataGridViewComboBoxColumn2.HeaderText = "Cargo";
-            this.dataGridViewComboBoxColumn2.Items.AddRange(new object[] {
-            "Presidente",
-            "Secretario",
-            "Vocal",
-            "Tesorero"});
-            this.dataGridViewComboBoxColumn2.Name = "dataGridViewComboBoxColumn2";
-            this.dataGridViewComboBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridViewComboBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.dataGridViewComboBoxColumn2.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.HeaderText = "FechaIng";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.Width = 150;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.HeaderText = "Telefono";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dgvDirectiva.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.datagridview2_EditingControlShowing);
             // 
             // Expediente
             // 
@@ -2423,13 +2394,14 @@
             this.Resumen.TabIndex = 101;
             this.Resumen.TabStop = false;
             this.Resumen.Text = "Resumen";
+            this.Resumen.Enter += new System.EventHandler(this.Resumen_Enter);
             // 
             // TotalPesquerias
             // 
             this.TotalPesquerias.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalPesquerias.FormattingEnabled = true;
             this.TotalPesquerias.ItemHeight = 18;
-            this.TotalPesquerias.Location = new System.Drawing.Point(26, 276);
+            this.TotalPesquerias.Location = new System.Drawing.Point(30, 238);
             this.TotalPesquerias.Name = "TotalPesquerias";
             this.TotalPesquerias.Size = new System.Drawing.Size(150, 94);
             this.TotalPesquerias.TabIndex = 7;
@@ -2438,7 +2410,7 @@
             // 
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(4, 246);
+            this.label65.Location = new System.Drawing.Point(8, 208);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(172, 18);
             this.label65.TabIndex = 6;
@@ -2448,7 +2420,7 @@
             // 
             this.TotalEsfuerzos.AutoSize = true;
             this.TotalEsfuerzos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalEsfuerzos.Location = new System.Drawing.Point(40, 222);
+            this.TotalEsfuerzos.Location = new System.Drawing.Point(44, 184);
             this.TotalEsfuerzos.Name = "TotalEsfuerzos";
             this.TotalEsfuerzos.Size = new System.Drawing.Size(29, 22);
             this.TotalEsfuerzos.TabIndex = 5;
@@ -2458,7 +2430,7 @@
             // 
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(4, 188);
+            this.label63.Location = new System.Drawing.Point(8, 150);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(242, 18);
             this.label63.TabIndex = 4;
@@ -2468,7 +2440,7 @@
             // 
             this.TotalSocios.AutoSize = true;
             this.TotalSocios.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalSocios.Location = new System.Drawing.Point(40, 164);
+            this.TotalSocios.Location = new System.Drawing.Point(44, 126);
             this.TotalSocios.Name = "TotalSocios";
             this.TotalSocios.Size = new System.Drawing.Size(29, 22);
             this.TotalSocios.TabIndex = 3;
@@ -2478,7 +2450,7 @@
             // 
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(4, 116);
+            this.label61.Location = new System.Drawing.Point(6, 97);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(142, 18);
             this.label61.TabIndex = 2;
@@ -2488,7 +2460,7 @@
             // 
             this.TotalPermisos.AutoSize = true;
             this.TotalPermisos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalPermisos.Location = new System.Drawing.Point(42, 98);
+            this.TotalPermisos.Location = new System.Drawing.Point(44, 79);
             this.TotalPermisos.Name = "TotalPermisos";
             this.TotalPermisos.Size = new System.Drawing.Size(29, 22);
             this.TotalPermisos.TabIndex = 1;
@@ -2513,9 +2485,39 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(622, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(605, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.HeaderText = "Nombre";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.Width = 300;
+            // 
+            // Cargo
+            // 
+            this.Cargo.HeaderText = "Cargo";
+            this.Cargo.Items.AddRange(new object[] {
+            "Presidente",
+            "Secretario",
+            "Vocal",
+            "Tesorero"});
+            this.Cargo.Name = "Cargo";
+            this.Cargo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Cargo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Cargo.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.HeaderText = "FechaIng";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.Width = 150;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.HeaderText = "Telefono";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -2795,10 +2797,6 @@
         private System.Windows.Forms.Label label76;
         private System.Windows.Forms.Label label75;
         private System.Windows.Forms.DataGridView dgvDirectiva;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private System.Windows.Forms.DataGridViewComboBoxColumn dataGridViewComboBoxColumn2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.NumericUpDown numericUpDown3;
         private System.Windows.Forms.Label label15;
@@ -2809,5 +2807,9 @@
         private System.Windows.Forms.DataGridViewComboBoxColumn Tipo;
         private System.Windows.Forms.DataGridViewTextBoxColumn Caracteristicas;
         private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Cargo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
     }
 }
