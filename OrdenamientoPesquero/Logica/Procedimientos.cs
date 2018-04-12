@@ -85,8 +85,6 @@ namespace Logica
             return c.getDatosTabla("EquiposxPermiso", Parametros, nopermiso);
         }
         #endregion
-
-
         public DataTable Obtener_todas_unidades(string RNPA)
         {
             string[] Parametros = { "@rnpa" };
