@@ -21,5 +21,25 @@ namespace OrdenamientoPesquero
         {
 
         }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void diaExpPer_ValueChanged(object sender, EventArgs e)
+        {
+            VigenciaPerm.Text = DiferenciaFechas(finVigenciaPer.Value, diaExpPer.Value);
+        }
+
+        private void numericUpDown1_ValueChanged(object sender, EventArgs e)
+        {
+            dgvEmbarcacionesPerm.RowCount = (int)numericUpDown1.Value;
+        }
+
+        private void numericUpDown2_ValueChanged(object sender, EventArgs e)
+        {
+            dgvEquiposPescaPerm.RowCount = (int)numericUpDown2.Value;
+        }
     }
 }
