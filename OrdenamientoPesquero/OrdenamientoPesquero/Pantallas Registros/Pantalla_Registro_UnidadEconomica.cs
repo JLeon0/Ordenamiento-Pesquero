@@ -1162,5 +1162,9 @@ namespace OrdenamientoPesquero
             }
         }
 
+        private void DataResumen_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
