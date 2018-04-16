@@ -39,7 +39,7 @@ namespace OrdenamientoPesquero
 
         private void diaExpPer_ValueChanged(object sender, EventArgs e)
         {
-            VigenciaPerm.Text = DiferenciaFechas(finVigenciaPer.Value, diaExpPer.Value);
+            //VigenciaPerm.Text = DiferenciaFechas(finVigenciaPer.Value, diaExpPer.Value);
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)

@@ -74,6 +74,7 @@
             this.NombrePesc = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.MatriculaPesc = new System.Windows.Forms.ComboBox();
             this.label37 = new System.Windows.Forms.Label();
             this.CuerpoDeAguaPesc = new System.Windows.Forms.GroupBox();
             this.radioButton6 = new System.Windows.Forms.RadioButton();
@@ -90,7 +91,6 @@
             this.EliminarUnidad = new System.Windows.Forms.PictureBox();
             this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
             this.RegistrarUnidad = new System.Windows.Forms.PictureBox();
-            this.MatriculaPesc = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -190,6 +190,8 @@
             this.CURPPesc.Name = "CURPPesc";
             this.CURPPesc.Size = new System.Drawing.Size(197, 26);
             this.CURPPesc.TabIndex = 112;
+            this.CURPPesc.SelectionChangeCommitted += new System.EventHandler(this.CURPPesc_SelectionChangeCommitted);
+            this.CURPPesc.TextChanged += new System.EventHandler(this.CURPPesc_TextChanged);
             // 
             // pictureBox9
             // 
@@ -275,6 +277,7 @@
             this.CorreoPesc.Size = new System.Drawing.Size(623, 26);
             this.CorreoPesc.TabIndex = 105;
             this.CorreoPesc.Tag = "";
+            this.CorreoPesc.TextChanged += new System.EventHandler(this.CorreoPesc_TextChanged);
             // 
             // TSangrePesc
             // 
@@ -362,6 +365,7 @@
             this.TelefonoPesc.Name = "TelefonoPesc";
             this.TelefonoPesc.Size = new System.Drawing.Size(114, 26);
             this.TelefonoPesc.TabIndex = 22;
+            this.TelefonoPesc.TextChanged += new System.EventHandler(this.TelefonoPesc_TextChanged);
             // 
             // label41
             // 
@@ -430,6 +434,7 @@
             this.CPPesc.Size = new System.Drawing.Size(59, 26);
             this.CPPesc.TabIndex = 16;
             this.CPPesc.ValidatingType = typeof(int);
+            this.CPPesc.TextChanged += new System.EventHandler(this.CPPesc_TextChanged);
             // 
             // label45
             // 
@@ -478,6 +483,7 @@
             this.RFCPesc.Name = "RFCPesc";
             this.RFCPesc.Size = new System.Drawing.Size(186, 26);
             this.RFCPesc.TabIndex = 10;
+            this.RFCPesc.TextChanged += new System.EventHandler(this.RFCPesc_TextChanged);
             // 
             // label48
             // 
@@ -582,6 +588,14 @@
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Relación Pescador-Embarcación";
+            // 
+            // MatriculaPesc
+            // 
+            this.MatriculaPesc.FormattingEnabled = true;
+            this.MatriculaPesc.Location = new System.Drawing.Point(86, 32);
+            this.MatriculaPesc.Name = "MatriculaPesc";
+            this.MatriculaPesc.Size = new System.Drawing.Size(198, 25);
+            this.MatriculaPesc.TabIndex = 111;
             // 
             // label37
             // 
@@ -736,6 +750,7 @@
             this.EliminarUnidad.Size = new System.Drawing.Size(50, 50);
             this.EliminarUnidad.TabIndex = 110;
             this.EliminarUnidad.TabStop = false;
+            this.EliminarUnidad.Click += new System.EventHandler(this.EliminarUnidad_Click);
             // 
             // ActualizarUnidad
             // 
@@ -747,6 +762,7 @@
             this.ActualizarUnidad.Size = new System.Drawing.Size(50, 50);
             this.ActualizarUnidad.TabIndex = 109;
             this.ActualizarUnidad.TabStop = false;
+            this.ActualizarUnidad.Click += new System.EventHandler(this.ActualizarUnidad_Click);
             // 
             // RegistrarUnidad
             // 
@@ -759,14 +775,6 @@
             this.RegistrarUnidad.TabIndex = 108;
             this.RegistrarUnidad.TabStop = false;
             this.RegistrarUnidad.Click += new System.EventHandler(this.RegistrarUnidad_Click);
-            // 
-            // MatriculaPesc
-            // 
-            this.MatriculaPesc.FormattingEnabled = true;
-            this.MatriculaPesc.Location = new System.Drawing.Point(86, 32);
-            this.MatriculaPesc.Name = "MatriculaPesc";
-            this.MatriculaPesc.Size = new System.Drawing.Size(198, 25);
-            this.MatriculaPesc.TabIndex = 111;
             // 
             // label2
             // 
