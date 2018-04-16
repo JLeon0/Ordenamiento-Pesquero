@@ -1130,7 +1130,14 @@ namespace OrdenamientoPesquero
                 TotalEsfuerzos.Text = dt.Rows[0]["ESFUERZOS PESQUEROS"].ToString();
 
                 dt = proc.ResumenPesqueria(cbRNPA.Text);
+                DataResumen.RowCount = dt.Rows.Count;
                 TotalPesquerias.Items.Clear();
+                for (int i = 0; i < dt.Rows.Count; i++)
+                {
+                    DataResumen[0, i].Value = dt.Rows[i]["PESQUERIA"].ToString();
+                    DataResumen[1, i].Value = dt.Rows[i][2].ToString();
+                    DataResumen[2, i].Value = DiferenciaFechas(Convert.ToDateTime(dt.Rows[i][4].ToString()), Convert.ToDateTime(dt.Rows[i][3].ToString()));
+                }
                 foreach (DataRow fila in dt.Rows)
                 {
                     TotalPesquerias.Items.Add(fila["PESQUERIA"].ToString());
