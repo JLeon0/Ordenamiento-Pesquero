@@ -5,11 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
+using System.Data;
+using Logica;
 
 namespace Logica
 {
     public class Validaciones
     {
+        DataTable dt;
+        Procedimientos proc = new Procedimientos();
         public bool validarcurp(string rfc)
         {
             if (Regex.IsMatch(rfc, @"^([A-Z\s]{4})\d{6}([A-Z\w]{6})([0-9A-Z]{1})([0-9]{1})$"))
@@ -80,6 +84,41 @@ namespace Logica
             return dti;
         }
 
+        public String DiferenciaFechas(DateTime newdt, DateTime olddt)
+        {
+            Int32 anios;
+            Int32 meses;
+            Int32 dias;
+            String str = "";
+
+            anios = (newdt.Year - olddt.Year);
+            meses = (newdt.Month - olddt.Month);
+            dias = (newdt.Day - olddt.Day);
+
+            if (dias < 0)
+            {
+                meses -= 1;
+                dias += DateTime.DaysInMonth(newdt.Year, newdt.Month);
+            }
+            if (meses < 0)
+            {
+                anios -= 1;
+                meses += 12;
+            }
+            if (anios < 0)
+            {
+                return "Fecha Invalida";
+            }
+            if (anios > 0)
+                str = str + anios.ToString() + " años ";
+            if (meses > 0)
+                str = str + meses.ToString() + " meses ";
+            if (dias > 0)
+                str = str + dias.ToString() + " dias ";
+
+            return str;
+        }
+
         public void Exito(int ok)
         {
             if (ok >= 1)
@@ -93,10 +132,23 @@ namespace Logica
                 MessageBox.Show("Error durante el registro"); /* 1 segundo = 1000 */
             }
         }
-        private void CloseIt()
+        public void CloseIt()
         {
             System.Threading.Thread.Sleep(2000);
             System.Windows.Forms.SendKeys.SendWait(" ");
+        }
+
+        public bool existe(string rnpa)
+        {
+            dt = proc.Obtener_unidades(rnpa);
+            if (dt.Rows.Count == 0)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
     }
 }

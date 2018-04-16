@@ -393,6 +393,7 @@
             this.dgvEquiposPescaPerm.RowHeadersVisible = false;
             this.dgvEquiposPescaPerm.Size = new System.Drawing.Size(745, 131);
             this.dgvEquiposPescaPerm.TabIndex = 71;
+            this.dgvEquiposPescaPerm.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.datagridview1_EditingControlShowing);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -427,6 +428,7 @@
             this.dgvEmbarcacionesPerm.RowHeadersVisible = false;
             this.dgvEmbarcacionesPerm.Size = new System.Drawing.Size(745, 148);
             this.dgvEmbarcacionesPerm.TabIndex = 74;
+            this.dgvEmbarcacionesPerm.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.datagridview_EditingControlShowing);
             // 
             // Nombre
             // 

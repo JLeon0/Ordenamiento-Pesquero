@@ -54,8 +54,6 @@
             this.label42 = new System.Windows.Forms.Label();
             this.MunicipioPesc = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
-            this.LocalidadPesc = new System.Windows.Forms.TextBox();
-            this.label44 = new System.Windows.Forms.Label();
             this.CPPesc = new System.Windows.Forms.MaskedTextBox();
             this.label45 = new System.Windows.Forms.Label();
             this.ColoniaPesc = new System.Windows.Forms.TextBox();
@@ -85,7 +83,6 @@
             this.radioButton8 = new System.Windows.Forms.RadioButton();
             this.TipoPesc = new System.Windows.Forms.GroupBox();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
             this.EliminarUnidad = new System.Windows.Forms.PictureBox();
@@ -156,8 +153,6 @@
             this.groupBox7.Controls.Add(this.label42);
             this.groupBox7.Controls.Add(this.MunicipioPesc);
             this.groupBox7.Controls.Add(this.label43);
-            this.groupBox7.Controls.Add(this.LocalidadPesc);
-            this.groupBox7.Controls.Add(this.label44);
             this.groupBox7.Controls.Add(this.CPPesc);
             this.groupBox7.Controls.Add(this.label45);
             this.groupBox7.Controls.Add(this.ColoniaPesc);
@@ -178,7 +173,7 @@
             this.groupBox7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox7.Location = new System.Drawing.Point(12, 104);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(894, 408);
+            this.groupBox7.Size = new System.Drawing.Size(894, 391);
             this.groupBox7.TabIndex = 7;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Información General del Pescador";
@@ -190,7 +185,7 @@
             this.CURPPesc.Name = "CURPPesc";
             this.CURPPesc.Size = new System.Drawing.Size(197, 26);
             this.CURPPesc.TabIndex = 112;
-            this.CURPPesc.SelectionChangeCommitted += new System.EventHandler(this.CURPPesc_SelectionChangeCommitted);
+            this.CURPPesc.SelectedValueChanged += new System.EventHandler(this.CURPPesc_SelectedValueChanged);
             this.CURPPesc.TextChanged += new System.EventHandler(this.CURPPesc_TextChanged);
             // 
             // pictureBox9
@@ -223,7 +218,7 @@
             this.pictureBox5.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox5.Location = new System.Drawing.Point(806, 331);
+            this.pictureBox5.Location = new System.Drawing.Point(806, 299);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(23, 21);
             this.pictureBox5.TabIndex = 108;
@@ -247,7 +242,7 @@
             this.pictureBox6.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox6.Location = new System.Drawing.Point(638, 376);
+            this.pictureBox6.Location = new System.Drawing.Point(638, 344);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(23, 21);
             this.pictureBox6.TabIndex = 107;
@@ -259,7 +254,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.Location = new System.Drawing.Point(6, 357);
+            this.label58.Location = new System.Drawing.Point(6, 325);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(226, 18);
             this.label58.TabIndex = 106;
@@ -271,7 +266,7 @@
             this.CorreoPesc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CorreoPesc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CorreoPesc.ForeColor = System.Drawing.Color.Black;
-            this.CorreoPesc.Location = new System.Drawing.Point(9, 376);
+            this.CorreoPesc.Location = new System.Drawing.Point(9, 344);
             this.CorreoPesc.MaxLength = 30;
             this.CorreoPesc.Name = "CorreoPesc";
             this.CorreoPesc.Size = new System.Drawing.Size(623, 26);
@@ -360,7 +355,7 @@
             // 
             // TelefonoPesc
             // 
-            this.TelefonoPesc.Location = new System.Drawing.Point(686, 328);
+            this.TelefonoPesc.Location = new System.Drawing.Point(686, 296);
             this.TelefonoPesc.Mask = "000-000-0000";
             this.TelefonoPesc.Name = "TelefonoPesc";
             this.TelefonoPesc.Size = new System.Drawing.Size(114, 26);
@@ -370,7 +365,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(620, 331);
+            this.label41.Location = new System.Drawing.Point(620, 299);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(70, 18);
             this.label41.TabIndex = 21;
@@ -379,7 +374,7 @@
             // EstadoPesc
             // 
             this.EstadoPesc.Enabled = false;
-            this.EstadoPesc.Location = new System.Drawing.Point(382, 328);
+            this.EstadoPesc.Location = new System.Drawing.Point(382, 296);
             this.EstadoPesc.Name = "EstadoPesc";
             this.EstadoPesc.Size = new System.Drawing.Size(191, 26);
             this.EstadoPesc.TabIndex = 20;
@@ -388,7 +383,7 @@
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(314, 331);
+            this.label42.Location = new System.Drawing.Point(314, 299);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(62, 18);
             this.label42.TabIndex = 19;
@@ -396,7 +391,7 @@
             // 
             // MunicipioPesc
             // 
-            this.MunicipioPesc.Location = new System.Drawing.Point(99, 328);
+            this.MunicipioPesc.Location = new System.Drawing.Point(99, 296);
             this.MunicipioPesc.Name = "MunicipioPesc";
             this.MunicipioPesc.Size = new System.Drawing.Size(209, 26);
             this.MunicipioPesc.TabIndex = 20;
@@ -404,27 +399,11 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(10, 331);
+            this.label43.Location = new System.Drawing.Point(10, 299);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(79, 18);
             this.label43.TabIndex = 19;
             this.label43.Text = "Municipio:";
-            // 
-            // LocalidadPesc
-            // 
-            this.LocalidadPesc.Location = new System.Drawing.Point(99, 296);
-            this.LocalidadPesc.Name = "LocalidadPesc";
-            this.LocalidadPesc.Size = new System.Drawing.Size(474, 26);
-            this.LocalidadPesc.TabIndex = 18;
-            // 
-            // label44
-            // 
-            this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(10, 299);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(81, 18);
-            this.label44.TabIndex = 17;
-            this.label44.Text = "Localidad:";
             // 
             // CPPesc
             // 
@@ -656,10 +635,10 @@
             this.radioButton5.AutoSize = true;
             this.radioButton5.Location = new System.Drawing.Point(230, 24);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(79, 21);
+            this.radioButton5.Size = new System.Drawing.Size(55, 21);
             this.radioButton5.TabIndex = 0;
             this.radioButton5.TabStop = true;
-            this.radioButton5.Text = "Ninguna";
+            this.radioButton5.Text = "SEA";
             this.radioButton5.UseVisualStyleBackColor = true;
             // 
             // radioButton7
@@ -667,10 +646,10 @@
             this.radioButton7.AutoSize = true;
             this.radioButton7.Location = new System.Drawing.Point(124, 24);
             this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(86, 21);
+            this.radioButton7.Size = new System.Drawing.Size(83, 21);
             this.radioButton7.TabIndex = 0;
             this.radioButton7.TabStop = true;
-            this.radioButton7.Text = "Ayudante";
+            this.radioButton7.Text = "Directivo";
             this.radioButton7.UseVisualStyleBackColor = true;
             // 
             // radioButton8
@@ -678,21 +657,20 @@
             this.radioButton8.AutoSize = true;
             this.radioButton8.Location = new System.Drawing.Point(6, 24);
             this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(88, 21);
+            this.radioButton8.Size = new System.Drawing.Size(65, 21);
             this.radioButton8.TabIndex = 0;
             this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Operador";
+            this.radioButton8.Text = "Titular";
             this.radioButton8.UseVisualStyleBackColor = true;
             // 
             // TipoPesc
             // 
             this.TipoPesc.Controls.Add(this.radioButton2);
-            this.TipoPesc.Controls.Add(this.radioButton4);
             this.TipoPesc.Controls.Add(this.radioButton3);
             this.TipoPesc.Controls.Add(this.radioButton9);
             this.TipoPesc.Location = new System.Drawing.Point(10, 68);
             this.TipoPesc.Name = "TipoPesc";
-            this.TipoPesc.Size = new System.Drawing.Size(641, 54);
+            this.TipoPesc.Size = new System.Drawing.Size(316, 54);
             this.TipoPesc.TabIndex = 1;
             this.TipoPesc.TabStop = false;
             this.TipoPesc.Text = "Tipo de Pescador:";
@@ -700,34 +678,23 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(326, 24);
+            this.radioButton2.Location = new System.Drawing.Point(230, 24);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(116, 21);
+            this.radioButton2.Size = new System.Drawing.Size(58, 21);
             this.radioButton2.TabIndex = 0;
             this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "Permisionario";
+            this.radioButton2.Text = "Libre";
             this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(482, 24);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(159, 21);
-            this.radioButton4.TabIndex = 0;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "Trabajador Temporal";
-            this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(142, 24);
+            this.radioButton3.Location = new System.Drawing.Point(124, 24);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(132, 21);
+            this.radioButton3.Size = new System.Drawing.Size(60, 21);
             this.radioButton3.TabIndex = 0;
             this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "Libre Tradicional";
+            this.radioButton3.Text = "Extra";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // radioButton9
@@ -735,10 +702,10 @@
             this.radioButton9.AutoSize = true;
             this.radioButton9.Location = new System.Drawing.Point(6, 24);
             this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(102, 21);
+            this.radioButton9.Size = new System.Drawing.Size(82, 21);
             this.radioButton9.TabIndex = 0;
             this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Organizado";
+            this.radioButton9.Text = "Eventual";
             this.radioButton9.UseVisualStyleBackColor = true;
             // 
             // EliminarUnidad
@@ -877,8 +844,6 @@
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.TextBox MunicipioPesc;
         private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.TextBox LocalidadPesc;
-        private System.Windows.Forms.Label label44;
         private System.Windows.Forms.MaskedTextBox CPPesc;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.TextBox ColoniaPesc;
@@ -907,7 +872,6 @@
         private System.Windows.Forms.RadioButton radioButton8;
         private System.Windows.Forms.GroupBox TipoPesc;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.RadioButton radioButton3;
         private System.Windows.Forms.RadioButton radioButton9;
         private System.Windows.Forms.PictureBox EliminarUnidad;
