@@ -51,5 +51,52 @@ namespace Logica
             }
             return estabien;
         }
+        public bool validarrfc(string rfc)
+        {
+            if (Regex.IsMatch(rfc, @"^([A-Z\s]{4})\d{6}([A-Z\w]{3})$"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public DateTime Fechanac(string curp)
+        {
+            string an = curp[4].ToString() + curp[5].ToString();
+            int año = 0, mes = 0, dia = 0;
+            año = Convert.ToInt32(an) + 1900;
+            if (año < 1930)
+            {
+                año += 100;
+            }
+            an = curp[6].ToString() + curp[7].ToString();
+            mes = Convert.ToInt32(an);
+            an = curp[8].ToString() + curp[9].ToString();
+            dia = Convert.ToInt32(an);
+            DateTime dti = new DateTime(año, mes, dia);
+            return dti;
+        }
+
+        public void Exito(int ok)
+        {
+            if (ok >= 1)
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Registrado exitosamente"); /* 1 segundo = 1000 */
+            }
+            else
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Error durante el registro"); /* 1 segundo = 1000 */
+            }
+        }
+        private void CloseIt()
+        {
+            System.Threading.Thread.Sleep(2000);
+            System.Windows.Forms.SendKeys.SendWait(" ");
+        }
     }
 }

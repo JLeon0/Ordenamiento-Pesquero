@@ -58,7 +58,6 @@ namespace OrdenamientoPesquero
                 EliminarUnidad.Location = new Point(EliminarUnidad.Location.X, EliminarUnidad.Location.Y - 300);
                 RegistrarUnidad.Location = new Point(RegistrarUnidad.Location.X, RegistrarUnidad.Location.Y - 300);
                 label65.Location = new Point(label65.Location.X + 200, label65.Location.Y - 190);
-                TotalPesquerias.Location = new Point(TotalPesquerias.Location.X + 200, TotalPesquerias.Location.Y - 190);
                 escondido = true;
                 pBReubicar.BackgroundImage = Properties.Resources.flechaabajo;
                 toolTip1.SetToolTip(pBReubicar, "Mostrar Información");
@@ -77,7 +76,6 @@ namespace OrdenamientoPesquero
                 EliminarUnidad.Location = new Point(EliminarUnidad.Location.X, EliminarUnidad.Location.Y + 300);
                 RegistrarUnidad.Location = new Point(RegistrarUnidad.Location.X, RegistrarUnidad.Location.Y + 300);
                 label65.Location = new Point(label65.Location.X - 200, label65.Location.Y + 190);
-                TotalPesquerias.Location = new Point(TotalPesquerias.Location.X - 200, TotalPesquerias.Location.Y + 190);
                 escondido = false;
                 pBReubicar.BackgroundImage = Properties.Resources.flechaarriba;
                 toolTip1.SetToolTip(pBReubicar, "Esconder Información");
@@ -1130,10 +1128,10 @@ namespace OrdenamientoPesquero
                 TotalEsfuerzos.Text = dt.Rows[0]["ESFUERZOS PESQUEROS"].ToString();
 
                 dt = proc.ResumenPesqueria(cbRNPA.Text);
-                TotalPesquerias.Items.Clear();
+                //TotalPesquerias.Items.Clear();
                 foreach (DataRow fila in dt.Rows)
                 {
-                    TotalPesquerias.Items.Add(fila["PESQUERIA"].ToString());
+                    //TotalPesquerias.Items.Add(fila["PESQUERIA"].ToString());
                 }
             }
         }
@@ -1162,5 +1160,9 @@ namespace OrdenamientoPesquero
             }
         }
 
+        private void Resumen_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
