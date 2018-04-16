@@ -33,8 +33,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,11 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="OrdPesqueroDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OrdPesqueroDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Pantallas Registros\Pantalla_Certificado_Mat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +73,12 @@
     <Compile Include="Pantallas Registros\Pantalla_Regitro_permiso.Designer.cs">
       <DependentUpon>Pantalla_Regitro_permiso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas Registros\Vistas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas Registros\Vistas.Designer.cs">
+      <DependentUpon>Vistas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Pantallas Registros\Pantalla_Certificado_Mat.resx">
@@ -89,6 +93,9 @@
     <EmbeddedResource Include="Pantallas Registros\Pantalla_Regitro_permiso.resx">
       <DependentUpon>Pantalla_Regitro_permiso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas Registros\Vistas.resx">
+      <DependentUpon>Vistas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -99,17 +106,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="OrdPesqueroDataSet.xsc">
-      <DependentUpon>OrdPesqueroDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="OrdPesqueroDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>OrdPesqueroDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="OrdPesqueroDataSet.xss">
-      <DependentUpon>OrdPesqueroDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -164,6 +160,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Reportes\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

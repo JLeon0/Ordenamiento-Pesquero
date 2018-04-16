@@ -54,13 +54,20 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.gbOrgPes = new System.Windows.Forms.GroupBox();
+            this.BuscarNombreOrg = new System.Windows.Forms.PictureBox();
             this.txtNombre = new System.Windows.Forms.ComboBox();
+            this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.mtbTelRepFed = new System.Windows.Forms.MaskedTextBox();
             this.label22 = new System.Windows.Forms.Label();
             this.txtNomRepFed = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.txtNomFed = new System.Windows.Forms.TextBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.mtbTelefono = new System.Windows.Forms.MaskedTextBox();
             this.label20 = new System.Windows.Forms.Label();
             this.txtCorreo = new System.Windows.Forms.TextBox();
@@ -81,6 +88,7 @@
             this.Marcamotor = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Potencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.nPer = new System.Windows.Forms.ComboBox();
             this.finVigenciaPer = new System.Windows.Forms.DateTimePicker();
             this.label38 = new System.Windows.Forms.Label();
@@ -106,6 +114,7 @@
             this.SitiosDesemPer = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.CertMatri = new System.Windows.Forms.TabPage();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.MatriculaCertMat = new System.Windows.Forms.ComboBox();
             this.label78 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
@@ -164,6 +173,11 @@
             this.NombreEmbPesc = new System.Windows.Forms.TextBox();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
             this.CURPPesc = new System.Windows.Forms.ComboBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label58 = new System.Windows.Forms.Label();
             this.CorreoPesc = new System.Windows.Forms.TextBox();
             this.TSangrePesc = new System.Windows.Forms.TextBox();
@@ -210,6 +224,14 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Expediente = new System.Windows.Forms.TabPage();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.Ver = new System.Windows.Forms.PictureBox();
+            this.Eliminar = new System.Windows.Forms.PictureBox();
+            this.Actualizar = new System.Windows.Forms.PictureBox();
+            this.EliminarUnidad = new System.Windows.Forms.PictureBox();
+            this.Registrar = new System.Windows.Forms.PictureBox();
+            this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
+            this.RegistrarUnidad = new System.Windows.Forms.PictureBox();
+            this.pBReubicar = new System.Windows.Forms.PictureBox();
             this.Resumen = new System.Windows.Forms.GroupBox();
             this.DataResumen = new System.Windows.Forms.DataGridView();
             this.Pesquería = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -222,38 +244,25 @@
             this.label61 = new System.Windows.Forms.Label();
             this.TotalPermisos = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
-            this.Ver = new System.Windows.Forms.PictureBox();
-            this.Eliminar = new System.Windows.Forms.PictureBox();
-            this.Actualizar = new System.Windows.Forms.PictureBox();
-            this.EliminarUnidad = new System.Windows.Forms.PictureBox();
-            this.Registrar = new System.Windows.Forms.PictureBox();
-            this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
-            this.RegistrarUnidad = new System.Windows.Forms.PictureBox();
-            this.pBReubicar = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.BuscarNombreOrg = new System.Windows.Forms.PictureBox();
-            this.pictureBox12 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbOrgPes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarNombreOrg)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.Permisos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposPescaPerm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbarcacionesPerm)).BeginInit();
             this.groupBox3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.CertMatri.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.Pescadores.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -261,11 +270,14 @@
             this.OcupacionEnEmbarPesc.SuspendLayout();
             this.TipoPesc.SuspendLayout();
             this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.Directiva.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDirectiva)).BeginInit();
-            this.Resumen.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataResumen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Eliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).BeginInit();
@@ -274,20 +286,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBReubicar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BuscarNombreOrg)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.Resumen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataResumen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -488,7 +488,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(71, 328);
+            this.label3.Location = new System.Drawing.Point(44, 328);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -557,6 +557,19 @@
             this.gbOrgPes.TabStop = false;
             this.gbOrgPes.Text = "DATOS GENERALES DE LA ORGANIZACIÓN PESQUERA";
             // 
+            // BuscarNombreOrg
+            // 
+            this.BuscarNombreOrg.BackColor = System.Drawing.Color.Transparent;
+            this.BuscarNombreOrg.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.lupa1;
+            this.BuscarNombreOrg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BuscarNombreOrg.Location = new System.Drawing.Point(638, 86);
+            this.BuscarNombreOrg.Name = "BuscarNombreOrg";
+            this.BuscarNombreOrg.Size = new System.Drawing.Size(37, 28);
+            this.BuscarNombreOrg.TabIndex = 116;
+            this.BuscarNombreOrg.TabStop = false;
+            this.toolTip1.SetToolTip(this.BuscarNombreOrg, "Buscar Unidad Economica");
+            this.BuscarNombreOrg.Click += new System.EventHandler(this.BuscarNombreOrg_Click);
+            // 
             // txtNombre
             // 
             this.txtNombre.FormattingEnabled = true;
@@ -564,6 +577,19 @@
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(598, 26);
             this.txtNombre.TabIndex = 115;
+            // 
+            // pictureBox12
+            // 
+            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox12.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.lupa1;
+            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox12.Location = new System.Drawing.Point(412, 35);
+            this.pictureBox12.Name = "pictureBox12";
+            this.pictureBox12.Size = new System.Drawing.Size(37, 28);
+            this.pictureBox12.TabIndex = 114;
+            this.pictureBox12.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox12, "Buscar Unidad Economica");
+            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
             // 
             // mtbTelRepFed
             // 
@@ -634,6 +660,66 @@
             this.txtNomFed.TabIndex = 105;
             this.txtNomFed.Tag = "";
             this.toolTip1.SetToolTip(this.txtNomFed, "Ingrese el nombre de la Federación");
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox11.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox11.Location = new System.Drawing.Point(822, 355);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox11.TabIndex = 104;
+            this.pictureBox11.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox10.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox10.Location = new System.Drawing.Point(822, 250);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox10.TabIndex = 104;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox4.Location = new System.Drawing.Point(663, 250);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox4.TabIndex = 104;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox3.Location = new System.Drawing.Point(851, 93);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox3.TabIndex = 103;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox2.Location = new System.Drawing.Point(851, 143);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox2.TabIndex = 102;
+            this.pictureBox2.TabStop = false;
             // 
             // mtbTelefono
             // 
@@ -882,6 +968,19 @@
             this.groupBox3.TabIndex = 67;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del Permiso";
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.Black;
+            this.pictureBox13.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.lupa1;
+            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox13.Location = new System.Drawing.Point(278, 20);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(37, 26);
+            this.pictureBox13.TabIndex = 115;
+            this.pictureBox13.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox13, "Buscar Unidad Economica");
+            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
             // 
             // nPer
             // 
@@ -1150,6 +1249,19 @@
             this.CertMatri.TabIndex = 3;
             this.CertMatri.Text = "Cert. Matr.";
             this.CertMatri.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.Color.Black;
+            this.pictureBox14.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.lupa1;
+            this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox14.Location = new System.Drawing.Point(385, 13);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(37, 26);
+            this.pictureBox14.TabIndex = 116;
+            this.pictureBox14.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox14, "Buscar Unidad Economica");
+            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
             // 
             // MatriculaCertMat
             // 
@@ -1740,6 +1852,66 @@
             this.CURPPesc.SelectionChangeCommitted += new System.EventHandler(this.CURPPesc_SelectionChangeCommitted);
             this.CURPPesc.TextChanged += new System.EventHandler(this.CURPPesc_TextChanged);
             // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox9.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox9.Location = new System.Drawing.Point(262, 143);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox9.TabIndex = 111;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox7.Location = new System.Drawing.Point(528, 144);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox7.TabIndex = 109;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox5.Location = new System.Drawing.Point(806, 331);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox5.TabIndex = 108;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox8.Location = new System.Drawing.Point(732, 269);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox8.TabIndex = 108;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox6.Location = new System.Drawing.Point(638, 376);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox6.TabIndex = 107;
+            this.pictureBox6.TabStop = false;
+            // 
             // label58
             // 
             this.label58.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -2151,151 +2323,6 @@
             this.Expediente.Text = "Expediente";
             this.Expediente.UseVisualStyleBackColor = true;
             // 
-            // Resumen
-            // 
-            this.Resumen.BackColor = System.Drawing.Color.Transparent;
-            this.Resumen.Controls.Add(this.DataResumen);
-            this.Resumen.Controls.Add(this.label65);
-            this.Resumen.Controls.Add(this.TotalEsfuerzos);
-            this.Resumen.Controls.Add(this.label63);
-            this.Resumen.Controls.Add(this.TotalSocios);
-            this.Resumen.Controls.Add(this.label61);
-            this.Resumen.Controls.Add(this.TotalPermisos);
-            this.Resumen.Controls.Add(this.label59);
-            this.Resumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Resumen.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Resumen.ForeColor = System.Drawing.Color.White;
-            this.Resumen.Location = new System.Drawing.Point(944, 298);
-            this.Resumen.Name = "Resumen";
-            this.Resumen.Size = new System.Drawing.Size(330, 602);
-            this.Resumen.TabIndex = 101;
-            this.Resumen.TabStop = false;
-            this.Resumen.Text = "Resumen";
-            this.Resumen.Enter += new System.EventHandler(this.Resumen_Enter);
-            // 
-            // DataResumen
-            // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataResumen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DataResumen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DataResumen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Pesquería,
-            this.Esfuerzos,
-            this.Vigencia});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataResumen.DefaultCellStyle = dataGridViewCellStyle5;
-            this.DataResumen.Location = new System.Drawing.Point(9, 166);
-            this.DataResumen.Name = "DataResumen";
-            this.DataResumen.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DataResumen.RowsDefaultCellStyle = dataGridViewCellStyle6;
-            this.DataResumen.Size = new System.Drawing.Size(304, 150);
-            this.DataResumen.TabIndex = 8;
-            // 
-            // Pesquería
-            // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pesquería.DefaultCellStyle = dataGridViewCellStyle2;
-            this.Pesquería.HeaderText = "Pesquería";
-            this.Pesquería.Name = "Pesquería";
-            // 
-            // Esfuerzos
-            // 
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Esfuerzos.DefaultCellStyle = dataGridViewCellStyle3;
-            this.Esfuerzos.HeaderText = "Esfuerzos";
-            this.Esfuerzos.Name = "Esfuerzos";
-            // 
-            // Vigencia
-            // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.Vigencia.DefaultCellStyle = dataGridViewCellStyle4;
-            this.Vigencia.HeaderText = "Vigencia";
-            this.Vigencia.Name = "Vigencia";
-            // 
-            // label65
-            // 
-            this.label65.AutoSize = true;
-            this.label65.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(6, 135);
-            this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(134, 18);
-            this.label65.TabIndex = 6;
-            this.label65.Text = "N° de Pesquerías:";
-            // 
-            // TotalEsfuerzos
-            // 
-            this.TotalEsfuerzos.AutoSize = true;
-            this.TotalEsfuerzos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalEsfuerzos.Location = new System.Drawing.Point(231, 106);
-            this.TotalEsfuerzos.Name = "TotalEsfuerzos";
-            this.TotalEsfuerzos.Size = new System.Drawing.Size(29, 22);
-            this.TotalEsfuerzos.TabIndex = 5;
-            this.TotalEsfuerzos.Text = "\" \"";
-            // 
-            // label63
-            // 
-            this.label63.AutoSize = true;
-            this.label63.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(6, 106);
-            this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(204, 18);
-            this.label63.TabIndex = 4;
-            this.label63.Text = "N° de Esfuerzos Pesqueros:";
-            // 
-            // TotalSocios
-            // 
-            this.TotalSocios.AutoSize = true;
-            this.TotalSocios.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalSocios.Location = new System.Drawing.Point(172, 84);
-            this.TotalSocios.Name = "TotalSocios";
-            this.TotalSocios.Size = new System.Drawing.Size(29, 22);
-            this.TotalSocios.TabIndex = 3;
-            this.TotalSocios.Text = "\" \"";
-            // 
-            // label61
-            // 
-            this.label61.AutoSize = true;
-            this.label61.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(6, 84);
-            this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(104, 18);
-            this.label61.TabIndex = 2;
-            this.label61.Text = "N° de Socios:";
-            // 
-            // TotalPermisos
-            // 
-            this.TotalPermisos.AutoSize = true;
-            this.TotalPermisos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalPermisos.Location = new System.Drawing.Point(172, 52);
-            this.TotalPermisos.Name = "TotalPermisos";
-            this.TotalPermisos.Size = new System.Drawing.Size(29, 22);
-            this.TotalPermisos.TabIndex = 1;
-            this.TotalPermisos.Text = "\" \"";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.Location = new System.Drawing.Point(6, 55);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(122, 18);
-            this.label59.TabIndex = 0;
-            this.label59.Text = "N° de Permisos:";
-            // 
             // Ver
             // 
             this.Ver.BackColor = System.Drawing.Color.White;
@@ -2398,177 +2425,158 @@
             this.toolTip1.SetToolTip(this.pBReubicar, "Esconder Información");
             this.pBReubicar.Click += new System.EventHandler(this.pBReubicar_Click);
             // 
-            // pictureBox13
+            // Resumen
             // 
-            this.pictureBox13.BackColor = System.Drawing.Color.Black;
-            this.pictureBox13.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.lupa1;
-            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox13.Location = new System.Drawing.Point(278, 20);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(37, 26);
-            this.pictureBox13.TabIndex = 115;
-            this.pictureBox13.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox13, "Buscar Unidad Economica");
-            this.pictureBox13.Click += new System.EventHandler(this.pictureBox13_Click);
+            this.Resumen.BackColor = System.Drawing.Color.Transparent;
+            this.Resumen.Controls.Add(this.DataResumen);
+            this.Resumen.Controls.Add(this.label65);
+            this.Resumen.Controls.Add(this.TotalEsfuerzos);
+            this.Resumen.Controls.Add(this.label63);
+            this.Resumen.Controls.Add(this.TotalSocios);
+            this.Resumen.Controls.Add(this.label61);
+            this.Resumen.Controls.Add(this.TotalPermisos);
+            this.Resumen.Controls.Add(this.label59);
+            this.Resumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Resumen.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Resumen.ForeColor = System.Drawing.Color.White;
+            this.Resumen.Location = new System.Drawing.Point(944, 298);
+            this.Resumen.Name = "Resumen";
+            this.Resumen.Size = new System.Drawing.Size(330, 602);
+            this.Resumen.TabIndex = 101;
+            this.Resumen.TabStop = false;
+            this.Resumen.Text = "Resumen";
+            this.Resumen.Enter += new System.EventHandler(this.Resumen_Enter);
             // 
-            // pictureBox14
+            // DataResumen
             // 
-            this.pictureBox14.BackColor = System.Drawing.Color.Black;
-            this.pictureBox14.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.lupa1;
-            this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox14.Location = new System.Drawing.Point(385, 13);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(37, 26);
-            this.pictureBox14.TabIndex = 116;
-            this.pictureBox14.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox14, "Buscar Unidad Economica");
-            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
+            this.DataResumen.AllowUserToAddRows = false;
+            this.DataResumen.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataResumen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.DataResumen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DataResumen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Pesquería,
+            this.Esfuerzos,
+            this.Vigencia});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataResumen.DefaultCellStyle = dataGridViewCellStyle5;
+            this.DataResumen.Location = new System.Drawing.Point(9, 166);
+            this.DataResumen.Name = "DataResumen";
+            this.DataResumen.ReadOnly = true;
+            this.DataResumen.RowHeadersVisible = false;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            this.DataResumen.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            this.DataResumen.Size = new System.Drawing.Size(304, 150);
+            this.DataResumen.TabIndex = 8;
             // 
-            // pictureBox9
+            // Pesquería
             // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox9.Location = new System.Drawing.Point(262, 143);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(23, 21);
-            this.pictureBox9.TabIndex = 111;
-            this.pictureBox9.TabStop = false;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pesquería.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Pesquería.HeaderText = "Pesquería";
+            this.Pesquería.Name = "Pesquería";
+            this.Pesquería.ReadOnly = true;
             // 
-            // pictureBox7
+            // Esfuerzos
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox7.Location = new System.Drawing.Point(528, 144);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(23, 21);
-            this.pictureBox7.TabIndex = 109;
-            this.pictureBox7.TabStop = false;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Esfuerzos.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Esfuerzos.HeaderText = "Esfuerzos";
+            this.Esfuerzos.Name = "Esfuerzos";
+            this.Esfuerzos.ReadOnly = true;
             // 
-            // pictureBox5
+            // Vigencia
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox5.Location = new System.Drawing.Point(806, 331);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(23, 21);
-            this.pictureBox5.TabIndex = 108;
-            this.pictureBox5.TabStop = false;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.Vigencia.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Vigencia.HeaderText = "Vigencia";
+            this.Vigencia.Name = "Vigencia";
+            this.Vigencia.ReadOnly = true;
             // 
-            // pictureBox8
+            // label65
             // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox8.Location = new System.Drawing.Point(732, 269);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(23, 21);
-            this.pictureBox8.TabIndex = 108;
-            this.pictureBox8.TabStop = false;
+            this.label65.AutoSize = true;
+            this.label65.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label65.Location = new System.Drawing.Point(6, 135);
+            this.label65.Name = "label65";
+            this.label65.Size = new System.Drawing.Size(134, 18);
+            this.label65.TabIndex = 6;
+            this.label65.Text = "N° de Pesquerías:";
             // 
-            // pictureBox6
+            // TotalEsfuerzos
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox6.Location = new System.Drawing.Point(638, 376);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(23, 21);
-            this.pictureBox6.TabIndex = 107;
-            this.pictureBox6.TabStop = false;
+            this.TotalEsfuerzos.AutoSize = true;
+            this.TotalEsfuerzos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalEsfuerzos.Location = new System.Drawing.Point(231, 106);
+            this.TotalEsfuerzos.Name = "TotalEsfuerzos";
+            this.TotalEsfuerzos.Size = new System.Drawing.Size(29, 22);
+            this.TotalEsfuerzos.TabIndex = 5;
+            this.TotalEsfuerzos.Text = "\" \"";
             // 
-            // BuscarNombreOrg
+            // label63
             // 
-            this.BuscarNombreOrg.BackColor = System.Drawing.Color.Transparent;
-            this.BuscarNombreOrg.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.lupa1;
-            this.BuscarNombreOrg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BuscarNombreOrg.Location = new System.Drawing.Point(638, 86);
-            this.BuscarNombreOrg.Name = "BuscarNombreOrg";
-            this.BuscarNombreOrg.Size = new System.Drawing.Size(37, 28);
-            this.BuscarNombreOrg.TabIndex = 116;
-            this.BuscarNombreOrg.TabStop = false;
-            this.toolTip1.SetToolTip(this.BuscarNombreOrg, "Buscar Unidad Economica");
-            this.BuscarNombreOrg.Click += new System.EventHandler(this.BuscarNombreOrg_Click);
+            this.label63.AutoSize = true;
+            this.label63.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label63.Location = new System.Drawing.Point(6, 106);
+            this.label63.Name = "label63";
+            this.label63.Size = new System.Drawing.Size(204, 18);
+            this.label63.TabIndex = 4;
+            this.label63.Text = "N° de Esfuerzos Pesqueros:";
             // 
-            // pictureBox12
+            // TotalSocios
             // 
-            this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox12.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.lupa1;
-            this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox12.Location = new System.Drawing.Point(412, 35);
-            this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(37, 28);
-            this.pictureBox12.TabIndex = 114;
-            this.pictureBox12.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox12, "Buscar Unidad Economica");
-            this.pictureBox12.Click += new System.EventHandler(this.pictureBox12_Click);
+            this.TotalSocios.AutoSize = true;
+            this.TotalSocios.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalSocios.Location = new System.Drawing.Point(172, 84);
+            this.TotalSocios.Name = "TotalSocios";
+            this.TotalSocios.Size = new System.Drawing.Size(29, 22);
+            this.TotalSocios.TabIndex = 3;
+            this.TotalSocios.Text = "\" \"";
             // 
-            // pictureBox11
+            // label61
             // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox11.Location = new System.Drawing.Point(822, 355);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(23, 21);
-            this.pictureBox11.TabIndex = 104;
-            this.pictureBox11.TabStop = false;
+            this.label61.AutoSize = true;
+            this.label61.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label61.Location = new System.Drawing.Point(6, 84);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(104, 18);
+            this.label61.TabIndex = 2;
+            this.label61.Text = "N° de Socios:";
             // 
-            // pictureBox10
+            // TotalPermisos
             // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox10.Location = new System.Drawing.Point(822, 250);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(23, 21);
-            this.pictureBox10.TabIndex = 104;
-            this.pictureBox10.TabStop = false;
+            this.TotalPermisos.AutoSize = true;
+            this.TotalPermisos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalPermisos.Location = new System.Drawing.Point(172, 52);
+            this.TotalPermisos.Name = "TotalPermisos";
+            this.TotalPermisos.Size = new System.Drawing.Size(29, 22);
+            this.TotalPermisos.TabIndex = 1;
+            this.TotalPermisos.Text = "\" \"";
             // 
-            // pictureBox4
+            // label59
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox4.Location = new System.Drawing.Point(663, 250);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(23, 21);
-            this.pictureBox4.TabIndex = 104;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox3.Location = new System.Drawing.Point(851, 93);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(23, 21);
-            this.pictureBox3.TabIndex = 103;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox2.Location = new System.Drawing.Point(851, 143);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(23, 21);
-            this.pictureBox2.TabIndex = 102;
-            this.pictureBox2.TabStop = false;
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(6, 55);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(122, 18);
+            this.label59.TabIndex = 0;
+            this.label59.Text = "N° de Permisos:";
             // 
             // pictureBox1
             // 
@@ -2579,7 +2587,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 309);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(728, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(677, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 
@@ -2611,6 +2619,13 @@
             this.Load += new System.EventHandler(this.Pantalla_Registro_UnidadEconomica_Load);
             this.gbOrgPes.ResumeLayout(false);
             this.gbOrgPes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.BuscarNombreOrg)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.Permisos.ResumeLayout(false);
             this.Permisos.PerformLayout();
@@ -2618,10 +2633,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbarcacionesPerm)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.CertMatri.ResumeLayout(false);
             this.CertMatri.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).EndInit();
             this.Pescadores.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
@@ -2634,13 +2651,15 @@
             this.TipoPesc.PerformLayout();
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.Directiva.ResumeLayout(false);
             this.Directiva.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDirectiva)).EndInit();
-            this.Resumen.ResumeLayout(false);
-            this.Resumen.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DataResumen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Eliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).EndInit();
@@ -2649,20 +2668,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBReubicar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.BuscarNombreOrg)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.Resumen.ResumeLayout(false);
+            this.Resumen.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.DataResumen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
