@@ -20,7 +20,6 @@ namespace Logica
         public string FECH_NACIMI = "";
         public string CALLENUM = "";
         public string COLONIA = "";
-        public string LOCALIDAD = "";
         public string MUNICIPIO = "";
         public string CP = "";
         public string TEL = "";
@@ -28,6 +27,7 @@ namespace Logica
         public string OCP_LABORAL = "";
         public string CUERPO_DE_AGUA = "";
         public string MATRICULA = "";
+        public string CORREO = "";
         public Pescador()
         {
              NOMBRE = "";
@@ -42,7 +42,6 @@ namespace Logica
              FECH_NACIMI = "";
              CALLENUM = "";
              COLONIA = "";
-             LOCALIDAD = "";
              MUNICIPIO = "";
              CP = "";
              TEL = "";
@@ -50,6 +49,7 @@ namespace Logica
              OCP_LABORAL = "";
              CUERPO_DE_AGUA = "";
              MATRICULA = "";
+            CORREO = "";
         }
         public Pescador(
         string nOMBRE,
@@ -64,14 +64,13 @@ namespace Logica
         string fECH_NACIMI,
         string cALLENUM,
         string cOLONIA,
-        string lOCALIDAD,
         string mUNICIPIO,
         string cP,
         string tEL,
         string tIPO_PESC,
         string oCP_LABORAL,
         string cUERPO_DE_AGUA,
-        string mATRICULA)
+        string mATRICULA, string correo)
         {
             NOMBRE = nOMBRE;
             AP_PAT = aP_PAT;
@@ -85,14 +84,14 @@ namespace Logica
             FECH_NACIMI = fECH_NACIMI;
             CALLENUM = cALLENUM;
             COLONIA = cOLONIA;
-            LOCALIDAD = lOCALIDAD;
             MUNICIPIO = mUNICIPIO;
             CP = cP;
             TEL = tEL;
-            TIPO_PESC = tIP_SANG;
+            TIPO_PESC = tIPO_PESC;
             OCP_LABORAL = oCP_LABORAL;
             CUERPO_DE_AGUA = cUERPO_DE_AGUA;
             MATRICULA = mATRICULA;
+            CORREO = correo;
         }
     }
 }

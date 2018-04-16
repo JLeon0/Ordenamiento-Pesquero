@@ -1,5 +1,4 @@
 ﻿using Logica;
-using OrdenamientoPesquero.Pantallas_Registros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +13,7 @@ namespace OrdenamientoPesquero
 {
     public partial class Pantalla_Regitro_permiso : Form
     {
+        Validaciones val = new Validaciones();
         public Pantalla_Regitro_permiso(string rnpa, string muni)
         {
             InitializeComponent();
@@ -32,54 +32,7 @@ namespace OrdenamientoPesquero
         {
 
         }
-        private void datagridview1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-        {
-            DataGridView dgv = (DataGridView)sender;
-            if (dgv.CurrentCell.ColumnIndex == dgv.Columns["Tipo"].Index)
-            {
-                ComboBox cbx = (ComboBox)e.Control;
-                cbx.DropDownStyle = ComboBoxStyle.DropDown;
-                cbx.AutoCompleteSource = AutoCompleteSource.ListItems;
-                cbx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-                cbx.Validating += new CancelEventHandler(cbx_Validating);
-            }
-        }
-        private void datagridview_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-        {
-            DataGridView dgv = (DataGridView)sender;
-            if (dgv.CurrentCell.ColumnIndex == dgv.Columns["Matricula"].Index || dgv.CurrentCell.ColumnIndex == dgv.Columns["Marcamotor"].Index)
-            {
-                ComboBox cbx = (ComboBox)e.Control;
-                cbx.DropDownStyle = ComboBoxStyle.DropDown;
-                cbx.AutoCompleteSource = AutoCompleteSource.ListItems;
-                cbx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-                cbx.Validating += new CancelEventHandler(cbx_Validating);
-            }
-        }
-        void cbx_Validating(object sender, CancelEventArgs e)
-        {
 
-            DataGridViewComboBoxEditingControl cbx = sender as DataGridViewComboBoxEditingControl;
-
-            DataGridView grid = cbx.EditingControlDataGridView;
-
-            object value = cbx.Text;
-
-            // Add value to list if not there
-
-            if (cbx.Items.IndexOf(value) == -1)
-            {
-                DataGridViewComboBoxCell cboCol = (DataGridViewComboBoxCell)grid.CurrentCell;
-
-                // Must add to both the current combobox as well as the template, to avoid duplicate entries...
-
-                cbx.Items.Add(value);
-
-                cboCol.Items.Add(value);
-
-                grid.CurrentCell.Value = value;
-            }
-        }
         private void pictureBox13_Click(object sender, EventArgs e)
         {
 
@@ -87,7 +40,7 @@ namespace OrdenamientoPesquero
 
         private void diaExpPer_ValueChanged(object sender, EventArgs e)
         {
-            VigenciaPerm.Text = DiferenciaFechas(finVigenciaPer.Value, diaExpPer.Value);
+            VigenciaPerm.Text = val.DiferenciaFechas(finVigenciaPer.Value, diaExpPer.Value);
         }
 
         private void numericUpDown1_ValueChanged(object sender, EventArgs e)
@@ -118,40 +71,7 @@ namespace OrdenamientoPesquero
                 item.Text = "";
             }
         }
-        private String DiferenciaFechas(DateTime newdt, DateTime olddt)
-        {
-            Int32 anios;
-            Int32 meses;
-            Int32 dias;
-            String str = "";
-
-            anios = (newdt.Year - olddt.Year);
-            meses = (newdt.Month - olddt.Month);
-            dias = (newdt.Day - olddt.Day);
-
-            if (dias < 0)
-            {
-                meses -= 1;
-                dias += DateTime.DaysInMonth(newdt.Year, newdt.Month);
-            }
-            if (meses < 0)
-            {
-                anios -= 1;
-                meses += 12;
-            }
-            if (anios < 0)
-            {
-                return "Fecha Invalida";
-            }
-            if (anios > 0)
-                str = str + anios.ToString() + " años ";
-            if (meses > 0)
-                str = str + meses.ToString() + " meses ";
-            if (dias > 0)
-                str = str + dias.ToString() + " dias ";
-
-            return str;
-        }
+       
         public void equiposdepesca()
         {
             for (int i = 0; i < dgvEquiposPescaPerm.RowCount; i++)
@@ -232,7 +152,7 @@ namespace OrdenamientoPesquero
 
         private void Registrar_Click(object sender, EventArgs e)
         {
-                exito = AccionesPermiso(true);
+            exito = AccionesPermiso(true);
             proc.Borrar_equipo(nPer.Text);
             equiposdepesca();
             if (exito == 1)
@@ -246,6 +166,7 @@ namespace OrdenamientoPesquero
                     }
                 }
             }
+            val.Exito(exito);
         }
 
         private void Actualizar_Click(object sender, EventArgs e)
@@ -273,9 +194,56 @@ namespace OrdenamientoPesquero
             }
         }
 
-        private void Ver_Click(object sender, EventArgs e)
+        //Escribir en data----------------------------------------------------------------------------
+        private void datagridview1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            if (dgv.CurrentCell.ColumnIndex == dgv.Columns["Tipo"].Index)
+            {
+                ComboBox cbx = (ComboBox)e.Control;
+                cbx.DropDownStyle = ComboBoxStyle.DropDown;
+                cbx.AutoCompleteSource = AutoCompleteSource.ListItems;
+                cbx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+                cbx.Validating += new CancelEventHandler(cbx_Validating);
+            }
+        }
+
+        private void datagridview_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+            DataGridView dgv = (DataGridView)sender;
+            if (dgv.CurrentCell.ColumnIndex == dgv.Columns["Matricula"].Index || dgv.CurrentCell.ColumnIndex == dgv.Columns["Marcamotor"].Index)
+            {
+                ComboBox cbx = (ComboBox)e.Control;
+                cbx.DropDownStyle = ComboBoxStyle.DropDown;
+                cbx.AutoCompleteSource = AutoCompleteSource.ListItems;
+                cbx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+                cbx.Validating += new CancelEventHandler(cbx_Validating);
+            }
+        }
+        void cbx_Validating(object sender, CancelEventArgs e)
         {
 
+            DataGridViewComboBoxEditingControl cbx = sender as DataGridViewComboBoxEditingControl;
+
+            DataGridView grid = cbx.EditingControlDataGridView;
+
+            object value = cbx.Text;
+
+            // Add value to list if not there
+
+            if (cbx.Items.IndexOf(value) == -1)
+            {
+                DataGridViewComboBoxCell cboCol = (DataGridViewComboBoxCell)grid.CurrentCell;
+
+                // Must add to both the current combobox as well as the template, to avoid duplicate entries...
+
+                cbx.Items.Add(value);
+
+                cboCol.Items.Add(value);
+
+                grid.CurrentCell.Value = value;
+            }
         }
+        //-----------------------------------------------------------------------------------------
     }
 }

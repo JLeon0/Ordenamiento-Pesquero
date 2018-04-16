@@ -13,7 +13,7 @@ namespace OrdenamientoPesquero
 {
     public partial class Pantalla_Certificado_Mat : Form
     {
-        Procedimientos proc;
+        Procedimientos proc = new Procedimientos();
         DataTable dt;
         string RNPA;
         int exito = 0;
@@ -95,7 +95,7 @@ namespace OrdenamientoPesquero
                 exito = proc.Eliminar_Embarcacion(MatriculaCertMat.Text);
                 val.Exito(exito);
                 if (exito > 0)
-                { limpiarcertmat(); exito = 0; }
+                { CertMatXUnidad(); limpiarcertmat(); exito = 0; }
 
             }
         }
