@@ -201,7 +201,7 @@ namespace OrdenamientoPesquero {
         private void InitClass() {
             this.DataSetName = "OrdPesqueroDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/OrdPesqueroDataSet2.xsd";
+            this.Namespace = "http://tempuri.org/OrdPesqueroDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tablepescadores = new pescadoresDataTable();

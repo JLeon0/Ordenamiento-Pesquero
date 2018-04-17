@@ -471,6 +471,10 @@
                 <Value>Unidad economica:  </Value>
                 <Style />
               </TextRun>
+              <TextRun>
+                <Value>=Parameters!Unidad.Value</Value>
+                <Style />
+              </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
@@ -558,6 +562,12 @@
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
+  <ReportParameters>
+    <ReportParameter Name="Unidad">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
   <EmbeddedImages>
     <EmbeddedImage Name="sepadaescudologosiglas_450x851">
       <MIMEType>image/png</MIMEType>
