@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
-
+using OrdenamientoPesquero.Pantallas_Registros;
 
 namespace OrdenamientoPesquero
 {
@@ -21,12 +21,13 @@ namespace OrdenamientoPesquero
         Validaciones val = new Validaciones();
         DataTable dt;
         bool errordatos = false;
-        string RNPA = "";
+        string RNPA = "", NombreUnidad = "";
 
-        public Pantalla_Registro_Usuario(string rnpa)
+        public Pantalla_Registro_Usuario(string rnpa, string nombre)
         {
             InitializeComponent();
             RNPA = rnpa;
+            NombreUnidad = nombre;
         }
 
         private void Pantalla_Registro_Usuario_Load(object sender, EventArgs e) {
@@ -343,6 +344,12 @@ namespace OrdenamientoPesquero
                     boton.Checked = true;
                 }
             }
+        }
+
+        private void Ver_Click(object sender, EventArgs e)
+        {
+            Vistas vista = new Vistas(RNPA, NombreUnidad);
+            vista.ShowDialog();
         }
     }
 }

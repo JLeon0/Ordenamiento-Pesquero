@@ -405,7 +405,7 @@ namespace OrdenamientoPesquero
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Pantalla_Registro_Usuario pesc = new Pantalla_Registro_Usuario(cbRNPA.Text);
+            Pantalla_Registro_Usuario pesc = new Pantalla_Registro_Usuario(cbRNPA.Text, txtNombre.Text);
             pesc.ShowDialog();
         }
 

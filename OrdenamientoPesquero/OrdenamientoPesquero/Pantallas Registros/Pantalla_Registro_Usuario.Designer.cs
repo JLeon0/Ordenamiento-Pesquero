@@ -91,6 +91,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.Ver = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -105,6 +107,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ver)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -770,6 +773,26 @@
             this.label4.TabIndex = 111;
             this.label4.Text = "Eliminar";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(252, 797);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(82, 13);
+            this.label5.TabIndex = 113;
+            this.label5.Text = "Ver Pescadores";
+            // 
+            // Ver
+            // 
+            this.Ver.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ver;
+            this.Ver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Ver.Location = new System.Drawing.Point(270, 744);
+            this.Ver.Name = "Ver";
+            this.Ver.Size = new System.Drawing.Size(50, 50);
+            this.Ver.TabIndex = 112;
+            this.Ver.TabStop = false;
+            this.Ver.Click += new System.EventHandler(this.Ver_Click);
+            // 
             // Pantalla_Registro_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -777,6 +800,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(934, 749);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.Ver);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -811,6 +836,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Ver)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -881,5 +907,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox Ver;
     }
 }
