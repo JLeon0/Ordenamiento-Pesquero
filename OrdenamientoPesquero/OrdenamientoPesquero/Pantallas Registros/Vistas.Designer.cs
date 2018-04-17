@@ -28,48 +28,53 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.pescadoresTableAdapter1 = new OrdenamientoPesquero.OrdPesqueroDataSet4TableAdapters.pescadoresTableAdapter();
-            this.ordPesqueroDataSet41 = new OrdenamientoPesquero.OrdPesqueroDataSet4();
-            this.ordPesqueroDataSet42 = new OrdenamientoPesquero.OrdPesqueroDataSet4();
-            ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet41)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet42)).BeginInit();
+            this.ordPesqueroDataSet1 = new OrdenamientoPesquero.OrdPesqueroDataSet1();
+            this.pescadoresBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pescadoresTableAdapter = new OrdenamientoPesquero.OrdPesqueroDataSet1TableAdapters.pescadoresTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pescadoresBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            reportDataSource1.Name = "pescadores";
+            reportDataSource1.Value = this.pescadoresBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "OrdenamientoPesquero.Reportes.Report3.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(726, 333);
+            this.reportViewer1.Size = new System.Drawing.Size(1003, 421);
             this.reportViewer1.TabIndex = 0;
             // 
-            // pescadoresTableAdapter1
+            // ordPesqueroDataSet1
             // 
-            this.pescadoresTableAdapter1.ClearBeforeFill = true;
+            this.ordPesqueroDataSet1.DataSetName = "OrdPesqueroDataSet1";
+            this.ordPesqueroDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // ordPesqueroDataSet41
+            // pescadoresBindingSource
             // 
-            this.ordPesqueroDataSet41.DataSetName = "OrdPesqueroDataSet4";
-            this.ordPesqueroDataSet41.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.pescadoresBindingSource.DataMember = "pescadores";
+            this.pescadoresBindingSource.DataSource = this.ordPesqueroDataSet1;
             // 
-            // ordPesqueroDataSet42
+            // pescadoresTableAdapter
             // 
-            this.ordPesqueroDataSet42.DataSetName = "OrdPesqueroDataSet4";
-            this.ordPesqueroDataSet42.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.pescadoresTableAdapter.ClearBeforeFill = true;
             // 
             // Vistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(726, 333);
+            this.ClientSize = new System.Drawing.Size(1003, 421);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Vistas";
             this.Text = "Vistas";
             this.Load += new System.EventHandler(this.Vistas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet41)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet42)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pescadoresBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -77,8 +82,8 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private OrdPesqueroDataSet4TableAdapters.pescadoresTableAdapter pescadoresTableAdapter1;
-        private OrdPesqueroDataSet4 ordPesqueroDataSet41;
-        private OrdPesqueroDataSet4 ordPesqueroDataSet42;
+        private System.Windows.Forms.BindingSource pescadoresBindingSource;
+        private OrdPesqueroDataSet1 ordPesqueroDataSet1;
+        private OrdPesqueroDataSet1TableAdapters.pescadoresTableAdapter pescadoresTableAdapter;
     }
 }

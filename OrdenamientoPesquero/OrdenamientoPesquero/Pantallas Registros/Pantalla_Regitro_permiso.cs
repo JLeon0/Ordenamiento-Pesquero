@@ -244,6 +244,11 @@ namespace OrdenamientoPesquero
                 grid.CurrentCell.Value = value;
             }
         }
+
+        private void Ver_Click(object sender, EventArgs e)
+        {
+
+        }
         //-----------------------------------------------------------------------------------------
     }
 }

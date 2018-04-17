@@ -21,17 +21,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         string rnpa;
         private void Vistas_Load(object sender, EventArgs e)
         {
-            reportViewer1.ProcessingMode = ProcessingMode.Local;
-            try
-            {
-                this.pescadoresTableAdapter1.Fill(this.ordPesqueroDataSet41.pescadores, rnpa);
-                this.reportViewer1.LocalReport.DataSources.Add(new ReportDataSource("ordPesqueroDataSet41"));
-                this.reportViewer1.RefreshReport();
-            }
-            catch (Exception asd)
-            {
-                throw;
-            }
+            this.pescadoresTableAdapter.Fill(ordPesqueroDataSet1.pescadores, "1111111111");
+            this.reportViewer1.RefreshReport();
         }
     }
 }

@@ -49,6 +49,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OrdPesqueroDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdPesqueroDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas Registros\Pantalla_Certificado_Mat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +116,30 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\Report2.rdlc" />
+    <EmbeddedResource Include="Reportes\Report3.rdlc" />
+    <None Include="OrdPesqueroDataSet11.xsc">
+      <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet11.xss">
+      <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet2.xsc">
+      <DependentUpon>OrdPesqueroDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet2.xss">
+      <DependentUpon>OrdPesqueroDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -161,9 +195,7 @@
   <ItemGroup>
     <None Include="Resources\lupa.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Reportes\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
