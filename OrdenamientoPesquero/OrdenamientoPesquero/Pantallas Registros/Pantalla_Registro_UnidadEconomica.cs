@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Logica;
 using Microsoft.VisualBasic;
 using System.Text.RegularExpressions;
+using OrdenamientoPesquero.Pantallas_Registros;
 
 namespace OrdenamientoPesquero
 {
@@ -413,6 +414,25 @@ namespace OrdenamientoPesquero
         {
             Pantalla_Certificado_Mat certmat = new Pantalla_Certificado_Mat(cbRNPA.Text);
             certmat.ShowDialog();
+        }
+
+        private void TotalPermisos_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void TotalSocios_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (cbRNPA.Text != "" && cbRNPA.Text != null)
+            {
+                Vistas vista = new Vistas(cbRNPA.Text, txtNombre.Text);
+                vista.ShowDialog();
+            }
+        }
+
+        private void BuscarNombreOrg_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

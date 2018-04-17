@@ -45,10 +45,7 @@ namespace CapaDatos
                     {
                         this.con.Close();
                     }
-                    catch
-                    {
-
-                    }
+                    catch { }
                 }
                 catch (Exception ms)
                 {

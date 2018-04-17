@@ -20,7 +20,6 @@ namespace OrdenamientoPesquero
         Procedimientos proc = new Procedimientos();
         Validaciones val = new Validaciones();
         DataTable dt;
-        bool errordatos = false;
         string RNPA = "", NombreUnidad = "";
 
         public Pantalla_Registro_Usuario(string rnpa, string nombre)
@@ -97,10 +96,8 @@ namespace OrdenamientoPesquero
 
         private void RegistrarUnidad_Click(object sender, EventArgs e)
         {
-            errordatos = false;
             if (!val.validaralgo(pescador))
             {
-                errordatos = true;
             }
             else
             {
@@ -114,7 +111,6 @@ namespace OrdenamientoPesquero
         {
             if (!val.validaralgo(pescador))
             {
-                errordatos = true;
             }
             else
             {

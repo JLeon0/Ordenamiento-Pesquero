@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtEstado = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -77,22 +77,25 @@
             this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
             this.RegistrarUnidad = new System.Windows.Forms.PictureBox();
             this.Resumen = new System.Windows.Forms.GroupBox();
+            this.NombreResumen = new System.Windows.Forms.Label();
             this.DataResumen = new System.Windows.Forms.DataGridView();
             this.Pesquería = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Esfuerzos = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Vigencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label65 = new System.Windows.Forms.Label();
-            this.TotalEsfuerzos = new System.Windows.Forms.Label();
+            this.TotalEsfuerzos1 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
-            this.TotalSocios = new System.Windows.Forms.Label();
+            this.TotalSocios1 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
-            this.TotalPermisos = new System.Windows.Forms.Label();
+            this.TotalPermisos1 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
-            this.NombreResumen = new System.Windows.Forms.Label();
+            this.TotalPermisos = new System.Windows.Forms.LinkLabel();
+            this.TotalSocios = new System.Windows.Forms.LinkLabel();
+            this.TotalEsfuerzos = new System.Windows.Forms.LinkLabel();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.BuscarNombreOrg)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
@@ -380,6 +383,7 @@
             this.BuscarNombreOrg.TabIndex = 116;
             this.BuscarNombreOrg.TabStop = false;
             this.toolTip1.SetToolTip(this.BuscarNombreOrg, "Buscar Unidad Economica");
+            this.BuscarNombreOrg.Click += new System.EventHandler(this.BuscarNombreOrg_Click_1);
             // 
             // txtNombre
             // 
@@ -620,14 +624,17 @@
             // Resumen
             // 
             this.Resumen.BackColor = System.Drawing.Color.Transparent;
+            this.Resumen.Controls.Add(this.TotalEsfuerzos);
+            this.Resumen.Controls.Add(this.TotalSocios);
+            this.Resumen.Controls.Add(this.TotalPermisos);
             this.Resumen.Controls.Add(this.NombreResumen);
             this.Resumen.Controls.Add(this.DataResumen);
             this.Resumen.Controls.Add(this.label65);
-            this.Resumen.Controls.Add(this.TotalEsfuerzos);
+            this.Resumen.Controls.Add(this.TotalEsfuerzos1);
             this.Resumen.Controls.Add(this.label63);
-            this.Resumen.Controls.Add(this.TotalSocios);
+            this.Resumen.Controls.Add(this.TotalSocios1);
             this.Resumen.Controls.Add(this.label61);
-            this.Resumen.Controls.Add(this.TotalPermisos);
+            this.Resumen.Controls.Add(this.TotalPermisos1);
             this.Resumen.Controls.Add(this.label59);
             this.Resumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Resumen.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -639,69 +646,79 @@
             this.Resumen.TabStop = false;
             this.Resumen.Text = "Resumen";
             // 
+            // NombreResumen
+            // 
+            this.NombreResumen.AutoSize = true;
+            this.NombreResumen.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombreResumen.Location = new System.Drawing.Point(6, 22);
+            this.NombreResumen.Name = "NombreResumen";
+            this.NombreResumen.Size = new System.Drawing.Size(35, 32);
+            this.NombreResumen.TabIndex = 9;
+            this.NombreResumen.Text = "\"\"";
+            // 
             // DataResumen
             // 
             this.DataResumen.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataResumen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataResumen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.DataResumen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataResumen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Pesquería,
             this.Esfuerzos,
             this.Vigencia});
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataResumen.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataResumen.DefaultCellStyle = dataGridViewCellStyle19;
             this.DataResumen.GridColor = System.Drawing.Color.Black;
-            this.DataResumen.Location = new System.Drawing.Point(9, 166);
+            this.DataResumen.Location = new System.Drawing.Point(9, 171);
             this.DataResumen.Name = "DataResumen";
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataResumen.RowHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataResumen.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.DataResumen.RowHeadersVisible = false;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.Black;
-            this.DataResumen.RowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
+            this.DataResumen.RowsDefaultCellStyle = dataGridViewCellStyle21;
             this.DataResumen.Size = new System.Drawing.Size(304, 150);
             this.DataResumen.TabIndex = 8;
             // 
             // Pesquería
             // 
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pesquería.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pesquería.DefaultCellStyle = dataGridViewCellStyle16;
             this.Pesquería.HeaderText = "Pesquería";
             this.Pesquería.Name = "Pesquería";
             // 
             // Esfuerzos
             // 
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Esfuerzos.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Esfuerzos.DefaultCellStyle = dataGridViewCellStyle17;
             this.Esfuerzos.HeaderText = "Esfuerzos";
             this.Esfuerzos.Name = "Esfuerzos";
             // 
             // Vigencia
             // 
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.Color.White;
-            this.Vigencia.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
+            this.Vigencia.DefaultCellStyle = dataGridViewCellStyle18;
             this.Vigencia.HeaderText = "Vigencia";
             this.Vigencia.Name = "Vigencia";
             // 
@@ -709,67 +726,67 @@
             // 
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(6, 135);
+            this.label65.Location = new System.Drawing.Point(6, 150);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(134, 18);
             this.label65.TabIndex = 6;
             this.label65.Text = "N° de Pesquerías:";
             // 
-            // TotalEsfuerzos
+            // TotalEsfuerzos1
             // 
-            this.TotalEsfuerzos.AutoSize = true;
-            this.TotalEsfuerzos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalEsfuerzos.Location = new System.Drawing.Point(231, 106);
-            this.TotalEsfuerzos.Name = "TotalEsfuerzos";
-            this.TotalEsfuerzos.Size = new System.Drawing.Size(29, 22);
-            this.TotalEsfuerzos.TabIndex = 5;
-            this.TotalEsfuerzos.Text = "\" \"";
+            this.TotalEsfuerzos1.AutoSize = true;
+            this.TotalEsfuerzos1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalEsfuerzos1.Location = new System.Drawing.Point(229, 120);
+            this.TotalEsfuerzos1.Name = "TotalEsfuerzos1";
+            this.TotalEsfuerzos1.Size = new System.Drawing.Size(29, 22);
+            this.TotalEsfuerzos1.TabIndex = 5;
+            this.TotalEsfuerzos1.Text = "\" \"";
             // 
             // label63
             // 
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(6, 106);
+            this.label63.Location = new System.Drawing.Point(6, 120);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(204, 18);
             this.label63.TabIndex = 4;
             this.label63.Text = "N° de Esfuerzos Pesqueros:";
             // 
-            // TotalSocios
+            // TotalSocios1
             // 
-            this.TotalSocios.AutoSize = true;
-            this.TotalSocios.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalSocios.Location = new System.Drawing.Point(172, 84);
-            this.TotalSocios.Name = "TotalSocios";
-            this.TotalSocios.Size = new System.Drawing.Size(29, 22);
-            this.TotalSocios.TabIndex = 3;
-            this.TotalSocios.Text = "\" \"";
+            this.TotalSocios1.AutoSize = true;
+            this.TotalSocios1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalSocios1.Location = new System.Drawing.Point(144, 90);
+            this.TotalSocios1.Name = "TotalSocios1";
+            this.TotalSocios1.Size = new System.Drawing.Size(29, 22);
+            this.TotalSocios1.TabIndex = 3;
+            this.TotalSocios1.Text = "\" \"";
             // 
             // label61
             // 
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(6, 84);
+            this.label61.Location = new System.Drawing.Point(6, 90);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(104, 18);
             this.label61.TabIndex = 2;
             this.label61.Text = "N° de Socios:";
             // 
-            // TotalPermisos
+            // TotalPermisos1
             // 
-            this.TotalPermisos.AutoSize = true;
-            this.TotalPermisos.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalPermisos.Location = new System.Drawing.Point(172, 52);
-            this.TotalPermisos.Name = "TotalPermisos";
-            this.TotalPermisos.Size = new System.Drawing.Size(29, 22);
-            this.TotalPermisos.TabIndex = 1;
-            this.TotalPermisos.Text = "\" \"";
+            this.TotalPermisos1.AutoSize = true;
+            this.TotalPermisos1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalPermisos1.Location = new System.Drawing.Point(144, 60);
+            this.TotalPermisos1.Name = "TotalPermisos1";
+            this.TotalPermisos1.Size = new System.Drawing.Size(29, 22);
+            this.TotalPermisos1.TabIndex = 1;
+            this.TotalPermisos1.Text = "\" \"";
             // 
             // label59
             // 
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.Location = new System.Drawing.Point(6, 55);
+            this.label59.Location = new System.Drawing.Point(6, 60);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(122, 18);
             this.label59.TabIndex = 0;
@@ -824,15 +841,37 @@
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // NombreResumen
+            // TotalPermisos
             // 
-            this.NombreResumen.AutoSize = true;
-            this.NombreResumen.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreResumen.Location = new System.Drawing.Point(6, 22);
-            this.NombreResumen.Name = "NombreResumen";
-            this.NombreResumen.Size = new System.Drawing.Size(35, 32);
-            this.NombreResumen.TabIndex = 9;
-            this.NombreResumen.Text = "\"\"";
+            this.TotalPermisos.AutoSize = true;
+            this.TotalPermisos.Location = new System.Drawing.Point(178, 64);
+            this.TotalPermisos.Name = "TotalPermisos";
+            this.TotalPermisos.Size = new System.Drawing.Size(20, 18);
+            this.TotalPermisos.TabIndex = 10;
+            this.TotalPermisos.TabStop = true;
+            this.TotalPermisos.Text = "\"\"";
+            this.TotalPermisos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TotalPermisos_LinkClicked);
+            // 
+            // TotalSocios
+            // 
+            this.TotalSocios.AutoSize = true;
+            this.TotalSocios.Location = new System.Drawing.Point(179, 90);
+            this.TotalSocios.Name = "TotalSocios";
+            this.TotalSocios.Size = new System.Drawing.Size(20, 18);
+            this.TotalSocios.TabIndex = 11;
+            this.TotalSocios.TabStop = true;
+            this.TotalSocios.Text = "\"\"";
+            this.TotalSocios.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TotalSocios_LinkClicked);
+            // 
+            // TotalEsfuerzos
+            // 
+            this.TotalEsfuerzos.AutoSize = true;
+            this.TotalEsfuerzos.Location = new System.Drawing.Point(264, 120);
+            this.TotalEsfuerzos.Name = "TotalEsfuerzos";
+            this.TotalEsfuerzos.Size = new System.Drawing.Size(20, 18);
+            this.TotalEsfuerzos.TabIndex = 12;
+            this.TotalEsfuerzos.TabStop = true;
+            this.TotalEsfuerzos.Text = "\"\"";
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -920,11 +959,11 @@
         private System.Windows.Forms.PictureBox EliminarUnidad;
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.Label label65;
-        private System.Windows.Forms.Label TotalEsfuerzos;
+        private System.Windows.Forms.Label TotalEsfuerzos1;
         private System.Windows.Forms.Label label63;
-        private System.Windows.Forms.Label TotalSocios;
+        private System.Windows.Forms.Label TotalSocios1;
         private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label TotalPermisos;
+        private System.Windows.Forms.Label TotalPermisos1;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.DataGridView DataResumen;
@@ -937,5 +976,8 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label NombreResumen;
+        private System.Windows.Forms.LinkLabel TotalPermisos;
+        private System.Windows.Forms.LinkLabel TotalEsfuerzos;
+        private System.Windows.Forms.LinkLabel TotalSocios;
     }
 }
