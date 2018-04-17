@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
-
+using OrdenamientoPesquero.Pantallas_Registros;
 
 namespace OrdenamientoPesquero
 {
@@ -20,17 +20,19 @@ namespace OrdenamientoPesquero
         Procedimientos proc = new Procedimientos();
         Validaciones val = new Validaciones();
         DataTable dt;
-        bool errordatos = false;
-        string RNPA = "";
+        string RNPA = "", NombreUnidad = "";
 
-        public Pantalla_Registro_Usuario(string rnpa)
+        public Pantalla_Registro_Usuario(string rnpa, string nombre)
         {
             InitializeComponent();
             RNPA = rnpa;
+            NombreUnidad = nombre;
         }
 
         private void Pantalla_Registro_Usuario_Load(object sender, EventArgs e) {
+            limpiarpescador();
             CargarPescadores();
+            CargarMatriculas();
         }
 
 
@@ -94,10 +96,8 @@ namespace OrdenamientoPesquero
 
         private void RegistrarUnidad_Click(object sender, EventArgs e)
         {
-            errordatos = false;
             if (!val.validaralgo(pescador))
             {
-                errordatos = true;
             }
             else
             {
@@ -111,7 +111,6 @@ namespace OrdenamientoPesquero
         {
             if (!val.validaralgo(pescador))
             {
-                errordatos = true;
             }
             else
             {
@@ -176,12 +175,15 @@ namespace OrdenamientoPesquero
             {
                 item.Text = "";
             }
+            foreach (MaskedTextBox item in groupBox7.Controls.OfType<MaskedTextBox>())
+            {
+                item.Text = "";
+            }
             foreach (ComboBox item in groupBox7.Controls.OfType<ComboBox>())
             {
                 item.Text = "";
             }
         }
-
 
         private void CURPPesc_TextChanged(object sender, EventArgs e)
         {
@@ -282,6 +284,15 @@ namespace OrdenamientoPesquero
             CURPPesc.Text = "";
         }
 
+        private void CargarMatriculas()
+        {
+            dt = proc.ObtenerCertMatrXUnidad(RNPA);
+            MatriculaPesc.DataSource = dt;
+            MatriculaPesc.DisplayMember = "MATRICULA";
+            MatriculaPesc.ValueMember = "MATRICULA";
+            MatriculaPesc.Text = "";
+        }
+
         private void CURPPesc_SelectedValueChanged(object sender, EventArgs e)
         {
             dt = proc.Obtener_Pescador(CURPPesc.Text);
@@ -329,6 +340,12 @@ namespace OrdenamientoPesquero
                     boton.Checked = true;
                 }
             }
+        }
+
+        private void Ver_Click(object sender, EventArgs e)
+        {
+            Vistas vista = new Vistas(RNPA, NombreUnidad);
+            vista.ShowDialog();
         }
     }
 }

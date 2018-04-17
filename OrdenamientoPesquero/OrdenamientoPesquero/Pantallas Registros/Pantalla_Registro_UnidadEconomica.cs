@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Logica;
 using Microsoft.VisualBasic;
 using System.Text.RegularExpressions;
+using OrdenamientoPesquero.Pantallas_Registros;
 
 namespace OrdenamientoPesquero
 {
@@ -40,7 +41,7 @@ namespace OrdenamientoPesquero
         {
             txtFecha.Text = DateTime.Today.ToString("dd/MM/yyyy");
             cbRNPA.Focus();
-            PintarGroupBox();
+            //PintarGroupBox();
             CargarRNPA();
         }
         
@@ -297,8 +298,20 @@ namespace OrdenamientoPesquero
                 pictureBox2.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
                 unidad[1, 0] = "1";
             }
-        }        
-
+        }
+        private void txtCorreo_TextChanged(object sender, EventArgs e)
+        {
+            if (val.validarCorreo(txtCorreo.Text))
+            {
+                pictureBox4.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+                unidad[0, 0] = "1";
+            }
+            else
+            {
+                pictureBox4.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+                unidad[0, 0] = "0";
+            }
+        }
         private void mtbTelefono_TextChanged(object sender, EventArgs e)
         {
             if (mtbTelefono.Text.Contains(' ') || mtbTelefono.Text.Length != 12)
@@ -310,18 +323,6 @@ namespace OrdenamientoPesquero
             {
                 pictureBox10.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
                 unidad[3, 0] = "1";
-            }
-        }
-        
-        private void mtbTelRepFed_TextChanged(object sender, EventArgs e)
-        {
-            if (mtbTelRepFed.Text.Contains(' ') || mtbTelRepFed.Text.Length != 12)
-            {
-                pictureBox11.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
-            }
-            else
-            {
-                pictureBox11.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
             }
         }
         private void txtRFC_TextChanged(object sender, EventArgs e)
@@ -336,7 +337,6 @@ namespace OrdenamientoPesquero
                 pictureBox3.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
                 unidad[0, 0] = "0";
             }
-
         }
         #endregion
 
@@ -344,6 +344,7 @@ namespace OrdenamientoPesquero
         #region Resumenes
         public void Resumenes(string RNPA)
         {
+            NombreResumen.Text = txtNombre.Text;
             dt = proc.Resumen(cbRNPA.Text);
             if (dt.Rows.Count != 0)
             {
@@ -362,30 +363,35 @@ namespace OrdenamientoPesquero
                         DataResumen[2, i].Value = val.DiferenciaFechas(Convert.ToDateTime(dt.Rows[i][4].ToString()), Convert.ToDateTime(dt.Rows[i][3].ToString()));
                     }
                 }
+                else
+                {
+                    DataResumen.Rows.Clear();
+                    DataResumen.Refresh();
+                }
             }
         }
         #endregion
 
         //Pintar los groupBox
-        private void PintarGroupBox()
-        {
-            this.BackColor = Color.FromArgb(36, 50, 61);
-            Resumen.BackColor = Color.FromArgb(118, 50, 63);
-            Resumen.Width = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width * .296);
+        //private void PintarGroupBox()
+        //{
+        //    this.BackColor = Color.FromArgb(36, 50, 61);
+        //    Resumen.BackColor = Color.FromArgb(118, 50, 63);
+        //    Resumen.Width = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width * .296);
 
-            foreach (TextBox ctr in gbOrgPes.Controls.OfType<TextBox>())
-            {
-                gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].ForeColor = Color.FromArgb(160, 160, 160);
-                gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].BackColor = Color.FromArgb(36, 50, 61);
+        //    foreach (TextBox ctr in gbOrgPes.Controls.OfType<TextBox>())
+        //    {
+        //        gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].ForeColor = Color.FromArgb(160, 160, 160);
+        //        gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].BackColor = Color.FromArgb(36, 50, 61);
 
-            }
-            foreach (MaskedTextBox ctr in gbOrgPes.Controls.OfType<MaskedTextBox>())
-            {
-                gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].ForeColor = Color.FromArgb(160, 160, 160);
-                gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].BackColor = Color.FromArgb(36, 50, 61);
+        //    }
+        //    foreach (MaskedTextBox ctr in gbOrgPes.Controls.OfType<MaskedTextBox>())
+        //    {
+        //        gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].ForeColor = Color.FromArgb(160, 160, 160);
+        //        gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].BackColor = Color.FromArgb(36, 50, 61);
 
-            }
-        }
+        //    }
+        //}
 
         private void DataResumen_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -400,7 +406,7 @@ namespace OrdenamientoPesquero
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Pantalla_Registro_Usuario pesc = new Pantalla_Registro_Usuario(cbRNPA.Text);
+            Pantalla_Registro_Usuario pesc = new Pantalla_Registro_Usuario(cbRNPA.Text, txtNombre.Text);
             pesc.ShowDialog();
         }
 
@@ -408,6 +414,25 @@ namespace OrdenamientoPesquero
         {
             Pantalla_Certificado_Mat certmat = new Pantalla_Certificado_Mat(cbRNPA.Text);
             certmat.ShowDialog();
+        }
+
+        private void TotalPermisos_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void TotalSocios_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (cbRNPA.Text != "" && cbRNPA.Text != null)
+            {
+                Vistas vista = new Vistas(cbRNPA.Text, txtNombre.Text);
+                vista.ShowDialog();
+            }
+        }
+
+        private void BuscarNombreOrg_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

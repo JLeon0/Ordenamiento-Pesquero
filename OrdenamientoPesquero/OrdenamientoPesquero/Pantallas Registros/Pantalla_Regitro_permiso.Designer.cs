@@ -477,7 +477,7 @@
             this.groupBox3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(13, 106);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(884, 144);
+            this.groupBox3.Size = new System.Drawing.Size(814, 144);
             this.groupBox3.TabIndex = 80;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del Permiso";
@@ -501,13 +501,13 @@
             this.nPer.Location = new System.Drawing.Point(123, 20);
             this.nPer.Name = "nPer";
             this.nPer.Size = new System.Drawing.Size(140, 25);
-            this.nPer.TabIndex = 70;
+            this.nPer.TabIndex = 1;
             // 
             // finVigenciaPer
             // 
             this.finVigenciaPer.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.finVigenciaPer.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.finVigenciaPer.Location = new System.Drawing.Point(516, 105);
+            this.finVigenciaPer.Location = new System.Drawing.Point(460, 105);
             this.finVigenciaPer.Name = "finVigenciaPer";
             this.finVigenciaPer.Size = new System.Drawing.Size(122, 25);
             this.finVigenciaPer.TabIndex = 6;
@@ -517,7 +517,7 @@
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label38.Location = new System.Drawing.Point(429, 107);
+            this.label38.Location = new System.Drawing.Point(373, 107);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(50, 17);
             this.label38.TabIndex = 15;
@@ -527,25 +527,25 @@
             // 
             this.diaExpPer.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.diaExpPer.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.diaExpPer.Location = new System.Drawing.Point(516, 59);
+            this.diaExpPer.Location = new System.Drawing.Point(460, 59);
             this.diaExpPer.Name = "diaExpPer";
             this.diaExpPer.Size = new System.Drawing.Size(122, 25);
-            this.diaExpPer.TabIndex = 4;
+            this.diaExpPer.TabIndex = 5;
             this.diaExpPer.ValueChanged += new System.EventHandler(this.diaExpPer_ValueChanged);
             // 
             // FolioPer
             // 
             this.FolioPer.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FolioPer.Location = new System.Drawing.Point(796, 16);
+            this.FolioPer.Location = new System.Drawing.Point(740, 16);
             this.FolioPer.Name = "FolioPer";
             this.FolioPer.Size = new System.Drawing.Size(69, 25);
-            this.FolioPer.TabIndex = 69;
+            this.FolioPer.TabIndex = 3;
             // 
             // PesqueriaPer
             // 
             this.PesqueriaPer.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PesqueriaPer.FormattingEnabled = true;
-            this.PesqueriaPer.Location = new System.Drawing.Point(576, 16);
+            this.PesqueriaPer.Location = new System.Drawing.Point(520, 16);
             this.PesqueriaPer.Name = "PesqueriaPer";
             this.PesqueriaPer.Size = new System.Drawing.Size(140, 25);
             this.PesqueriaPer.TabIndex = 2;
@@ -554,7 +554,7 @@
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(743, 20);
+            this.label27.Location = new System.Drawing.Point(687, 20);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(43, 17);
             this.label27.TabIndex = 68;
@@ -567,7 +567,7 @@
             this.LugarExpPer.Location = new System.Drawing.Point(123, 61);
             this.LugarExpPer.Name = "LugarExpPer";
             this.LugarExpPer.Size = new System.Drawing.Size(140, 25);
-            this.LugarExpPer.TabIndex = 3;
+            this.LugarExpPer.TabIndex = 4;
             // 
             // VigenciaPerm
             // 
@@ -582,7 +582,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(429, 61);
+            this.label33.Location = new System.Drawing.Point(373, 61);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(48, 17);
             this.label33.TabIndex = 4;
@@ -592,7 +592,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(429, 20);
+            this.label32.Location = new System.Drawing.Point(373, 20);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(131, 17);
             this.label32.TabIndex = 3;
