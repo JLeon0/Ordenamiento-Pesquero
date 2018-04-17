@@ -17,7 +17,7 @@ namespace OrdenamientoPesquero
         public Pantalla_Regitro_permiso(string rnpa, string muni)
         {
             InitializeComponent();
-            rnpa = Rnpa;
+            Rnpa = rnpa;
             Municipio = muni;
         }
         string Rnpa;
@@ -30,7 +30,14 @@ namespace OrdenamientoPesquero
         DataTable dt = null;
         private void Pantalla_Regitro_permiso_Load(object sender, EventArgs e)
         {
-
+            dt = proc.ObtenerCertMatrXUnidad(Rnpa);
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                Matricula.Items.Add(dt.Rows[i]["MATRICULA"].ToString());
+            }
+            //Matricula.DataSource = dt;
+            //Matricula.DisplayMember = "MATRICULA";
+            //Matricula.ValueMember = "MATRICULA";
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
@@ -162,7 +169,7 @@ namespace OrdenamientoPesquero
                     if (dgvEmbarcacionesPerm[0, i].Value != null)
                     {
                         Emb = new Embarcacion(dgvEmbarcacionesPerm[0, i].Value.ToString(), dgvEmbarcacionesPerm[1, i].Value.ToString(), dgvEmbarcacionesPerm[3, i].Value.ToString(), dgvEmbarcacionesPerm[2, i].Value.ToString(), Municipio, Rnpa);
-                        proc.registrar_perm_emb(Emb, nPer.Text);
+                        exito += proc.registrar_perm_emb(Emb, nPer.Text);
                     }
                 }
             }
@@ -179,9 +186,10 @@ namespace OrdenamientoPesquero
                 if (dgvEmbarcacionesPerm[0, i].Value != null)
                 {
                     Emb = new Embarcacion(dgvEmbarcacionesPerm[0, i].Value.ToString(), dgvEmbarcacionesPerm[1, i].Value.ToString(), dgvEmbarcacionesPerm[3, i].Value.ToString(), dgvEmbarcacionesPerm[2, i].Value.ToString(), Municipio, Rnpa);
-                    proc.registrar_perm_emb(Emb, nPer.Text);
+                    exito += proc.registrar_perm_emb(Emb, nPer.Text);
                 }
             }
+            val.Exito(exito);
         }
 
         private void Eliminar_Click(object sender, EventArgs e)

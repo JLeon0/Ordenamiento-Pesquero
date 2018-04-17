@@ -181,7 +181,7 @@
             // CURPPesc
             // 
             this.CURPPesc.FormattingEnabled = true;
-            this.CURPPesc.Location = new System.Drawing.Point(59, 143);
+            this.CURPPesc.Location = new System.Drawing.Point(59, 152);
             this.CURPPesc.Name = "CURPPesc";
             this.CURPPesc.Size = new System.Drawing.Size(197, 26);
             this.CURPPesc.TabIndex = 112;
@@ -194,7 +194,7 @@
             this.pictureBox9.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox9.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox9.Location = new System.Drawing.Point(262, 143);
+            this.pictureBox9.Location = new System.Drawing.Point(262, 152);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(23, 21);
             this.pictureBox9.TabIndex = 111;
@@ -206,7 +206,7 @@
             this.pictureBox7.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox7.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox7.Location = new System.Drawing.Point(528, 144);
+            this.pictureBox7.Location = new System.Drawing.Point(528, 153);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(23, 21);
             this.pictureBox7.TabIndex = 109;
@@ -218,7 +218,7 @@
             this.pictureBox5.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox5.Location = new System.Drawing.Point(806, 299);
+            this.pictureBox5.Location = new System.Drawing.Point(806, 308);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(23, 21);
             this.pictureBox5.TabIndex = 108;
@@ -230,7 +230,7 @@
             this.pictureBox8.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox8.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox8.Location = new System.Drawing.Point(732, 269);
+            this.pictureBox8.Location = new System.Drawing.Point(732, 278);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(23, 21);
             this.pictureBox8.TabIndex = 108;
@@ -242,7 +242,7 @@
             this.pictureBox6.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox6.Location = new System.Drawing.Point(638, 344);
+            this.pictureBox6.Location = new System.Drawing.Point(638, 353);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(23, 21);
             this.pictureBox6.TabIndex = 107;
@@ -254,7 +254,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label58.AutoSize = true;
             this.label58.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label58.Location = new System.Drawing.Point(6, 325);
+            this.label58.Location = new System.Drawing.Point(6, 334);
             this.label58.Name = "label58";
             this.label58.Size = new System.Drawing.Size(226, 18);
             this.label58.TabIndex = 106;
@@ -266,7 +266,7 @@
             this.CorreoPesc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CorreoPesc.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CorreoPesc.ForeColor = System.Drawing.Color.Black;
-            this.CorreoPesc.Location = new System.Drawing.Point(9, 344);
+            this.CorreoPesc.Location = new System.Drawing.Point(9, 353);
             this.CorreoPesc.MaxLength = 30;
             this.CorreoPesc.Name = "CorreoPesc";
             this.CorreoPesc.Size = new System.Drawing.Size(623, 26);
@@ -276,7 +276,7 @@
             // 
             // TSangrePesc
             // 
-            this.TSangrePesc.Location = new System.Drawing.Point(412, 191);
+            this.TSangrePesc.Location = new System.Drawing.Point(412, 200);
             this.TSangrePesc.Name = "TSangrePesc";
             this.TSangrePesc.Size = new System.Drawing.Size(81, 26);
             this.TSangrePesc.TabIndex = 31;
@@ -284,7 +284,7 @@
             // label57
             // 
             this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(278, 194);
+            this.label57.Location = new System.Drawing.Point(278, 203);
             this.label57.Name = "label57";
             this.label57.Size = new System.Drawing.Size(128, 18);
             this.label57.TabIndex = 30;
@@ -293,7 +293,7 @@
             // EscolaridadPesc
             // 
             this.EscolaridadPesc.FormattingEnabled = true;
-            this.EscolaridadPesc.Location = new System.Drawing.Point(106, 191);
+            this.EscolaridadPesc.Location = new System.Drawing.Point(106, 200);
             this.EscolaridadPesc.Name = "EscolaridadPesc";
             this.EscolaridadPesc.Size = new System.Drawing.Size(153, 26);
             this.EscolaridadPesc.TabIndex = 29;
@@ -301,7 +301,7 @@
             // label56
             // 
             this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(7, 194);
+            this.label56.Location = new System.Drawing.Point(7, 203);
             this.label56.Name = "label56";
             this.label56.Size = new System.Drawing.Size(96, 18);
             this.label56.TabIndex = 28;
@@ -310,7 +310,7 @@
             // FemeninoPesc
             // 
             this.FemeninoPesc.AutoSize = true;
-            this.FemeninoPesc.Location = new System.Drawing.Point(716, 144);
+            this.FemeninoPesc.Location = new System.Drawing.Point(716, 153);
             this.FemeninoPesc.Name = "FemeninoPesc";
             this.FemeninoPesc.Size = new System.Drawing.Size(96, 22);
             this.FemeninoPesc.TabIndex = 27;
@@ -322,7 +322,7 @@
             // 
             this.MasculinoPesc.AutoSize = true;
             this.MasculinoPesc.Checked = true;
-            this.MasculinoPesc.Location = new System.Drawing.Point(614, 144);
+            this.MasculinoPesc.Location = new System.Drawing.Point(614, 153);
             this.MasculinoPesc.Name = "MasculinoPesc";
             this.MasculinoPesc.Size = new System.Drawing.Size(96, 22);
             this.MasculinoPesc.TabIndex = 26;
@@ -333,7 +333,7 @@
             // label55
             // 
             this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(560, 146);
+            this.label55.Location = new System.Drawing.Point(560, 155);
             this.label55.Name = "label55";
             this.label55.Size = new System.Drawing.Size(48, 18);
             this.label55.TabIndex = 25;
@@ -355,7 +355,7 @@
             // 
             // TelefonoPesc
             // 
-            this.TelefonoPesc.Location = new System.Drawing.Point(686, 296);
+            this.TelefonoPesc.Location = new System.Drawing.Point(686, 305);
             this.TelefonoPesc.Mask = "000-000-0000";
             this.TelefonoPesc.Name = "TelefonoPesc";
             this.TelefonoPesc.Size = new System.Drawing.Size(114, 26);
@@ -365,7 +365,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(620, 299);
+            this.label41.Location = new System.Drawing.Point(620, 308);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(70, 18);
             this.label41.TabIndex = 21;
@@ -374,7 +374,7 @@
             // EstadoPesc
             // 
             this.EstadoPesc.Enabled = false;
-            this.EstadoPesc.Location = new System.Drawing.Point(382, 296);
+            this.EstadoPesc.Location = new System.Drawing.Point(382, 305);
             this.EstadoPesc.Name = "EstadoPesc";
             this.EstadoPesc.Size = new System.Drawing.Size(191, 26);
             this.EstadoPesc.TabIndex = 20;
@@ -383,7 +383,7 @@
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(314, 299);
+            this.label42.Location = new System.Drawing.Point(314, 308);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(62, 18);
             this.label42.TabIndex = 19;
@@ -391,7 +391,7 @@
             // 
             // MunicipioPesc
             // 
-            this.MunicipioPesc.Location = new System.Drawing.Point(99, 296);
+            this.MunicipioPesc.Location = new System.Drawing.Point(99, 305);
             this.MunicipioPesc.Name = "MunicipioPesc";
             this.MunicipioPesc.Size = new System.Drawing.Size(209, 26);
             this.MunicipioPesc.TabIndex = 20;
@@ -399,7 +399,7 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(10, 299);
+            this.label43.Location = new System.Drawing.Point(10, 308);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(79, 18);
             this.label43.TabIndex = 19;
@@ -407,7 +407,7 @@
             // 
             // CPPesc
             // 
-            this.CPPesc.Location = new System.Drawing.Point(667, 264);
+            this.CPPesc.Location = new System.Drawing.Point(667, 273);
             this.CPPesc.Mask = "99999";
             this.CPPesc.Name = "CPPesc";
             this.CPPesc.Size = new System.Drawing.Size(59, 26);
@@ -418,7 +418,7 @@
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(620, 267);
+            this.label45.Location = new System.Drawing.Point(620, 276);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(41, 18);
             this.label45.TabIndex = 15;
@@ -426,7 +426,7 @@
             // 
             // ColoniaPesc
             // 
-            this.ColoniaPesc.Location = new System.Drawing.Point(99, 264);
+            this.ColoniaPesc.Location = new System.Drawing.Point(99, 273);
             this.ColoniaPesc.Name = "ColoniaPesc";
             this.ColoniaPesc.Size = new System.Drawing.Size(474, 26);
             this.ColoniaPesc.TabIndex = 14;
@@ -434,7 +434,7 @@
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(10, 267);
+            this.label46.Location = new System.Drawing.Point(10, 276);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(66, 18);
             this.label46.TabIndex = 13;
@@ -442,7 +442,7 @@
             // 
             // CalleYNumPesc
             // 
-            this.CalleYNumPesc.Location = new System.Drawing.Point(134, 232);
+            this.CalleYNumPesc.Location = new System.Drawing.Point(134, 241);
             this.CalleYNumPesc.Name = "CalleYNumPesc";
             this.CalleYNumPesc.Size = new System.Drawing.Size(474, 26);
             this.CalleYNumPesc.TabIndex = 12;
@@ -450,7 +450,7 @@
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(10, 235);
+            this.label47.Location = new System.Drawing.Point(10, 244);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(118, 18);
             this.label47.TabIndex = 11;
@@ -458,7 +458,7 @@
             // 
             // RFCPesc
             // 
-            this.RFCPesc.Location = new System.Drawing.Point(336, 143);
+            this.RFCPesc.Location = new System.Drawing.Point(336, 152);
             this.RFCPesc.Name = "RFCPesc";
             this.RFCPesc.Size = new System.Drawing.Size(186, 26);
             this.RFCPesc.TabIndex = 10;
@@ -467,7 +467,7 @@
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(292, 146);
+            this.label48.Location = new System.Drawing.Point(292, 155);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(45, 18);
             this.label48.TabIndex = 9;
@@ -476,7 +476,7 @@
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(6, 146);
+            this.label49.Location = new System.Drawing.Point(6, 155);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(57, 18);
             this.label49.TabIndex = 7;
@@ -486,7 +486,7 @@
             // 
             this.FechaNacPesc.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FechaNacPesc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechaNacPesc.Location = new System.Drawing.Point(638, 86);
+            this.FechaNacPesc.Location = new System.Drawing.Point(638, 95);
             this.FechaNacPesc.Name = "FechaNacPesc";
             this.FechaNacPesc.Size = new System.Drawing.Size(132, 26);
             this.FechaNacPesc.TabIndex = 6;
@@ -495,7 +495,7 @@
             // 
             this.label50.AutoSize = true;
             this.label50.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label50.Location = new System.Drawing.Point(193, 115);
+            this.label50.Location = new System.Drawing.Point(193, 124);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(179, 16);
             this.label50.TabIndex = 5;
@@ -503,7 +503,7 @@
             // 
             // LugarNacPesc
             // 
-            this.LugarNacPesc.Location = new System.Drawing.Point(178, 86);
+            this.LugarNacPesc.Location = new System.Drawing.Point(178, 95);
             this.LugarNacPesc.Name = "LugarNacPesc";
             this.LugarNacPesc.Size = new System.Drawing.Size(430, 26);
             this.LugarNacPesc.TabIndex = 4;
@@ -511,7 +511,7 @@
             // label51
             // 
             this.label51.AutoSize = true;
-            this.label51.Location = new System.Drawing.Point(620, 68);
+            this.label51.Location = new System.Drawing.Point(620, 77);
             this.label51.Name = "label51";
             this.label51.Size = new System.Drawing.Size(157, 18);
             this.label51.TabIndex = 3;
@@ -520,7 +520,7 @@
             // label52
             // 
             this.label52.AutoSize = true;
-            this.label52.Location = new System.Drawing.Point(7, 89);
+            this.label52.Location = new System.Drawing.Point(7, 98);
             this.label52.Name = "label52";
             this.label52.Size = new System.Drawing.Size(162, 18);
             this.label52.TabIndex = 3;

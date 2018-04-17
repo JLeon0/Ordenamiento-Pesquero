@@ -30,7 +30,9 @@ namespace OrdenamientoPesquero
         }
 
         private void Pantalla_Registro_Usuario_Load(object sender, EventArgs e) {
+            limpiarpescador();
             CargarPescadores();
+            CargarMatriculas();
         }
 
 
@@ -176,12 +178,15 @@ namespace OrdenamientoPesquero
             {
                 item.Text = "";
             }
+            foreach (MaskedTextBox item in groupBox7.Controls.OfType<MaskedTextBox>())
+            {
+                item.Text = "";
+            }
             foreach (ComboBox item in groupBox7.Controls.OfType<ComboBox>())
             {
                 item.Text = "";
             }
         }
-
 
         private void CURPPesc_TextChanged(object sender, EventArgs e)
         {
@@ -280,6 +285,15 @@ namespace OrdenamientoPesquero
             CURPPesc.DisplayMember = "CURP";
             CURPPesc.ValueMember = "CURP";
             CURPPesc.Text = "";
+        }
+
+        private void CargarMatriculas()
+        {
+            dt = proc.ObtenerCertMatrXUnidad(RNPA);
+            MatriculaPesc.DataSource = dt;
+            MatriculaPesc.DisplayMember = "MATRICULA";
+            MatriculaPesc.ValueMember = "MATRICULA";
+            MatriculaPesc.Text = "";
         }
 
         private void CURPPesc_SelectedValueChanged(object sender, EventArgs e)
