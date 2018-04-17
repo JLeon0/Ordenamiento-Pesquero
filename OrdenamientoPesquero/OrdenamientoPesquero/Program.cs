@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrdenamientoPesquero.Pantallas_Registros;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace OrdenamientoPesquero
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Pantalla_Registro_UnidadEconomica());
+            Application.Run(new Vistas("0301000089"));
         }
     }
 }

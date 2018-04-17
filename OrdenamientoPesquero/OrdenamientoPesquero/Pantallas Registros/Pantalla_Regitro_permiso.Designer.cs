@@ -733,6 +733,7 @@
             this.Ver.Size = new System.Drawing.Size(70, 70);
             this.Ver.TabIndex = 116;
             this.Ver.TabStop = false;
+            this.Ver.Click += new System.EventHandler(this.Ver_Click);
             // 
             // Eliminar
             // 
