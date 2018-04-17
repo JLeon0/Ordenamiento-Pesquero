@@ -33,5 +33,16 @@ namespace OrdenamientoPesquero.Properties {
                 return ((string)(this["OrdPesqueroConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=\"192.168.137.118, 1433\";Initial Catalog=OrdPesquero;Persist Security " +
+            "Info=True;User ID=usuario;Password=usuario")]
+        public string OrdPesqueroConnectionString1 {
+            get {
+                return ((string)(this["OrdPesqueroConnectionString1"]));
+            }
+        }
     }
 }

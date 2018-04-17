@@ -473,6 +473,8 @@ namespace OrdenamientoPesquero {
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCURP}, true));
                 this.columnCodigo.AutoIncrement = true;
+                this.columnCodigo.AutoIncrementSeed = -1;
+                this.columnCodigo.AutoIncrementStep = -1;
                 this.columnCodigo.AllowDBNull = false;
                 this.columnCodigo.ReadOnly = true;
                 this.columnNombre.ReadOnly = true;
@@ -930,7 +932,7 @@ namespace OrdenamientoPesquero.OrdPesqueroDataSet1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::OrdenamientoPesquero.Properties.Settings.Default.OrdPesqueroConnectionString;
+            this._connection.ConnectionString = global::OrdenamientoPesquero.Properties.Settings.Default.OrdPesqueroConnectionString1;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

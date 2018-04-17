@@ -49,6 +49,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OrdPesqueroDataSet11.cs">
+      <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>
+    </Compile>
     <Compile Include="OrdPesqueroDataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
