@@ -2,40 +2,26 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Image Name="Image1">
-        <Source>Embedded</Source>
-        <Value>sepadaescudologosiglas_450x851</Value>
-        <Sizing>Fit</Sizing>
-        <Top>0.47307cm</Top>
-        <Left>5.4737cm</Left>
-        <Height>1.84396cm</Height>
-        <Width>20.62743cm</Width>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
-      </Image>
       <Tablix Name="Tablix1">
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.66316cm</Width>
+              <Width>1.84295cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.40941cm</Width>
+              <Width>7.27791cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.91212cm</Width>
+              <Width>4.30264cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>3.32462cm</Width>
+              <Width>2.45149cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.40941cm</Width>
+              <Width>4.70045cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>4.40941cm</Width>
+              <Width>2.9542cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -51,7 +37,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>CODIGO</Value>
+                              <Value>CONDÍGO</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -432,81 +418,107 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>pescadores</DataSetName>
-        <Top>4.23016cm</Top>
-        <Left>1.20571cm</Left>
+        <Top>0.65828cm</Top>
+        <Left>1.92828cm</Left>
         <Height>3.6077cm</Height>
-        <Width>24.12813cm</Width>
-        <ZIndex>1</ZIndex>
+        <Width>23.52965cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
+          <FontSize>9pt</FontSize>
         </Style>
       </Tablix>
-      <Textbox Name="Textbox13">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Lista de pescadores</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Unidad economica:  </Value>
-                <Style />
-              </TextRun>
-              <TextRun>
-                <Value>=Parameters!Unidad.Value</Value>
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>0.79057cm</Top>
-        <Left>8.27828cm</Left>
-        <Height>1.52646cm</Height>
-        <Width>9.525cm</Width>
-        <ZIndex>2</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
     </ReportItems>
-    <Height>27.94cm</Height>
+    <Height>3.6875in</Height>
     <Style />
   </Body>
-  <Width>27.56454cm</Width>
+  <Width>12.72073in</Width>
   <Page>
-    <PageHeight>29.7cm</PageHeight>
-    <PageWidth>21cm</PageWidth>
-    <LeftMargin>2cm</LeftMargin>
-    <RightMargin>2cm</RightMargin>
-    <TopMargin>2cm</TopMargin>
-    <BottomMargin>2cm</BottomMargin>
+    <PageHeader>
+      <Height>2.54cm</Height>
+      <PrintOnFirstPage>true</PrintOnFirstPage>
+      <PrintOnLastPage>true</PrintOnLastPage>
+      <ReportItems>
+        <Image Name="Image1">
+          <Source>Embedded</Source>
+          <Value>sepadaescudologosiglas_450x851</Value>
+          <Sizing>Fit</Sizing>
+          <Top>0.51965cm</Top>
+          <Left>2.93463cm</Left>
+          <Height>1.84396cm</Height>
+          <Width>19.5691cm</Width>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </Image>
+        <Textbox Name="Textbox13">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Lista de pescadores</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value />
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>Unidad economica:  </Value>
+                  <Style />
+                </TextRun>
+                <TextRun>
+                  <Value>=Parameters!Unidad.Value</Value>
+                  <Style />
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox13</rd:DefaultName>
+          <Top>0.83715cm</Top>
+          <Left>4.89161cm</Left>
+          <Height>1.52646cm</Height>
+          <Width>9.525cm</Width>
+          <ZIndex>1</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+      </ReportItems>
+      <Style>
+        <Border>
+          <Style>None</Style>
+        </Border>
+      </Style>
+    </PageHeader>
+    <PageHeight>21.59cm</PageHeight>
+    <PageWidth>27.94cm</PageWidth>
+    <LeftMargin>0cm</LeftMargin>
+    <RightMargin>0cm</RightMargin>
+    <TopMargin>0cm</TopMargin>
+    <BottomMargin>0cm</BottomMargin>
     <ColumnSpacing>0.13cm</ColumnSpacing>
     <Style />
   </Page>
@@ -554,7 +566,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>OrdPesqueroDataSet1</rd:DataSetName>
-        <rd:SchemaPath>A:\Ordenamiento Pesquero\OrdenamientoPesquero\OrdenamientoPesquero\OrdPesqueroDataSet11.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Source\Repos\Ordenamiento-Pesquero\OrdenamientoPesquero\OrdenamientoPesquero\OrdPesqueroDataSet11.xsd</rd:SchemaPath>
         <rd:TableName>pescadores</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
