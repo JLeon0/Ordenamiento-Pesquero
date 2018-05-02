@@ -28,6 +28,7 @@ namespace Logica
         public string CUERPO_DE_AGUA = "";
         public string MATRICULA = "";
         public string CORREO = "";
+        public string LOCALIDAD = "";
         public Pescador()
         {
              NOMBRE = "";
@@ -50,6 +51,7 @@ namespace Logica
              CUERPO_DE_AGUA = "";
              MATRICULA = "";
             CORREO = "";
+            LOCALIDAD = "";
         }
         public Pescador(
         string nOMBRE,
@@ -70,7 +72,7 @@ namespace Logica
         string tIPO_PESC,
         string oCP_LABORAL,
         string cUERPO_DE_AGUA,
-        string mATRICULA, string correo)
+        string mATRICULA, string correo, string localidad)
         {
             NOMBRE = nOMBRE;
             AP_PAT = aP_PAT;
@@ -92,6 +94,7 @@ namespace Logica
             CUERPO_DE_AGUA = cUERPO_DE_AGUA;
             MATRICULA = mATRICULA;
             CORREO = correo;
+            LOCALIDAD = localidad;
         }
     }
 }
