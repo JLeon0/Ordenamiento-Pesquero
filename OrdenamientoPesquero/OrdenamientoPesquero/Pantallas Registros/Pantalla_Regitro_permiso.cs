@@ -34,6 +34,7 @@ namespace OrdenamientoPesquero
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 Matricula.Items.Add(dt.Rows[i]["MATRICULA"].ToString());
+                
             }
             //Matricula.DataSource = dt;
             //Matricula.DisplayMember = "MATRICULA";
