@@ -29,6 +29,7 @@ namespace OrdenamientoPesquero
         DataTable dt = null;
         string[,] unidad = { { "0", "RFC" }, { "0", "Codigo Postal" }, { "0", "Correo Electronico" }, { "0", "Telefono de la Cooperativa" },{"0","RNPA" } };
         string[,] pescador = { { "0", "CURP" }, { "0", "RFC" }, { "0", "Codigo postal" }, { "0", "Telefono" } , { "0","Correo Electronico"} };
+        string[] Municipios;
         public Pantalla_Registro_UnidadEconomica()
         {
             InitializeComponent();
@@ -43,6 +44,8 @@ namespace OrdenamientoPesquero
             cbRNPA.Focus();
             //PintarGroupBox();
             CargarRNPA();
+            CargarMunicipios();
+            cargando = false;
         }
         
 
@@ -141,29 +144,17 @@ namespace OrdenamientoPesquero
             cbRNPA.ValueMember = "RNPA";            
             cbRNPA.Text = a;
             txtNombre.Focus();
-            cargando = false;
-
         }
-        //private void CargarPermisos()
-        //{
-        //    string a = nPer.Text;
-        //    nPer.DataSource = dt;
-        //    dt = proc.ObtenerNoPermisos(cbRNPA.Text);
-        //    nPer.DataSource = dt;
-        //    nPer.DisplayMember = "NPERMISO";
-        //    nPer.ValueMember = "NPERMISO";
-        //    nPer.Text = a;
-        //}
 
-        //private void CargarPescadores()
-        //{
-        //    string rnpa = cbRNPA.Text;
-        //    dt = proc.Obtener_curp(rnpa);
-        //    CURPPesc.DataSource = dt;
-        //    CURPPesc.DisplayMember = "CURP";
-        //    CURPPesc.ValueMember = "CURP";
-        //    CURPPesc.Text = "";
-        //}
+        private void CargarMunicipios()
+        {
+            dt = proc.ObtenerMunicipios();
+            txtMunicipio.DataSource = dt;
+            txtMunicipio.DisplayMember = "NombreM";
+            txtMunicipio.ValueMember = "NombreM";
+            txtMunicipio.Text = "Seleccione un Municipio";
+            Municipios = dt.Rows.OfType<DataRow>().Select(k => k[0].ToString()).ToArray();
+        }
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
@@ -372,27 +363,7 @@ namespace OrdenamientoPesquero
             }
         }
         #endregion
-
-        //Pintar los groupBox
-        //private void PintarGroupBox()
-        //{
-        //    this.BackColor = Color.FromArgb(36, 50, 61);
-        //    Resumen.BackColor = Color.FromArgb(118, 50, 63);
-        //    Resumen.Width = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width * .296);
-
-        //    foreach (TextBox ctr in gbOrgPes.Controls.OfType<TextBox>())
-        //    {
-        //        gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].ForeColor = Color.FromArgb(160, 160, 160);
-        //        gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].BackColor = Color.FromArgb(36, 50, 61);
-
-        //    }
-        //    foreach (MaskedTextBox ctr in gbOrgPes.Controls.OfType<MaskedTextBox>())
-        //    {
-        //        gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].ForeColor = Color.FromArgb(160, 160, 160);
-        //        gbOrgPes.Controls[gbOrgPes.Controls.IndexOf(ctr)].BackColor = Color.FromArgb(36, 50, 61);
-
-        //    }
-        //}
+        
 
         private void DataResumen_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -435,6 +406,18 @@ namespace OrdenamientoPesquero
         private void BuscarNombreOrg_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void txtMunicipio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!cargando)
+            {
+                dt = proc.ObtenerLocalidades(Municipios[txtMunicipio.SelectedIndex]);
+                txtLocalidad.DataSource = dt;
+                txtLocalidad.DisplayMember = "NombreL";
+                txtLocalidad.ValueMember = "NombreL";
+                txtLocalidad.Text = "Seleccione un Municipio";
+            }
         }
     }
 }

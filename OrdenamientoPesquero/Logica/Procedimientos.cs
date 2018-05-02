@@ -85,6 +85,16 @@ namespace Logica
             return c.getDatosTabla("EquiposxPermiso", Parametros, nopermiso);
         }
         #endregion
+
+        public DataTable ObtenerMunicipios()
+        {
+            return c.getDatosTabla("Municipios", new string[0], new string[0]);
+        }
+        public DataTable ObtenerLocalidades(string M)
+        {
+            string[] Parametros = { "@M" };
+            return c.getDatosTabla("Localidades", Parametros, M);
+        }
         public DataTable Obtener_todas_unidades(string RNPA)
         {
             string[] Parametros = { "@rnpa" };
