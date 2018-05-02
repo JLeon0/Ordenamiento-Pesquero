@@ -304,12 +304,12 @@ namespace OrdenamientoPesquero
             if (val.validarCorreo(txtCorreo.Text))
             {
                 pictureBox4.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
-                unidad[0, 0] = "1";
+                unidad[2, 0] = "1";
             }
             else
             {
                 pictureBox4.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
-                unidad[0, 0] = "0";
+                unidad[2, 0] = "0";
             }
         }
         private void mtbTelefono_TextChanged(object sender, EventArgs e)
