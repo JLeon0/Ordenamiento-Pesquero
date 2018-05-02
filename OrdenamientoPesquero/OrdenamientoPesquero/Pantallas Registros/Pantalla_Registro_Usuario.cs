@@ -25,6 +25,7 @@ namespace OrdenamientoPesquero
         public Pantalla_Registro_Usuario(string rnpa, string nombre)
         {
             InitializeComponent();
+            this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
             RNPA = rnpa;
             NombreUnidad = nombre;
         }

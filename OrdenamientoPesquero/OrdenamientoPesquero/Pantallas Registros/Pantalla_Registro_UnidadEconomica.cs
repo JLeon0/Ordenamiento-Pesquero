@@ -368,6 +368,7 @@ namespace OrdenamientoPesquero
                     DataResumen.Rows.Clear();
                     DataResumen.Refresh();
                 }
+                DataResumen.Height = (DataResumen.RowCount * 22) + 28;
             }
         }
         #endregion
@@ -402,6 +403,7 @@ namespace OrdenamientoPesquero
         {
             Pantalla_Regitro_permiso perm = new Pantalla_Regitro_permiso(cbRNPA.Text, txtMunicipio.Text);
             perm.ShowDialog();
+            Resumenes(cbRNPA.Text);
         }
 
         private void button1_Click(object sender, EventArgs e)

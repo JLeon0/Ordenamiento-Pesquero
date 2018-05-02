@@ -51,7 +51,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>CONDÍGO</Value>
+                              <Value>CODIGO</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -433,8 +433,8 @@
         </TablixRowHierarchy>
         <DataSetName>pescadores</DataSetName>
         <Top>4.23016cm</Top>
-        <Left>3.43641cm</Left>
-        <Height>3.60771cm</Height>
+        <Left>1.20571cm</Left>
+        <Height>3.6077cm</Height>
         <Width>24.12813cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
@@ -496,10 +496,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>3.6875in</Height>
+    <Height>27.94cm</Height>
     <Style />
   </Body>
-  <Width>11.60417in</Width>
+  <Width>27.56454cm</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
     <PageWidth>21cm</PageWidth>
@@ -554,7 +554,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>OrdPesqueroDataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Source\Repos\Ordenamiento-Pesquero\OrdenamientoPesquero\OrdenamientoPesquero\OrdPesqueroDataSet11.xsd</rd:SchemaPath>
+        <rd:SchemaPath>A:\Ordenamiento Pesquero\OrdenamientoPesquero\OrdenamientoPesquero\OrdPesqueroDataSet11.xsd</rd:SchemaPath>
         <rd:TableName>pescadores</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
