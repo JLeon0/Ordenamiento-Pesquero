@@ -50,9 +50,7 @@
             this.ApePatPescador = new System.Windows.Forms.TextBox();
             this.TelefonoPesc = new System.Windows.Forms.MaskedTextBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.EstadoPesc = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
-            this.MunicipioPesc = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
             this.CPPesc = new System.Windows.Forms.MaskedTextBox();
             this.label45 = new System.Windows.Forms.Label();
@@ -94,6 +92,8 @@
             this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
             this.RegistrarUnidad = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.MunicipioPesc = new System.Windows.Forms.ComboBox();
+            this.LocalidadPesc = new System.Windows.Forms.ComboBox();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -123,6 +123,8 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.LocalidadPesc);
+            this.groupBox7.Controls.Add(this.MunicipioPesc);
             this.groupBox7.Controls.Add(this.CURPPesc);
             this.groupBox7.Controls.Add(this.pictureBox9);
             this.groupBox7.Controls.Add(this.pictureBox7);
@@ -142,9 +144,7 @@
             this.groupBox7.Controls.Add(this.ApePatPescador);
             this.groupBox7.Controls.Add(this.TelefonoPesc);
             this.groupBox7.Controls.Add(this.label41);
-            this.groupBox7.Controls.Add(this.EstadoPesc);
             this.groupBox7.Controls.Add(this.label42);
-            this.groupBox7.Controls.Add(this.MunicipioPesc);
             this.groupBox7.Controls.Add(this.label43);
             this.groupBox7.Controls.Add(this.CPPesc);
             this.groupBox7.Controls.Add(this.label45);
@@ -279,9 +279,9 @@
             this.label57.AutoSize = true;
             this.label57.Location = new System.Drawing.Point(278, 203);
             this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(128, 18);
+            this.label57.Size = new System.Drawing.Size(115, 18);
             this.label57.TabIndex = 30;
-            this.label57.Text = "Tippo de Sangre:";
+            this.label57.Text = "Tipo de Sangre";
             // 
             // EscolaridadPesc
             // 
@@ -364,30 +364,14 @@
             this.label41.TabIndex = 21;
             this.label41.Text = "Teléfono:";
             // 
-            // EstadoPesc
-            // 
-            this.EstadoPesc.Enabled = false;
-            this.EstadoPesc.Location = new System.Drawing.Point(382, 305);
-            this.EstadoPesc.Name = "EstadoPesc";
-            this.EstadoPesc.Size = new System.Drawing.Size(191, 26);
-            this.EstadoPesc.TabIndex = 20;
-            this.EstadoPesc.Text = "Baja California Sur";
-            // 
             // label42
             // 
             this.label42.AutoSize = true;
             this.label42.Location = new System.Drawing.Point(314, 308);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(62, 18);
+            this.label42.Size = new System.Drawing.Size(81, 18);
             this.label42.TabIndex = 19;
-            this.label42.Text = "Estado:";
-            // 
-            // MunicipioPesc
-            // 
-            this.MunicipioPesc.Location = new System.Drawing.Point(99, 305);
-            this.MunicipioPesc.Name = "MunicipioPesc";
-            this.MunicipioPesc.Size = new System.Drawing.Size(209, 26);
-            this.MunicipioPesc.TabIndex = 20;
+            this.label42.Text = "Localidad:";
             // 
             // label43
             // 
@@ -750,7 +734,7 @@
             // 
             // EliminarUnidad
             // 
-            this.EliminarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
+            this.EliminarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Eliminar;
             this.EliminarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EliminarUnidad.Location = new System.Drawing.Point(164, 744);
             this.EliminarUnidad.Name = "EliminarUnidad";
@@ -762,7 +746,7 @@
             // ActualizarUnidad
             // 
             this.ActualizarUnidad.BackColor = System.Drawing.Color.Transparent;
-            this.ActualizarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.actualizar;
+            this.ActualizarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
             this.ActualizarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ActualizarUnidad.Location = new System.Drawing.Point(87, 744);
             this.ActualizarUnidad.Name = "ActualizarUnidad";
@@ -774,7 +758,7 @@
             // RegistrarUnidad
             // 
             this.RegistrarUnidad.BackColor = System.Drawing.Color.Transparent;
-            this.RegistrarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.registrar;
+            this.RegistrarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.RegistrarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RegistrarUnidad.Location = new System.Drawing.Point(12, 744);
             this.RegistrarUnidad.Name = "RegistrarUnidad";
@@ -793,6 +777,23 @@
             this.pictureBox1.Size = new System.Drawing.Size(890, 75);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            // 
+            // MunicipioPesc
+            // 
+            this.MunicipioPesc.FormattingEnabled = true;
+            this.MunicipioPesc.Location = new System.Drawing.Point(99, 308);
+            this.MunicipioPesc.Name = "MunicipioPesc";
+            this.MunicipioPesc.Size = new System.Drawing.Size(209, 26);
+            this.MunicipioPesc.TabIndex = 113;
+            this.MunicipioPesc.SelectedIndexChanged += new System.EventHandler(this.MunicipioPesc_SelectedIndexChanged);
+            // 
+            // LocalidadPesc
+            // 
+            this.LocalidadPesc.FormattingEnabled = true;
+            this.LocalidadPesc.Location = new System.Drawing.Point(401, 305);
+            this.LocalidadPesc.Name = "LocalidadPesc";
+            this.LocalidadPesc.Size = new System.Drawing.Size(207, 26);
+            this.LocalidadPesc.TabIndex = 114;
             // 
             // Pantalla_Registro_Usuario
             // 
@@ -866,9 +867,7 @@
         private System.Windows.Forms.TextBox ApePatPescador;
         private System.Windows.Forms.MaskedTextBox TelefonoPesc;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.TextBox EstadoPesc;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.TextBox MunicipioPesc;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.MaskedTextBox CPPesc;
         private System.Windows.Forms.Label label45;
@@ -909,5 +908,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox Ver;
+        private System.Windows.Forms.ComboBox LocalidadPesc;
+        private System.Windows.Forms.ComboBox MunicipioPesc;
     }
 }
