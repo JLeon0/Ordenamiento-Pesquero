@@ -41,7 +41,7 @@ namespace Logica
             TIPO = tIPO;
             CALLE = cALLE;
             RFC = rFC;
-            COLONIA = cALLE;
+            COLONIA = cOLONIA;
             LOCALIDAD = lOCALIDAD;
             MUNICIPIO = mUNICIPIO;
             CP = cP;

@@ -34,7 +34,7 @@ namespace OrdenamientoPesquero
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 Matricula.Items.Add(dt.Rows[i]["MATRICULA"].ToString());
-                Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());                
+                Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
             }
         }
 
@@ -76,7 +76,7 @@ namespace OrdenamientoPesquero
                 item.Text = "";
             }
         }
-       
+
         public void equiposdepesca()
         {
             for (int i = 0; i < dgvEquiposPescaPerm.RowCount; i++)
@@ -226,7 +226,7 @@ namespace OrdenamientoPesquero
                 cbx.Validating += new CancelEventHandler(cbx_Validating);
             }
         }
-        
+
         void cbx_Validating(object sender, CancelEventArgs e)
         {
 
@@ -250,6 +250,10 @@ namespace OrdenamientoPesquero
 
                 grid.CurrentCell.Value = value;
             }
+            else
+            {
+                //cbx.SelectedIndex = 
+            }
         } //-----------------------------------------------------------------------------------------
 
         private void Ver_Click(object sender, EventArgs e)
@@ -259,12 +263,11 @@ namespace OrdenamientoPesquero
 
         private void dgvEmbarcacionesPerm_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
-            if(dgvEmbarcacionesPerm.Columns[e.ColumnIndex].Name == "Nombre")
+            if (dgvEmbarcacionesPerm.Columns[e.ColumnIndex].Name == "Nombre")
             {
                 DataGridViewComboBoxCell combo = dgvEmbarcacionesPerm.Rows[e.RowIndex].Cells[e.ColumnIndex] as DataGridViewComboBoxCell;
                 int x = Convert.ToInt32(combo.RowIndex);
 
-                Matricula.DisplayIndex = x;
                 //DataGridViewComboBoxEditingControl cbx = sender as DataGridViewComboBoxEditingControl;
 
                 //DataGridView grid = cbx.EditingControlDataGridView;
@@ -274,6 +277,10 @@ namespace OrdenamientoPesquero
 
                 //dgvEmbarcacionesPerm.Rows[e.RowIndex].Cells[1]. = x;
             }
+        }
+
+        private void dgvEmbarcacionesPerm_DataError(object sender, DataGridViewDataErrorEventArgs e)
+        {
         }
     }
 }
