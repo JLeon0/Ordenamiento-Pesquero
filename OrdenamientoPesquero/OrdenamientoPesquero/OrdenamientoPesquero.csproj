@@ -87,6 +87,11 @@
     <Compile Include="Pantallas Registros\Vistas.Designer.cs">
       <DependentUpon>Vistas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Permisos_lista.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Permisos_lista.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Pantallas Registros\Pantalla_Certificado_Mat.resx">
@@ -114,6 +119,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\Permisos.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
     <None Include="OrdPesqueroDataSet11.xsc">
       <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>
@@ -125,6 +131,17 @@
     </None>
     <None Include="OrdPesqueroDataSet11.xss">
       <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="Permisos_lista.xsc">
+      <DependentUpon>Permisos_lista.xsd</DependentUpon>
+    </None>
+    <None Include="Permisos_lista.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Permisos_lista.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Permisos_lista.xss">
+      <DependentUpon>Permisos_lista.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

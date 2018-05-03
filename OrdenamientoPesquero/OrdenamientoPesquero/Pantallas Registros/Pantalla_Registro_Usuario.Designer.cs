@@ -50,7 +50,7 @@
             this.ApePatPescador = new System.Windows.Forms.TextBox();
             this.TelefonoPesc = new System.Windows.Forms.MaskedTextBox();
             this.label41 = new System.Windows.Forms.Label();
-            this.EstadoPesc = new System.Windows.Forms.TextBox();
+            this.LocalidadPesc = new System.Windows.Forms.TextBox();
             this.label42 = new System.Windows.Forms.Label();
             this.MunicipioPesc = new System.Windows.Forms.TextBox();
             this.label43 = new System.Windows.Forms.Label();
@@ -142,7 +142,7 @@
             this.groupBox7.Controls.Add(this.ApePatPescador);
             this.groupBox7.Controls.Add(this.TelefonoPesc);
             this.groupBox7.Controls.Add(this.label41);
-            this.groupBox7.Controls.Add(this.EstadoPesc);
+            this.groupBox7.Controls.Add(this.LocalidadPesc);
             this.groupBox7.Controls.Add(this.label42);
             this.groupBox7.Controls.Add(this.MunicipioPesc);
             this.groupBox7.Controls.Add(this.label43);
@@ -364,23 +364,21 @@
             this.label41.TabIndex = 21;
             this.label41.Text = "Teléfono:";
             // 
-            // EstadoPesc
+            // LocalidadPesc
             // 
-            this.EstadoPesc.Enabled = false;
-            this.EstadoPesc.Location = new System.Drawing.Point(382, 305);
-            this.EstadoPesc.Name = "EstadoPesc";
-            this.EstadoPesc.Size = new System.Drawing.Size(191, 26);
-            this.EstadoPesc.TabIndex = 20;
-            this.EstadoPesc.Text = "Baja California Sur";
+            this.LocalidadPesc.Location = new System.Drawing.Point(401, 305);
+            this.LocalidadPesc.Name = "LocalidadPesc";
+            this.LocalidadPesc.Size = new System.Drawing.Size(191, 26);
+            this.LocalidadPesc.TabIndex = 20;
             // 
             // label42
             // 
             this.label42.AutoSize = true;
             this.label42.Location = new System.Drawing.Point(314, 308);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(62, 18);
+            this.label42.Size = new System.Drawing.Size(81, 18);
             this.label42.TabIndex = 19;
-            this.label42.Text = "Estado:";
+            this.label42.Text = "Localidad:";
             // 
             // MunicipioPesc
             // 
@@ -866,7 +864,7 @@
         private System.Windows.Forms.TextBox ApePatPescador;
         private System.Windows.Forms.MaskedTextBox TelefonoPesc;
         private System.Windows.Forms.Label label41;
-        private System.Windows.Forms.TextBox EstadoPesc;
+        private System.Windows.Forms.TextBox LocalidadPesc;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.TextBox MunicipioPesc;
         private System.Windows.Forms.Label label43;

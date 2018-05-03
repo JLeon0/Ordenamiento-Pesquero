@@ -84,7 +84,7 @@ namespace OrdenamientoPesquero
                 if (i > 0) { fechaNac += "/"; }
                 i--;
             }
-            pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text, RFCPesc.Text, EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, MatriculaPesc.Text, CorreoPesc.Text);
+            pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text, RFCPesc.Text, EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, MatriculaPesc.Text, CorreoPesc.Text, LocalidadPesc.Text);
             if (registrar)
             {
                 return proc.Registrar_Pescador(pes);
@@ -133,7 +133,7 @@ namespace OrdenamientoPesquero
                 ApeMatPescador.Text = filas["AP_MAT"].ToString();
                 RFCPesc.Text = filas["RFC"].ToString();
                 EscolaridadPesc.Text = filas["ESCOLARIDAD"].ToString();
-                EstadoPesc.Text = "Baja California Sur";
+                LocalidadPesc.Text = "Baja California Sur";
                 TSangrePesc.Text = filas["TIPO_SANGRE"].ToString();
                 LugarNacPesc.Text = filas["LUGAR_NACIMIENTO"].ToString();
                 ColoniaPesc.Text = filas["COLONIA"].ToString();
@@ -306,7 +306,7 @@ namespace OrdenamientoPesquero
                 ApeMatPescador.Text = filas["AP_MAT"].ToString();
                 RFCPesc.Text = filas["RFC"].ToString();
                 EscolaridadPesc.Text = filas["ESCOLARIDAD"].ToString();
-                EstadoPesc.Text = "Baja California Sur";
+                LocalidadPesc.Text = "Baja California Sur";
                 TSangrePesc.Text = filas["TIPO_SANGRE"].ToString();
                 LugarNacPesc.Text = filas["LUGAR_NACIMIENTO"].ToString();
                 ColoniaPesc.Text = filas["COLONIA"].ToString();
@@ -345,7 +345,7 @@ namespace OrdenamientoPesquero
 
         private void Ver_Click(object sender, EventArgs e)
         {
-            Vistas vista = new Vistas(RNPA, NombreUnidad);
+            Vistas vista = new Vistas(RNPA, NombreUnidad, 1);
             vista.ShowDialog();
         }
     }
