@@ -37,10 +37,8 @@ namespace OrdenamientoPesquero
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 Matricula.Items.Add(dt.Rows[i]["MATRICULA"].ToString());
+                Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());                
             }
-            //Matricula.DataSource = dt;
-            //Matricula.DisplayMember = "MATRICULA";
-            //Matricula.ValueMember = "MATRICULA";
         }
 
         private void pictureBox13_Click(object sender, EventArgs e)
@@ -222,15 +220,16 @@ namespace OrdenamientoPesquero
         private void datagridview_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
             DataGridView dgv = (DataGridView)sender;
+            ComboBox cbx = (ComboBox)e.Control;
             if (dgv.CurrentCell.ColumnIndex == dgv.Columns["Nombre"].Index || dgv.CurrentCell.ColumnIndex == dgv.Columns["Matricula"].Index || dgv.CurrentCell.ColumnIndex == dgv.Columns["Marcamotor"].Index)
             {
-                ComboBox cbx = (ComboBox)e.Control;
                 cbx.DropDownStyle = ComboBoxStyle.DropDown;
                 cbx.AutoCompleteSource = AutoCompleteSource.ListItems;
                 cbx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
                 cbx.Validating += new CancelEventHandler(cbx_Validating);
             }
         }
+        
         void cbx_Validating(object sender, CancelEventArgs e)
         {
 
@@ -254,13 +253,31 @@ namespace OrdenamientoPesquero
 
                 grid.CurrentCell.Value = value;
             }
-        }
+        } //-----------------------------------------------------------------------------------------
 
         private void Ver_Click(object sender, EventArgs e)
         {
             Vistas v = new Vistas(Rnpa, uni, 2);
             v.ShowDialog(this);
         }
-        //-----------------------------------------------------------------------------------------
+
+        private void dgvEmbarcacionesPerm_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+            if(dgvEmbarcacionesPerm.Columns[e.ColumnIndex].Name == "Nombre")
+            {
+                DataGridViewComboBoxCell combo = dgvEmbarcacionesPerm.Rows[e.RowIndex].Cells[e.ColumnIndex] as DataGridViewComboBoxCell;
+                int x = Convert.ToInt32(combo.RowIndex);
+
+                Matricula.DisplayIndex = x;
+                //DataGridViewComboBoxEditingControl cbx = sender as DataGridViewComboBoxEditingControl;
+
+                //DataGridView grid = cbx.EditingControlDataGridView;
+                //DataGridViewComboBoxCell cboCol = (DataGridViewComboBoxCell)grid[1, e.RowIndex];
+                //cboCol.Value = x;
+                //DataGridViewComboBoxEditingControl cbx = sender as DataGridViewComboBoxEditingControl;
+
+                //dgvEmbarcacionesPerm.Rows[e.RowIndex].Cells[1]. = x;
+            }
+        }
     }
 }

@@ -16,11 +16,13 @@ namespace OrdenamientoPesquero
     {
         string[,] pescador = { { "0", "CURP" }, { "0", "RFC" }, { "0", "Codigo postal" }, { "0", "Telefono" }, { "0", "Correo Electronico" } };
         int exito = 0;
+        bool cargando = true;
         Pescador pes;
         Procedimientos proc = new Procedimientos();
         Validaciones val = new Validaciones();
         DataTable dt;
         string RNPA = "", NombreUnidad = "";
+        string[] Municipios;
 
         public Pantalla_Registro_Usuario(string rnpa, string nombre)
         {
@@ -34,9 +36,19 @@ namespace OrdenamientoPesquero
             limpiarpescador();
             CargarPescadores();
             CargarMatriculas();
+            CargarMunicipios();
+            cargando = false;
         }
 
-
+        private void CargarMunicipios()
+        {
+            dt = proc.ObtenerMunicipios();
+            MunicipioPesc.DataSource = dt;
+            MunicipioPesc.DisplayMember = "NombreM";
+            MunicipioPesc.ValueMember = "NombreM";
+            MunicipioPesc.Text = "Seleccione un Municipio";
+            Municipios = dt.Rows.OfType<DataRow>().Select(k => k[0].ToString()).ToArray();
+        }
         public int AccionesPescador(bool registrar)
         {
             string sexo = "";
@@ -340,6 +352,18 @@ namespace OrdenamientoPesquero
                 {
                     boton.Checked = true;
                 }
+            }
+        }
+
+        private void MunicipioPesc_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!cargando)
+            {
+                dt = proc.ObtenerLocalidades(Municipios[MunicipioPesc.SelectedIndex]);
+                LocalidadPesc.DataSource = dt;
+                LocalidadPesc.DisplayMember = "NombreL";
+                LocalidadPesc.ValueMember = "NombreL";
+                LocalidadPesc.Text = "Seleccione un Municipio";
             }
         }
 
