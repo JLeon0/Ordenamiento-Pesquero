@@ -46,14 +46,16 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 case 3:
                     this.reportViewer1.ProcessingMode = ProcessingMode.Local;
                     reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Embarcaciones.rdlc");
+                    ReportDataSource datos = new ReportDataSource();
                     this.vista_permTableAdapter.Fill(permisos_lista.vista_perm, rnpa);
+                    datos.Name = "DataSet1";
+                    datos.Value = permisos_lista.vista_perm;
                     reportViewer1.LocalReport.SetParameters(new ReportParameter("Unidad", unidad));
                     this.reportViewer1.RefreshReport();
                     break;
                 default:
                     break;
             }
-            this.reportViewer1.RefreshReport();
         }
     }
 }
