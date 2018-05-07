@@ -1,4 +1,5 @@
 ﻿using Logica;
+using OrdenamientoPesquero.Pantallas_Registros;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,12 +15,14 @@ namespace OrdenamientoPesquero
     public partial class Pantalla_Regitro_permiso : Form
     {
         Validaciones val = new Validaciones();
-        public Pantalla_Regitro_permiso(string rnpa, string muni)
+        public Pantalla_Regitro_permiso(string rnpa, string muni, string unidad)
         {
             InitializeComponent();
             Rnpa = rnpa;
             Municipio = muni;
+            uni = unidad;
         }
+        string uni;
         string Rnpa;
         string Municipio;
         Permiso perm;
@@ -258,7 +261,8 @@ namespace OrdenamientoPesquero
 
         private void Ver_Click(object sender, EventArgs e)
         {
-
+            Vistas v = new Vistas(Rnpa, uni, 2);
+            v.ShowDialog(this);
         }
     }
 }

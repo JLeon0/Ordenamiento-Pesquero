@@ -369,7 +369,7 @@ namespace OrdenamientoPesquero
 
         private void Ver_Click(object sender, EventArgs e)
         {
-            Vistas vista = new Vistas(RNPA, NombreUnidad);
+            Vistas vista = new Vistas(RNPA, NombreUnidad, 1);
             vista.ShowDialog();
         }
     }

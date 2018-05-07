@@ -372,7 +372,7 @@ namespace OrdenamientoPesquero
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Pantalla_Regitro_permiso perm = new Pantalla_Regitro_permiso(cbRNPA.Text, txtMunicipio.Text);
+            Pantalla_Regitro_permiso perm = new Pantalla_Regitro_permiso(cbRNPA.Text, txtMunicipio.Text, txtNombre.Text);
             perm.ShowDialog();
             Resumenes(cbRNPA.Text);
         }
@@ -391,14 +391,15 @@ namespace OrdenamientoPesquero
 
         private void TotalPermisos_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 2);
+            v.ShowDialog(this);
         }
 
         private void TotalSocios_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             if (cbRNPA.Text != "" && cbRNPA.Text != null)
             {
-                Vistas vista = new Vistas(cbRNPA.Text, txtNombre.Text);
+                Vistas vista = new Vistas(cbRNPA.Text, txtNombre.Text,1);
                 vista.ShowDialog();
             }
         }
