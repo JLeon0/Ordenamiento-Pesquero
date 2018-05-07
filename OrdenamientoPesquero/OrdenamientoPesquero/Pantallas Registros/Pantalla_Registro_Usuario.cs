@@ -33,10 +33,10 @@ namespace OrdenamientoPesquero
         }
 
         private void Pantalla_Registro_Usuario_Load(object sender, EventArgs e) {
-            limpiarpescador();
             CargarPescadores();
             CargarMatriculas();
             CargarMunicipios();
+            limpiarpescador();
             cargando = false;
         }
 
@@ -308,6 +308,7 @@ namespace OrdenamientoPesquero
 
         private void CURPPesc_SelectedValueChanged(object sender, EventArgs e)
         {
+            string c = CURPPesc.Text;
             dt = proc.Obtener_Pescador(CURPPesc.Text);
             limpiarpescador();
             string tipopescador = "", ocupacion = "", cuerpoagua = "";
@@ -331,6 +332,7 @@ namespace OrdenamientoPesquero
                 cuerpoagua = filas["CUERPO_DE_AGUA"].ToString();
                 MatriculaPesc.Text = filas["MATRICULA"].ToString();
                 CorreoPesc.Text = filas["CORREO"].ToString();
+                LocalidadPesc.Text = filas["LOCALIDAD"].ToString();
             }
             foreach (RadioButton boton in TipoPesc.Controls)
             {
@@ -353,6 +355,7 @@ namespace OrdenamientoPesquero
                     boton.Checked = true;
                 }
             }
+            CURPPesc.Text = c;
         }
 
         private void MunicipioPesc_SelectedIndexChanged(object sender, EventArgs e)
