@@ -428,8 +428,6 @@
             this.dgvEmbarcacionesPerm.RowHeadersVisible = false;
             this.dgvEmbarcacionesPerm.Size = new System.Drawing.Size(745, 148);
             this.dgvEmbarcacionesPerm.TabIndex = 74;
-            this.dgvEmbarcacionesPerm.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvEmbarcacionesPerm_CellValueChanged);
-            this.dgvEmbarcacionesPerm.DataError += new System.Windows.Forms.DataGridViewDataErrorEventHandler(this.dgvEmbarcacionesPerm_DataError);
             this.dgvEmbarcacionesPerm.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.datagridview_EditingControlShowing);
             // 
             // Nombre

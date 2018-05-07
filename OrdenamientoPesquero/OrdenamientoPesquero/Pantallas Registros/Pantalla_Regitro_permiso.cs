@@ -260,27 +260,5 @@ namespace OrdenamientoPesquero
         {
 
         }
-
-        private void dgvEmbarcacionesPerm_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-            if (dgvEmbarcacionesPerm.Columns[e.ColumnIndex].Name == "Nombre")
-            {
-                DataGridViewComboBoxCell combo = dgvEmbarcacionesPerm.Rows[e.RowIndex].Cells[e.ColumnIndex] as DataGridViewComboBoxCell;
-                int x = Convert.ToInt32(combo.RowIndex);
-
-                //DataGridViewComboBoxEditingControl cbx = sender as DataGridViewComboBoxEditingControl;
-
-                //DataGridView grid = cbx.EditingControlDataGridView;
-                //DataGridViewComboBoxCell cboCol = (DataGridViewComboBoxCell)grid[1, e.RowIndex];
-                //cboCol.Value = x;
-                //DataGridViewComboBoxEditingControl cbx = sender as DataGridViewComboBoxEditingControl;
-
-                //dgvEmbarcacionesPerm.Rows[e.RowIndex].Cells[1]. = x;
-            }
-        }
-
-        private void dgvEmbarcacionesPerm_DataError(object sender, DataGridViewDataErrorEventArgs e)
-        {
-        }
     }
 }
