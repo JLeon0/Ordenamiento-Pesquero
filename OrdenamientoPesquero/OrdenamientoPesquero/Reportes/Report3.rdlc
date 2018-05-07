@@ -9,16 +9,13 @@
               <Width>1.84295cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>7.27791cm</Width>
+              <Width>6.93395cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>4.30264cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.45149cm</Width>
-            </TablixColumn>
-            <TablixColumn>
-              <Width>4.70045cm</Width>
+              <Width>4.80188cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.9542cm</Width>
@@ -37,7 +34,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>CONDÍGO</Value>
+                              <Value>CODÍGO</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -120,51 +117,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="Textbox7">
+                    <Textbox Name="Textbox2">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>TELEFONO</Value>
+                              <Value>EMBARCACION</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>Textbox7</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="Textbox9">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>LUGAR DE NACIMIENTO</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>Textbox9</rd:DefaultName>
+                      <rd:DefaultName>Textbox2</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -187,7 +154,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>EMBARCACION</Value>
+                              <Value>MATRICULA</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -305,51 +272,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="TELEFONO">
+                    <Textbox Name="NOMBREEMBARCACION">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!TELEFONO.Value</Value>
+                              <Value>=Fields!NOMBREEMBARCACION.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>TELEFONO</rd:DefaultName>
-                      <Style>
-                        <Border>
-                          <Color>LightGrey</Color>
-                          <Style>Solid</Style>
-                        </Border>
-                        <PaddingLeft>2pt</PaddingLeft>
-                        <PaddingRight>2pt</PaddingRight>
-                        <PaddingTop>2pt</PaddingTop>
-                        <PaddingBottom>2pt</PaddingBottom>
-                      </Style>
-                    </Textbox>
-                  </CellContents>
-                </TablixCell>
-                <TablixCell>
-                  <CellContents>
-                    <Textbox Name="LUGAR_NACIMIENTO">
-                      <CanGrow>true</CanGrow>
-                      <KeepTogether>true</KeepTogether>
-                      <Paragraphs>
-                        <Paragraph>
-                          <TextRuns>
-                            <TextRun>
-                              <Value>=Fields!LUGAR_NACIMIENTO.Value</Value>
-                              <Style />
-                            </TextRun>
-                          </TextRuns>
-                          <Style />
-                        </Paragraph>
-                      </Paragraphs>
-                      <rd:DefaultName>LUGAR_NACIMIENTO</rd:DefaultName>
+                      <rd:DefaultName>NOMBREEMBARCACION</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -404,7 +341,6 @@
             <TablixMember />
             <TablixMember />
             <TablixMember />
-            <TablixMember />
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -418,10 +354,10 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>pescadores</DataSetName>
-        <Top>0.65828cm</Top>
-        <Left>1.92828cm</Left>
+        <Top>1.87536cm</Top>
+        <Left>5.29575cm</Left>
         <Height>3.6077cm</Height>
-        <Width>23.52965cm</Width>
+        <Width>20.83562cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -551,12 +487,8 @@
           <DataField>CURP</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="TELEFONO">
-          <DataField>TELEFONO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="LUGAR_NACIMIENTO">
-          <DataField>LUGAR_NACIMIENTO</DataField>
+        <Field Name="NOMBREEMBARCACION">
+          <DataField>NOMBREEMBARCACION</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="EMBARCACION">
