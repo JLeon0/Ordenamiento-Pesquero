@@ -12,6 +12,15 @@ namespace Logica
     public class Procedimientos
     {
         Conexion c = new Conexion();
+        public void Cargar(string path)
+        {
+            c.cargar(path);
+        }
+        public void Generar()
+        {
+            c.con.Close();
+            c.Generer_respaldo();
+        }
 
         #region UnidadEconomica
         public int Registrar_Unidad(Unidad_Economica UE)

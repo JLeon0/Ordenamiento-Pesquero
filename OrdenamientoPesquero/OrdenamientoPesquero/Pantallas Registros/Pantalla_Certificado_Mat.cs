@@ -28,6 +28,7 @@ namespace OrdenamientoPesquero
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             limpiarcertmat();
             dt = proc.ObtenerCertMatrXUnidad(RNPA);
             int i = dt.Rows.Count;
@@ -50,6 +51,7 @@ namespace OrdenamientoPesquero
                 }
                 i--;
             }
+            this.Cursor = Cursors.Default;
         }
         public int AccionesCertificado(bool Registro)
         {
@@ -112,6 +114,11 @@ namespace OrdenamientoPesquero
             MatriculaCertMat.DisplayMember = "MATRICULA";
             MatriculaCertMat.ValueMember = "MATRICULA";
             MatriculaCertMat.Text = "";
+        }
+
+        private void limpiar_Click(object sender, EventArgs e)
+        {
+            limpiarcertmat();
         }
     }
 }

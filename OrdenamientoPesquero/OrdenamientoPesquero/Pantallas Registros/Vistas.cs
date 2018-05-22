@@ -28,7 +28,10 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         private void Vistas_Load(object sender, EventArgs e)
         {
             ReportDataSource datos = new ReportDataSource();
-
+            if (unidad=="")
+            {
+                unidad = rnpa;
+            }
             switch (tip)
             {
                 case 1:

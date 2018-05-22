@@ -158,8 +158,43 @@ namespace OrdenamientoPesquero
 
         private void pictureBox12_Click(object sender, EventArgs e)
         {
-            LlenarCampos();
-            Resumenes(cbRNPA.Text);
+            this.Cursor = Cursors.WaitCursor;
+            if (existe(cbRNPA.Text))
+            {
+                LlenarCampos();
+                Resumenes(cbRNPA.Text);
+                button1.Enabled = true;
+                button2.Enabled = true;
+                button3.Enabled = true;
+            }
+            else
+            {
+                limpiartodo();
+                button1.Enabled = false;
+                button2.Enabled = false;
+                button3.Enabled = false;
+            }
+            this.Cursor = Cursors.Default;
+        }
+        public void limpiartodo()
+        {
+            foreach (TextBox item in gbOrgPes.Controls.OfType<TextBox>())
+            {
+                item.Text = "";
+            }
+            foreach (MaskedTextBox item in gbOrgPes.Controls.OfType<MaskedTextBox>())
+            {
+                item.Text = "";
+            }
+            foreach (ComboBox item in gbOrgPes.Controls.OfType<ComboBox>())
+            {
+                item.Text = "";
+            }
+            TotalEsfuerzos.Text = "0";
+            TotalPermisos.Text = "0";
+            TotalSocios.Text = "0";
+            DataResumen.RowCount = 0;
+            NombreResumen.Text = "0";
         }
         private void BuscarNombreOrg_Click(object sender, EventArgs e)
         {
@@ -419,6 +454,24 @@ namespace OrdenamientoPesquero
                 txtLocalidad.ValueMember = "NombreL";
                 txtLocalidad.Text = "Seleccione un Municipio";
             }
+        }
+
+        private void limpiar_Click(object sender, EventArgs e)
+        {
+            limpiartodo();
+        }
+
+        private void generarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            proc.Generar();
+        }
+
+        private void cargarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.ShowDialog();
+            string direccion = ofd.FileName;
+            proc.Cargar(direccion);
         }
     }
 }

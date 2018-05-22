@@ -38,6 +38,7 @@ namespace OrdenamientoPesquero
             CargarMunicipios();
             limpiarpescador();
             cargando = false;
+            Unid.Text = NombreUnidad;
         }
 
         private void CargarMunicipios()
@@ -196,6 +197,7 @@ namespace OrdenamientoPesquero
             {
                 item.Text = "";
             }
+            MatriculaPesc.Text = "";
         }
 
         private void CURPPesc_TextChanged(object sender, EventArgs e)
@@ -308,6 +310,7 @@ namespace OrdenamientoPesquero
 
         private void CURPPesc_SelectedValueChanged(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             string c = CURPPesc.Text;
             dt = proc.Obtener_Pescador(CURPPesc.Text);
             limpiarpescador();
@@ -356,6 +359,7 @@ namespace OrdenamientoPesquero
                 }
             }
             CURPPesc.Text = c;
+            this.Cursor = Cursors.Default;
         }
 
         private void MunicipioPesc_SelectedIndexChanged(object sender, EventArgs e)
@@ -368,6 +372,11 @@ namespace OrdenamientoPesquero
                 LocalidadPesc.ValueMember = "NombreL";
                 LocalidadPesc.Text = "Seleccione un Municipio";
             }
+        }
+
+        private void limpiar_Click(object sender, EventArgs e)
+        {
+            limpiarpescador();
         }
 
         private void Ver_Click(object sender, EventArgs e)

@@ -33,6 +33,8 @@ namespace OrdenamientoPesquero
         DataTable dt = null;
         private void Pantalla_Regitro_permiso_Load(object sender, EventArgs e)
         {
+            CargarRNPA();
+            Unid.Text = uni;
             dt = proc.ObtenerCertMatrXUnidad(Rnpa);
             for (int i = 0; i < dt.Rows.Count; i++)
             {
@@ -40,7 +42,15 @@ namespace OrdenamientoPesquero
                 Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
             }
         }
-
+        private void CargarRNPA()
+        {
+            string a = nPer.Text;
+            dt = proc.ObtenerNoPermisos(Rnpa);
+            nPer.DataSource = dt;
+            nPer.DisplayMember = "NPERMISO";
+            nPer.ValueMember = "NPERMISO";
+            nPer.Text = a;
+        }
         private void pictureBox13_Click(object sender, EventArgs e)
         {
 
@@ -66,6 +76,10 @@ namespace OrdenamientoPesquero
             {
                 item.Text = "";
             }
+            foreach (TextBox item in groupBox3.Controls.OfType<TextBox>())
+            {
+                item.Text = "";
+            }
             foreach (MaskedTextBox item in this.Controls.OfType<MaskedTextBox>())
             {
                 item.Text = "";
@@ -75,6 +89,10 @@ namespace OrdenamientoPesquero
                 item.RowCount = 0;
             }
             foreach (ComboBox item in this.Controls.OfType<ComboBox>())
+            {
+                item.Text = "";
+            }
+            foreach (ComboBox item in groupBox3.Controls.OfType<ComboBox>())
             {
                 item.Text = "";
             }
@@ -114,10 +132,13 @@ namespace OrdenamientoPesquero
         }
         private void pictureBox13_Click_1(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             if (nPer.Text != "")
             {
-                dt = proc.ObtenerPermiso(Convert.ToInt32(nPer.Text));
+                string per = nPer.Text;
+                dt = proc.ObtenerPermiso(Convert.ToInt32(per));
                 limpiarpermiso();
+                nPer.Text = per;
                 if (dt.Rows.Count != 0)
                 {
                     FolioPer.Text = dt.Rows[0]["FOLIO"].ToString();
@@ -128,9 +149,9 @@ namespace OrdenamientoPesquero
                     ZonaPescaPerm.Text = dt.Rows[0]["ZONAPESCA"].ToString();
                     SitiosDesemPer.Text = dt.Rows[0]["SITIOSDESEMBARQUE"].ToString();
                     ObservacionesPem.Text = dt.Rows[0]["OBSERVACIONES"].ToString();
-                    dt = proc.NumeroEmbarcaciones(Convert.ToInt32(nPer.Text));
+                    dt = proc.NumeroEmbarcaciones(Convert.ToInt32(per));
                     numericUpDown1.Value = dt.Rows.Count;
-                    dt = proc.EmbarcacionesxPermiso(Convert.ToInt32(nPer.Text));
+                    dt = proc.EmbarcacionesxPermiso(Convert.ToInt32(per));
                     dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
@@ -143,7 +164,7 @@ namespace OrdenamientoPesquero
                         dgvEmbarcacionesPerm[3, i].Value = dt.Rows[i]["MOTORHP"].ToString();
 
                     }
-                    dt = proc.EquiposxPermiso(Convert.ToInt32(nPer.Text));
+                    dt = proc.EquiposxPermiso(Convert.ToInt32(per));
                     numericUpDown2.Value = dt.Rows.Count;
                     dgvEquiposPescaPerm.RowCount = dt.Rows.Count;
                     for (int i = 0; i < dt.Rows.Count; i++)
@@ -156,6 +177,7 @@ namespace OrdenamientoPesquero
 
                 }
             }
+            this.Cursor = Cursors.Default;
         }
 
         private void Registrar_Click(object sender, EventArgs e)
@@ -263,6 +285,11 @@ namespace OrdenamientoPesquero
         {
             Vistas v = new Vistas(Rnpa, uni, 2);
             v.ShowDialog(this);
+        }
+
+        private void limpiar_Click(object sender, EventArgs e)
+        {
+            limpiarpermiso();
         }
     }
 }

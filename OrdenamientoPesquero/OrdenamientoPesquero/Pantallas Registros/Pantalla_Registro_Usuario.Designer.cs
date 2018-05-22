@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Registro_Usuario));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.LocalidadPesc = new System.Windows.Forms.ComboBox();
+            this.MunicipioPesc = new System.Windows.Forms.ComboBox();
             this.CURPPesc = new System.Windows.Forms.ComboBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -92,8 +94,9 @@
             this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
             this.RegistrarUnidad = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.MunicipioPesc = new System.Windows.Forms.ComboBox();
-            this.LocalidadPesc = new System.Windows.Forms.ComboBox();
+            this.limpiar = new System.Windows.Forms.PictureBox();
+            this.Unid = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -109,6 +112,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -123,6 +127,7 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.limpiar);
             this.groupBox7.Controls.Add(this.LocalidadPesc);
             this.groupBox7.Controls.Add(this.MunicipioPesc);
             this.groupBox7.Controls.Add(this.CURPPesc);
@@ -170,6 +175,23 @@
             this.groupBox7.TabIndex = 7;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Información General del Pescador";
+            // 
+            // LocalidadPesc
+            // 
+            this.LocalidadPesc.FormattingEnabled = true;
+            this.LocalidadPesc.Location = new System.Drawing.Point(401, 305);
+            this.LocalidadPesc.Name = "LocalidadPesc";
+            this.LocalidadPesc.Size = new System.Drawing.Size(207, 26);
+            this.LocalidadPesc.TabIndex = 114;
+            // 
+            // MunicipioPesc
+            // 
+            this.MunicipioPesc.FormattingEnabled = true;
+            this.MunicipioPesc.Location = new System.Drawing.Point(99, 308);
+            this.MunicipioPesc.Name = "MunicipioPesc";
+            this.MunicipioPesc.Size = new System.Drawing.Size(209, 26);
+            this.MunicipioPesc.TabIndex = 113;
+            this.MunicipioPesc.SelectedIndexChanged += new System.EventHandler(this.MunicipioPesc_SelectedIndexChanged);
             // 
             // CURPPesc
             // 
@@ -778,22 +800,34 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
-            // MunicipioPesc
+            // limpiar
             // 
-            this.MunicipioPesc.FormattingEnabled = true;
-            this.MunicipioPesc.Location = new System.Drawing.Point(99, 308);
-            this.MunicipioPesc.Name = "MunicipioPesc";
-            this.MunicipioPesc.Size = new System.Drawing.Size(209, 26);
-            this.MunicipioPesc.TabIndex = 113;
-            this.MunicipioPesc.SelectedIndexChanged += new System.EventHandler(this.MunicipioPesc_SelectedIndexChanged);
+            this.limpiar.BackColor = System.Drawing.Color.Black;
+            this.limpiar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ver;
+            this.limpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.limpiar.Location = new System.Drawing.Point(851, 23);
+            this.limpiar.Name = "limpiar";
+            this.limpiar.Size = new System.Drawing.Size(37, 26);
+            this.limpiar.TabIndex = 117;
+            this.limpiar.TabStop = false;
+            this.limpiar.Click += new System.EventHandler(this.limpiar_Click);
             // 
-            // LocalidadPesc
+            // Unid
             // 
-            this.LocalidadPesc.FormattingEnabled = true;
-            this.LocalidadPesc.Location = new System.Drawing.Point(401, 305);
-            this.LocalidadPesc.Name = "LocalidadPesc";
-            this.LocalidadPesc.Size = new System.Drawing.Size(207, 26);
-            this.LocalidadPesc.TabIndex = 114;
+            this.Unid.AutoSize = true;
+            this.Unid.Location = new System.Drawing.Point(214, 74);
+            this.Unid.Name = "Unid";
+            this.Unid.Size = new System.Drawing.Size(0, 13);
+            this.Unid.TabIndex = 121;
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(108, 74);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(99, 13);
+            this.label19.TabIndex = 120;
+            this.label19.Text = "Unidad economica:";
             // 
             // Pantalla_Registro_Usuario
             // 
@@ -802,6 +836,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(985, 749);
+            this.Controls.Add(this.Unid);
+            this.Controls.Add(this.label19);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.Ver);
             this.Controls.Add(this.label4);
@@ -838,6 +874,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.limpiar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -910,5 +947,8 @@
         private System.Windows.Forms.PictureBox Ver;
         private System.Windows.Forms.ComboBox LocalidadPesc;
         private System.Windows.Forms.ComboBox MunicipioPesc;
+        private System.Windows.Forms.PictureBox limpiar;
+        private System.Windows.Forms.Label Unid;
+        private System.Windows.Forms.Label label19;
     }
 }

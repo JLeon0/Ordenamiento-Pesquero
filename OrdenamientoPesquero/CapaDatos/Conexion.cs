@@ -6,6 +6,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CapaDatos;
+using System.Windows.Forms;
+using System.Configuration;
 
 namespace CapaDatos
 {
@@ -20,39 +22,96 @@ namespace CapaDatos
         public Conexion()
         {
             con = new SqlConnection(obtenertconexion());
-            con.Open();
+            //con.Open();
         }
+        public void Generer_respaldo()
+        {
+            string back = "BACKUP DATABASE[OrdPesquero] TO DISK = N'C:/Users/ERNESTOPADILLA/Desktop/resp.bak' WITH NOFORMAT, NOINIT, NAME = N'test-Completa Base de datos Copia de seguridad', SKIP,NOREWIND, NOUNLOAD,  STATS = 10";
+            try
+            {
+                SqlCommand cmd = new SqlCommand(back, con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("El backup fue realizado exitosamente");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+        public void cargar(string archivo)
+        {
+            //con.ChangeDatabase("master");
+            //con.Close();
+            string sBackup = " RESTORE DATABASE OrdPesquero2" +
+                             " FROM DISK = '" + archivo + "'" +
+                             " WITH REPLACE";
 
+            SqlConnectionStringBuilder csb = new SqlConnectionStringBuilder();
+            csb.DataSource = ".";
+            // Es mejor abrir la conexión con la base Master
+            csb.InitialCatalog = "master";
+            csb.IntegratedSecurity = true;
+            //csb.ConnectTimeout = 480; // el predeterminado es 15
 
+            using (SqlConnection cn = new SqlConnection(csb.ConnectionString))
+            {
+                try
+                {
+                    cn.Open();
+
+                    SqlCommand cmdBackUp = new SqlCommand(sBackup, cn);
+                    cmdBackUp.ExecuteNonQuery();
+                    MessageBox.Show("Se ha restaurado la copia de la base de datos.",
+                                    "Restaurar base de datos",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+
+                    cn.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message,
+                                    "Error al restaurar la base de datos",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                }
+            }
+        }
         //Ejecutar Procedimiento
         public int Ejecutar(string Proc, string[] Parametros, params Object[] DatosParametro)
         {
             SqlCommand cmd = new SqlCommand();
             Conexion conexion = new Conexion();
-            cmd.Connection = con;
-            cmd.CommandText = Proc;
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            if (Proc.Length != 0 && Parametros.Length == DatosParametro.Length)
+            using (SqlConnection cn = new SqlConnection(obtenertconexion()))
             {
-                int i = 0;
-                foreach (string parametro in Parametros)
-                    cmd.Parameters.AddWithValue(parametro, DatosParametro[i++]);
-                try
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.CommandText = Proc;
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                if (Proc.Length != 0 && Parametros.Length == DatosParametro.Length)
                 {
-                    return cmd.ExecuteNonQuery();
+                    int i = 0;
+                    foreach (string parametro in Parametros)
+                        cmd.Parameters.AddWithValue(parametro, DatosParametro[i++]);
                     try
                     {
-                        this.con.Close();
+                        return cmd.ExecuteNonQuery();
+                        try
+                        {
+                            cn.Close();
+                        }
+                        catch { }
                     }
-                    catch { }
+                    catch (Exception ms)
+                    {
+                        cn.Close();
+                        return 0;
+                    }
                 }
-                catch (Exception ms)
-                {
-                    return 0;
-                }
+                cn.Close();
+                return 0;
             }
-            return 0;
         }
 
         public DataTable getDatosTabla(string Proc, string[] Parametros, params Object[] DatosParametro)
@@ -60,26 +119,32 @@ namespace CapaDatos
             DataTable dt = new DataTable();
             SqlCommand cmd = new SqlCommand();
             Conexion conexion = new Conexion();
-            cmd.Connection = con;
-            cmd.CommandText = Proc;
-            cmd.CommandType = CommandType.StoredProcedure;
-
-            if (Proc.Length != 0 && Parametros.Length == DatosParametro.Length)
+            using (SqlConnection cn = new SqlConnection(obtenertconexion()))
             {
-                int i = 0;
-                foreach (string parametro in Parametros)
-                    cmd.Parameters.AddWithValue(parametro, DatosParametro[i++]);
-                try
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.CommandText = Proc;
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                if (Proc.Length != 0 && Parametros.Length == DatosParametro.Length)
                 {
-                    SqlDataReader dr = null;
-                    dr = cmd.ExecuteReader();
-                    dt.Load(dr);
-                    return dt;
+                    int i = 0;
+                    foreach (string parametro in Parametros)
+                        cmd.Parameters.AddWithValue(parametro, DatosParametro[i++]);
+                    try
+                    {
+                        SqlDataReader dr = null;
+                        dr = cmd.ExecuteReader();
+                        dt.Load(dr);
+                        cn.Close();
+                        return dt;
+                    }
+                    catch (Exception ms)
+                    { }
                 }
-                catch (Exception ms)
-                { }
+                cn.Close();
+                return dt;
             }
-            return dt;
         }
     }
 }

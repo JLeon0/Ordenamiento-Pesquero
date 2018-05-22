@@ -354,8 +354,8 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>pescadores</DataSetName>
-        <Top>1.87536cm</Top>
-        <Left>5.29575cm</Left>
+        <Top>0.44661cm</Top>
+        <Left>1.33707cm</Left>
         <Height>3.6077cm</Height>
         <Width>20.83562cm</Width>
         <Style>
@@ -380,8 +380,7 @@
           <Source>Embedded</Source>
           <Value>sepadaescudologosiglas_450x851</Value>
           <Sizing>Fit</Sizing>
-          <Top>0.51965cm</Top>
-          <Left>2.93463cm</Left>
+          <Left>0.26234cm</Left>
           <Height>1.84396cm</Height>
           <Width>19.5691cm</Width>
           <Style>
@@ -427,8 +426,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox13</rd:DefaultName>
-          <Top>0.83715cm</Top>
-          <Left>4.89161cm</Left>
+          <Top>0.3175cm</Top>
+          <Left>3.18002cm</Left>
           <Height>1.52646cm</Height>
           <Width>9.525cm</Width>
           <ZIndex>1</ZIndex>
@@ -449,8 +448,8 @@
         </Border>
       </Style>
     </PageHeader>
-    <PageHeight>21.59cm</PageHeight>
-    <PageWidth>27.94cm</PageWidth>
+    <PageHeight>31cm</PageHeight>
+    <PageWidth>43cm</PageWidth>
     <LeftMargin>0cm</LeftMargin>
     <RightMargin>0cm</RightMargin>
     <TopMargin>0cm</TopMargin>

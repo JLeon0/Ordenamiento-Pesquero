@@ -26,8 +26,7 @@ namespace CapaDatos.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=192.168.1.97, 1433;Initial Catalog=OrdPesquero; user id=usuario; pass" +
-            "word=usuario;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=localhost ;Initial Catalog=OrdPesquero; Integrated Security=True;")]
         public string OrdPesqueroConnectionString {
             get {
                 return ((string)(this["OrdPesqueroConnectionString"]));
