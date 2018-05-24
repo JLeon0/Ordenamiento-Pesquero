@@ -35,7 +35,6 @@ namespace OrdenamientoPesquero
             InitializeComponent();
             this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
             this.Width = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width);
-
         }
 
         private void Pantalla_Registro_UnidadEconomica_Load(object sender, EventArgs e)
@@ -139,21 +138,27 @@ namespace OrdenamientoPesquero
         {
             string a = cbRNPA.Text;
             dt = proc.Obtener_todas_unidades("");
-            cbRNPA.DataSource = dt;
-            cbRNPA.DisplayMember = "RNPA";
-            cbRNPA.ValueMember = "RNPA";            
-            cbRNPA.Text = a;
+            if (dt.Rows.Count != 0)
+            {
+                cbRNPA.DataSource = dt;
+                cbRNPA.DisplayMember = "RNPA";
+                cbRNPA.ValueMember = "RNPA";
+                cbRNPA.Text = a;
+            }
             txtNombre.Focus();
         }
 
         private void CargarMunicipios()
         {
             dt = proc.ObtenerMunicipios();
-            txtMunicipio.DataSource = dt;
-            txtMunicipio.DisplayMember = "NombreM";
-            txtMunicipio.ValueMember = "NombreM";
-            txtMunicipio.Text = "Seleccione un Municipio";
-            Municipios = dt.Rows.OfType<DataRow>().Select(k => k[0].ToString()).ToArray();
+            if (dt.Rows.Count != 0)
+            {
+                txtMunicipio.DataSource = dt;
+                txtMunicipio.DisplayMember = "NombreM";
+                txtMunicipio.ValueMember = "NombreM";
+                txtMunicipio.Text = "Seleccione un Municipio";
+                Municipios = dt.Rows.OfType<DataRow>().Select(k => k[0].ToString()).ToArray();
+            }
         }
 
         private void pictureBox12_Click(object sender, EventArgs e)
@@ -448,11 +453,11 @@ namespace OrdenamientoPesquero
         {
             if (!cargando)
             {
-                dt = proc.ObtenerLocalidades(Municipios[txtMunicipio.SelectedIndex]);
-                txtLocalidad.DataSource = dt;
-                txtLocalidad.DisplayMember = "NombreL";
-                txtLocalidad.ValueMember = "NombreL";
-                txtLocalidad.Text = "Seleccione un Municipio";
+                //dt = proc.ObtenerLocalidades(Municipios[txtMunicipio.SelectedIndex]);
+                //txtLocalidad.DataSource = dt;
+                //txtLocalidad.DisplayMember = "NombreL";
+                //txtLocalidad.ValueMember = "NombreL";
+                //txtLocalidad.Text = "Seleccione un Municipio";
             }
         }
 
@@ -471,7 +476,24 @@ namespace OrdenamientoPesquero
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.ShowDialog();
             string direccion = ofd.FileName;
-            proc.Cargar(direccion);
+            if (proc.Cargar(direccion))
+            {
+                this.OnLoad(e);
+            }
+        }
+
+        private void servidorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            proc.bdd = "OrdPesquero";
+            proc.cambiarbd(proc.bdd);
+            this.OnLoad(e);
+        }
+
+        private void cambiosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            proc.bdd = "OrdPesquero2";
+            proc.cambiarbd(proc.bdd);
+            this.OnLoad(e);
         }
     }
 }

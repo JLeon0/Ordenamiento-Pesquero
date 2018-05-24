@@ -14,22 +14,24 @@ namespace CapaDatos
     public class Conexion
     {
         public SqlConnection con;
-
+        public string bdda;
         public static string obtenertconexion()
         {
             return Properties.Settings.Default.OrdPesqueroConnectionString;
         }
-        public Conexion()
-        {
+        public Conexion(string bd) { 
+            bdda=bd;
             con = new SqlConnection(obtenertconexion());
+            //con.ChangeDatabase(bdda);
             //con.Open();
         }
         public void Generer_respaldo()
         {
-            string back = "BACKUP DATABASE[OrdPesquero] TO DISK = N'C:/Users/ERNESTOPADILLA/Desktop/resp.bak' WITH NOFORMAT, NOINIT, NAME = N'test-Completa Base de datos Copia de seguridad', SKIP,NOREWIND, NOUNLOAD,  STATS = 10";
+            string back = "BACKUP DATABASE[OrdPesquero] TO DISK = N'C:/wamp64/resp.bak' WITH NOFORMAT, NOINIT, NAME = N'test-Completa Base de datos Copia de seguridad', SKIP,NOREWIND, NOUNLOAD,  STATS = 10";
             try
             {
                 SqlCommand cmd = new SqlCommand(back, con);
+                con.Open();
                 cmd.ExecuteNonQuery();
                 MessageBox.Show("El backup fue realizado exitosamente");
             }
@@ -38,11 +40,11 @@ namespace CapaDatos
                 MessageBox.Show(ex.ToString());
             }
         }
-        public void cargar(string archivo)
+        public bool cargar(string archivo)
         {
             //con.ChangeDatabase("master");
             //con.Close();
-            string sBackup = " RESTORE DATABASE OrdPesquero2" +
+            string sBackup = " RESTORE DATABASE OrdPesquero" +
                              " FROM DISK = '" + archivo + "'" +
                              " WITH REPLACE";
 
@@ -67,6 +69,7 @@ namespace CapaDatos
                                     MessageBoxIcon.Information);
 
                     cn.Close();
+                    return true;
                 }
                 catch (Exception ex)
                 {
@@ -74,6 +77,7 @@ namespace CapaDatos
                                     "Error al restaurar la base de datos",
                                     MessageBoxButtons.OK,
                                     MessageBoxIcon.Error);
+                    return false;
                 }
             }
         }
@@ -81,10 +85,10 @@ namespace CapaDatos
         public int Ejecutar(string Proc, string[] Parametros, params Object[] DatosParametro)
         {
             SqlCommand cmd = new SqlCommand();
-            Conexion conexion = new Conexion();
             using (SqlConnection cn = new SqlConnection(obtenertconexion()))
             {
                 cn.Open();
+                cn.ChangeDatabase(bdda);
                 cmd.Connection = cn;
                 cmd.CommandText = Proc;
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -118,32 +122,38 @@ namespace CapaDatos
         {
             DataTable dt = new DataTable();
             SqlCommand cmd = new SqlCommand();
-            Conexion conexion = new Conexion();
             using (SqlConnection cn = new SqlConnection(obtenertconexion()))
             {
-                cn.Open();
-                cmd.Connection = cn;
-                cmd.CommandText = Proc;
-                cmd.CommandType = CommandType.StoredProcedure;
-
-                if (Proc.Length != 0 && Parametros.Length == DatosParametro.Length)
+                try
                 {
-                    int i = 0;
-                    foreach (string parametro in Parametros)
-                        cmd.Parameters.AddWithValue(parametro, DatosParametro[i++]);
-                    try
+                    cn.Open();
+                    cn.ChangeDatabase(bdda);
+                    cmd.Connection = cn;
+                    cmd.CommandText = Proc;
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    if (Proc.Length != 0 && Parametros.Length == DatosParametro.Length)
                     {
-                        SqlDataReader dr = null;
-                        dr = cmd.ExecuteReader();
-                        dt.Load(dr);
-                        cn.Close();
-                        return dt;
+                        int i = 0;
+                        foreach (string parametro in Parametros)
+                            cmd.Parameters.AddWithValue(parametro, DatosParametro[i++]);
+                        try
+                        {
+                            SqlDataReader dr = null;
+                            dr = cmd.ExecuteReader();
+                            dt.Load(dr);
+                            cn.Close();
+                            return dt;
+                        }
+                        catch (Exception ms)
+                        { }
                     }
-                    catch (Exception ms)
-                    { }
+                    cn.Close();
+                    return dt;
+                }catch(Exception s)
+                {
+                    return dt;
                 }
-                cn.Close();
-                return dt;
             }
         }
     }

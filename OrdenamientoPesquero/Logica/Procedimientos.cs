@@ -11,14 +11,25 @@ namespace Logica
 {
     public class Procedimientos
     {
-        Conexion c = new Conexion();
-        public void Cargar(string path)
+        public string bdd="OrdPesquero";
+        Conexion c;
+        public Procedimientos()
         {
-            c.cargar(path);
+            c = new Conexion(bdd);
+            c.bdda = bdd;
+
+        }
+        public void cambiarbd(string b)
+        {
+            c.bdda = bdd;
+        }
+        public bool Cargar(string path)
+        {
+            return c.cargar(path);
         }
         public void Generar()
         {
-            c.con.Close();
+            //c.con.Close();
             c.Generer_respaldo();
         }
 
