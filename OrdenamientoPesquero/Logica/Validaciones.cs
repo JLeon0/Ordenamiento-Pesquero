@@ -53,7 +53,7 @@ namespace Logica
             {
                 MessageBox.Show(msg, "Error en los datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            return estabien;
+            return true;
         }
         public bool validarrfc(string rfc)
         {

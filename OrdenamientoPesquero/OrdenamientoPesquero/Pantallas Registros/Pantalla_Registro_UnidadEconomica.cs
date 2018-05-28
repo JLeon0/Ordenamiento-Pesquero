@@ -27,6 +27,7 @@ namespace OrdenamientoPesquero
         Validaciones val = new Validaciones();        Procedimientos proc = new Procedimientos();
         DataSet ds = new DataSet();
         DataTable dt = null;
+        DataTable NOMBRES = null;
         string[,] unidad = { { "0", "RFC" }, { "0", "Codigo Postal" }, { "0", "Correo Electronico" }, { "0", "Telefono de la Cooperativa" },{"0","RNPA" } };
         string[,] pescador = { { "0", "CURP" }, { "0", "RFC" }, { "0", "Codigo postal" }, { "0", "Telefono" } , { "0","Correo Electronico"} };
         string[] Municipios;
@@ -88,7 +89,7 @@ namespace OrdenamientoPesquero
         {
             if (validaralgo(unidad))
             {
-                if (cargado)
+                if (!cargado)
                 {
                     if (radioButton0.Checked)
                     {
@@ -101,8 +102,10 @@ namespace OrdenamientoPesquero
                         exito = proc.Actualizar_Unidad(ue);
                     }
                     val.Exito(exito);
+
                 }
             }
+            NOMBRES = proc.Obtener_todos_los_nombres();
         }
         #endregion
 
@@ -145,7 +148,14 @@ namespace OrdenamientoPesquero
                 cbRNPA.ValueMember = "RNPA";
                 cbRNPA.Text = a;
             }
-            txtNombre.Focus();
+            NOMBRES = proc.Obtener_todos_los_nombres();
+            if(dt.Rows.Count != 0)
+            {
+                txtNombre.DataSource = NOMBRES;
+                txtNombre.DisplayMember = "Nombre";
+                txtNombre.ValueMember = "Nombre";
+            }
+            cbRNPA.Focus();
         }
 
         private void CargarMunicipios()
@@ -203,7 +213,13 @@ namespace OrdenamientoPesquero
         }
         private void BuscarNombreOrg_Click(object sender, EventArgs e)
         {
-
+            this.Cursor = Cursors.WaitCursor;
+            LlenarCamposNombre();
+            Resumenes(cbRNPA.Text);
+            button1.Enabled = true;
+            button2.Enabled = true;
+            button3.Enabled = true;
+            this.Cursor = Cursors.Default;
         }
         
 
@@ -235,7 +251,27 @@ namespace OrdenamientoPesquero
                 { radioButton0.Checked = true; }
                 else { radioButton1.Checked = true; }
             }
-        }     
+        }
+
+        private void LlenarCamposNombre()
+        {
+            int tipo = 0;
+            DataRow fila = NOMBRES.Rows[txtNombre.SelectedIndex];
+
+            cbRNPA.Text = fila["RNPA"].ToString();
+            txtRFC.Text = fila["RFC"].ToString();
+            txtCalleNum.Text = fila["CALLEYNUM"].ToString();
+            txtColonia.Text = fila["COLONIA"].ToString();
+            txtLocalidad.Text = fila["LOCALIDAD"].ToString();
+            txtMunicipio.Text = fila["MUNICIO"].ToString();
+            mtbCP.Text = fila["CODIGO_POSTAL"].ToString();
+            txtCorreo.Text = fila["CORREO"].ToString();
+            mtbTelefono.Text = fila["TELEFONO"].ToString();
+            //tipo = Convert.ToInt32(fila["TIPO"]);          
+
+            if (tipo == 0)
+            { radioButton0.Checked = true; }
+        }
         #endregion
 
 
@@ -286,7 +322,7 @@ namespace OrdenamientoPesquero
             {
                 MessageBox.Show(msg,"Error en los datos",MessageBoxButtons.OK,MessageBoxIcon.Error);
             }
-            return estabien;
+            return true;
         }
 
 
@@ -443,21 +479,16 @@ namespace OrdenamientoPesquero
                 vista.ShowDialog();
             }
         }
-
-        private void BuscarNombreOrg_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
+              
         private void txtMunicipio_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!cargando)
             {
-                //dt = proc.ObtenerLocalidades(Municipios[txtMunicipio.SelectedIndex]);
-                //txtLocalidad.DataSource = dt;
-                //txtLocalidad.DisplayMember = "NombreL";
-                //txtLocalidad.ValueMember = "NombreL";
-                //txtLocalidad.Text = "Seleccione un Municipio";
+                dt = proc.ObtenerLocalidades(Municipios[txtMunicipio.SelectedIndex]);
+                txtLocalidad.DataSource = dt;
+                txtLocalidad.DisplayMember = "NombreL";
+                txtLocalidad.ValueMember = "NombreL";
+                txtLocalidad.Text = "Seleccione una Localidad";
             }
         }
 

@@ -121,7 +121,7 @@ namespace Logica
             return c.getDatosTabla("ObtenerDatos", Parametros, RNPA);
         }
         public DataTable Obtener_todos_los_nombres()
-        {
+         {
             string[] Parametros = {  };
             return c.getDatosTabla("ObtenerNombres", Parametros);
         }
