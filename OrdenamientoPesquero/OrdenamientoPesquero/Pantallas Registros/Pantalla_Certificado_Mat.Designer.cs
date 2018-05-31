@@ -70,7 +70,7 @@
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.limpiar = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.NChipCertMat = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
@@ -460,14 +460,14 @@
             this.label5.TabIndex = 157;
             this.label5.Text = "Número de Chip";
             // 
-            // maskedTextBox1
+            // NChipCertMat
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(248, 182);
-            this.maskedTextBox1.Mask = "9999999999999999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(139, 22);
-            this.maskedTextBox1.TabIndex = 3;
-            this.maskedTextBox1.ValidatingType = typeof(int);
+            this.NChipCertMat.Location = new System.Drawing.Point(248, 182);
+            this.NChipCertMat.Mask = "9999999999999999";
+            this.NChipCertMat.Name = "NChipCertMat";
+            this.NChipCertMat.Size = new System.Drawing.Size(139, 22);
+            this.NChipCertMat.TabIndex = 3;
+            this.NChipCertMat.ValidatingType = typeof(int);
             // 
             // Pantalla_Certificado_Mat
             // 
@@ -475,7 +475,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(742, 554);
-            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.NChipCertMat);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.limpiar);
             this.Controls.Add(this.label4);
@@ -577,6 +577,6 @@
         private System.Windows.Forms.PictureBox RegistrarUnidad;
         private System.Windows.Forms.PictureBox limpiar;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox NChipCertMat;
     }
 }
