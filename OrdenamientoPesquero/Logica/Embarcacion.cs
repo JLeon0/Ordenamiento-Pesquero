@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Logica
-{ 
+{
     public class Embarcacion
     {
         public string Nombre { get; set; }
@@ -28,31 +28,34 @@ namespace Logica
         public string TONELAJE { get; set; }
         public string OBSERVACIONES { get; set; }
 
+        public string NCHIP { get; set; }
+
 
         public string SERVICIO { get; set; }
         public string TRAFICO { get; set; }
         public string NMOTORES { get; set; }
         public Embarcacion()
         {
-         Nombre="";
-         Matricula="";
-         REGISTRONUM="";
-         RNPATITULAR="";
-         AVID="";
-         FECHAEXP="";
-         FECHACHIPEADO="";
-         MARCA="";
-         HP="";
-         ESLORA="";
-         MUNICIPIO="";
-         MANGA="";
-         PUNTAL="";
-         ARQUEOBRUTO="";
-         ARQUEONETO="";
-         TONELAJE="";
-         OBSERVACIONES="";
-         RNP = "";
-    }
+            Nombre = "";
+            Matricula = "";
+            REGISTRONUM = "";
+            RNPATITULAR = "";
+            AVID = "";
+            FECHAEXP = "";
+            FECHACHIPEADO = "";
+            MARCA = "";
+            HP = "";
+            ESLORA = "";
+            MUNICIPIO = "";
+            MANGA = "";
+            PUNTAL = "";
+            ARQUEOBRUTO = "";
+            ARQUEONETO = "";
+            TONELAJE = "";
+            OBSERVACIONES = "";
+            RNP = "";
+            NCHIP = "";
+        }
         public Embarcacion(string nombre, string matricula, string hp, string marca, string municipio, string rnpa)
         {
             Nombre = nombre;
@@ -63,7 +66,7 @@ namespace Logica
             FECHAEXP = "";
             FECHACHIPEADO = "";
             MARCA = marca;
-            HP = hp; ;
+            HP = hp;
             ESLORA = "";
             MUNICIPIO = municipio;
             MANGA = "";
@@ -99,7 +102,7 @@ namespace Logica
         }
 
         public Embarcacion(string nombre, string matricula, string rnpa, string hp, string eslora, string manga, string puntal,
-            string arqueobruto, string arqueoneto, string tonelaje, string servicio, string trafico, string Nmotores)
+            string arqueobruto, string arqueoneto, string tonelaje, string servicio, string trafico, string Nmotores, string nchip)
         {
             Nombre = nombre;
             Matricula = matricula;
@@ -114,6 +117,7 @@ namespace Logica
             SERVICIO = servicio;
             TRAFICO = trafico;
             NMOTORES = Nmotores;
+            NCHIP = nchip;
         }
     }
 }
