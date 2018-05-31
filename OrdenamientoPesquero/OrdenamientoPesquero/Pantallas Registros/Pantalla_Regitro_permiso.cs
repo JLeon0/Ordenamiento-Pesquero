@@ -136,7 +136,7 @@ namespace OrdenamientoPesquero
             if (nPer.Text != "")
             {
                 string per = nPer.Text;
-                dt = proc.ObtenerPermiso(Convert.ToInt32(per));
+                dt = proc.ObtenerPermiso(per);
                 limpiarpermiso();
                 nPer.Text = per;
                 if (dt.Rows.Count != 0)
@@ -149,9 +149,9 @@ namespace OrdenamientoPesquero
                     ZonaPescaPerm.Text = dt.Rows[0]["ZONAPESCA"].ToString();
                     SitiosDesemPer.Text = dt.Rows[0]["SITIOSDESEMBARQUE"].ToString();
                     ObservacionesPem.Text = dt.Rows[0]["OBSERVACIONES"].ToString();
-                    dt = proc.NumeroEmbarcaciones(Convert.ToInt32(per));
+                    dt = proc.NumeroEmbarcaciones(per);
                     numericUpDown1.Value = dt.Rows.Count;
-                    dt = proc.EmbarcacionesxPermiso(Convert.ToInt32(per));
+                    dt = proc.EmbarcacionesxPermiso(per);
                     dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
@@ -164,7 +164,7 @@ namespace OrdenamientoPesquero
                         dgvEmbarcacionesPerm[3, i].Value = dt.Rows[i]["MOTORHP"].ToString();
 
                     }
-                    dt = proc.EquiposxPermiso(Convert.ToInt32(per));
+                    dt = proc.EquiposxPermiso(per);
                     numericUpDown2.Value = dt.Rows.Count;
                     dgvEquiposPescaPerm.RowCount = dt.Rows.Count;
                     for (int i = 0; i < dt.Rows.Count; i++)

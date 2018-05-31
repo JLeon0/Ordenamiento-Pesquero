@@ -84,22 +84,22 @@ namespace Logica
             string[] Parametros = { "@rnpa" };
             return c.getDatosTabla("NoPermisoxUnidad", Parametros, RNPA);
         }
-        public DataTable ObtenerPermiso(int nopermiso)
+        public DataTable ObtenerPermiso(string nopermiso)
         {
             string[] Parametros = { "@Nopermiso" };
             return c.getDatosTabla("PermisoxNoPermiso", Parametros, nopermiso);
         }
-        public DataTable NumeroEmbarcaciones(int nopermiso)
+        public DataTable NumeroEmbarcaciones(string nopermiso)
         {
             string[] Parametros = { "@Nopermiso" };
             return c.getDatosTabla("NumeroEmbarcacionesxPermiso", Parametros, nopermiso);
         }
-        public DataTable EmbarcacionesxPermiso(int nopermiso)
+        public DataTable EmbarcacionesxPermiso(string nopermiso)
         {
             string[] Parametros = { "@Nopermiso" };
             return c.getDatosTabla("EmbarcacionesxPermiso", Parametros, nopermiso);
         }
-        public DataTable EquiposxPermiso(int nopermiso)
+        public DataTable EquiposxPermiso(string nopermiso)
         {
             string[] Parametros = { "@numPermiso" };
             return c.getDatosTabla("EquiposxPermiso", Parametros, nopermiso);
@@ -145,14 +145,14 @@ namespace Logica
         #region Pescador
         public int Registrar_Pescador(Pescador PES)
         {
-            string[] Parametros = {"@nombre", "@appat", "@apmat", "@curp", "@rfc", "@escolaridad", "@tiposangre", "@sexo", "@lugarnacimiento", "@fechanac", "@callenum", "@colonia", "@munici", "@codpos", "@tel", "@tipo", "@ocupacion", "@cuerpo", "@matricula","@correo" };
-            return c.Ejecutar("RegistrarPescador", Parametros, PES.NOMBRE, PES.AP_PAT, PES.AP_MAT, PES.CURP, PES.RFC, PES.ESCOLARIDAD, PES.TIP_SANG, PES.SEXO, PES.LUG_NACIMI, PES.FECH_NACIMI, PES.CALLENUM, PES.COLONIA, PES.MUNICIPIO, PES.CP, PES.TEL, PES.TIPO_PESC, PES.OCP_LABORAL, PES.CUERPO_DE_AGUA, PES.MATRICULA, PES.CORREO);
+            string[] Parametros = {"@nombre", "@appat", "@apmat", "@curp", "@rfc", "@escolaridad", "@tiposangre", "@sexo", "@lugarnacimiento", "@fechanac", "@callenum", "@colonia", "@munici", "@codpos", "@tel", "@tipo", "@ocupacion", "@cuerpo", "@matricula","@correo","@localidad","@ordenado" };
+            return c.Ejecutar("RegistrarPescador", Parametros, PES.NOMBRE, PES.AP_PAT, PES.AP_MAT, PES.CURP, PES.RFC, PES.ESCOLARIDAD, PES.TIP_SANG, PES.SEXO, PES.LUG_NACIMI, PES.FECH_NACIMI, PES.CALLENUM, PES.COLONIA, PES.MUNICIPIO, PES.CP, PES.TEL, PES.TIPO_PESC, PES.OCP_LABORAL, PES.CUERPO_DE_AGUA, PES.MATRICULA, PES.CORREO,PES.LOCALIDAD, PES.ORDENADO);
 
         }
         public int Actualizar_Pescador(Pescador PES)
         {
-            string[] Parametros = {"@nombre", "@appat", "@apmat", "@curp", "@rfc", "@escolaridad", "@tiposangre", "@sexo", "@lugarnacimiento", "@fechanac", "@callenum", "@colonia", "@munici", "@codpos", "@tel", "@tipo", "@ocupacion", "@cuerpo", "@matricula", "@correo", "@localidad" };
-            return c.Ejecutar("Actualizar_pescador", Parametros, PES.NOMBRE, PES.AP_PAT, PES.AP_MAT,PES.CURP, PES.RFC, PES.ESCOLARIDAD, PES.TIP_SANG, PES.SEXO,PES.LUG_NACIMI, PES.FECH_NACIMI, PES.CALLENUM, PES.COLONIA, PES.MUNICIPIO, PES.CP, PES.TEL, PES.TIPO_PESC, PES.OCP_LABORAL, PES.CUERPO_DE_AGUA, PES.MATRICULA, PES.CORREO, PES.LOCALIDAD);
+            string[] Parametros = {"@nombre", "@appat", "@apmat", "@curp", "@rfc", "@escolaridad", "@tiposangre", "@sexo", "@lugarnacimiento", "@fechanac", "@callenum", "@colonia", "@munici", "@codpos", "@tel", "@tipo", "@ocupacion", "@cuerpo", "@matricula", "@correo", "@localidad", "@ordenado" };
+            return c.Ejecutar("Actualizar_pescador", Parametros, PES.NOMBRE, PES.AP_PAT, PES.AP_MAT,PES.CURP, PES.RFC, PES.ESCOLARIDAD, PES.TIP_SANG, PES.SEXO,PES.LUG_NACIMI, PES.FECH_NACIMI, PES.CALLENUM, PES.COLONIA, PES.MUNICIPIO, PES.CP, PES.TEL, PES.TIPO_PESC, PES.OCP_LABORAL, PES.CUERPO_DE_AGUA, PES.MATRICULA, PES.CORREO, PES.LOCALIDAD, PES.ORDENADO);
 
         }
         public int Eliminar_Pescador(String CURP)
