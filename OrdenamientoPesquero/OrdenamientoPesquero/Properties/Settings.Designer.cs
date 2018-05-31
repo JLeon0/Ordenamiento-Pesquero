@@ -26,7 +26,7 @@ namespace OrdenamientoPesquero.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("iata Source= .;Initial Catalog=OrdPesquero; user id=usuario; password=usuario;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source= .;Initial Catalog=OrdPesquero; user id=usuario; password=usuario;")]
         public string OrdPesqueroConnectionString {
             get {
                 return ((string)(this["OrdPesqueroConnectionString"]));
