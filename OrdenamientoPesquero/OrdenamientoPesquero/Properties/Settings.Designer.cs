@@ -26,7 +26,7 @@ namespace OrdenamientoPesquero.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source= .;Initial Catalog=OrdPesquero; user id=usuario; password=usuario;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=OrdPesquero;Integrated Security=true;")]
         public string OrdPesqueroConnectionString {
             get {
                 return ((string)(this["OrdPesqueroConnectionString"]));
@@ -36,7 +36,7 @@ namespace OrdenamientoPesquero.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("iata Source= .;Initial Catalog=OrdPesquero; user id=usuario; password=usuario;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=OrdPesquero;Integrated Security=true;")]
         public string OrdPesqueroConnectionString1 {
             get {
                 return ((string)(this["OrdPesqueroConnectionString1"]));

@@ -522,8 +522,8 @@ namespace OrdenamientoPesquero
 
         private void cambiosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            proc.bdd = "OrdPesquero2";
-            proc.cambiarbd(proc.bdd);
+            //proc.bdd = "OrdPesquero2";
+            //proc.cambiarbd(proc.bdd);
             this.OnLoad(e);
         }
     }
