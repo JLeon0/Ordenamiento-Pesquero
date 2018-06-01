@@ -80,6 +80,7 @@ namespace OrdenamientoPesquero
             exito = AccionesCertificado(true);
             val.Exito(exito);
             exito = 0;
+            MatriculaCertMat.Focus();
         }
 
         private void ActualizarUnidad_Click(object sender, EventArgs e)
@@ -87,6 +88,7 @@ namespace OrdenamientoPesquero
             exito = AccionesCertificado(false);
             val.Exito(exito);
             exito = 0;
+            MatriculaCertMat.Focus();
         }
 
         private void EliminarUnidad_Click(object sender, EventArgs e)
@@ -97,9 +99,9 @@ namespace OrdenamientoPesquero
                 exito = proc.Eliminar_Embarcacion(MatriculaCertMat.Text);
                 val.Exito(exito);
                 if (exito > 0)
-                { CertMatXUnidad(); limpiarcertmat(); exito = 0; }
-
+                { CertMatXUnidad(); limpiarcertmat(); exito = 0; }   
             }
+            MatriculaCertMat.Focus();
         }
 
         private void Pantalla_Certificado_Mat_Load(object sender, EventArgs e)

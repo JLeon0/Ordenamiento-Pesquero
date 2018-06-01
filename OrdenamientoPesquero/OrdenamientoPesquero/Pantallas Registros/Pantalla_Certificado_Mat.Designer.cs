@@ -85,6 +85,7 @@
             this.MatriculaCertMat.FormattingEnabled = true;
             this.MatriculaCertMat.Location = new System.Drawing.Point(248, 111);
             this.MatriculaCertMat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.MatriculaCertMat.MaxLength = 15;
             this.MatriculaCertMat.Name = "MatriculaCertMat";
             this.MatriculaCertMat.Size = new System.Drawing.Size(166, 24);
             this.MatriculaCertMat.TabIndex = 1;
@@ -127,11 +128,11 @@
             // 
             // NMotoresCertMat
             // 
-            this.NMotoresCertMat.Location = new System.Drawing.Point(209, 448);
+            this.NMotoresCertMat.Location = new System.Drawing.Point(200, 448);
             this.NMotoresCertMat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NMotoresCertMat.Name = "NMotoresCertMat";
-            this.NMotoresCertMat.Size = new System.Drawing.Size(37, 22);
-            this.NMotoresCertMat.TabIndex = 141;
+            this.NMotoresCertMat.Size = new System.Drawing.Size(46, 22);
+            this.NMotoresCertMat.TabIndex = 9;
             // 
             // TraficoCertMat
             // 
@@ -139,7 +140,7 @@
             this.TraficoCertMat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TraficoCertMat.Name = "TraficoCertMat";
             this.TraficoCertMat.Size = new System.Drawing.Size(101, 22);
-            this.TraficoCertMat.TabIndex = 9;
+            this.TraficoCertMat.TabIndex = 10;
             // 
             // label66
             // 
@@ -156,7 +157,7 @@
             this.PotenciaMotorCertMat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PotenciaMotorCertMat.Name = "PotenciaMotorCertMat";
             this.PotenciaMotorCertMat.Size = new System.Drawing.Size(43, 22);
-            this.PotenciaMotorCertMat.TabIndex = 13;
+            this.PotenciaMotorCertMat.TabIndex = 14;
             // 
             // PuntalCertMat
             // 
@@ -164,7 +165,7 @@
             this.PuntalCertMat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PuntalCertMat.Name = "PuntalCertMat";
             this.PuntalCertMat.Size = new System.Drawing.Size(101, 22);
-            this.PuntalCertMat.TabIndex = 12;
+            this.PuntalCertMat.TabIndex = 13;
             // 
             // label74
             // 
@@ -216,7 +217,7 @@
             this.MangaCertMat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MangaCertMat.Name = "MangaCertMat";
             this.MangaCertMat.Size = new System.Drawing.Size(101, 22);
-            this.MangaCertMat.TabIndex = 11;
+            this.MangaCertMat.TabIndex = 12;
             // 
             // ArqNetoCertMat
             // 
@@ -250,7 +251,7 @@
             this.EsloraCertMat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.EsloraCertMat.Name = "EsloraCertMat";
             this.EsloraCertMat.Size = new System.Drawing.Size(101, 22);
-            this.EsloraCertMat.TabIndex = 10;
+            this.EsloraCertMat.TabIndex = 11;
             // 
             // label70
             // 
@@ -320,6 +321,7 @@
             // 
             this.NombreEmbCerMat.Location = new System.Drawing.Point(248, 148);
             this.NombreEmbCerMat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.NombreEmbCerMat.MaxLength = 40;
             this.NombreEmbCerMat.Name = "NombreEmbCerMat";
             this.NombreEmbCerMat.Size = new System.Drawing.Size(417, 22);
             this.NombreEmbCerMat.TabIndex = 2;
@@ -463,7 +465,7 @@
             // NChipCertMat
             // 
             this.NChipCertMat.Location = new System.Drawing.Point(248, 182);
-            this.NChipCertMat.Mask = "9999999999999999";
+            this.NChipCertMat.Mask = "999*999*999";
             this.NChipCertMat.Name = "NChipCertMat";
             this.NChipCertMat.Size = new System.Drawing.Size(139, 22);
             this.NChipCertMat.TabIndex = 3;
