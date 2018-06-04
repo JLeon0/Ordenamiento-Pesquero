@@ -164,6 +164,16 @@ namespace OrdenamientoPesquero
                     ZonaPescaPerm.Text = dt.Rows[0]["ZONAPESCA"].ToString();
                     SitiosDesemPer.Text = dt.Rows[0]["SITIOSDESEMBARQUE"].ToString();
                     ObservacionesPem.Text = dt.Rows[0]["OBSERVACIONES"].ToString();
+                    dt = proc.EquiposxPermiso(per);
+                    numericUpDown2.Value = dt.Rows.Count;
+                    dgvEquiposPescaPerm.RowCount = dt.Rows.Count;
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        Tipo.Items.Add(dt.Rows[i]["TIPO"].ToString());
+                        dgvEquiposPescaPerm[0, i].Value = dt.Rows[i]["CANTIDAD"].ToString();
+                        dgvEquiposPescaPerm[1, i].Value = dt.Rows[i]["TIPO"].ToString();
+                        dgvEquiposPescaPerm[2, i].Value = dt.Rows[i]["CARACTERISTICAS"].ToString();
+                    }
                     dt = proc.NumeroEmbarcaciones(per);
                     numericUpDown1.Value = dt.Rows.Count;
                     dt = proc.EmbarcacionesxPermiso(per);
@@ -177,16 +187,6 @@ namespace OrdenamientoPesquero
                         dgvEmbarcacionesPerm[2, i].Value = dt.Rows[i]["MOTORMARCA"].ToString();
                         dgvEmbarcacionesPerm[3, i].Value = dt.Rows[i]["MOTORHP"].ToString();
 
-                    }
-                    dt = proc.EquiposxPermiso(per);
-                    numericUpDown2.Value = dt.Rows.Count;
-                    dgvEquiposPescaPerm.RowCount = dt.Rows.Count;
-                    for (int i = 0; i < dt.Rows.Count; i++)
-                    {
-                        Tipo.Items.Add(dt.Rows[i]["TIPO"].ToString());
-                        dgvEquiposPescaPerm[0, i].Value = dt.Rows[i]["CANTIDAD"].ToString();
-                        dgvEquiposPescaPerm[1, i].Value = dt.Rows[i]["TIPO"].ToString();
-                        dgvEquiposPescaPerm[2, i].Value = dt.Rows[i]["CARACTERISTICAS"].ToString();
                     }
 
                 }
