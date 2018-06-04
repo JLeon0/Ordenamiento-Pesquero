@@ -30,6 +30,9 @@ namespace Logica
 
         public string NCHIP { get; set; }
 
+        public string FECHACHIP { get; set; }
+
+        public string RESPCHIP { get; set; }
 
         public string SERVICIO { get; set; }
         public string TRAFICO { get; set; }
@@ -55,6 +58,8 @@ namespace Logica
             OBSERVACIONES = "";
             RNP = "";
             NCHIP = "";
+            FECHACHIP = "";
+            RESPCHIP = "";
         }
         public Embarcacion(string nombre, string matricula, string hp, string marca, string municipio, string rnpa)
         {
@@ -102,7 +107,7 @@ namespace Logica
         }
 
         public Embarcacion(string nombre, string matricula, string rnpa, string hp, string eslora, string manga, string puntal,
-            string arqueobruto, string arqueoneto, string tonelaje, string servicio, string trafico, string Nmotores, string nchip)
+            string arqueobruto, string arqueoneto, string tonelaje, string servicio, string trafico, string Nmotores, string nchip, string fchip, string rchip)
         {
             Nombre = nombre;
             Matricula = matricula;
@@ -118,6 +123,8 @@ namespace Logica
             TRAFICO = trafico;
             NMOTORES = Nmotores;
             NCHIP = nchip;
+            FECHACHIP = fchip;
+            RESPCHIP = rchip;
         }
     }
 }

@@ -58,12 +58,12 @@ namespace OrdenamientoPesquero
         {
             if (Registro)
             {
-                Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text, RNPA, PotenciaMotorCertMat.Text, EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text, ServicioCertMat.Text, TraficoCertMat.Text, NMotoresCertMat.Value.ToString(), NChipCertMat.Text);
+                Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text, RNPA, PotenciaMotorCertMat.Text, EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text, ServicioCertMat.Text, TraficoCertMat.Text, NMotoresCertMat.Value.ToString(), NChipCertMat.Text, FechaChip.ToString(), ResponsableChip.Text);
                 return proc.Registrar_Embarcacion(Emb);
             }
             else
             {
-                Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text, RNPA, PotenciaMotorCertMat.Text, EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text, ServicioCertMat.Text, TraficoCertMat.Text, NMotoresCertMat.Value.ToString(), NChipCertMat.Text);
+                Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text, RNPA, PotenciaMotorCertMat.Text, EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text, ServicioCertMat.Text, TraficoCertMat.Text, NMotoresCertMat.Value.ToString(), NChipCertMat.Text, FechaChip.ToString(), ResponsableChip.Text);
                 return proc.Actualizar_Embarcacion(Emb);
             }
         }
