@@ -291,7 +291,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(78, 47);
+            this.label3.Location = new System.Drawing.Point(51, 47);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(401, 32);
             this.label3.TabIndex = 34;
@@ -647,7 +647,7 @@
             this.Resumen.ForeColor = System.Drawing.Color.Black;
             this.Resumen.Location = new System.Drawing.Point(944, 13);
             this.Resumen.Name = "Resumen";
-            this.Resumen.Size = new System.Drawing.Size(375, 602);
+            this.Resumen.Size = new System.Drawing.Size(403, 602);
             this.Resumen.TabIndex = 101;
             this.Resumen.TabStop = false;
             this.Resumen.Text = "Resumen";
@@ -720,7 +720,8 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DataResumen.DefaultCellStyle = dataGridViewCellStyle5;
             this.DataResumen.GridColor = System.Drawing.Color.Black;
-            this.DataResumen.Location = new System.Drawing.Point(9, 171);
+            this.DataResumen.Location = new System.Drawing.Point(3, 171);
+            this.DataResumen.MinimumSize = new System.Drawing.Size(100, 50);
             this.DataResumen.Name = "DataResumen";
             this.DataResumen.ReadOnly = true;
             dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -732,12 +733,13 @@
             dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DataResumen.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DataResumen.RowHeadersVisible = false;
+            this.DataResumen.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
             dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
             this.DataResumen.RowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.DataResumen.Size = new System.Drawing.Size(366, 185);
+            this.DataResumen.Size = new System.Drawing.Size(400, 419);
             this.DataResumen.TabIndex = 8;
             // 
             // Pesquería
@@ -881,7 +883,7 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(12, 24);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(805, 73);
+            this.pictureBox1.Size = new System.Drawing.Size(754, 73);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
             // 

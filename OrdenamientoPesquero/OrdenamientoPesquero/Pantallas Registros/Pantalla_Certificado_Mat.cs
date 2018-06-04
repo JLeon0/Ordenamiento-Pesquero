@@ -48,6 +48,7 @@ namespace OrdenamientoPesquero
                     PuntalCertMat.Text = filas["PUNTAL"].ToString();
                     ServicioCertMat.Text = filas["SERVICIO"].ToString();
                     TraficoCertMat.Text = filas["TRAFICO"].ToString();
+                    NChipCertMat.Text = filas["NUMCHIP"].ToString();
                 }
                 i--;
             }

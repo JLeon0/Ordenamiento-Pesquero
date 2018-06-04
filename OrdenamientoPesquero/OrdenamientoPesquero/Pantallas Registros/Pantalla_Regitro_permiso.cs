@@ -158,6 +158,7 @@ namespace OrdenamientoPesquero
                         dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
                         Matricula.Items.Add(dt.Rows[i]["MATRICULA"].ToString());
                         Marcamotor.Items.Add(dt.Rows[i]["MOTORMARCA"].ToString());
+                        Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
                         dgvEmbarcacionesPerm[0, i].Value = dt.Rows[i]["NOMBREEMBARCACION"].ToString();
                         dgvEmbarcacionesPerm[1, i].Value = dt.Rows[i]["MATRICULA"].ToString();
                         dgvEmbarcacionesPerm[2, i].Value = dt.Rows[i]["MOTORMARCA"].ToString();
@@ -241,14 +242,18 @@ namespace OrdenamientoPesquero
 
         private void datagridview_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
-            DataGridView dgv = (DataGridView)sender;
-            ComboBox cbx = (ComboBox)e.Control;
-            if (dgv.CurrentCell.ColumnIndex == dgv.Columns["Nombre"].Index || dgv.CurrentCell.ColumnIndex == dgv.Columns["Matricula"].Index || dgv.CurrentCell.ColumnIndex == dgv.Columns["Marcamotor"].Index)
+            Control c = e.Control;
+            if (!(c is TextBox))
             {
-                cbx.DropDownStyle = ComboBoxStyle.DropDown;
-                cbx.AutoCompleteSource = AutoCompleteSource.ListItems;
-                cbx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-                cbx.Validating += new CancelEventHandler(cbx_Validating);
+                DataGridView dgv = (DataGridView)sender;
+                ComboBox cbx = (ComboBox)e.Control;
+                if (dgv.CurrentCell.ColumnIndex == dgv.Columns["Nombre"].Index || dgv.CurrentCell.ColumnIndex == dgv.Columns["Matricula"].Index || dgv.CurrentCell.ColumnIndex == dgv.Columns["Marcamotor"].Index)
+                {
+                    cbx.DropDownStyle = ComboBoxStyle.DropDown;
+                    cbx.AutoCompleteSource = AutoCompleteSource.ListItems;
+                    cbx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+                    cbx.Validating += new CancelEventHandler(cbx_Validating);
+                }
             }
         }
 

@@ -441,7 +441,7 @@ namespace OrdenamientoPesquero
                     DataResumen.Rows.Clear();
                     DataResumen.Refresh();
                 }
-                DataResumen.Height = (DataResumen.RowCount * 22) + 28;
+                DataResumen.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             }
         }
         #endregion

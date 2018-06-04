@@ -153,10 +153,10 @@
             // 
             // PotenciaMotorCertMat
             // 
-            this.PotenciaMotorCertMat.Location = new System.Drawing.Point(412, 444);
+            this.PotenciaMotorCertMat.Location = new System.Drawing.Point(392, 444);
             this.PotenciaMotorCertMat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PotenciaMotorCertMat.Name = "PotenciaMotorCertMat";
-            this.PotenciaMotorCertMat.Size = new System.Drawing.Size(43, 22);
+            this.PotenciaMotorCertMat.Size = new System.Drawing.Size(63, 22);
             this.PotenciaMotorCertMat.TabIndex = 14;
             // 
             // PuntalCertMat
@@ -170,11 +170,11 @@
             // label74
             // 
             this.label74.AutoSize = true;
-            this.label74.Location = new System.Drawing.Point(293, 450);
+            this.label74.Location = new System.Drawing.Point(298, 450);
             this.label74.Name = "label74";
-            this.label74.Size = new System.Drawing.Size(121, 16);
+            this.label74.Size = new System.Drawing.Size(100, 16);
             this.label74.TabIndex = 130;
-            this.label74.Text = "Potencia del Motor:";
+            this.label74.Text = "Potencia Motor:";
             // 
             // PesoMCertMat
             // 
