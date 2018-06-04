@@ -41,17 +41,34 @@ namespace OrdenamientoPesquero
                 Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
             }
         }
-        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        private void dataGridView2_EditingControlShowing(object sender, DataGridViewComboBoxEditingControl e)
         {
+            DataGridViewComboBoxEditingControl dgvCombo = sender as DataGridViewComboBoxEditingControl;
 
-            if (dgvEmbarcacionesPerm.Columns[e.ColumnIndex].Name == "Nombre")
+            if (dgvCombo != null)
             {
                 //
-                // se obtiene el valor seleccionado en el combo
+                // se remueve el handler previo que pudiera tener asociado, a causa ediciones previas de la celda
+                // evitando asi que se ejecuten varias veces el evento
                 //
-                DataGridViewComboBoxCell combo = dgvEmbarcacionesPerm.Rows[e.RowIndex].Cells[e.ColumnIndex] as DataGridViewComboBoxCell;
-                dgvEmbarcacionesPerm[1,combo.RowIndex].Value = dt.Rows[combo.]["FOLIO"].ToString();
+                dgvCombo.SelectedIndexChanged -= new EventHandler(dvgCombo_SelectedIndexChanged);
+
+                dgvCombo.SelectedIndexChanged += new EventHandler(dvgCombo_SelectedIndexChanged);
             }
+        }
+        private void dvgCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //
+            // se recupera el valor del combo
+            // a modo de ejemplo se escribe en consola el valor seleccionado
+            //
+            ComboBox combo = sender as ComboBox;
+            //
+            // se accede a la fila actual, para trabajr con otor de sus campos
+            // en este caso se marca el check si se cambia la seleccion
+            //
+            DataGridViewRow row = dgvEmbarcacionesPerm.CurrentRow;
+            dgvEmbarcacionesPerm[1,row.Index].Value=dt.Rows[combo.SelectedIndex]["MATRICULA"].ToString();
         }
         private void CargarRNPA()
         {
@@ -259,19 +276,7 @@ namespace OrdenamientoPesquero
 
         private void datagridview_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
-            Control c = e.Control;
-            if (!(c is TextBox))
-            {
-                DataGridView dgv = (DataGridView)sender;
-                ComboBox cbx = (ComboBox)e.Control;
-                if (dgv.CurrentCell.ColumnIndex == dgv.Columns["Nombre"].Index || dgv.CurrentCell.ColumnIndex == dgv.Columns["Matricula"].Index || dgv.CurrentCell.ColumnIndex == dgv.Columns["Marcamotor"].Index)
-                {
-                    cbx.DropDownStyle = ComboBoxStyle.DropDown;
-                    cbx.AutoCompleteSource = AutoCompleteSource.ListItems;
-                    cbx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-                    cbx.Validating += new CancelEventHandler(cbx_Validating);
-                }
-            }
+
         }
 
         void cbx_Validating(object sender, CancelEventArgs e)
@@ -312,6 +317,32 @@ namespace OrdenamientoPesquero
         private void limpiar_Click(object sender, EventArgs e)
         {
             limpiarpermiso();
+        }
+
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView2_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
+        {
+             DataGridViewComboBoxEditingControl dgvCombo = e.Control as DataGridViewComboBoxEditingControl;
+
+            if (dgvCombo != null)
+            {
+                //
+                // se remueve el handler previo que pudiera tener asociado, a causa ediciones previas de la celda
+                // evitando asi que se ejecuten varias veces el evento
+                //
+                dgvCombo.SelectedIndexChanged -= new EventHandler(dvgCombo_SelectedIndexChanged);
+
+                dgvCombo.SelectedIndexChanged += new EventHandler(dvgCombo_SelectedIndexChanged);
+            }
         }
     }
 
