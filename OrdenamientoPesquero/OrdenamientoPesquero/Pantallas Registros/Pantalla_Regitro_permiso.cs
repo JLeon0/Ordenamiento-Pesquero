@@ -38,8 +38,19 @@ namespace OrdenamientoPesquero
             dt = proc.ObtenerCertMatrXUnidad(Rnpa);
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                Matricula.Items.Add(dt.Rows[i]["MATRICULA"].ToString());
                 Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
+            }
+        }
+        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (dgvEmbarcacionesPerm.Columns[e.ColumnIndex].Name == "Nombre")
+            {
+                //
+                // se obtiene el valor seleccionado en el combo
+                //
+                DataGridViewComboBoxCell combo = dgvEmbarcacionesPerm.Rows[e.RowIndex].Cells[e.ColumnIndex] as DataGridViewComboBoxCell;
+                dgvEmbarcacionesPerm[1,combo.RowIndex].Value = dt.Rows[combo.]["FOLIO"].ToString();
             }
         }
         private void CargarRNPA()
@@ -156,8 +167,6 @@ namespace OrdenamientoPesquero
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
                         dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
-                        Matricula.Items.Add(dt.Rows[i]["MATRICULA"].ToString());
-                        Marcamotor.Items.Add(dt.Rows[i]["MOTORMARCA"].ToString());
                         Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
                         dgvEmbarcacionesPerm[0, i].Value = dt.Rows[i]["NOMBREEMBARCACION"].ToString();
                         dgvEmbarcacionesPerm[1, i].Value = dt.Rows[i]["MATRICULA"].ToString();
@@ -184,6 +193,10 @@ namespace OrdenamientoPesquero
         private void Registrar_Click(object sender, EventArgs e)
         {
             exito = AccionesPermiso(true);
+            string a = "";
+            string b = "";
+            string c = "";
+            string d = "";
             proc.Borrar_equipo(nPer.Text);
             equiposdepesca();
             if (exito == 1)
@@ -192,7 +205,11 @@ namespace OrdenamientoPesquero
                 {
                     if (dgvEmbarcacionesPerm[0, i].Value != null)
                     {
-                        Emb = new Embarcacion(dgvEmbarcacionesPerm[0, i].Value.ToString(), dgvEmbarcacionesPerm[1, i].Value.ToString(), dgvEmbarcacionesPerm[3, i].Value.ToString(), dgvEmbarcacionesPerm[2, i].Value.ToString(), Municipio, Rnpa);
+                        a = dgvEmbarcacionesPerm[0, i].Value.ToString();
+                        b = dgvEmbarcacionesPerm[1, i].Value.ToString();
+                        c = dgvEmbarcacionesPerm[3, i].Value.ToString();
+                        d = dgvEmbarcacionesPerm[2, i].Value.ToString();
+                        Emb = new Embarcacion(a,b,c,d, Municipio,Rnpa);
                         exito += proc.registrar_perm_emb(Emb, nPer.Text);
                     }
                 }
@@ -297,4 +314,7 @@ namespace OrdenamientoPesquero
             limpiarpermiso();
         }
     }
+
+
+
 }

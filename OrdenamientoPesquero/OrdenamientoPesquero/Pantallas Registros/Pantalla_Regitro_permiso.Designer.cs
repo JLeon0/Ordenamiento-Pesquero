@@ -62,10 +62,6 @@
             this.Tipo = new System.Windows.Forms.DataGridViewComboBoxColumn();
             this.Caracteristicas = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvEmbarcacionesPerm = new System.Windows.Forms.DataGridView();
-            this.Nombre = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Matricula = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Marcamotor = new System.Windows.Forms.DataGridViewComboBoxColumn();
-            this.Potencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.limpiar = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
@@ -103,6 +99,10 @@
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
+            this.Nombre = new System.Windows.Forms.DataGridViewComboBoxColumn();
+            this.Matricula = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Marcamotor = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Potencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposPescaPerm)).BeginInit();
@@ -436,36 +436,8 @@
             this.dgvEmbarcacionesPerm.RowHeadersVisible = false;
             this.dgvEmbarcacionesPerm.Size = new System.Drawing.Size(745, 148);
             this.dgvEmbarcacionesPerm.TabIndex = 74;
+            this.dgvEmbarcacionesPerm.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);
             this.dgvEmbarcacionesPerm.EditingControlShowing += new System.Windows.Forms.DataGridViewEditingControlShowingEventHandler(this.datagridview_EditingControlShowing);
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Nombre.Width = 242;
-            // 
-            // Matricula
-            // 
-            this.Matricula.HeaderText = "Matricula";
-            this.Matricula.Name = "Matricula";
-            this.Matricula.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Matricula.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Matricula.Width = 200;
-            // 
-            // Marcamotor
-            // 
-            this.Marcamotor.HeaderText = "Marca motor";
-            this.Marcamotor.Name = "Marcamotor";
-            this.Marcamotor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
-            this.Marcamotor.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
-            this.Marcamotor.Width = 200;
-            // 
-            // Potencia
-            // 
-            this.Potencia.HeaderText = "Potencia HP";
-            this.Potencia.Name = "Potencia";
             // 
             // groupBox3
             // 
@@ -850,6 +822,33 @@
             this.label23.TabIndex = 123;
             this.label23.Text = "Ver Permisos";
             // 
+            // Nombre
+            // 
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.Nombre.Width = 242;
+            // 
+            // Matricula
+            // 
+            this.Matricula.HeaderText = "Matricula";
+            this.Matricula.Name = "Matricula";
+            this.Matricula.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Matricula.Width = 200;
+            // 
+            // Marcamotor
+            // 
+            this.Marcamotor.HeaderText = "Marca motor";
+            this.Marcamotor.Name = "Marcamotor";
+            this.Marcamotor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Marcamotor.Width = 200;
+            // 
+            // Potencia
+            // 
+            this.Potencia.HeaderText = "Potencia HP";
+            this.Potencia.Name = "Potencia";
+            // 
             // Pantalla_Regitro_permiso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -999,10 +998,6 @@
         private System.Windows.Forms.PictureBox Eliminar;
         private System.Windows.Forms.PictureBox Actualizar;
         private System.Windows.Forms.PictureBox Registrar;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Matricula;
-        private System.Windows.Forms.DataGridViewComboBoxColumn Marcamotor;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Potencia;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label Unid;
         private System.Windows.Forms.PictureBox limpiar;
@@ -1010,5 +1005,9 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.DataGridViewComboBoxColumn Nombre;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Matricula;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Marcamotor;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Potencia;
     }
 }
