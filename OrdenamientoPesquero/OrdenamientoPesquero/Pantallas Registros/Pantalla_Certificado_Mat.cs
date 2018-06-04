@@ -49,6 +49,12 @@ namespace OrdenamientoPesquero
                     ServicioCertMat.Text = filas["SERVICIO"].ToString();
                     TraficoCertMat.Text = filas["TRAFICO"].ToString();
                     NChipCertMat.Text = filas["NUMCHIP"].ToString();
+                    ResponsableChip.Text = filas["RESPONSABLECHIP"].ToString();
+                    FechaChip.Text = filas["FECHACHIPEADO"].ToString();
+                    RegNum.Text = filas["REGISTRONUM"].ToString();
+                    FechaExped.Text = filas["FECHAEXP"].ToString();
+                    Capitan.Text = filas["CAPITAN"].ToString();
+                    Marinero.Text = filas["MARINERO"].ToString();
                 }
                 i--;
             }
@@ -58,12 +64,12 @@ namespace OrdenamientoPesquero
         {
             if (Registro)
             {
-                Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text, RNPA, PotenciaMotorCertMat.Text, EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text, ServicioCertMat.Text, TraficoCertMat.Text, NMotoresCertMat.Value.ToString(), NChipCertMat.Text);
+                Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text, RNPA, PotenciaMotorCertMat.Text, EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text, ServicioCertMat.Text, TraficoCertMat.Text, NMotoresCertMat.Value.ToString(), NChipCertMat.Text, FechaChip.Value.ToShortDateString(), ResponsableChip.Text, RegNum.Text, FechaExped.Value.ToShortDateString(),Capitan.Text, Marinero.Text);
                 return proc.Registrar_Embarcacion(Emb);
             }
             else
             {
-                Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text, RNPA, PotenciaMotorCertMat.Text, EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text, ServicioCertMat.Text, TraficoCertMat.Text, NMotoresCertMat.Value.ToString(), NChipCertMat.Text);
+                Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text, RNPA, PotenciaMotorCertMat.Text, EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text, ServicioCertMat.Text, TraficoCertMat.Text, NMotoresCertMat.Value.ToString(), NChipCertMat.Text, FechaChip.Value.ToShortDateString(), ResponsableChip.Text, RegNum.Text, FechaExped.Value.ToShortDateString(), Capitan.Text, Marinero.Text);
                 return proc.Actualizar_Embarcacion(Emb);
             }
         }
