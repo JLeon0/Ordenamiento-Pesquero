@@ -41,21 +41,6 @@ namespace OrdenamientoPesquero
                 Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
             }
         }
-        private void dataGridView2_EditingControlShowing(object sender, DataGridViewComboBoxEditingControl e)
-        {
-            DataGridViewComboBoxEditingControl dgvCombo = sender as DataGridViewComboBoxEditingControl;
-
-            if (dgvCombo != null)
-            {
-                //
-                // se remueve el handler previo que pudiera tener asociado, a causa ediciones previas de la celda
-                // evitando asi que se ejecuten varias veces el evento
-                //
-                dgvCombo.SelectedIndexChanged -= new EventHandler(dvgCombo_SelectedIndexChanged);
-
-                dgvCombo.SelectedIndexChanged += new EventHandler(dvgCombo_SelectedIndexChanged);
-            }
-        }
         private void dvgCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
             //
@@ -69,6 +54,8 @@ namespace OrdenamientoPesquero
             //
             DataGridViewRow row = dgvEmbarcacionesPerm.CurrentRow;
             dgvEmbarcacionesPerm[1,row.Index].Value=dt.Rows[combo.SelectedIndex]["MATRICULA"].ToString();
+            dgvEmbarcacionesPerm[2, row.Index].Value = dt.Rows[combo.SelectedIndex]["MOTORMARCA"].ToString();
+            dgvEmbarcacionesPerm[3, row.Index].Value = dt.Rows[combo.SelectedIndex]["MOTORHP"].ToString();
         }
         private void CargarRNPA()
         {

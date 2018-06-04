@@ -57,7 +57,18 @@ namespace Logica
         }
         public bool validarrfc(string rfc)
         {
-            if (Regex.IsMatch(rfc, @"^([A-Z\s]{4})\d{6}([A-Z\w]{3})$"))
+            if (Regex.IsMatch(rfc, @"^([A-Z\s]{3})\d{6}([A-Z\w\0-9]{3})$"))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+        public bool validarrfcPes(string rfc)
+        {
+            if (Regex.IsMatch(rfc, @"^([A-Z\s]{4})\d{6}([A-Z\w\0-9]{3})$"))
             {
                 return true;
             }

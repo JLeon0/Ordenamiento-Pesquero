@@ -73,6 +73,9 @@
             this.NombrePesc = new System.Windows.Forms.TextBox();
             this.label54 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.gbxOrdenado = new System.Windows.Forms.GroupBox();
+            this.no = new System.Windows.Forms.RadioButton();
+            this.si = new System.Windows.Forms.RadioButton();
             this.MatriculaPesc = new System.Windows.Forms.ComboBox();
             this.label37 = new System.Windows.Forms.Label();
             this.CuerpoDeAguaPesc = new System.Windows.Forms.GroupBox();
@@ -97,9 +100,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Unid = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.gbxOrdenado = new System.Windows.Forms.GroupBox();
-            this.no = new System.Windows.Forms.RadioButton();
-            this.si = new System.Windows.Forms.RadioButton();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
@@ -108,6 +108,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.groupBox4.SuspendLayout();
+            this.gbxOrdenado.SuspendLayout();
             this.CuerpoDeAguaPesc.SuspendLayout();
             this.OcupacionEnEmbarPesc.SuspendLayout();
             this.TipoPesc.SuspendLayout();
@@ -116,7 +117,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.gbxOrdenado.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -474,6 +474,7 @@
             // RFCPesc
             // 
             this.RFCPesc.Location = new System.Drawing.Point(336, 152);
+            this.RFCPesc.MaxLength = 13;
             this.RFCPesc.Name = "RFCPesc";
             this.RFCPesc.Size = new System.Drawing.Size(186, 26);
             this.RFCPesc.TabIndex = 10;
@@ -583,6 +584,39 @@
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Relación Pescador-Embarcación";
+            // 
+            // gbxOrdenado
+            // 
+            this.gbxOrdenado.Controls.Add(this.no);
+            this.gbxOrdenado.Controls.Add(this.si);
+            this.gbxOrdenado.Location = new System.Drawing.Point(373, 24);
+            this.gbxOrdenado.Name = "gbxOrdenado";
+            this.gbxOrdenado.Size = new System.Drawing.Size(202, 54);
+            this.gbxOrdenado.TabIndex = 112;
+            this.gbxOrdenado.TabStop = false;
+            this.gbxOrdenado.Text = "Ordenado";
+            // 
+            // no
+            // 
+            this.no.AutoSize = true;
+            this.no.Location = new System.Drawing.Point(124, 24);
+            this.no.Name = "no";
+            this.no.Size = new System.Drawing.Size(44, 21);
+            this.no.TabIndex = 0;
+            this.no.Text = "No";
+            this.no.UseVisualStyleBackColor = true;
+            // 
+            // si
+            // 
+            this.si.AutoSize = true;
+            this.si.Checked = true;
+            this.si.Location = new System.Drawing.Point(6, 24);
+            this.si.Name = "si";
+            this.si.Size = new System.Drawing.Size(39, 21);
+            this.si.TabIndex = 0;
+            this.si.TabStop = true;
+            this.si.Text = "Si";
+            this.si.UseVisualStyleBackColor = true;
             // 
             // MatriculaPesc
             // 
@@ -834,46 +868,13 @@
             this.label19.TabIndex = 120;
             this.label19.Text = "Unidad economica:";
             // 
-            // gbxOrdenado
-            // 
-            this.gbxOrdenado.Controls.Add(this.no);
-            this.gbxOrdenado.Controls.Add(this.si);
-            this.gbxOrdenado.Location = new System.Drawing.Point(373, 24);
-            this.gbxOrdenado.Name = "gbxOrdenado";
-            this.gbxOrdenado.Size = new System.Drawing.Size(202, 54);
-            this.gbxOrdenado.TabIndex = 112;
-            this.gbxOrdenado.TabStop = false;
-            this.gbxOrdenado.Text = "Ordenado";
-            // 
-            // no
-            // 
-            this.no.AutoSize = true;
-            this.no.Location = new System.Drawing.Point(124, 24);
-            this.no.Name = "no";
-            this.no.Size = new System.Drawing.Size(44, 21);
-            this.no.TabIndex = 0;
-            this.no.Text = "No";
-            this.no.UseVisualStyleBackColor = true;
-            // 
-            // si
-            // 
-            this.si.AutoSize = true;
-            this.si.Checked = true;
-            this.si.Location = new System.Drawing.Point(6, 24);
-            this.si.Name = "si";
-            this.si.Size = new System.Drawing.Size(39, 21);
-            this.si.TabIndex = 0;
-            this.si.TabStop = true;
-            this.si.Text = "Si";
-            this.si.UseVisualStyleBackColor = true;
-            // 
             // Pantalla_Registro_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(985, 749);
+            this.ClientSize = new System.Drawing.Size(1002, 749);
             this.Controls.Add(this.Unid);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.label5);
@@ -902,6 +903,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
+            this.gbxOrdenado.ResumeLayout(false);
+            this.gbxOrdenado.PerformLayout();
             this.CuerpoDeAguaPesc.ResumeLayout(false);
             this.CuerpoDeAguaPesc.PerformLayout();
             this.OcupacionEnEmbarPesc.ResumeLayout(false);
@@ -913,8 +916,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.gbxOrdenado.ResumeLayout(false);
-            this.gbxOrdenado.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

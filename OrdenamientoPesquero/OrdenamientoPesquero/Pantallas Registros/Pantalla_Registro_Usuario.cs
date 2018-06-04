@@ -228,7 +228,7 @@ namespace OrdenamientoPesquero
 
         private void RFCPesc_TextChanged(object sender, EventArgs e)
         {
-            if (val.validarrfc(RFCPesc.Text))
+            if (val.validarrfcPes(RFCPesc.Text))
             {
                 pictureBox7.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
                 pescador[1, 0] = "1";
