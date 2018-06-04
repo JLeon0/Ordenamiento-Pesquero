@@ -391,7 +391,6 @@
             // dgvEquiposPescaPerm
             // 
             this.dgvEquiposPescaPerm.AllowUserToAddRows = false;
-            this.dgvEquiposPescaPerm.AllowUserToDeleteRows = false;
             this.dgvEquiposPescaPerm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEquiposPescaPerm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -399,7 +398,6 @@
             this.Caracteristicas});
             this.dgvEquiposPescaPerm.Location = new System.Drawing.Point(19, 529);
             this.dgvEquiposPescaPerm.Name = "dgvEquiposPescaPerm";
-            this.dgvEquiposPescaPerm.ReadOnly = true;
             this.dgvEquiposPescaPerm.RowHeadersVisible = false;
             this.dgvEquiposPescaPerm.Size = new System.Drawing.Size(745, 131);
             this.dgvEquiposPescaPerm.TabIndex = 71;
@@ -409,13 +407,11 @@
             // 
             this.dataGridViewTextBoxColumn1.HeaderText = "Cantidad";
             this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
             // 
             // Tipo
             // 
             this.Tipo.HeaderText = "Tipo";
             this.Tipo.Name = "Tipo";
-            this.Tipo.ReadOnly = true;
             this.Tipo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Tipo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Tipo.Width = 242;
@@ -424,13 +420,11 @@
             // 
             this.Caracteristicas.HeaderText = "Caracteristicas";
             this.Caracteristicas.Name = "Caracteristicas";
-            this.Caracteristicas.ReadOnly = true;
             this.Caracteristicas.Width = 400;
             // 
             // dgvEmbarcacionesPerm
             // 
             this.dgvEmbarcacionesPerm.AllowUserToAddRows = false;
-            this.dgvEmbarcacionesPerm.AllowUserToDeleteRows = false;
             this.dgvEmbarcacionesPerm.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvEmbarcacionesPerm.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Nombre,
@@ -439,7 +433,6 @@
             this.Potencia});
             this.dgvEmbarcacionesPerm.Location = new System.Drawing.Point(19, 821);
             this.dgvEmbarcacionesPerm.Name = "dgvEmbarcacionesPerm";
-            this.dgvEmbarcacionesPerm.ReadOnly = true;
             this.dgvEmbarcacionesPerm.RowHeadersVisible = false;
             this.dgvEmbarcacionesPerm.Size = new System.Drawing.Size(745, 148);
             this.dgvEmbarcacionesPerm.TabIndex = 74;
@@ -834,7 +827,6 @@
             // 
             this.Nombre.HeaderText = "Nombre";
             this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
             this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Nombre.Width = 242;
@@ -843,7 +835,6 @@
             // 
             this.Matricula.HeaderText = "Matricula";
             this.Matricula.Name = "Matricula";
-            this.Matricula.ReadOnly = true;
             this.Matricula.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Matricula.Width = 200;
             // 
@@ -851,7 +842,6 @@
             // 
             this.Marcamotor.HeaderText = "Marca motor";
             this.Marcamotor.Name = "Marcamotor";
-            this.Marcamotor.ReadOnly = true;
             this.Marcamotor.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Marcamotor.Width = 200;
             // 
@@ -859,7 +849,6 @@
             // 
             this.Potencia.HeaderText = "Potencia HP";
             this.Potencia.Name = "Potencia";
-            this.Potencia.ReadOnly = true;
             // 
             // Pantalla_Regitro_permiso
             // 
