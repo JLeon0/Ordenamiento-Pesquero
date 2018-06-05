@@ -191,6 +191,7 @@ namespace OrdenamientoPesquero
 
                 }
             }
+            dt = proc.ObtenerCertMatrXUnidad(Rnpa);
             this.Cursor = Cursors.Default;
         }
 

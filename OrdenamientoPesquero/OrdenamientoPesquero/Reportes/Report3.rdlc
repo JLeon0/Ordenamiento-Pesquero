@@ -458,53 +458,6 @@
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
-  <DataSources>
-    <DataSource Name="OrdPesqueroDataSet1">
-      <ConnectionProperties>
-        <DataProvider>System.Data.DataSet</DataProvider>
-        <ConnectString>/* Local Connection */</ConnectString>
-      </ConnectionProperties>
-      <rd:DataSourceID>a7555d54-430d-4544-8dda-a2b4b6b43881</rd:DataSourceID>
-    </DataSource>
-  </DataSources>
-  <DataSets>
-    <DataSet Name="pescadores">
-      <Query>
-        <DataSourceName>OrdPesqueroDataSet1</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="Codigo">
-          <DataField>Codigo</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-        <Field Name="Nombre">
-          <DataField>Nombre</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CURP">
-          <DataField>CURP</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NOMBREEMBARCACION">
-          <DataField>NOMBREEMBARCACION</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="EMBARCACION">
-          <DataField>EMBARCACION</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>OrdPesqueroDataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Source\Repos\Ordenamiento-Pesquero\OrdenamientoPesquero\OrdenamientoPesquero\OrdPesqueroDataSet11.xsd</rd:SchemaPath>
-        <rd:TableName>pescadores</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>pescadoresTableAdapter</rd:TableAdapterName>
-      </rd:DataSetInfo>
-    </DataSet>
-  </DataSets>
   <ReportParameters>
     <ReportParameter Name="Unidad">
       <DataType>String</DataType>
