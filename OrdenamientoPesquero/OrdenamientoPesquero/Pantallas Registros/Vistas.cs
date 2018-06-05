@@ -37,9 +37,9 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 case 1:
                     this.reportViewer1.ProcessingMode = ProcessingMode.Local;
                     this.reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Report3.rdlc");
-                    this.pescadoresTableAdapter.Fill(ordPesqueroDataSet1.pescadores, rnpa);
+                    this.pescadoresTableAdapter.Fill(ordPesqueroDataSetpescadores1.pescadores, rnpa);
                     datos.Name = "pescadores";
-                    datos.Value = ordPesqueroDataSet1.pescadores;
+                    datos.Value = ordPesqueroDataSetpescadores1.pescadores;
                     this.reportViewer1.LocalReport.DataSources.Add(datos);
                     reportViewer1.LocalReport.SetParameters(new ReportParameter("Unidad", unidad));
                     this.reportViewer1.RefreshReport();
