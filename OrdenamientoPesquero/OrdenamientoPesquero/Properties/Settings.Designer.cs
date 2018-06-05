@@ -46,8 +46,7 @@ namespace OrdenamientoPesquero.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=\"192.168.1.74, 1433\";Initial Catalog=OrdPesquero;Persist Security Inf" +
-            "o=True;User ID=usuario;Password=usuario")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=OrdPesquero;Integrated Security=true;")]
         public string OrdPesqueroConnectionString2 {
             get {
                 return ((string)(this["OrdPesqueroConnectionString2"]));
