@@ -54,6 +54,11 @@ namespace Logica
 
 
         #region Permisos
+        public int EliminarRelac(string perm)
+        {
+            string[] Parametros = { "@PERMISO" };
+            return c.Ejecutar("EliminarRelacion", Parametros, perm);
+        }
         public int Registrar_Equipo(string perm, string cantidad, string tipo, string caracteristicas)
         {
             string[] Parametros = { "@NPERM", "@CANTIDAD", "@TIPO", "@CARACT"};

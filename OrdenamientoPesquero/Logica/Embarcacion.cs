@@ -102,7 +102,7 @@ namespace Logica
 
         public Embarcacion(string nombre, string matricula, string rnpa, string hp, string eslora, string manga, string puntal,
             string arqueobruto, string arqueoneto, string tonelaje, string servicio, string trafico, string Nmotores, string nchip, 
-            string fchip, string rchip, string regnum, string fexp, string capitan, string marinero)
+            string fchip, string rchip, string regnum, string fexp, string capitan, string marinero, string marca)
         {
             Nombre = nombre;
             Matricula = matricula;
@@ -124,6 +124,7 @@ namespace Logica
             FECHAEXP = fexp;
             CAPITAN = capitan;
             MARINERO = marinero;
+            MARCA = marca;
         }
     }
 }

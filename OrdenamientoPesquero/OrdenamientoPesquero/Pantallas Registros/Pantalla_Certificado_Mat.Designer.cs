@@ -73,18 +73,20 @@
             this.NChipCertMat = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.FechaChip = new System.Windows.Forms.DateTimePicker();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.ResponsableChip = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.RegNum = new System.Windows.Forms.MaskedTextBox();
             this.FechaExped = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
-            this.Capitan = new System.Windows.Forms.TextBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.Marinero = new System.Windows.Forms.TextBox();
+            this.RegNum = new System.Windows.Forms.MaskedTextBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.FechaChip = new System.Windows.Forms.DateTimePicker();
+            this.label7 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.Marinero = new System.Windows.Forms.TextBox();
+            this.Capitan = new System.Windows.Forms.TextBox();
+            this.ResponsableChip = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.Marca = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
@@ -489,6 +491,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label12);
+            this.groupBox1.Controls.Add(this.Marca);
             this.groupBox1.Controls.Add(this.MatriculaCertMat);
             this.groupBox1.Controls.Add(this.label60);
             this.groupBox1.Controls.Add(this.label15);
@@ -551,59 +555,6 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Verificación de Chipeo";
             // 
-            // FechaChip
-            // 
-            this.FechaChip.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechaChip.Location = new System.Drawing.Point(450, 66);
-            this.FechaChip.Name = "FechaChip";
-            this.FechaChip.Size = new System.Drawing.Size(139, 22);
-            this.FechaChip.TabIndex = 163;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(321, 71);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 16);
-            this.label7.TabIndex = 162;
-            this.label7.Text = "Fecha de Chipeado";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(15, 176);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(83, 16);
-            this.label6.TabIndex = 161;
-            this.label6.Text = "Responsable";
-            // 
-            // ResponsableChip
-            // 
-            this.ResponsableChip.Location = new System.Drawing.Point(147, 176);
-            this.ResponsableChip.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.ResponsableChip.MaxLength = 40;
-            this.ResponsableChip.Name = "ResponsableChip";
-            this.ResponsableChip.Size = new System.Drawing.Size(417, 22);
-            this.ResponsableChip.TabIndex = 160;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(319, 27);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(107, 16);
-            this.label8.TabIndex = 164;
-            this.label8.Text = "Registro número:";
-            // 
-            // RegNum
-            // 
-            this.RegNum.Location = new System.Drawing.Point(450, 24);
-            this.RegNum.Mask = "9999";
-            this.RegNum.Name = "RegNum";
-            this.RegNum.Size = new System.Drawing.Size(43, 22);
-            this.RegNum.TabIndex = 165;
-            this.RegNum.ValidatingType = typeof(int);
-            // 
             // FechaExped
             // 
             this.FechaExped.Format = System.Windows.Forms.DateTimePickerFormat.Short;
@@ -621,32 +572,40 @@
             this.label9.TabIndex = 166;
             this.label9.Text = "Fecha de Expedición";
             // 
-            // Capitan
+            // RegNum
             // 
-            this.Capitan.Location = new System.Drawing.Point(146, 105);
-            this.Capitan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Capitan.MaxLength = 40;
-            this.Capitan.Name = "Capitan";
-            this.Capitan.Size = new System.Drawing.Size(417, 22);
-            this.Capitan.TabIndex = 160;
+            this.RegNum.Location = new System.Drawing.Point(450, 24);
+            this.RegNum.Mask = "9999";
+            this.RegNum.Name = "RegNum";
+            this.RegNum.Size = new System.Drawing.Size(43, 22);
+            this.RegNum.TabIndex = 165;
+            this.RegNum.ValidatingType = typeof(int);
             // 
-            // label10
+            // label8
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(14, 105);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 16);
-            this.label10.TabIndex = 161;
-            this.label10.Text = "Capitán";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(319, 27);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(107, 16);
+            this.label8.TabIndex = 164;
+            this.label8.Text = "Registro número:";
             // 
-            // Marinero
+            // FechaChip
             // 
-            this.Marinero.Location = new System.Drawing.Point(146, 135);
-            this.Marinero.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Marinero.MaxLength = 40;
-            this.Marinero.Name = "Marinero";
-            this.Marinero.Size = new System.Drawing.Size(417, 22);
-            this.Marinero.TabIndex = 160;
+            this.FechaChip.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaChip.Location = new System.Drawing.Point(450, 66);
+            this.FechaChip.Name = "FechaChip";
+            this.FechaChip.Size = new System.Drawing.Size(139, 22);
+            this.FechaChip.TabIndex = 163;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(321, 71);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(120, 16);
+            this.label7.TabIndex = 162;
+            this.label7.Text = "Fecha de Chipeado";
             // 
             // label11
             // 
@@ -657,13 +616,75 @@
             this.label11.TabIndex = 161;
             this.label11.Text = "Marinero";
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(14, 105);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(52, 16);
+            this.label10.TabIndex = 161;
+            this.label10.Text = "Capitán";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(15, 176);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(83, 16);
+            this.label6.TabIndex = 161;
+            this.label6.Text = "Responsable";
+            // 
+            // Marinero
+            // 
+            this.Marinero.Location = new System.Drawing.Point(146, 135);
+            this.Marinero.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Marinero.MaxLength = 40;
+            this.Marinero.Name = "Marinero";
+            this.Marinero.Size = new System.Drawing.Size(417, 22);
+            this.Marinero.TabIndex = 160;
+            // 
+            // Capitan
+            // 
+            this.Capitan.Location = new System.Drawing.Point(146, 105);
+            this.Capitan.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Capitan.MaxLength = 40;
+            this.Capitan.Name = "Capitan";
+            this.Capitan.Size = new System.Drawing.Size(417, 22);
+            this.Capitan.TabIndex = 160;
+            // 
+            // ResponsableChip
+            // 
+            this.ResponsableChip.Location = new System.Drawing.Point(147, 176);
+            this.ResponsableChip.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ResponsableChip.MaxLength = 40;
+            this.ResponsableChip.Name = "ResponsableChip";
+            this.ResponsableChip.Size = new System.Drawing.Size(417, 22);
+            this.ResponsableChip.TabIndex = 160;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(465, 266);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(44, 16);
+            this.label12.TabIndex = 158;
+            this.label12.Text = "Marca";
+            // 
+            // Marca
+            // 
+            this.Marca.Location = new System.Drawing.Point(514, 263);
+            this.Marca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Marca.Name = "Marca";
+            this.Marca.Size = new System.Drawing.Size(100, 22);
+            this.Marca.TabIndex = 157;
+            // 
             // Pantalla_Certificado_Mat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(742, 682);
+            this.ClientSize = new System.Drawing.Size(742, 726);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
@@ -754,5 +775,7 @@
         private System.Windows.Forms.TextBox Capitan;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox Marinero;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox Marca;
     }
 }

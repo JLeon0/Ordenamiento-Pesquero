@@ -227,6 +227,7 @@ namespace OrdenamientoPesquero
             exito = AccionesPermiso(false);
             proc.Borrar_equipo(nPer.Text);
             equiposdepesca();
+            proc.EliminarRelac(nPer.Text);
             for (int i = 0; i < dgvEmbarcacionesPerm.RowCount; i++)
             {
                 if (dgvEmbarcacionesPerm[0, i].Value != null)
