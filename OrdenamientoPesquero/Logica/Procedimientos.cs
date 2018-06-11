@@ -193,8 +193,8 @@ namespace Logica
         }
         public int registrar_perm_emb(Embarcacion emb, string Permiso)
         {
-            string[] Parametros = { "@MATRI", "@NOMBRE", "@RNPA", "@MUNICIPIO", "@HP", "@MARCA", "@PERMISO" };
-            return c.Ejecutar("REGISTRO_PER_EMB", Parametros, emb.Matricula, emb.Nombre, emb.RNPATITULAR, emb.MUNICIPIO, emb.HP, emb.MARCA, Permiso);
+            string[] Parametros = { "@MATRI","@PERMISO" };
+            return c.Ejecutar("REGISTRO_PER_EMB", Parametros, emb.Matricula, Permiso);
         }
 
         public DataTable ObtenerCertMatrXUnidad(string RNPA)
