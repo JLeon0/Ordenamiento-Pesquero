@@ -114,6 +114,7 @@ namespace OrdenamientoPesquero
 
         private void Pantalla_Certificado_Mat_Load(object sender, EventArgs e)
         {
+            val.ajustarResolucion(this);
             CertMatXUnidad();
         }
 
@@ -129,6 +130,29 @@ namespace OrdenamientoPesquero
         private void limpiar_Click(object sender, EventArgs e)
         {
             limpiarcertmat();
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MatriculaCertMat_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                pictureBox14_Click(sender, e);
+            }
         }
     }
 }
