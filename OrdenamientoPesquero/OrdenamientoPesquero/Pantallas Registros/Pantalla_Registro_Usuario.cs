@@ -32,7 +32,9 @@ namespace OrdenamientoPesquero
             NombreUnidad = nombre;
         }
 
-        private void Pantalla_Registro_Usuario_Load(object sender, EventArgs e) {
+        private void Pantalla_Registro_Usuario_Load(object sender, EventArgs e)
+        {
+            val.ajustarResolucion(this);
             CargarPescadores();
             CargarMatriculas();
             CargarMunicipios();

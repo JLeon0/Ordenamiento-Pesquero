@@ -54,6 +54,11 @@ namespace Logica
 
 
         #region Permisos
+        public int EliminarRelac(string perm)
+        {
+            string[] Parametros = { "@PERMISO" };
+            return c.Ejecutar("EliminarRelacion", Parametros, perm);
+        }
         public int Registrar_Equipo(string perm, string cantidad, string tipo, string caracteristicas)
         {
             string[] Parametros = { "@NPERM", "@CANTIDAD", "@TIPO", "@CARACT"};
@@ -66,13 +71,13 @@ namespace Logica
         }
         public int Registrar_Permiso(Permiso perm)
         {
-            string[] Parametros = { "@folio", "@rnpa", "@npermiso", "@pesqueria", "@lugarexpedicion", "@diaexpedicion", "@finvigencia", "@zonapesca", "@sitiosdesembarque", "@observaciones" };
-            return c.Ejecutar("RegistrarPermiso", Parametros, perm.FOLIO, perm.RNPA, perm.NPERMISO, perm.PESQUERIA, perm.LUGAR, perm.DIAEXP, perm.FINVIGENCIA, perm.ZONAPESC, perm.SITIOS, perm.OBSERVACIONES);
+            string[] Parametros = { "@folio", "@rnpa", "@npermiso", "@pesqueria", "@lugarexpedicion", "@diaexpedicion", "@finvigencia", "@zonapesca", "@sitiosdesembarque" };
+            return c.Ejecutar("RegistrarPermiso", Parametros, perm.FOLIO, perm.RNPA, perm.NPERMISO, perm.PESQUERIA, perm.LUGAR, perm.DIAEXP, perm.FINVIGENCIA, perm.ZONAPESC, perm.SITIOS);
         }
         public int Actualizar_Permiso(Permiso perm)
         {
-            string[] Parametros = { "@folio", "@rnpa", "@npermiso", "@pesqueria", "@lugarexpedicion", "@diaexpedicion", "@finvigencia", "@zonapesca", "@sitiosdesembarque", "@observaciones" };
-            return c.Ejecutar("ActualizarPermiso", Parametros, perm.FOLIO, perm.RNPA, perm.NPERMISO, perm.PESQUERIA, perm.LUGAR, perm.DIAEXP, perm.FINVIGENCIA, perm.ZONAPESC, perm.SITIOS, perm.OBSERVACIONES);
+            string[] Parametros = { "@folio", "@rnpa", "@npermiso", "@pesqueria", "@lugarexpedicion", "@diaexpedicion", "@finvigencia", "@zonapesca", "@sitiosdesembarque" };
+            return c.Ejecutar("ActualizarPermiso", Parametros, perm.FOLIO, perm.RNPA, perm.NPERMISO, perm.PESQUERIA, perm.LUGAR, perm.DIAEXP, perm.FINVIGENCIA, perm.ZONAPESC, perm.SITIOS);
         }
         public int Eliminar_Permiso(String Numpermiso)
         {
@@ -193,8 +198,8 @@ namespace Logica
         }
         public int registrar_perm_emb(Embarcacion emb, string Permiso)
         {
-            string[] Parametros = { "@MATRI", "@NOMBRE", "@RNPA", "@MUNICIPIO", "@HP", "@MARCA", "@PERMISO" };
-            return c.Ejecutar("REGISTRO_PER_EMB", Parametros, emb.Matricula, emb.Nombre, emb.RNPATITULAR, emb.MUNICIPIO, emb.HP, emb.MARCA, Permiso);
+            string[] Parametros = { "@MATRI","@PERMISO" };
+            return c.Ejecutar("REGISTRO_PER_EMB", Parametros, emb.Matricula, Permiso);
         }
 
         public DataTable ObtenerCertMatrXUnidad(string RNPA)
