@@ -1,0 +1,298 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{26B25B8A-91B1-4FE6-B432-7B44611D744C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OrdenamientoPesquero</RootNamespace>
+    <AssemblyName>OrdenamientoPesquero</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataAnexo3.cs">
+      <DependentUpon>DataAnexo3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataAnexo3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataAnexo3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPermisos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPermisos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdPesqueroDataSet11.cs">
+      <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdPesqueroDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdPesqueroDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdPesqueroDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas Registros\Pantalla_Certificado_Mat.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas Registros\Pantalla_Certificado_Mat.Designer.cs">
+      <DependentUpon>Pantalla_Certificado_Mat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas Registros\Pantalla_Registro_UnidadEconomica.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas Registros\Pantalla_Registro_UnidadEconomica.Designer.cs">
+      <DependentUpon>Pantalla_Registro_UnidadEconomica.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas Registros\Pantalla_Registro_Usuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas Registros\Pantalla_Registro_Usuario.Designer.cs">
+      <DependentUpon>Pantalla_Registro_Usuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas Registros\Pantalla_Regitro_permiso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas Registros\Pantalla_Regitro_permiso.Designer.cs">
+      <DependentUpon>Pantalla_Regitro_permiso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas Registros\Vistas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas Registros\Vistas.Designer.cs">
+      <DependentUpon>Vistas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Permisos_lista.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Permisos_lista.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Pantallas Registros\Pantalla_Certificado_Mat.resx">
+      <DependentUpon>Pantalla_Certificado_Mat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas Registros\Pantalla_Registro_UnidadEconomica.resx">
+      <DependentUpon>Pantalla_Registro_UnidadEconomica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas Registros\Pantalla_Registro_Usuario.resx">
+      <DependentUpon>Pantalla_Registro_Usuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas Registros\Pantalla_Regitro_permiso.resx">
+      <DependentUpon>Pantalla_Regitro_permiso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas Registros\Vistas.resx">
+      <DependentUpon>Vistas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reportes\Anexo3.rdlc" />
+    <EmbeddedResource Include="Reportes\Permisos.rdlc" />
+    <EmbeddedResource Include="Reportes\Report3.rdlc" />
+    <None Include="DataAnexo3.xsc">
+      <DependentUpon>DataAnexo3.xsd</DependentUpon>
+    </None>
+    <None Include="DataAnexo3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataAnexo3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataAnexo3.xss">
+      <DependentUpon>DataAnexo3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPermisos.xsc">
+      <DependentUpon>DataSetPermisos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPermisos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPermisos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetPermisos.xss">
+      <DependentUpon>DataSetPermisos.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet11.xsc">
+      <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet11.xss">
+      <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet2.xsc">
+      <DependentUpon>OrdPesqueroDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet2.xss">
+      <DependentUpon>OrdPesqueroDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet21.xsc">
+      <DependentUpon>OrdPesqueroDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet21.xss">
+      <DependentUpon>OrdPesqueroDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="Permisos_lista.xsc">
+      <DependentUpon>Permisos_lista.xsd</DependentUpon>
+    </None>
+    <None Include="Permisos_lista.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Permisos_lista.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Permisos_lista.xss">
+      <DependentUpon>Permisos_lista.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sepada-escudologosiglas_450x85.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sepada-escudologosiglas_450x851.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechaarriba.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\flechaabajo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\registrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\actualizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Logica\Logica.csproj">
+      <Project>{d48b06ec-8515-4ab1-87c2-0b6c56b225d6}</Project>
+      <Name>Logica</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\verde.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\x.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\borrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ver.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GuardarArchivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ActualizarArchivo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Eliminar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Busqueda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Equis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Bien.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
