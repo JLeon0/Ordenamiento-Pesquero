@@ -30,6 +30,7 @@ namespace Logica
         public string CORREO = "";
         public string LOCALIDAD = "";
         public int ORDENADO = 0;
+        public string RNPA = "";
         public Pescador()
         {
              NOMBRE = "";
@@ -54,6 +55,7 @@ namespace Logica
             CORREO = "";
             LOCALIDAD = "";
             ORDENADO = 0;
+            RNPA = "";
         }
         public Pescador(
         string nOMBRE,
@@ -75,7 +77,7 @@ namespace Logica
         string oCP_LABORAL,
         string cUERPO_DE_AGUA,
         string mATRICULA, string correo, string localidad,
-        int Ordenado)
+        int Ordenado, string rnpa)
         {
             NOMBRE = nOMBRE;
             AP_PAT = aP_PAT;
@@ -99,6 +101,7 @@ namespace Logica
             CORREO = correo;
             LOCALIDAD = localidad;
             ORDENADO = Ordenado;
+            RNPA = rnpa;
         }
     }
 }

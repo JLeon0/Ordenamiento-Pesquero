@@ -150,8 +150,17 @@ namespace Logica
         #region Pescador
         public int Registrar_Pescador(Pescador PES)
         {
-            string[] Parametros = {"@nombre", "@appat", "@apmat", "@curp", "@rfc", "@escolaridad", "@tiposangre", "@sexo", "@lugarnacimiento", "@fechanac", "@callenum", "@colonia", "@munici", "@codpos", "@tel", "@tipo", "@ocupacion", "@cuerpo", "@matricula","@correo","@localidad","@ordenado" };
-            return c.Ejecutar("RegistrarPescador", Parametros, PES.NOMBRE, PES.AP_PAT, PES.AP_MAT, PES.CURP, PES.RFC, PES.ESCOLARIDAD, PES.TIP_SANG, PES.SEXO, PES.LUG_NACIMI, PES.FECH_NACIMI, PES.CALLENUM, PES.COLONIA, PES.MUNICIPIO, PES.CP, PES.TEL, PES.TIPO_PESC, PES.OCP_LABORAL, PES.CUERPO_DE_AGUA, PES.MATRICULA, PES.CORREO,PES.LOCALIDAD, PES.ORDENADO);
+            if (PES.MATRICULA != "NO APLICA")
+            {
+                string[] Parametros = { "@nombre", "@appat", "@apmat", "@curp", "@rfc", "@escolaridad", "@tiposangre", "@sexo", "@lugarnacimiento", "@fechanac", "@callenum", "@colonia", "@munici", "@codpos", "@tel", "@tipo", "@ocupacion", "@cuerpo", "@matricula", "@correo", "@localidad", "@ordenado" };
+                return c.Ejecutar("RegistrarPescador", Parametros, PES.NOMBRE, PES.AP_PAT, PES.AP_MAT, PES.CURP, PES.RFC, PES.ESCOLARIDAD, PES.TIP_SANG, PES.SEXO, PES.LUG_NACIMI, PES.FECH_NACIMI, PES.CALLENUM, PES.COLONIA, PES.MUNICIPIO, PES.CP, PES.TEL, PES.TIPO_PESC, PES.OCP_LABORAL, PES.CUERPO_DE_AGUA, PES.MATRICULA, PES.CORREO, PES.LOCALIDAD, PES.ORDENADO);
+
+            }
+            else
+            {
+                string[] Parametros = { "@nombre", "@appat", "@apmat", "@curp", "@rfc", "@escolaridad", "@tiposangre", "@sexo", "@lugarnacimiento", "@fechanac", "@callenum", "@colonia", "@munici", "@codpos", "@tel", "@tipo", "@ocupacion", "@cuerpo", "@matricula", "@correo", "@localidad", "@ordenado", "@RNPATIT" };
+                return c.Ejecutar("RegistrarAcuacultor", Parametros, PES.NOMBRE, PES.AP_PAT, PES.AP_MAT, PES.CURP, PES.RFC, PES.ESCOLARIDAD, PES.TIP_SANG, PES.SEXO, PES.LUG_NACIMI, PES.FECH_NACIMI, PES.CALLENUM, PES.COLONIA, PES.MUNICIPIO, PES.CP, PES.TEL, PES.TIPO_PESC, PES.OCP_LABORAL, PES.CUERPO_DE_AGUA, PES.MATRICULA, PES.CORREO, PES.LOCALIDAD, PES.ORDENADO, PES.RNPA);
+            }
 
         }
         public int Actualizar_Pescador(Pescador PES)
@@ -206,6 +215,22 @@ namespace Logica
         {
             string[] Parametros = { "@RNPA" };
             return c.getDatosTabla("CertMatXUnidad", Parametros, RNPA);
+        }
+
+        public DataTable ObtenerEmbarca(string Matricula)
+        {
+            string[] Parametros = { "@matricula" };
+            return c.getDatosTabla("Obtener_Embarcacion", Parametros, Matricula);
+        }
+        public DataTable NpermisoxEmbarca(string Matricula)
+        {
+            string[] Parametros = { "@matricula" };
+            return c.getDatosTabla("NpermisoxEmbarca", Parametros, Matricula);
+        }
+        public DataTable PermisosxEmbarca(string Matricula)
+        {
+            string[] Parametros = { "@matricula" };
+            return c.getDatosTabla("PermisosxEmbarca", Parametros, Matricula);
         }
 
         #endregion
