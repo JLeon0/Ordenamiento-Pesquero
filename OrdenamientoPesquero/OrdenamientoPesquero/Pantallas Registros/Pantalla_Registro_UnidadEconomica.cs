@@ -46,6 +46,7 @@ namespace OrdenamientoPesquero
             //PintarGroupBox();
             CargarRNPA();
             CargarMunicipios();
+            CargarFederaciones();
             cargando = false;
         }
         
@@ -449,7 +450,16 @@ namespace OrdenamientoPesquero
             }
         }
         #endregion
-        
+
+
+        private void CargarFederaciones()
+        {
+            dt = proc.Obtener_Federaciones();
+            NomFed.DataSource = dt;
+            NomFed.DisplayMember = "Nombre";
+            NomFed.ValueMember = "Nombre";
+            NomFed.Text = "Seleccione una Federación";
+        }
 
         private void DataResumen_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

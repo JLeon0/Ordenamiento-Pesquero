@@ -11,7 +11,7 @@ namespace Logica
 {
     public class Procedimientos
     {
-        public string bdd="OrdPesquero";
+        public string bdd = "OrdPesquero";
         Conexion c;
         public Procedimientos()
         {
@@ -61,12 +61,12 @@ namespace Logica
         }
         public int Registrar_Equipo(string perm, string cantidad, string tipo, string caracteristicas)
         {
-            string[] Parametros = { "@NPERM", "@CANTIDAD", "@TIPO", "@CARACT"};
+            string[] Parametros = { "@NPERM", "@CANTIDAD", "@TIPO", "@CARACT" };
             return c.Ejecutar("RegistrarEquiposPesca", Parametros, perm, cantidad, tipo, caracteristicas);
         }
         public int Borrar_equipo(string perm)
         {
-            string[] Parametros = { "@NPERM"};
+            string[] Parametros = { "@NPERM" };
             return c.Ejecutar("BorrarEquiposPesca", Parametros, perm);
         }
         public int Registrar_Permiso(Permiso perm)
@@ -126,8 +126,8 @@ namespace Logica
             return c.getDatosTabla("ObtenerDatos", Parametros, RNPA);
         }
         public DataTable Obtener_todos_los_nombres()
-         {
-            string[] Parametros = {  };
+        {
+            string[] Parametros = { };
             return c.getDatosTabla("ObtenerNombres", Parametros);
         }
         public DataTable Obtener_unidad(string nombre)
@@ -165,8 +165,8 @@ namespace Logica
         }
         public int Actualizar_Pescador(Pescador PES)
         {
-            string[] Parametros = {"@nombre", "@appat", "@apmat", "@curp", "@rfc", "@escolaridad", "@tiposangre", "@sexo", "@lugarnacimiento", "@fechanac", "@callenum", "@colonia", "@munici", "@codpos", "@tel", "@tipo", "@ocupacion", "@cuerpo", "@matricula", "@correo", "@localidad", "@ordenado" };
-            return c.Ejecutar("Actualizar_pescador", Parametros, PES.NOMBRE, PES.AP_PAT, PES.AP_MAT,PES.CURP, PES.RFC, PES.ESCOLARIDAD, PES.TIP_SANG, PES.SEXO,PES.LUG_NACIMI, PES.FECH_NACIMI, PES.CALLENUM, PES.COLONIA, PES.MUNICIPIO, PES.CP, PES.TEL, PES.TIPO_PESC, PES.OCP_LABORAL, PES.CUERPO_DE_AGUA, PES.MATRICULA, PES.CORREO, PES.LOCALIDAD, PES.ORDENADO);
+            string[] Parametros = { "@nombre", "@appat", "@apmat", "@curp", "@rfc", "@escolaridad", "@tiposangre", "@sexo", "@lugarnacimiento", "@fechanac", "@callenum", "@colonia", "@munici", "@codpos", "@tel", "@tipo", "@ocupacion", "@cuerpo", "@matricula", "@correo", "@localidad", "@ordenado" };
+            return c.Ejecutar("Actualizar_pescador", Parametros, PES.NOMBRE, PES.AP_PAT, PES.AP_MAT, PES.CURP, PES.RFC, PES.ESCOLARIDAD, PES.TIP_SANG, PES.SEXO, PES.LUG_NACIMI, PES.FECH_NACIMI, PES.CALLENUM, PES.COLONIA, PES.MUNICIPIO, PES.CP, PES.TEL, PES.TIPO_PESC, PES.OCP_LABORAL, PES.CUERPO_DE_AGUA, PES.MATRICULA, PES.CORREO, PES.LOCALIDAD, PES.ORDENADO);
 
         }
         public int Eliminar_Pescador(String CURP)
@@ -190,14 +190,14 @@ namespace Logica
         #region Embarcacion
         public int Registrar_Embarcacion(Embarcacion EMB)
         {
-            string[] Parametros = {"@matricula", "@nombre","@RNPATIT","@motorHP", "@eslora", "@manga", "@puntal", "@arqueobruto","@arqueoneto","@tonelaje", "@servicio", "@trafico", "@nmotores", "@nchip" ,"@fchip", "@rchip", "@regnum", "@fexp", "@cap", "@marin","@motormarca"};
-            return c.Ejecutar("RegistrarEmbarca", Parametros, EMB.Matricula, EMB.Nombre, EMB.RNPATITULAR,EMB.HP, EMB.ESLORA, EMB.MANGA, EMB.PUNTAL, EMB.ARQUEOBRUTO, EMB.ARQUEONETO, EMB.TONELAJE, EMB.SERVICIO, EMB.TRAFICO, EMB.NMOTORES, EMB.NCHIP, EMB.FECHACHIPEADO, EMB.RESPCHIP, EMB.REGISTRONUM, EMB.FECHAEXP, EMB.CAPITAN, EMB.MARINERO, EMB.MARCA);
+            string[] Parametros = { "@matricula", "@nombre", "@RNPATIT", "@motorHP", "@eslora", "@manga", "@puntal", "@arqueobruto", "@arqueoneto", "@tonelaje", "@servicio", "@trafico", "@nmotores", "@nchip", "@fchip", "@rchip", "@regnum", "@fexp", "@cap", "@marin" };
+            return c.Ejecutar("RegistrarEmbarca", Parametros, EMB.Matricula, EMB.Nombre, EMB.RNPATITULAR, EMB.HP, EMB.ESLORA, EMB.MANGA, EMB.PUNTAL, EMB.ARQUEOBRUTO, EMB.ARQUEONETO, EMB.TONELAJE, EMB.SERVICIO, EMB.TRAFICO, EMB.NMOTORES, EMB.NCHIP, EMB.FECHACHIPEADO, EMB.RESPCHIP, EMB.REGISTRONUM, EMB.FECHAEXP, EMB.CAPITAN, EMB.MARINERO);
 
         }
         public int Actualizar_Embarcacion(Embarcacion EMB)
         {
-            string[] Parametros = { "@matricula", "@nombre", "@RNPATIT","@motorHP", "@eslora", "@manga", "@puntal", "@arqueobruto", "@arqueoneto", "@tonelaje", "@servicio", "@trafico", "@nmotores", "@nchip", "@fchip", "@rchip", "@regnum", "@fexp", "@cap", "@marin", "@motormarca" };
-            return c.Ejecutar("ActualizarEmbacacion", Parametros, EMB.Matricula, EMB.Nombre,EMB.RNPATITULAR, EMB.HP, EMB.ESLORA, EMB.MANGA, EMB.PUNTAL, EMB.ARQUEOBRUTO, EMB.ARQUEONETO, EMB.TONELAJE, EMB.SERVICIO, EMB.TRAFICO, EMB.NMOTORES, EMB.NCHIP, EMB.FECHACHIPEADO, EMB.RESPCHIP, EMB.REGISTRONUM, EMB.FECHAEXP,EMB.CAPITAN, EMB.MARINERO, EMB.MARCA);
+            string[] Parametros = { "@matricula", "@nombre", "@RNPATIT", "@motorHP", "@eslora", "@manga", "@puntal", "@arqueobruto", "@arqueoneto", "@tonelaje", "@servicio", "@trafico", "@nmotores", "@nchip", "@fchip", "@rchip", "@regnum", "@fexp", "@cap", "@marin" };
+            return c.Ejecutar("ActualizarEmbacacion", Parametros, EMB.Matricula, EMB.Nombre, EMB.RNPATITULAR, EMB.HP, EMB.ESLORA, EMB.MANGA, EMB.PUNTAL, EMB.ARQUEOBRUTO, EMB.ARQUEONETO, EMB.TONELAJE, EMB.SERVICIO, EMB.TRAFICO, EMB.NMOTORES, EMB.NCHIP, EMB.FECHACHIPEADO, EMB.RESPCHIP, EMB.REGISTRONUM, EMB.FECHAEXP, EMB.CAPITAN, EMB.MARINERO);
 
         }
         public int Eliminar_Embarcacion(string Matricula)
@@ -207,7 +207,7 @@ namespace Logica
         }
         public int registrar_perm_emb(Embarcacion emb, string Permiso)
         {
-            string[] Parametros = { "@MATRI","@PERMISO" };
+            string[] Parametros = { "@MATRI", "@PERMISO" };
             return c.Ejecutar("REGISTRO_PER_EMB", Parametros, emb.Matricula, Permiso);
         }
 
@@ -243,7 +243,7 @@ namespace Logica
             return c.getDatosTabla("Resumen", Parametros, RNPA);
         }
 
-        public DataTable ResumenPesqueria (string RNPA)
+        public DataTable ResumenPesqueria(string RNPA)
         {
             string[] Parametros = { "@RNPA" };
             return c.getDatosTabla("Pesquerias", Parametros, RNPA);
@@ -262,6 +262,29 @@ namespace Logica
         {
             string[] Parametros = { "@rnpa" };
             c.Ejecutar("EliminarDirectiva", Parametros, RNPA);
+        }
+        #endregion
+
+        #region Federacion
+        public int Registar_Federacion(string Nombre, string Presidente, string Telefono, string Correo, int Folio)
+        {
+            string[] Parametros = { "@nombre", "@presidente", "@telefono", "@correo" ,"@folio"};
+            return c.Ejecutar("RegistrarFederacion", Parametros, Nombre, Presidente, Telefono, Correo, Folio);
+        }
+        public int Actualizar_Federacion(string Nombre, string Presidente, string Telefono, string Correo, int Folio)
+        {
+            string[] Parametros = { "@nombre", "@presidente", "@telefono", "@correo", "@folio" };
+            return c.Ejecutar("ActualizarFederacion", Parametros, Nombre, Presidente, Telefono, Correo, Folio);
+        }
+        public int Eliminar_Federacion(int Folio)
+        {
+            string[] Parametros = { "@folio" };
+            return c.Ejecutar("EliminarFederacion", Parametros, Folio);
+        }
+        public DataTable Obtener_Federaciones()
+        {
+            string[] Parametros = { };
+            return c.getDatosTabla("Obtener", Parametros,new string[] { });
         }
         #endregion
     }
