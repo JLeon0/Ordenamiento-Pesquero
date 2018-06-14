@@ -60,6 +60,12 @@
     <Compile Include="Pantallas Registros\Pantalla_Certificado_Mat.Designer.cs">
       <DependentUpon>Pantalla_Certificado_Mat.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas Registros\Pantalla_Federaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas Registros\Pantalla_Federaciones.Designer.cs">
+      <DependentUpon>Pantalla_Federaciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas Registros\Pantalla_Registro_UnidadEconomica.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,6 +99,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Pantallas Registros\Pantalla_Certificado_Mat.resx">
       <DependentUpon>Pantalla_Certificado_Mat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas Registros\Pantalla_Federaciones.resx">
+      <DependentUpon>Pantalla_Federaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas Registros\Pantalla_Registro_UnidadEconomica.resx">
       <DependentUpon>Pantalla_Registro_UnidadEconomica.cs</DependentUpon>
