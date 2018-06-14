@@ -6,25 +6,25 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.22355cm</Width>
+              <Width>3.79982cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.22355cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>4.43146cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>5.38396cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.05021cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.10313cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.10313cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -40,7 +40,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>NPERMISO</Value>
+                              <Value>PERMISO</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -130,7 +130,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>LUGAREXPEDICION</Value>
+                              <Value>LUGAR DE EXPEDICION</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -481,11 +481,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
+        <DataSetName>vista_perm</DataSetName>
         <Top>1.58433cm</Top>
         <Left>2.87073cm</Left>
         <Height>1.78208cm</Height>
-        <Width>16.9471cm</Width>
+        <Width>22.09524cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -496,7 +496,7 @@
     <Height>2.76042in</Height>
     <Style />
   </Body>
-  <Width>9.58979in</Width>
+  <Width>9.82912in</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
@@ -586,24 +586,24 @@
   </Page>
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="Permisos_lista">
+    <DataSource Name="DataSetPermisos">
       <ConnectionProperties>
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>708148e8-9bc4-4245-a30f-3d5999a8d242</rd:DataSourceID>
+      <rd:DataSourceID>24d35dfe-195c-4ef7-aa8e-667b9b2767c0</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="vista_perm">
       <Query>
-        <DataSourceName>Permisos_lista</DataSourceName>
+        <DataSourceName>DataSetPermisos</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
         <Field Name="NPERMISO">
           <DataField>NPERMISO</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="FOLIO">
           <DataField>FOLIO</DataField>
@@ -631,8 +631,8 @@
         </Field>
       </Fields>
       <rd:DataSetInfo>
-        <rd:DataSetName>Permisos_lista</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Source\Repos\Ordenamiento-Pesquero\OrdenamientoPesquero\OrdenamientoPesquero\Permisos_lista.xsd</rd:SchemaPath>
+        <rd:DataSetName>DataSetPermisos</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Source\Repos\Ordenamiento-Pesquero\OrdenamientoPesquero\OrdenamientoPesquero\DataSetPermisos.xsd</rd:SchemaPath>
         <rd:TableName>vista_perm</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

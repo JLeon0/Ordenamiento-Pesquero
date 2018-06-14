@@ -384,7 +384,7 @@ namespace OrdenamientoPesquero
 
         private void Ver_Click(object sender, EventArgs e)
         {
-            Vistas vista = new Vistas(RNPA, NombreUnidad, 1);
+            Vistas vista = new Vistas(CURPPesc.Text, RNPA, 3);
             vista.ShowDialog();
         }
     }

@@ -1,16 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<xs:schema id="Permisos_lista" targetNamespace="http://tempuri.org/Permisos_lista.xsd" xmlns:mstns="http://tempuri.org/Permisos_lista.xsd" xmlns="http://tempuri.org/Permisos_lista.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+<xs:schema id="DataSetPermisos" targetNamespace="http://tempuri.org/DataSetPermisos.xsd" xmlns:mstns="http://tempuri.org/DataSetPermisos.xsd" xmlns="http://tempuri.org/DataSetPermisos.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OrdPesqueroConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OrdPesqueroConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OrdenamientoPesquero.Properties.Settings.GlobalReference.Default.OrdPesqueroConnectionString1" Provider="System.Data.SqlClient" />
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OrdPesqueroConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OrdPesqueroConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OrdenamientoPesquero.Properties.Settings.GlobalReference.Default.OrdPesqueroConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OrdPesqueroConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OrdPesqueroConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OrdenamientoPesquero.Properties.Settings.GlobalReference.Default.OrdPesqueroConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vista_permTableAdapter" GeneratorDataComponentClassName="vista_permTableAdapter" Name="vista_perm" UserDataComponentName="vista_permTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="OrdPesqueroConnectionString (Settings)" DbObjectName="OrdPesquero.dbo.vista_perm" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="OrdPesqueroConnectionString1 (Settings)" DbObjectName="OrdPesquero.dbo.vista_perm" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.vista_perm</CommandText>
@@ -38,7 +37,7 @@
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="Permisos_lista" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="Permisos_lista" msprop:Generator_UserDSName="Permisos_lista">
+  <xs:element name="DataSetPermisos" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSetPermisos" msprop:Generator_UserDSName="DataSetPermisos">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
         <xs:element name="vista_perm" msprop:Generator_TableClassName="vista_permDataTable" msprop:Generator_TableVarName="tablevista_perm" msprop:Generator_TablePropName="vista_perm" msprop:Generator_RowDeletingName="vista_permRowDeleting" msprop:Generator_RowChangingName="vista_permRowChanging" msprop:Generator_RowEvHandlerName="vista_permRowChangeEventHandler" msprop:Generator_RowDeletedName="vista_permRowDeleted" msprop:Generator_UserTableName="vista_perm" msprop:Generator_RowChangedName="vista_permRowChanged" msprop:Generator_RowEvArgName="vista_permRowChangeEvent" msprop:Generator_RowClassName="vista_permRow">

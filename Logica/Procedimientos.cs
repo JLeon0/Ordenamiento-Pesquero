@@ -202,6 +202,21 @@ namespace Logica
             string[] Parametros = { "@RNPA" };
             return c.getDatosTabla("CertMatXUnidad", Parametros, RNPA);
         }
+        public DataTable ObtenerEmbarca(string Matricula)
+        {
+            string[] Parametros = { "@matricula" };
+            return c.getDatosTabla("Obtener_Embarcacion", Parametros, Matricula);
+        }
+        public DataTable NpermisoxEmbarca(string Matricula)
+        {
+            string[] Parametros = { "@matricula" };
+            return c.getDatosTabla("NpermisoxEmbarca", Parametros, Matricula);
+        }
+        public DataTable PermisosxEmbarca(string Matricula)
+        {
+            string[] Parametros = { "@matricula" };
+            return c.getDatosTabla("PermisosxEmbarca", Parametros, Matricula);
+        }
 
         #endregion
 

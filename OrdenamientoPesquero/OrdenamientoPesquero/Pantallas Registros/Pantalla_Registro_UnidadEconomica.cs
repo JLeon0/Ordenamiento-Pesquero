@@ -34,6 +34,7 @@ namespace OrdenamientoPesquero
         public Pantalla_Registro_UnidadEconomica()
         {
             InitializeComponent();
+            val.ajustarResolucion(this);
             this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
             this.Width = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width);
         }
@@ -102,7 +103,7 @@ namespace OrdenamientoPesquero
                     }
                     else if (radioButton1.Checked)
                     {
-                        ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
+                        ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "1", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
                         exito = proc.Actualizar_Unidad(ue);
                     }
                     val.Exito(exito);
@@ -251,7 +252,8 @@ namespace OrdenamientoPesquero
                     mtbCP.Text = fila["CODIGO_POSTAL"].ToString();
                     txtCorreo.Text = fila["CORREO"].ToString();
                     mtbTelefono.Text = fila["TELEFONO"].ToString();
-                    //tipo = Convert.ToInt32(fila["TIPO"]);
+                    string x = fila["TIPO"].ToString();
+                    if (x != "") { tipo = Convert.ToInt32(fila["TIPO"]); }
                 }
                 if (tipo == 0)
                 { radioButton0.Checked = true; }
@@ -273,10 +275,12 @@ namespace OrdenamientoPesquero
             mtbCP.Text = fila["CODIGO_POSTAL"].ToString();
             txtCorreo.Text = fila["CORREO"].ToString();
             mtbTelefono.Text = fila["TELEFONO"].ToString();
-            //tipo = Convert.ToInt32(fila["TIPO"]);          
+            string x = fila["TIPO"].ToString();
+            if (x != "") { tipo = Convert.ToInt32(fila["TIPO"]);}
 
             if (tipo == 0)
             { radioButton0.Checked = true; }
+            else { radioButton1.Checked = true; }
         }
         #endregion
 
@@ -545,6 +549,22 @@ namespace OrdenamientoPesquero
             //proc.bdd = "OrdPesquero2";
             //proc.cambiarbd(proc.bdd);
             this.OnLoad(e);
+        }
+
+        private void cbRNPA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                pictureBox12_Click(sender, e);
+            }
+        }
+
+        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                BuscarNombreOrg_Click(sender, e);
+            }
         }
     }
 }

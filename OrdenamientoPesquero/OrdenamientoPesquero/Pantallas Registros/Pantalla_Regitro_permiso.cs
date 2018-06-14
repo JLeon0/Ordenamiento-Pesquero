@@ -18,6 +18,8 @@ namespace OrdenamientoPesquero
         public Pantalla_Regitro_permiso(string rnpa, string muni, string unidad)
         {
             InitializeComponent();
+            this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
+            this.Width = 734;
             Rnpa = rnpa;
             Municipio = muni;
             uni = unidad;
@@ -33,6 +35,7 @@ namespace OrdenamientoPesquero
         DataTable dt = null;
         private void Pantalla_Regitro_permiso_Load(object sender, EventArgs e)
         {
+            //val.ajustarResolucion(this);
             CargarRNPA();
             Unid.Text = uni;
             dt = proc.ObtenerCertMatrXUnidad(Rnpa);
@@ -56,6 +59,7 @@ namespace OrdenamientoPesquero
             dgvEmbarcacionesPerm[1,row.Index].Value=dt.Rows[combo.SelectedIndex]["MATRICULA"].ToString();
             dgvEmbarcacionesPerm[2, row.Index].Value = dt.Rows[combo.SelectedIndex]["MOTORMARCA"].ToString();
             dgvEmbarcacionesPerm[3, row.Index].Value = dt.Rows[combo.SelectedIndex]["MOTORHP"].ToString();
+            dgvEmbarcacionesPerm[0, row.Index].Value = dt.Rows[combo.SelectedIndex]["NOMBREEMBARCACION"].ToString();
         }
         private void CargarRNPA()
         {
@@ -65,10 +69,6 @@ namespace OrdenamientoPesquero
             nPer.DisplayMember = "NPERMISO";
             nPer.ValueMember = "NPERMISO";
             nPer.Text = a;
-        }
-        private void pictureBox13_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void diaExpPer_ValueChanged(object sender, EventArgs e)
@@ -140,7 +140,7 @@ namespace OrdenamientoPesquero
                 if (i > 0) { finVig += "/"; }
                 i--;
             }
-            perm = new Permiso(FolioPer.Text, Rnpa, nPer.Text, PesqueriaPer.Text, LugarExpPer.Text, diaExp, finVig, ZonaPescaPerm.Text, SitiosDesemPer.Text, ObservacionesPem.Text);
+            perm = new Permiso(FolioPer.Text, Rnpa, nPer.Text, PesqueriaPer.Text, LugarExpPer.Text, diaExp, finVig, ZonaPescaPerm.Text, SitiosDesemPer.Text);
             if (registrar)
             { return proc.Registrar_Permiso(perm); }
             else { return proc.Actualizar_Permiso(perm); }
@@ -163,7 +163,6 @@ namespace OrdenamientoPesquero
                     finVigenciaPer.Text = dt.Rows[0]["FINVIGENCIA"].ToString();
                     ZonaPescaPerm.Text = dt.Rows[0]["ZONAPESCA"].ToString();
                     SitiosDesemPer.Text = dt.Rows[0]["SITIOSDESEMBARQUE"].ToString();
-                    ObservacionesPem.Text = dt.Rows[0]["OBSERVACIONES"].ToString();
                     dt = proc.EquiposxPermiso(per);
                     numericUpDown2.Value = dt.Rows.Count;
                     dgvEquiposPescaPerm.RowCount = dt.Rows.Count;
@@ -227,6 +226,7 @@ namespace OrdenamientoPesquero
             exito = AccionesPermiso(false);
             proc.Borrar_equipo(nPer.Text);
             equiposdepesca();
+            proc.EliminarRelac(nPer.Text);
             for (int i = 0; i < dgvEmbarcacionesPerm.RowCount; i++)
             {
                 if (dgvEmbarcacionesPerm[0, i].Value != null)
@@ -330,6 +330,14 @@ namespace OrdenamientoPesquero
                 dgvCombo.SelectedIndexChanged -= new EventHandler(dvgCombo_SelectedIndexChanged);
 
                 dgvCombo.SelectedIndexChanged += new EventHandler(dvgCombo_SelectedIndexChanged);
+            }
+        }
+
+        private void nPer_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                pictureBox13_Click_1(sender, e);
             }
         }
     }

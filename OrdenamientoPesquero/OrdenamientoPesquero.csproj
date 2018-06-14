@@ -49,6 +49,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataAnexo3.cs">
+      <DependentUpon>DataAnexo3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataAnexo3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataAnexo3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSetPermisos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetPermisos.xsd</DependentUpon>
+    </Compile>
     <Compile Include="OrdPesqueroDataSet11.cs">
       <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>
     </Compile>
@@ -56,6 +69,16 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdPesqueroDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdPesqueroDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet21.xsd</DependentUpon>
     </Compile>
     <Compile Include="Pantallas Registros\Pantalla_Certificado_Mat.cs">
       <SubType>Form</SubType>
@@ -119,8 +142,31 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Reportes\Anexo3.rdlc" />
     <EmbeddedResource Include="Reportes\Permisos.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
+    <None Include="DataAnexo3.xsc">
+      <DependentUpon>DataAnexo3.xsd</DependentUpon>
+    </None>
+    <None Include="DataAnexo3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataAnexo3.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataAnexo3.xss">
+      <DependentUpon>DataAnexo3.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPermisos.xsc">
+      <DependentUpon>DataSetPermisos.xsd</DependentUpon>
+    </None>
+    <None Include="DataSetPermisos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetPermisos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSetPermisos.xss">
+      <DependentUpon>DataSetPermisos.xsd</DependentUpon>
+    </None>
     <None Include="OrdPesqueroDataSet11.xsc">
       <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>
     </None>
@@ -131,6 +177,28 @@
     </None>
     <None Include="OrdPesqueroDataSet11.xss">
       <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet2.xsc">
+      <DependentUpon>OrdPesqueroDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet2.xss">
+      <DependentUpon>OrdPesqueroDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet21.xsc">
+      <DependentUpon>OrdPesqueroDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet21.xss">
+      <DependentUpon>OrdPesqueroDataSet21.xsd</DependentUpon>
     </None>
     <None Include="Permisos_lista.xsc">
       <DependentUpon>Permisos_lista.xsd</DependentUpon>
