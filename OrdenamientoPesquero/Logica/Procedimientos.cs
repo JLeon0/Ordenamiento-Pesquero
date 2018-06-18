@@ -266,10 +266,10 @@ namespace Logica
         #endregion
 
         #region Federacion
-        public int Registar_Federacion(string Nombre, string Presidente, string Telefono, string Correo, int Folio)
+        public int Registar_Federacion(string Nombre, string Presidente, string Telefono, string Correo)
         {
-            string[] Parametros = { "@nombre", "@presidente", "@telefono", "@correo" ,"@folio"};
-            return c.Ejecutar("RegistrarFederacion", Parametros, Nombre, Presidente, Telefono, Correo, Folio);
+            string[] Parametros = { "@nombre", "@presidente", "@telefono", "@correo"};
+            return c.Ejecutar("RegistrarFederacion", Parametros, Nombre, Presidente, Telefono, Correo);
         }
         public int Actualizar_Federacion(string Nombre, string Presidente, string Telefono, string Correo, int Folio)
         {
@@ -283,8 +283,19 @@ namespace Logica
         }
         public DataTable Obtener_Federaciones()
         {
-            string[] Parametros = { };
-            return c.getDatosTabla("Obtener", Parametros,new string[] { });
+            string[] Parametros = {"@Folio" };
+            return c.getDatosTabla("ObtenerFederacion", Parametros,new string[] {"" });
+        }
+        public int AsignarFederacion(int Folio, string RNPA)
+        {
+            string[] Parametros = { "@folio", "@RNPA" };
+            return c.Ejecutar("AsignarFederacion", Parametros, Folio, RNPA);
+        }
+        public DataTable ObtenerUnaFederacion(string RNPA)
+        {
+            string[] Parametros = { "@RNPA" };
+            return c.getDatosTabla("ObtenerUnaFederacion", Parametros, RNPA);
+
         }
         #endregion
     }

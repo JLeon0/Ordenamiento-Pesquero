@@ -42,9 +42,11 @@
             this.Actualizar = new System.Windows.Forms.PictureBox();
             this.Registrar = new System.Windows.Forms.PictureBox();
             this.Telefono = new System.Windows.Forms.MaskedTextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Eliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -188,12 +190,24 @@
             this.Telefono.Size = new System.Drawing.Size(84, 20);
             this.Telefono.TabIndex = 121;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Search;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(351, 70);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox1.TabIndex = 122;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Pantalla_Federaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(402, 310);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Telefono);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label6);
@@ -214,6 +228,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Eliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,5 +250,6 @@
         private System.Windows.Forms.PictureBox Actualizar;
         private System.Windows.Forms.PictureBox Registrar;
         private System.Windows.Forms.MaskedTextBox Telefono;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
