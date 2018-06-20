@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AForge.Video">
+      <HintPath>..\..\..\RESPALDO YISUS\WebCams\WebCams\bin\Debug\AForge.Video.dll</HintPath>
+    </Reference>
+    <Reference Include="AForge.Video.DirectShow">
+      <HintPath>..\..\..\RESPALDO YISUS\WebCams\WebCams\bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -65,6 +71,12 @@
     </Compile>
     <Compile Include="Pantallas Registros\Pantalla_Federaciones.Designer.cs">
       <DependentUpon>Pantalla_Federaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas Registros\Pantalla_Fotografia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas Registros\Pantalla_Fotografia.Designer.cs">
+      <DependentUpon>Pantalla_Fotografia.cs</DependentUpon>
     </Compile>
     <Compile Include="Pantallas Registros\Pantalla_Registro_UnidadEconomica.cs">
       <SubType>Form</SubType>
@@ -102,6 +114,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas Registros\Pantalla_Federaciones.resx">
       <DependentUpon>Pantalla_Federaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas Registros\Pantalla_Fotografia.resx">
+      <DependentUpon>Pantalla_Fotografia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas Registros\Pantalla_Registro_UnidadEconomica.resx">
       <DependentUpon>Pantalla_Registro_UnidadEconomica.cs</DependentUpon>

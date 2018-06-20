@@ -38,6 +38,7 @@ namespace OrdenamientoPesquero
             CargarPescadores();
             CargarMatriculas();
             CargarMunicipios();
+            ObtenerImagen();
             limpiarpescador();
             cargando = false;
             Unid.Text = NombreUnidad;
@@ -102,28 +103,35 @@ namespace OrdenamientoPesquero
             int o = 0;
             if (si.Checked)
                 o = 1;
-            pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text, RFCPesc.Text, EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, MatriculaPesc.Text, CorreoPesc.Text, LocalidadPesc.Text, o,RNPA);
+            pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text, RFCPesc.Text, EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, MatriculaPesc.SelectedValue.ToString(), CorreoPesc.Text, LocalidadPesc.Text, o,RNPA);
             if (registrar)
             {
+                RegistrarImagen();
                 return proc.Registrar_Pescador(pes);
             }
             else
             {
+                RegistrarImagen();
                 return proc.Actualizar_Pescador(pes);
             }
         }
 
         private void RegistrarUnidad_Click(object sender, EventArgs e)
         {
-            if (!val.validaralgo(pescador))
+            if (CURPPesc.Text != "")
             {
+                if (!val.validaralgo(pescador))
+                {
+                }
+                else
+                {
+                    exito = AccionesPescador(true);
+                }
+                val.Exito(exito);
+                exito = 0;
+                CargarPescadores();
             }
-            else
-            {
-                exito = AccionesPescador(true);
-            }
-            val.Exito(exito);
-            exito = 0;
+            else { MessageBox.Show("No se puede registrar un pescador sin CURP"); }
         }
 
         private void ActualizarUnidad_Click(object sender, EventArgs e)
@@ -316,6 +324,7 @@ namespace OrdenamientoPesquero
             {
                 DataRow na = dt.NewRow();
                 na["MATRICULA"] = "NO APLICA";
+                na["NOMBREEMBARCACION"] = "NO APLICA";
                 dt.Rows.Add(na);
             }
             MatriculaPesc.DataSource = dt;
@@ -330,7 +339,7 @@ namespace OrdenamientoPesquero
             string c = CURPPesc.Text;
             dt = proc.Obtener_Pescador(CURPPesc.Text);
             limpiarpescador();
-            string tipopescador = "", ocupacion = "", cuerpoagua = "";
+            string tipopescador = "", ocupacion = "", cuerpoagua = "", matricula = "";
             foreach (DataRow filas in dt.Rows)
             {
                 NombrePesc.Text = filas["NOMBRE"].ToString();
@@ -375,6 +384,7 @@ namespace OrdenamientoPesquero
                 }
             }
             CURPPesc.Text = c;
+            ObtenerImagen();
             this.Cursor = Cursors.Default;
         }
 
@@ -424,24 +434,64 @@ namespace OrdenamientoPesquero
             MatriculaPesc.SelectedText = "NO APLICA";
         }
 
-        private void CargarImagen_Click(object sender, EventArgs e)
-        {
-           
-        }
 
         private void CargarImagen_Click_1(object sender, EventArgs e)
         {
-            try
+            DialogResult result = MessageBox.Show("Desea capturar una nueva imagen?", "¿?", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes)
             {
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                Pantalla_Fotografia pf = new Pantalla_Fotografia(CURPPesc.Text);
+                pf.ShowDialog();
+                ObtenerImagen();
+            }
+            else if (result == DialogResult.No)
+            {
+                try
                 {
-                    string imagen = openFileDialog1.FileName;
-                    pictureBox1.Image = Image.FromFile(imagen);
+                    if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                    {
+                        Bitmap bmp = new Bitmap(Image.FromFile(openFileDialog1.FileName));
+                        Bitmap bmp2 = new Bitmap(bmp, new Size(131, 182));
+                        Imagen.BackgroundImage = bmp2;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
                 }
             }
-            catch (Exception ex)
+        }
+        private void ObtenerImagen()
+        {
+            Imagen.BackgroundImage = null;
+            dt = proc.ObtenerImagen(CURPPesc.Text);
+            if (dt.Rows.Count > 0)
             {
-                MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
+                Imagen.BackColor = Color.White;
+                Imagen.BackgroundImage = null;
+                byte[] imagenBuffer = (byte[])dt.Rows[0]["IMAGEN"];
+                System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
+                Imagen.BackgroundImage = (Image.FromStream(ms));
+                Imagen.BackgroundImageLayout = ImageLayout.Zoom;
+            }
+        }
+        private void RegistrarImagen()
+        {
+            if (Imagen.BackgroundImage != null)
+            {
+                System.IO.MemoryStream ms = new System.IO.MemoryStream();
+                Imagen.BackgroundImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+
+                System.Drawing.Image fullsizeImage = System.Drawing.Image.FromStream(ms);
+                System.Drawing.Image newImage = fullsizeImage.GetThumbnailImage(131, 182, null, IntPtr.Zero);
+                System.IO.MemoryStream myResult = new System.IO.MemoryStream();
+                newImage.Save(myResult, System.Drawing.Imaging.ImageFormat.Gif);
+
+                int exito = proc.InsertarImagen(CURPPesc.Text, myResult.GetBuffer());
+                if (exito > 0)
+                {
+                    MessageBox.Show("Imagen Insertada correctamente");
+                }
             }
         }
 

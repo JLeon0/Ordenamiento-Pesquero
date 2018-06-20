@@ -76,7 +76,15 @@ namespace OrdenamientoPesquero
         }
         public void limpiarcertmat()
         {
-            foreach (TextBox item in Controls.OfType<TextBox>())
+            foreach (TextBox item in groupBox1.Controls.OfType<TextBox>())
+            { 
+                item.Text = "";
+            }
+            foreach (ComboBox item in groupBox2.Controls.OfType<ComboBox>())
+            {
+                item.Text = "";
+            }
+            foreach (MaskedTextBox item in groupBox2.Controls.OfType<MaskedTextBox>())
             {
                 item.Text = "";
             }
@@ -89,6 +97,7 @@ namespace OrdenamientoPesquero
             val.Exito(exito);
             exito = 0;
             MatriculaCertMat.Focus();
+            CertMatXUnidad();
         }
 
         private void ActualizarUnidad_Click(object sender, EventArgs e)

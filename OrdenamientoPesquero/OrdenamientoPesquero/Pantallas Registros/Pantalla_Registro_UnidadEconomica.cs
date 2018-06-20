@@ -75,6 +75,8 @@ namespace OrdenamientoPesquero
                                 ue = new Unidad_Economica(r, txtNombre.Text, "1", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
                                 exito = proc.Registrar_Unidad(ue);
                             }
+                            int Folio = ObtenerFolio();
+                            exito = proc.AsignarFederacion(Folio, cbRNPA.Text);
                             CargarRNPA();
                             val.Exito(exito);
                             cargado = true;
@@ -107,6 +109,8 @@ namespace OrdenamientoPesquero
                         ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "1", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
                         exito = proc.Actualizar_Unidad(ue);
                     }
+                    int Folio = ObtenerFolio();
+                    exito = proc.AsignarFederacion(Folio, cbRNPA.Text);
                     val.Exito(exito);
 
                 }
@@ -134,6 +138,8 @@ namespace OrdenamientoPesquero
                         (new System.Threading.Thread(val.CloseIt)).Start();
                         MessageBox.Show("Error durante eliminacion"); /* 1 segundo = 1000 */
                     }
+                    int Folio = ObtenerFolio();
+                    exito = proc.Eliminar_Federacion(Folio);
                     CargarRNPA();
                     cbRNPA.Text = "";
                 }
@@ -185,6 +191,7 @@ namespace OrdenamientoPesquero
             if (existe(cbRNPA.Text))
             {
                 LlenarCampos();
+                ObtenerFederacion();
                 Resumenes(cbRNPA.Text);
                 button1.Enabled = true;
                 button2.Enabled = true;
@@ -223,6 +230,7 @@ namespace OrdenamientoPesquero
         {
             this.Cursor = Cursors.WaitCursor;
             LlenarCamposNombre();
+            ObtenerFederacion();
             Resumenes(cbRNPA.Text);
             button1.Enabled = true;
             button2.Enabled = true;
@@ -456,9 +464,30 @@ namespace OrdenamientoPesquero
         {
             dt = proc.Obtener_Federaciones();
             NomFed.DataSource = dt;
-            NomFed.DisplayMember = "Nombre";
-            NomFed.ValueMember = "Nombre";
+            NomFed.DisplayMember = "NOMBRE";
+            //NomFed.ValueMember = "NOMBRE";
             NomFed.Text = "Seleccione una Federación";
+        }
+        private int ObtenerFolio()
+        {
+            dt = proc.Obtener_Federaciones();
+            foreach (DataRow filas in dt.Rows)
+            {
+                string n = filas["NOMBRE"].ToString();
+                if (n == NomFed.Text)
+                {
+                    return Convert.ToInt32(filas["FOLIO"].ToString());
+                }
+            }
+            return 0;
+        }
+        private void ObtenerFederacion()
+        {
+            dt = proc.ObtenerUnaFederacion(cbRNPA.Text);
+            if (dt.Rows.Count > 0)
+            {
+                NomFed.Text = dt.Rows[0]["NOMBRE"].ToString();
+            }
         }
 
         private void DataResumen_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -575,6 +604,20 @@ namespace OrdenamientoPesquero
             {
                 BuscarNombreOrg_Click(sender, e);
             }
+        }
+
+        private void RegFed_Click(object sender, EventArgs e)
+        {
+            Pantalla_Federaciones fede = new Pantalla_Federaciones("");
+            fede.ShowDialog();
+            CargarFederaciones();
+        }
+
+        private void ModFed_Click(object sender, EventArgs e)
+        {
+            Pantalla_Federaciones fede = new Pantalla_Federaciones(NomFed.Text);
+            fede.ShowDialog();
+            CargarFederaciones();
         }
     }
 }

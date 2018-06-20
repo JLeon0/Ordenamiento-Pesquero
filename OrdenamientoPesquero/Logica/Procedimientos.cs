@@ -184,20 +184,30 @@ namespace Logica
             string[] Parametros = { "@Curp" };
             return c.getDatosTabla("ObtenerPescador", Parametros, Curp);
         }
+        public int InsertarImagen(string CURP,byte[] imagen)
+        {
+            string[] Parametros = { "@curp", "@imagen" };
+            return c.Ejecutar("InsertarImagen", Parametros, CURP, imagen);
+        }
+        public DataTable ObtenerImagen(string curp)
+        {
+            string[] Parametros = { "@curp" };
+            return c.getDatosTabla("ObtenerImagen", Parametros, curp);
+        }
         #endregion
 
 
         #region Embarcacion
         public int Registrar_Embarcacion(Embarcacion EMB)
         {
-            string[] Parametros = { "@matricula", "@nombre", "@RNPATIT", "@motorHP", "@eslora", "@manga", "@puntal", "@arqueobruto", "@arqueoneto", "@tonelaje", "@servicio", "@trafico", "@nmotores", "@nchip", "@fchip", "@rchip", "@regnum", "@fexp", "@cap", "@marin" };
-            return c.Ejecutar("RegistrarEmbarca", Parametros, EMB.Matricula, EMB.Nombre, EMB.RNPATITULAR, EMB.HP, EMB.ESLORA, EMB.MANGA, EMB.PUNTAL, EMB.ARQUEOBRUTO, EMB.ARQUEONETO, EMB.TONELAJE, EMB.SERVICIO, EMB.TRAFICO, EMB.NMOTORES, EMB.NCHIP, EMB.FECHACHIPEADO, EMB.RESPCHIP, EMB.REGISTRONUM, EMB.FECHAEXP, EMB.CAPITAN, EMB.MARINERO);
+            string[] Parametros = { "@matricula", "@nombre", "@RNPATIT", "@motorHP", "@eslora", "@manga", "@puntal", "@arqueobruto", "@arqueoneto", "@tonelaje", "@servicio", "@trafico", "@nmotores", "@nchip", "@fchip", "@rchip", "@regnum", "@fexp", "@cap", "@marin","@motormarca" };
+            return c.Ejecutar("RegistrarEmbarca", Parametros, EMB.Matricula, EMB.Nombre, EMB.RNPATITULAR, EMB.HP, EMB.ESLORA, EMB.MANGA, EMB.PUNTAL, EMB.ARQUEOBRUTO, EMB.ARQUEONETO, EMB.TONELAJE, EMB.SERVICIO, EMB.TRAFICO, EMB.NMOTORES, EMB.NCHIP, EMB.FECHACHIPEADO, EMB.RESPCHIP, EMB.REGISTRONUM, EMB.FECHAEXP, EMB.CAPITAN, EMB.MARINERO, EMB.MARCA);
 
         }
         public int Actualizar_Embarcacion(Embarcacion EMB)
         {
-            string[] Parametros = { "@matricula", "@nombre", "@RNPATIT", "@motorHP", "@eslora", "@manga", "@puntal", "@arqueobruto", "@arqueoneto", "@tonelaje", "@servicio", "@trafico", "@nmotores", "@nchip", "@fchip", "@rchip", "@regnum", "@fexp", "@cap", "@marin" };
-            return c.Ejecutar("ActualizarEmbacacion", Parametros, EMB.Matricula, EMB.Nombre, EMB.RNPATITULAR, EMB.HP, EMB.ESLORA, EMB.MANGA, EMB.PUNTAL, EMB.ARQUEOBRUTO, EMB.ARQUEONETO, EMB.TONELAJE, EMB.SERVICIO, EMB.TRAFICO, EMB.NMOTORES, EMB.NCHIP, EMB.FECHACHIPEADO, EMB.RESPCHIP, EMB.REGISTRONUM, EMB.FECHAEXP, EMB.CAPITAN, EMB.MARINERO);
+            string[] Parametros = { "@matricula", "@nombre", "@RNPATIT", "@motorHP", "@eslora", "@manga", "@puntal", "@arqueobruto", "@arqueoneto", "@tonelaje", "@servicio", "@trafico", "@nmotores", "@nchip", "@fchip", "@rchip", "@regnum", "@fexp", "@cap", "@marin", "@motormarca" };
+            return c.Ejecutar("ActualizarEmbacacion", Parametros, EMB.Matricula, EMB.Nombre, EMB.RNPATITULAR, EMB.HP, EMB.ESLORA, EMB.MANGA, EMB.PUNTAL, EMB.ARQUEOBRUTO, EMB.ARQUEONETO, EMB.TONELAJE, EMB.SERVICIO, EMB.TRAFICO, EMB.NMOTORES, EMB.NCHIP, EMB.FECHACHIPEADO, EMB.RESPCHIP, EMB.REGISTRONUM, EMB.FECHAEXP, EMB.CAPITAN, EMB.MARINERO, EMB.MARCA);
 
         }
         public int Eliminar_Embarcacion(string Matricula)
@@ -266,10 +276,10 @@ namespace Logica
         #endregion
 
         #region Federacion
-        public int Registar_Federacion(string Nombre, string Presidente, string Telefono, string Correo, int Folio)
+        public int Registar_Federacion(string Nombre, string Presidente, string Telefono, string Correo)
         {
-            string[] Parametros = { "@nombre", "@presidente", "@telefono", "@correo" ,"@folio"};
-            return c.Ejecutar("RegistrarFederacion", Parametros, Nombre, Presidente, Telefono, Correo, Folio);
+            string[] Parametros = { "@nombre", "@presidente", "@telefono", "@correo"};
+            return c.Ejecutar("RegistrarFederacion", Parametros, Nombre, Presidente, Telefono, Correo);
         }
         public int Actualizar_Federacion(string Nombre, string Presidente, string Telefono, string Correo, int Folio)
         {
@@ -283,8 +293,19 @@ namespace Logica
         }
         public DataTable Obtener_Federaciones()
         {
-            string[] Parametros = { };
-            return c.getDatosTabla("Obtener", Parametros,new string[] { });
+            string[] Parametros = {"@Folio" };
+            return c.getDatosTabla("ObtenerFederacion", Parametros,new string[] {"" });
+        }
+        public int AsignarFederacion(int Folio, string RNPA)
+        {
+            string[] Parametros = { "@folio", "@RNPA" };
+            return c.Ejecutar("AsignarFederacion", Parametros, Folio, RNPA);
+        }
+        public DataTable ObtenerUnaFederacion(string RNPA)
+        {
+            string[] Parametros = { "@RNPA" };
+            return c.getDatosTabla("ObtenerUnaFederacion", Parametros, RNPA);
+
         }
         #endregion
     }

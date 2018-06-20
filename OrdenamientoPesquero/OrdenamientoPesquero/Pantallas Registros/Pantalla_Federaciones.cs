@@ -25,13 +25,27 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         private void Registrar_Click(object sender, EventArgs e)
         {
             ObtenerFolio();
-            proc.Registar_Federacion(Nombre.Text, Presidente.Text, Telefono.Text, Correo.Text, Folio);
+            if(proc.Registar_Federacion(Nombre.Text, Presidente.Text, Telefono.Text, Correo.Text) > 0)
+            {
+                MessageBox.Show("Registrado Correctamente");
+            }
+            else
+            {
+                MessageBox.Show("Error al Registrar");
+            }
         }
 
         private void Actualizar_Click(object sender, EventArgs e)
         {
             ObtenerFolio();
-            proc.Actualizar_Federacion(Nombre.Text, Presidente.Text, Telefono.Text, Correo.Text, Folio);
+            if(proc.Actualizar_Federacion(Nombre.Text, Presidente.Text, Telefono.Text, Correo.Text, Folio) > 0)
+            {
+                MessageBox.Show("Registrado Correctamente");
+            }
+            else
+            {
+                MessageBox.Show("Error al Registrar");
+            }
         }
 
         private void Eliminar_Click(object sender, EventArgs e)
@@ -43,8 +57,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         {
             dt = proc.Obtener_Federaciones();
             Nombre.DataSource = dt;
-            Nombre.DisplayMember = "Nombre";
-            Nombre.ValueMember = "Nombre";
+            Nombre.DisplayMember = "NOMBRE";
+            //Nombre.ValueMember = "NOMBRE";
             Nombre.Text = "Seleccione una Federación";
         }
 
@@ -78,6 +92,12 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     break;
                 }
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            NF = Nombre.Text;
+            CargarDatos();
         }
     }
 }
