@@ -34,10 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AForge.Video">
-      <HintPath>..\..\..\RESPALDO YISUS\WebCams\WebCams\bin\Debug\AForge.Video.dll</HintPath>
+      <HintPath>E:\Nueva carpeta (2)\AForge.Video.dll</HintPath>
     </Reference>
     <Reference Include="AForge.Video.DirectShow">
-      <HintPath>..\..\..\RESPALDO YISUS\WebCams\WebCams\bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+      <HintPath>E:\Nueva carpeta (2)\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
@@ -55,6 +55,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ObtenerImagen.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ObtenerImagen.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdPesqueroDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet2.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ordPesqueroDataSetpescadores1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -144,6 +154,28 @@
     <EmbeddedResource Include="Reportes\Credencial.rdlc" />
     <EmbeddedResource Include="Reportes\Permisos.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
+    <None Include="ObtenerImagen.xsc">
+      <DependentUpon>ObtenerImagen.xsd</DependentUpon>
+    </None>
+    <None Include="ObtenerImagen.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ObtenerImagen.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ObtenerImagen.xss">
+      <DependentUpon>ObtenerImagen.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet2.xsc">
+      <DependentUpon>OrdPesqueroDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet2.xss">
+      <DependentUpon>OrdPesqueroDataSet2.xsd</DependentUpon>
+    </None>
     <None Include="ordPesqueroDataSetpescadores1.xsc">
       <DependentUpon>ordPesqueroDataSetpescadores1.xsd</DependentUpon>
     </None>

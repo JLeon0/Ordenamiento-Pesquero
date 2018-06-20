@@ -323,7 +323,7 @@ namespace OrdenamientoPesquero
                 if (filas["MATRICULA"].ToString() == RNPA) { break; }
                 I++;
             }
-            if (dt.Rows.Count < I)
+            if (dt.Rows.Count<I)
             {
                 dt.Rows.RemoveAt(I);
             }
@@ -509,22 +509,8 @@ namespace OrdenamientoPesquero
 
         private void Ver_Click(object sender, EventArgs e)
         {
-            Vistas vista = new Vistas(CURPPesc.Text, RNPA, 3);
+            Vistas vista = new Vistas(CURPPesc.Text, RNPA, 4);
             vista.ShowDialog();
-            if (imagenBuffer!=null)
-            {
-                MemoryStream ms = new MemoryStream(imagenBuffer);
-                Bitmap bm = null;
-                try
-                {
-                    bm = new Bitmap(ms);
-                }
-                catch (Exception ex)
-                {
-                    System.Diagnostics.Debug.WriteLine(ex.Message);
-                }
-                bm.Save(Application.StartupPath+"perfil.jpg");
-            }
         }
     }
 }
