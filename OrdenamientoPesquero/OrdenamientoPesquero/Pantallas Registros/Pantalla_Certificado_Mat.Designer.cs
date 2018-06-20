@@ -87,7 +87,8 @@
             this.EliminarUnidad = new System.Windows.Forms.PictureBox();
             this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
             this.RegistrarUnidad = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
@@ -96,7 +97,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // MatriculaCertMat
@@ -730,17 +732,29 @@
             this.RegistrarUnidad.TabStop = false;
             this.RegistrarUnidad.Click += new System.EventHandler(this.RegistrarUnidad_Click);
             // 
-            // pictureBox1
+            // pictureBox3
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.sepada_escudologosiglas_450x85;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(28, 24);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(583, 54);
-            this.pictureBox1.TabIndex = 148;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(510, 13);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(150, 60);
+            this.pictureBox3.TabIndex = 168;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(20, 13);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 60);
+            this.pictureBox2.TabIndex = 167;
+            this.pictureBox2.TabStop = false;
             // 
             // Pantalla_Certificado_Mat
             // 
@@ -750,7 +764,9 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(690, 612);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -759,7 +775,6 @@
             this.Controls.Add(this.ActualizarUnidad);
             this.Controls.Add(this.RegistrarUnidad);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox1);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Pantalla_Certificado_Mat";
@@ -776,7 +791,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -816,7 +832,6 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label60;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -843,5 +858,7 @@
         private System.Windows.Forms.ComboBox Marinero;
         private System.Windows.Forms.ComboBox Capitan;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

@@ -301,6 +301,7 @@ namespace OrdenamientoPesquero
             {
                 exito = proc.Eliminar_Pescador(CURPPesc.Text);
                 if (exito > 0) { limpiarpescador(); exito = 0; }
+                CargarPescadores();
             }
         }
 
@@ -316,18 +317,17 @@ namespace OrdenamientoPesquero
         private void CargarMatriculas()
         {
             dt = proc.ObtenerCertMatrXUnidad(RNPA);
-            bool x = false;
+            int I = 0;
             foreach (DataRow filas in dt.Rows)
             {
-                if(filas["MATRICULA"].ToString() == "NO APLICA") { x = true; }
+                if (filas["MATRICULA"].ToString() == RNPA) { break; }
+                I++;
             }
-            if (!x)
-            {
-                DataRow na = dt.NewRow();
-                na["MATRICULA"] = "NO APLICA";
-                na["NOMBREEMBARCACION"] = "NO APLICA";
-                dt.Rows.Add(na);
-            }
+            dt.Rows.RemoveAt(I);
+            DataRow na = dt.NewRow();
+            na["MATRICULA"] = "NO APLICA";
+            na["NOMBREEMBARCACION"] = "NO APLICA";
+            dt.Rows.Add(na);
             MatriculaPesc.DataSource = dt;
             MatriculaPesc.DisplayMember = "MATRICULA";
             MatriculaPesc.ValueMember = "MATRICULA";
@@ -359,9 +359,17 @@ namespace OrdenamientoPesquero
                 tipopescador = filas["TIPO_PESCADOR"].ToString();
                 ocupacion = filas["OCUPACION_LABORAL"].ToString();
                 cuerpoagua = filas["CUERPO_DE_AGUA"].ToString();
-                MatriculaPesc.Text = filas["MATRICULA"].ToString();
+                matricula = filas["MATRICULA"].ToString();
                 CorreoPesc.Text = filas["CORREO"].ToString();
                 LocalidadPesc.Text = filas["LOCALIDAD"].ToString();
+            }
+            if(matricula == RNPA)
+            {
+                MatriculaPesc.Text = "NO APLICA";
+            }
+            else
+            {
+                MatriculaPesc.Text = matricula;
             }
             foreach (RadioButton boton in TipoPesc.Controls)
             {
