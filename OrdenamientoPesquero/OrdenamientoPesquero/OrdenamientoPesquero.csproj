@@ -34,10 +34,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="AForge.Video">
-      <HintPath>..\..\..\RESPALDO YISUS\WebCams\WebCams\bin\Debug\AForge.Video.dll</HintPath>
+      <HintPath>E:\Nueva carpeta (2)\AForge.Video.dll</HintPath>
     </Reference>
     <Reference Include="AForge.Video.DirectShow">
-      <HintPath>..\..\..\RESPALDO YISUS\WebCams\WebCams\bin\Debug\AForge.Video.DirectShow.dll</HintPath>
+      <HintPath>E:\Nueva carpeta (2)\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />

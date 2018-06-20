@@ -67,7 +67,7 @@
       </Textbox>
       <Image Name="Image3">
         <Source>External</Source>
-        <Value>=</Value>
+        <Value>=Parameters!RutaImagen.Value</Value>
         <Sizing>FitProportional</Sizing>
         <Top>6.70983cm</Top>
         <Left>19.32533cm</Left>
@@ -135,7 +135,6 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox3</rd:DefaultName>
-                <Top>0cm</Top>
                 <Left>1.08419cm</Left>
                 <Height>0.24413cm</Height>
                 <Width>1.81961cm</Width>
@@ -152,7 +151,6 @@
               </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Left>0cm</Left>
             <Height>0.24413cm</Height>
             <Width>2.9038cm</Width>
             <Style>
@@ -229,7 +227,6 @@
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>0.48826cm</Top>
-            <Left>0cm</Left>
             <Height>0.24413cm</Height>
             <Width>2.9038cm</Width>
             <ZIndex>1</ZIndex>
@@ -275,7 +272,6 @@
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>0.73239cm</Top>
-            <Left>0cm</Left>
             <Height>0.24413cm</Height>
             <Width>2.9038cm</Width>
             <ZIndex>2</ZIndex>
@@ -353,7 +349,6 @@
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>0.24413cm</Top>
-            <Left>0cm</Left>
             <Height>0.24413cm</Height>
             <Width>2.9038cm</Width>
             <ZIndex>3</ZIndex>
@@ -398,7 +393,6 @@
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>0.97652cm</Top>
-            <Left>0cm</Left>
             <Height>0.24413cm</Height>
             <Width>2.9038cm</Width>
             <ZIndex>4</ZIndex>
@@ -476,7 +470,6 @@
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>1.22065cm</Top>
-            <Left>0cm</Left>
             <Height>0.24413cm</Height>
             <Width>3.66448cm</Width>
             <ZIndex>5</ZIndex>
@@ -632,7 +625,6 @@
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>1.74419cm</Top>
-            <Left>0cm</Left>
             <Height>0.24413cm</Height>
             <Width>2.9038cm</Width>
             <ZIndex>7</ZIndex>
