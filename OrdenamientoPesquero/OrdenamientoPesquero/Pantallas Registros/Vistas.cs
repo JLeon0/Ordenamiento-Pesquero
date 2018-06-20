@@ -115,7 +115,28 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     para[17] = new ReportParameter("Permisos", dt.Rows[0][0].ToString());
                     reportViewer1.LocalReport.SetParameters(para);
                     this.reportViewer1.RefreshReport();
-
+                    break;
+                case 4:
+                    this.reportViewer1.ProcessingMode = ProcessingMode.Local;
+                    reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Credencial.rdlc");
+                    DataTable dt1 = proc.Obtener_Pescador(rnpa);
+                    this.obtenerImagenTableAdapter.Fill(obtenerImagen._ObtenerImagen, rnpa);
+                    ReportParameter[] para1 = new ReportParameter[9];
+                    para1[0] = new ReportParameter("NOMBRE", dt1.Rows[0]["NOMBRE"].ToString()+" "+ dt1.Rows[0]["AP_PAT"].ToString()+" "+ dt1.Rows[0]["AP_MAT"].ToString());
+                    para1[1] = new ReportParameter("CURP", dt1.Rows[0]["CURP"].ToString());
+                    para1[2] = new ReportParameter("SANGRE", dt1.Rows[0]["TIPO_SANGRE"].ToString());
+                    para1[3] = new ReportParameter("MATRICULA", dt1.Rows[0]["MATRICULA"].ToString());
+                    dt1 = proc.Obtener_unidades(unidad);
+                    para1[4] = new ReportParameter("RNPA", unidad);
+                    para1[5] = new ReportParameter("TITULAR", unidad);
+                    para1[6] = new ReportParameter("FOLIO", unidad);
+                    para1[7] = new ReportParameter("DIRECCION", unidad);
+                    string ruta = Application.StartupPath.ToString();
+                    ruta = ruta.Replace("\\", "*");
+                    ruta = ruta.Replace("*", "/");
+                    para1[8] = new ReportParameter("RutaImagen", ruta + "perfil.jpg");
+                    reportViewer1.LocalReport.SetParameters(para1);
+                    this.reportViewer1.RefreshReport();
                     break;
                 default:
                     break;

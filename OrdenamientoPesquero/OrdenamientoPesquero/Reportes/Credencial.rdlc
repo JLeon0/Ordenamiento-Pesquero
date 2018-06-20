@@ -2,20 +2,6 @@
 <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
   <Body>
     <ReportItems>
-      <Image Name="Image1">
-        <Source>Embedded</Source>
-        <Value>credfrontal</Value>
-        <Sizing>Fit</Sizing>
-        <Top>5.68537cm</Top>
-        <Left>13.34827cm</Left>
-        <Height>5.4cm</Height>
-        <Width>8.6cm</Width>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-        </Style>
-      </Image>
       <Image Name="Image2">
         <Source>Embedded</Source>
         <Value>credtrasera</Value>
@@ -24,7 +10,6 @@
         <Left>13.34827cm</Left>
         <Height>5.4cm</Height>
         <Width>8.6cm</Width>
-        <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -38,7 +23,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>GLORIA LARA ALVAREZ</Value>
+                <Value>=Parameters!NOMBRE.Value</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
                   <FontWeight>Heavy</FontWeight>
@@ -54,7 +39,7 @@
         <Left>13.34827cm</Left>
         <Height>0.59679cm</Height>
         <Width>5.52215cm</Width>
-        <ZIndex>2</ZIndex>
+        <ZIndex>1</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -66,14 +51,15 @@
         </Style>
       </Textbox>
       <Image Name="Image3">
-        <Source>External</Source>
-        <Value>=Parameters!RutaImagen.Value</Value>
+        <Source>Database</Source>
+        <Value>=First(Fields!IMAGEN.Value, "DataSet1")</Value>
+        <MIMEType>image/jpeg</MIMEType>
         <Sizing>FitProportional</Sizing>
         <Top>6.70983cm</Top>
         <Left>19.32533cm</Left>
         <Height>2.50955cm</Height>
         <Width>2.05897cm</Width>
-        <ZIndex>3</ZIndex>
+        <ZIndex>2</ZIndex>
         <Style>
           <Border>
             <Color>White</Color>
@@ -640,11 +626,29 @@
         <Left>13.34827cm</Left>
         <Height>1.98832cm</Height>
         <Width>3.66448cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+      <Rectangle Name="Rectangle2">
+        <KeepTogether>true</KeepTogether>
+        <Top>7.47822cm</Top>
+        <Left>1.78598cm</Left>
+        <Height>5.4cm</Height>
+        <Width>8.6cm</Width>
         <ZIndex>4</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
+          <BackgroundImage>
+            <Source>Embedded</Source>
+            <Value>credfrontal</Value>
+            <BackgroundRepeat>Clip</BackgroundRepeat>
+          </BackgroundImage>
         </Style>
       </Rectangle>
     </ReportItems>
@@ -667,6 +671,37 @@
     <Style />
   </Page>
   <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="ObtenerImagen">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>b046def3-dd9f-402e-980e-393ca708d0a9</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="DataSet1">
+      <Query>
+        <DataSourceName>ObtenerImagen</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="IMAGEN">
+          <DataField>IMAGEN</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>ObtenerImagen</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Desktop\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\ObtenerImagen.xsd</rd:SchemaPath>
+        <rd:TableName>ObtenerImagen</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>ObtenerImagenTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+  </DataSets>
   <ReportParameters>
     <ReportParameter Name="RutaImagen">
       <DataType>String</DataType>
@@ -697,6 +732,10 @@
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="FOLIO">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="NOMBRE">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
