@@ -72,6 +72,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         public void Video_NuevoFrame(object sender, NewFrameEventArgs eventArgs)
         {
             Bitmap Imagen = (Bitmap)eventArgs.Frame.Clone();
+            Rectangle rectangle = new Rectangle(325, 100, 600, 600);
+            Imagen = Imagen.Clone(rectangle, Imagen.PixelFormat);
             EspacioCamara.BackgroundImage = Imagen;
             EspacioCamara.BackgroundImageLayout = ImageLayout.Zoom;
 
@@ -80,7 +82,6 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         private void btnIniciar_Click(object sender, EventArgs e)
         {
             if (btnIniciar.Text == "Iniciar")
-
             {
                 if (ExisteDispositivo)
                 {
@@ -89,7 +90,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     FuenteDeVideo.NewFrame += new NewFrameEventHandler(Video_NuevoFrame);
                     FuenteDeVideo.Start();
                     Estado.Text = "Ejecutando Dispositivo...";
-                    btnIniciar.Text = "Detener";
+                    btnIniciar.Text = "Capturar";
                     cbxDispositivos.Enabled = false;
                     groupBox1.Text = DispositivoDeVideo[cbxDispositivos.SelectedIndex].Name.ToString();
                 }
@@ -99,6 +100,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             }
             else
             {
+                EspacioCamara.BackgroundImageLayout = ImageLayout.Zoom;
                 if (FuenteDeVideo.IsRunning)
                 {
                     TerminarFuenteDeVideo();
@@ -121,12 +123,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             System.IO.MemoryStream ms = new System.IO.MemoryStream();
             EspacioCamara.BackgroundImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
 
-            System.Drawing.Image fullsizeImage = System.Drawing.Image.FromStream(ms);
-            System.Drawing.Image newImage = fullsizeImage.GetThumbnailImage(131, 182, null, IntPtr.Zero);
-            System.IO.MemoryStream myResult = new System.IO.MemoryStream();
-            newImage.Save(myResult, System.Drawing.Imaging.ImageFormat.Gif);
-
-            int exito = proc.InsertarImagen(CURP, myResult.GetBuffer());
+            int exito = proc.InsertarImagen(CURP, ms.GetBuffer());
             if (exito > 0)
             {
                 MessageBox.Show("Imagen Insertada correctamente");
