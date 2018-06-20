@@ -509,20 +509,6 @@ namespace OrdenamientoPesquero
 
         private void Ver_Click(object sender, EventArgs e)
         {
-            if (imagenBuffer != null)
-            {
-                MemoryStream ms = new MemoryStream(imagenBuffer);
-                Bitmap bm = null;
-                try
-                {
-                    bm = new Bitmap(ms);
-                }
-                catch (Exception ex)
-                {
-                    System.Diagnostics.Debug.WriteLine(ex.Message);
-                }
-                bm.Save(Application.StartupPath + "perfil.jpg");
-            }
             Vistas vista = new Vistas(CURPPesc.Text, RNPA, 4);
             vista.ShowDialog();
         }
