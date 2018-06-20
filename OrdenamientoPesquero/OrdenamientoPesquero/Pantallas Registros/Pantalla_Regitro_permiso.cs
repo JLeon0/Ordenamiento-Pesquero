@@ -219,6 +219,7 @@ namespace OrdenamientoPesquero
                 }
             }
             val.Exito(exito);
+            CargarRNPA();
         }
 
         private void Actualizar_Click(object sender, EventArgs e)
@@ -319,18 +320,18 @@ namespace OrdenamientoPesquero
 
         private void dataGridView2_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
-             DataGridViewComboBoxEditingControl dgvCombo = e.Control as DataGridViewComboBoxEditingControl;
+            // DataGridViewComboBoxEditingControl dgvCombo = e.Control as DataGridViewComboBoxEditingControl;
 
-            if (dgvCombo != null)
-            {
-                //
-                // se remueve el handler previo que pudiera tener asociado, a causa ediciones previas de la celda
-                // evitando asi que se ejecuten varias veces el evento
-                //
-                dgvCombo.SelectedIndexChanged -= new EventHandler(dvgCombo_SelectedIndexChanged);
+            //if (dgvCombo != null)
+            //{
+            //    //
+            //    // se remueve el handler previo que pudiera tener asociado, a causa ediciones previas de la celda
+            //    // evitando asi que se ejecuten varias veces el evento
+            //    //
+            //    dgvCombo.SelectedIndexChanged -= new EventHandler(dvgCombo_SelectedIndexChanged);
 
-                dgvCombo.SelectedIndexChanged += new EventHandler(dvgCombo_SelectedIndexChanged);
-            }
+            //    dgvCombo.SelectedIndexChanged += new EventHandler(dvgCombo_SelectedIndexChanged);
+            //}
         }
 
         private void nPer_KeyPress(object sender, KeyPressEventArgs e)

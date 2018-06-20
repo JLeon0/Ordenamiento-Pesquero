@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Registro_Usuario));
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.CargarImagen = new System.Windows.Forms.PictureBox();
             this.gbxOrdenado = new System.Windows.Forms.GroupBox();
             this.no = new System.Windows.Forms.RadioButton();
             this.si = new System.Windows.Forms.RadioButton();
@@ -42,9 +43,16 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Imagen = new System.Windows.Forms.PictureBox();
+            this.limpiar = new System.Windows.Forms.PictureBox();
             this.LocalidadPesc = new System.Windows.Forms.ComboBox();
             this.MunicipioPesc = new System.Windows.Forms.ComboBox();
             this.CURPPesc = new System.Windows.Forms.ComboBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label58 = new System.Windows.Forms.Label();
             this.CorreoPesc = new System.Windows.Forms.TextBox();
             this.TSangrePesc = new System.Windows.Forms.TextBox();
@@ -83,12 +91,15 @@
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.OcupacionEnEmbarPesc = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
             this.radioButton5 = new System.Windows.Forms.RadioButton();
             this.radioButton7 = new System.Windows.Forms.RadioButton();
             this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.TipoPesc = new System.Windows.Forms.GroupBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.TipoPesc = new System.Windows.Forms.GroupBox();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton13 = new System.Windows.Forms.RadioButton();
+            this.radioButton12 = new System.Windows.Forms.RadioButton();
+            this.radioButton11 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.radioButton9 = new System.Windows.Forms.RadioButton();
@@ -107,18 +118,18 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Ver = new System.Windows.Forms.PictureBox();
             this.EliminarUnidad = new System.Windows.Forms.PictureBox();
-            this.CargarImagen = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.limpiar = new System.Windows.Forms.PictureBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
             this.RegistrarUnidad = new System.Windows.Forms.PictureBox();
             this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CargarImagen)).BeginInit();
             this.gbxOrdenado.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.groupBox4.SuspendLayout();
             this.CuerpoDeAguaPesc.SuspendLayout();
             this.OcupacionEnEmbarPesc.SuspendLayout();
@@ -127,14 +138,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CargarImagen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).BeginInit();
             this.SuspendLayout();
@@ -151,7 +154,7 @@
             this.groupBox7.Controls.Add(this.label6);
             this.groupBox7.Controls.Add(this.label1);
             this.groupBox7.Controls.Add(this.textBox1);
-            this.groupBox7.Controls.Add(this.pictureBox1);
+            this.groupBox7.Controls.Add(this.Imagen);
             this.groupBox7.Controls.Add(this.limpiar);
             this.groupBox7.Controls.Add(this.LocalidadPesc);
             this.groupBox7.Controls.Add(this.MunicipioPesc);
@@ -200,6 +203,19 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Datos Generales";
             // 
+            // CargarImagen
+            // 
+            this.CargarImagen.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.subir;
+            this.CargarImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CargarImagen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CargarImagen.Location = new System.Drawing.Point(11, 152);
+            this.CargarImagen.Name = "CargarImagen";
+            this.CargarImagen.Size = new System.Drawing.Size(28, 28);
+            this.CargarImagen.TabIndex = 127;
+            this.CargarImagen.TabStop = false;
+            this.toolTip1.SetToolTip(this.CargarImagen, "Subir Imagen");
+            this.CargarImagen.Click += new System.EventHandler(this.CargarImagen_Click_1);
+            // 
             // gbxOrdenado
             // 
             this.gbxOrdenado.Controls.Add(this.no);
@@ -207,7 +223,7 @@
             this.gbxOrdenado.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbxOrdenado.Location = new System.Drawing.Point(787, 273);
             this.gbxOrdenado.Name = "gbxOrdenado";
-            this.gbxOrdenado.Size = new System.Drawing.Size(79, 63);
+            this.gbxOrdenado.Size = new System.Drawing.Size(79, 72);
             this.gbxOrdenado.TabIndex = 112;
             this.gbxOrdenado.TabStop = false;
             this.gbxOrdenado.Text = "Ordenado";
@@ -329,6 +345,28 @@
             this.textBox1.TabIndex = 16;
             this.textBox1.Tag = "";
             // 
+            // Imagen
+            // 
+            this.Imagen.Location = new System.Drawing.Point(11, 21);
+            this.Imagen.Name = "Imagen";
+            this.Imagen.Size = new System.Drawing.Size(116, 125);
+            this.Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.Imagen.TabIndex = 118;
+            this.Imagen.TabStop = false;
+            // 
+            // limpiar
+            // 
+            this.limpiar.BackColor = System.Drawing.Color.Transparent;
+            this.limpiar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.limpiar;
+            this.limpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.limpiar.Location = new System.Drawing.Point(860, 11);
+            this.limpiar.Name = "limpiar";
+            this.limpiar.Size = new System.Drawing.Size(28, 28);
+            this.limpiar.TabIndex = 117;
+            this.limpiar.TabStop = false;
+            this.toolTip1.SetToolTip(this.limpiar, "Limpiar Registro");
+            this.limpiar.Click += new System.EventHandler(this.limpiar_Click);
+            // 
             // LocalidadPesc
             // 
             this.LocalidadPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -358,6 +396,66 @@
             this.CURPPesc.TabIndex = 6;
             this.CURPPesc.SelectedValueChanged += new System.EventHandler(this.CURPPesc_SelectedValueChanged);
             this.CURPPesc.TextChanged += new System.EventHandler(this.CURPPesc_TextChanged);
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox9.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox9.Location = new System.Drawing.Point(337, 152);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox9.TabIndex = 111;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox7.Location = new System.Drawing.Point(540, 150);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox7.TabIndex = 109;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
+            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox5.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox5.Location = new System.Drawing.Point(763, 242);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox5.TabIndex = 108;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox8.Location = new System.Drawing.Point(608, 245);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox8.TabIndex = 108;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox6.Location = new System.Drawing.Point(537, 338);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox6.TabIndex = 107;
+            this.pictureBox6.TabStop = false;
             // 
             // label58
             // 
@@ -417,7 +515,7 @@
             this.EscolaridadPesc.Location = new System.Drawing.Point(578, 149);
             this.EscolaridadPesc.Name = "EscolaridadPesc";
             this.EscolaridadPesc.Size = new System.Drawing.Size(148, 24);
-            this.EscolaridadPesc.TabIndex = 29;
+            this.EscolaridadPesc.TabIndex = 8;
             // 
             // label56
             // 
@@ -432,11 +530,12 @@
             // FemeninoPesc
             // 
             this.FemeninoPesc.AutoSize = true;
+            this.FemeninoPesc.Enabled = false;
             this.FemeninoPesc.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FemeninoPesc.Location = new System.Drawing.Point(795, 86);
             this.FemeninoPesc.Name = "FemeninoPesc";
             this.FemeninoPesc.Size = new System.Drawing.Size(71, 18);
-            this.FemeninoPesc.TabIndex = 27;
+            this.FemeninoPesc.TabIndex = 102;
             this.FemeninoPesc.TabStop = true;
             this.FemeninoPesc.Text = "Femenino";
             this.FemeninoPesc.UseVisualStyleBackColor = true;
@@ -445,11 +544,12 @@
             // 
             this.MasculinoPesc.AutoSize = true;
             this.MasculinoPesc.Checked = true;
+            this.MasculinoPesc.Enabled = false;
             this.MasculinoPesc.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MasculinoPesc.Location = new System.Drawing.Point(726, 86);
             this.MasculinoPesc.Name = "MasculinoPesc";
             this.MasculinoPesc.Size = new System.Drawing.Size(73, 18);
-            this.MasculinoPesc.TabIndex = 26;
+            this.MasculinoPesc.TabIndex = 101;
             this.MasculinoPesc.TabStop = true;
             this.MasculinoPesc.Text = "Masculino";
             this.MasculinoPesc.UseVisualStyleBackColor = true;
@@ -610,12 +710,13 @@
             // FechaNacPesc
             // 
             this.FechaNacPesc.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaNacPesc.Enabled = false;
             this.FechaNacPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FechaNacPesc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FechaNacPesc.Location = new System.Drawing.Point(584, 84);
             this.FechaNacPesc.Name = "FechaNacPesc";
             this.FechaNacPesc.Size = new System.Drawing.Size(115, 22);
-            this.FechaNacPesc.TabIndex = 5;
+            this.FechaNacPesc.TabIndex = 100;
             // 
             // label50
             // 
@@ -684,7 +785,7 @@
             this.groupBox4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox4.Location = new System.Drawing.Point(12, 464);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(894, 117);
+            this.groupBox4.Size = new System.Drawing.Size(894, 189);
             this.groupBox4.TabIndex = 8;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Relación Pescador-Embarcación";
@@ -697,6 +798,7 @@
             this.MatriculaPesc.Name = "MatriculaPesc";
             this.MatriculaPesc.Size = new System.Drawing.Size(198, 24);
             this.MatriculaPesc.TabIndex = 21;
+            this.MatriculaPesc.TabStop = false;
             this.MatriculaPesc.SelectedIndexChanged += new System.EventHandler(this.MatriculaPesc_SelectedIndexChanged);
             this.MatriculaPesc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MatriculaPesc_KeyPress);
             // 
@@ -728,54 +830,44 @@
             this.radioButton6.Location = new System.Drawing.Point(6, 43);
             this.radioButton6.Name = "radioButton6";
             this.radioButton6.Size = new System.Drawing.Size(144, 20);
-            this.radioButton6.TabIndex = 0;
-            this.radioButton6.TabStop = true;
+            this.radioButton6.TabIndex = 34;
             this.radioButton6.Text = "Aguas continentales";
             this.radioButton6.UseVisualStyleBackColor = true;
             // 
             // radioButton10
             // 
             this.radioButton10.AutoSize = true;
+            this.radioButton10.Checked = true;
             this.radioButton10.Location = new System.Drawing.Point(6, 21);
             this.radioButton10.Name = "radioButton10";
             this.radioButton10.Size = new System.Drawing.Size(120, 20);
-            this.radioButton10.TabIndex = 0;
+            this.radioButton10.TabIndex = 33;
             this.radioButton10.TabStop = true;
             this.radioButton10.Text = "Ribereño marino";
             this.radioButton10.UseVisualStyleBackColor = true;
             // 
             // OcupacionEnEmbarPesc
             // 
-            this.OcupacionEnEmbarPesc.Controls.Add(this.radioButton4);
             this.OcupacionEnEmbarPesc.Controls.Add(this.radioButton5);
             this.OcupacionEnEmbarPesc.Controls.Add(this.radioButton7);
             this.OcupacionEnEmbarPesc.Controls.Add(this.radioButton8);
+            this.OcupacionEnEmbarPesc.Controls.Add(this.radioButton1);
             this.OcupacionEnEmbarPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OcupacionEnEmbarPesc.Location = new System.Drawing.Point(524, 9);
             this.OcupacionEnEmbarPesc.Name = "OcupacionEnEmbarPesc";
-            this.OcupacionEnEmbarPesc.Size = new System.Drawing.Size(130, 102);
+            this.OcupacionEnEmbarPesc.Size = new System.Drawing.Size(130, 109);
             this.OcupacionEnEmbarPesc.TabIndex = 23;
             this.OcupacionEnEmbarPesc.TabStop = false;
             this.OcupacionEnEmbarPesc.Text = "Ocupación laboral";
-            // 
-            // radioButton4
-            // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(10, 81);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(103, 20);
-            this.radioButton4.TabIndex = 1;
-            this.radioButton4.Text = "Socio Acuac.";
-            this.radioButton4.UseVisualStyleBackColor = true;
             // 
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
             this.radioButton5.Location = new System.Drawing.Point(10, 60);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(53, 20);
-            this.radioButton5.TabIndex = 0;
-            this.radioButton5.Text = "SEA";
+            this.radioButton5.Size = new System.Drawing.Size(100, 20);
+            this.radioButton5.TabIndex = 31;
+            this.radioButton5.Text = "Sin Actividad";
             this.radioButton5.UseVisualStyleBackColor = true;
             // 
             // radioButton7
@@ -783,44 +875,89 @@
             this.radioButton7.AutoSize = true;
             this.radioButton7.Location = new System.Drawing.Point(10, 41);
             this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(75, 20);
-            this.radioButton7.TabIndex = 0;
-            this.radioButton7.Text = "Directivo";
+            this.radioButton7.Size = new System.Drawing.Size(76, 20);
+            this.radioButton7.TabIndex = 30;
+            this.radioButton7.Text = "Marinero";
             this.radioButton7.UseVisualStyleBackColor = true;
             // 
             // radioButton8
             // 
             this.radioButton8.AutoSize = true;
+            this.radioButton8.Checked = true;
             this.radioButton8.Location = new System.Drawing.Point(10, 20);
             this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(61, 20);
-            this.radioButton8.TabIndex = 0;
-            this.radioButton8.Text = "Titular";
+            this.radioButton8.Size = new System.Drawing.Size(70, 20);
+            this.radioButton8.TabIndex = 29;
+            this.radioButton8.TabStop = true;
+            this.radioButton8.Text = "Capitan";
             this.radioButton8.UseVisualStyleBackColor = true;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(10, 80);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(88, 20);
+            this.radioButton1.TabIndex = 32;
+            this.radioButton1.Text = "Acuacultor";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // TipoPesc
             // 
-            this.TipoPesc.Controls.Add(this.radioButton1);
+            this.TipoPesc.Controls.Add(this.radioButton4);
+            this.TipoPesc.Controls.Add(this.radioButton13);
+            this.TipoPesc.Controls.Add(this.radioButton12);
+            this.TipoPesc.Controls.Add(this.radioButton11);
             this.TipoPesc.Controls.Add(this.radioButton2);
             this.TipoPesc.Controls.Add(this.radioButton3);
             this.TipoPesc.Controls.Add(this.radioButton9);
             this.TipoPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TipoPesc.Location = new System.Drawing.Point(303, 9);
             this.TipoPesc.Name = "TipoPesc";
-            this.TipoPesc.Size = new System.Drawing.Size(139, 102);
+            this.TipoPesc.Size = new System.Drawing.Size(139, 174);
             this.TipoPesc.TabIndex = 22;
             this.TipoPesc.TabStop = false;
             this.TipoPesc.Text = "Tipo de Pescador:";
             // 
-            // radioButton1
+            // radioButton4
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(12, 80);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(88, 20);
-            this.radioButton1.TabIndex = 1;
-            this.radioButton1.Text = "Acuacultor";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(12, 80);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(103, 20);
+            this.radioButton4.TabIndex = 25;
+            this.radioButton4.Text = "Socio Acuac.";
+            this.radioButton4.UseVisualStyleBackColor = true;
+            // 
+            // radioButton13
+            // 
+            this.radioButton13.AutoSize = true;
+            this.radioButton13.Location = new System.Drawing.Point(12, 148);
+            this.radioButton13.Name = "radioButton13";
+            this.radioButton13.Size = new System.Drawing.Size(53, 20);
+            this.radioButton13.TabIndex = 28;
+            this.radioButton13.Text = "SEA";
+            this.radioButton13.UseVisualStyleBackColor = true;
+            // 
+            // radioButton12
+            // 
+            this.radioButton12.AutoSize = true;
+            this.radioButton12.Location = new System.Drawing.Point(12, 123);
+            this.radioButton12.Name = "radioButton12";
+            this.radioButton12.Size = new System.Drawing.Size(59, 20);
+            this.radioButton12.TabIndex = 27;
+            this.radioButton12.Text = "Socio";
+            this.radioButton12.UseVisualStyleBackColor = true;
+            // 
+            // radioButton11
+            // 
+            this.radioButton11.AutoSize = true;
+            this.radioButton11.Location = new System.Drawing.Point(12, 100);
+            this.radioButton11.Name = "radioButton11";
+            this.radioButton11.Size = new System.Drawing.Size(61, 20);
+            this.radioButton11.TabIndex = 26;
+            this.radioButton11.Text = "Titular";
+            this.radioButton11.UseVisualStyleBackColor = true;
             // 
             // radioButton2
             // 
@@ -828,8 +965,7 @@
             this.radioButton2.Location = new System.Drawing.Point(12, 59);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(54, 20);
-            this.radioButton2.TabIndex = 0;
-            this.radioButton2.TabStop = true;
+            this.radioButton2.TabIndex = 24;
             this.radioButton2.Text = "Libre";
             this.radioButton2.UseVisualStyleBackColor = true;
             // 
@@ -839,18 +975,19 @@
             this.radioButton3.Location = new System.Drawing.Point(12, 40);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(57, 20);
-            this.radioButton3.TabIndex = 0;
-            this.radioButton3.TabStop = true;
+            this.radioButton3.TabIndex = 23;
             this.radioButton3.Text = "Extra";
             this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // radioButton9
             // 
             this.radioButton9.AutoSize = true;
+            this.radioButton9.Checked = true;
             this.radioButton9.Location = new System.Drawing.Point(12, 20);
             this.radioButton9.Name = "radioButton9";
             this.radioButton9.Size = new System.Drawing.Size(75, 20);
-            this.radioButton9.TabIndex = 0;
+            this.radioButton9.TabIndex = 22;
+            this.radioButton9.TabStop = true;
             this.radioButton9.Text = "Eventual";
             this.radioButton9.UseVisualStyleBackColor = true;
             // 
@@ -858,7 +995,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(596, 641);
+            this.label2.Location = new System.Drawing.Point(598, 713);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 14);
             this.label2.TabIndex = 111;
@@ -868,7 +1005,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(670, 641);
+            this.label3.Location = new System.Drawing.Point(672, 713);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 14);
             this.label3.TabIndex = 111;
@@ -878,7 +1015,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(753, 640);
+            this.label4.Location = new System.Drawing.Point(755, 712);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 14);
             this.label4.TabIndex = 111;
@@ -888,7 +1025,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(835, 640);
+            this.label5.Location = new System.Drawing.Point(837, 712);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 14);
             this.label5.TabIndex = 113;
@@ -973,7 +1110,7 @@
             // 
             this.Ver.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ver;
             this.Ver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Ver.Location = new System.Drawing.Point(853, 587);
+            this.Ver.Location = new System.Drawing.Point(855, 659);
             this.Ver.Name = "Ver";
             this.Ver.Size = new System.Drawing.Size(50, 50);
             this.Ver.TabIndex = 112;
@@ -984,114 +1121,19 @@
             // 
             this.EliminarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Eliminar;
             this.EliminarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EliminarUnidad.Location = new System.Drawing.Point(747, 587);
+            this.EliminarUnidad.Location = new System.Drawing.Point(749, 659);
             this.EliminarUnidad.Name = "EliminarUnidad";
             this.EliminarUnidad.Size = new System.Drawing.Size(50, 50);
             this.EliminarUnidad.TabIndex = 110;
             this.EliminarUnidad.TabStop = false;
             this.EliminarUnidad.Click += new System.EventHandler(this.EliminarUnidad_Click);
             // 
-            // CargarImagen
-            // 
-            this.CargarImagen.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.subir;
-            this.CargarImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CargarImagen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CargarImagen.Location = new System.Drawing.Point(11, 118);
-            this.CargarImagen.Name = "CargarImagen";
-            this.CargarImagen.Size = new System.Drawing.Size(28, 28);
-            this.CargarImagen.TabIndex = 127;
-            this.CargarImagen.TabStop = false;
-            this.toolTip1.SetToolTip(this.CargarImagen, "Subir Imagen");
-            this.CargarImagen.Click += new System.EventHandler(this.CargarImagen_Click_1);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(11, 21);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(84, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 118;
-            this.pictureBox1.TabStop = false;
-            // 
-            // limpiar
-            // 
-            this.limpiar.BackColor = System.Drawing.Color.Transparent;
-            this.limpiar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.limpiar;
-            this.limpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.limpiar.Location = new System.Drawing.Point(860, 11);
-            this.limpiar.Name = "limpiar";
-            this.limpiar.Size = new System.Drawing.Size(28, 28);
-            this.limpiar.TabIndex = 117;
-            this.limpiar.TabStop = false;
-            this.toolTip1.SetToolTip(this.limpiar, "Limpiar Registro");
-            this.limpiar.Click += new System.EventHandler(this.limpiar_Click);
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox9.Location = new System.Drawing.Point(337, 152);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(23, 21);
-            this.pictureBox9.TabIndex = 111;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox7.Location = new System.Drawing.Point(540, 150);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(23, 21);
-            this.pictureBox7.TabIndex = 109;
-            this.pictureBox7.TabStop = false;
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox5.BackgroundImage")));
-            this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox5.Location = new System.Drawing.Point(763, 242);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(23, 21);
-            this.pictureBox5.TabIndex = 108;
-            this.pictureBox5.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox8.BackgroundImage")));
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox8.Location = new System.Drawing.Point(608, 245);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(23, 21);
-            this.pictureBox8.TabIndex = 108;
-            this.pictureBox8.TabStop = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox6.BackgroundImage")));
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox6.Location = new System.Drawing.Point(537, 338);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(23, 21);
-            this.pictureBox6.TabIndex = 107;
-            this.pictureBox6.TabStop = false;
-            // 
             // ActualizarUnidad
             // 
             this.ActualizarUnidad.BackColor = System.Drawing.Color.Transparent;
             this.ActualizarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
             this.ActualizarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ActualizarUnidad.Location = new System.Drawing.Point(670, 587);
+            this.ActualizarUnidad.Location = new System.Drawing.Point(672, 659);
             this.ActualizarUnidad.Name = "ActualizarUnidad";
             this.ActualizarUnidad.Size = new System.Drawing.Size(50, 50);
             this.ActualizarUnidad.TabIndex = 109;
@@ -1103,7 +1145,7 @@
             this.RegistrarUnidad.BackColor = System.Drawing.Color.Transparent;
             this.RegistrarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.RegistrarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RegistrarUnidad.Location = new System.Drawing.Point(595, 587);
+            this.RegistrarUnidad.Location = new System.Drawing.Point(597, 659);
             this.RegistrarUnidad.Name = "RegistrarUnidad";
             this.RegistrarUnidad.Size = new System.Drawing.Size(50, 50);
             this.RegistrarUnidad.TabIndex = 108;
@@ -1116,7 +1158,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1246, 700);
+            this.ClientSize = new System.Drawing.Size(1246, 731);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.pictureBox2);
@@ -1136,8 +1178,16 @@
             this.Load += new System.EventHandler(this.Pantalla_Registro_Usuario_Load);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CargarImagen)).EndInit();
             this.gbxOrdenado.ResumeLayout(false);
             this.gbxOrdenado.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Imagen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.limpiar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
             this.CuerpoDeAguaPesc.ResumeLayout(false);
@@ -1151,14 +1201,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CargarImagen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.limpiar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).EndInit();
             this.ResumeLayout(false);
@@ -1243,7 +1285,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Imagen;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ComboBox EscolaridadPesc;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -1254,5 +1296,8 @@
         private System.Windows.Forms.RadioButton radioButton4;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.PictureBox CargarImagen;
+        private System.Windows.Forms.RadioButton radioButton13;
+        private System.Windows.Forms.RadioButton radioButton12;
+        private System.Windows.Forms.RadioButton radioButton11;
     }
 }

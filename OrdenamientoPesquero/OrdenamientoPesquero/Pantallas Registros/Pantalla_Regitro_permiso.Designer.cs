@@ -566,7 +566,7 @@
             this.FolioPer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FolioPer.Name = "FolioPer";
             this.FolioPer.Size = new System.Drawing.Size(80, 25);
-            this.FolioPer.TabIndex = 3;
+            this.FolioPer.TabIndex = 4;
             // 
             // PesqueriaPer
             // 
@@ -596,7 +596,7 @@
             this.LugarExpPer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LugarExpPer.Name = "LugarExpPer";
             this.LugarExpPer.Size = new System.Drawing.Size(123, 24);
-            this.LugarExpPer.TabIndex = 4;
+            this.LugarExpPer.TabIndex = 3;
             // 
             // VigenciaPerm
             // 
@@ -665,7 +665,7 @@
             this.numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(43, 22);
-            this.numericUpDown2.TabIndex = 70;
+            this.numericUpDown2.TabIndex = 9;
             this.numericUpDown2.ValueChanged += new System.EventHandler(this.numericUpDown2_ValueChanged);
             // 
             // ZonaPescaPerm
@@ -676,7 +676,7 @@
             this.ZonaPescaPerm.Multiline = true;
             this.ZonaPescaPerm.Name = "ZonaPescaPerm";
             this.ZonaPescaPerm.Size = new System.Drawing.Size(624, 40);
-            this.ZonaPescaPerm.TabIndex = 68;
+            this.ZonaPescaPerm.TabIndex = 7;
             // 
             // label28
             // 
@@ -725,7 +725,7 @@
             this.SitiosDesemPer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SitiosDesemPer.Name = "SitiosDesemPer";
             this.SitiosDesemPer.Size = new System.Drawing.Size(531, 22);
-            this.SitiosDesemPer.TabIndex = 69;
+            this.SitiosDesemPer.TabIndex = 8;
             // 
             // label25
             // 

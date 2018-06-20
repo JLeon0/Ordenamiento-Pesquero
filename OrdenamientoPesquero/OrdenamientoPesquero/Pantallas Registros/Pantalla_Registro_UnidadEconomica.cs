@@ -191,7 +191,7 @@ namespace OrdenamientoPesquero
             if (existe(cbRNPA.Text))
             {
                 LlenarCampos();
-                NomFed.Text = proc.ObtenerUnaFederacion(cbRNPA.Text).Rows[0]["NOMBRE"].ToString();
+                ObtenerFederacion();
                 Resumenes(cbRNPA.Text);
                 button1.Enabled = true;
                 button2.Enabled = true;
@@ -230,7 +230,7 @@ namespace OrdenamientoPesquero
         {
             this.Cursor = Cursors.WaitCursor;
             LlenarCamposNombre();
-            NomFed.Text = proc.ObtenerUnaFederacion(cbRNPA.Text).Rows[0]["NOMBRE"].ToString();
+            ObtenerFederacion();
             Resumenes(cbRNPA.Text);
             button1.Enabled = true;
             button2.Enabled = true;
@@ -480,6 +480,14 @@ namespace OrdenamientoPesquero
                 }
             }
             return 0;
+        }
+        private void ObtenerFederacion()
+        {
+            dt = proc.ObtenerUnaFederacion(cbRNPA.Text);
+            if (dt.Rows.Count > 0)
+            {
+                NomFed.Text = dt.Rows[0]["NOMBRE"].ToString();
+            }
         }
 
         private void DataResumen_CellContentClick(object sender, DataGridViewCellEventArgs e)

@@ -51,6 +51,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.gbOrgPes = new System.Windows.Forms.GroupBox();
+            this.ModFed = new System.Windows.Forms.Button();
+            this.RegFed = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.limpiar = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -103,8 +105,6 @@
             this.cambiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.RegFed = new System.Windows.Forms.Button();
-            this.ModFed = new System.Windows.Forms.Button();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BuscarNombreOrg)).BeginInit();
@@ -266,7 +266,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(28, 44);
+            this.label3.Location = new System.Drawing.Point(19, 44);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
@@ -337,6 +337,28 @@
             this.gbOrgPes.TabIndex = 54;
             this.gbOrgPes.TabStop = false;
             this.gbOrgPes.Text = "DATOS GENERALES DE LA ORGANIZACIÓN PESQUERA";
+            // 
+            // ModFed
+            // 
+            this.ModFed.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ModFed.Location = new System.Drawing.Point(128, 271);
+            this.ModFed.Name = "ModFed";
+            this.ModFed.Size = new System.Drawing.Size(86, 22);
+            this.ModFed.TabIndex = 122;
+            this.ModFed.Text = "Modificar Fed";
+            this.ModFed.UseVisualStyleBackColor = true;
+            this.ModFed.Click += new System.EventHandler(this.ModFed_Click);
+            // 
+            // RegFed
+            // 
+            this.RegFed.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegFed.Location = new System.Drawing.Point(36, 272);
+            this.RegFed.Name = "RegFed";
+            this.RegFed.Size = new System.Drawing.Size(86, 22);
+            this.RegFed.TabIndex = 121;
+            this.RegFed.Text = "Registrar Fed";
+            this.RegFed.UseVisualStyleBackColor = true;
+            this.RegFed.Click += new System.EventHandler(this.RegFed_Click);
             // 
             // label1
             // 
@@ -949,31 +971,9 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(75, 30);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(362, 54);
+            this.pictureBox1.Size = new System.Drawing.Size(328, 54);
             this.pictureBox1.TabIndex = 30;
             this.pictureBox1.TabStop = false;
-            // 
-            // RegFed
-            // 
-            this.RegFed.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegFed.Location = new System.Drawing.Point(36, 272);
-            this.RegFed.Name = "RegFed";
-            this.RegFed.Size = new System.Drawing.Size(86, 22);
-            this.RegFed.TabIndex = 121;
-            this.RegFed.Text = "Registrar Fed";
-            this.RegFed.UseVisualStyleBackColor = true;
-            this.RegFed.Click += new System.EventHandler(this.RegFed_Click);
-            // 
-            // ModFed
-            // 
-            this.ModFed.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModFed.Location = new System.Drawing.Point(128, 271);
-            this.ModFed.Name = "ModFed";
-            this.ModFed.Size = new System.Drawing.Size(86, 22);
-            this.ModFed.TabIndex = 122;
-            this.ModFed.Text = "Modificar Fed";
-            this.ModFed.UseVisualStyleBackColor = true;
-            this.ModFed.Click += new System.EventHandler(this.ModFed_Click);
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
