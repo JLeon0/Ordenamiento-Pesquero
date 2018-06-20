@@ -272,24 +272,27 @@ namespace OrdenamientoPesquero
 
         private void LlenarCamposNombre()
         {
-            int tipo = 0;
-            DataRow fila = NOMBRES.Rows[txtNombre.SelectedIndex];
+            if (txtNombre.SelectedIndex >= 0)
+            {
+                int tipo = 0;
+                DataRow fila = NOMBRES.Rows[txtNombre.SelectedIndex];
 
-            cbRNPA.Text = fila["RNPA"].ToString();
-            txtRFC.Text = fila["RFC"].ToString();
-            txtCalleNum.Text = fila["CALLEYNUM"].ToString();
-            txtColonia.Text = fila["COLONIA"].ToString();
-            txtLocalidad.Text = fila["LOCALIDAD"].ToString();
-            txtMunicipio.Text = fila["MUNICIO"].ToString();
-            mtbCP.Text = fila["CODIGO_POSTAL"].ToString();
-            txtCorreo.Text = fila["CORREO"].ToString();
-            mtbTelefono.Text = fila["TELEFONO"].ToString();
-            string x = fila["TIPO"].ToString();
-            if (x != "") { tipo = Convert.ToInt32(fila["TIPO"]);}
+                cbRNPA.Text = fila["RNPA"].ToString();
+                txtRFC.Text = fila["RFC"].ToString();
+                txtCalleNum.Text = fila["CALLEYNUM"].ToString();
+                txtColonia.Text = fila["COLONIA"].ToString();
+                txtLocalidad.Text = fila["LOCALIDAD"].ToString();
+                txtMunicipio.Text = fila["MUNICIO"].ToString();
+                mtbCP.Text = fila["CODIGO_POSTAL"].ToString();
+                txtCorreo.Text = fila["CORREO"].ToString();
+                mtbTelefono.Text = fila["TELEFONO"].ToString();
+                string x = fila["TIPO"].ToString();
+                if (x != "") { tipo = Convert.ToInt32(fila["TIPO"]); }
 
-            if (tipo == 0)
-            { radioButton0.Checked = true; }
-            else { radioButton1.Checked = true; }
+                if (tipo == 0)
+                { radioButton0.Checked = true; }
+                else { radioButton1.Checked = true; }
+            }
         }
         #endregion
 

@@ -323,7 +323,10 @@ namespace OrdenamientoPesquero
                 if (filas["MATRICULA"].ToString() == RNPA) { break; }
                 I++;
             }
-            dt.Rows.RemoveAt(I);
+            if (dt.Rows.Count < I)
+            {
+                dt.Rows.RemoveAt(I);
+            }
             DataRow na = dt.NewRow();
             na["MATRICULA"] = "NO APLICA";
             na["NOMBREEMBARCACION"] = "NO APLICA";

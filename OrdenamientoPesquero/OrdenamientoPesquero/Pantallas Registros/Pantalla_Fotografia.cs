@@ -155,5 +155,10 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 }
             }
         }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
