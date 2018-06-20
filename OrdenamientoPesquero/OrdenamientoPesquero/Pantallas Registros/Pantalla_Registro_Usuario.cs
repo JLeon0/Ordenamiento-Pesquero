@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
 using OrdenamientoPesquero.Pantallas_Registros;
+using System.IO;
 
 namespace OrdenamientoPesquero
 {
@@ -23,7 +24,7 @@ namespace OrdenamientoPesquero
         DataTable dt;
         string RNPA = "", NombreUnidad = "";
         string[] Municipios;
-
+        byte[] imagenBuffer;
         public Pantalla_Registro_Usuario(string rnpa, string nombre)
         {
             InitializeComponent();
@@ -469,7 +470,7 @@ namespace OrdenamientoPesquero
             {
                 Imagen.BackColor = Color.White;
                 Imagen.BackgroundImage = null;
-                byte[] imagenBuffer = (byte[])dt.Rows[0]["IMAGEN"];
+                imagenBuffer = (byte[])dt.Rows[0]["IMAGEN"];
                 System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
                 Imagen.BackgroundImage = (Image.FromStream(ms));
                 Imagen.BackgroundImageLayout = ImageLayout.Zoom;
@@ -499,6 +500,20 @@ namespace OrdenamientoPesquero
         {
             Vistas vista = new Vistas(CURPPesc.Text, RNPA, 3);
             vista.ShowDialog();
+            if (imagenBuffer!=null)
+            {
+                MemoryStream ms = new MemoryStream(imagenBuffer);
+                Bitmap bm = null;
+                try
+                {
+                    bm = new Bitmap(ms);
+                }
+                catch (Exception ex)
+                {
+                    System.Diagnostics.Debug.WriteLine(ex.Message);
+                }
+                bm.Save(Application.StartupPath+"perfil.jpg");
+            }
         }
     }
 }
