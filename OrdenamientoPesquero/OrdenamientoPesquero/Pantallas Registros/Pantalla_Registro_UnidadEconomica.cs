@@ -115,7 +115,7 @@ namespace OrdenamientoPesquero
 
                 }
             }
-            NOMBRES = proc.Obtener_todos_los_nombres();
+            NOMBRES = proc.Obtener_todos_los_nombres("");
         }
         #endregion
 
@@ -161,7 +161,7 @@ namespace OrdenamientoPesquero
                 cbRNPA.ValueMember = "RNPA";
                 cbRNPA.Text = a;
             }
-            NOMBRES = proc.Obtener_todos_los_nombres();
+            NOMBRES = proc.Obtener_todos_los_nombres("");
             if(dt.Rows.Count != 0)
             {
                 txtNombre.DataSource = NOMBRES;
@@ -604,6 +604,19 @@ namespace OrdenamientoPesquero
             {
                 BuscarNombreOrg_Click(sender, e);
             }
+            //else
+            //{
+            //    string a = txtNombre.Text;
+            //    dt = proc.Obtener_todas_unidades("");
+            //    NOMBRES = proc.Obtener_todos_los_nombres(txtNombre.Text);
+            //    if (dt.Rows.Count != 0)
+            //    {
+            //        txtNombre.DataSource = NOMBRES;
+            //        txtNombre.DisplayMember = "Nombre";
+            //        txtNombre.ValueMember = "Nombre";
+            //        txtNombre.Text = a;
+            //    }
+            //}
         }
 
         private void RegFed_Click(object sender, EventArgs e)
@@ -618,6 +631,11 @@ namespace OrdenamientoPesquero
             Pantalla_Federaciones fede = new Pantalla_Federaciones(NomFed.Text);
             fede.ShowDialog();
             CargarFederaciones();
+        }
+
+        private void txtNombre_TextChanged(object sender, EventArgs e)
+        {
+          
         }
     }
 }

@@ -35,7 +35,6 @@ namespace OrdenamientoPesquero
         DataTable dt = null;
         private void Pantalla_Regitro_permiso_Load(object sender, EventArgs e)
         {
-            //val.ajustarResolucion(this);
             CargarRNPA();
             Unid.Text = uni;
             dt = proc.ObtenerCertMatrXUnidad(Rnpa);
@@ -111,6 +110,7 @@ namespace OrdenamientoPesquero
             {
                 item.Text = "";
             }
+            numericUpDown1.Value = numericUpDown2.Value = 0;
         }
 
         public void equiposdepesca()

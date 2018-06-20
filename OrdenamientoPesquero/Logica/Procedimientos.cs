@@ -120,15 +120,16 @@ namespace Logica
             string[] Parametros = { "@M" };
             return c.getDatosTabla("Localidades", Parametros, M);
         }
+
         public DataTable Obtener_todas_unidades(string RNPA)
         {
             string[] Parametros = { "@rnpa" };
             return c.getDatosTabla("ObtenerDatos", Parametros, RNPA);
         }
-        public DataTable Obtener_todos_los_nombres()
+        public DataTable Obtener_todos_los_nombres(string Nombre)
         {
-            string[] Parametros = { };
-            return c.getDatosTabla("ObtenerNombres", Parametros);
+            string[] Parametros = { "@nombre"};
+            return c.getDatosTabla("ObtenerNombres", Parametros,Nombre);
         }
         public DataTable Obtener_unidad(string nombre)
         {
@@ -165,8 +166,8 @@ namespace Logica
         }
         public int Actualizar_Pescador(Pescador PES)
         {
-            string[] Parametros = { "@nombre", "@appat", "@apmat", "@curp", "@rfc", "@escolaridad", "@tiposangre", "@sexo", "@lugarnacimiento", "@fechanac", "@callenum", "@colonia", "@munici", "@codpos", "@tel", "@tipo", "@ocupacion", "@cuerpo", "@matricula", "@correo", "@localidad", "@ordenado" };
-            return c.Ejecutar("Actualizar_pescador", Parametros, PES.NOMBRE, PES.AP_PAT, PES.AP_MAT, PES.CURP, PES.RFC, PES.ESCOLARIDAD, PES.TIP_SANG, PES.SEXO, PES.LUG_NACIMI, PES.FECH_NACIMI, PES.CALLENUM, PES.COLONIA, PES.MUNICIPIO, PES.CP, PES.TEL, PES.TIPO_PESC, PES.OCP_LABORAL, PES.CUERPO_DE_AGUA, PES.MATRICULA, PES.CORREO, PES.LOCALIDAD, PES.ORDENADO);
+            string[] Parametros = { "@nombre", "@appat", "@apmat", "@curp", "@rfc", "@escolaridad", "@tiposangre", "@sexo", "@lugarnacimiento", "@fechanac", "@callenum", "@colonia", "@munici", "@codpos", "@tel", "@tipo", "@ocupacion", "@cuerpo", "@matricula", "@correo", "@localidad", "@ordenado", "@RNPATIT" };
+            return c.Ejecutar("Actualizar_pescador", Parametros, PES.NOMBRE, PES.AP_PAT, PES.AP_MAT, PES.CURP, PES.RFC, PES.ESCOLARIDAD, PES.TIP_SANG, PES.SEXO, PES.LUG_NACIMI, PES.FECH_NACIMI, PES.CALLENUM, PES.COLONIA, PES.MUNICIPIO, PES.CP, PES.TEL, PES.TIPO_PESC, PES.OCP_LABORAL, PES.CUERPO_DE_AGUA, PES.MATRICULA, PES.CORREO, PES.LOCALIDAD, PES.ORDENADO, PES.RNPA);
 
         }
         public int Eliminar_Pescador(String CURP)
