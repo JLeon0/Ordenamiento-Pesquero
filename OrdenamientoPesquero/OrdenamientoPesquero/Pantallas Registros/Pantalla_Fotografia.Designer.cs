@@ -44,7 +44,7 @@
             // 
             // Guardar
             // 
-            this.Guardar.Location = new System.Drawing.Point(977, 633);
+            this.Guardar.Location = new System.Drawing.Point(278, 680);
             this.Guardar.Name = "Guardar";
             this.Guardar.Size = new System.Drawing.Size(75, 23);
             this.Guardar.TabIndex = 11;
@@ -58,7 +58,7 @@
             this.Estado});
             this.statusStrip1.Location = new System.Drawing.Point(0, 709);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1057, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(454, 22);
             this.statusStrip1.TabIndex = 10;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -70,7 +70,7 @@
             // 
             // btnIniciar
             // 
-            this.btnIniciar.Location = new System.Drawing.Point(895, 633);
+            this.btnIniciar.Location = new System.Drawing.Point(197, 680);
             this.btnIniciar.Name = "btnIniciar";
             this.btnIniciar.Size = new System.Drawing.Size(75, 23);
             this.btnIniciar.TabIndex = 9;
@@ -81,7 +81,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(455, 638);
+            this.label1.Location = new System.Drawing.Point(1, 637);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(105, 13);
             this.label1.TabIndex = 8;
@@ -90,7 +90,7 @@
             // cbxDispositivos
             // 
             this.cbxDispositivos.FormattingEnabled = true;
-            this.cbxDispositivos.Location = new System.Drawing.Point(567, 635);
+            this.cbxDispositivos.Location = new System.Drawing.Point(113, 634);
             this.cbxDispositivos.Name = "cbxDispositivos";
             this.cbxDispositivos.Size = new System.Drawing.Size(321, 21);
             this.cbxDispositivos.TabIndex = 7;
@@ -98,26 +98,27 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.EspacioCamara);
-            this.groupBox1.Location = new System.Drawing.Point(13, 7);
+            this.groupBox1.Location = new System.Drawing.Point(4, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1039, 622);
+            this.groupBox1.Size = new System.Drawing.Size(436, 622);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "WebCams";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // EspacioCamara
             // 
             this.EspacioCamara.Dock = System.Windows.Forms.DockStyle.Fill;
             this.EspacioCamara.Location = new System.Drawing.Point(3, 16);
             this.EspacioCamara.Name = "EspacioCamara";
-            this.EspacioCamara.Size = new System.Drawing.Size(1033, 603);
+            this.EspacioCamara.Size = new System.Drawing.Size(430, 603);
             this.EspacioCamara.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.EspacioCamara.TabIndex = 0;
             this.EspacioCamara.TabStop = false;
             // 
             // Salir
             // 
-            this.Salir.Location = new System.Drawing.Point(974, 683);
+            this.Salir.Location = new System.Drawing.Point(359, 680);
             this.Salir.Name = "Salir";
             this.Salir.Size = new System.Drawing.Size(75, 23);
             this.Salir.TabIndex = 12;
@@ -129,7 +130,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 731);
+            this.BackColor = System.Drawing.Color.White;
+            this.ClientSize = new System.Drawing.Size(454, 731);
             this.Controls.Add(this.Salir);
             this.Controls.Add(this.Guardar);
             this.Controls.Add(this.statusStrip1);
