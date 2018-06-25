@@ -31,6 +31,11 @@ namespace Logica
         public string LOCALIDAD = "";
         public int ORDENADO = 0;
         public string RNPA = "";
+        public string SEGURO = "";
+        public string FOLIO = "";
+        public string FECHAVENF = "";
+        public string FECHAEXPF = "";
+
         public Pescador()
         {
              NOMBRE = "";
@@ -56,6 +61,10 @@ namespace Logica
             LOCALIDAD = "";
             ORDENADO = 0;
             RNPA = "";
+            SEGURO = "";
+            FOLIO = "";
+            FECHAEXPF = "";
+            FECHAVENF = "";
         }
         public Pescador(
         string nOMBRE,
@@ -77,7 +86,7 @@ namespace Logica
         string oCP_LABORAL,
         string cUERPO_DE_AGUA,
         string mATRICULA, string correo, string localidad,
-        int Ordenado, string rnpa)
+        int Ordenado, string rnpa, string seguro, string folio, string fechavenf, string fechaexpf)
         {
             NOMBRE = nOMBRE;
             AP_PAT = aP_PAT;
@@ -102,6 +111,10 @@ namespace Logica
             LOCALIDAD = localidad;
             ORDENADO = Ordenado;
             RNPA = rnpa;
+            SEGURO = seguro;
+            FOLIO = folio;
+            FECHAVENF = fechavenf;
+            FECHAEXPF = fechaexpf;
         }
     }
 }

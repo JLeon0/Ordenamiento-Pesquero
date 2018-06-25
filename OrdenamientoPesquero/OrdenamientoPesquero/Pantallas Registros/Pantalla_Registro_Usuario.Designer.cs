@@ -35,14 +35,14 @@
             this.gbxOrdenado = new System.Windows.Forms.GroupBox();
             this.no = new System.Windows.Forms.RadioButton();
             this.si = new System.Windows.Forms.RadioButton();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Seguro = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.FechaVencFolio = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.FechaExpFolio = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.FolioCred = new System.Windows.Forms.TextBox();
             this.Imagen = new System.Windows.Forms.PictureBox();
             this.limpiar = new System.Windows.Forms.PictureBox();
             this.LocalidadPesc = new System.Windows.Forms.ComboBox();
@@ -148,14 +148,14 @@
             // 
             this.groupBox7.Controls.Add(this.CargarImagen);
             this.groupBox7.Controls.Add(this.gbxOrdenado);
-            this.groupBox7.Controls.Add(this.comboBox1);
+            this.groupBox7.Controls.Add(this.Seguro);
             this.groupBox7.Controls.Add(this.label8);
-            this.groupBox7.Controls.Add(this.dateTimePicker2);
+            this.groupBox7.Controls.Add(this.FechaVencFolio);
             this.groupBox7.Controls.Add(this.label7);
-            this.groupBox7.Controls.Add(this.dateTimePicker1);
+            this.groupBox7.Controls.Add(this.FechaExpFolio);
             this.groupBox7.Controls.Add(this.label6);
             this.groupBox7.Controls.Add(this.label1);
-            this.groupBox7.Controls.Add(this.textBox1);
+            this.groupBox7.Controls.Add(this.FolioCred);
             this.groupBox7.Controls.Add(this.Imagen);
             this.groupBox7.Controls.Add(this.limpiar);
             this.groupBox7.Controls.Add(this.LocalidadPesc);
@@ -252,19 +252,19 @@
             this.si.Text = "Si";
             this.si.UseVisualStyleBackColor = true;
             // 
-            // comboBox1
+            // Seguro
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.Seguro.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Seguro.FormattingEnabled = true;
+            this.Seguro.Items.AddRange(new object[] {
             "ACTIVO",
             "BAJA",
             "OXCISO",
             "OTRO"});
-            this.comboBox1.Location = new System.Drawing.Point(643, 290);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(122, 24);
-            this.comboBox1.TabIndex = 19;
+            this.Seguro.Location = new System.Drawing.Point(643, 290);
+            this.Seguro.Name = "Seguro";
+            this.Seguro.Size = new System.Drawing.Size(122, 24);
+            this.Seguro.TabIndex = 19;
             // 
             // label8
             // 
@@ -278,15 +278,15 @@
             this.label8.TabIndex = 126;
             this.label8.Text = "Seguro de Vida";
             // 
-            // dateTimePicker2
+            // FechaVencFolio
             // 
-            this.dateTimePicker2.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(392, 292);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(115, 22);
-            this.dateTimePicker2.TabIndex = 18;
+            this.FechaVencFolio.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaVencFolio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaVencFolio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaVencFolio.Location = new System.Drawing.Point(392, 292);
+            this.FechaVencFolio.Name = "FechaVencFolio";
+            this.FechaVencFolio.Size = new System.Drawing.Size(115, 22);
+            this.FechaVencFolio.TabIndex = 18;
             // 
             // label7
             // 
@@ -300,15 +300,15 @@
             this.label7.TabIndex = 124;
             this.label7.Text = "Fecha Vencimiento";
             // 
-            // dateTimePicker1
+            // FechaExpFolio
             // 
-            this.dateTimePicker1.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(268, 292);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(115, 22);
-            this.dateTimePicker1.TabIndex = 17;
+            this.FechaExpFolio.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaExpFolio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaExpFolio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaExpFolio.Location = new System.Drawing.Point(268, 292);
+            this.FechaExpFolio.Name = "FechaExpFolio";
+            this.FechaExpFolio.Size = new System.Drawing.Size(115, 22);
+            this.FechaExpFolio.TabIndex = 17;
             // 
             // label6
             // 
@@ -334,18 +334,18 @@
             this.label1.TabIndex = 120;
             this.label1.Text = "Folio Credencial";
             // 
-            // textBox1
+            // FolioCred
             // 
-            this.textBox1.BackColor = System.Drawing.Color.White;
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(133, 292);
-            this.textBox1.MaxLength = 30;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(129, 22);
-            this.textBox1.TabIndex = 16;
-            this.textBox1.Tag = "";
+            this.FolioCred.BackColor = System.Drawing.Color.White;
+            this.FolioCred.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FolioCred.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FolioCred.ForeColor = System.Drawing.Color.Black;
+            this.FolioCred.Location = new System.Drawing.Point(133, 292);
+            this.FolioCred.MaxLength = 30;
+            this.FolioCred.Name = "FolioCred";
+            this.FolioCred.Size = new System.Drawing.Size(129, 22);
+            this.FolioCred.TabIndex = 16;
+            this.FolioCred.Tag = "";
             // 
             // Imagen
             // 
@@ -1147,10 +1147,10 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(752, 10);
+            this.pictureBox3.Location = new System.Drawing.Point(677, 10);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(150, 60);
+            this.pictureBox3.Size = new System.Drawing.Size(200, 60);
             this.pictureBox3.TabIndex = 156;
             this.pictureBox3.TabStop = false;
             // 
@@ -1292,14 +1292,14 @@
         private System.Windows.Forms.RadioButton no;
         private System.Windows.Forms.RadioButton si;
         private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox Seguro;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.DateTimePicker FechaVencFolio;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker FechaExpFolio;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox FolioCred;
         private System.Windows.Forms.PictureBox Imagen;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.ComboBox EscolaridadPesc;

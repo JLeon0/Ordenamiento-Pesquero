@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.mtbCP = new System.Windows.Forms.MaskedTextBox();
@@ -82,8 +82,16 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.Resumen = new System.Windows.Forms.GroupBox();
             this.TotalEsfuerzos = new System.Windows.Forms.LinkLabel();
+            this.Credencializados = new System.Windows.Forms.LinkLabel();
+            this.SinActividad = new System.Windows.Forms.LinkLabel();
+            this.Asegurados = new System.Windows.Forms.LinkLabel();
+            this.Marineros = new System.Windows.Forms.LinkLabel();
+            this.Acuacultores = new System.Windows.Forms.LinkLabel();
+            this.Ordenados = new System.Windows.Forms.LinkLabel();
+            this.Capitanes = new System.Windows.Forms.LinkLabel();
             this.TotalSocios = new System.Windows.Forms.LinkLabel();
             this.TotalPermisos = new System.Windows.Forms.LinkLabel();
+            this.label23 = new System.Windows.Forms.Label();
             this.NombreResumen = new System.Windows.Forms.Label();
             this.DataResumen = new System.Windows.Forms.DataGridView();
             this.Pesquería = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -91,6 +99,13 @@
             this.Vigencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label65 = new System.Windows.Forms.Label();
             this.label63 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
@@ -268,7 +283,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(59, 46);
+            this.label3.Location = new System.Drawing.Point(23, 46);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
@@ -682,36 +697,147 @@
             // 
             this.Resumen.BackColor = System.Drawing.Color.Transparent;
             this.Resumen.Controls.Add(this.TotalEsfuerzos);
+            this.Resumen.Controls.Add(this.Credencializados);
+            this.Resumen.Controls.Add(this.SinActividad);
+            this.Resumen.Controls.Add(this.Asegurados);
+            this.Resumen.Controls.Add(this.Marineros);
+            this.Resumen.Controls.Add(this.Acuacultores);
+            this.Resumen.Controls.Add(this.Ordenados);
+            this.Resumen.Controls.Add(this.Capitanes);
             this.Resumen.Controls.Add(this.TotalSocios);
             this.Resumen.Controls.Add(this.TotalPermisos);
             this.Resumen.Controls.Add(this.NombreResumen);
             this.Resumen.Controls.Add(this.DataResumen);
             this.Resumen.Controls.Add(this.label65);
             this.Resumen.Controls.Add(this.label63);
+            this.Resumen.Controls.Add(this.label19);
+            this.Resumen.Controls.Add(this.label16);
+            this.Resumen.Controls.Add(this.label18);
+            this.Resumen.Controls.Add(this.label15);
+            this.Resumen.Controls.Add(this.label22);
+            this.Resumen.Controls.Add(this.label17);
+            this.Resumen.Controls.Add(this.label14);
             this.Resumen.Controls.Add(this.label61);
             this.Resumen.Controls.Add(this.label59);
             this.Resumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Resumen.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Resumen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Resumen.ForeColor = System.Drawing.Color.Black;
             this.Resumen.Location = new System.Drawing.Point(944, 96);
             this.Resumen.Name = "Resumen";
             this.Resumen.Size = new System.Drawing.Size(403, 602);
             this.Resumen.TabIndex = 101;
             this.Resumen.TabStop = false;
-            this.Resumen.Text = "Resumen";
             // 
             // TotalEsfuerzos
             // 
             this.TotalEsfuerzos.AutoSize = true;
             this.TotalEsfuerzos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalEsfuerzos.LinkColor = System.Drawing.Color.Black;
-            this.TotalEsfuerzos.Location = new System.Drawing.Point(149, 98);
+            this.TotalEsfuerzos.Location = new System.Drawing.Point(149, 229);
             this.TotalEsfuerzos.Name = "TotalEsfuerzos";
             this.TotalEsfuerzos.Size = new System.Drawing.Size(13, 16);
             this.TotalEsfuerzos.TabIndex = 12;
             this.TotalEsfuerzos.TabStop = true;
             this.TotalEsfuerzos.Text = "*";
             this.TotalEsfuerzos.VisitedLinkColor = System.Drawing.Color.Black;
+            // 
+            // Credencializados
+            // 
+            this.Credencializados.AutoSize = true;
+            this.Credencializados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Credencializados.LinkColor = System.Drawing.Color.Black;
+            this.Credencializados.Location = new System.Drawing.Point(134, 206);
+            this.Credencializados.Name = "Credencializados";
+            this.Credencializados.Size = new System.Drawing.Size(13, 16);
+            this.Credencializados.TabIndex = 11;
+            this.Credencializados.TabStop = true;
+            this.Credencializados.Text = "*";
+            this.Credencializados.VisitedLinkColor = System.Drawing.Color.Black;
+            this.Credencializados.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TotalSocios_LinkClicked);
+            // 
+            // SinActividad
+            // 
+            this.SinActividad.AutoSize = true;
+            this.SinActividad.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SinActividad.LinkColor = System.Drawing.Color.Black;
+            this.SinActividad.Location = new System.Drawing.Point(162, 130);
+            this.SinActividad.Name = "SinActividad";
+            this.SinActividad.Size = new System.Drawing.Size(11, 14);
+            this.SinActividad.TabIndex = 11;
+            this.SinActividad.TabStop = true;
+            this.SinActividad.Text = "*";
+            this.SinActividad.VisitedLinkColor = System.Drawing.Color.Black;
+            this.SinActividad.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TotalSocios_LinkClicked);
+            // 
+            // Asegurados
+            // 
+            this.Asegurados.AutoSize = true;
+            this.Asegurados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Asegurados.LinkColor = System.Drawing.Color.Black;
+            this.Asegurados.Location = new System.Drawing.Point(134, 187);
+            this.Asegurados.Name = "Asegurados";
+            this.Asegurados.Size = new System.Drawing.Size(13, 16);
+            this.Asegurados.TabIndex = 11;
+            this.Asegurados.TabStop = true;
+            this.Asegurados.Text = "*";
+            this.Asegurados.VisitedLinkColor = System.Drawing.Color.Black;
+            this.Asegurados.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TotalSocios_LinkClicked);
+            // 
+            // Marineros
+            // 
+            this.Marineros.AutoSize = true;
+            this.Marineros.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Marineros.LinkColor = System.Drawing.Color.Black;
+            this.Marineros.Location = new System.Drawing.Point(162, 113);
+            this.Marineros.Name = "Marineros";
+            this.Marineros.Size = new System.Drawing.Size(11, 14);
+            this.Marineros.TabIndex = 11;
+            this.Marineros.TabStop = true;
+            this.Marineros.Text = "*";
+            this.Marineros.VisitedLinkColor = System.Drawing.Color.Black;
+            this.Marineros.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TotalSocios_LinkClicked);
+            // 
+            // Acuacultores
+            // 
+            this.Acuacultores.AutoSize = true;
+            this.Acuacultores.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Acuacultores.LinkColor = System.Drawing.Color.Black;
+            this.Acuacultores.Location = new System.Drawing.Point(162, 148);
+            this.Acuacultores.Name = "Acuacultores";
+            this.Acuacultores.Size = new System.Drawing.Size(11, 14);
+            this.Acuacultores.TabIndex = 11;
+            this.Acuacultores.TabStop = true;
+            this.Acuacultores.Text = "*";
+            this.Acuacultores.VisitedLinkColor = System.Drawing.Color.Black;
+            this.Acuacultores.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TotalSocios_LinkClicked);
+            // 
+            // Ordenados
+            // 
+            this.Ordenados.AutoSize = true;
+            this.Ordenados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ordenados.LinkColor = System.Drawing.Color.Black;
+            this.Ordenados.Location = new System.Drawing.Point(134, 171);
+            this.Ordenados.Name = "Ordenados";
+            this.Ordenados.Size = new System.Drawing.Size(13, 16);
+            this.Ordenados.TabIndex = 11;
+            this.Ordenados.TabStop = true;
+            this.Ordenados.Text = "*";
+            this.Ordenados.VisitedLinkColor = System.Drawing.Color.Black;
+            this.Ordenados.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TotalSocios_LinkClicked);
+            // 
+            // Capitanes
+            // 
+            this.Capitanes.AutoSize = true;
+            this.Capitanes.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Capitanes.LinkColor = System.Drawing.Color.Black;
+            this.Capitanes.Location = new System.Drawing.Point(162, 96);
+            this.Capitanes.Name = "Capitanes";
+            this.Capitanes.Size = new System.Drawing.Size(11, 14);
+            this.Capitanes.TabIndex = 11;
+            this.Capitanes.TabStop = true;
+            this.Capitanes.Text = "*";
+            this.Capitanes.VisitedLinkColor = System.Drawing.Color.Black;
+            this.Capitanes.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TotalSocios_LinkClicked);
             // 
             // TotalSocios
             // 
@@ -741,6 +867,18 @@
             this.TotalPermisos.VisitedLinkColor = System.Drawing.Color.Black;
             this.TotalPermisos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TotalPermisos_LinkClicked);
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Black;
+            this.label23.Location = new System.Drawing.Point(957, 81);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(91, 19);
+            this.label23.TabIndex = 9;
+            this.label23.Text = "RESUMEN";
+            // 
             // NombreResumen
             // 
             this.NombreResumen.AutoSize = true;
@@ -756,55 +894,55 @@
             this.DataResumen.AllowUserToAddRows = false;
             this.DataResumen.AllowUserToDeleteRows = false;
             this.DataResumen.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataResumen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataResumen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
             this.DataResumen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataResumen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Pesquería,
             this.Esfuerzos,
             this.Vigencia});
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataResumen.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataResumen.DefaultCellStyle = dataGridViewCellStyle19;
             this.DataResumen.GridColor = System.Drawing.Color.White;
-            this.DataResumen.Location = new System.Drawing.Point(3, 150);
+            this.DataResumen.Location = new System.Drawing.Point(0, 281);
             this.DataResumen.MinimumSize = new System.Drawing.Size(100, 50);
             this.DataResumen.Name = "DataResumen";
             this.DataResumen.ReadOnly = true;
             this.DataResumen.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataResumen.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataResumen.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
             this.DataResumen.RowHeadersVisible = false;
             this.DataResumen.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
-            this.DataResumen.RowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.DataResumen.Size = new System.Drawing.Size(365, 419);
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
+            this.DataResumen.RowsDefaultCellStyle = dataGridViewCellStyle21;
+            this.DataResumen.Size = new System.Drawing.Size(365, 315);
             this.DataResumen.TabIndex = 8;
             // 
             // Pesquería
             // 
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pesquería.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pesquería.DefaultCellStyle = dataGridViewCellStyle16;
             this.Pesquería.HeaderText = "Pesquería";
             this.Pesquería.Name = "Pesquería";
             this.Pesquería.ReadOnly = true;
@@ -812,18 +950,18 @@
             // Esfuerzos
             // 
             this.Esfuerzos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Esfuerzos.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Esfuerzos.DefaultCellStyle = dataGridViewCellStyle17;
             this.Esfuerzos.HeaderText = "Esfuerzos";
             this.Esfuerzos.Name = "Esfuerzos";
             this.Esfuerzos.ReadOnly = true;
             // 
             // Vigencia
             // 
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
-            this.Vigencia.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
+            this.Vigencia.DefaultCellStyle = dataGridViewCellStyle18;
             this.Vigencia.HeaderText = "Vigencia";
             this.Vigencia.Name = "Vigencia";
             this.Vigencia.ReadOnly = true;
@@ -833,7 +971,7 @@
             // 
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(7, 131);
+            this.label65.Location = new System.Drawing.Point(7, 262);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(77, 16);
             this.label65.TabIndex = 6;
@@ -843,11 +981,81 @@
             // 
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(7, 98);
+            this.label63.Location = new System.Drawing.Point(7, 229);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(124, 16);
             this.label63.TabIndex = 4;
             this.label63.Text = "Esf. Pesq. Nominal:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(7, 206);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(111, 16);
+            this.label19.TabIndex = 2;
+            this.label19.Text = "Credencializados:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(35, 130);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(72, 14);
+            this.label16.TabIndex = 2;
+            this.label16.Text = "Sin Actividad:";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(7, 188);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(81, 16);
+            this.label18.TabIndex = 2;
+            this.label18.Text = "Asegurados:";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(35, 113);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(58, 14);
+            this.label15.TabIndex = 2;
+            this.label15.Text = "Marineros:";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(35, 148);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(75, 14);
+            this.label22.TabIndex = 2;
+            this.label22.Text = "Acuacultores:";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(7, 171);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(75, 16);
+            this.label17.TabIndex = 2;
+            this.label17.Text = "Ordenados:";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(35, 96);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(58, 14);
+            this.label14.TabIndex = 2;
+            this.label14.Text = "Capitanes:";
             // 
             // label61
             // 
@@ -970,10 +1178,10 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(775, 28);
+            this.pictureBox1.Location = new System.Drawing.Point(690, 29);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 60);
+            this.pictureBox1.Size = new System.Drawing.Size(200, 60);
             this.pictureBox1.TabIndex = 154;
             this.pictureBox1.TabStop = false;
             // 
@@ -1005,6 +1213,7 @@
             this.Controls.Add(this.gbOrgPes);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.label23);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
@@ -1108,5 +1317,20 @@
         private System.Windows.Forms.Button RegFed;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.LinkLabel SinActividad;
+        private System.Windows.Forms.LinkLabel Marineros;
+        private System.Windows.Forms.LinkLabel Capitanes;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.LinkLabel Credencializados;
+        private System.Windows.Forms.LinkLabel Asegurados;
+        private System.Windows.Forms.LinkLabel Acuacultores;
+        private System.Windows.Forms.LinkLabel Ordenados;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label23;
     }
 }

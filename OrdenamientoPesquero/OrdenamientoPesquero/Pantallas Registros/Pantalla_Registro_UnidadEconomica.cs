@@ -193,6 +193,7 @@ namespace OrdenamientoPesquero
                 LlenarCampos();
                 ObtenerFederacion();
                 Resumenes(cbRNPA.Text);
+                ResumenSocios(cbRNPA.Text);
                 button1.Enabled = true;
                 button2.Enabled = true;
                 button3.Enabled = true;
@@ -232,6 +233,7 @@ namespace OrdenamientoPesquero
             LlenarCamposNombre();
             ObtenerFederacion();
             Resumenes(cbRNPA.Text);
+            ResumenSocios(cbRNPA.Text);
             button1.Enabled = true;
             button2.Enabled = true;
             button3.Enabled = true;
@@ -458,6 +460,21 @@ namespace OrdenamientoPesquero
                     DataResumen.Refresh();
                 }
                 DataResumen.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            }
+        }
+
+        public void ResumenSocios(string RNPA)
+        {
+            dt = proc.ResumenSocios(cbRNPA.Text);
+            if (dt.Rows.Count != 0)
+            {
+                Capitanes.Text = dt.Rows[0]["CAPITANES"].ToString();
+                Marineros.Text = dt.Rows[0]["MARINEROS"].ToString();
+                SinActividad.Text = dt.Rows[0]["SINACTIVIDAD"].ToString();
+                Ordenados.Text = dt.Rows[0]["ORDENADOS"].ToString();
+                Asegurados.Text = dt.Rows[0]["ASEGURADOS"].ToString();
+                Acuacultores.Text = dt.Rows[0]["ACUACULTORES"].ToString();
+                Credencializados.Text = dt.Rows[0]["CREDENCIALIZADOS"].ToString();
             }
         }
         #endregion

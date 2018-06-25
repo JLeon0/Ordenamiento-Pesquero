@@ -18,7 +18,7 @@ namespace OrdenamientoPesquero
         public Pantalla_Regitro_permiso(string rnpa, string muni, string unidad)
         {
             InitializeComponent();
-            this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
+            //this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
             this.Width = 734;
             Rnpa = rnpa;
             Municipio = muni;
@@ -55,7 +55,7 @@ namespace OrdenamientoPesquero
             // en este caso se marca el check si se cambia la seleccion
             //
             DataGridViewRow row = dgvEmbarcacionesPerm.CurrentRow;
-            dgvEmbarcacionesPerm[1,row.Index].Value=dt.Rows[combo.SelectedIndex]["MATRICULA"].ToString();
+            dgvEmbarcacionesPerm[1,row.Index].Value = dt.Rows[combo.SelectedIndex]["MATRICULA"].ToString();
             dgvEmbarcacionesPerm[2, row.Index].Value = dt.Rows[combo.SelectedIndex]["MOTORMARCA"].ToString();
             dgvEmbarcacionesPerm[3, row.Index].Value = dt.Rows[combo.SelectedIndex]["MOTORHP"].ToString();
             dgvEmbarcacionesPerm[0, row.Index].Value = dt.Rows[combo.SelectedIndex]["NOMBREEMBARCACION"].ToString();
@@ -180,7 +180,7 @@ namespace OrdenamientoPesquero
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
                         dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
-                        Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
+                       // Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
                         dgvEmbarcacionesPerm[0, i].Value = dt.Rows[i]["NOMBREEMBARCACION"].ToString();
                         dgvEmbarcacionesPerm[1, i].Value = dt.Rows[i]["MATRICULA"].ToString();
                         dgvEmbarcacionesPerm[2, i].Value = dt.Rows[i]["MOTORMARCA"].ToString();
@@ -259,43 +259,38 @@ namespace OrdenamientoPesquero
                 cbx.DropDownStyle = ComboBoxStyle.DropDown;
                 cbx.AutoCompleteSource = AutoCompleteSource.ListItems;
                 cbx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-                cbx.Validating += new CancelEventHandler(cbx_Validating);
+                //cbx.Validating += new CancelEventHandler(cbx_Validating);
             }
         }
 
-        private void datagridview_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
-        {
+        //void cbx_Validating(object sender, CancelEventArgs e)
+        //{
 
-        }
+        //    DataGridViewComboBoxEditingControl cbx = sender as DataGridViewComboBoxEditingControl;
 
-        void cbx_Validating(object sender, CancelEventArgs e)
-        {
+        //    DataGridView grid = cbx.EditingControlDataGridView;
 
-            DataGridViewComboBoxEditingControl cbx = sender as DataGridViewComboBoxEditingControl;
+        //    object value = cbx.Text;
 
-            DataGridView grid = cbx.EditingControlDataGridView;
+        //    // Add value to list if not there
 
-            object value = cbx.Text;
+        //    if (cbx.Items.IndexOf(value) == -1)
+        //    {
+        //        DataGridViewComboBoxCell cboCol = (DataGridViewComboBoxCell)grid.CurrentCell;
 
-            // Add value to list if not there
+        //        // Must add to both the current combobox as well as the template, to avoid duplicate entries...
 
-            if (cbx.Items.IndexOf(value) == -1)
-            {
-                DataGridViewComboBoxCell cboCol = (DataGridViewComboBoxCell)grid.CurrentCell;
+        //        cbx.Items.Add(value);
 
-                // Must add to both the current combobox as well as the template, to avoid duplicate entries...
+        //        cboCol.Items.Add(value);
 
-                cbx.Items.Add(value);
-
-                cboCol.Items.Add(value);
-
-                grid.CurrentCell.Value = value;
-            }
-            else
-            {
-                //cbx.SelectedIndex = 
-            }
-        } //-----------------------------------------------------------------------------------------
+        //        grid.CurrentCell.Value = value;
+        //    }
+        //    else
+        //    {
+        //        //cbx.SelectedIndex = 
+        //    }
+        //} //-----------------------------------------------------------------------------------------
 
         private void Ver_Click(object sender, EventArgs e)
         {
@@ -308,30 +303,21 @@ namespace OrdenamientoPesquero
             limpiarpermiso();
         }
 
-        private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellValueChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void dataGridView2_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
-            // DataGridViewComboBoxEditingControl dgvCombo = e.Control as DataGridViewComboBoxEditingControl;
+            DataGridViewComboBoxEditingControl dgvCombo = e.Control as DataGridViewComboBoxEditingControl;
 
-            //if (dgvCombo != null)
-            //{
-            //    //
-            //    // se remueve el handler previo que pudiera tener asociado, a causa ediciones previas de la celda
-            //    // evitando asi que se ejecuten varias veces el evento
-            //    //
-            //    dgvCombo.SelectedIndexChanged -= new EventHandler(dvgCombo_SelectedIndexChanged);
+            if (dgvCombo != null)
+            {
+                //
+                // se remueve el handler previo que pudiera tener asociado, a causa ediciones previas de la celda
+                // evitando asi que se ejecuten varias veces el evento
+                //
+                dgvCombo.SelectedIndexChanged -= new EventHandler(dvgCombo_SelectedIndexChanged);
 
-            //    dgvCombo.SelectedIndexChanged += new EventHandler(dvgCombo_SelectedIndexChanged);
-            //}
+                dgvCombo.SelectedIndexChanged += new EventHandler(dvgCombo_SelectedIndexChanged);
+            }
         }
 
         private void nPer_KeyPress(object sender, KeyPressEventArgs e)
