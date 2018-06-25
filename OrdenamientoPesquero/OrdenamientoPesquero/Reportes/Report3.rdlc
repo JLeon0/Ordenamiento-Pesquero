@@ -355,7 +355,7 @@
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
         <Top>0.97578cm</Top>
-        <Left>1.53141cm</Left>
+        <Left>1.90939cm</Left>
         <Height>1.2cm</Height>
         <Width>24.18903cm</Width>
         <Style>
@@ -365,10 +365,10 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>1.25in</Height>
+    <Height>21.58cm</Height>
     <Style />
   </Body>
-  <Width>10.23115in</Width>
+  <Width>27.94cm</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
@@ -379,7 +379,8 @@
           <Source>Embedded</Source>
           <Value>sepadaescudologosiglas_450x851</Value>
           <Sizing>Fit</Sizing>
-          <Left>0.26234cm</Left>
+          <Top>0.3175cm</Top>
+          <Left>2.48295cm</Left>
           <Height>1.84396cm</Height>
           <Width>19.5691cm</Width>
           <Style>
@@ -425,8 +426,8 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox13</rd:DefaultName>
-          <Top>0.3175cm</Top>
-          <Left>3.18002cm</Left>
+          <Top>0.635cm</Top>
+          <Left>5.30614cm</Left>
           <Height>1.52646cm</Height>
           <Width>9.525cm</Width>
           <ZIndex>1</ZIndex>
@@ -447,8 +448,8 @@
         </Border>
       </Style>
     </PageHeader>
-    <PageHeight>31cm</PageHeight>
-    <PageWidth>43cm</PageWidth>
+    <PageHeight>21.59cm</PageHeight>
+    <PageWidth>27.94cm</PageWidth>
     <LeftMargin>0cm</LeftMargin>
     <RightMargin>0cm</RightMargin>
     <TopMargin>0cm</TopMargin>

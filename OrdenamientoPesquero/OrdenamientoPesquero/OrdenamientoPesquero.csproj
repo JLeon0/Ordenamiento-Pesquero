@@ -152,6 +152,7 @@
     </Compile>
     <EmbeddedResource Include="Reportes\Anexo3.rdlc" />
     <EmbeddedResource Include="Reportes\Credencial.rdlc" />
+    <EmbeddedResource Include="Reportes\Frontal.rdlc" />
     <EmbeddedResource Include="Reportes\Permisos.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
     <None Include="ObtenerImagen.xsc">
