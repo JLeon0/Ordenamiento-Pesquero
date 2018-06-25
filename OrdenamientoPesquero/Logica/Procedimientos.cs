@@ -111,6 +111,7 @@ namespace Logica
         }
         #endregion
 
+        #region Obtener
         public DataTable ObtenerMunicipios()
         {
             return c.getDatosTabla("Municipios", new string[0], new string[0]);
@@ -128,8 +129,8 @@ namespace Logica
         }
         public DataTable Obtener_todos_los_nombres(string Nombre)
         {
-            string[] Parametros = { "@nombre"};
-            return c.getDatosTabla("ObtenerNombres", Parametros,Nombre);
+            string[] Parametros = { "@nombre" };
+            return c.getDatosTabla("ObtenerNombres", Parametros, Nombre);
         }
         public DataTable Obtener_unidad(string nombre)
         {
@@ -147,6 +148,9 @@ namespace Logica
             string[] Parametros = { "@rnpa" };
             return c.getDatosTabla("Obtener", Parametros, RNPA);
         }
+        #endregion
+
+
 
         #region Pescador
         public int Registrar_Pescador(Pescador PES)
@@ -312,6 +316,45 @@ namespace Logica
             string[] Parametros = { "@RNPA" };
             return c.getDatosTabla("ObtenerUnaFederacion", Parametros, RNPA);
 
+        }
+        #endregion
+
+
+        #region Respaldos
+        public int PasarPescadores(string matricula)
+        {
+            string[] Parametros = { "@matricula" };
+            return c.Ejecutar("PasarPescadores", Parametros, matricula);
+        }
+        public int PasarDirectiva(string rnpa)
+        {
+            string[] Parametros = { "@rnpa" };
+            return c.Ejecutar("PasarDirectiva", Parametros, rnpa);
+        }
+        public int PasarEmbarcaciones(string rnpa)
+        {
+            string[] Parametros = { "@rnptitular" };
+            return c.Ejecutar("PasarEmbarcaciones", Parametros, rnpa);
+        }
+        public int PasarPermisos(string rnpa)
+        {
+            string[] Parametros = { "@rnpa" };
+            return c.Ejecutar("PasarPermisos", Parametros, rnpa);
+        }
+        public int PasarUnidad(string rnpa)
+        {
+            string[] Parametros = { "@rnpa" };
+            return c.Ejecutar("PasarUnidad", Parametros, rnpa);
+        }
+        public int PasarEquipoPesca(string nper)
+        {
+            string[] Parametros = { "@nper" };
+            return c.Ejecutar("PasarEquipoPesca", Parametros, nper);
+        }
+        public int PasarEmbarcaPermis(string nper)
+        {
+            string[] Parametros = { "@nper" };
+            return c.Ejecutar("PasarEmbarcaPermis", Parametros, nper);
         }
         #endregion
     }

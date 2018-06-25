@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.mtbCP = new System.Windows.Forms.MaskedTextBox();
@@ -91,7 +91,6 @@
             this.Capitanes = new System.Windows.Forms.LinkLabel();
             this.TotalSocios = new System.Windows.Forms.LinkLabel();
             this.TotalPermisos = new System.Windows.Forms.LinkLabel();
-            this.label23 = new System.Windows.Forms.Label();
             this.NombreResumen = new System.Windows.Forms.Label();
             this.DataResumen = new System.Windows.Forms.DataGridView();
             this.Pesquería = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -108,6 +107,7 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.label59 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
@@ -283,7 +283,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(23, 46);
+            this.label3.Location = new System.Drawing.Point(14, 46);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
@@ -357,6 +357,7 @@
             // 
             // ModFed
             // 
+            this.ModFed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ModFed.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModFed.Location = new System.Drawing.Point(128, 271);
             this.ModFed.Name = "ModFed";
@@ -368,6 +369,7 @@
             // 
             // RegFed
             // 
+            this.RegFed.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RegFed.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegFed.Location = new System.Drawing.Point(36, 272);
             this.RegFed.Name = "RegFed";
@@ -457,6 +459,7 @@
             this.BuscarNombreOrg.BackColor = System.Drawing.Color.Transparent;
             this.BuscarNombreOrg.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Search;
             this.BuscarNombreOrg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.BuscarNombreOrg.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BuscarNombreOrg.Location = new System.Drawing.Point(629, 40);
             this.BuscarNombreOrg.Name = "BuscarNombreOrg";
             this.BuscarNombreOrg.Size = new System.Drawing.Size(28, 28);
@@ -482,6 +485,7 @@
             // 
             this.EliminarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Eliminar;
             this.EliminarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EliminarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EliminarUnidad.Location = new System.Drawing.Point(857, 265);
             this.EliminarUnidad.Name = "EliminarUnidad";
             this.EliminarUnidad.Size = new System.Drawing.Size(50, 50);
@@ -495,6 +499,7 @@
             this.ActualizarUnidad.BackColor = System.Drawing.Color.Transparent;
             this.ActualizarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
             this.ActualizarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ActualizarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ActualizarUnidad.Location = new System.Drawing.Point(785, 265);
             this.ActualizarUnidad.Name = "ActualizarUnidad";
             this.ActualizarUnidad.Size = new System.Drawing.Size(50, 50);
@@ -508,6 +513,7 @@
             this.pictureBox12.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox12.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Search;
             this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox12.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox12.Location = new System.Drawing.Point(202, 41);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(28, 28);
@@ -521,6 +527,7 @@
             this.RegistrarUnidad.BackColor = System.Drawing.Color.Transparent;
             this.RegistrarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.RegistrarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RegistrarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RegistrarUnidad.Location = new System.Drawing.Point(715, 265);
             this.RegistrarUnidad.Name = "RegistrarUnidad";
             this.RegistrarUnidad.Size = new System.Drawing.Size(50, 50);
@@ -867,18 +874,6 @@
             this.TotalPermisos.VisitedLinkColor = System.Drawing.Color.Black;
             this.TotalPermisos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TotalPermisos_LinkClicked);
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.BackColor = System.Drawing.Color.Transparent;
-            this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(957, 81);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(91, 19);
-            this.label23.TabIndex = 9;
-            this.label23.Text = "RESUMEN";
-            // 
             // NombreResumen
             // 
             this.NombreResumen.AutoSize = true;
@@ -894,55 +889,55 @@
             this.DataResumen.AllowUserToAddRows = false;
             this.DataResumen.AllowUserToDeleteRows = false;
             this.DataResumen.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataResumen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataResumen.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.DataResumen.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DataResumen.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Pesquería,
             this.Esfuerzos,
             this.Vigencia});
-            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DataResumen.DefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DataResumen.DefaultCellStyle = dataGridViewCellStyle5;
             this.DataResumen.GridColor = System.Drawing.Color.White;
             this.DataResumen.Location = new System.Drawing.Point(0, 281);
             this.DataResumen.MinimumSize = new System.Drawing.Size(100, 50);
             this.DataResumen.Name = "DataResumen";
             this.DataResumen.ReadOnly = true;
             this.DataResumen.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DataResumen.RowHeadersDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DataResumen.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.DataResumen.RowHeadersVisible = false;
             this.DataResumen.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToDisplayedHeaders;
-            dataGridViewCellStyle21.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle21.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.Color.Black;
-            this.DataResumen.RowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
+            this.DataResumen.RowsDefaultCellStyle = dataGridViewCellStyle7;
             this.DataResumen.Size = new System.Drawing.Size(365, 315);
             this.DataResumen.TabIndex = 8;
             // 
             // Pesquería
             // 
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Pesquería.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Pesquería.DefaultCellStyle = dataGridViewCellStyle2;
             this.Pesquería.HeaderText = "Pesquería";
             this.Pesquería.Name = "Pesquería";
             this.Pesquería.ReadOnly = true;
@@ -950,18 +945,18 @@
             // Esfuerzos
             // 
             this.Esfuerzos.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Esfuerzos.DefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Esfuerzos.DefaultCellStyle = dataGridViewCellStyle3;
             this.Esfuerzos.HeaderText = "Esfuerzos";
             this.Esfuerzos.Name = "Esfuerzos";
             this.Esfuerzos.ReadOnly = true;
             // 
             // Vigencia
             // 
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.Color.White;
-            this.Vigencia.DefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.White;
+            this.Vigencia.DefaultCellStyle = dataGridViewCellStyle4;
             this.Vigencia.HeaderText = "Vigencia";
             this.Vigencia.Name = "Vigencia";
             this.Vigencia.ReadOnly = true;
@@ -1077,9 +1072,22 @@
             this.label59.TabIndex = 0;
             this.label59.Text = "Permisos:";
             // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.BackColor = System.Drawing.Color.Transparent;
+            this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.ForeColor = System.Drawing.Color.Black;
+            this.label23.Location = new System.Drawing.Point(957, 81);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(91, 19);
+            this.label23.TabIndex = 9;
+            this.label23.Text = "RESUMEN";
+            // 
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Silver;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(195, 442);
@@ -1093,6 +1101,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Silver;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(347, 442);
@@ -1106,6 +1115,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Silver;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Location = new System.Drawing.Point(46, 442);
