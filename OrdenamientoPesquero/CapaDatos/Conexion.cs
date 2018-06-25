@@ -26,52 +26,52 @@ namespace CapaDatos
             //con.ChangeDatabase(bdda);
             //con.Open();
         }
-        public void Generer_respaldo()
+        public void Generer_respaldo(string direc)
         {
-            string back = "BACKUP DATABASE[OrdPesquero] TO DISK = N'C:/wamp64/resp.bak' WITH NOFORMAT, NOINIT, NAME = N'test-Completa Base de datos Copia de seguridad', SKIP,NOREWIND, NOUNLOAD,  STATS = 10";
+            string back = "BACKUP DATABASE[OrdPesquero] TO DISK = N'"+direc+"\\copia.bak"+"' WITH NOFORMAT, NOINIT, NAME = N'test-Completa Base de datos Copia de seguridad', SKIP,NOREWIND, NOUNLOAD,  STATS = 10";
             try
             {
                 SqlCommand cmd = new SqlCommand(back, con);
                 con.Open();
                 cmd.ExecuteNonQuery();
-                string temporaryTableName = "temp";
-                string _sql = "";
-                string AremoteTempPath = "C:/wamp64/resp.bak";
-                string AlocalPath = "C:/Users/ERNESTOPADILLA/Desktop";
-                string fileName = "resp.bak";
-                string _dbname = "OrdPesquero";
-                _sql = String.Format("IF OBJECT_ID('tempdb..##{0}') IS " +
-                     "NOT NULL DROP TABLE ##{0}", temporaryTableName);
-                cmd.CommandText = _sql;
-                cmd.ExecuteNonQuery();
-                _sql = String.Format("CREATE TABLE ##{0} (bck VARBINARY(MAX))",
-                                     temporaryTableName);
-                cmd.CommandText = _sql;
-                cmd.ExecuteNonQuery();
-                _sql = String.Format("INSERT INTO ##{0} SELECT bck.* FROM " +
-               "OPENROWSET(BULK '{1}',SINGLE_BLOB) bck",
-               temporaryTableName, AremoteTempPath, _dbname);
-                cmd.CommandText = _sql;
-                cmd.ExecuteNonQuery();
-                _sql = String.Format("SELECT bck FROM ##{0}", temporaryTableName);
-                SqlDataAdapter da = new SqlDataAdapter(_sql, con);
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-                DataRow dr = ds.Tables[0].Rows[0];
-                byte[] backupFromServer = new byte[0];
-                backupFromServer = (byte[])dr["bck"];
-                int aSize = new int();
-                aSize = backupFromServer.GetUpperBound(0) + 1;
+               // string temporaryTableName = "temp";
+               // string _sql = "";
+               // string AremoteTempPath = "C:/wamp64/resp.bak";
+               // string AlocalPath = "C:/Users/ERNESTOPADILLA/Desktop";
+               // string fileName = "resp.bak";
+               // string _dbname = "OrdPesquero";
+               // _sql = String.Format("IF OBJECT_ID('tempdb..##{0}') IS " +
+               //      "NOT NULL DROP TABLE ##{0}", temporaryTableName);
+               // cmd.CommandText = _sql;
+               // cmd.ExecuteNonQuery();
+               // _sql = String.Format("CREATE TABLE ##{0} (bck VARBINARY(MAX))",
+               //                      temporaryTableName);
+               // cmd.CommandText = _sql;
+               // cmd.ExecuteNonQuery();
+               // _sql = String.Format("INSERT INTO ##{0} SELECT bck.* FROM " +
+               //"OPENROWSET(BULK '{1}',SINGLE_BLOB) bck",
+               //temporaryTableName, AremoteTempPath, _dbname);
+               // cmd.CommandText = _sql;
+               // cmd.ExecuteNonQuery();
+               // _sql = String.Format("SELECT bck FROM ##{0}", temporaryTableName);
+               // SqlDataAdapter da = new SqlDataAdapter(_sql, con);
+               // DataSet ds = new DataSet();
+               // da.Fill(ds);
+               // DataRow dr = ds.Tables[0].Rows[0];
+               // byte[] backupFromServer = new byte[0];
+               // backupFromServer = (byte[])dr["bck"];
+               // int aSize = new int();
+               // aSize = backupFromServer.GetUpperBound(0) + 1;
 
-                FileStream fs = new FileStream(String.Format("{0}\\{1}",
-                                AlocalPath, fileName), FileMode.OpenOrCreate,
-                                FileAccess.Write);
-                fs.Write(backupFromServer, 0, aSize);
-                fs.Close();
+               // FileStream fs = new FileStream(String.Format("{0}\\{1}",
+               //                 AlocalPath, fileName), FileMode.OpenOrCreate,
+               //                 FileAccess.Write);
+               // fs.Write(backupFromServer, 0, aSize);
+               // fs.Close();
 
-                _sql = String.Format("DROP TABLE ##{0}", temporaryTableName);
-                cmd.CommandText = _sql;
-                cmd.ExecuteNonQuery();
+               // _sql = String.Format("DROP TABLE ##{0}", temporaryTableName);
+               // cmd.CommandText = _sql;
+               // cmd.ExecuteNonQuery();
                 MessageBox.Show("El backup fue realizado exitosamente");
             }
             catch (Exception ex)

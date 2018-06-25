@@ -536,7 +536,6 @@ namespace OrdenamientoPesquero
             }
             else { MessageBox.Show("Debe elegir una unidad economica que esté registrada", "Error"); }
         }
-
         private void button3_Click(object sender, EventArgs e)
         {
             if (existe(cbRNPA.Text))
@@ -582,7 +581,11 @@ namespace OrdenamientoPesquero
 
         private void generarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            proc.Generar();
+            DialogResult result = folderBrowserDialog1.ShowDialog();
+            if (result == DialogResult.OK) // Test result.
+            {
+                proc.Generar(folderBrowserDialog1.SelectedPath); 
+            }
         }
 
         private void cargarToolStripMenuItem_Click(object sender, EventArgs e)

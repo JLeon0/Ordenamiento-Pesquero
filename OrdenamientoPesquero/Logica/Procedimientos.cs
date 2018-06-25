@@ -27,10 +27,10 @@ namespace Logica
         {
             return c.cargar(path);
         }
-        public void Generar()
+        public void Generar( string dir)
         {
             //c.con.Close();
-            c.Generer_respaldo();
+            c.Generer_respaldo(dir);
         }
 
         #region UnidadEconomica
