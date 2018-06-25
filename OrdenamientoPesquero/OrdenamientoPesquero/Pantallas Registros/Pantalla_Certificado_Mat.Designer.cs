@@ -737,10 +737,10 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(510, 13);
+            this.pictureBox3.Location = new System.Drawing.Point(455, 13);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(150, 60);
+            this.pictureBox3.Size = new System.Drawing.Size(200, 60);
             this.pictureBox3.TabIndex = 168;
             this.pictureBox3.TabStop = false;
             // 
