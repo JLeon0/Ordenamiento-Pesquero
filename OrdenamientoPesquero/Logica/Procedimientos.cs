@@ -321,40 +321,40 @@ namespace Logica
 
 
         #region Respaldos
-        public int PasarPescadores(string matricula)
+        public int PasarPescadores()
         {
-            string[] Parametros = { "@matricula" };
-            return c.Ejecutar("PasarPescadores", Parametros, matricula);
+            string[] Parametros = { };
+            return c.Ejecutar("PasarPescadores", Parametros);
         }
-        public int PasarDirectiva(string rnpa)
+        public int PasarDirectiva()
         {
-            string[] Parametros = { "@rnpa" };
-            return c.Ejecutar("PasarDirectiva", Parametros, rnpa);
+            string[] Parametros = {  };
+            return c.Ejecutar("PasarDirectiva", Parametros);
         }
-        public int PasarEmbarcaciones(string rnpa)
+        public int PasarEmbarcaciones()
         {
-            string[] Parametros = { "@rnptitular" };
-            return c.Ejecutar("PasarEmbarcaciones", Parametros, rnpa);
+            string[] Parametros = {  };
+            return c.Ejecutar("PasarEmbarcaciones", Parametros);
         }
-        public int PasarPermisos(string rnpa)
+        public int PasarPermisos()
         {
-            string[] Parametros = { "@rnpa" };
-            return c.Ejecutar("PasarPermisos", Parametros, rnpa);
+            string[] Parametros = {  };
+            return c.Ejecutar("PasarPermisos", Parametros);
         }
-        public int PasarUnidad(string rnpa)
+        public int PasarUnidad()
         {
-            string[] Parametros = { "@rnpa" };
-            return c.Ejecutar("PasarUnidad", Parametros, rnpa);
+            string[] Parametros = { };
+            return c.Ejecutar("PasarUnidad", Parametros);
         }
-        public int PasarEquipoPesca(string nper)
+        public int PasarEquipoPesca()
         {
-            string[] Parametros = { "@nper" };
-            return c.Ejecutar("PasarEquipoPesca", Parametros, nper);
+            string[] Parametros = {  };
+            return c.Ejecutar("PasarEquipoPesca", Parametros);
         }
-        public int PasarEmbarcaPermis(string nper)
+        public int PasarEmbarcaPermis()
         {
-            string[] Parametros = { "@nper" };
-            return c.Ejecutar("PasarEmbarcaPermis", Parametros, nper);
+            string[] Parametros = {  };
+            return c.Ejecutar("PasarEmbarcaPermis", Parametros);
         }
         #endregion
     }

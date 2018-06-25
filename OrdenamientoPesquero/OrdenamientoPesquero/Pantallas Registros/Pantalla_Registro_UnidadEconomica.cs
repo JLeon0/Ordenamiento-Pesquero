@@ -595,6 +595,13 @@ namespace OrdenamientoPesquero
             string direccion = ofd.FileName;
             if (proc.Cargar(direccion))
             {
+                proc.PasarUnidad();
+                proc.PasarEmbarcaciones();
+                proc.PasarPescadores();
+                proc.PasarPermisos();
+                proc.PasarEquipoPesca();
+                proc.PasarEmbarcaPermis();
+                proc.PasarDirectiva();
                 this.OnLoad(e);
             }
         }
