@@ -103,7 +103,7 @@
             this.Correo.Location = new System.Drawing.Point(129, 161);
             this.Correo.Name = "Correo";
             this.Correo.Size = new System.Drawing.Size(215, 20);
-            this.Correo.TabIndex = 2;
+            this.Correo.TabIndex = 4;
             // 
             // Nombre
             // 
@@ -112,7 +112,7 @@
             this.Nombre.Location = new System.Drawing.Point(129, 70);
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(215, 22);
-            this.Nombre.TabIndex = 3;
+            this.Nombre.TabIndex = 1;
             // 
             // label5
             // 
@@ -188,7 +188,7 @@
             this.Telefono.Mask = "(999)000-0000";
             this.Telefono.Name = "Telefono";
             this.Telefono.Size = new System.Drawing.Size(84, 20);
-            this.Telefono.TabIndex = 121;
+            this.Telefono.TabIndex = 3;
             // 
             // pictureBox1
             // 

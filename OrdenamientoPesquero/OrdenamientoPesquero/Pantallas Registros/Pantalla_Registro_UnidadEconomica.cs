@@ -162,13 +162,15 @@ namespace OrdenamientoPesquero
                 cbRNPA.Text = a;
             }
             NOMBRES = proc.Obtener_todos_los_nombres("");
-            if(dt.Rows.Count != 0)
+            foreach (DataRow fila in NOMBRES.Rows)
             {
-                txtNombre.DataSource = NOMBRES;
-                txtNombre.DisplayMember = "Nombre";
-                txtNombre.ValueMember = "Nombre";
-                txtNombre.Text = "";
+                txtNombre.Items.Add(fila["NOMBRE"].ToString());
             }
+            //txtNombre.DataSource = NOMBRES;
+            //txtNombre.DisplayMember = "Nombre";
+            //txtNombre.ValueMember = "Nombre";
+            //txtNombre.Text = "";
+
             cbRNPA.Focus();
         }
 
@@ -183,29 +185,6 @@ namespace OrdenamientoPesquero
                 txtMunicipio.Text = "Seleccione un Municipio";
                 Municipios = dt.Rows.OfType<DataRow>().Select(k => k[0].ToString()).ToArray();
             }
-        }
-
-        private void pictureBox12_Click(object sender, EventArgs e)
-        {
-            this.Cursor = Cursors.WaitCursor;
-            if (existe(cbRNPA.Text))
-            {
-                LlenarCampos();
-                ObtenerFederacion();
-                Resumenes(cbRNPA.Text);
-                ResumenSocios(cbRNPA.Text);
-                button1.Enabled = true;
-                button2.Enabled = true;
-                button3.Enabled = true;
-            }
-            else
-            {
-                limpiartodo();
-                button1.Enabled = false;
-                button2.Enabled = false;
-                button3.Enabled = false;
-            }
-            this.Cursor = Cursors.Default;
         }
         public void limpiartodo()
         {
@@ -614,7 +593,7 @@ namespace OrdenamientoPesquero
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                pictureBox12_Click(sender, e);
+                BuscarRNPA_Click(sender, e);
             }
         }
 
@@ -655,7 +634,45 @@ namespace OrdenamientoPesquero
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-          
+            string x = txtNombre.Text;
+            NOMBRES = proc.Obtener_todos_los_nombres(x);
+            txtNombre.Items.Clear();
+            foreach (DataRow fila in NOMBRES.Rows)
+            {
+                txtNombre.Items.Add(fila["NOMBRE"].ToString());
+            }
+            txtNombre.Select(txtNombre.Text.Length, 0);
+            if(txtNombre.Text == "")
+            { txtNombre.DropDownHeight = 200; }
+        }
+
+        private void BuscarRNPA_Click(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            if (existe(cbRNPA.Text))
+            {
+                LlenarCampos();
+                ObtenerFederacion();
+                Resumenes(cbRNPA.Text);
+                ResumenSocios(cbRNPA.Text);
+                button1.Enabled = true;
+                button2.Enabled = true;
+                button3.Enabled = true;
+            }
+            else
+            {
+                limpiartodo();
+                button1.Enabled = false;
+                button2.Enabled = false;
+                button3.Enabled = false;
+            }
+            this.Cursor = Cursors.Default;
+        }
+
+        private void txtNombre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string x = txtNombre.Text;
+            BuscarNombreOrg.PerformClick();
         }
     }
 }

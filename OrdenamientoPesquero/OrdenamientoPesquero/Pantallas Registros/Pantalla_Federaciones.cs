@@ -59,7 +59,6 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             Nombre.DataSource = dt;
             Nombre.DisplayMember = "NOMBRE";
             //Nombre.ValueMember = "NOMBRE";
-            Nombre.Text = "Seleccione una Federación";
         }
 
         private void Pantalla_Federaciones_Load(object sender, EventArgs e)
