@@ -27,10 +27,10 @@ namespace Logica
         {
             return c.cargar(path);
         }
-        public void Generar( string dir)
+        public void Generar( string dir, string rnpa)
         {
             //c.con.Close();
-            c.Generer_respaldo(dir);
+            c.Generer_respaldo(dir, rnpa);
         }
 
         #region UnidadEconomica
@@ -324,38 +324,79 @@ namespace Logica
         public int PasarPescadores()
         {
             string[] Parametros = { };
-            return c.Ejecutar("PasarPescadores", Parametros);
+            return c.EjecutarMaster("PasarPescadores2", Parametros);
         }
         public int PasarDirectiva()
         {
             string[] Parametros = {  };
-            return c.Ejecutar("PasarDirectiva", Parametros);
+            return c.EjecutarMaster("PasarDirectiva2", Parametros);
         }
         public int PasarEmbarcaciones()
         {
             string[] Parametros = {  };
-            return c.Ejecutar("PasarEmbarcaciones", Parametros);
+            return c.EjecutarMaster("PasarEmbarcaciones2", Parametros);
         }
         public int PasarPermisos()
         {
             string[] Parametros = {  };
-            return c.Ejecutar("PasarPermisos", Parametros);
+            return c.EjecutarMaster("PasarPermisos2", Parametros);
         }
         public int PasarUnidad()
         {
             string[] Parametros = { };
-            return c.Ejecutar("PasarUnidad", Parametros);
+            return c.EjecutarMaster("PasarUnidad2", Parametros);
         }
         public int PasarEquipoPesca()
         {
             string[] Parametros = {  };
-            return c.Ejecutar("PasarEquipoPesca", Parametros);
+            return c.EjecutarMaster("PasarEquipoPesca2", Parametros);
         }
         public int PasarEmbarcaPermis()
         {
             string[] Parametros = {  };
-            return c.Ejecutar("PasarEmbarcaPermis", Parametros);
+            return c.EjecutarMaster("PasarEmbarcaPermis2", Parametros);
         }
         #endregion
+        public int PasarPescadores2(string rnpa)
+        {
+            string[] Parametros = { };
+            return c.EjecutarMaster("PasarPescadores3", Parametros, rnpa);
+        }
+        public int PasarDirectiva2(string rnpa)
+        {
+            string[] Parametros = { "@rnpa" };
+            return c.EjecutarMaster("PasarDirectiva3", Parametros, rnpa);
+        }
+        public int PasarEmbarcaciones2(string rnpa)
+        {
+            string[] Parametros = { "@rnptitular" };
+            return c.EjecutarMaster("PasarEmbarcaciones3", Parametros, rnpa);
+        }
+        public int PasarPermisos2(string rnpa)
+        {
+            string[] Parametros = { "@rnpa" };
+            return c.EjecutarMaster("PasarPermisos3", Parametros, rnpa);
+        }
+        public int PasarUnidad2(string rnpa)
+        {
+            string[] Parametros = {"@rnpa" };
+            return c.EjecutarMaster("PasarUnidad3", Parametros, rnpa);
+        }
+        public int PasarEquipoPesca2(string rnpa)
+        {
+            string[] Parametros = { "@rnpa" };
+            return c.EjecutarMaster("PasarEquipoPesca3", Parametros, rnpa);
+        }
+        public int PasarEmbarcaPermis2(string rnpa)
+        {
+            string[] Parametros = { "@rnpa" };
+            return c.EjecutarMaster("PasarEmbarcaPermis3", Parametros, rnpa);
+        }
+
+        public int limpiar()
+        {
+            string[] Parametros = { };
+            return c.Ejecutar("limpiar", Parametros);
+        }
     }
 }

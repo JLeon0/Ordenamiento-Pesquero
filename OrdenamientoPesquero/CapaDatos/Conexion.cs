@@ -26,9 +26,9 @@ namespace CapaDatos
             //con.ChangeDatabase(bdda);
             //con.Open();
         }
-        public void Generer_respaldo(string direc)
+        public void Generer_respaldo(string direc, string rnpa)
         {
-            string back = "BACKUP DATABASE[OrdPesquero] TO DISK = N'"+direc+"\\copia.bak"+"' WITH NOFORMAT, NOINIT, NAME = N'test-Completa Base de datos Copia de seguridad', SKIP,NOREWIND, NOUNLOAD,  STATS = 10";
+            string back = "BACKUP DATABASE[OrdPesquero2] TO DISK = N'"+direc+"\\"+rnpa+".bak"+"' WITH NOFORMAT, NOINIT, NAME = N'test-Completa Base de datos Copia de seguridad', SKIP,NOREWIND, NOUNLOAD,  STATS = 10";
             try
             {
                 SqlCommand cmd = new SqlCommand(back, con);
@@ -83,10 +83,9 @@ namespace CapaDatos
         {
             //con.ChangeDatabase("master");
             //con.Close();
-            string sBackup = " RESTORE DATABASE OrdPesquero" +
-                             " FROM DISK = '" + archivo + "'" +
-                             " WITH REPLACE";
-
+            string deleete = "Drop database OrdPesquero2";
+            string sBackup = " RESTORE DATABASE OrdPesquero2" +
+                             " FROM DISK = '" + archivo + "'";
             SqlConnectionStringBuilder csb = new SqlConnectionStringBuilder();
             csb.DataSource = ".";
             // Es mejor abrir la conexión con la base Master
@@ -99,7 +98,8 @@ namespace CapaDatos
                 try
                 {
                     cn.Open();
-
+                    SqlCommand cmdDrop = new SqlCommand(deleete, cn);
+                    cmdDrop.ExecuteNonQuery();
                     SqlCommand cmdBackUp = new SqlCommand(sBackup, cn);
                     cmdBackUp.ExecuteNonQuery();
                     MessageBox.Show("Se ha restaurado la copia de la base de datos.",
@@ -193,6 +193,77 @@ namespace CapaDatos
                 {
                     return dt;
                 }
+            }
+        }
+        public int EjecutarMaster(string Proc, string[] Parametros, params Object[] DatosParametro)
+        {
+            SqlCommand cmd = new SqlCommand();
+            SqlConnectionStringBuilder csb = new SqlConnectionStringBuilder();
+            csb.DataSource = ".";
+            // Es mejor abrir la conexión con la base Master
+            csb.InitialCatalog = "master";
+            csb.IntegratedSecurity = true;
+            //csb.ConnectTimeout = 480; // el predeterminado es 15
+
+            using (SqlConnection cn = new SqlConnection(csb.ConnectionString))
+            {
+                cn.Open();
+                cmd.Connection = cn;
+                cmd.CommandText = Proc;
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                if (Proc.Length != 0 && Parametros.Length == DatosParametro.Length)
+                {
+                    int i = 0;
+                    foreach (string parametro in Parametros)
+                        cmd.Parameters.AddWithValue(parametro, DatosParametro[i++]);
+                    try
+                    {
+                        return cmd.ExecuteNonQuery();
+                    }
+                    catch (Exception ms)
+                    {
+                        cn.Close();
+                        return 0;
+                    }
+                }
+                cn.Close();
+                return 0;
+            }
+        }
+        public int Ejecutar2(string Proc, string[] Parametros, params Object[] DatosParametro)
+        {
+            SqlCommand cmd = new SqlCommand();
+            using (SqlConnection cn = new SqlConnection(obtenertconexion()))
+            {
+                cn.Open();
+                cn.ChangeDatabase("OrdPesquero2");
+                cmd.Connection = cn;
+                cmd.CommandText = Proc;
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                if (Proc.Length != 0 && Parametros.Length == DatosParametro.Length)
+                {
+                    int i = 0;
+                    foreach (string parametro in Parametros)
+                        cmd.Parameters.AddWithValue(parametro, DatosParametro[i++]);
+                    try
+                    {
+                        return cmd.ExecuteNonQuery();
+                        try
+                        {
+                            cn.Close();
+                        }
+                        catch { }
+                    }
+                    catch (Exception ms)
+                    {
+                        cn.Close();
+                        return 0;
+                    }
+                }
+                cn.Close();
+                return 0;
             }
         }
     }
