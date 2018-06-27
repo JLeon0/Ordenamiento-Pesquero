@@ -162,6 +162,8 @@ namespace OrdenamientoPesquero
                 cbRNPA.Text = a;
             }
             NOMBRES = proc.Obtener_todos_los_nombres("");
+            txtNombre.DataSource = null;
+            txtNombre.Items.Clear();
             foreach (DataRow fila in NOMBRES.Rows)
             {
                 txtNombre.Items.Add(fila["NOMBRE"].ToString());
@@ -561,7 +563,21 @@ namespace OrdenamientoPesquero
 
         private void generarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            proc.Generar();
+            DialogResult result = folderBrowserDialog1.ShowDialog();
+            if (result == DialogResult.OK) // Test result.
+            {
+                proc.cambiarbd("OrdPesquero2");
+                proc.limpiar();
+                proc.PasarUnidad2(cbRNPA.Text);
+                proc.PasarEmbarcaciones2(cbRNPA.Text);
+                proc.PasarPescadores2(cbRNPA.Text);
+                proc.PasarPermisos2(cbRNPA.Text);
+                proc.PasarEquipoPesca2(cbRNPA.Text);
+                proc.PasarEmbarcaPermis2(cbRNPA.Text);
+                proc.PasarDirectiva2(cbRNPA.Text);
+                proc.Generar(folderBrowserDialog1.SelectedPath, cbRNPA.Text);
+                proc.cambiarbd("OrdPesquero");
+            }
         }
 
         private void cargarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -571,12 +587,21 @@ namespace OrdenamientoPesquero
             string direccion = ofd.FileName;
             if (proc.Cargar(direccion))
             {
+                proc.PasarUnidad();
+                proc.PasarEmbarcaciones();
+                proc.PasarPescadores();
+                proc.PasarPermisos();
+                proc.PasarEquipoPesca();
+                proc.PasarEmbarcaPermis();
+                proc.PasarDirectiva();
                 this.OnLoad(e);
             }
         }
 
         private void servidorToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            servidorToolStripMenuItem.Checked = true;
+            cambiosToolStripMenuItem.Checked = false;
             proc.bdd = "OrdPesquero";
             proc.cambiarbd(proc.bdd);
             this.OnLoad(e);
@@ -584,9 +609,28 @@ namespace OrdenamientoPesquero
 
         private void cambiosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //proc.bdd = "OrdPesquero2";
-            //proc.cambiarbd(proc.bdd);
-            this.OnLoad(e);
+            OpenFileDialog ofd = new OpenFileDialog();
+            DialogResult dr = ofd.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                string direccion = ofd.FileName;
+                if (proc.Cargar(direccion))
+                {
+                    servidorToolStripMenuItem.Checked = false;
+                    cambiosToolStripMenuItem.Checked = true;
+                    proc.bdd = "OrdPesquero2";
+                    proc.cambiarbd(proc.bdd);
+                    this.OnLoad(e);
+                }
+                else
+                {
+                    cambiosToolStripMenuItem.Checked = false;
+                }
+            }
+            else
+            {
+                cambiosToolStripMenuItem.Checked = false;
+            }
         }
 
         private void cbRNPA_KeyPress(object sender, KeyPressEventArgs e)

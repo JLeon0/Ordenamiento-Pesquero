@@ -21,10 +21,11 @@ namespace Logica
         }
         public void cambiarbd(string b)
         {
-            c.bdda = bdd;
+            c.bdda = b;
         }
         public bool Cargar(string path)
         {
+            CerrarConexion();
             return c.cargar(path);
         }
         public void Generar( string dir, string rnpa)
@@ -392,11 +393,16 @@ namespace Logica
             string[] Parametros = { "@rnpa" };
             return c.EjecutarMaster("PasarEmbarcaPermis3", Parametros, rnpa);
         }
+        public int CerrarConexion()
+        {
+            string[] Parametros = { "@bd" };
+            return c.EjecutarMaster("cerrarCon", Parametros, "OrdPesquero2");
+        }
 
         public int limpiar()
         {
             string[] Parametros = { };
-            return c.Ejecutar("limpiar", Parametros);
+            return c.Ejecutar2("limpiar", Parametros);
         }
     }
 }

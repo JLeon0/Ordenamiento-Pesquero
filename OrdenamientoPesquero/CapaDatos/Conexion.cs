@@ -72,7 +72,7 @@ namespace CapaDatos
                // _sql = String.Format("DROP TABLE ##{0}", temporaryTableName);
                // cmd.CommandText = _sql;
                // cmd.ExecuteNonQuery();
-                MessageBox.Show("El backup fue realizado exitosamente");
+                con.Close();
             }
             catch (Exception ex)
             {
@@ -102,10 +102,10 @@ namespace CapaDatos
                     cmdDrop.ExecuteNonQuery();
                     SqlCommand cmdBackUp = new SqlCommand(sBackup, cn);
                     cmdBackUp.ExecuteNonQuery();
-                    MessageBox.Show("Se ha restaurado la copia de la base de datos.",
-                                    "Restaurar base de datos",
-                                    MessageBoxButtons.OK,
-                                    MessageBoxIcon.Information);
+                    //MessageBox.Show("Se ha restaurado la copia de la base de datos.",
+                    //                "Restaurar base de datos",
+                    //                MessageBoxButtons.OK,
+                    //                MessageBoxIcon.Information);
 
                     cn.Close();
                     return true;
