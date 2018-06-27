@@ -162,6 +162,16 @@ namespace Logica
                 (new System.Threading.Thread(CloseIt)).Start();
                 MessageBox.Show("Registrado exitosamente"); /* 1 segundo = 1000 */
             }
+            else if (ok == -10)
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("No se pueden registrar más de 1 capitan en una misma embarcación"); /* 1 segundo = 1000 */
+            }
+            else if(ok == -11)
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Error al registrar la unidad a una Federación"); /* 1 segundo = 1000 */
+            }
             else
             {
                 (new System.Threading.Thread(CloseIt)).Start();

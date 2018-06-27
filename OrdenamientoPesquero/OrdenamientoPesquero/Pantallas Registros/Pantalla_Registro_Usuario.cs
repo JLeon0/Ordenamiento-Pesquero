@@ -123,15 +123,23 @@ namespace OrdenamientoPesquero
             if (si.Checked)
                 o = 1;
             pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text, RFCPesc.Text, EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, MatriculaPesc.SelectedValue.ToString(), CorreoPesc.Text, LocalidadPesc.Text, o, RNPA, Seguro.Text, FolioCred.Text, fechaVenF, fechaExpF);
-            if (registrar)
+            dt = proc.ChecarCapitan(RNPA);
+            if ( ocupacion == "Marinero" || Convert.ToInt32(dt.Rows[0]["Capitanes"].ToString())<= 0)
             {
-                RegistrarImagen();
-                return proc.Registrar_Pescador(pes);
+                if (registrar)
+                {
+                    RegistrarImagen();
+                    return proc.Registrar_Pescador(pes);
+                }
+                else
+                {
+                    RegistrarImagen();
+                    return proc.Actualizar_Pescador(pes);
+                }
             }
             else
             {
-                RegistrarImagen();
-                return proc.Actualizar_Pescador(pes);
+                return -10;
             }
         }
 
