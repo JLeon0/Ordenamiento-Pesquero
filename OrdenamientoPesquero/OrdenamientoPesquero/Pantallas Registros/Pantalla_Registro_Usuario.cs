@@ -484,18 +484,26 @@ namespace OrdenamientoPesquero
             }
             else if (result == DialogResult.No)
             {
-                try
+                result = MessageBox.Show("Desea subir una nueva imagen?", "¿?", MessageBoxButtons.YesNoCancel);
+                if (result == DialogResult.Yes)
                 {
-                    if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                    try
                     {
-                        Bitmap bmp = new Bitmap(Image.FromFile(openFileDialog1.FileName));
-                        Bitmap bmp2 = new Bitmap(bmp, new Size(131, 182));
-                        Imagen.BackgroundImage = bmp2;
+                        if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                        {
+                            Bitmap bmp = new Bitmap(Image.FromFile(openFileDialog1.FileName));
+                            Bitmap bmp2 = new Bitmap(bmp, new Size(131, 182));
+                            Imagen.BackgroundImage = bmp2;
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
                     }
                 }
-                catch (Exception ex)
+                else if(result == DialogResult.No)
                 {
-                    MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
+                    Imagen.BackgroundImage = OrdenamientoPesquero.Properties.Resources.perfil;
                 }
             }
         }
@@ -520,12 +528,12 @@ namespace OrdenamientoPesquero
                 System.IO.MemoryStream ms = new System.IO.MemoryStream();
                 Imagen.BackgroundImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
 
-                System.Drawing.Image fullsizeImage = System.Drawing.Image.FromStream(ms);
-                System.Drawing.Image newImage = fullsizeImage.GetThumbnailImage(131, 182, null, IntPtr.Zero);
-                System.IO.MemoryStream myResult = new System.IO.MemoryStream();
-                newImage.Save(myResult, System.Drawing.Imaging.ImageFormat.Gif);
+                //System.Drawing.Image fullsizeImage = System.Drawing.Image.FromStream(ms);
+                //System.Drawing.Image newImage = fullsizeImage.GetThumbnailImage(131, 182, null, IntPtr.Zero);
+                //System.IO.MemoryStream myResult = new System.IO.MemoryStream();
+                //newImage.Save(myResult, System.Drawing.Imaging.ImageFormat.Gif);
 
-                int exito = proc.InsertarImagen(CURPPesc.Text, myResult.GetBuffer());
+                int exito = proc.InsertarImagen(CURPPesc.Text, ms.GetBuffer());
                 if (exito > 0)
                 {
                     MessageBox.Show("Imagen Insertada correctamente");

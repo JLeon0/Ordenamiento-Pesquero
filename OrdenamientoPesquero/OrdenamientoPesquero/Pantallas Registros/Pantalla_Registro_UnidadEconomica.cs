@@ -161,24 +161,16 @@ namespace OrdenamientoPesquero
                 cbRNPA.ValueMember = "RNPA";
                 cbRNPA.Text = a;
             }
-            else
-            {
-                cbRNPA.DataSource = null;
-                cbRNPA.Items.Clear();
-            }
             NOMBRES = proc.Obtener_todos_los_nombres("");
-            if(dt.Rows.Count != 0)
+            foreach (DataRow fila in NOMBRES.Rows)
             {
-                txtNombre.DataSource = NOMBRES;
-                txtNombre.DisplayMember = "Nombre";
-                txtNombre.ValueMember = "Nombre";
-                txtNombre.Text = "";
+                txtNombre.Items.Add(fila["NOMBRE"].ToString());
             }
-            else
-            {
-                txtNombre.DataSource = null;
-                txtNombre.Items.Clear();
-            }
+            //txtNombre.DataSource = NOMBRES;
+            //txtNombre.DisplayMember = "Nombre";
+            //txtNombre.ValueMember = "Nombre";
+            //txtNombre.Text = "";
+
             cbRNPA.Focus();
         }
 
@@ -193,29 +185,6 @@ namespace OrdenamientoPesquero
                 txtMunicipio.Text = "Seleccione un Municipio";
                 Municipios = dt.Rows.OfType<DataRow>().Select(k => k[0].ToString()).ToArray();
             }
-        }
-
-        private void pictureBox12_Click(object sender, EventArgs e)
-        {
-            this.Cursor = Cursors.WaitCursor;
-            if (existe(cbRNPA.Text))
-            {
-                LlenarCampos();
-                ObtenerFederacion();
-                Resumenes(cbRNPA.Text);
-                ResumenSocios(cbRNPA.Text);
-                button1.Enabled = true;
-                button2.Enabled = true;
-                button3.Enabled = true;
-            }
-            else
-            {
-                limpiartodo();
-                button1.Enabled = false;
-                button2.Enabled = false;
-                button3.Enabled = false;
-            }
-            this.Cursor = Cursors.Default;
         }
         public void limpiartodo()
         {
@@ -546,6 +515,7 @@ namespace OrdenamientoPesquero
             }
             else { MessageBox.Show("Debe elegir una unidad economica que esté registrada", "Error"); }
         }
+
         private void button3_Click(object sender, EventArgs e)
         {
             if (existe(cbRNPA.Text))
@@ -591,21 +561,7 @@ namespace OrdenamientoPesquero
 
         private void generarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult result = folderBrowserDialog1.ShowDialog();
-            if (result == DialogResult.OK) // Test result.
-            {
-                proc.cambiarbd("OrdPesquero2");
-                proc.limpiar();
-                proc.PasarUnidad2(cbRNPA.Text);
-                proc.PasarEmbarcaciones2(cbRNPA.Text);
-                proc.PasarPescadores2(cbRNPA.Text);
-                proc.PasarPermisos2(cbRNPA.Text);
-                proc.PasarEquipoPesca2(cbRNPA.Text);
-                proc.PasarEmbarcaPermis2(cbRNPA.Text);
-                proc.PasarDirectiva2(cbRNPA.Text);
-                proc.Generar(folderBrowserDialog1.SelectedPath, cbRNPA.Text);
-                proc.cambiarbd("OrdPesquero");
-            }
+            proc.Generar();
         }
 
         private void cargarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -615,21 +571,12 @@ namespace OrdenamientoPesquero
             string direccion = ofd.FileName;
             if (proc.Cargar(direccion))
             {
-                proc.PasarUnidad();
-                proc.PasarEmbarcaciones();
-                proc.PasarPescadores();
-                proc.PasarPermisos();
-                proc.PasarEquipoPesca();
-                proc.PasarEmbarcaPermis();
-                proc.PasarDirectiva();
                 this.OnLoad(e);
             }
         }
 
         private void servidorToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            servidorToolStripMenuItem.Checked = true;
-            cambiosToolStripMenuItem.Checked = false;
             proc.bdd = "OrdPesquero";
             proc.cambiarbd(proc.bdd);
             this.OnLoad(e);
@@ -637,31 +584,21 @@ namespace OrdenamientoPesquero
 
         private void cambiosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            DialogResult dr= ofd.ShowDialog();
-            if (dr == DialogResult.OK)
-            {
-                string direccion = ofd.FileName;
-                if (proc.Cargar(direccion))
-                {
-                    proc.bdd = "OrdPesquero2";
-                    proc.cambiarbd(proc.bdd);
-                    this.OnLoad(e);
-                }
-            }
+            //proc.bdd = "OrdPesquero2";
+            //proc.cambiarbd(proc.bdd);
+            this.OnLoad(e);
         }
 
         private void cbRNPA_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                pictureBox12_Click(sender, e);
+                BuscarRNPA_Click(sender, e);
             }
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
                 BuscarNombreOrg_Click(sender, e);
@@ -697,12 +634,45 @@ namespace OrdenamientoPesquero
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-          
+            string x = txtNombre.Text;
+            NOMBRES = proc.Obtener_todos_los_nombres(x);
+            txtNombre.Items.Clear();
+            foreach (DataRow fila in NOMBRES.Rows)
+            {
+                txtNombre.Items.Add(fila["NOMBRE"].ToString());
+            }
+            txtNombre.Select(txtNombre.Text.Length, 0);
+            if(txtNombre.Text == "")
+            { txtNombre.DropDownHeight = 200; }
         }
 
-        private void servidorToolStripMenuItem_CheckedChanged(object sender, EventArgs e)
+        private void BuscarRNPA_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
+            if (existe(cbRNPA.Text))
+            {
+                LlenarCampos();
+                ObtenerFederacion();
+                Resumenes(cbRNPA.Text);
+                ResumenSocios(cbRNPA.Text);
+                button1.Enabled = true;
+                button2.Enabled = true;
+                button3.Enabled = true;
+            }
+            else
+            {
+                limpiartodo();
+                button1.Enabled = false;
+                button2.Enabled = false;
+                button3.Enabled = false;
+            }
+            this.Cursor = Cursors.Default;
+        }
 
+        private void txtNombre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string x = txtNombre.Text;
+            BuscarNombreOrg.PerformClick();
         }
     }
 }
