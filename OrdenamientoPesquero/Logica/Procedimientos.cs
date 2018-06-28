@@ -365,7 +365,7 @@ namespace Logica
         #endregion
         public int PasarPescadores2(string rnpa)
         {
-            string[] Parametros = { };
+            string[] Parametros = { "@rnpa"};
             return c.EjecutarMaster("PasarPescadores3", Parametros, rnpa);
         }
         public int PasarDirectiva2(string rnpa)

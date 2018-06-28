@@ -285,7 +285,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(-22, 46);
+            this.label3.Location = new System.Drawing.Point(-27, 46);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
@@ -1129,7 +1129,7 @@
             this.caToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1364, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1370, 24);
             this.menuStrip1.TabIndex = 115;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1171,7 +1171,7 @@
             this.servidorToolStripMenuItem.CheckOnClick = true;
             this.servidorToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.servidorToolStripMenuItem.Name = "servidorToolStripMenuItem";
-            this.servidorToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.servidorToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.servidorToolStripMenuItem.Text = "Servidor";
             this.servidorToolStripMenuItem.Click += new System.EventHandler(this.servidorToolStripMenuItem_Click);
             // 
@@ -1179,7 +1179,7 @@
             // 
             this.cambiosToolStripMenuItem.CheckOnClick = true;
             this.cambiosToolStripMenuItem.Name = "cambiosToolStripMenuItem";
-            this.cambiosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cambiosToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.cambiosToolStripMenuItem.Text = "Cambios";
             this.cambiosToolStripMenuItem.Click += new System.EventHandler(this.cambiosToolStripMenuItem_Click);
             // 
@@ -1217,7 +1217,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1381, 605);
+            this.ClientSize = new System.Drawing.Size(1387, 605);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.button3);
