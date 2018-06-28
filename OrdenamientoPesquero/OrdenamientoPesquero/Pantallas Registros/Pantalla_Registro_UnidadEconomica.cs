@@ -569,6 +569,7 @@ namespace OrdenamientoPesquero
             DialogResult result = folderBrowserDialog1.ShowDialog();
             if (result == DialogResult.OK) // Test result.
             {
+                this.Cursor = Cursors.WaitCursor;
                 proc.cambiarbd("OrdPesquero2");
                 proc.limpiar();
                 proc.PasarUnidad2(cbRNPA.Text);
@@ -580,6 +581,7 @@ namespace OrdenamientoPesquero
                 proc.PasarDirectiva2(cbRNPA.Text);
                 proc.Generar(folderBrowserDialog1.SelectedPath, cbRNPA.Text);
                 proc.cambiarbd("OrdPesquero");
+                this.Cursor = Cursors.Default;
             }
         }
 
@@ -587,6 +589,7 @@ namespace OrdenamientoPesquero
         {
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.ShowDialog();
+            this.Cursor = Cursors.WaitCursor;
             string direccion = ofd.FileName;
             if (proc.Cargar(direccion))
             {
@@ -599,19 +602,23 @@ namespace OrdenamientoPesquero
                 proc.PasarDirectiva();
                 this.OnLoad(e);
             }
+            this.Cursor = Cursors.Default;
         }
 
         private void servidorToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             servidorToolStripMenuItem.Checked = true;
             cambiosToolStripMenuItem.Checked = false;
             proc.bdd = "OrdPesquero";
             proc.cambiarbd(proc.bdd);
             this.OnLoad(e);
+            this.Cursor = Cursors.Default;
         }
 
         private void cambiosToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            this.Cursor = Cursors.WaitCursor;
             OpenFileDialog ofd = new OpenFileDialog();
             DialogResult dr = ofd.ShowDialog();
             if (dr == DialogResult.OK)
@@ -634,6 +641,7 @@ namespace OrdenamientoPesquero
             {
                 cambiosToolStripMenuItem.Checked = false;
             }
+            this.Cursor = Cursors.Default;
         }
 
         private void cbRNPA_KeyPress(object sender, KeyPressEventArgs e)

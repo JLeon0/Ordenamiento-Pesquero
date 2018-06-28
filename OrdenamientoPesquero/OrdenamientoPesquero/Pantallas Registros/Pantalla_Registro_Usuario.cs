@@ -124,7 +124,7 @@ namespace OrdenamientoPesquero
                 o = 1;
             pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text, RFCPesc.Text, EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, MatriculaPesc.SelectedValue.ToString(), CorreoPesc.Text, LocalidadPesc.Text, o, RNPA, Seguro.Text, FolioCred.Text, fechaVenF, fechaExpF);
             dt = proc.ChecarCapitan(RNPA);
-            if ( ocupacion == "Marinero" || Convert.ToInt32(dt.Rows[0]["Capitanes"].ToString())<= 0)
+            if ( ocupacion != "Capitan"|| Convert.ToInt32(dt.Rows[0]["Capitanes"].ToString())<= 0)
             {
                 if (registrar)
                 {
