@@ -76,6 +76,7 @@ namespace CapaDatos
             }
             catch (Exception ex)
             {
+                con.Close();
                 MessageBox.Show(ex.ToString());
             }
         }

@@ -76,13 +76,9 @@ namespace OrdenamientoPesquero
                                 exito = proc.Registrar_Unidad(ue);
                             }
                             int Folio = ObtenerFolio();
-                            int exito1 = 0;
-                            if (proc.AsignarFederacion(Folio, cbRNPA.Text) > 0)
-                            { exito1 = 1; }
-                            else { exito1 = -11; }
+                            exito = proc.AsignarFederacion(Folio, cbRNPA.Text);
                             CargarRNPA();
                             val.Exito(exito);
-                            val.Exito(exito1);
                             cargado = true;
                         }
                     }
@@ -166,6 +162,7 @@ namespace OrdenamientoPesquero
                 cbRNPA.Text = a;
             }
             NOMBRES = proc.Obtener_todos_los_nombres("");
+            txtNombre.DataSource = null;
             txtNombre.Items.Clear();
             foreach (DataRow fila in NOMBRES.Rows)
             {
