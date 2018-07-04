@@ -122,8 +122,9 @@ namespace OrdenamientoPesquero
             int o = 0;
             if (si.Checked)
                 o = 1;
-            pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text, RFCPesc.Text, EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, MatriculaPesc.SelectedValue.ToString(), CorreoPesc.Text, LocalidadPesc.Text, o, RNPA, Seguro.Text, FolioCred.Text, fechaVenF, fechaExpF);
-            dt = proc.ChecarCapitan(RNPA);
+            DataRowView row = (DataRowView)MatriculaPesc.SelectedItem;
+            pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text, RFCPesc.Text, EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, row[0].ToString(), CorreoPesc.Text, LocalidadPesc.Text, o, RNPA, Seguro.Text, FolioCred.Text, fechaVenF, fechaExpF);
+            dt = proc.ChecarCapitan(RNPA,row[0].ToString());
             if ( ocupacion != "Capitan"|| Convert.ToInt32(dt.Rows[0]["Capitanes"].ToString())<= 0)
             {
                 if (registrar)
@@ -349,16 +350,17 @@ namespace OrdenamientoPesquero
                 if (filas["MATRICULA"].ToString() == RNPA) { break; }
                 I++;
             }
-            if (dt.Rows.Count<I)
+            if (dt.Rows.Count < I)
             {
                 dt.Rows.RemoveAt(I);
+
+                DataRow na = dt.NewRow();
+                na["MATRICULA"] = RNPA;
+                na["NOMBREEMBARCACION"] = "NO APLICA";
+                dt.Rows.Add(na);
             }
-            DataRow na = dt.NewRow();
-            na["MATRICULA"] = "NO APLICA";
-            na["NOMBREEMBARCACION"] = "NO APLICA";
-            dt.Rows.Add(na);
             MatriculaPesc.DataSource = dt;
-            MatriculaPesc.DisplayMember = "MATRICULA";
+            MatriculaPesc.DisplayMember = "NOMBREEMBARCACION";
             MatriculaPesc.ValueMember = "MATRICULA";
             MatriculaPesc.Text = "";
         }
@@ -404,7 +406,15 @@ namespace OrdenamientoPesquero
             }
             else
             {
-                MatriculaPesc.Text = matricula;
+                for (int i = 0; i < MatriculaPesc.Items.Count; i++)
+                {
+                    DataRowView row = (DataRowView)MatriculaPesc.Items[i];
+                    if (row[0].ToString() == matricula)
+                    {
+                        MatriculaPesc.Text = row[1].ToString();
+                        break;
+                    }
+                }
             }
             foreach (RadioButton boton in TipoPesc.Controls)
             {

@@ -35,11 +35,11 @@ namespace OrdenamientoPesquero.Pantallas_Registros
 
         public void CargarDispositivos(FilterInfoCollection Dispositivos)
         {
-            for (int i = 0; i < Dispositivos.Count; i++) ;
-
-            cbxDispositivos.Items.Add(Dispositivos[0].Name.ToString());
-            cbxDispositivos.Text = cbxDispositivos.Items[0].ToString();
-
+            for (int i = 0; i < Dispositivos.Count; i++)
+            {
+                cbxDispositivos.Items.Add(Dispositivos[0].Name.ToString());
+                cbxDispositivos.Text = cbxDispositivos.Items[0].ToString();
+            }
         }
 
         public void BuscarDispositivos()
@@ -72,7 +72,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         public void Video_NuevoFrame(object sender, NewFrameEventArgs eventArgs)
         {
             Bitmap Imagen = (Bitmap)eventArgs.Frame.Clone();
-            Rectangle rectangle = new Rectangle(325, 100, 600, 600);
+            Rectangle rectangle = new Rectangle(200, 0, 300, 350);
             Imagen = Imagen.Clone(rectangle, Imagen.PixelFormat);
             EspacioCamara.BackgroundImage = Imagen;
             EspacioCamara.BackgroundImageLayout = ImageLayout.Zoom;

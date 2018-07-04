@@ -584,22 +584,22 @@ namespace OrdenamientoPesquero
 
         private void cargarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //OpenFileDialog ofd = new OpenFileDialog();
-            //ofd.ShowDialog();
-            //this.Cursor = Cursors.WaitCursor;
-            //string direccion = ofd.FileName;
-            //if (proc.Cargar(direccion))
-            //{
-            //    proc.PasarUnidad();
-            //    proc.PasarEmbarcaciones();
-            //    proc.PasarPescadores();
-            //    proc.PasarPermisos();
-            //    proc.PasarEquipoPesca();
-            //    proc.PasarEmbarcaPermis();
-            //    proc.PasarDirectiva();
-            //    this.OnLoad(e);
-            //}
-            //this.Cursor = Cursors.Default;
+            OpenFileDialog ofd = new OpenFileDialog();
+            ofd.ShowDialog();
+            this.Cursor = Cursors.WaitCursor;
+            string direccion = ofd.FileName;
+            if (proc.Cargar(direccion))
+            {
+                proc.PasarUnidad();
+                proc.PasarEmbarcaciones();
+                proc.PasarPescadores();
+                proc.PasarPermisos();
+                proc.PasarEquipoPesca();
+                proc.PasarEmbarcaPermis();
+                proc.PasarDirectiva();
+                this.OnLoad(e);
+            }
+            this.Cursor = Cursors.Default;
         }
 
         private void servidorToolStripMenuItem_Click(object sender, EventArgs e)

@@ -51,10 +51,10 @@ namespace Logica
             string[] Parametros = { "@rnpa" };
             return c.Ejecutar("Eliminarunidad", Parametros, RNPA);
         }
-        public DataTable ChecarCapitan(string RNPA)
+        public DataTable ChecarCapitan(string RNPA,string MATRICULA)
         {
-            string[] Parametros = { "@rnpa" };
-            return c.getDatosTabla("ChecarCapitan", Parametros, RNPA);
+            string[] Parametros = { "@rnpa", "@matricula" };
+            return c.getDatosTabla("ChecarCapitan", Parametros, RNPA,MATRICULA);
         }
         #endregion
 

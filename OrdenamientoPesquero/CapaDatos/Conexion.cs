@@ -88,7 +88,7 @@ namespace CapaDatos
             string sBackup = " RESTORE DATABASE OrdPesquero2" +
                              " FROM DISK = '" + archivo + "'";
             SqlConnectionStringBuilder csb = new SqlConnectionStringBuilder();
-            csb.DataSource = ".";
+            csb.DataSource = ".\\SQLEXPRESS";
             // Es mejor abrir la conexión con la base Master
             csb.InitialCatalog = "master";
             csb.IntegratedSecurity = true;
@@ -200,7 +200,7 @@ namespace CapaDatos
         {
             SqlCommand cmd = new SqlCommand();
             SqlConnectionStringBuilder csb = new SqlConnectionStringBuilder();
-            csb.DataSource = ".";
+            csb.DataSource = ".\\SQLEXPRESS";
             // Es mejor abrir la conexión con la base Master
             csb.InitialCatalog = "master";
             csb.IntegratedSecurity = true;
