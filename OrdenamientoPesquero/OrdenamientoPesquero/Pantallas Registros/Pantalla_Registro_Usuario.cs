@@ -493,35 +493,38 @@ namespace OrdenamientoPesquero
 
         private void CargarImagen_Click_1(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Desea capturar una nueva imagen?", "¿?", MessageBoxButtons.YesNoCancel);
-            if (result == DialogResult.Yes)
+            if (CURPPesc.Text != "")
             {
-                Pantalla_Fotografia pf = new Pantalla_Fotografia(CURPPesc.Text);
-                pf.ShowDialog();
-                ObtenerImagen();
-            }
-            else if (result == DialogResult.No)
-            {
-                result = MessageBox.Show("Desea subir una nueva imagen?", "¿?", MessageBoxButtons.YesNoCancel);
+                DialogResult result = MessageBox.Show("Desea capturar una nueva imagen?", "¿?", MessageBoxButtons.YesNoCancel);
                 if (result == DialogResult.Yes)
                 {
-                    try
+                    Pantalla_Fotografia pf = new Pantalla_Fotografia(CURPPesc.Text);
+                    pf.ShowDialog();
+                    ObtenerImagen();
+                }
+                else if (result == DialogResult.No)
+                {
+                    result = MessageBox.Show("Desea subir una nueva imagen?", "¿?", MessageBoxButtons.YesNoCancel);
+                    if (result == DialogResult.Yes)
                     {
-                        if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                        try
                         {
-                            Bitmap bmp = new Bitmap(Image.FromFile(openFileDialog1.FileName));
-                            Bitmap bmp2 = new Bitmap(bmp, new Size(131, 182));
-                            Imagen.BackgroundImage = bmp2;
+                            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                            {
+                                Bitmap bmp = new Bitmap(Image.FromFile(openFileDialog1.FileName));
+                                Bitmap bmp2 = new Bitmap(bmp, new Size(131, 182));
+                                Imagen.BackgroundImage = bmp2;
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
                         }
                     }
-                    catch (Exception ex)
+                    else if (result == DialogResult.No)
                     {
-                        MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
+                        Imagen.BackgroundImage = OrdenamientoPesquero.Properties.Resources.perfil;
                     }
-                }
-                else if(result == DialogResult.No)
-                {
-                    Imagen.BackgroundImage = OrdenamientoPesquero.Properties.Resources.perfil;
                 }
             }
         }
