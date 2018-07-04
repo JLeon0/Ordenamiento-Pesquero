@@ -1251,8 +1251,8 @@
             </Style>
           </Image>
         </ReportItems>
-        <Top>11.16156cm</Top>
-        <Left>6.35314cm</Left>
+        <Top>10.91743cm</Top>
+        <Left>6.17675cm</Left>
         <Height>5.61688cm</Height>
         <Width>8.87371cm</Width>
         <ZIndex>1</ZIndex>
@@ -1262,7 +1262,7 @@
           </Border>
           <BackgroundImage>
             <Source>Embedded</Source>
-            <Value>credfrontal1</Value>
+            <Value>credtrasera</Value>
             <MIMEType>image/jpeg</MIMEType>
           </BackgroundImage>
         </Style>

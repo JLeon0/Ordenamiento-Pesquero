@@ -55,6 +55,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EmbarcacionesSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EmbarcacionesSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ObtenerImagen.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -152,9 +157,21 @@
     </Compile>
     <EmbeddedResource Include="Reportes\Anexo3.rdlc" />
     <EmbeddedResource Include="Reportes\Credencial.rdlc" />
+    <EmbeddedResource Include="Reportes\Embarca.rdlc" />
     <EmbeddedResource Include="Reportes\Frontal.rdlc" />
     <EmbeddedResource Include="Reportes\Permisos.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
+    <None Include="EmbarcacionesSet.xsc">
+      <DependentUpon>EmbarcacionesSet.xsd</DependentUpon>
+    </None>
+    <None Include="EmbarcacionesSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>EmbarcacionesSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="EmbarcacionesSet.xss">
+      <DependentUpon>EmbarcacionesSet.xsd</DependentUpon>
+    </None>
     <None Include="ObtenerImagen.xsc">
       <DependentUpon>ObtenerImagen.xsd</DependentUpon>
     </None>
