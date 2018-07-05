@@ -50,6 +50,9 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     this.reportViewer1.ProcessingMode = ProcessingMode.Local;
                     reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Permisos.rdlc");
                     this.vista_permTableAdapter.Fill(permisos_lista.vista_perm, rnpa);
+                    datos.Name = "vista_perm";
+                    datos.Value = permisos_lista.vista_perm;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos);
                     reportViewer1.LocalReport.SetParameters(new ReportParameter("Unidad", unidad));
                     this.reportViewer1.RefreshReport();
                     break;
