@@ -442,6 +442,12 @@ namespace OrdenamientoPesquero
                 }
                 DataResumen.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             }
+            else
+            {
+                TotalPermisos.Text = "0";
+                TotalSocios.Text = "0";
+                TotalEsfuerzos.Text = "0";
+            }
         }
 
         public void ResumenSocios(string RNPA)
@@ -456,6 +462,16 @@ namespace OrdenamientoPesquero
                 Asegurados.Text = dt.Rows[0]["ASEGURADOS"].ToString();
                 Acuacultores.Text = dt.Rows[0]["ACUACULTORES"].ToString();
                 Credencializados.Text = dt.Rows[0]["CREDENCIALIZADOS"].ToString();
+            }
+            else
+            {
+                Capitanes.Text = "0";
+                Marineros.Text = "0";
+                SinActividad.Text = "0";
+                Ordenados.Text = "0";
+                Asegurados.Text = "0";
+                Acuacultores.Text = "0";
+                Credencializados.Text = "0";
             }
         }
         #endregion
