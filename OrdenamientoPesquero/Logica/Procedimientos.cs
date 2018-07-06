@@ -205,6 +205,11 @@ namespace Logica
             string[] Parametros = { "@curp" };
             return c.getDatosTabla("ObtenerImagen", Parametros, curp);
         }
+        public DataTable BuscarNombre(string nombre,string rnpa)
+        {
+            string[] Parametros = { "@nombre", "@rnpa" };
+            return c.getDatosTabla("BuscarPescador", Parametros, nombre, rnpa);
+        }
         #endregion
 
 
