@@ -9,7 +9,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="todosTableAdapter" GeneratorDataComponentClassName="todosTableAdapter" Name="todos" UserDataComponentName="todosTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="OrdPesqueroConnectionString (Settings)" DbObjectName="OrdPesquero.dbo.todos" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="OrdPesqueroConnectionString (Settings)" DbObjectName="OrdPesquero.dbo.todos" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.todos</CommandText>
@@ -28,6 +28,7 @@
               <Mapping SourceColumn="CURP" DataSetColumn="CURP" />
               <Mapping SourceColumn="NOMBREEMBARCACION" DataSetColumn="NOMBREEMBARCACION" />
               <Mapping SourceColumn="MATRICULA" DataSetColumn="MATRICULA" />
+              <Mapping SourceColumn="SEGURO" DataSetColumn="SEGURO" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -49,7 +50,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Codigo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_UserColumnName="Codigo" type="xs:int" />
+              <xs:element name="Codigo" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCodigo" msprop:Generator_ColumnPropNameInRow="Codigo" msprop:Generator_ColumnPropNameInTable="CodigoColumn" msprop:Generator_UserColumnName="Codigo" type="xs:int" />
               <xs:element name="Nombre1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnNombre1" msprop:Generator_ColumnPropNameInRow="Nombre1" msprop:Generator_ColumnPropNameInTable="Nombre1Column" msprop:Generator_UserColumnName="Nombre1" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -82,6 +83,13 @@
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SEGURO" msprop:Generator_ColumnVarNameInTable="columnSEGURO" msprop:Generator_ColumnPropNameInRow="SEGURO" msprop:Generator_ColumnPropNameInTable="SEGUROColumn" msprop:Generator_UserColumnName="SEGURO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

@@ -346,7 +346,6 @@ namespace OrdenamientoPesquero
 
         private void cbRNPA_TextChanged(object sender, EventArgs e)
         {
-            cargado = false;
             if (cbRNPA.Text!="")
             {
                 unidad[4, 0] = "1";
@@ -432,7 +431,20 @@ namespace OrdenamientoPesquero
                     {
                         DataResumen[0, i].Value = dt.Rows[i]["PESQUERIA"].ToString();
                         DataResumen[1, i].Value = dt.Rows[i][2].ToString();
-                        DataResumen[2, i].Value = val.DiferenciaFechas(Convert.ToDateTime(dt.Rows[i][4].ToString()), DateTime.Today);
+                        if (val.DiferenciaFechas(Convert.ToDateTime(dt.Rows[i][4].ToString()), DateTime.Today) == "Fecha Invalida")
+                        {
+                            DataResumen[2, i].Value = "VENCIDO";
+                            DataResumen[2, i].Style.ForeColor = Color.Red;
+                            Font a = new Font(DataResumen.Font, FontStyle.Bold);
+                            DataResumen[2, i].Style.Font=a;
+                        }
+                        else
+                        {
+                            DataResumen[2, i].Value = val.DiferenciaFechas(Convert.ToDateTime(dt.Rows[i][4].ToString()), DateTime.Today);
+                            DataResumen[2, i].Style.ForeColor = Color.Black;
+                            Font a = new Font(DataResumen.Font, FontStyle.Regular);
+                            DataResumen[2, i].Style.Font = a;
+                        }
                     }
                 }
                 else
