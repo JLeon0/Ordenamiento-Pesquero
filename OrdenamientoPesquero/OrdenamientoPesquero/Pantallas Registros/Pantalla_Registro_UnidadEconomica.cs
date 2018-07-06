@@ -155,20 +155,13 @@ namespace OrdenamientoPesquero
         private void CargarRNPA()
         {
             string a = cbRNPA.Text.Replace(" ", ""); ;
-            dt = proc.Obtener_todas_unidades("");
-            if (dt.Rows.Count != 0)
-            {
-                cbRNPA.DataSource = dt;
-                cbRNPA.DisplayMember = "RNPA";
-                cbRNPA.ValueMember = "RNPA";
-                cbRNPA.Text = a;
-            }
             NOMBRES = proc.Obtener_todos_los_nombres("");
             txtNombre.DataSource = null;
             txtNombre.Items.Clear();
             foreach (DataRow fila in NOMBRES.Rows)
             {
                 txtNombre.Items.Add(fila["NOMBRE"].ToString());
+                cbRNPA.Items.Add(fila["RNPA"].ToString());
             }
             //txtNombre.DataSource = NOMBRES;
             //txtNombre.DisplayMember = "Nombre";
@@ -213,6 +206,11 @@ namespace OrdenamientoPesquero
         private void BuscarNombreOrg_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
+            cbRNPA.Items.Clear();
+            foreach (DataRow fila in NOMBRES.Rows)
+            {
+                cbRNPA.Items.Add(fila["RNPA"].ToString());
+            }
             LlenarCamposNombre();
             ObtenerFederacion();
             Resumenes(cbRNPA.Text);
@@ -707,9 +705,11 @@ namespace OrdenamientoPesquero
             string x = txtNombre.Text;
             NOMBRES = proc.Obtener_todos_los_nombres(x);
             txtNombre.Items.Clear();
+            cbRNPA.Items.Clear();
             foreach (DataRow fila in NOMBRES.Rows)
             {
                 txtNombre.Items.Add(fila["NOMBRE"].ToString());
+                cbRNPA.Items.Add(fila["RNPA"].ToString());
             }
             txtNombre.Select(txtNombre.Text.Length, 0);
             if(txtNombre.Text == "")
@@ -749,6 +749,11 @@ namespace OrdenamientoPesquero
         {
             Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 5);
             v.ShowDialog(this);
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

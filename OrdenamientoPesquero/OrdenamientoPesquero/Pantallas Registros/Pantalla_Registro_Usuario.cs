@@ -335,10 +335,10 @@ namespace OrdenamientoPesquero
         private void CargarPescadores()
         {
             dt = proc.BuscarNombre("", RNPA);
-            BuscarNombre.Items.Clear();
+            ListaNombres.Items.Clear();
             foreach (DataRow fila in dt.Rows)
             {
-                BuscarNombre.Items.Add(fila["NOMBRE"].ToString());
+                ListaNombres.Items.Add(fila["NOMBRE"].ToString());
             }
             dt = proc.Obtener_curp(RNPA);
             CURPPesc.DataSource = dt;
@@ -574,29 +574,34 @@ namespace OrdenamientoPesquero
         }
         DataTable NOMBRES = new DataTable();
 
-        private void Buscar_Click(object sender, EventArgs e)
-        {
-            LlenarDatos(NOMBRES.Rows[0]["CURP"].ToString());
-            NOMBRES = proc.BuscarNombre("", RNPA);
-            BuscarNombre.Items.Clear();
-            foreach (DataRow fila in NOMBRES.Rows)
-            {
-                BuscarNombre.Items.Add(fila["NOMBRE"].ToString());
-            }
-        }
-
         private void BuscarNombre_TextChanged_1(object sender, EventArgs e)
         {
             string x = BuscarNombre.Text;
             NOMBRES = proc.BuscarNombre(x, RNPA);
-            BuscarNombre.Items.Clear();
+            ListaNombres.Items.Clear();
             foreach (DataRow fila in NOMBRES.Rows)
             {
-                BuscarNombre.Items.Add(fila["NOMBRE"].ToString());
+                ListaNombres.Items.Add(fila["NOMBRE"].ToString());
             }
-            BuscarNombre.Select(BuscarNombre.Text.Length, 0);
-            if (BuscarNombre.Text == "")
-            { BuscarNombre.DropDownHeight = 200; }
+        }
+
+        private void BuscarNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                NOMBRES = proc.BuscarNombre("", RNPA);
+                ListaNombres.Items.Clear();
+                foreach (DataRow fila in NOMBRES.Rows)
+                {
+                    ListaNombres.Items.Add(fila["NOMBRE"].ToString());
+                }
+            }
+        }
+
+        private void ListaNombres_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), RNPA);
+            LlenarDatos(NOMBRES.Rows[0]["CURP"].ToString());
         }
 
         private void Ver_Click(object sender, EventArgs e)

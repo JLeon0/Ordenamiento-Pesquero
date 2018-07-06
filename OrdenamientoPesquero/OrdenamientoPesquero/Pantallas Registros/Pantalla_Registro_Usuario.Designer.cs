@@ -122,8 +122,8 @@
             this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
             this.RegistrarUnidad = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.Buscar = new System.Windows.Forms.Button();
             this.BuscarNombre = new System.Windows.Forms.TextBox();
+            this.ListaNombres = new System.Windows.Forms.ListBox();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CargarImagen)).BeginInit();
             this.gbxOrdenado.SuspendLayout();
@@ -201,7 +201,7 @@
             this.groupBox7.Controls.Add(this.label53);
             this.groupBox7.Controls.Add(this.NombrePesc);
             this.groupBox7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(266, 121);
+            this.groupBox7.Location = new System.Drawing.Point(266, 89);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(894, 384);
             this.groupBox7.TabIndex = 7;
@@ -790,7 +790,7 @@
             this.groupBox4.Controls.Add(this.OcupacionEnEmbarPesc);
             this.groupBox4.Controls.Add(this.TipoPesc);
             this.groupBox4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(267, 508);
+            this.groupBox4.Location = new System.Drawing.Point(267, 476);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(894, 189);
             this.groupBox4.TabIndex = 8;
@@ -1002,7 +1002,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(853, 757);
+            this.label2.Location = new System.Drawing.Point(853, 725);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 14);
             this.label2.TabIndex = 111;
@@ -1012,7 +1012,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(927, 757);
+            this.label3.Location = new System.Drawing.Point(927, 725);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 14);
             this.label3.TabIndex = 111;
@@ -1022,7 +1022,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1010, 756);
+            this.label4.Location = new System.Drawing.Point(1010, 724);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 14);
             this.label4.TabIndex = 111;
@@ -1129,7 +1129,7 @@
             // 
             this.Ver.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ver;
             this.Ver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Ver.Location = new System.Drawing.Point(1110, 703);
+            this.Ver.Location = new System.Drawing.Point(1110, 671);
             this.Ver.Name = "Ver";
             this.Ver.Size = new System.Drawing.Size(50, 50);
             this.Ver.TabIndex = 112;
@@ -1140,7 +1140,7 @@
             // 
             this.EliminarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Eliminar;
             this.EliminarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EliminarUnidad.Location = new System.Drawing.Point(1004, 703);
+            this.EliminarUnidad.Location = new System.Drawing.Point(1004, 671);
             this.EliminarUnidad.Name = "EliminarUnidad";
             this.EliminarUnidad.Size = new System.Drawing.Size(50, 50);
             this.EliminarUnidad.TabIndex = 110;
@@ -1152,7 +1152,7 @@
             this.ActualizarUnidad.BackColor = System.Drawing.Color.Transparent;
             this.ActualizarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
             this.ActualizarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ActualizarUnidad.Location = new System.Drawing.Point(927, 703);
+            this.ActualizarUnidad.Location = new System.Drawing.Point(927, 671);
             this.ActualizarUnidad.Name = "ActualizarUnidad";
             this.ActualizarUnidad.Size = new System.Drawing.Size(50, 50);
             this.ActualizarUnidad.TabIndex = 109;
@@ -1164,7 +1164,7 @@
             this.RegistrarUnidad.BackColor = System.Drawing.Color.Transparent;
             this.RegistrarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.RegistrarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RegistrarUnidad.Location = new System.Drawing.Point(852, 703);
+            this.RegistrarUnidad.Location = new System.Drawing.Point(852, 671);
             this.RegistrarUnidad.Name = "RegistrarUnidad";
             this.RegistrarUnidad.Size = new System.Drawing.Size(50, 50);
             this.RegistrarUnidad.TabIndex = 108;
@@ -1174,32 +1174,29 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(12, 121);
+            this.label12.Location = new System.Drawing.Point(91, 89);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(80, 13);
             this.label12.TabIndex = 158;
             this.label12.Text = "PESCADORES";
             // 
-            // Buscar
-            // 
-            this.Buscar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Search;
-            this.Buscar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Buscar.ForeColor = System.Drawing.Color.Transparent;
-            this.Buscar.Location = new System.Drawing.Point(113, 113);
-            this.Buscar.Name = "Buscar";
-            this.Buscar.Size = new System.Drawing.Size(28, 28);
-            this.Buscar.TabIndex = 159;
-            this.Buscar.UseVisualStyleBackColor = true;
-            this.Buscar.Click += new System.EventHandler(this.Buscar_Click);
-            // 
             // BuscarNombre
             // 
-            this.BuscarNombre.Location = new System.Drawing.Point(15, 147);
+            this.BuscarNombre.Location = new System.Drawing.Point(15, 115);
             this.BuscarNombre.Name = "BuscarNombre";
             this.BuscarNombre.Size = new System.Drawing.Size(245, 20);
             this.BuscarNombre.TabIndex = 160;
             this.BuscarNombre.TextChanged += new System.EventHandler(this.BuscarNombre_TextChanged_1);
+            this.BuscarNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BuscarNombre_KeyPress);
+            // 
+            // ListaNombres
+            // 
+            this.ListaNombres.FormattingEnabled = true;
+            this.ListaNombres.Location = new System.Drawing.Point(15, 141);
+            this.ListaNombres.Name = "ListaNombres";
+            this.ListaNombres.Size = new System.Drawing.Size(245, 199);
+            this.ListaNombres.TabIndex = 161;
+            this.ListaNombres.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListaNombres_MouseDoubleClick);
             // 
             // Pantalla_Registro_Usuario
             // 
@@ -1208,8 +1205,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1513, 767);
+            this.Controls.Add(this.ListaNombres);
             this.Controls.Add(this.BuscarNombre);
-            this.Controls.Add(this.Buscar);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -1355,7 +1352,7 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Button Buscar;
         private System.Windows.Forms.TextBox BuscarNombre;
+        private System.Windows.Forms.ListBox ListaNombres;
     }
 }
