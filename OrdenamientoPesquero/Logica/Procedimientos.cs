@@ -362,7 +362,6 @@ namespace Logica
             string[] Parametros = {  };
             return c.EjecutarMaster("PasarEmbarcaPermis2", Parametros);
         }
-        #endregion
         public int PasarPescadores2(string rnpa)
         {
             string[] Parametros = { "@rnpa"};
@@ -409,5 +408,6 @@ namespace Logica
             string[] Parametros = { };
             return c.Ejecutar2("limpiar", Parametros);
         }
+        #endregion
     }
 }

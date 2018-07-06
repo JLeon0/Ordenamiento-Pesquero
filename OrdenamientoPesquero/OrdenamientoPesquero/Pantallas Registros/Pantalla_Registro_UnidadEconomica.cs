@@ -12,6 +12,7 @@ using Microsoft.VisualBasic;
 using System.Text.RegularExpressions;
 using OrdenamientoPesquero.Pantallas_Registros;
 
+
 namespace OrdenamientoPesquero
 {
     public partial class Pantalla_Registro_UnidadEconomica : Form
@@ -24,7 +25,8 @@ namespace OrdenamientoPesquero
         Embarcacion Emb;
         Directiva dir;
         int exito = 0;
-        Validaciones val = new Validaciones();        Procedimientos proc = new Procedimientos();
+        Validaciones val = new Validaciones();
+        Procedimientos proc = new Procedimientos();
         DataSet ds = new DataSet();
         DataTable dt = null;
         DataTable NOMBRES = null;
