@@ -432,7 +432,14 @@ namespace OrdenamientoPesquero
                     {
                         DataResumen[0, i].Value = dt.Rows[i]["PESQUERIA"].ToString();
                         DataResumen[1, i].Value = dt.Rows[i][2].ToString();
-                        DataResumen[2, i].Value = val.DiferenciaFechas(Convert.ToDateTime(dt.Rows[i][4].ToString()), DateTime.Today);
+                        if (val.DiferenciaFechas(Convert.ToDateTime(dt.Rows[i][4].ToString()), DateTime.Today) == "Fecha Invalida")
+                        {
+                            DataResumen[2, i].Value = "VENCIDO";
+                        }
+                        else
+                        {
+                            DataResumen[2, i].Value = val.DiferenciaFechas(Convert.ToDateTime(dt.Rows[i][4].ToString()), DateTime.Today);
+                        }
                     }
                 }
                 else
