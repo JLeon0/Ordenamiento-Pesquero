@@ -346,7 +346,6 @@ namespace OrdenamientoPesquero
 
         private void cbRNPA_TextChanged(object sender, EventArgs e)
         {
-            cargado = false;
             if (cbRNPA.Text!="")
             {
                 unidad[4, 0] = "1";
@@ -435,10 +434,12 @@ namespace OrdenamientoPesquero
                         if (val.DiferenciaFechas(Convert.ToDateTime(dt.Rows[i][4].ToString()), DateTime.Today) == "Fecha Invalida")
                         {
                             DataResumen[2, i].Value = "VENCIDO";
+                            DataResumen[2, i].Style.BackColor = Color.Red;
                         }
                         else
                         {
                             DataResumen[2, i].Value = val.DiferenciaFechas(Convert.ToDateTime(dt.Rows[i][4].ToString()), DateTime.Today);
+                            DataResumen[2, i].Style.BackColor = Color.White;
                         }
                     }
                 }
