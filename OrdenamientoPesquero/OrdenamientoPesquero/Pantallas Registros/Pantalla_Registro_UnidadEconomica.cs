@@ -584,12 +584,12 @@ namespace OrdenamientoPesquero
 
         private void cargarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            OpenFileDialog ofd = new OpenFileDialog();
-            ofd.ShowDialog();
-            this.Cursor = Cursors.WaitCursor;
-            string direccion = ofd.FileName;
-            if (proc.Cargar(direccion))
-            {
+            //OpenFileDialog ofd = new OpenFileDialog();
+            //ofd.ShowDialog();
+            //this.Cursor = Cursors.WaitCursor;
+            //string direccion = ofd.FileName;
+            //if (proc.Cargar(direccion))
+            //{
                 proc.PasarUnidad();
                 proc.PasarEmbarcaciones();
                 proc.PasarPescadores();
@@ -598,8 +598,8 @@ namespace OrdenamientoPesquero
                 proc.PasarEmbarcaPermis();
                 proc.PasarDirectiva();
                 this.OnLoad(e);
-            }
-            this.Cursor = Cursors.Default;
+            //}
+            //this.Cursor = Cursors.Default;
         }
 
         private void servidorToolStripMenuItem_Click(object sender, EventArgs e)
@@ -725,6 +725,12 @@ namespace OrdenamientoPesquero
         {
             string x = txtNombre.Text;
             BuscarNombreOrg.PerformClick();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 5);
+            v.ShowDialog(this);
         }
     }
 }
