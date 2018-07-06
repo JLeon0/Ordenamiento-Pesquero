@@ -29,6 +29,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         Procedimientos proc = new Procedimientos();
         private void Vistas_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'todospes.todos' Puede moverla o quitarla según sea necesario.
+            this.todosTableAdapter.Fill(this.todospes.todos);
             ReportDataSource datos = new ReportDataSource();
             if (unidad == "")
             {
@@ -139,6 +141,15 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     ruta = ruta.Replace("*", "/");
                     para1[8] = new ReportParameter("RutaImagen", ruta + "perfil.jpg");
                     reportViewer1.LocalReport.SetParameters(para1);
+                    this.reportViewer1.RefreshReport();
+                    break;
+                case 5:
+                    this.reportViewer1.ProcessingMode = ProcessingMode.Local;
+                    reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Pescadores.rdlc");
+                    this.todosTableAdapter.Fill(todospes.todos);
+                    datos.Name = "vista_perm";
+                    datos.Value = todospes.todos;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos);
                     this.reportViewer1.RefreshReport();
                     break;
                 default:

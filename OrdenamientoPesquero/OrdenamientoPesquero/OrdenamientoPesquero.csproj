@@ -124,6 +124,16 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="todos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>todos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="todospes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>todospes.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Pantallas Registros\Pantalla_Certificado_Mat.resx">
       <DependentUpon>Pantalla_Certificado_Mat.cs</DependentUpon>
     </EmbeddedResource>
@@ -158,7 +168,9 @@
     <EmbeddedResource Include="Reportes\Anexo3.rdlc" />
     <EmbeddedResource Include="Reportes\Credencial.rdlc" />
     <EmbeddedResource Include="Reportes\Frontal.rdlc" />
+    <EmbeddedResource Include="Reportes\Lista_Embarca.rdlc" />
     <EmbeddedResource Include="Reportes\Permisos.rdlc" />
+    <EmbeddedResource Include="Reportes\Pescadores.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
     <None Include="EmbarcacionesSet.xsc">
       <DependentUpon>EmbarcacionesSet.xsd</DependentUpon>
@@ -224,6 +236,28 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="todos.xsc">
+      <DependentUpon>todos.xsd</DependentUpon>
+    </None>
+    <None Include="todos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>todos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="todos.xss">
+      <DependentUpon>todos.xsd</DependentUpon>
+    </None>
+    <None Include="todospes.xsc">
+      <DependentUpon>todospes.xsd</DependentUpon>
+    </None>
+    <None Include="todospes.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>todospes.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="todospes.xss">
+      <DependentUpon>todospes.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
