@@ -65,24 +65,22 @@ namespace OrdenamientoPesquero
                 {
                     if (!existe(cbRNPA.Text))
                     {
-                        if (!cargado)
+                        if (radioButton0.Checked)
                         {
-                            if (radioButton0.Checked)
-                            {
-                                ue = new Unidad_Economica(r, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
-                                exito = proc.Registrar_Unidad(ue);
-                            }
-                            else if (radioButton1.Checked)
-                            {
-                                ue = new Unidad_Economica(r, txtNombre.Text, "1", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
-                                exito = proc.Registrar_Unidad(ue);
-                            }
-                            int Folio = ObtenerFolio();
-                            exito = proc.AsignarFederacion(Folio, cbRNPA.Text);
-                            CargarRNPA();
-                            val.Exito(exito);
-                            cargado = true;
+                            ue = new Unidad_Economica(r, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
+                            exito = proc.Registrar_Unidad(ue);
                         }
+                        else if (radioButton1.Checked)
+                        {
+                            ue = new Unidad_Economica(r, txtNombre.Text, "1", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
+                            exito = proc.Registrar_Unidad(ue);
+                        }
+                        int Folio = ObtenerFolio();
+                        exito = proc.AsignarFederacion(Folio, cbRNPA.Text);
+                        CargarRNPA();
+                        val.Exito(exito);
+                        cargado = true;
+
                     }
                     else
                     {
@@ -99,23 +97,22 @@ namespace OrdenamientoPesquero
         {
             if (validaralgo(unidad))
             {
-                if (!cargado)
-                {
-                    if (radioButton0.Checked)
-                    {
-                        ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
-                        exito = proc.Actualizar_Unidad(ue);
-                    }
-                    else if (radioButton1.Checked)
-                    {
-                        ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "1", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
-                        exito = proc.Actualizar_Unidad(ue);
-                    }
-                    int Folio = ObtenerFolio();
-                    exito = proc.AsignarFederacion(Folio, cbRNPA.Text);
-                    val.Exito(exito);
 
+                if (radioButton0.Checked)
+                {
+                    ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
+                    exito = proc.Actualizar_Unidad(ue);
                 }
+                else if (radioButton1.Checked)
+                {
+                    ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "1", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
+                    exito = proc.Actualizar_Unidad(ue);
+                }
+                int Folio = ObtenerFolio();
+                exito = proc.AsignarFederacion(Folio, cbRNPA.Text);
+                val.Exito(exito);
+
+
             }
             NOMBRES = proc.Obtener_todos_los_nombres("");
         }
