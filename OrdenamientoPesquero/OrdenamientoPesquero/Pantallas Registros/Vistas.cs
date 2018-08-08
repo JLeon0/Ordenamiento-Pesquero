@@ -29,9 +29,23 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         Procedimientos proc = new Procedimientos();
         private void Vistas_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet7.Mulege' Puede moverla o quitarla según sea necesario.
+            this.mulegeTableAdapter.Fill(this.ordPesqueroDataSet7.Mulege);
+            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet6.LosCabos' Puede moverla o quitarla según sea necesario.
+            this.losCabosTableAdapter.Fill(this.ordPesqueroDataSet6.LosCabos);
+            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet5.Loreto' Puede moverla o quitarla según sea necesario.
+            this.loretoTableAdapter.Fill(this.ordPesqueroDataSet5.Loreto);
+            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet4.LaPaz' Puede moverla o quitarla según sea necesario.
+            this.laPazTableAdapter.Fill(this.ordPesqueroDataSet4.LaPaz);
+            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet3.Comondu' Puede moverla o quitarla según sea necesario.
+            this.comonduTableAdapter.Fill(this.ordPesqueroDataSet3.Comondu);
             // TODO: esta línea de código carga datos en la tabla 'todospes.todos' Puede moverla o quitarla según sea necesario.
             this.todosTableAdapter.Fill(this.todospes.todos);
             ReportDataSource datos = new ReportDataSource();
+            ReportDataSource datos2 = new ReportDataSource();
+            ReportDataSource datos3 = new ReportDataSource();
+            ReportDataSource datos4 = new ReportDataSource();
+            ReportDataSource datos5 = new ReportDataSource();
             if (unidad == "")
             {
                 unidad = rnpa;
@@ -150,6 +164,108 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     datos.Name = "vista_perm";
                     datos.Value = todospes.todos;
                     this.reportViewer1.LocalReport.DataSources.Add(datos);
+                    this.reportViewer1.RefreshReport();
+                    break;
+                case 6:
+                    this.reportViewer1.ProcessingMode = ProcessingMode.Local;
+                    reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "ReporteXUnidad.rdlc");
+                    this.vista_permTableAdapter.Fill(permisos_lista.vista_perm, rnpa);
+                    datos.Name = "DataSet2";
+                    datos.Value = permisos_lista.vista_perm;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos);
+                    this.embarcacionesxUnidadTableAdapter.Fill(embarcacionesSet.EmbarcacionesxUnidad, rnpa);
+                    datos2.Name = "DataSet3";
+                    datos2.Value = embarcacionesSet.EmbarcacionesxUnidad;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos2);
+                    this.pescadoresTableAdapter.Fill(ordPesqueroDataSetpescadores1.pescadores, rnpa);
+                    datos3.Name = "DataSet5";
+                    datos3.Value = ordPesqueroDataSetpescadores1.pescadores;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos3);
+
+                    ReportParameter[] para2 = new ReportParameter[4];
+                    para2[0]= new ReportParameter("Unidad", "unidad");
+                    para2[1] = new ReportParameter("Fed", "unidad");
+                    para2[2] = new ReportParameter("Municipio", "unidad");
+                    para2[3] = new ReportParameter("Localidad", "unidad");
+                    reportViewer1.LocalReport.SetParameters(para2);
+                    this.reportViewer1.RefreshReport();
+                    break;
+                case 7:
+                    this.reportViewer1.ProcessingMode = ProcessingMode.Local;
+                    reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "xMunicipio.rdlc");
+                    this.comonduTableAdapter.Fill(ordPesqueroDataSet3.Comondu);
+                    datos.Name = "Comondu";
+                    datos.Value = ordPesqueroDataSet3.Comondu;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos);
+
+                    this.mulegeTableAdapter.Fill(ordPesqueroDataSet7.Mulege);
+                    datos2.Name = "Mulege";
+                    datos2.Value = ordPesqueroDataSet7.Mulege;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos2);
+
+                    this.laPazTableAdapter.Fill(ordPesqueroDataSet4.LaPaz);
+                    datos3.Name = "LaPaz";
+                    datos3.Value = ordPesqueroDataSet4.LaPaz;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos3);
+
+                    this.losCabosTableAdapter.Fill(ordPesqueroDataSet6.LosCabos);
+                    datos4.Name = "LosCabos";
+                    datos4.Value = ordPesqueroDataSet6.LosCabos;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos4);
+
+                    this.loretoTableAdapter.Fill(ordPesqueroDataSet5.Loreto);
+                    datos5.Name = "Loreto";
+                    datos5.Value = ordPesqueroDataSet5.Loreto;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos5);
+
+                    ReportParameter[] para3 = new ReportParameter[5];
+                    int x = 0;
+                    if (ordPesqueroDataSet7.Mulege.Rows.Count.ToString()==null)
+                    {
+                        para3[0] = new ReportParameter("totM", "0");
+                    }
+                    else
+                    {
+                        para3[0] = new ReportParameter("totM", ordPesqueroDataSet7.Mulege.Rows.Count.ToString());
+                    }
+
+                    if (ordPesqueroDataSet3.Comondu.Rows.Count.ToString() == null)
+                    {
+                        para3[1] = new ReportParameter("totC", "0");
+                    }
+                    else
+                    {
+                        para3[1] = new ReportParameter("totC", ordPesqueroDataSet3.Comondu.Rows.Count.ToString());
+                    }
+
+                    if (ordPesqueroDataSet4.LaPaz.Rows.Count.ToString() == null)
+                    {
+                        para3[2] = new ReportParameter("totP", "0");
+                    }
+                    else
+                    {
+                        para3[2] = new ReportParameter("totP", ordPesqueroDataSet4.LaPaz.Rows.Count.ToString());
+                    }
+
+                    if (ordPesqueroDataSet5.Loreto.Rows.Count.ToString() == null)
+                    {
+                        para3[2] = new ReportParameter("totL", "0");
+                    }
+                    else
+                    {
+                        para3[3] = new ReportParameter("totL", ordPesqueroDataSet5.Loreto.Rows.Count.ToString());
+                    }
+
+                    if (ordPesqueroDataSet6.LosCabos.Rows.Count.ToString() == null)
+                    {
+                        para3[4] = new ReportParameter("totL", "0");
+                    }
+                    else
+                    {
+                        para3[4] = new ReportParameter("totCA", ordPesqueroDataSet6.LosCabos.Rows.Count.ToString());
+                    }
+                    reportViewer1.LocalReport.SetParameters(para3);
+
                     this.reportViewer1.RefreshReport();
                     break;
                 default:

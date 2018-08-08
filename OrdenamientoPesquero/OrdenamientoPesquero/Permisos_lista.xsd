@@ -2,15 +2,16 @@
 <xs:schema id="Permisos_lista" targetNamespace="http://tempuri.org/Permisos_lista.xsd" xmlns:mstns="http://tempuri.org/Permisos_lista.xsd" xmlns="http://tempuri.org/Permisos_lista.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OrdPesqueroConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OrdPesqueroConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OrdenamientoPesquero.Properties.Settings.GlobalReference.Default.OrdPesqueroConnectionString1" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OrdPesqueroConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OrdPesqueroConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OrdenamientoPesquero.Properties.Settings.GlobalReference.Default.OrdPesqueroConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OrdPesqueroConnectionString3" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OrdPesqueroConnectionString3 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OrdenamientoPesquero.Properties.Settings.GlobalReference.Default.OrdPesqueroConnectionString3" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="vista_permTableAdapter" GeneratorDataComponentClassName="vista_permTableAdapter" Name="vista_perm" UserDataComponentName="vista_permTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="OrdPesqueroConnectionString (Settings)" DbObjectName="OrdPesquero.dbo.vista_perm" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="OrdPesqueroConnectionString3 (Settings)" DbObjectName="OrdPesquero.dbo.vista_perm" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.vista_perm</CommandText>
@@ -30,6 +31,7 @@
               <Mapping SourceColumn="dias" DataSetColumn="dias" />
               <Mapping SourceColumn="meses" DataSetColumn="meses" />
               <Mapping SourceColumn="años" DataSetColumn="años" />
+              <Mapping SourceColumn="Esfuerzos" DataSetColumn="Esfuerzos" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -75,6 +77,7 @@
               <xs:element name="dias" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndias" msprop:Generator_ColumnPropNameInRow="dias" msprop:Generator_ColumnPropNameInTable="diasColumn" msprop:Generator_UserColumnName="dias" type="xs:double" minOccurs="0" />
               <xs:element name="meses" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnmeses" msprop:Generator_ColumnPropNameInRow="meses" msprop:Generator_ColumnPropNameInTable="mesesColumn" msprop:Generator_UserColumnName="meses" type="xs:double" minOccurs="0" />
               <xs:element name="años" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnaños" msprop:Generator_ColumnPropNameInRow="años" msprop:Generator_ColumnPropNameInTable="añosColumn" msprop:Generator_UserColumnName="años" type="xs:double" minOccurs="0" />
+              <xs:element name="Esfuerzos" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnEsfuerzos" msprop:Generator_ColumnPropNameInRow="Esfuerzos" msprop:Generator_ColumnPropNameInTable="EsfuerzosColumn" msprop:Generator_UserColumnName="Esfuerzos" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

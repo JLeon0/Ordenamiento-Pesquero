@@ -741,7 +741,7 @@ namespace OrdenamientoPesquero
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 5);
+            Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 7);
             v.ShowDialog(this);
         }
     }
