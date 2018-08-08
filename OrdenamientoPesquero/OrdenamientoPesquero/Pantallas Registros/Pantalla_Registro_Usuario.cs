@@ -334,6 +334,12 @@ namespace OrdenamientoPesquero
 
         private void CargarPescadores()
         {
+            dt = proc.BuscarNombre("", RNPA);
+            ListaNombres.Items.Clear();
+            foreach (DataRow fila in dt.Rows)
+            {
+                ListaNombres.Items.Add(fila["NOMBRE"].ToString());
+            }
             dt = proc.Obtener_curp(RNPA);
             CURPPesc.DataSource = dt;
             CURPPesc.DisplayMember = "CURP";
@@ -367,9 +373,14 @@ namespace OrdenamientoPesquero
 
         private void CURPPesc_SelectedValueChanged(object sender, EventArgs e)
         {
+            LlenarDatos(CURPPesc.Text);
+        }
+
+        private void LlenarDatos(string curp)
+        {
             this.Cursor = Cursors.WaitCursor;
-            string c = CURPPesc.Text;
-            dt = proc.Obtener_Pescador(CURPPesc.Text);
+            string c = curp;
+            dt = proc.Obtener_Pescador(c);
             limpiarpescador();
             string tipopescador = "", ocupacion = "", cuerpoagua = "", matricula = "";
             int ord = 0;
@@ -400,7 +411,7 @@ namespace OrdenamientoPesquero
                 FechaExpFolio.Text = filas["FECHAEXP_FOLIO"].ToString();
                 FechaVencFolio.Text = filas["FECHAVEN_FOLIO"].ToString();
             }
-            if(matricula == RNPA)
+            if (matricula == RNPA)
             {
                 MatriculaPesc.Text = "NO APLICA";
             }
@@ -437,7 +448,7 @@ namespace OrdenamientoPesquero
                     boton.Checked = true;
                 }
             }
-            if(ord == 1) { si.Checked = true; }
+            if (ord == 1) { si.Checked = true; }
             else { no.Checked = true; }
             CURPPesc.Text = c;
             ObtenerImagen();
@@ -560,6 +571,37 @@ namespace OrdenamientoPesquero
                     MessageBox.Show("Imagen Insertada correctamente");
                 }
             }
+        }
+        DataTable NOMBRES = new DataTable();
+
+        private void BuscarNombre_TextChanged_1(object sender, EventArgs e)
+        {
+            string x = BuscarNombre.Text;
+            NOMBRES = proc.BuscarNombre(x, RNPA);
+            ListaNombres.Items.Clear();
+            foreach (DataRow fila in NOMBRES.Rows)
+            {
+                ListaNombres.Items.Add(fila["NOMBRE"].ToString());
+            }
+        }
+
+        private void BuscarNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                NOMBRES = proc.BuscarNombre("", RNPA);
+                ListaNombres.Items.Clear();
+                foreach (DataRow fila in NOMBRES.Rows)
+                {
+                    ListaNombres.Items.Add(fila["NOMBRE"].ToString());
+                }
+            }
+        }
+
+        private void ListaNombres_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), RNPA);
+            LlenarDatos(NOMBRES.Rows[0]["CURP"].ToString());
         }
 
         private void Ver_Click(object sender, EventArgs e)

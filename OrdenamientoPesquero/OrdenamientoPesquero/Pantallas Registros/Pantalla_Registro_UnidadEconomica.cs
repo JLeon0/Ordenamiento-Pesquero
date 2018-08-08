@@ -12,6 +12,7 @@ using Microsoft.VisualBasic;
 using System.Text.RegularExpressions;
 using OrdenamientoPesquero.Pantallas_Registros;
 
+
 namespace OrdenamientoPesquero
 {
     public partial class Pantalla_Registro_UnidadEconomica : Form
@@ -24,7 +25,8 @@ namespace OrdenamientoPesquero
         Embarcacion Emb;
         Directiva dir;
         int exito = 0;
-        Validaciones val = new Validaciones();        Procedimientos proc = new Procedimientos();
+        Validaciones val = new Validaciones();
+        Procedimientos proc = new Procedimientos();
         DataSet ds = new DataSet();
         DataTable dt = null;
         DataTable NOMBRES = null;
@@ -63,24 +65,22 @@ namespace OrdenamientoPesquero
                 {
                     if (!existe(cbRNPA.Text))
                     {
-                        if (!cargado)
+                        if (radioButton0.Checked)
                         {
-                            if (radioButton0.Checked)
-                            {
-                                ue = new Unidad_Economica(r, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
-                                exito = proc.Registrar_Unidad(ue);
-                            }
-                            else if (radioButton1.Checked)
-                            {
-                                ue = new Unidad_Economica(r, txtNombre.Text, "1", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
-                                exito = proc.Registrar_Unidad(ue);
-                            }
-                            int Folio = ObtenerFolio();
-                            exito = proc.AsignarFederacion(Folio, cbRNPA.Text);
-                            CargarRNPA();
-                            val.Exito(exito);
-                            cargado = true;
+                            ue = new Unidad_Economica(r, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
+                            exito = proc.Registrar_Unidad(ue);
                         }
+                        else if (radioButton1.Checked)
+                        {
+                            ue = new Unidad_Economica(r, txtNombre.Text, "1", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
+                            exito = proc.Registrar_Unidad(ue);
+                        }
+                        int Folio = ObtenerFolio();
+                        exito = proc.AsignarFederacion(Folio, cbRNPA.Text);
+                        CargarRNPA();
+                        val.Exito(exito);
+                        cargado = true;
+
                     }
                     else
                     {
@@ -97,23 +97,22 @@ namespace OrdenamientoPesquero
         {
             if (validaralgo(unidad))
             {
-                if (!cargado)
-                {
-                    if (radioButton0.Checked)
-                    {
-                        ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
-                        exito = proc.Actualizar_Unidad(ue);
-                    }
-                    else if (radioButton1.Checked)
-                    {
-                        ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "1", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
-                        exito = proc.Actualizar_Unidad(ue);
-                    }
-                    int Folio = ObtenerFolio();
-                    exito = proc.AsignarFederacion(Folio, cbRNPA.Text);
-                    val.Exito(exito);
 
+                if (radioButton0.Checked)
+                {
+                    ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
+                    exito = proc.Actualizar_Unidad(ue);
                 }
+                else if (radioButton1.Checked)
+                {
+                    ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "1", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
+                    exito = proc.Actualizar_Unidad(ue);
+                }
+                int Folio = ObtenerFolio();
+                exito = proc.AsignarFederacion(Folio, cbRNPA.Text);
+                val.Exito(exito);
+
+
             }
             NOMBRES = proc.Obtener_todos_los_nombres("");
         }
@@ -153,20 +152,13 @@ namespace OrdenamientoPesquero
         private void CargarRNPA()
         {
             string a = cbRNPA.Text.Replace(" ", ""); ;
-            dt = proc.Obtener_todas_unidades("");
-            if (dt.Rows.Count != 0)
-            {
-                cbRNPA.DataSource = dt;
-                cbRNPA.DisplayMember = "RNPA";
-                cbRNPA.ValueMember = "RNPA";
-                cbRNPA.Text = a;
-            }
             NOMBRES = proc.Obtener_todos_los_nombres("");
             txtNombre.DataSource = null;
             txtNombre.Items.Clear();
             foreach (DataRow fila in NOMBRES.Rows)
             {
                 txtNombre.Items.Add(fila["NOMBRE"].ToString());
+                cbRNPA.Items.Add(fila["RNPA"].ToString());
             }
             //txtNombre.DataSource = NOMBRES;
             //txtNombre.DisplayMember = "Nombre";
@@ -211,6 +203,11 @@ namespace OrdenamientoPesquero
         private void BuscarNombreOrg_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
+            cbRNPA.Items.Clear();
+            foreach (DataRow fila in NOMBRES.Rows)
+            {
+                cbRNPA.Items.Add(fila["RNPA"].ToString());
+            }
             LlenarCamposNombre();
             ObtenerFederacion();
             Resumenes(cbRNPA.Text);
@@ -454,6 +451,12 @@ namespace OrdenamientoPesquero
                 }
                 DataResumen.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             }
+            else
+            {
+                TotalPermisos.Text = "0";
+                TotalSocios.Text = "0";
+                TotalEsfuerzos.Text = "0";
+            }
         }
 
         public void ResumenSocios(string RNPA)
@@ -468,6 +471,16 @@ namespace OrdenamientoPesquero
                 Asegurados.Text = dt.Rows[0]["ASEGURADOS"].ToString();
                 Acuacultores.Text = dt.Rows[0]["ACUACULTORES"].ToString();
                 Credencializados.Text = dt.Rows[0]["CREDENCIALIZADOS"].ToString();
+            }
+            else
+            {
+                Capitanes.Text = "0";
+                Marineros.Text = "0";
+                SinActividad.Text = "0";
+                Ordenados.Text = "0";
+                Asegurados.Text = "0";
+                Acuacultores.Text = "0";
+                Credencializados.Text = "0";
             }
         }
         #endregion
@@ -701,9 +714,11 @@ namespace OrdenamientoPesquero
             string x = txtNombre.Text;
             NOMBRES = proc.Obtener_todos_los_nombres(x);
             txtNombre.Items.Clear();
+            cbRNPA.Items.Clear();
             foreach (DataRow fila in NOMBRES.Rows)
             {
                 txtNombre.Items.Add(fila["NOMBRE"].ToString());
+                cbRNPA.Items.Add(fila["RNPA"].ToString());
             }
             txtNombre.Select(txtNombre.Text.Length, 0);
             if(txtNombre.Text == "")
@@ -743,6 +758,11 @@ namespace OrdenamientoPesquero
         {
             Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 7);
             v.ShowDialog(this);
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
         }
     }
 }

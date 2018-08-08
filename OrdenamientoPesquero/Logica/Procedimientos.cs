@@ -205,6 +205,11 @@ namespace Logica
             string[] Parametros = { "@curp" };
             return c.getDatosTabla("ObtenerImagen", Parametros, curp);
         }
+        public DataTable BuscarNombre(string nombre,string rnpa)
+        {
+            string[] Parametros = { "@nombre", "@rnpa" };
+            return c.getDatosTabla("BuscarPescador", Parametros, nombre, rnpa);
+        }
         #endregion
 
 
@@ -362,7 +367,6 @@ namespace Logica
             string[] Parametros = {  };
             return c.EjecutarMaster("PasarEmbarcaPermis2", Parametros);
         }
-        #endregion
         public int PasarPescadores2(string rnpa)
         {
             string[] Parametros = { "@rnpa"};
@@ -409,5 +413,6 @@ namespace Logica
             string[] Parametros = { };
             return c.Ejecutar2("limpiar", Parametros);
         }
+        #endregion
     }
 }

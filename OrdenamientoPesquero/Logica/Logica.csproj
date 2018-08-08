@@ -46,6 +46,7 @@
     <Compile Include="Embarcacion.cs" />
     <Compile Include="Permiso.cs" />
     <Compile Include="Pescador.cs" />
+    <Compile Include="Solicitud.cs" />
     <Compile Include="Unidad_Economica.cs" />
     <Compile Include="Procedimientos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

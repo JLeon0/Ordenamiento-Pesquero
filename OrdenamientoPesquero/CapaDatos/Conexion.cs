@@ -86,7 +86,8 @@ namespace CapaDatos
             //con.Close();
             string deleete = "Drop database OrdPesquero2";
             string sBackup = " RESTORE DATABASE OrdPesquero2" +
-                             " FROM DISK = '" + archivo + "'";
+                             " FROM DISK = '" + archivo + "'" +
+                             " WITH REPLACE";
             SqlConnectionStringBuilder csb = new SqlConnectionStringBuilder();
             csb.DataSource = ".\\SQLEXPRESS";
             // Es mejor abrir la conexión con la base Master
