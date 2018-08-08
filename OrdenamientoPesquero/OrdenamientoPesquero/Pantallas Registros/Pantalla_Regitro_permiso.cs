@@ -259,38 +259,38 @@ namespace OrdenamientoPesquero
                 cbx.DropDownStyle = ComboBoxStyle.DropDown;
                 cbx.AutoCompleteSource = AutoCompleteSource.ListItems;
                 cbx.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
-                //cbx.Validating += new CancelEventHandler(cbx_Validating);
+                cbx.Validating += new CancelEventHandler(cbx_Validating);
             }
         }
 
-        //void cbx_Validating(object sender, CancelEventArgs e)
-        //{
+        void cbx_Validating(object sender, CancelEventArgs e)
+        {
 
-        //    DataGridViewComboBoxEditingControl cbx = sender as DataGridViewComboBoxEditingControl;
+            DataGridViewComboBoxEditingControl cbx = sender as DataGridViewComboBoxEditingControl;
 
-        //    DataGridView grid = cbx.EditingControlDataGridView;
+            DataGridView grid = cbx.EditingControlDataGridView;
 
-        //    object value = cbx.Text;
+            object value = cbx.Text;
 
-        //    // Add value to list if not there
+            // Add value to list if not there
 
-        //    if (cbx.Items.IndexOf(value) == -1)
-        //    {
-        //        DataGridViewComboBoxCell cboCol = (DataGridViewComboBoxCell)grid.CurrentCell;
+            if (cbx.Items.IndexOf(value) == -1)
+            {
+                DataGridViewComboBoxCell cboCol = (DataGridViewComboBoxCell)grid.CurrentCell;
 
-        //        // Must add to both the current combobox as well as the template, to avoid duplicate entries...
+                // Must add to both the current combobox as well as the template, to avoid duplicate entries...
 
-        //        cbx.Items.Add(value);
+                cbx.Items.Add(value);
 
-        //        cboCol.Items.Add(value);
+                cboCol.Items.Add(value);
 
-        //        grid.CurrentCell.Value = value;
-        //    }
-        //    else
-        //    {
-        //        //cbx.SelectedIndex = 
-        //    }
-        //} //-----------------------------------------------------------------------------------------
+                grid.CurrentCell.Value = value;
+            }
+            else
+            {
+                //cbx.SelectedIndex = 
+            }
+        } //-----------------------------------------------------------------------------------------
 
         private void Ver_Click(object sender, EventArgs e)
         {
