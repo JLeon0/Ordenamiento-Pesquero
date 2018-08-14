@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Logica
 {
-    class Solicitud
+    public class Solicitud
     {
         public string NOMBRE { get; set; }
         public string CURP { get; set; }

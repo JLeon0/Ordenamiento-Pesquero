@@ -287,11 +287,11 @@ namespace OrdenamientoPesquero {
             
             private global::System.Data.DataColumn columnLUGAREXPEDICION;
             
-            private global::System.Data.DataColumn columndias;
+            private global::System.Data.DataColumn columnDIAEXPEDICION;
             
-            private global::System.Data.DataColumn columnmeses;
+            private global::System.Data.DataColumn columnFINVIGENCIA;
             
-            private global::System.Data.DataColumn columnaños;
+            private global::System.Data.DataColumn columnColumn1;
             
             private global::System.Data.DataColumn columnEsfuerzos;
             
@@ -362,25 +362,25 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn diasColumn {
+            public global::System.Data.DataColumn DIAEXPEDICIONColumn {
                 get {
-                    return this.columndias;
+                    return this.columnDIAEXPEDICION;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn mesesColumn {
+            public global::System.Data.DataColumn FINVIGENCIAColumn {
                 get {
-                    return this.columnmeses;
+                    return this.columnFINVIGENCIA;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn añosColumn {
+            public global::System.Data.DataColumn Column1Column {
                 get {
-                    return this.columnaños;
+                    return this.columnColumn1;
                 }
             }
             
@@ -429,16 +429,16 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vista_permRow Addvista_permRow(string NPERMISO, string FOLIO, string PESQUERIA, string LUGAREXPEDICION, double dias, double meses, double años, int Esfuerzos) {
+            public vista_permRow Addvista_permRow(string NPERMISO, string FOLIO, string PESQUERIA, string LUGAREXPEDICION, string DIAEXPEDICION, string FINVIGENCIA, string Column1, int Esfuerzos) {
                 vista_permRow rowvista_permRow = ((vista_permRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NPERMISO,
                         FOLIO,
                         PESQUERIA,
                         LUGAREXPEDICION,
-                        dias,
-                        meses,
-                        años,
+                        DIAEXPEDICION,
+                        FINVIGENCIA,
+                        Column1,
                         Esfuerzos};
                 rowvista_permRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowvista_permRow);
@@ -474,9 +474,9 @@ namespace OrdenamientoPesquero {
                 this.columnFOLIO = base.Columns["FOLIO"];
                 this.columnPESQUERIA = base.Columns["PESQUERIA"];
                 this.columnLUGAREXPEDICION = base.Columns["LUGAREXPEDICION"];
-                this.columndias = base.Columns["dias"];
-                this.columnmeses = base.Columns["meses"];
-                this.columnaños = base.Columns["años"];
+                this.columnDIAEXPEDICION = base.Columns["DIAEXPEDICION"];
+                this.columnFINVIGENCIA = base.Columns["FINVIGENCIA"];
+                this.columnColumn1 = base.Columns["Column1"];
                 this.columnEsfuerzos = base.Columns["Esfuerzos"];
             }
             
@@ -491,12 +491,12 @@ namespace OrdenamientoPesquero {
                 base.Columns.Add(this.columnPESQUERIA);
                 this.columnLUGAREXPEDICION = new global::System.Data.DataColumn("LUGAREXPEDICION", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnLUGAREXPEDICION);
-                this.columndias = new global::System.Data.DataColumn("dias", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columndias);
-                this.columnmeses = new global::System.Data.DataColumn("meses", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmeses);
-                this.columnaños = new global::System.Data.DataColumn("años", typeof(double), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnaños);
+                this.columnDIAEXPEDICION = new global::System.Data.DataColumn("DIAEXPEDICION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDIAEXPEDICION);
+                this.columnFINVIGENCIA = new global::System.Data.DataColumn("FINVIGENCIA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFINVIGENCIA);
+                this.columnColumn1 = new global::System.Data.DataColumn("Column1", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnColumn1);
                 this.columnEsfuerzos = new global::System.Data.DataColumn("Esfuerzos", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEsfuerzos);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
@@ -508,9 +508,10 @@ namespace OrdenamientoPesquero {
                 this.columnFOLIO.MaxLength = 20;
                 this.columnPESQUERIA.MaxLength = 50;
                 this.columnLUGAREXPEDICION.MaxLength = 50;
-                this.columndias.ReadOnly = true;
-                this.columnmeses.ReadOnly = true;
-                this.columnaños.ReadOnly = true;
+                this.columnDIAEXPEDICION.MaxLength = 30;
+                this.columnFINVIGENCIA.MaxLength = 30;
+                this.columnColumn1.ReadOnly = true;
+                this.columnColumn1.MaxLength = 7;
                 this.columnEsfuerzos.ReadOnly = true;
             }
             
@@ -708,49 +709,49 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double dias {
+            public string DIAEXPEDICION {
                 get {
                     try {
-                        return ((double)(this[this.tablevista_perm.diasColumn]));
+                        return ((string)(this[this.tablevista_perm.DIAEXPEDICIONColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'dias\' de la tabla \'vista_perm\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DIAEXPEDICION\' de la tabla \'vista_perm\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablevista_perm.diasColumn] = value;
+                    this[this.tablevista_perm.DIAEXPEDICIONColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double meses {
+            public string FINVIGENCIA {
                 get {
                     try {
-                        return ((double)(this[this.tablevista_perm.mesesColumn]));
+                        return ((string)(this[this.tablevista_perm.FINVIGENCIAColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'meses\' de la tabla \'vista_perm\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FINVIGENCIA\' de la tabla \'vista_perm\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablevista_perm.mesesColumn] = value;
+                    this[this.tablevista_perm.FINVIGENCIAColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public double años {
+            public string Column1 {
                 get {
                     try {
-                        return ((double)(this[this.tablevista_perm.añosColumn]));
+                        return ((string)(this[this.tablevista_perm.Column1Column]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'años\' de la tabla \'vista_perm\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Column1\' de la tabla \'vista_perm\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablevista_perm.añosColumn] = value;
+                    this[this.tablevista_perm.Column1Column] = value;
                 }
             }
             
@@ -796,38 +797,38 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsdiasNull() {
-                return this.IsNull(this.tablevista_perm.diasColumn);
+            public bool IsDIAEXPEDICIONNull() {
+                return this.IsNull(this.tablevista_perm.DIAEXPEDICIONColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetdiasNull() {
-                this[this.tablevista_perm.diasColumn] = global::System.Convert.DBNull;
+            public void SetDIAEXPEDICIONNull() {
+                this[this.tablevista_perm.DIAEXPEDICIONColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsmesesNull() {
-                return this.IsNull(this.tablevista_perm.mesesColumn);
+            public bool IsFINVIGENCIANull() {
+                return this.IsNull(this.tablevista_perm.FINVIGENCIAColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetmesesNull() {
-                this[this.tablevista_perm.mesesColumn] = global::System.Convert.DBNull;
+            public void SetFINVIGENCIANull() {
+                this[this.tablevista_perm.FINVIGENCIAColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsañosNull() {
-                return this.IsNull(this.tablevista_perm.añosColumn);
+            public bool IsColumn1Null() {
+                return this.IsNull(this.tablevista_perm.Column1Column);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetañosNull() {
-                this[this.tablevista_perm.añosColumn] = global::System.Convert.DBNull;
+            public void SetColumn1Null() {
+                this[this.tablevista_perm.Column1Column] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1006,9 +1007,9 @@ namespace OrdenamientoPesquero.Permisos_listaTableAdapters {
             tableMapping.ColumnMappings.Add("FOLIO", "FOLIO");
             tableMapping.ColumnMappings.Add("PESQUERIA", "PESQUERIA");
             tableMapping.ColumnMappings.Add("LUGAREXPEDICION", "LUGAREXPEDICION");
-            tableMapping.ColumnMappings.Add("dias", "dias");
-            tableMapping.ColumnMappings.Add("meses", "meses");
-            tableMapping.ColumnMappings.Add("años", "años");
+            tableMapping.ColumnMappings.Add("DIAEXPEDICION", "DIAEXPEDICION");
+            tableMapping.ColumnMappings.Add("FINVIGENCIA", "FINVIGENCIA");
+            tableMapping.ColumnMappings.Add("Column1", "Column1");
             tableMapping.ColumnMappings.Add("Esfuerzos", "Esfuerzos");
             this._adapter.TableMappings.Add(tableMapping);
         }
@@ -1017,7 +1018,7 @@ namespace OrdenamientoPesquero.Permisos_listaTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::OrdenamientoPesquero.Properties.Settings.Default.OrdPesqueroConnectionString3;
+            this._connection.ConnectionString = global::OrdenamientoPesquero.Properties.Settings.Default.OrdPesqueroConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

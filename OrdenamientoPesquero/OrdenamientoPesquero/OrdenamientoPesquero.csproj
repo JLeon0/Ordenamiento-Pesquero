@@ -116,6 +116,12 @@
     <Compile Include="Pantallas Menu\Menu1.Designer.cs">
       <DependentUpon>Menu1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas Menu\MenuReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas Menu\MenuReportes.Designer.cs">
+      <DependentUpon>MenuReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas Registros\Pantalla_Certificado_Mat.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -192,6 +198,9 @@
     </Compile>
     <EmbeddedResource Include="Pantallas Menu\Menu1.resx">
       <DependentUpon>Menu1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas Menu\MenuReportes.resx">
+      <DependentUpon>MenuReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas Registros\Pantalla_Certificado_Mat.resx">
       <DependentUpon>Pantalla_Certificado_Mat.cs</DependentUpon>

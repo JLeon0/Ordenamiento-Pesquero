@@ -756,13 +756,19 @@ namespace OrdenamientoPesquero
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 7);
+            Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 5);
             v.ShowDialog(this);
         }
 
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Pantallas_Menu.MenuReportes mr = new Pantallas_Menu.MenuReportes(cbRNPA.Text);
+            mr.Show(this);
         }
     }
 }
