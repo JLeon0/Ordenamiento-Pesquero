@@ -17,6 +17,7 @@ namespace Logica
         public string FINVIGENCIA { get; set; }
         public string ZONAPESC { get; set; }
         public string SITIOS { get; set; }
+        public int TIPOPERM { get; set; }
         public Permiso()
         {
             FOLIO = "";
@@ -28,8 +29,9 @@ namespace Logica
             FINVIGENCIA = "";
             ZONAPESC = "";
             SITIOS = "";
+            TIPOPERM = 1;
         }
-        public Permiso(string folio, string rnpa, string npermiso, string pesqueria, string lugar, string diaexp, string finvig, string zonapesca, string sitios)
+        public Permiso(string folio, string rnpa, string npermiso, string pesqueria, string lugar, string diaexp, string finvig, string zonapesca, string sitios, int tipoperm)
         {
             FOLIO = folio;
             RNPA = rnpa;
@@ -40,6 +42,7 @@ namespace Logica
             FINVIGENCIA = finvig;
             ZONAPESC = zonapesca;
             SITIOS = sitios;
+            TIPOPERM = tipoperm;
         }
     }
 }
