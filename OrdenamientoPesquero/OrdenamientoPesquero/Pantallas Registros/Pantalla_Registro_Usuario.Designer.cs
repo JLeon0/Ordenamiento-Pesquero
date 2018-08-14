@@ -124,6 +124,13 @@
             this.label12 = new System.Windows.Forms.Label();
             this.BuscarNombre = new System.Windows.Forms.TextBox();
             this.ListaNombres = new System.Windows.Forms.ListBox();
+            this.ListaNombres2 = new System.Windows.Forms.ListBox();
+            this.BuscarNombre2 = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.Solicitud = new System.Windows.Forms.Button();
+            this.solicitudes = new System.Windows.Forms.LinkLabel();
+            this.apoyos = new System.Windows.Forms.LinkLabel();
+            this.Apoyo = new System.Windows.Forms.Button();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CargarImagen)).BeginInit();
             this.gbxOrdenado.SuspendLayout();
@@ -860,7 +867,7 @@
             this.OcupacionEnEmbarPesc.Controls.Add(this.radioButton8);
             this.OcupacionEnEmbarPesc.Controls.Add(this.radioButton1);
             this.OcupacionEnEmbarPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OcupacionEnEmbarPesc.Location = new System.Drawing.Point(524, 9);
+            this.OcupacionEnEmbarPesc.Location = new System.Drawing.Point(524, 18);
             this.OcupacionEnEmbarPesc.Name = "OcupacionEnEmbarPesc";
             this.OcupacionEnEmbarPesc.Size = new System.Drawing.Size(130, 109);
             this.OcupacionEnEmbarPesc.TabIndex = 23;
@@ -919,7 +926,7 @@
             this.TipoPesc.Controls.Add(this.radioButton3);
             this.TipoPesc.Controls.Add(this.radioButton9);
             this.TipoPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TipoPesc.Location = new System.Drawing.Point(303, 9);
+            this.TipoPesc.Location = new System.Drawing.Point(302, 15);
             this.TipoPesc.Name = "TipoPesc";
             this.TipoPesc.Size = new System.Drawing.Size(139, 174);
             this.TipoPesc.TabIndex = 22;
@@ -1002,7 +1009,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(853, 725);
+            this.label2.Location = new System.Drawing.Point(852, 736);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 14);
             this.label2.TabIndex = 111;
@@ -1012,7 +1019,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(927, 725);
+            this.label3.Location = new System.Drawing.Point(926, 736);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 14);
             this.label3.TabIndex = 111;
@@ -1022,7 +1029,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1010, 724);
+            this.label4.Location = new System.Drawing.Point(1009, 735);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 14);
             this.label4.TabIndex = 111;
@@ -1032,7 +1039,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1091, 725);
+            this.label5.Location = new System.Drawing.Point(1090, 736);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 14);
             this.label5.TabIndex = 113;
@@ -1059,6 +1066,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.apoyos);
+            this.groupBox1.Controls.Add(this.solicitudes);
             this.groupBox1.Controls.Add(this.label11);
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
@@ -1129,7 +1138,7 @@
             // 
             this.Ver.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ver;
             this.Ver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Ver.Location = new System.Drawing.Point(1110, 671);
+            this.Ver.Location = new System.Drawing.Point(1109, 682);
             this.Ver.Name = "Ver";
             this.Ver.Size = new System.Drawing.Size(50, 50);
             this.Ver.TabIndex = 112;
@@ -1140,7 +1149,7 @@
             // 
             this.EliminarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Eliminar;
             this.EliminarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EliminarUnidad.Location = new System.Drawing.Point(1004, 671);
+            this.EliminarUnidad.Location = new System.Drawing.Point(1003, 682);
             this.EliminarUnidad.Name = "EliminarUnidad";
             this.EliminarUnidad.Size = new System.Drawing.Size(50, 50);
             this.EliminarUnidad.TabIndex = 110;
@@ -1152,7 +1161,7 @@
             this.ActualizarUnidad.BackColor = System.Drawing.Color.Transparent;
             this.ActualizarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
             this.ActualizarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ActualizarUnidad.Location = new System.Drawing.Point(927, 671);
+            this.ActualizarUnidad.Location = new System.Drawing.Point(926, 682);
             this.ActualizarUnidad.Name = "ActualizarUnidad";
             this.ActualizarUnidad.Size = new System.Drawing.Size(50, 50);
             this.ActualizarUnidad.TabIndex = 109;
@@ -1164,7 +1173,7 @@
             this.RegistrarUnidad.BackColor = System.Drawing.Color.Transparent;
             this.RegistrarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.RegistrarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RegistrarUnidad.Location = new System.Drawing.Point(852, 671);
+            this.RegistrarUnidad.Location = new System.Drawing.Point(851, 682);
             this.RegistrarUnidad.Name = "RegistrarUnidad";
             this.RegistrarUnidad.Size = new System.Drawing.Size(50, 50);
             this.RegistrarUnidad.TabIndex = 108;
@@ -1198,6 +1207,82 @@
             this.ListaNombres.TabIndex = 161;
             this.ListaNombres.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListaNombres_MouseDoubleClick);
             // 
+            // ListaNombres2
+            // 
+            this.ListaNombres2.FormattingEnabled = true;
+            this.ListaNombres2.Location = new System.Drawing.Point(15, 397);
+            this.ListaNombres2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ListaNombres2.Name = "ListaNombres2";
+            this.ListaNombres2.Size = new System.Drawing.Size(245, 160);
+            this.ListaNombres2.TabIndex = 179;
+            this.ListaNombres2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListaNombres2_MouseDoubleClick);
+            // 
+            // BuscarNombre2
+            // 
+            this.BuscarNombre2.Location = new System.Drawing.Point(15, 368);
+            this.BuscarNombre2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BuscarNombre2.Name = "BuscarNombre2";
+            this.BuscarNombre2.Size = new System.Drawing.Size(245, 20);
+            this.BuscarNombre2.TabIndex = 178;
+            this.BuscarNombre2.TextChanged += new System.EventHandler(this.BuscarNombre2_TextChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(91, 351);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(95, 13);
+            this.label13.TabIndex = 177;
+            this.label13.Text = "NO ORDENADOS";
+            // 
+            // Solicitud
+            // 
+            this.Solicitud.Location = new System.Drawing.Point(267, 671);
+            this.Solicitud.Name = "Solicitud";
+            this.Solicitud.Size = new System.Drawing.Size(87, 61);
+            this.Solicitud.TabIndex = 180;
+            this.Solicitud.Text = "REGISTRAR SOLOCITUD";
+            this.Solicitud.UseVisualStyleBackColor = true;
+            this.Solicitud.Visible = false;
+            this.Solicitud.Click += new System.EventHandler(this.Solicitud_Click);
+            // 
+            // solicitudes
+            // 
+            this.solicitudes.ActiveLinkColor = System.Drawing.Color.Blue;
+            this.solicitudes.AutoSize = true;
+            this.solicitudes.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.solicitudes.LinkColor = System.Drawing.Color.Blue;
+            this.solicitudes.Location = new System.Drawing.Point(137, 57);
+            this.solicitudes.Name = "solicitudes";
+            this.solicitudes.Size = new System.Drawing.Size(15, 16);
+            this.solicitudes.TabIndex = 125;
+            this.solicitudes.TabStop = true;
+            this.solicitudes.Text = "0";
+            // 
+            // apoyos
+            // 
+            this.apoyos.ActiveLinkColor = System.Drawing.Color.Blue;
+            this.apoyos.AutoSize = true;
+            this.apoyos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apoyos.LinkColor = System.Drawing.Color.Blue;
+            this.apoyos.Location = new System.Drawing.Point(137, 133);
+            this.apoyos.Name = "apoyos";
+            this.apoyos.Size = new System.Drawing.Size(15, 16);
+            this.apoyos.TabIndex = 125;
+            this.apoyos.TabStop = true;
+            this.apoyos.Text = "0";
+            // 
+            // Apoyo
+            // 
+            this.Apoyo.Location = new System.Drawing.Point(376, 671);
+            this.Apoyo.Name = "Apoyo";
+            this.Apoyo.Size = new System.Drawing.Size(87, 61);
+            this.Apoyo.TabIndex = 180;
+            this.Apoyo.Text = "REGISTRAR APOYO";
+            this.Apoyo.UseVisualStyleBackColor = true;
+            this.Apoyo.Visible = false;
+            this.Apoyo.Click += new System.EventHandler(this.Apoyo_Click);
+            // 
             // Pantalla_Registro_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1205,6 +1290,11 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1513, 767);
+            this.Controls.Add(this.Apoyo);
+            this.Controls.Add(this.Solicitud);
+            this.Controls.Add(this.ListaNombres2);
+            this.Controls.Add(this.BuscarNombre2);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.ListaNombres);
             this.Controls.Add(this.BuscarNombre);
             this.Controls.Add(this.label12);
@@ -1354,5 +1444,12 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox BuscarNombre;
         private System.Windows.Forms.ListBox ListaNombres;
+        private System.Windows.Forms.ListBox ListaNombres2;
+        private System.Windows.Forms.TextBox BuscarNombre2;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button Solicitud;
+        private System.Windows.Forms.LinkLabel apoyos;
+        private System.Windows.Forms.LinkLabel solicitudes;
+        private System.Windows.Forms.Button Apoyo;
     }
 }

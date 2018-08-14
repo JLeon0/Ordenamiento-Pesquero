@@ -102,6 +102,9 @@
             this.Actualizar = new System.Windows.Forms.PictureBox();
             this.Registrar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Comercial = new System.Windows.Forms.RadioButton();
+            this.Acuicola = new System.Windows.Forms.RadioButton();
+            this.Deportiva = new System.Windows.Forms.RadioButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposPescaPerm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbarcacionesPerm)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -376,7 +379,7 @@
             this.Tipo,
             this.Caracteristicas});
             this.dgvEquiposPescaPerm.GridColor = System.Drawing.Color.Silver;
-            this.dgvEquiposPescaPerm.Location = new System.Drawing.Point(24, 346);
+            this.dgvEquiposPescaPerm.Location = new System.Drawing.Point(24, 361);
             this.dgvEquiposPescaPerm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvEquiposPescaPerm.Name = "dgvEquiposPescaPerm";
             this.dgvEquiposPescaPerm.RowHeadersVisible = false;
@@ -415,7 +418,7 @@
             this.Marcamotor,
             this.Potencia});
             this.dgvEmbarcacionesPerm.GridColor = System.Drawing.Color.Silver;
-            this.dgvEmbarcacionesPerm.Location = new System.Drawing.Point(24, 486);
+            this.dgvEmbarcacionesPerm.Location = new System.Drawing.Point(24, 501);
             this.dgvEmbarcacionesPerm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvEmbarcacionesPerm.Name = "dgvEmbarcacionesPerm";
             this.dgvEmbarcacionesPerm.RowHeadersVisible = false;
@@ -453,6 +456,9 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.Deportiva);
+            this.groupBox3.Controls.Add(this.Acuicola);
+            this.groupBox3.Controls.Add(this.Comercial);
             this.groupBox3.Controls.Add(this.limpiar);
             this.groupBox3.Controls.Add(this.pictureBox13);
             this.groupBox3.Controls.Add(this.nPer);
@@ -470,11 +476,11 @@
             this.groupBox3.Controls.Add(this.label30);
             this.groupBox3.Controls.Add(this.label29);
             this.groupBox3.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox3.Location = new System.Drawing.Point(14, 106);
+            this.groupBox3.Location = new System.Drawing.Point(14, 100);
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Size = new System.Drawing.Size(688, 125);
+            this.groupBox3.Size = new System.Drawing.Size(688, 146);
             this.groupBox3.TabIndex = 80;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del Permiso";
@@ -650,7 +656,7 @@
             // numericUpDown2
             // 
             this.numericUpDown2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(258, 316);
+            this.numericUpDown2.Location = new System.Drawing.Point(258, 331);
             this.numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(43, 22);
@@ -660,7 +666,7 @@
             // ZonaPescaPerm
             // 
             this.ZonaPescaPerm.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZonaPescaPerm.Location = new System.Drawing.Point(78, 239);
+            this.ZonaPescaPerm.Location = new System.Drawing.Point(78, 254);
             this.ZonaPescaPerm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ZonaPescaPerm.Multiline = true;
             this.ZonaPescaPerm.Name = "ZonaPescaPerm";
@@ -671,7 +677,7 @@
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(21, 237);
+            this.label28.Location = new System.Drawing.Point(21, 252);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(58, 32);
             this.label28.TabIndex = 79;
@@ -681,7 +687,7 @@
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label26.Location = new System.Drawing.Point(21, 319);
+            this.label26.Location = new System.Drawing.Point(21, 334);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(231, 16);
             this.label26.TabIndex = 78;
@@ -690,7 +696,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(256, 461);
+            this.numericUpDown1.Location = new System.Drawing.Point(256, 476);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(45, 22);
@@ -701,7 +707,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(21, 464);
+            this.label18.Location = new System.Drawing.Point(21, 479);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(196, 16);
             this.label18.TabIndex = 76;
@@ -710,7 +716,7 @@
             // SitiosDesemPer
             // 
             this.SitiosDesemPer.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SitiosDesemPer.Location = new System.Drawing.Point(171, 287);
+            this.SitiosDesemPer.Location = new System.Drawing.Point(171, 302);
             this.SitiosDesemPer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SitiosDesemPer.Name = "SitiosDesemPer";
             this.SitiosDesemPer.Size = new System.Drawing.Size(531, 22);
@@ -720,7 +726,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label25.Location = new System.Drawing.Point(21, 290);
+            this.label25.Location = new System.Drawing.Point(21, 305);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(145, 16);
             this.label25.TabIndex = 75;
@@ -751,7 +757,7 @@
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.ForeColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(556, 654);
+            this.label20.Location = new System.Drawing.Point(556, 669);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(43, 14);
             this.label20.TabIndex = 120;
@@ -762,7 +768,7 @@
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label21.ForeColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(464, 654);
+            this.label21.Location = new System.Drawing.Point(464, 669);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(56, 14);
             this.label21.TabIndex = 121;
@@ -773,7 +779,7 @@
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.ForeColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(383, 654);
+            this.label22.Location = new System.Drawing.Point(383, 669);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(51, 14);
             this.label22.TabIndex = 122;
@@ -783,7 +789,7 @@
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(614, 654);
+            this.label23.Location = new System.Drawing.Point(614, 669);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(71, 14);
             this.label23.TabIndex = 123;
@@ -828,7 +834,7 @@
             this.Ver.BackColor = System.Drawing.Color.White;
             this.Ver.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Ver.BackgroundImage")));
             this.Ver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Ver.Location = new System.Drawing.Point(630, 608);
+            this.Ver.Location = new System.Drawing.Point(630, 623);
             this.Ver.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Ver.Name = "Ver";
             this.Ver.Size = new System.Drawing.Size(45, 45);
@@ -841,7 +847,7 @@
             this.Eliminar.BackColor = System.Drawing.Color.White;
             this.Eliminar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Eliminar;
             this.Eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Eliminar.Location = new System.Drawing.Point(552, 608);
+            this.Eliminar.Location = new System.Drawing.Point(552, 623);
             this.Eliminar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Size = new System.Drawing.Size(45, 45);
@@ -854,7 +860,7 @@
             this.Actualizar.BackColor = System.Drawing.Color.White;
             this.Actualizar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
             this.Actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Actualizar.Location = new System.Drawing.Point(471, 608);
+            this.Actualizar.Location = new System.Drawing.Point(471, 623);
             this.Actualizar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Actualizar.Name = "Actualizar";
             this.Actualizar.Size = new System.Drawing.Size(45, 45);
@@ -867,7 +873,7 @@
             this.Registrar.BackColor = System.Drawing.Color.White;
             this.Registrar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.Registrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Registrar.Location = new System.Drawing.Point(386, 608);
+            this.Registrar.Location = new System.Drawing.Point(386, 623);
             this.Registrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Registrar.Name = "Registrar";
             this.Registrar.Size = new System.Drawing.Size(45, 45);
@@ -885,6 +891,38 @@
             this.pictureBox1.Size = new System.Drawing.Size(952, 111);
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
+            // 
+            // Comercial
+            // 
+            this.Comercial.AutoSize = true;
+            this.Comercial.Checked = true;
+            this.Comercial.Location = new System.Drawing.Point(554, 83);
+            this.Comercial.Name = "Comercial";
+            this.Comercial.Size = new System.Drawing.Size(133, 20);
+            this.Comercial.TabIndex = 117;
+            this.Comercial.TabStop = true;
+            this.Comercial.Text = "Pesca Comercial";
+            this.Comercial.UseVisualStyleBackColor = true;
+            // 
+            // Acuicola
+            // 
+            this.Acuicola.AutoSize = true;
+            this.Acuicola.Location = new System.Drawing.Point(554, 101);
+            this.Acuicola.Name = "Acuicola";
+            this.Acuicola.Size = new System.Drawing.Size(102, 20);
+            this.Acuicola.TabIndex = 117;
+            this.Acuicola.Text = "Acuacultura";
+            this.Acuicola.UseVisualStyleBackColor = true;
+            // 
+            // Deportiva
+            // 
+            this.Deportiva.AutoSize = true;
+            this.Deportiva.Location = new System.Drawing.Point(554, 119);
+            this.Deportiva.Name = "Deportiva";
+            this.Deportiva.Size = new System.Drawing.Size(129, 20);
+            this.Deportiva.TabIndex = 117;
+            this.Deportiva.Text = "Pesca Deportiva";
+            this.Deportiva.UseVisualStyleBackColor = true;
             // 
             // Pantalla_Regitro_permiso
             // 
@@ -1043,5 +1081,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Marcamotor;
         private System.Windows.Forms.DataGridViewTextBoxColumn Potencia;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.RadioButton Acuicola;
+        private System.Windows.Forms.RadioButton Comercial;
+        private System.Windows.Forms.RadioButton Deportiva;
     }
 }

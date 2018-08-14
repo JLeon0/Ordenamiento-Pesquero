@@ -140,7 +140,10 @@ namespace OrdenamientoPesquero
                 if (i > 0) { finVig += "/"; }
                 i--;
             }
-            perm = new Permiso(FolioPer.Text, Rnpa, nPer.Text, PesqueriaPer.Text, LugarExpPer.Text, diaExp, finVig, ZonaPescaPerm.Text, SitiosDesemPer.Text);
+            int tipoperm = 1;
+            if (Acuicola.Checked == true) { tipoperm = 0; }
+            else if (Deportiva.Checked == true) { tipoperm = 2; }
+            perm = new Permiso(FolioPer.Text, Rnpa, nPer.Text, PesqueriaPer.Text, LugarExpPer.Text, diaExp, finVig, ZonaPescaPerm.Text, SitiosDesemPer.Text,tipoperm);
             if (registrar)
             { return proc.Registrar_Permiso(perm); }
             else { return proc.Actualizar_Permiso(perm); }
@@ -163,6 +166,10 @@ namespace OrdenamientoPesquero
                     finVigenciaPer.Text = dt.Rows[0]["FINVIGENCIA"].ToString();
                     ZonaPescaPerm.Text = dt.Rows[0]["ZONAPESCA"].ToString();
                     SitiosDesemPer.Text = dt.Rows[0]["SITIOSDESEMBARQUE"].ToString();
+                    string tp = dt.Rows[0]["TIPOPERMISO"].ToString();
+                    int tipoperm = 1;
+                    if (tp != "") { tipoperm = Convert.ToInt32(tp); }
+                    if(tipoperm == 0) { Acuicola.Checked = true; }else if(tipoperm==2){ Deportiva.Checked = true; } else { Comercial.Checked = true; }
                     dt = proc.EquiposxPermiso(per);
                     numericUpDown2.Value = dt.Rows.Count;
                     dgvEquiposPescaPerm.RowCount = dt.Rows.Count;

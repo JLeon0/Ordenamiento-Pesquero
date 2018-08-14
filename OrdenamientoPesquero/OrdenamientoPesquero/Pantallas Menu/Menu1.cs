@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -19,7 +20,8 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 
         private void Solicitudes_Click(object sender, EventArgs e)
         {
-            Pantallas_Solicitudes.Pantalla_UsuariosSolicitantes pantalla = new Pantallas_Solicitudes.Pantalla_UsuariosSolicitantes();
+            //Process.Start("C:\\Windows\\SigPlus\\DemoOCX.exe");
+            Pantalla_Registro_Usuario pantalla = new Pantalla_Registro_Usuario("","");
             pantalla.ShowDialog();
         }
 
