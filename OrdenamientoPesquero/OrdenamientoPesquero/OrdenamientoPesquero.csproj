@@ -170,12 +170,6 @@
     <Compile Include="Pantallas Registros\Vistas.Designer.cs">
       <DependentUpon>Vistas.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pantallas Solicitudes\Pantalla_UsuariosSolicitantes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pantallas Solicitudes\Pantalla_UsuariosSolicitantes.Designer.cs">
-      <DependentUpon>Pantalla_UsuariosSolicitantes.cs</DependentUpon>
-    </Compile>
     <Compile Include="Permisos_lista.cs">
       <DependentUpon>Permisos_lista.xsd</DependentUpon>
     </Compile>
