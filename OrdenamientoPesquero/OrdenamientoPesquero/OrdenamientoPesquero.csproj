@@ -65,10 +65,45 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ObtenerImagen.xsd</DependentUpon>
     </Compile>
+    <Compile Include="OrdPesqueroDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>
+    </Compile>
     <Compile Include="OrdPesqueroDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OrdPesqueroDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdPesqueroDataSet21.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet21.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdPesqueroDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdPesqueroDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdPesqueroDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdPesqueroDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdPesqueroDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet7.xsd</DependentUpon>
     </Compile>
     <Compile Include="ordPesqueroDataSetpescadores1.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -80,6 +115,12 @@
     </Compile>
     <Compile Include="Pantallas Menu\Menu1.Designer.cs">
       <DependentUpon>Menu1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas Menu\MenuReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas Menu\MenuReportes.Designer.cs">
+      <DependentUpon>MenuReportes.cs</DependentUpon>
     </Compile>
     <Compile Include="Pantallas Registros\Pantalla_Certificado_Mat.cs">
       <SubType>Form</SubType>
@@ -129,6 +170,15 @@
     <Compile Include="Pantallas Registros\Vistas.Designer.cs">
       <DependentUpon>Vistas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas Solicitudes\Pantalla_UsuariosSolicitantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas Solicitudes\Pantalla_UsuariosSolicitantes.Designer.cs">
+      <DependentUpon>Pantalla_UsuariosSolicitantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Permisos_lista.cs">
+      <DependentUpon>Permisos_lista.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Permisos_lista.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -148,6 +198,9 @@
     </Compile>
     <EmbeddedResource Include="Pantallas Menu\Menu1.resx">
       <DependentUpon>Menu1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas Menu\MenuReportes.resx">
+      <DependentUpon>MenuReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas Registros\Pantalla_Certificado_Mat.resx">
       <DependentUpon>Pantalla_Certificado_Mat.cs</DependentUpon>
@@ -190,6 +243,8 @@
     <EmbeddedResource Include="Reportes\Permisos.rdlc" />
     <EmbeddedResource Include="Reportes\Pescadores.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteXUnidad.rdlc" />
+    <EmbeddedResource Include="Reportes\xMunicipio.rdlc" />
     <None Include="EmbarcacionesSet.xsc">
       <DependentUpon>EmbarcacionesSet.xsd</DependentUpon>
     </None>
@@ -212,6 +267,17 @@
     <None Include="ObtenerImagen.xss">
       <DependentUpon>ObtenerImagen.xsd</DependentUpon>
     </None>
+    <None Include="OrdPesqueroDataSet11.xsc">
+      <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet11.xss">
+      <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>
+    </None>
     <None Include="OrdPesqueroDataSet2.xsc">
       <DependentUpon>OrdPesqueroDataSet2.xsd</DependentUpon>
     </None>
@@ -222,6 +288,72 @@
     </None>
     <None Include="OrdPesqueroDataSet2.xss">
       <DependentUpon>OrdPesqueroDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet21.xsc">
+      <DependentUpon>OrdPesqueroDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet21.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet21.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet21.xss">
+      <DependentUpon>OrdPesqueroDataSet21.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet3.xsc">
+      <DependentUpon>OrdPesqueroDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet3.xss">
+      <DependentUpon>OrdPesqueroDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet4.xsc">
+      <DependentUpon>OrdPesqueroDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet4.xss">
+      <DependentUpon>OrdPesqueroDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet5.xsc">
+      <DependentUpon>OrdPesqueroDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet5.xss">
+      <DependentUpon>OrdPesqueroDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet6.xsc">
+      <DependentUpon>OrdPesqueroDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet6.xss">
+      <DependentUpon>OrdPesqueroDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet7.xsc">
+      <DependentUpon>OrdPesqueroDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet7.xss">
+      <DependentUpon>OrdPesqueroDataSet7.xsd</DependentUpon>
     </None>
     <None Include="ordPesqueroDataSetpescadores1.xsc">
       <DependentUpon>ordPesqueroDataSetpescadores1.xsd</DependentUpon>

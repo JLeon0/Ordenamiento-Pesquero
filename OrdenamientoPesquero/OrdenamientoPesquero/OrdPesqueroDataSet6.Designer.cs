@@ -20,17 +20,17 @@ namespace OrdenamientoPesquero {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("Permisos_lista")]
+    [global::System.Xml.Serialization.XmlRootAttribute("OrdPesqueroDataSet6")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
-    public partial class Permisos_lista : global::System.Data.DataSet {
+    public partial class OrdPesqueroDataSet6 : global::System.Data.DataSet {
         
-        private vista_permDataTable tablevista_perm;
+        private LosCabosDataTable tableLosCabos;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public Permisos_lista() {
+        public OrdPesqueroDataSet6() {
             this.BeginInit();
             this.InitClass();
             global::System.ComponentModel.CollectionChangeEventHandler schemaChangedHandler = new global::System.ComponentModel.CollectionChangeEventHandler(this.SchemaChanged);
@@ -41,7 +41,7 @@ namespace OrdenamientoPesquero {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected Permisos_lista(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+        protected OrdPesqueroDataSet6(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                 base(info, context, false) {
             if ((this.IsBinarySerialized(info, context) == true)) {
                 this.InitVars(false);
@@ -54,8 +54,8 @@ namespace OrdenamientoPesquero {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["vista_perm"] != null)) {
-                    base.Tables.Add(new vista_permDataTable(ds.Tables["vista_perm"]));
+                if ((ds.Tables["LosCabos"] != null)) {
+                    base.Tables.Add(new LosCabosDataTable(ds.Tables["LosCabos"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace OrdenamientoPesquero {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public vista_permDataTable vista_perm {
+        public LosCabosDataTable LosCabos {
             get {
-                return this.tablevista_perm;
+                return this.tableLosCabos;
             }
         }
         
@@ -127,7 +127,7 @@ namespace OrdenamientoPesquero {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public override global::System.Data.DataSet Clone() {
-            Permisos_lista cln = ((Permisos_lista)(base.Clone()));
+            OrdPesqueroDataSet6 cln = ((OrdPesqueroDataSet6)(base.Clone()));
             cln.InitVars();
             cln.SchemaSerializationMode = this.SchemaSerializationMode;
             return cln;
@@ -152,8 +152,8 @@ namespace OrdenamientoPesquero {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["vista_perm"] != null)) {
-                    base.Tables.Add(new vista_permDataTable(ds.Tables["vista_perm"]));
+                if ((ds.Tables["LosCabos"] != null)) {
+                    base.Tables.Add(new LosCabosDataTable(ds.Tables["LosCabos"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace OrdenamientoPesquero {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablevista_perm = ((vista_permDataTable)(base.Tables["vista_perm"]));
+            this.tableLosCabos = ((LosCabosDataTable)(base.Tables["LosCabos"]));
             if ((initTable == true)) {
-                if ((this.tablevista_perm != null)) {
-                    this.tablevista_perm.InitVars();
+                if ((this.tableLosCabos != null)) {
+                    this.tableLosCabos.InitVars();
                 }
             }
         }
@@ -199,18 +199,18 @@ namespace OrdenamientoPesquero {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitClass() {
-            this.DataSetName = "Permisos_lista";
+            this.DataSetName = "OrdPesqueroDataSet6";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/Permisos_lista.xsd";
+            this.Namespace = "http://tempuri.org/OrdPesqueroDataSet6.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablevista_perm = new vista_permDataTable();
-            base.Tables.Add(this.tablevista_perm);
+            this.tableLosCabos = new LosCabosDataTable();
+            base.Tables.Add(this.tableLosCabos);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializevista_perm() {
+        private bool ShouldSerializeLosCabos() {
             return false;
         }
         
@@ -225,7 +225,7 @@ namespace OrdenamientoPesquero {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedDataSetSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-            Permisos_lista ds = new Permisos_lista();
+            OrdPesqueroDataSet6 ds = new OrdPesqueroDataSet6();
             global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
             global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
             global::System.Xml.Schema.XmlSchemaAny any = new global::System.Xml.Schema.XmlSchemaAny();
@@ -270,35 +270,27 @@ namespace OrdenamientoPesquero {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void vista_permRowChangeEventHandler(object sender, vista_permRowChangeEvent e);
+        public delegate void LosCabosRowChangeEventHandler(object sender, LosCabosRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class vista_permDataTable : global::System.Data.TypedTableBase<vista_permRow> {
+        public partial class LosCabosDataTable : global::System.Data.TypedTableBase<LosCabosRow> {
             
-            private global::System.Data.DataColumn columnNPERMISO;
+            private global::System.Data.DataColumn columnNOMBRE;
             
-            private global::System.Data.DataColumn columnFOLIO;
+            private global::System.Data.DataColumn columnPermisos;
             
-            private global::System.Data.DataColumn columnPESQUERIA;
+            private global::System.Data.DataColumn columnSocios;
             
-            private global::System.Data.DataColumn columnLUGAREXPEDICION;
-            
-            private global::System.Data.DataColumn columnDIAEXPEDICION;
-            
-            private global::System.Data.DataColumn columnFINVIGENCIA;
-            
-            private global::System.Data.DataColumn columnColumn1;
-            
-            private global::System.Data.DataColumn columnEsfuerzos;
+            private global::System.Data.DataColumn columnEmbarcaciones;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vista_permDataTable() {
-                this.TableName = "vista_perm";
+            public LosCabosDataTable() {
+                this.TableName = "LosCabos";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -306,7 +298,7 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal vista_permDataTable(global::System.Data.DataTable table) {
+            internal LosCabosDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -323,72 +315,40 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected vista_permDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected LosCabosDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NPERMISOColumn {
+            public global::System.Data.DataColumn NOMBREColumn {
                 get {
-                    return this.columnNPERMISO;
+                    return this.columnNOMBRE;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FOLIOColumn {
+            public global::System.Data.DataColumn PermisosColumn {
                 get {
-                    return this.columnFOLIO;
+                    return this.columnPermisos;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PESQUERIAColumn {
+            public global::System.Data.DataColumn SociosColumn {
                 get {
-                    return this.columnPESQUERIA;
+                    return this.columnSocios;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn LUGAREXPEDICIONColumn {
+            public global::System.Data.DataColumn EmbarcacionesColumn {
                 get {
-                    return this.columnLUGAREXPEDICION;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DIAEXPEDICIONColumn {
-                get {
-                    return this.columnDIAEXPEDICION;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FINVIGENCIAColumn {
-                get {
-                    return this.columnFINVIGENCIA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn Column1Column {
-                get {
-                    return this.columnColumn1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EsfuerzosColumn {
-                get {
-                    return this.columnEsfuerzos;
+                    return this.columnEmbarcaciones;
                 }
             }
             
@@ -403,60 +363,48 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vista_permRow this[int index] {
+            public LosCabosRow this[int index] {
                 get {
-                    return ((vista_permRow)(this.Rows[index]));
+                    return ((LosCabosRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vista_permRowChangeEventHandler vista_permRowChanging;
+            public event LosCabosRowChangeEventHandler LosCabosRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vista_permRowChangeEventHandler vista_permRowChanged;
+            public event LosCabosRowChangeEventHandler LosCabosRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vista_permRowChangeEventHandler vista_permRowDeleting;
+            public event LosCabosRowChangeEventHandler LosCabosRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event vista_permRowChangeEventHandler vista_permRowDeleted;
+            public event LosCabosRowChangeEventHandler LosCabosRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Addvista_permRow(vista_permRow row) {
+            public void AddLosCabosRow(LosCabosRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vista_permRow Addvista_permRow(string NPERMISO, string FOLIO, string PESQUERIA, string LUGAREXPEDICION, string DIAEXPEDICION, string FINVIGENCIA, string Column1, int Esfuerzos) {
-                vista_permRow rowvista_permRow = ((vista_permRow)(this.NewRow()));
+            public LosCabosRow AddLosCabosRow(string NOMBRE, int Permisos, int Socios, int Embarcaciones) {
+                LosCabosRow rowLosCabosRow = ((LosCabosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        NPERMISO,
-                        FOLIO,
-                        PESQUERIA,
-                        LUGAREXPEDICION,
-                        DIAEXPEDICION,
-                        FINVIGENCIA,
-                        Column1,
-                        Esfuerzos};
-                rowvista_permRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowvista_permRow);
-                return rowvista_permRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vista_permRow FindByNPERMISOFOLIO(string NPERMISO, string FOLIO) {
-                return ((vista_permRow)(this.Rows.Find(new object[] {
-                            NPERMISO,
-                            FOLIO})));
+                        NOMBRE,
+                        Permisos,
+                        Socios,
+                        Embarcaciones};
+                rowLosCabosRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowLosCabosRow);
+                return rowLosCabosRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                vista_permDataTable cln = ((vista_permDataTable)(base.Clone()));
+                LosCabosDataTable cln = ((LosCabosDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -464,81 +412,59 @@ namespace OrdenamientoPesquero {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new vista_permDataTable();
+                return new LosCabosDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnNPERMISO = base.Columns["NPERMISO"];
-                this.columnFOLIO = base.Columns["FOLIO"];
-                this.columnPESQUERIA = base.Columns["PESQUERIA"];
-                this.columnLUGAREXPEDICION = base.Columns["LUGAREXPEDICION"];
-                this.columnDIAEXPEDICION = base.Columns["DIAEXPEDICION"];
-                this.columnFINVIGENCIA = base.Columns["FINVIGENCIA"];
-                this.columnColumn1 = base.Columns["Column1"];
-                this.columnEsfuerzos = base.Columns["Esfuerzos"];
+                this.columnNOMBRE = base.Columns["NOMBRE"];
+                this.columnPermisos = base.Columns["Permisos"];
+                this.columnSocios = base.Columns["Socios"];
+                this.columnEmbarcaciones = base.Columns["Embarcaciones"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnNPERMISO = new global::System.Data.DataColumn("NPERMISO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNPERMISO);
-                this.columnFOLIO = new global::System.Data.DataColumn("FOLIO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFOLIO);
-                this.columnPESQUERIA = new global::System.Data.DataColumn("PESQUERIA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPESQUERIA);
-                this.columnLUGAREXPEDICION = new global::System.Data.DataColumn("LUGAREXPEDICION", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLUGAREXPEDICION);
-                this.columnDIAEXPEDICION = new global::System.Data.DataColumn("DIAEXPEDICION", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDIAEXPEDICION);
-                this.columnFINVIGENCIA = new global::System.Data.DataColumn("FINVIGENCIA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFINVIGENCIA);
-                this.columnColumn1 = new global::System.Data.DataColumn("Column1", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnColumn1);
-                this.columnEsfuerzos = new global::System.Data.DataColumn("Esfuerzos", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEsfuerzos);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnNPERMISO,
-                                this.columnFOLIO}, true));
-                this.columnNPERMISO.AllowDBNull = false;
-                this.columnNPERMISO.MaxLength = 20;
-                this.columnFOLIO.AllowDBNull = false;
-                this.columnFOLIO.MaxLength = 20;
-                this.columnPESQUERIA.MaxLength = 50;
-                this.columnLUGAREXPEDICION.MaxLength = 50;
-                this.columnDIAEXPEDICION.MaxLength = 30;
-                this.columnFINVIGENCIA.MaxLength = 30;
-                this.columnColumn1.ReadOnly = true;
-                this.columnColumn1.MaxLength = 7;
-                this.columnEsfuerzos.ReadOnly = true;
+                this.columnNOMBRE = new global::System.Data.DataColumn("NOMBRE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNOMBRE);
+                this.columnPermisos = new global::System.Data.DataColumn("Permisos", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPermisos);
+                this.columnSocios = new global::System.Data.DataColumn("Socios", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSocios);
+                this.columnEmbarcaciones = new global::System.Data.DataColumn("Embarcaciones", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEmbarcaciones);
+                this.columnNOMBRE.MaxLength = 100;
+                this.columnPermisos.ReadOnly = true;
+                this.columnSocios.ReadOnly = true;
+                this.columnEmbarcaciones.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vista_permRow Newvista_permRow() {
-                return ((vista_permRow)(this.NewRow()));
+            public LosCabosRow NewLosCabosRow() {
+                return ((LosCabosRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new vista_permRow(builder);
+                return new LosCabosRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(vista_permRow);
+                return typeof(LosCabosRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.vista_permRowChanged != null)) {
-                    this.vista_permRowChanged(this, new vista_permRowChangeEvent(((vista_permRow)(e.Row)), e.Action));
+                if ((this.LosCabosRowChanged != null)) {
+                    this.LosCabosRowChanged(this, new LosCabosRowChangeEvent(((LosCabosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -546,8 +472,8 @@ namespace OrdenamientoPesquero {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.vista_permRowChanging != null)) {
-                    this.vista_permRowChanging(this, new vista_permRowChangeEvent(((vista_permRow)(e.Row)), e.Action));
+                if ((this.LosCabosRowChanging != null)) {
+                    this.LosCabosRowChanging(this, new LosCabosRowChangeEvent(((LosCabosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -555,8 +481,8 @@ namespace OrdenamientoPesquero {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.vista_permRowDeleted != null)) {
-                    this.vista_permRowDeleted(this, new vista_permRowChangeEvent(((vista_permRow)(e.Row)), e.Action));
+                if ((this.LosCabosRowDeleted != null)) {
+                    this.LosCabosRowDeleted(this, new LosCabosRowChangeEvent(((LosCabosRow)(e.Row)), e.Action));
                 }
             }
             
@@ -564,14 +490,14 @@ namespace OrdenamientoPesquero {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.vista_permRowDeleting != null)) {
-                    this.vista_permRowDeleting(this, new vista_permRowChangeEvent(((vista_permRow)(e.Row)), e.Action));
+                if ((this.LosCabosRowDeleting != null)) {
+                    this.LosCabosRowDeleting(this, new LosCabosRowChangeEvent(((LosCabosRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void Removevista_permRow(vista_permRow row) {
+            public void RemoveLosCabosRow(LosCabosRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -580,7 +506,7 @@ namespace OrdenamientoPesquero {
             public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
                 global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
                 global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Permisos_lista ds = new Permisos_lista();
+                OrdPesqueroDataSet6 ds = new OrdPesqueroDataSet6();
                 global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
                 any1.Namespace = "http://www.w3.org/2001/XMLSchema";
                 any1.MinOccurs = new decimal(0);
@@ -598,7 +524,7 @@ namespace OrdenamientoPesquero {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "vista_permDataTable";
+                attribute2.FixedValue = "LosCabosDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -642,205 +568,127 @@ namespace OrdenamientoPesquero {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class vista_permRow : global::System.Data.DataRow {
+        public partial class LosCabosRow : global::System.Data.DataRow {
             
-            private vista_permDataTable tablevista_perm;
+            private LosCabosDataTable tableLosCabos;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal vista_permRow(global::System.Data.DataRowBuilder rb) : 
+            internal LosCabosRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablevista_perm = ((vista_permDataTable)(this.Table));
+                this.tableLosCabos = ((LosCabosDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NPERMISO {
-                get {
-                    return ((string)(this[this.tablevista_perm.NPERMISOColumn]));
-                }
-                set {
-                    this[this.tablevista_perm.NPERMISOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string FOLIO {
-                get {
-                    return ((string)(this[this.tablevista_perm.FOLIOColumn]));
-                }
-                set {
-                    this[this.tablevista_perm.FOLIOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string PESQUERIA {
+            public string NOMBRE {
                 get {
                     try {
-                        return ((string)(this[this.tablevista_perm.PESQUERIAColumn]));
+                        return ((string)(this[this.tableLosCabos.NOMBREColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PESQUERIA\' de la tabla \'vista_perm\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'NOMBRE\' de la tabla \'LosCabos\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablevista_perm.PESQUERIAColumn] = value;
+                    this[this.tableLosCabos.NOMBREColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string LUGAREXPEDICION {
+            public int Permisos {
                 get {
                     try {
-                        return ((string)(this[this.tablevista_perm.LUGAREXPEDICIONColumn]));
+                        return ((int)(this[this.tableLosCabos.PermisosColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'LUGAREXPEDICION\' de la tabla \'vista_perm\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Permisos\' de la tabla \'LosCabos\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablevista_perm.LUGAREXPEDICIONColumn] = value;
+                    this[this.tableLosCabos.PermisosColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string DIAEXPEDICION {
+            public int Socios {
                 get {
                     try {
-                        return ((string)(this[this.tablevista_perm.DIAEXPEDICIONColumn]));
+                        return ((int)(this[this.tableLosCabos.SociosColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DIAEXPEDICION\' de la tabla \'vista_perm\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Socios\' de la tabla \'LosCabos\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablevista_perm.DIAEXPEDICIONColumn] = value;
+                    this[this.tableLosCabos.SociosColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string FINVIGENCIA {
+            public int Embarcaciones {
                 get {
                     try {
-                        return ((string)(this[this.tablevista_perm.FINVIGENCIAColumn]));
+                        return ((int)(this[this.tableLosCabos.EmbarcacionesColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FINVIGENCIA\' de la tabla \'vista_perm\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Embarcaciones\' de la tabla \'LosCabos\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablevista_perm.FINVIGENCIAColumn] = value;
+                    this[this.tableLosCabos.EmbarcacionesColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string Column1 {
-                get {
-                    try {
-                        return ((string)(this[this.tablevista_perm.Column1Column]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Column1\' de la tabla \'vista_perm\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevista_perm.Column1Column] = value;
-                }
+            public bool IsNOMBRENull() {
+                return this.IsNull(this.tableLosCabos.NOMBREColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Esfuerzos {
-                get {
-                    try {
-                        return ((int)(this[this.tablevista_perm.EsfuerzosColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Esfuerzos\' de la tabla \'vista_perm\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablevista_perm.EsfuerzosColumn] = value;
-                }
+            public void SetNOMBRENull() {
+                this[this.tableLosCabos.NOMBREColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPESQUERIANull() {
-                return this.IsNull(this.tablevista_perm.PESQUERIAColumn);
+            public bool IsPermisosNull() {
+                return this.IsNull(this.tableLosCabos.PermisosColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPESQUERIANull() {
-                this[this.tablevista_perm.PESQUERIAColumn] = global::System.Convert.DBNull;
+            public void SetPermisosNull() {
+                this[this.tableLosCabos.PermisosColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsLUGAREXPEDICIONNull() {
-                return this.IsNull(this.tablevista_perm.LUGAREXPEDICIONColumn);
+            public bool IsSociosNull() {
+                return this.IsNull(this.tableLosCabos.SociosColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetLUGAREXPEDICIONNull() {
-                this[this.tablevista_perm.LUGAREXPEDICIONColumn] = global::System.Convert.DBNull;
+            public void SetSociosNull() {
+                this[this.tableLosCabos.SociosColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDIAEXPEDICIONNull() {
-                return this.IsNull(this.tablevista_perm.DIAEXPEDICIONColumn);
+            public bool IsEmbarcacionesNull() {
+                return this.IsNull(this.tableLosCabos.EmbarcacionesColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDIAEXPEDICIONNull() {
-                this[this.tablevista_perm.DIAEXPEDICIONColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsFINVIGENCIANull() {
-                return this.IsNull(this.tablevista_perm.FINVIGENCIAColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetFINVIGENCIANull() {
-                this[this.tablevista_perm.FINVIGENCIAColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsColumn1Null() {
-                return this.IsNull(this.tablevista_perm.Column1Column);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetColumn1Null() {
-                this[this.tablevista_perm.Column1Column] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEsfuerzosNull() {
-                return this.IsNull(this.tablevista_perm.EsfuerzosColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEsfuerzosNull() {
-                this[this.tablevista_perm.EsfuerzosColumn] = global::System.Convert.DBNull;
+            public void SetEmbarcacionesNull() {
+                this[this.tableLosCabos.EmbarcacionesColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -848,22 +696,22 @@ namespace OrdenamientoPesquero {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class vista_permRowChangeEvent : global::System.EventArgs {
+        public class LosCabosRowChangeEvent : global::System.EventArgs {
             
-            private vista_permRow eventRow;
+            private LosCabosRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vista_permRowChangeEvent(vista_permRow row, global::System.Data.DataRowAction action) {
+            public LosCabosRowChangeEvent(LosCabosRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public vista_permRow Row {
+            public LosCabosRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -879,7 +727,7 @@ namespace OrdenamientoPesquero {
         }
     }
 }
-namespace OrdenamientoPesquero.Permisos_listaTableAdapters {
+namespace OrdenamientoPesquero.OrdPesqueroDataSet6TableAdapters {
     
     
     /// <summary>
@@ -891,7 +739,7 @@ namespace OrdenamientoPesquero.Permisos_listaTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class vista_permTableAdapter : global::System.ComponentModel.Component {
+    public partial class LosCabosTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
         
@@ -905,7 +753,7 @@ namespace OrdenamientoPesquero.Permisos_listaTableAdapters {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public vista_permTableAdapter() {
+        public LosCabosTableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -1002,15 +850,11 @@ namespace OrdenamientoPesquero.Permisos_listaTableAdapters {
             this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "vista_perm";
-            tableMapping.ColumnMappings.Add("NPERMISO", "NPERMISO");
-            tableMapping.ColumnMappings.Add("FOLIO", "FOLIO");
-            tableMapping.ColumnMappings.Add("PESQUERIA", "PESQUERIA");
-            tableMapping.ColumnMappings.Add("LUGAREXPEDICION", "LUGAREXPEDICION");
-            tableMapping.ColumnMappings.Add("DIAEXPEDICION", "DIAEXPEDICION");
-            tableMapping.ColumnMappings.Add("FINVIGENCIA", "FINVIGENCIA");
-            tableMapping.ColumnMappings.Add("Column1", "Column1");
-            tableMapping.ColumnMappings.Add("Esfuerzos", "Esfuerzos");
+            tableMapping.DataSetTable = "LosCabos";
+            tableMapping.ColumnMappings.Add("NOMBRE", "NOMBRE");
+            tableMapping.ColumnMappings.Add("Permisos", "Permisos");
+            tableMapping.ColumnMappings.Add("Socios", "Socios");
+            tableMapping.ColumnMappings.Add("Embarcaciones", "Embarcaciones");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -1027,24 +871,17 @@ namespace OrdenamientoPesquero.Permisos_listaTableAdapters {
             this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.vista_perm";
+            this._commandCollection[0].CommandText = "dbo.LosCabos";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rnpa", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Permisos_lista.vista_permDataTable dataTable, string rnpa) {
+        public virtual int Fill(OrdPesqueroDataSet6.LosCabosDataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((rnpa == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(rnpa));
-            }
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
             }
@@ -1056,15 +893,9 @@ namespace OrdenamientoPesquero.Permisos_listaTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Permisos_lista.vista_permDataTable GetData(string rnpa) {
+        public virtual OrdPesqueroDataSet6.LosCabosDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((rnpa == null)) {
-                this.Adapter.SelectCommand.Parameters[1].Value = global::System.DBNull.Value;
-            }
-            else {
-                this.Adapter.SelectCommand.Parameters[1].Value = ((string)(rnpa));
-            }
-            Permisos_lista.vista_permDataTable dataTable = new Permisos_lista.vista_permDataTable();
+            OrdPesqueroDataSet6.LosCabosDataTable dataTable = new OrdPesqueroDataSet6.LosCabosDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -1138,7 +969,7 @@ namespace OrdenamientoPesquero.Permisos_listaTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateUpdatedRows(Permisos_lista dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateUpdatedRows(OrdPesqueroDataSet6 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1148,7 +979,7 @@ namespace OrdenamientoPesquero.Permisos_listaTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateInsertedRows(Permisos_lista dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
+        private int UpdateInsertedRows(OrdPesqueroDataSet6 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
             int result = 0;
             return result;
         }
@@ -1158,7 +989,7 @@ namespace OrdenamientoPesquero.Permisos_listaTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private int UpdateDeletedRows(Permisos_lista dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
+        private int UpdateDeletedRows(OrdPesqueroDataSet6 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
             return result;
         }
@@ -1192,7 +1023,7 @@ namespace OrdenamientoPesquero.Permisos_listaTableAdapters {
         ///</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public virtual int UpdateAll(Permisos_lista dataSet) {
+        public virtual int UpdateAll(OrdPesqueroDataSet6 dataSet) {
             if ((dataSet == null)) {
                 throw new global::System.ArgumentNullException("dataSet");
             }

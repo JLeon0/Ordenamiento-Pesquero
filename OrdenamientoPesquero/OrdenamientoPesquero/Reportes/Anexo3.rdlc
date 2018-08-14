@@ -2030,11 +2030,69 @@
                   <PaddingBottom>2pt</PaddingBottom>
                 </Style>
               </Textbox>
+              <Textbox Name="Textbox2">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>En cumplimiento de la Ley Federal de Transparencia y Acceso a la Información Pública Gubernamental, los datos que se solicitan, serán utilizados con fines estadísticos y para poder establecer contacto en relación a su petición. Los datos pueden ser incluidos dentro de los informes estadísticos que se elaboren para el seguimiento de avances institucionales del Gobierno Federal.</Value>
+                        <Style>
+                          <FontStyle>Normal</FontStyle>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontWeight>Normal</FontWeight>
+                          <TextDecoration>None</TextDecoration>
+                          <Color>#000000</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                    </Style>
+                  </Paragraph>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Los datos personales podrán ser utilizados atendiendo estrictamente lo señalado en el artículo 22 de Ley Federal de Transparencia y Acceso a la Información Pública Gubernamental. La Comisión Nacional de Acuacultura y Pesca puede realizar cambios y actualizaciones a la presente Declaración de Privacidad, garantizando siempre proteger sus datos personales.</Value>
+                        <Style>
+                          <FontStyle>Normal</FontStyle>
+                          <FontFamily>Calibri</FontFamily>
+                          <FontWeight>Normal</FontWeight>
+                          <TextDecoration>None</TextDecoration>
+                          <Color>#000000</Color>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <LeftIndent>0cm</LeftIndent>
+                    <RightIndent>0cm</RightIndent>
+                    <Style>
+                      <TextAlign>Center</TextAlign>
+                      <LineHeight>12pt</LineHeight>
+                    </Style>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox2</rd:DefaultName>
+                <Top>15.3483cm</Top>
+                <Left>1.00646cm</Left>
+                <Height>3.69563cm</Height>
+                <Width>14.98833cm</Width>
+                <ZIndex>58</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>1.26436cm</Top>
             <Left>4.13925cm</Left>
-            <Height>14.89406cm</Height>
+            <Height>19.60364cm</Height>
             <Width>16.85334cm</Width>
             <Style>
               <Border>
@@ -2043,10 +2101,10 @@
             </Style>
           </Rectangle>
         </ReportItems>
-        <Height>8.16829in</Height>
+        <Height>11in</Height>
         <Style />
       </Body>
-      <Width>11.18782in</Width>
+      <Width>8.5in</Width>
       <Page>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>

@@ -764,5 +764,11 @@ namespace OrdenamientoPesquero
         {
 
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Pantallas_Menu.MenuReportes mr = new Pantallas_Menu.MenuReportes(cbRNPA.Text);
+            mr.Show(this);
+        }
     }
 }

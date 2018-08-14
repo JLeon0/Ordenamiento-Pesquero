@@ -119,13 +119,14 @@
             this.servidorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
@@ -286,7 +287,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(-121, 46);
+            this.label3.Location = new System.Drawing.Point(-185, 46);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
@@ -1130,10 +1131,9 @@
             this.caToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1387, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1353, 24);
             this.menuStrip1.TabIndex = 115;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // archivoToolStripMenuItem
             // 
@@ -1147,14 +1147,14 @@
             // generarToolStripMenuItem
             // 
             this.generarToolStripMenuItem.Name = "generarToolStripMenuItem";
-            this.generarToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.generarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.generarToolStripMenuItem.Text = "Generar";
             this.generarToolStripMenuItem.Click += new System.EventHandler(this.generarToolStripMenuItem_Click);
             // 
             // cargarToolStripMenuItem
             // 
             this.cargarToolStripMenuItem.Name = "cargarToolStripMenuItem";
-            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cargarToolStripMenuItem.Text = "Cargar";
             this.cargarToolStripMenuItem.Click += new System.EventHandler(this.cargarToolStripMenuItem_Click);
             // 
@@ -1185,6 +1185,36 @@
             this.cambiosToolStripMenuItem.Text = "Cambios";
             this.cambiosToolStripMenuItem.Click += new System.EventHandler(this.cambiosToolStripMenuItem_Click);
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // button4
+            // 
+            this.button4.BackColor = System.Drawing.Color.Silver;
+            this.button4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.ForeColor = System.Drawing.Color.Black;
+            this.button4.Location = new System.Drawing.Point(195, 505);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(137, 45);
+            this.button4.TabIndex = 155;
+            this.button4.Text = "LISTA PESCADORES";
+            this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.BackColor = System.Drawing.Color.Silver;
+            this.button5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.Color.Black;
+            this.button5.Location = new System.Drawing.Point(347, 505);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(137, 45);
+            this.button5.TabIndex = 156;
+            this.button5.Text = "REPORTES";
+            this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
@@ -1209,30 +1239,14 @@
             this.pictureBox5.TabIndex = 153;
             this.pictureBox5.TabStop = false;
             // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Silver;
-            this.button4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(195, 505);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(137, 45);
-            this.button4.TabIndex = 155;
-            this.button4.Text = "LISTA PESCADORES";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
             // Pantalla_Registro_UnidadEconomica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1404, 605);
+            this.ClientSize = new System.Drawing.Size(1370, 605);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox5);
@@ -1365,5 +1379,6 @@
         private System.Windows.Forms.Button BuscarRNPA;
         private System.Windows.Forms.Button BuscarNombreOrg;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
