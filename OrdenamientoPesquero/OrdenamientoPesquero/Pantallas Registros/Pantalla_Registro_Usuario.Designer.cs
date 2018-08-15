@@ -111,6 +111,8 @@
             this.label24 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.apoyos = new System.Windows.Forms.LinkLabel();
+            this.solicitudes = new System.Windows.Forms.LinkLabel();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -128,8 +130,6 @@
             this.BuscarNombre2 = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.Solicitud = new System.Windows.Forms.Button();
-            this.solicitudes = new System.Windows.Forms.LinkLabel();
-            this.apoyos = new System.Windows.Forms.LinkLabel();
             this.Apoyo = new System.Windows.Forms.Button();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CargarImagen)).BeginInit();
@@ -1079,6 +1079,32 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INFORMACIÓN";
             // 
+            // apoyos
+            // 
+            this.apoyos.ActiveLinkColor = System.Drawing.Color.Blue;
+            this.apoyos.AutoSize = true;
+            this.apoyos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apoyos.LinkColor = System.Drawing.Color.Blue;
+            this.apoyos.Location = new System.Drawing.Point(137, 133);
+            this.apoyos.Name = "apoyos";
+            this.apoyos.Size = new System.Drawing.Size(15, 16);
+            this.apoyos.TabIndex = 125;
+            this.apoyos.TabStop = true;
+            this.apoyos.Text = "0";
+            // 
+            // solicitudes
+            // 
+            this.solicitudes.ActiveLinkColor = System.Drawing.Color.Blue;
+            this.solicitudes.AutoSize = true;
+            this.solicitudes.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.solicitudes.LinkColor = System.Drawing.Color.Blue;
+            this.solicitudes.Location = new System.Drawing.Point(137, 57);
+            this.solicitudes.Name = "solicitudes";
+            this.solicitudes.Size = new System.Drawing.Size(15, 16);
+            this.solicitudes.TabIndex = 125;
+            this.solicitudes.TabStop = true;
+            this.solicitudes.Text = "0";
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -1245,32 +1271,6 @@
             this.Solicitud.UseVisualStyleBackColor = true;
             this.Solicitud.Visible = false;
             this.Solicitud.Click += new System.EventHandler(this.Solicitud_Click);
-            // 
-            // solicitudes
-            // 
-            this.solicitudes.ActiveLinkColor = System.Drawing.Color.Blue;
-            this.solicitudes.AutoSize = true;
-            this.solicitudes.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.solicitudes.LinkColor = System.Drawing.Color.Blue;
-            this.solicitudes.Location = new System.Drawing.Point(137, 57);
-            this.solicitudes.Name = "solicitudes";
-            this.solicitudes.Size = new System.Drawing.Size(15, 16);
-            this.solicitudes.TabIndex = 125;
-            this.solicitudes.TabStop = true;
-            this.solicitudes.Text = "0";
-            // 
-            // apoyos
-            // 
-            this.apoyos.ActiveLinkColor = System.Drawing.Color.Blue;
-            this.apoyos.AutoSize = true;
-            this.apoyos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.apoyos.LinkColor = System.Drawing.Color.Blue;
-            this.apoyos.Location = new System.Drawing.Point(137, 133);
-            this.apoyos.Name = "apoyos";
-            this.apoyos.Size = new System.Drawing.Size(15, 16);
-            this.apoyos.TabIndex = 125;
-            this.apoyos.TabStop = true;
-            this.apoyos.Text = "0";
             // 
             // Apoyo
             // 
