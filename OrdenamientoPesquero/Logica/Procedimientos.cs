@@ -115,6 +115,11 @@ namespace Logica
             string[] Parametros = { "@numPermiso" };
             return c.getDatosTabla("EquiposxPermiso", Parametros, nopermiso);
         }
+        public DataTable p()
+        {
+            string[] Parametros = {};
+            return c.getDatosTabla("p", Parametros);
+        }
         #endregion
 
         #region Obtener

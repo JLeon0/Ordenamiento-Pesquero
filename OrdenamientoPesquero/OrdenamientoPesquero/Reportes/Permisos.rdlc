@@ -6,25 +6,25 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.22355cm</Width>
+              <Width>2.42583cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.22355cm</Width>
+              <Width>2.42583cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.70228cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.76061cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.70228cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.04861cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.14199cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -160,7 +160,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>dias</Value>
+                              <Value>FIN VIGENCIA</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -190,7 +190,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>meses</Value>
+                              <Value>ESTATUS</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -220,7 +220,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>años</Value>
+                              <Value>Esfuerzos</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -368,21 +368,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="dias">
+                    <Textbox Name="FINVIGENCIA">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!dias.Value</Value>
+                              <Value>=Fields!FINVIGENCIA.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>dias</rd:DefaultName>
+                      <rd:DefaultName>FINVIGENCIA</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -398,21 +398,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="meses">
+                    <Textbox Name="Column1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!meses.Value</Value>
+                              <Value>=Fields!Column1.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>meses</rd:DefaultName>
+                      <rd:DefaultName>Column1</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -428,21 +428,21 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="años">
+                    <Textbox Name="Esfuerzos">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!años.Value</Value>
+                              <Value>=Fields!Esfuerzos.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>años</rd:DefaultName>
+                      <rd:DefaultName>Esfuerzos</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -482,10 +482,9 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>1.58433cm</Top>
-        <Left>2.87073cm</Left>
+        <Top>1.31975cm</Top>
         <Height>1.78208cm</Height>
-        <Width>16.9471cm</Width>
+        <Width>18.20743cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -493,13 +492,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>2.76042in</Height>
+    <Height>25cm</Height>
     <Style />
   </Body>
-  <Width>9.58979in</Width>
+  <Width>18.20743cm</Width>
   <Page>
     <PageHeader>
-      <Height>2.54cm</Height>
+      <Height>2.30715cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -507,9 +506,9 @@
           <Source>Embedded</Source>
           <Value>sepadaescudologosiglas_450x851</Value>
           <Sizing>Fit</Sizing>
-          <Top>0.34802cm</Top>
-          <Height>1.84396cm</Height>
-          <Width>19.5691cm</Width>
+          <Top>0.41446cm</Top>
+          <Height>1cm</Height>
+          <Width>18.20743cm</Width>
           <Style>
             <Border>
               <Style>None</Style>
@@ -553,10 +552,10 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox13</rd:DefaultName>
-          <Top>0.66552cm</Top>
-          <Left>1.95698cm</Left>
-          <Height>1.52646cm</Height>
-          <Width>9.525cm</Width>
+          <Top>0.41446cm</Top>
+          <Left>2.07492cm</Left>
+          <Height>1.50052cm</Height>
+          <Width>7.68889cm</Width>
           <ZIndex>1</ZIndex>
           <Style>
             <Border>
@@ -575,8 +574,8 @@
         </Border>
       </Style>
     </PageHeader>
-    <PageHeight>29.7cm</PageHeight>
-    <PageWidth>21cm</PageWidth>
+    <PageHeight>27.94cm</PageHeight>
+    <PageWidth>21.59cm</PageWidth>
     <LeftMargin>2cm</LeftMargin>
     <RightMargin>2cm</RightMargin>
     <TopMargin>2cm</TopMargin>
@@ -603,7 +602,7 @@
       <Fields>
         <Field Name="NPERMISO">
           <DataField>NPERMISO</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="FOLIO">
           <DataField>FOLIO</DataField>
@@ -617,22 +616,26 @@
           <DataField>LUGAREXPEDICION</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="dias">
-          <DataField>dias</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
+        <Field Name="DIAEXPEDICION">
+          <DataField>DIAEXPEDICION</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="meses">
-          <DataField>meses</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
+        <Field Name="FINVIGENCIA">
+          <DataField>FINVIGENCIA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="años">
-          <DataField>años</DataField>
-          <rd:TypeName>System.Double</rd:TypeName>
+        <Field Name="Column1">
+          <DataField>Column1</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Esfuerzos">
+          <DataField>Esfuerzos</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
         </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Permisos_lista</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Source\Repos\Ordenamiento-Pesquero\OrdenamientoPesquero\OrdenamientoPesquero\Permisos_lista.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Desktop\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Permisos_lista.xsd</rd:SchemaPath>
         <rd:TableName>vista_perm</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>

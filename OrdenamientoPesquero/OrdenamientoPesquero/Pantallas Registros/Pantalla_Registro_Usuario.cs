@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Logica;
 using OrdenamientoPesquero.Pantallas_Registros;
 using System.IO;
-using FlexCodeSDK;
+//using FlexCodeSDK;
 
 namespace OrdenamientoPesquero
 {
@@ -26,7 +26,7 @@ namespace OrdenamientoPesquero
         string RNPA = "", NombreUnidad = "";
         string[] Municipios;
         byte[] imagenBuffer;
-        FlexCodeSDK.FinFPReg reg;
+        //FlexCodeSDK.FinFPReg reg;
         string template = "";
 
         public Pantalla_Registro_Usuario(string rnpa, string nombre)
@@ -377,16 +377,16 @@ namespace OrdenamientoPesquero
         private void CargarFinger()
         {
             //Inicializar FlexCode SDK
-            reg = new FlexCodeSDK.FinFPReg();
-            reg.FPSamplesNeeded += Reg_FPSamplesNeeded;
-            reg.FPRegistrationTemplate += Reg_FPRegistrationTemplate;
-            reg.FPRegistrationImage += Reg_FPRegistrationImage;
-            reg.FPRegistrationStatus += Reg_FPRegistrationStatus;
+            //reg = new FlexCodeSDK.FinFPReg();
+            //reg.FPSamplesNeeded += Reg_FPSamplesNeeded;
+            //reg.FPRegistrationTemplate += Reg_FPRegistrationTemplate;
+            //reg.FPRegistrationImage += Reg_FPRegistrationImage;
+            //reg.FPRegistrationStatus += Reg_FPRegistrationStatus;
         }
-        private void Reg_FPRegistrationStatus(RegistrationStatus Status)
-        {
+        //private void Reg_FPRegistrationStatus(RegistrationStatus Status)
+        //{
 
-        }
+        //}
 
         private void Reg_FPRegistrationImage()
         {

@@ -42,6 +42,7 @@ namespace OrdenamientoPesquero
             {
                 Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
             }
+            todosconguion();
         }
         private void dvgCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -147,6 +148,43 @@ namespace OrdenamientoPesquero
             if (registrar)
             { return proc.Registrar_Permiso(perm); }
             else { return proc.Actualizar_Permiso(perm); }
+        }
+        public void todosconguion()
+        {
+            dt = proc.p();
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                nPer.Text = dt.Rows[i]["NPERMISO"].ToString();
+                FolioPer.Text = dt.Rows[i]["FOLIO"].ToString();
+                PesqueriaPer.Text = dt.Rows[i]["PESQUERIA"].ToString();
+                LugarExpPer.Text = dt.Rows[i]["LUGAREXPEDICION"].ToString();
+                diaExpPer.Text = dt.Rows[i]["DIAEXPEDICION"].ToString();
+                finVigenciaPer.Text = dt.Rows[i]["FINVIGENCIA"].ToString();
+                ZonaPescaPerm.Text = dt.Rows[i]["ZONAPESCA"].ToString();
+                SitiosDesemPer.Text = dt.Rows[i]["SITIOSDESEMBARQUE"].ToString();
+                string[] Hoy = diaExpPer.Value.ToShortDateString().Split('/');
+                string diaExp = "";
+                int C = 2;
+                while (C >= 0)
+                {
+                    diaExp += Hoy[C];
+                    if (C > 0) { diaExp += "/"; }
+                    C--;
+                }
+                string[] Hasta = finVigenciaPer.Value.ToShortDateString().Split('/');
+                string finVig = "";
+                C = 2;
+                while (C >= 0)
+                {
+                    finVig += Hasta[C];
+                    if (C > 0) { finVig += "/"; }
+                    C--;
+                }
+
+                perm = new Permiso(FolioPer.Text, dt.Rows[i]["RNPA"].ToString(), nPer.Text, PesqueriaPer.Text, LugarExpPer.Text, diaExp, finVig, ZonaPescaPerm.Text, SitiosDesemPer.Text, 0);
+                
+                proc.Actualizar_Permiso(perm);
+            }
         }
         private void pictureBox13_Click_1(object sender, EventArgs e)
         {
