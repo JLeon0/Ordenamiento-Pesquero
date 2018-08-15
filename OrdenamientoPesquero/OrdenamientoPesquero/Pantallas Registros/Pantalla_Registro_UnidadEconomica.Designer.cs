@@ -51,8 +51,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.gbOrgPes = new System.Windows.Forms.GroupBox();
-            this.BuscarRNPA = new System.Windows.Forms.Button();
-            this.BuscarNombreOrg = new System.Windows.Forms.Button();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.cbRNPA = new System.Windows.Forms.TextBox();
             this.ModFed = new System.Windows.Forms.Button();
             this.RegFed = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,7 +62,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.txtMunicipio = new System.Windows.Forms.ComboBox();
             this.NomFed = new System.Windows.Forms.ComboBox();
-            this.txtNombre = new System.Windows.Forms.ComboBox();
             this.EliminarUnidad = new System.Windows.Forms.PictureBox();
             this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
             this.RegistrarUnidad = new System.Windows.Forms.PictureBox();
@@ -73,7 +72,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.mtbTelefono = new System.Windows.Forms.MaskedTextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.cbRNPA = new System.Windows.Forms.ComboBox();
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.TextBox();
@@ -127,6 +125,12 @@
             this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.ListaNombres = new System.Windows.Forms.ListBox();
+            this.BuscarN = new System.Windows.Forms.TextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.ListaRNPA = new System.Windows.Forms.ListBox();
+            this.BuscarR = new System.Windows.Forms.TextBox();
+            this.label26 = new System.Windows.Forms.Label();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
@@ -287,7 +291,7 @@
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(-185, 46);
+            this.label3.Location = new System.Drawing.Point(523, 52);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
@@ -308,8 +312,8 @@
             // gbOrgPes
             // 
             this.gbOrgPes.BackColor = System.Drawing.Color.Transparent;
-            this.gbOrgPes.Controls.Add(this.BuscarRNPA);
-            this.gbOrgPes.Controls.Add(this.BuscarNombreOrg);
+            this.gbOrgPes.Controls.Add(this.txtNombre);
+            this.gbOrgPes.Controls.Add(this.cbRNPA);
             this.gbOrgPes.Controls.Add(this.ModFed);
             this.gbOrgPes.Controls.Add(this.RegFed);
             this.gbOrgPes.Controls.Add(this.label1);
@@ -319,7 +323,6 @@
             this.gbOrgPes.Controls.Add(this.label6);
             this.gbOrgPes.Controls.Add(this.txtMunicipio);
             this.gbOrgPes.Controls.Add(this.NomFed);
-            this.gbOrgPes.Controls.Add(this.txtNombre);
             this.gbOrgPes.Controls.Add(this.EliminarUnidad);
             this.gbOrgPes.Controls.Add(this.ActualizarUnidad);
             this.gbOrgPes.Controls.Add(this.RegistrarUnidad);
@@ -330,7 +333,6 @@
             this.gbOrgPes.Controls.Add(this.pictureBox2);
             this.gbOrgPes.Controls.Add(this.mtbTelefono);
             this.gbOrgPes.Controls.Add(this.label20);
-            this.gbOrgPes.Controls.Add(this.cbRNPA);
             this.gbOrgPes.Controls.Add(this.txtCorreo);
             this.gbOrgPes.Controls.Add(this.label21);
             this.gbOrgPes.Controls.Add(this.txtFecha);
@@ -352,38 +354,26 @@
             this.gbOrgPes.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.gbOrgPes.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbOrgPes.ForeColor = System.Drawing.Color.Black;
-            this.gbOrgPes.Location = new System.Drawing.Point(12, 96);
+            this.gbOrgPes.Location = new System.Drawing.Point(270, 97);
             this.gbOrgPes.Name = "gbOrgPes";
             this.gbOrgPes.Size = new System.Drawing.Size(913, 336);
             this.gbOrgPes.TabIndex = 54;
             this.gbOrgPes.TabStop = false;
             this.gbOrgPes.Text = "DATOS GENERALES DE LA ORGANIZACIÓN PESQUERA";
             // 
-            // BuscarRNPA
+            // txtNombre
             // 
-            this.BuscarRNPA.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Search;
-            this.BuscarRNPA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BuscarRNPA.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BuscarRNPA.ForeColor = System.Drawing.Color.Transparent;
-            this.BuscarRNPA.Location = new System.Drawing.Point(205, 39);
-            this.BuscarRNPA.Name = "BuscarRNPA";
-            this.BuscarRNPA.Size = new System.Drawing.Size(28, 28);
-            this.BuscarRNPA.TabIndex = 123;
-            this.BuscarRNPA.UseVisualStyleBackColor = true;
-            this.BuscarRNPA.Click += new System.EventHandler(this.BuscarRNPA_Click);
+            this.txtNombre.Location = new System.Drawing.Point(257, 42);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(409, 22);
+            this.txtNombre.TabIndex = 125;
             // 
-            // BuscarNombreOrg
+            // cbRNPA
             // 
-            this.BuscarNombreOrg.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Search;
-            this.BuscarNombreOrg.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.BuscarNombreOrg.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BuscarNombreOrg.ForeColor = System.Drawing.Color.Transparent;
-            this.BuscarNombreOrg.Location = new System.Drawing.Point(630, 39);
-            this.BuscarNombreOrg.Name = "BuscarNombreOrg";
-            this.BuscarNombreOrg.Size = new System.Drawing.Size(28, 28);
-            this.BuscarNombreOrg.TabIndex = 123;
-            this.BuscarNombreOrg.UseVisualStyleBackColor = true;
-            this.BuscarNombreOrg.Click += new System.EventHandler(this.BuscarNombreOrg_Click);
+            this.cbRNPA.Location = new System.Drawing.Point(35, 42);
+            this.cbRNPA.Name = "cbRNPA";
+            this.cbRNPA.Size = new System.Drawing.Size(179, 22);
+            this.cbRNPA.TabIndex = 124;
             // 
             // ModFed
             // 
@@ -481,23 +471,6 @@
             this.NomFed.Name = "NomFed";
             this.NomFed.Size = new System.Drawing.Size(362, 24);
             this.NomFed.TabIndex = 117;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
-            this.txtNombre.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtNombre.DropDownHeight = 150;
-            this.txtNombre.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.ForeColor = System.Drawing.Color.Black;
-            this.txtNombre.FormattingEnabled = true;
-            this.txtNombre.IntegralHeight = false;
-            this.txtNombre.Location = new System.Drawing.Point(257, 42);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(366, 24);
-            this.txtNombre.TabIndex = 2;
-            this.txtNombre.SelectedIndexChanged += new System.EventHandler(this.txtNombre_SelectedIndexChanged);
-            this.txtNombre.TextChanged += new System.EventHandler(this.txtNombre_TextChanged);
-            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // EliminarUnidad
             // 
@@ -620,24 +593,6 @@
             this.label20.TabIndex = 61;
             this.label20.Text = "Dirección de correo electrónico";
             // 
-            // cbRNPA
-            // 
-            this.cbRNPA.BackColor = System.Drawing.Color.White;
-            this.cbRNPA.DropDownHeight = 200;
-            this.cbRNPA.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbRNPA.ForeColor = System.Drawing.Color.Black;
-            this.cbRNPA.FormattingEnabled = true;
-            this.cbRNPA.IntegralHeight = false;
-            this.cbRNPA.Location = new System.Drawing.Point(36, 42);
-            this.cbRNPA.MaxDropDownItems = 5;
-            this.cbRNPA.MaxLength = 12;
-            this.cbRNPA.Name = "cbRNPA";
-            this.cbRNPA.Size = new System.Drawing.Size(163, 24);
-            this.cbRNPA.TabIndex = 1;
-            this.toolTip1.SetToolTip(this.cbRNPA, "Ingrese o Seleccione el RNPA de la Unidad Económica");
-            this.cbRNPA.TextChanged += new System.EventHandler(this.cbRNPA_TextChanged);
-            this.cbRNPA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbRNPA_KeyPress);
-            // 
             // txtCorreo
             // 
             this.txtCorreo.BackColor = System.Drawing.Color.White;
@@ -730,7 +685,7 @@
             this.Resumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Resumen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Resumen.ForeColor = System.Drawing.Color.Black;
-            this.Resumen.Location = new System.Drawing.Point(944, 96);
+            this.Resumen.Location = new System.Drawing.Point(1202, 97);
             this.Resumen.Name = "Resumen";
             this.Resumen.Size = new System.Drawing.Size(403, 602);
             this.Resumen.TabIndex = 101;
@@ -1079,7 +1034,7 @@
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(957, 81);
+            this.label23.Location = new System.Drawing.Point(1215, 82);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(91, 19);
             this.label23.TabIndex = 9;
@@ -1090,7 +1045,7 @@
             this.button1.BackColor = System.Drawing.Color.Silver;
             this.button1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(195, 442);
+            this.button1.Location = new System.Drawing.Point(453, 443);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 45);
             this.button1.TabIndex = 108;
@@ -1103,7 +1058,7 @@
             this.button2.BackColor = System.Drawing.Color.Silver;
             this.button2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(347, 442);
+            this.button2.Location = new System.Drawing.Point(605, 443);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(137, 45);
             this.button2.TabIndex = 108;
@@ -1116,7 +1071,7 @@
             this.button3.BackColor = System.Drawing.Color.Silver;
             this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(46, 442);
+            this.button3.Location = new System.Drawing.Point(304, 443);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(137, 45);
             this.button3.TabIndex = 108;
@@ -1131,7 +1086,7 @@
             this.caToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1353, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1646, 24);
             this.menuStrip1.TabIndex = 115;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1147,14 +1102,14 @@
             // generarToolStripMenuItem
             // 
             this.generarToolStripMenuItem.Name = "generarToolStripMenuItem";
-            this.generarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.generarToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.generarToolStripMenuItem.Text = "Generar";
             this.generarToolStripMenuItem.Click += new System.EventHandler(this.generarToolStripMenuItem_Click);
             // 
             // cargarToolStripMenuItem
             // 
             this.cargarToolStripMenuItem.Name = "cargarToolStripMenuItem";
-            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.cargarToolStripMenuItem.Text = "Cargar";
             this.cargarToolStripMenuItem.Click += new System.EventHandler(this.cargarToolStripMenuItem_Click);
             // 
@@ -1194,7 +1149,7 @@
             this.button4.BackColor = System.Drawing.Color.Silver;
             this.button4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(195, 505);
+            this.button4.Location = new System.Drawing.Point(453, 506);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(137, 45);
             this.button4.TabIndex = 155;
@@ -1207,7 +1162,7 @@
             this.button5.BackColor = System.Drawing.Color.Silver;
             this.button5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(347, 505);
+            this.button5.Location = new System.Drawing.Point(605, 506);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(137, 45);
             this.button5.TabIndex = 156;
@@ -1220,7 +1175,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(690, 29);
+            this.pictureBox1.Location = new System.Drawing.Point(948, 30);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(200, 60);
@@ -1232,12 +1187,72 @@
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(12, 29);
+            this.pictureBox5.Location = new System.Drawing.Point(270, 30);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(50, 60);
             this.pictureBox5.TabIndex = 153;
             this.pictureBox5.TabStop = false;
+            // 
+            // ListaNombres
+            // 
+            this.ListaNombres.ForeColor = System.Drawing.Color.Black;
+            this.ListaNombres.FormattingEnabled = true;
+            this.ListaNombres.Location = new System.Drawing.Point(12, 419);
+            this.ListaNombres.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.ListaNombres.Name = "ListaNombres";
+            this.ListaNombres.Size = new System.Drawing.Size(245, 160);
+            this.ListaNombres.TabIndex = 185;
+            this.ListaNombres.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListaNombres_MouseDoubleClick);
+            // 
+            // BuscarN
+            // 
+            this.BuscarN.ForeColor = System.Drawing.Color.Black;
+            this.BuscarN.Location = new System.Drawing.Point(12, 390);
+            this.BuscarN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BuscarN.Name = "BuscarN";
+            this.BuscarN.Size = new System.Drawing.Size(245, 20);
+            this.BuscarN.TabIndex = 184;
+            this.BuscarN.TextChanged += new System.EventHandler(this.BuscarN_TextChanged);
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.ForeColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(88, 373);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(113, 13);
+            this.label25.TabIndex = 183;
+            this.label25.Text = "NOMBRE UNIDADES";
+            // 
+            // ListaRNPA
+            // 
+            this.ListaRNPA.ForeColor = System.Drawing.Color.Black;
+            this.ListaRNPA.FormattingEnabled = true;
+            this.ListaRNPA.Location = new System.Drawing.Point(12, 163);
+            this.ListaRNPA.Name = "ListaRNPA";
+            this.ListaRNPA.Size = new System.Drawing.Size(245, 199);
+            this.ListaRNPA.TabIndex = 182;
+            this.ListaRNPA.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListaRNPA_MouseDoubleClick);
+            // 
+            // BuscarR
+            // 
+            this.BuscarR.ForeColor = System.Drawing.Color.Black;
+            this.BuscarR.Location = new System.Drawing.Point(12, 137);
+            this.BuscarR.Name = "BuscarR";
+            this.BuscarR.Size = new System.Drawing.Size(245, 20);
+            this.BuscarR.TabIndex = 181;
+            this.BuscarR.TextChanged += new System.EventHandler(this.BuscarR_TextChanged);
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.ForeColor = System.Drawing.Color.Black;
+            this.label26.Location = new System.Drawing.Point(88, 111);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(96, 13);
+            this.label26.TabIndex = 180;
+            this.label26.Text = "RNPA UNIDADES";
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -1245,7 +1260,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1370, 605);
+            this.ClientSize = new System.Drawing.Size(1663, 605);
+            this.Controls.Add(this.ListaNombres);
+            this.Controls.Add(this.BuscarN);
+            this.Controls.Add(this.label25);
+            this.Controls.Add(this.ListaRNPA);
+            this.Controls.Add(this.BuscarR);
+            this.Controls.Add(this.label26);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.pictureBox1);
@@ -1306,7 +1327,6 @@
         private System.Windows.Forms.GroupBox gbOrgPes;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TextBox txtFecha;
-        private System.Windows.Forms.ComboBox cbRNPA;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton0;
         private System.Windows.Forms.MaskedTextBox mtbTelefono;
@@ -1327,7 +1347,6 @@
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.Label label59;
         private System.Windows.Forms.DataGridView DataResumen;
-        private System.Windows.Forms.ComboBox txtNombre;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
@@ -1376,9 +1395,15 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog2;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.Button BuscarRNPA;
-        private System.Windows.Forms.Button BuscarNombreOrg;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ListBox ListaNombres;
+        private System.Windows.Forms.TextBox BuscarN;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.ListBox ListaRNPA;
+        private System.Windows.Forms.TextBox BuscarR;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.TextBox txtNombre;
+        private System.Windows.Forms.TextBox cbRNPA;
     }
 }

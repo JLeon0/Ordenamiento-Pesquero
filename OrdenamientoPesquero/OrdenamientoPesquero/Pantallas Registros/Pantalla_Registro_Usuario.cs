@@ -147,7 +147,7 @@ namespace OrdenamientoPesquero
             }
             else
             {
-                pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text, RFCPesc.Text, EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo,MatriculaPesc.Text, CorreoPesc.Text, LocalidadPesc.Text, o, "NO APLICA", Seguro.Text, FolioCred.Text, fechaVenF, fechaExpF);
+                pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text, RFCPesc.Text, EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, "NO APLICA", CorreoPesc.Text, LocalidadPesc.Text, o, "NO APLICA", Seguro.Text, FolioCred.Text, fechaVenF, fechaExpF);
                 if (registrar)
                 {
                     RegistrarImagen();
@@ -213,27 +213,28 @@ namespace OrdenamientoPesquero
 
         private void CargarMatriculas()
         {
-            dt = proc.ObtenerCertMatrXUnidad(RNPA);
-            int I = 0;
-            foreach (DataRow filas in dt.Rows)
-            {
-                if (filas["MATRICULA"].ToString() == RNPA) { break; }
-                I++;
-            }
-            if (dt.Rows.Count < I)
-            {
-                dt.Rows.RemoveAt(I);
+            if (RNPA != ""){
+                dt = proc.ObtenerCertMatrXUnidad(RNPA);
+                int I = 0;
+                foreach (DataRow filas in dt.Rows)
+                {
+                    if (filas["MATRICULA"].ToString() == RNPA) { break; }
+                    I++;
+                }
+                if (dt.Rows.Count < I)
+                {
+                    dt.Rows.RemoveAt(I);
 
-                DataRow na = dt.NewRow();
-                na["MATRICULA"] = RNPA;
-                na["NOMBREEMBARCACION"] = "NO APLICA";
-                dt.Rows.Add(na);
-            }
-            MatriculaPesc.DataSource = dt;
-            MatriculaPesc.DisplayMember = "NOMBREEMBARCACION";
-            MatriculaPesc.ValueMember = "MATRICULA";
-            MatriculaPesc.Text = "";
-        }
+                    DataRow na = dt.NewRow();
+                    na["MATRICULA"] = RNPA;
+                    na["NOMBREEMBARCACION"] = "NO APLICA";
+                    dt.Rows.Add(na);
+                }
+                MatriculaPesc.DataSource = dt;
+                MatriculaPesc.DisplayMember = "NOMBREEMBARCACION";
+                MatriculaPesc.ValueMember = "MATRICULA";
+                MatriculaPesc.Text = "";
+            } }
 
         private void LlenarDatos(string curp)
         {
@@ -343,6 +344,7 @@ namespace OrdenamientoPesquero
                 item.Text = "";
             }
             MatriculaPesc.Text = "";
+            Unid.Text = "";
         }
 
         private void BloquearControles()
@@ -354,6 +356,7 @@ namespace OrdenamientoPesquero
                 CuerpoDeAguaPesc.Visible = false;
                 Solicitud.Visible = true;
                 Apoyo.Visible = true;
+                MatriculaPesc.Enabled = false;
             }
         }
 
@@ -542,6 +545,7 @@ namespace OrdenamientoPesquero
                 exito = proc.Eliminar_Pescador(CURPPesc.Text);
                 if (exito > 0) { limpiarpescador(); exito = 0; }
                 CargarPescadores();
+                CargarNoPescadores();
             }
         }
 

@@ -58,7 +58,9 @@
             this.Apoyo = new System.Windows.Forms.GroupBox();
             this.programa = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
+            this.Total = new System.Windows.Forms.TextBox();
             this.montoP = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.montoF = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
@@ -66,8 +68,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.Total = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.Entregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registrar)).BeginInit();
@@ -313,6 +313,7 @@
             this.Entregar.Size = new System.Drawing.Size(50, 50);
             this.Entregar.TabIndex = 171;
             this.Entregar.TabStop = false;
+            this.Entregar.Click += new System.EventHandler(this.Entregar_Click);
             // 
             // Actualizar
             // 
@@ -386,6 +387,16 @@
             this.label17.TabIndex = 173;
             this.label17.Text = "Programa";
             // 
+            // Total
+            // 
+            this.Total.Location = new System.Drawing.Point(110, 119);
+            this.Total.Name = "Total";
+            this.Total.ReadOnly = true;
+            this.Total.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.Total.Size = new System.Drawing.Size(68, 22);
+            this.Total.TabIndex = 174;
+            this.Total.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
+            // 
             // montoP
             // 
             this.montoP.Location = new System.Drawing.Point(110, 80);
@@ -396,6 +407,15 @@
             this.montoP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.montoP.TextChanged += new System.EventHandler(this.montoE_TextChanged);
             this.montoP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(3, 122);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(75, 16);
+            this.label12.TabIndex = 173;
+            this.label12.Text = "Monto Total";
             // 
             // label16
             // 
@@ -471,25 +491,6 @@
             this.pictureBox2.TabIndex = 113;
             this.pictureBox2.TabStop = false;
             this.pictureBox2.Click += new System.EventHandler(this.Actualizar_Click);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 122);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(75, 16);
-            this.label12.TabIndex = 173;
-            this.label12.Text = "Monto Total";
-            // 
-            // Total
-            // 
-            this.Total.Location = new System.Drawing.Point(110, 119);
-            this.Total.Name = "Total";
-            this.Total.ReadOnly = true;
-            this.Total.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Total.Size = new System.Drawing.Size(68, 22);
-            this.Total.TabIndex = 174;
-            this.Total.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
             // 
             // Pantalla_Solicitudes
             // 

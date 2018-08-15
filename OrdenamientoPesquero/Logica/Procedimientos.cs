@@ -141,7 +141,7 @@ namespace Logica
         public DataTable Obtener_unidad(string nombre)
         {
             string[] Parametros = { "@nombre" };
-            return c.getDatosTabla("ObtenerxNombre", Parametros, nombre);
+            return c.getDatosTabla("ObtenerNombres", Parametros, nombre);
         }
         public DataTable Obtener_Directiva(string rnpa)
         {
@@ -348,6 +348,12 @@ namespace Logica
         {
             string[] Parametros = { "@curp" };
             return c.getDatosTabla("ObtenerSolicitudesxCurp", Parametros, curp);
+        }
+
+        public int Entregar_Solicitud(string folio)
+        {
+            string[] Parametros = { "@folio" };
+            return c.Ejecutar("EntregarSolicitud", Parametros, folio);
         }
         #endregion
 

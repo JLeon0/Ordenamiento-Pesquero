@@ -115,6 +115,14 @@ namespace OrdenamientoPesquero
         }
 
         int mE, mF, mP;
+
+        private void Entregar_Click(object sender, EventArgs e)
+        {
+            int exito = proc.Entregar_Solicitud(folio.Text);
+            if(exito == 1) { MessageBox.Show("EXITO"); } else { MessageBox.Show("HUBO UN ERROR"); }
+            CargarSolicitudes();
+        }
+
         private void montoE_TextChanged(object sender, EventArgs e)
         {
             if (montoE.Text == "") { mE = 0; } else { mE = Convert.ToInt32(montoE.Text); }

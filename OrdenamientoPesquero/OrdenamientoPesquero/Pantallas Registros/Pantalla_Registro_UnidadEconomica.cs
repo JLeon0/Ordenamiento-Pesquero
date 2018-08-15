@@ -29,7 +29,7 @@ namespace OrdenamientoPesquero
         Procedimientos proc = new Procedimientos();
         DataSet ds = new DataSet();
         DataTable dt = null;
-        DataTable NOMBRES = null;
+        DataTable RNPA,NOMBRES = null;
         string[,] unidad = { { "0", "RFC" }, { "0", "Codigo Postal" }, { "0", "Correo Electronico" }, { "0", "Telefono de la Cooperativa" },{"0","RNPA" } };
         string[,] pescador = { { "0", "CURP" }, { "0", "RFC" }, { "0", "Codigo postal" }, { "0", "Telefono" } , { "0","Correo Electronico"} };
         string[] Municipios;
@@ -151,20 +151,18 @@ namespace OrdenamientoPesquero
         bool cargando = true;
         private void CargarRNPA()
         {
-            string a = cbRNPA.Text.Replace(" ", ""); ;
+            RNPA = proc.Obtener_todas_unidades(BuscarR.Text);
+            ListaRNPA.Items.Clear();
+            foreach (DataRow fila in RNPA.Rows)
+            {
+                ListaRNPA.Items.Add(fila["RNPA"].ToString());
+            }
             NOMBRES = proc.Obtener_todos_los_nombres("");
-            txtNombre.DataSource = null;
-            txtNombre.Items.Clear();
+            ListaNombres.Items.Clear();
             foreach (DataRow fila in NOMBRES.Rows)
             {
-                txtNombre.Items.Add(fila["NOMBRE"].ToString());
-                cbRNPA.Items.Add(fila["RNPA"].ToString());
+                ListaNombres.Items.Add(fila["NOMBRE"].ToString());
             }
-            //txtNombre.DataSource = NOMBRES;
-            //txtNombre.DisplayMember = "Nombre";
-            //txtNombre.ValueMember = "Nombre";
-            //txtNombre.Text = "";
-
             cbRNPA.Focus();
         }
 
@@ -202,20 +200,7 @@ namespace OrdenamientoPesquero
         }
         private void BuscarNombreOrg_Click(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.WaitCursor;
-            cbRNPA.Items.Clear();
-            foreach (DataRow fila in NOMBRES.Rows)
-            {
-                cbRNPA.Items.Add(fila["RNPA"].ToString());
-            }
-            LlenarCamposNombre();
-            ObtenerFederacion();
-            Resumenes(cbRNPA.Text);
-            ResumenSocios(cbRNPA.Text);
-            button1.Enabled = true;
-            button2.Enabled = true;
-            button3.Enabled = true;
-            this.Cursor = Cursors.Default;
+          
         }
         
 
@@ -223,7 +208,7 @@ namespace OrdenamientoPesquero
         {
             if (!cargando)
             {
-                dt = proc.Obtener_todas_unidades(cbRNPA.Text);
+                dt = proc.Obtener_todas_unidades(ListaRNPA.Text);
                 if (dt.Rows.Count != 0)
                 {
                     cargado = true;
@@ -232,6 +217,7 @@ namespace OrdenamientoPesquero
                 int tipo = 0;
                 foreach (DataRow fila in dt.Rows)
                 {
+                    cbRNPA.Text = ListaRNPA.Text;
                     txtNombre.Text = fila["NOMBRE"].ToString();
                     txtRFC.Text = fila["RFC"].ToString();
                     txtCalleNum.Text = fila["CALLEYNUM"].ToString();
@@ -252,12 +238,14 @@ namespace OrdenamientoPesquero
 
         private void LlenarCamposNombre()
         {
-            if (txtNombre.SelectedIndex >= 0)
+            if (ListaNombres.SelectedIndex >= 0)
             {
+                NOMBRES = proc.Obtener_todos_los_nombres(ListaNombres.Text);
                 int tipo = 0;
-                DataRow fila = NOMBRES.Rows[txtNombre.SelectedIndex];
+                DataRow fila = NOMBRES.Rows[0];
 
                 cbRNPA.Text = fila["RNPA"].ToString();
+                txtNombre.Text = fila["NOMBRE"].ToString();
                 txtRFC.Text = fila["RFC"].ToString();
                 txtCalleNum.Text = fila["CALLEYNUM"].ToString();
                 txtColonia.Text = fila["COLONIA"].ToString();
@@ -351,9 +339,7 @@ namespace OrdenamientoPesquero
             {
                 unidad[4, 0] = "0";
             }
-        }
-
-        
+        }        
         private void mtbCP_TextChanged(object sender, EventArgs e)
         {
             if (mtbCP.Text.Contains(' ') || mtbCP.Text.Length != 5)
@@ -711,48 +697,13 @@ namespace OrdenamientoPesquero
 
         private void txtNombre_TextChanged(object sender, EventArgs e)
         {
-            string x = txtNombre.Text;
-            NOMBRES = proc.Obtener_todos_los_nombres(x);
-            txtNombre.Items.Clear();
-            cbRNPA.Items.Clear();
-            foreach (DataRow fila in NOMBRES.Rows)
-            {
-                txtNombre.Items.Add(fila["NOMBRE"].ToString());
-                cbRNPA.Items.Add(fila["RNPA"].ToString());
-            }
-            txtNombre.Select(txtNombre.Text.Length, 0);
-            if(txtNombre.Text == "")
-            { txtNombre.DropDownHeight = 200; }
+            
         }
 
         private void BuscarRNPA_Click(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.WaitCursor;
-            if (existe(cbRNPA.Text))
-            {
-                LlenarCampos();
-                ObtenerFederacion();
-                Resumenes(cbRNPA.Text);
-                ResumenSocios(cbRNPA.Text);
-                button1.Enabled = true;
-                button2.Enabled = true;
-                button3.Enabled = true;
-            }
-            else
-            {
-                limpiartodo();
-                button1.Enabled = false;
-                button2.Enabled = false;
-                button3.Enabled = false;
-            }
-            this.Cursor = Cursors.Default;
         }
 
-        private void txtNombre_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            string x = txtNombre.Text;
-            BuscarNombreOrg.PerformClick();
-        }
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -763,6 +714,72 @@ namespace OrdenamientoPesquero
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
+        }
+
+        private void BuscarR_TextChanged(object sender, EventArgs e)
+        {
+            RNPA = proc.Obtener_todas_unidades(BuscarR.Text);
+            ListaRNPA.Items.Clear();
+            foreach (DataRow fila in RNPA.Rows)
+            {
+                ListaRNPA.Items.Add(fila["RNPA"].ToString());
+            }
+
+        }
+
+        private void ListaRNPA_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (ListaRNPA.SelectedIndex >= 0)
+            {
+                ListaNombres.SelectedIndex = -1;
+                this.Cursor = Cursors.WaitCursor;
+                if (existe(ListaRNPA.Text))
+                {
+                    LlenarCampos();
+                    ObtenerFederacion();
+                    Resumenes(ListaRNPA.Text);
+                    ResumenSocios(ListaRNPA.Text);
+                    button1.Enabled = true;
+                    button2.Enabled = true;
+                    button3.Enabled = true;
+                }
+                else
+                {
+                    limpiartodo();
+                    button1.Enabled = false;
+                    button2.Enabled = false;
+                    button3.Enabled = false;
+                }
+                this.Cursor = Cursors.Default;
+            }
+        }
+
+        private void BuscarN_TextChanged(object sender, EventArgs e)
+        {
+            string x = BuscarN.Text;
+            NOMBRES = proc.Obtener_todos_los_nombres(x);
+            ListaNombres.Items.Clear();
+            foreach (DataRow fila in NOMBRES.Rows)
+            {
+                ListaNombres.Items.Add(fila["NOMBRE"].ToString());
+            }
+        }
+
+        private void ListaNombres_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            if (ListaNombres.SelectedIndex >=0)
+            {
+                ListaRNPA.SelectedIndex = -1;
+                this.Cursor = Cursors.WaitCursor;
+                LlenarCamposNombre();
+                ObtenerFederacion();
+                Resumenes(cbRNPA.Text);
+                ResumenSocios(cbRNPA.Text);
+                button1.Enabled = true;
+                button2.Enabled = true;
+                button3.Enabled = true;
+                this.Cursor = Cursors.Default;
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
