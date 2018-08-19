@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.permiBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ordPesqueroDataSet8 = new OrdenamientoPesquero.OrdPesqueroDataSet8();
+            this.mulegeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ordPesqueroDataSet7 = new OrdenamientoPesquero.OrdPesqueroDataSet7();
             this.vistapermBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.permisos_lista = new OrdenamientoPesquero.Permisos_lista();
             this.todosBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -63,9 +67,15 @@
             this.ordPesqueroDataSet6 = new OrdenamientoPesquero.OrdPesqueroDataSet6();
             this.losCabosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.losCabosTableAdapter = new OrdenamientoPesquero.OrdPesqueroDataSet6TableAdapters.LosCabosTableAdapter();
-            this.ordPesqueroDataSet7 = new OrdenamientoPesquero.OrdPesqueroDataSet7();
-            this.mulegeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.mulegeTableAdapter = new OrdenamientoPesquero.OrdPesqueroDataSet7TableAdapters.MulegeTableAdapter();
+            this.permiTableAdapter = new OrdenamientoPesquero.OrdPesqueroDataSet8TableAdapters.permiTableAdapter();
+            this.ordPesqueroDataSet9 = new OrdenamientoPesquero.OrdPesqueroDataSet9();
+            this.permiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.permiTableAdapter1 = new OrdenamientoPesquero.OrdPesqueroDataSet9TableAdapters.permiTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.permiBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mulegeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistapermBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.permisos_lista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.todosBindingSource)).BeginInit();
@@ -89,9 +99,29 @@
             ((System.ComponentModel.ISupportInitialize)(this.loretoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.losCabosBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mulegeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.permiBindingSource1)).BeginInit();
             this.SuspendLayout();
+            // 
+            // permiBindingSource
+            // 
+            this.permiBindingSource.DataMember = "permi";
+            this.permiBindingSource.DataSource = this.ordPesqueroDataSet8;
+            // 
+            // ordPesqueroDataSet8
+            // 
+            this.ordPesqueroDataSet8.DataSetName = "OrdPesqueroDataSet8";
+            this.ordPesqueroDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // mulegeBindingSource
+            // 
+            this.mulegeBindingSource.DataMember = "Mulege";
+            this.mulegeBindingSource.DataSource = this.ordPesqueroDataSet7;
+            // 
+            // ordPesqueroDataSet7
+            // 
+            this.ordPesqueroDataSet7.DataSetName = "OrdPesqueroDataSet7";
+            this.ordPesqueroDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // vistapermBindingSource1
             // 
@@ -147,7 +177,7 @@
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.mulegeBindingSource;
+            reportDataSource1.Value = this.permiBindingSource1;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.EnableExternalImages = true;
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "OrdenamientoPesquero.Reportes.Permisos.rdlc";
@@ -257,19 +287,27 @@
             // 
             this.losCabosTableAdapter.ClearBeforeFill = true;
             // 
-            // ordPesqueroDataSet7
-            // 
-            this.ordPesqueroDataSet7.DataSetName = "OrdPesqueroDataSet7";
-            this.ordPesqueroDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // mulegeBindingSource
-            // 
-            this.mulegeBindingSource.DataMember = "Mulege";
-            this.mulegeBindingSource.DataSource = this.ordPesqueroDataSet7;
-            // 
             // mulegeTableAdapter
             // 
             this.mulegeTableAdapter.ClearBeforeFill = true;
+            // 
+            // permiTableAdapter
+            // 
+            this.permiTableAdapter.ClearBeforeFill = true;
+            // 
+            // ordPesqueroDataSet9
+            // 
+            this.ordPesqueroDataSet9.DataSetName = "OrdPesqueroDataSet9";
+            this.ordPesqueroDataSet9.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // permiBindingSource1
+            // 
+            this.permiBindingSource1.DataMember = "permi";
+            this.permiBindingSource1.DataSource = this.ordPesqueroDataSet9;
+            // 
+            // permiTableAdapter1
+            // 
+            this.permiTableAdapter1.ClearBeforeFill = true;
             // 
             // Vistas
             // 
@@ -280,6 +318,10 @@
             this.Name = "Vistas";
             this.Text = "Vistas";
             this.Load += new System.EventHandler(this.Vistas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.permiBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mulegeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistapermBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.permisos_lista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.todosBindingSource)).EndInit();
@@ -303,8 +345,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.loretoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.losCabosBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mulegeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.permiBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -347,5 +389,11 @@
         private OrdPesqueroDataSet7 ordPesqueroDataSet7;
         private System.Windows.Forms.BindingSource mulegeBindingSource;
         private OrdPesqueroDataSet7TableAdapters.MulegeTableAdapter mulegeTableAdapter;
+        private OrdPesqueroDataSet8 ordPesqueroDataSet8;
+        private System.Windows.Forms.BindingSource permiBindingSource;
+        private OrdPesqueroDataSet8TableAdapters.permiTableAdapter permiTableAdapter;
+        private OrdPesqueroDataSet9 ordPesqueroDataSet9;
+        private System.Windows.Forms.BindingSource permiBindingSource1;
+        private OrdPesqueroDataSet9TableAdapters.permiTableAdapter permiTableAdapter1;
     }
 }

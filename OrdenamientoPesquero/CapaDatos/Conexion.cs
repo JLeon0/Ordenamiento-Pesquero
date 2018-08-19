@@ -158,7 +158,25 @@ namespace CapaDatos
                 return 0;
             }
         }
+        public DataSet obtntab(string Proc, string[] Parametros, params Object[] DatosParametro)
+        {
+            DataSet ds = new DataSet();
+            using (SqlConnection cn = new SqlConnection(obtenertconexion()))
+            {
+                try
+                {
+                    cn.Open();
+                    SqlDataAdapter da = new SqlDataAdapter("exec t", cn);
+                    da.Fill(ds);
+                    cn.Close();
+                }
+                catch(Exception s)
+                {
 
+                }
+                return ds;
+            }
+        }
         public DataTable getDatosTabla(string Proc, string[] Parametros, params Object[] DatosParametro)
         {
             DataTable dt = new DataTable();

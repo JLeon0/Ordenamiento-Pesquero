@@ -120,6 +120,11 @@ namespace Logica
             string[] Parametros = {};
             return c.getDatosTabla("p", Parametros);
         }
+        public DataSet t()
+        {
+            string[] Parametros = { };
+            return c.obtntab("t", Parametros);
+        }
         #endregion
 
         #region Obtener

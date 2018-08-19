@@ -105,6 +105,19 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OrdPesqueroDataSet7.xsd</DependentUpon>
     </Compile>
+    <Compile Include="OrdPesqueroDataSet8.cs">
+      <DependentUpon>OrdPesqueroDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdPesqueroDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdPesqueroDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet9.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ordPesqueroDataSetpescadores1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -237,6 +250,7 @@
     <EmbeddedResource Include="Reportes\Pescadores.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteXUnidad.rdlc" />
+    <EmbeddedResource Include="Reportes\Resumen_permisos.rdlc" />
     <EmbeddedResource Include="Reportes\xMunicipio.rdlc" />
     <None Include="EmbarcacionesSet.xsc">
       <DependentUpon>EmbarcacionesSet.xsd</DependentUpon>
@@ -347,6 +361,28 @@
     </None>
     <None Include="OrdPesqueroDataSet7.xss">
       <DependentUpon>OrdPesqueroDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet8.xsc">
+      <DependentUpon>OrdPesqueroDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet8.xss">
+      <DependentUpon>OrdPesqueroDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet9.xsc">
+      <DependentUpon>OrdPesqueroDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet9.xss">
+      <DependentUpon>OrdPesqueroDataSet9.xsd</DependentUpon>
     </None>
     <None Include="ordPesqueroDataSetpescadores1.xsc">
       <DependentUpon>ordPesqueroDataSetpescadores1.xsd</DependentUpon>

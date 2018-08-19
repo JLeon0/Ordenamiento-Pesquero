@@ -30,5 +30,11 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             Vistas v = new Vistas(r, "", 6);
             v.ShowDialog(this);
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Vistas v = new Vistas(r, "", 8);
+            v.ShowDialog(this);
+        }
     }
 }
