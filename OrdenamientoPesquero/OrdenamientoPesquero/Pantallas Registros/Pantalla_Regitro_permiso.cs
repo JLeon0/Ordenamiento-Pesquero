@@ -42,7 +42,7 @@ namespace OrdenamientoPesquero
             {
                 Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
             }
-            todosconguion();
+            //todosconguion();
         }
         private void dvgCombo_SelectedIndexChanged(object sender, EventArgs e)
         {

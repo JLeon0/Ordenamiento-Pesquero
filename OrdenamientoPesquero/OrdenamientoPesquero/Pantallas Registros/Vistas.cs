@@ -318,11 +318,13 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     datos.Value = ordPesqueroDataSet9.permi;
                     this.reportViewer1.LocalReport.DataSources.Add(datos);
                     DataSet ds = proc.t();
-                    ReportParameter[] para4 = new ReportParameter[4];
+                    ReportParameter[] para4 = new ReportParameter[6];
                     para4[0] = new ReportParameter("totu", ds.Tables[0].Rows[0][0].ToString());
                     para4[1] = new ReportParameter("totp", ds.Tables[1].Rows[0][0].ToString());
                     para4[2] = new ReportParameter("toto", ds.Tables[2].Rows[0][0].ToString());
                     para4[3] = new ReportParameter("totn", ds.Tables[3].Rows[0][0].ToString());
+                    para4[4] = new ReportParameter("totm", ds.Tables[4].Rows[0][0].ToString());
+                    para4[5] = new ReportParameter("totc", ds.Tables[5].Rows[0][0].ToString());
                     reportViewer1.LocalReport.SetParameters(para4);
                     this.reportViewer1.RefreshReport();
                     break;
