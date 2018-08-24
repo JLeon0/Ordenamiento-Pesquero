@@ -25,7 +25,18 @@ namespace CapaDatos
         public string setString(string instancia)
         {
             CONEXIONPERRONA = "Data source = " + instancia + "; Initial Catalog = OrdPesquero; Integrated Security = true;";
-            return CONEXIONPERRONA;
+            Properties.Settings.Default.OrdPesqueroConnectionString = CONEXIONPERRONA;
+            Configuration config = ConfigurationManager.OpenExeConfiguration(ConfigurationUserLevel.None);
+            //hacemos la modificacion de la cadena de conexion (ServerDb es el atributo que tengo en app.config)
+            for (int i = 0; i < config.ConnectionStrings.ConnectionStrings.Count; i++)
+            {
+                config.ConnectionStrings.ConnectionStrings[i].ConnectionString = CONEXIONPERRONA;
+            }
+            //Cambiamos el modo de guardado
+            config.Save(ConfigurationSaveMode.Modified, true);
+            // modificamos el guardado
+            Properties.Settings.Default.Save();
+            return CapaDatos.Properties.Settings.Default.OrdPesqueroConnectionString;
         }
         public Conexion(string bd) { 
             bdda=bd;
@@ -139,7 +150,7 @@ namespace CapaDatos
         public int Ejecutar(string Proc, string[] Parametros, params Object[] DatosParametro)
         {
             SqlCommand cmd = new SqlCommand();
-            using (SqlConnection cn = new SqlConnection(CONEXIONPERRONA))
+            using (SqlConnection cn = new SqlConnection(obtenertconexion()))
             {
                 cn.Open();
                 cn.ChangeDatabase(bdda);
@@ -194,7 +205,7 @@ namespace CapaDatos
         {
             DataTable dt = new DataTable();
             SqlCommand cmd = new SqlCommand();
-            using (SqlConnection cn = new SqlConnection(CONEXIONPERRONA)
+            using (SqlConnection cn = new SqlConnection(obtenertconexion()))
             {
                 try
                 {
@@ -222,7 +233,8 @@ namespace CapaDatos
                     }
                     cn.Close();
                     return dt;
-                }catch(Exception s)
+                }
+                catch (Exception s)
                 {
                     return dt;
                 }
