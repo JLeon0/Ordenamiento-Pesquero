@@ -29,6 +29,10 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         Procedimientos proc = new Procedimientos();
         private void Vistas_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet9.permi' Puede moverla o quitarla según sea necesario.
+            this.permiTableAdapter1.Fill(this.ordPesqueroDataSet9.permi);
+            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet8.permi' Puede moverla o quitarla según sea necesario.
+            this.permiTableAdapter.Fill(this.ordPesqueroDataSet8.permi);
             // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet7.Mulege' Puede moverla o quitarla según sea necesario.
             this.mulegeTableAdapter.Fill(this.ordPesqueroDataSet7.Mulege);
             // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet6.LosCabos' Puede moverla o quitarla según sea necesario.
@@ -304,6 +308,24 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     }
                     reportViewer1.LocalReport.SetParameters(para3);
 
+                    this.reportViewer1.RefreshReport();
+                    break;
+                case 8:
+                    this.reportViewer1.ProcessingMode = ProcessingMode.Local;
+                    reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Resumen_permisos.rdlc");
+                    this.permiTableAdapter1.Fill(ordPesqueroDataSet9.permi);
+                    datos.Name = "permi";
+                    datos.Value = ordPesqueroDataSet9.permi;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos);
+                    DataSet ds = proc.t();
+                    ReportParameter[] para4 = new ReportParameter[6];
+                    para4[0] = new ReportParameter("totu", ds.Tables[0].Rows[0][0].ToString());
+                    para4[1] = new ReportParameter("totp", ds.Tables[1].Rows[0][0].ToString());
+                    para4[2] = new ReportParameter("toto", ds.Tables[2].Rows[0][0].ToString());
+                    para4[3] = new ReportParameter("totn", ds.Tables[3].Rows[0][0].ToString());
+                    para4[4] = new ReportParameter("totm", ds.Tables[4].Rows[0][0].ToString());
+                    para4[5] = new ReportParameter("totc", ds.Tables[5].Rows[0][0].ToString());
+                    reportViewer1.LocalReport.SetParameters(para4);
                     this.reportViewer1.RefreshReport();
                     break;
                 default:
