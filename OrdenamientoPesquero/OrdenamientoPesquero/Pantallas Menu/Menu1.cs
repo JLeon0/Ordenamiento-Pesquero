@@ -8,11 +8,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CapaDatos;
 
 namespace OrdenamientoPesquero.Pantallas_Menu
 {
     public partial class Menu1 : Form
     {
+        Conexion c;
         public Menu1()
         {
             InitializeComponent();
@@ -29,6 +31,21 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         {
             Pantalla_Registro_UnidadEconomica unidad = new Pantalla_Registro_UnidadEconomica();
             unidad.ShowDialog();
+        }
+
+        private void Menu1_Load(object sender, EventArgs e)
+        {
+            CargarInstancia();
+        }
+
+        private void CargarInstancia()
+        {
+            Microsoft.Win32.RegistryKey baseKey = Microsoft.Win32.RegistryKey.OpenBaseKey(Microsoft.Win32.RegistryHive.LocalMachine, Microsoft.Win32.RegistryView.Registry64);
+            Microsoft.Win32.RegistryKey key = baseKey.OpenSubKey(@"SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL");
+            foreach (string s in key.GetValueNames())
+            {
+                c = new Conexion("OrdPesquero", @".\" + s);
+            }
         }
     }
 }

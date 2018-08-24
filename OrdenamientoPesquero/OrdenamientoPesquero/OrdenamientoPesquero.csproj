@@ -32,12 +32,15 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>gbcs4x4.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AForge.Video">
-      <HintPath>E:\Nueva carpeta (2)\AForge.Video.dll</HintPath>
+      <HintPath>..\..\..\RESPALDO YISUS\WebCams\WebCams\bin\Debug\AForge.Video.dll</HintPath>
     </Reference>
     <Reference Include="AForge.Video.DirectShow">
-      <HintPath>E:\Nueva carpeta (2)\AForge.Video.DirectShow.dll</HintPath>
+      <HintPath>..\..\..\RESPALDO YISUS\WebCams\WebCams\bin\Debug\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
@@ -425,6 +428,10 @@
     <None Include="Resources\actualizar.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{8e15fc49-4a3b-493e-b73b-cb5dd5a6d4f3}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Logica\Logica.csproj">
       <Project>{d48b06ec-8515-4ab1-87c2-0b6c56b225d6}</Project>
       <Name>Logica</Name>
@@ -500,6 +507,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Entregar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="gbcs4x4.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

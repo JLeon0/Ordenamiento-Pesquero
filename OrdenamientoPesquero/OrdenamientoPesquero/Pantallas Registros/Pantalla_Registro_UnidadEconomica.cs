@@ -54,7 +54,6 @@ namespace OrdenamientoPesquero
         
 
 
-      
         #region Registros
         private void RegistrarUnidad_Click(object sender, EventArgs e)
         {

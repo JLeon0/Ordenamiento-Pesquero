@@ -115,6 +115,16 @@ namespace Logica
             string[] Parametros = { "@numPermiso" };
             return c.getDatosTabla("EquiposxPermiso", Parametros, nopermiso);
         }
+        public DataTable ObtenerPesquerias()
+        {
+            string[] Parametros = { };
+            return c.getDatosTabla("ObtenerPesquerias", Parametros);
+        }
+        public int RegistrarPesqueria(string nombre)
+        {
+            string[] Parametros = { "@nombre" };
+            return c.Ejecutar("RegistrarPesqueria", Parametros, nombre);
+        }
         #endregion
 
         #region Obtener

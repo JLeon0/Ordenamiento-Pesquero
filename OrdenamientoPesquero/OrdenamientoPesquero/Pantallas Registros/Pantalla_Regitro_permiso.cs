@@ -42,6 +42,7 @@ namespace OrdenamientoPesquero
             {
                 Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
             }
+            CargarPesquerias();
         }
         private void dvgCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -55,7 +56,7 @@ namespace OrdenamientoPesquero
             // en este caso se marca el check si se cambia la seleccion
             //
             DataGridViewRow row = dgvEmbarcacionesPerm.CurrentRow;
-            dgvEmbarcacionesPerm[1,row.Index].Value = dt.Rows[combo.SelectedIndex]["MATRICULA"].ToString();
+            dgvEmbarcacionesPerm[1, row.Index].Value = dt.Rows[combo.SelectedIndex]["MATRICULA"].ToString();
             dgvEmbarcacionesPerm[2, row.Index].Value = dt.Rows[combo.SelectedIndex]["MOTORMARCA"].ToString();
             dgvEmbarcacionesPerm[3, row.Index].Value = dt.Rows[combo.SelectedIndex]["MOTORHP"].ToString();
             dgvEmbarcacionesPerm[0, row.Index].Value = dt.Rows[combo.SelectedIndex]["NOMBREEMBARCACION"].ToString();
@@ -69,6 +70,17 @@ namespace OrdenamientoPesquero
             nPer.ValueMember = "NPERMISO";
             nPer.Text = a;
         }
+
+        private void CargarPesquerias()
+        {
+            dt = proc.ObtenerPesquerias();
+            PesqueriaPer.Items.Clear();
+            foreach (DataRow fila in dt.Rows)
+            {
+                PesqueriaPer.Items.Add(fila["NOMBRE"].ToString());
+            }
+        }
+
 
         private void diaExpPer_ValueChanged(object sender, EventArgs e)
         {
@@ -141,7 +153,7 @@ namespace OrdenamientoPesquero
                 i--;
             }
             int tipoperm = 1;
-            if (Acuicola.Checked == true) { tipoperm = 0; }
+            if (Acuicola.Checked == true) { tipoperm = 1; }
             else if (Deportiva.Checked == true) { tipoperm = 2; }
             perm = new Permiso(FolioPer.Text, Rnpa, nPer.Text, PesqueriaPer.Text, LugarExpPer.Text, diaExp, finVig, ZonaPescaPerm.Text, SitiosDesemPer.Text,tipoperm);
             if (registrar)
@@ -167,9 +179,9 @@ namespace OrdenamientoPesquero
                     ZonaPescaPerm.Text = dt.Rows[0]["ZONAPESCA"].ToString();
                     SitiosDesemPer.Text = dt.Rows[0]["SITIOSDESEMBARQUE"].ToString();
                     string tp = dt.Rows[0]["TIPOPERMISO"].ToString();
-                    int tipoperm = 1;
+                    int tipoperm = 0;
                     if (tp != "") { tipoperm = Convert.ToInt32(tp); }
-                    if(tipoperm == 0) { Acuicola.Checked = true; }else if(tipoperm==2){ Deportiva.Checked = true; } else { Comercial.Checked = true; }
+                    if(tipoperm == 1) { Acuicola.Checked = true; }else if(tipoperm==2){ Deportiva.Checked = true; } else { Comercial.Checked = true; }
                     dt = proc.EquiposxPermiso(per);
                     numericUpDown2.Value = dt.Rows.Count;
                     dgvEquiposPescaPerm.RowCount = dt.Rows.Count;
@@ -231,6 +243,7 @@ namespace OrdenamientoPesquero
 
         private void Actualizar_Click(object sender, EventArgs e)
         {
+            proc.RegistrarPesqueria(PesqueriaPer.Text);
             exito = AccionesPermiso(false);
             proc.Borrar_equipo(nPer.Text);
             equiposdepesca();

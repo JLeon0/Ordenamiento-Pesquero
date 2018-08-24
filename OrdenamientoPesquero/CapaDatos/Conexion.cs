@@ -16,15 +16,27 @@ namespace CapaDatos
     {
         public SqlConnection con;
         public string bdda;
+        public string CONEXIONPERRONA = "";
+
         public static string obtenertconexion()
         {
             return Properties.Settings.Default.OrdPesqueroConnectionString;
+        }
+        public string setString(string instancia)
+        {
+            CONEXIONPERRONA = "Data source = " + instancia + "; Initial Catalog = OrdPesquero; Integrated Security = true;";
+            return CONEXIONPERRONA;
         }
         public Conexion(string bd) { 
             bdda=bd;
             con = new SqlConnection(obtenertconexion());
             //con.ChangeDatabase(bdda);
             //con.Open();
+        }
+        public Conexion(string bd, string instancia)
+        {
+            bdda = bd;
+            con = new SqlConnection(setString(instancia));
         }
         public void Generer_respaldo(string direc, string rnpa)
         {
@@ -80,6 +92,7 @@ namespace CapaDatos
                 MessageBox.Show(ex.ToString());
             }
         }
+
         public bool cargar(string archivo)
         {
             //con.ChangeDatabase("master");
@@ -126,7 +139,7 @@ namespace CapaDatos
         public int Ejecutar(string Proc, string[] Parametros, params Object[] DatosParametro)
         {
             SqlCommand cmd = new SqlCommand();
-            using (SqlConnection cn = new SqlConnection(obtenertconexion()))
+            using (SqlConnection cn = new SqlConnection(CONEXIONPERRONA))
             {
                 cn.Open();
                 cn.ChangeDatabase(bdda);
@@ -163,7 +176,7 @@ namespace CapaDatos
         {
             DataTable dt = new DataTable();
             SqlCommand cmd = new SqlCommand();
-            using (SqlConnection cn = new SqlConnection(obtenertconexion()))
+            using (SqlConnection cn = new SqlConnection(CONEXIONPERRONA)
             {
                 try
                 {
