@@ -48,7 +48,10 @@ namespace OrdenamientoPesquero
             ObtenerImagen();
             limpiarpescador();
             cargando = false;
-            Unid.Text = NombreUnidad;
+            if (NombreUnidad != "NO APLICA")
+            {
+                Unid.Text = NombreUnidad;
+            }
         }
 
         public int AccionesPescador(bool registrar)
@@ -65,7 +68,7 @@ namespace OrdenamientoPesquero
                     break;
                 }
             }
-            if (Unid.Text != "")
+            if (Unid.Text != "NO APLICA")
             {
                 foreach (RadioButton item in TipoPesc.Controls.OfType<RadioButton>())
                 {
@@ -147,7 +150,9 @@ namespace OrdenamientoPesquero
             }
             else
             {
-                pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text, RFCPesc.Text, EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, "NO APLICA", CorreoPesc.Text, LocalidadPesc.Text, o, "NO APLICA", Seguro.Text, FolioCred.Text, fechaVenF, fechaExpF);
+                string R = "NO APLICA";
+                if (ListaNombres.SelectedIndex > -1) { NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), ""); R = NOMBRES.Rows[0]["RNPTITULAR"].ToString(); }
+                pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text, RFCPesc.Text, EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, "NO APLICA", CorreoPesc.Text, LocalidadPesc.Text, o, R, Seguro.Text, FolioCred.Text, fechaVenF, fechaExpF);
                 if (registrar)
                 {
                     RegistrarImagen();
@@ -221,9 +226,9 @@ namespace OrdenamientoPesquero
                     if (filas["MATRICULA"].ToString() == RNPA) { break; }
                     I++;
                 }
-                if (dt.Rows.Count < I)
+                if (dt.Rows.Count <= I || I == 0)
                 {
-                    dt.Rows.RemoveAt(I);
+                    if (dt.Rows.Count > I) { dt.Rows.RemoveAt(I); }
 
                     DataRow na = dt.NewRow();
                     na["MATRICULA"] = RNPA;
@@ -813,11 +818,11 @@ namespace OrdenamientoPesquero
         private void BuscarNombre2_TextChanged(object sender, EventArgs e)
         {
             string x = BuscarNombre2.Text;
-            NoOrdenados = proc.BuscarNombre(x, "");
+            NoOrdenados = proc.BuscarNombre(x, "NO APLICA");
             ListaNombres2.Items.Clear();
             foreach (DataRow fila in NoOrdenados.Rows)
             {
-                ListaNombres.Items.Add(fila["NOMBRE"].ToString());
+                ListaNombres2.Items.Add(fila["NOMBRE"].ToString());
             }
         }
         #endregion

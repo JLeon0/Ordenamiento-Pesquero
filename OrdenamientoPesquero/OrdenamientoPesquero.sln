@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdenamientoPesquero", "OrdenamientoPesquero\OrdenamientoPesquero.csproj", "{26B25B8A-91B1-4FE6-B432-7B44611D744C}"
 EndProject
@@ -66,5 +66,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D676F98F-F3DD-4666-86EE-8AC106A8E46A}
 	EndGlobalSection
 EndGlobal

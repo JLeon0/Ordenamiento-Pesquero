@@ -271,7 +271,7 @@
             this.Seguro.Items.AddRange(new object[] {
             "ACTIVO",
             "BAJA",
-            "OXCISO",
+            "OCCISO",
             "OTRO"});
             this.Seguro.Location = new System.Drawing.Point(643, 290);
             this.Seguro.Name = "Seguro";
