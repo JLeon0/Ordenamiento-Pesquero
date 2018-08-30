@@ -460,6 +460,10 @@
     <None Include="Resources\actualizar.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\CapaDatos\CapaDatos.csproj">
+      <Project>{8e15fc49-4a3b-493e-b73b-cb5dd5a6d4f3}</Project>
+      <Name>CapaDatos</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Logica\Logica.csproj">
       <Project>{d48b06ec-8515-4ab1-87c2-0b6c56b225d6}</Project>
       <Name>Logica</Name>

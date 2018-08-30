@@ -16,62 +16,90 @@ namespace CapaDatos
     {
         public SqlConnection con;
         public string bdda;
+        public string CONEXIONPERRONA = "";
+
         public static string obtenertconexion()
         {
             return Properties.Settings.Default.OrdPesqueroConnectionString;
         }
-        public Conexion(string bd) { 
-            bdda=bd;
+        public string setString(string instancia)
+        {
+            CONEXIONPERRONA = "Data source = " + instancia + "; Initial Catalog = OrdPesquero; Integrated Security = true;";
+            Properties.Settings.Default.OrdPesqueroConnectionString = CONEXIONPERRONA;
+            
+            // modificamos el guardado
+            Properties.Settings.Default.Save();
+            con = new SqlConnection(obtenertconexion());
+            try
+            {
+                con.Open();
+                con.Close();
+            }
+            catch (Exception ms)
+            {
+                setString(".");
+                con.Close();
+            }
+            return CapaDatos.Properties.Settings.Default.OrdPesqueroConnectionString;
+        }
+        public Conexion(string bd)
+        {
+            bdda = bd;
             con = new SqlConnection(obtenertconexion());
             //con.ChangeDatabase(bdda);
             //con.Open();
         }
+        public Conexion(string bd, string instancia)
+        {
+            bdda = bd;
+            con = new SqlConnection(setString(instancia));
+        }
         public void Generer_respaldo(string direc, string rnpa)
         {
-            string back = "BACKUP DATABASE[OrdPesquero2] TO DISK = N'"+direc+"\\"+rnpa+".bak"+"' WITH NOFORMAT, NOINIT, NAME = N'test-Completa Base de datos Copia de seguridad', SKIP,NOREWIND, NOUNLOAD,  STATS = 10";
+            string back = "BACKUP DATABASE[OrdPesquero2] TO DISK = N'" + direc + "\\" + rnpa + ".bak" + "' WITH NOFORMAT, NOINIT, NAME = N'test-Completa Base de datos Copia de seguridad', SKIP,NOREWIND, NOUNLOAD,  STATS = 10";
             try
             {
                 SqlCommand cmd = new SqlCommand(back, con);
                 con.Open();
                 cmd.ExecuteNonQuery();
-               // string temporaryTableName = "temp";
-               // string _sql = "";
-               // string AremoteTempPath = "C:/wamp64/resp.bak";
-               // string AlocalPath = "C:/Users/ERNESTOPADILLA/Desktop";
-               // string fileName = "resp.bak";
-               // string _dbname = "OrdPesquero";
-               // _sql = String.Format("IF OBJECT_ID('tempdb..##{0}') IS " +
-               //      "NOT NULL DROP TABLE ##{0}", temporaryTableName);
-               // cmd.CommandText = _sql;
-               // cmd.ExecuteNonQuery();
-               // _sql = String.Format("CREATE TABLE ##{0} (bck VARBINARY(MAX))",
-               //                      temporaryTableName);
-               // cmd.CommandText = _sql;
-               // cmd.ExecuteNonQuery();
-               // _sql = String.Format("INSERT INTO ##{0} SELECT bck.* FROM " +
-               //"OPENROWSET(BULK '{1}',SINGLE_BLOB) bck",
-               //temporaryTableName, AremoteTempPath, _dbname);
-               // cmd.CommandText = _sql;
-               // cmd.ExecuteNonQuery();
-               // _sql = String.Format("SELECT bck FROM ##{0}", temporaryTableName);
-               // SqlDataAdapter da = new SqlDataAdapter(_sql, con);
-               // DataSet ds = new DataSet();
-               // da.Fill(ds);
-               // DataRow dr = ds.Tables[0].Rows[0];
-               // byte[] backupFromServer = new byte[0];
-               // backupFromServer = (byte[])dr["bck"];
-               // int aSize = new int();
-               // aSize = backupFromServer.GetUpperBound(0) + 1;
+                // string temporaryTableName = "temp";
+                // string _sql = "";
+                // string AremoteTempPath = "C:/wamp64/resp.bak";
+                // string AlocalPath = "C:/Users/ERNESTOPADILLA/Desktop";
+                // string fileName = "resp.bak";
+                // string _dbname = "OrdPesquero";
+                // _sql = String.Format("IF OBJECT_ID('tempdb..##{0}') IS " +
+                //      "NOT NULL DROP TABLE ##{0}", temporaryTableName);
+                // cmd.CommandText = _sql;
+                // cmd.ExecuteNonQuery();
+                // _sql = String.Format("CREATE TABLE ##{0} (bck VARBINARY(MAX))",
+                //                      temporaryTableName);
+                // cmd.CommandText = _sql;
+                // cmd.ExecuteNonQuery();
+                // _sql = String.Format("INSERT INTO ##{0} SELECT bck.* FROM " +
+                //"OPENROWSET(BULK '{1}',SINGLE_BLOB) bck",
+                //temporaryTableName, AremoteTempPath, _dbname);
+                // cmd.CommandText = _sql;
+                // cmd.ExecuteNonQuery();
+                // _sql = String.Format("SELECT bck FROM ##{0}", temporaryTableName);
+                // SqlDataAdapter da = new SqlDataAdapter(_sql, con);
+                // DataSet ds = new DataSet();
+                // da.Fill(ds);
+                // DataRow dr = ds.Tables[0].Rows[0];
+                // byte[] backupFromServer = new byte[0];
+                // backupFromServer = (byte[])dr["bck"];
+                // int aSize = new int();
+                // aSize = backupFromServer.GetUpperBound(0) + 1;
 
-               // FileStream fs = new FileStream(String.Format("{0}\\{1}",
-               //                 AlocalPath, fileName), FileMode.OpenOrCreate,
-               //                 FileAccess.Write);
-               // fs.Write(backupFromServer, 0, aSize);
-               // fs.Close();
+                // FileStream fs = new FileStream(String.Format("{0}\\{1}",
+                //                 AlocalPath, fileName), FileMode.OpenOrCreate,
+                //                 FileAccess.Write);
+                // fs.Write(backupFromServer, 0, aSize);
+                // fs.Close();
 
-               // _sql = String.Format("DROP TABLE ##{0}", temporaryTableName);
-               // cmd.CommandText = _sql;
-               // cmd.ExecuteNonQuery();
+                // _sql = String.Format("DROP TABLE ##{0}", temporaryTableName);
+                // cmd.CommandText = _sql;
+                // cmd.ExecuteNonQuery();
                 con.Close();
             }
             catch (Exception ex)
@@ -80,6 +108,7 @@ namespace CapaDatos
                 MessageBox.Show(ex.ToString());
             }
         }
+
         public bool cargar(string archivo)
         {
             //con.ChangeDatabase("master");
@@ -170,7 +199,7 @@ namespace CapaDatos
                     da.Fill(ds);
                     cn.Close();
                 }
-                catch(Exception s)
+                catch (Exception s)
                 {
 
                 }
@@ -209,7 +238,8 @@ namespace CapaDatos
                     }
                     cn.Close();
                     return dt;
-                }catch(Exception s)
+                }
+                catch (Exception s)
                 {
                     return dt;
                 }
