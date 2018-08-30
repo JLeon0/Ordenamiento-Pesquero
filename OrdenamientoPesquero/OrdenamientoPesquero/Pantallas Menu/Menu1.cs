@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
 using CapaDatos;
 
 namespace OrdenamientoPesquero.Pantallas_Menu
@@ -23,7 +24,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         private void Solicitudes_Click(object sender, EventArgs e)
         {
             //Process.Start("C:\\Windows\\SigPlus\\DemoOCX.exe");
-            Pantalla_Registro_Usuario pantalla = new Pantalla_Registro_Usuario("","");
+            Pantalla_Registro_Usuario pantalla = new Pantalla_Registro_Usuario("", "");
             pantalla.ShowDialog();
         }
 
@@ -31,11 +32,6 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         {
             Pantalla_Registro_UnidadEconomica unidad = new Pantalla_Registro_UnidadEconomica();
             unidad.ShowDialog();
-        }
-
-        private void Menu1_Load(object sender, EventArgs e)
-        {
-            CargarInstancia();
         }
 
         private void CargarInstancia()
@@ -46,6 +42,24 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             {
                 c = new Conexion("OrdPesquero", @".\" + s);
             }
+            setString(c.CONEXIONPERRONA);
+        }
+
+        private void Menu1_Load_1(object sender, EventArgs e)
+        {
+            CargarInstancia();
+        }
+        public string setString(string CONEXIONPERRONA)
+        {
+            Properties.Settings.Default.OrdPesqueroConnectionString = CONEXIONPERRONA;
+            Properties.Settings.Default.OrdPesqueroConnectionString1 = CONEXIONPERRONA;
+            Properties.Settings.Default.OrdPesqueroConnectionString2 = CONEXIONPERRONA;
+            Properties.Settings.Default.OrdPesqueroConnectionString3 = CONEXIONPERRONA;
+            // modificamos el guardado
+            Properties.Settings.Default.Save();
+
+            return Properties.Settings.Default.OrdPesqueroConnectionString;
         }
     }
 }
+

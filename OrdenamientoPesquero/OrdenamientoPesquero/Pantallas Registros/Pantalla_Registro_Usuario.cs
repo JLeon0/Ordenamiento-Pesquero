@@ -39,7 +39,7 @@ namespace OrdenamientoPesquero
 
         private void Pantalla_Registro_Usuario_Load(object sender, EventArgs e)
         {
-            val.ajustarResolucion(this);
+            //val.ajustarResolucion(this);
             BloquearControles();
             CargarPescadores();
             CargarNoPescadores();
@@ -362,6 +362,8 @@ namespace OrdenamientoPesquero
                 Solicitud.Visible = true;
                 Apoyo.Visible = true;
                 MatriculaPesc.Enabled = false;
+                groupBox4.Height = groupBox4.Height - 100;
+                Botones.Location = new Point(Botones.Location.X, Botones.Location.Y - 50);
             }
         }
 

@@ -131,6 +131,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.Solicitud = new System.Windows.Forms.Button();
             this.Apoyo = new System.Windows.Forms.Button();
+            this.Botones = new System.Windows.Forms.GroupBox();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.CargarImagen)).BeginInit();
             this.gbxOrdenado.SuspendLayout();
@@ -152,6 +153,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).BeginInit();
+            this.Botones.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox7
@@ -208,7 +210,7 @@
             this.groupBox7.Controls.Add(this.label53);
             this.groupBox7.Controls.Add(this.NombrePesc);
             this.groupBox7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox7.Location = new System.Drawing.Point(266, 89);
+            this.groupBox7.Location = new System.Drawing.Point(216, 89);
             this.groupBox7.Name = "groupBox7";
             this.groupBox7.Size = new System.Drawing.Size(894, 384);
             this.groupBox7.TabIndex = 7;
@@ -797,7 +799,7 @@
             this.groupBox4.Controls.Add(this.OcupacionEnEmbarPesc);
             this.groupBox4.Controls.Add(this.TipoPesc);
             this.groupBox4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(267, 476);
+            this.groupBox4.Location = new System.Drawing.Point(217, 476);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(894, 189);
             this.groupBox4.TabIndex = 8;
@@ -1009,7 +1011,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(852, 736);
+            this.label2.Location = new System.Drawing.Point(588, 73);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 14);
             this.label2.TabIndex = 111;
@@ -1019,7 +1021,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(926, 736);
+            this.label3.Location = new System.Drawing.Point(662, 73);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 14);
             this.label3.TabIndex = 111;
@@ -1029,7 +1031,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(1009, 735);
+            this.label4.Location = new System.Drawing.Point(745, 72);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 14);
             this.label4.TabIndex = 111;
@@ -1039,7 +1041,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(1090, 736);
+            this.label5.Location = new System.Drawing.Point(826, 73);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(85, 14);
             this.label5.TabIndex = 113;
@@ -1058,7 +1060,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(565, 31);
+            this.label24.Location = new System.Drawing.Point(515, 31);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(221, 19);
             this.label24.TabIndex = 153;
@@ -1072,9 +1074,9 @@
             this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.label9);
             this.groupBox1.Controls.Add(this.Unid);
-            this.groupBox1.Location = new System.Drawing.Point(1183, 80);
+            this.groupBox1.Location = new System.Drawing.Point(1116, 81);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(305, 297);
+            this.groupBox1.Size = new System.Drawing.Size(195, 297);
             this.groupBox1.TabIndex = 154;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "INFORMACIÓN";
@@ -1141,7 +1143,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(931, 13);
+            this.pictureBox3.Location = new System.Drawing.Point(881, 13);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(200, 60);
@@ -1153,7 +1155,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(266, 13);
+            this.pictureBox2.Location = new System.Drawing.Point(216, 13);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 60);
@@ -1164,7 +1166,7 @@
             // 
             this.Ver.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ver;
             this.Ver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Ver.Location = new System.Drawing.Point(1109, 682);
+            this.Ver.Location = new System.Drawing.Point(845, 19);
             this.Ver.Name = "Ver";
             this.Ver.Size = new System.Drawing.Size(50, 50);
             this.Ver.TabIndex = 112;
@@ -1175,7 +1177,7 @@
             // 
             this.EliminarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Eliminar;
             this.EliminarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EliminarUnidad.Location = new System.Drawing.Point(1003, 682);
+            this.EliminarUnidad.Location = new System.Drawing.Point(739, 19);
             this.EliminarUnidad.Name = "EliminarUnidad";
             this.EliminarUnidad.Size = new System.Drawing.Size(50, 50);
             this.EliminarUnidad.TabIndex = 110;
@@ -1187,7 +1189,7 @@
             this.ActualizarUnidad.BackColor = System.Drawing.Color.Transparent;
             this.ActualizarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
             this.ActualizarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ActualizarUnidad.Location = new System.Drawing.Point(926, 682);
+            this.ActualizarUnidad.Location = new System.Drawing.Point(662, 19);
             this.ActualizarUnidad.Name = "ActualizarUnidad";
             this.ActualizarUnidad.Size = new System.Drawing.Size(50, 50);
             this.ActualizarUnidad.TabIndex = 109;
@@ -1199,7 +1201,7 @@
             this.RegistrarUnidad.BackColor = System.Drawing.Color.Transparent;
             this.RegistrarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.RegistrarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RegistrarUnidad.Location = new System.Drawing.Point(851, 682);
+            this.RegistrarUnidad.Location = new System.Drawing.Point(587, 19);
             this.RegistrarUnidad.Name = "RegistrarUnidad";
             this.RegistrarUnidad.Size = new System.Drawing.Size(50, 50);
             this.RegistrarUnidad.TabIndex = 108;
@@ -1209,7 +1211,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(91, 89);
+            this.label12.Location = new System.Drawing.Point(64, 89);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(80, 13);
             this.label12.TabIndex = 158;
@@ -1219,7 +1221,7 @@
             // 
             this.BuscarNombre.Location = new System.Drawing.Point(15, 115);
             this.BuscarNombre.Name = "BuscarNombre";
-            this.BuscarNombre.Size = new System.Drawing.Size(245, 20);
+            this.BuscarNombre.Size = new System.Drawing.Size(185, 20);
             this.BuscarNombre.TabIndex = 160;
             this.BuscarNombre.TextChanged += new System.EventHandler(this.BuscarNombre_TextChanged_1);
             this.BuscarNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BuscarNombre_KeyPress);
@@ -1229,7 +1231,7 @@
             this.ListaNombres.FormattingEnabled = true;
             this.ListaNombres.Location = new System.Drawing.Point(15, 141);
             this.ListaNombres.Name = "ListaNombres";
-            this.ListaNombres.Size = new System.Drawing.Size(245, 199);
+            this.ListaNombres.Size = new System.Drawing.Size(185, 199);
             this.ListaNombres.TabIndex = 161;
             this.ListaNombres.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListaNombres_MouseDoubleClick);
             // 
@@ -1239,7 +1241,7 @@
             this.ListaNombres2.Location = new System.Drawing.Point(15, 397);
             this.ListaNombres2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ListaNombres2.Name = "ListaNombres2";
-            this.ListaNombres2.Size = new System.Drawing.Size(245, 160);
+            this.ListaNombres2.Size = new System.Drawing.Size(185, 160);
             this.ListaNombres2.TabIndex = 179;
             this.ListaNombres2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListaNombres2_MouseDoubleClick);
             // 
@@ -1248,14 +1250,14 @@
             this.BuscarNombre2.Location = new System.Drawing.Point(15, 368);
             this.BuscarNombre2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BuscarNombre2.Name = "BuscarNombre2";
-            this.BuscarNombre2.Size = new System.Drawing.Size(245, 20);
+            this.BuscarNombre2.Size = new System.Drawing.Size(185, 20);
             this.BuscarNombre2.TabIndex = 178;
             this.BuscarNombre2.TextChanged += new System.EventHandler(this.BuscarNombre2_TextChanged);
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(91, 351);
+            this.label13.Location = new System.Drawing.Point(64, 351);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(95, 13);
             this.label13.TabIndex = 177;
@@ -1263,7 +1265,7 @@
             // 
             // Solicitud
             // 
-            this.Solicitud.Location = new System.Drawing.Point(267, 671);
+            this.Solicitud.Location = new System.Drawing.Point(3, 15);
             this.Solicitud.Name = "Solicitud";
             this.Solicitud.Size = new System.Drawing.Size(87, 61);
             this.Solicitud.TabIndex = 180;
@@ -1274,7 +1276,7 @@
             // 
             // Apoyo
             // 
-            this.Apoyo.Location = new System.Drawing.Point(376, 671);
+            this.Apoyo.Location = new System.Drawing.Point(113, 15);
             this.Apoyo.Name = "Apoyo";
             this.Apoyo.Size = new System.Drawing.Size(87, 61);
             this.Apoyo.TabIndex = 180;
@@ -1283,15 +1285,33 @@
             this.Apoyo.Visible = false;
             this.Apoyo.Click += new System.EventHandler(this.Apoyo_Click);
             // 
+            // Botones
+            // 
+            this.Botones.Controls.Add(this.Solicitud);
+            this.Botones.Controls.Add(this.Apoyo);
+            this.Botones.Controls.Add(this.RegistrarUnidad);
+            this.Botones.Controls.Add(this.ActualizarUnidad);
+            this.Botones.Controls.Add(this.EliminarUnidad);
+            this.Botones.Controls.Add(this.label2);
+            this.Botones.Controls.Add(this.label3);
+            this.Botones.Controls.Add(this.label4);
+            this.Botones.Controls.Add(this.Ver);
+            this.Botones.Controls.Add(this.label5);
+            this.Botones.Location = new System.Drawing.Point(212, 665);
+            this.Botones.Name = "Botones";
+            this.Botones.Size = new System.Drawing.Size(912, 89);
+            this.Botones.TabIndex = 181;
+            this.Botones.TabStop = false;
+            this.Botones.Text = " ";
+            // 
             // Pantalla_Registro_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1513, 767);
-            this.Controls.Add(this.Apoyo);
-            this.Controls.Add(this.Solicitud);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.Botones);
             this.Controls.Add(this.ListaNombres2);
             this.Controls.Add(this.BuscarNombre2);
             this.Controls.Add(this.label13);
@@ -1302,19 +1322,12 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.label24);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.Ver);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.EliminarUnidad);
             this.Controls.Add(this.groupBox7);
-            this.Controls.Add(this.ActualizarUnidad);
-            this.Controls.Add(this.RegistrarUnidad);
             this.Name = "Pantalla_Registro_Usuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pantalla_Registro_Usuario";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Pantalla_Registro_Usuario_Load);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
@@ -1344,6 +1357,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).EndInit();
+            this.Botones.ResumeLayout(false);
+            this.Botones.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1451,5 +1466,6 @@
         private System.Windows.Forms.LinkLabel apoyos;
         private System.Windows.Forms.LinkLabel solicitudes;
         private System.Windows.Forms.Button Apoyo;
+        private System.Windows.Forms.GroupBox Botones;
     }
 }

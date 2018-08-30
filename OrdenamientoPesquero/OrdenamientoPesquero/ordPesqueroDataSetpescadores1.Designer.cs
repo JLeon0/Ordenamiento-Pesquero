@@ -279,7 +279,7 @@ namespace OrdenamientoPesquero {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class pescadoresDataTable : global::System.Data.TypedTableBase<pescadoresRow> {
             
-            private global::System.Data.DataColumn columnCodigo;
+            private global::System.Data.DataColumn columnSeguro;
             
             private global::System.Data.DataColumn columnNombre;
             
@@ -326,9 +326,9 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn CodigoColumn {
+            public global::System.Data.DataColumn SeguroColumn {
                 get {
-                    return this.columnCodigo;
+                    return this.columnSeguro;
                 }
             }
             
@@ -409,10 +409,10 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public pescadoresRow AddpescadoresRow(string Nombre, string OCUPACION_LABORAL, string CURP, string NOMBREEMBARCACION, string EMBARCACION) {
+            public pescadoresRow AddpescadoresRow(string Seguro, string Nombre, string OCUPACION_LABORAL, string CURP, string NOMBREEMBARCACION, string EMBARCACION) {
                 pescadoresRow rowpescadoresRow = ((pescadoresRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        Seguro,
                         Nombre,
                         OCUPACION_LABORAL,
                         CURP,
@@ -447,7 +447,7 @@ namespace OrdenamientoPesquero {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
-                this.columnCodigo = base.Columns["Codigo"];
+                this.columnSeguro = base.Columns["Seguro"];
                 this.columnNombre = base.Columns["Nombre"];
                 this.columnOCUPACION_LABORAL = base.Columns["OCUPACION_LABORAL"];
                 this.columnCURP = base.Columns["CURP"];
@@ -458,8 +458,8 @@ namespace OrdenamientoPesquero {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             private void InitClass() {
-                this.columnCodigo = new global::System.Data.DataColumn("Codigo", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnCodigo);
+                this.columnSeguro = new global::System.Data.DataColumn("Seguro", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSeguro);
                 this.columnNombre = new global::System.Data.DataColumn("Nombre", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNombre);
                 this.columnOCUPACION_LABORAL = new global::System.Data.DataColumn("OCUPACION_LABORAL", typeof(string), null, global::System.Data.MappingType.Element);
@@ -472,9 +472,7 @@ namespace OrdenamientoPesquero {
                 base.Columns.Add(this.columnEMBARCACION);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCURP}, true));
-                this.columnCodigo.AutoIncrement = true;
-                this.columnCodigo.AllowDBNull = false;
-                this.columnCodigo.ReadOnly = true;
+                this.columnSeguro.MaxLength = 10;
                 this.columnNombre.ReadOnly = true;
                 this.columnNombre.MaxLength = 102;
                 this.columnOCUPACION_LABORAL.MaxLength = 30;
@@ -482,7 +480,7 @@ namespace OrdenamientoPesquero {
                 this.columnCURP.Unique = true;
                 this.columnCURP.MaxLength = 20;
                 this.columnNOMBREEMBARCACION.MaxLength = 40;
-                this.columnEMBARCACION.MaxLength = 15;
+                this.columnEMBARCACION.MaxLength = 20;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -625,12 +623,17 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int Codigo {
+            public string Seguro {
                 get {
-                    return ((int)(this[this.tablepescadores.CodigoColumn]));
+                    try {
+                        return ((string)(this[this.tablepescadores.SeguroColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Seguro\' de la tabla \'pescadores\' es DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tablepescadores.CodigoColumn] = value;
+                    this[this.tablepescadores.SeguroColumn] = value;
                 }
             }
             
@@ -707,6 +710,18 @@ namespace OrdenamientoPesquero {
                 set {
                     this[this.tablepescadores.EMBARCACIONColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSeguroNull() {
+                return this.IsNull(this.tablepescadores.SeguroColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSeguroNull() {
+                this[this.tablepescadores.SeguroColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -917,7 +932,7 @@ namespace OrdenamientoPesquero.ordPesqueroDataSetpescadores1TableAdapters {
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "pescadores";
-            tableMapping.ColumnMappings.Add("Codigo", "Codigo");
+            tableMapping.ColumnMappings.Add("Seguro", "Seguro");
             tableMapping.ColumnMappings.Add("Nombre", "Nombre");
             tableMapping.ColumnMappings.Add("OCUPACION_LABORAL", "OCUPACION_LABORAL");
             tableMapping.ColumnMappings.Add("CURP", "CURP");
@@ -930,7 +945,7 @@ namespace OrdenamientoPesquero.ordPesqueroDataSetpescadores1TableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::OrdenamientoPesquero.Properties.Settings.Default.OrdPesqueroConnectionString2;
+            this._connection.ConnectionString = global::OrdenamientoPesquero.Properties.Settings.Default.OrdPesqueroConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -942,7 +957,7 @@ namespace OrdenamientoPesquero.ordPesqueroDataSetpescadores1TableAdapters {
             this._commandCollection[0].CommandText = "dbo.pescadores";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
             this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rnpa", global::System.Data.SqlDbType.VarChar, 12, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@rnpa", global::System.Data.SqlDbType.VarChar, 20, global::System.Data.ParameterDirection.Input, 0, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

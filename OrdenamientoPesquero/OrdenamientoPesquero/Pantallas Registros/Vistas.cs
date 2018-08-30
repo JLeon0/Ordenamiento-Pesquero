@@ -10,6 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaDatos;
 using System.Windows.Forms;
 
 namespace OrdenamientoPesquero.Pantallas_Registros
@@ -27,24 +28,26 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         string unidad;
         int tip;
         Procedimientos proc = new Procedimientos();
+        Conexion c;
         private void Vistas_Load(object sender, EventArgs e)
         {
+            c = new Conexion("", ".");
             // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet9.permi' Puede moverla o quitarla según sea necesario.
-            this.permiTableAdapter1.Fill(this.ordPesqueroDataSet9.permi);
-            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet8.permi' Puede moverla o quitarla según sea necesario.
-            this.permiTableAdapter.Fill(this.ordPesqueroDataSet8.permi);
-            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet7.Mulege' Puede moverla o quitarla según sea necesario.
-            this.mulegeTableAdapter.Fill(this.ordPesqueroDataSet7.Mulege);
-            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet6.LosCabos' Puede moverla o quitarla según sea necesario.
-            this.losCabosTableAdapter.Fill(this.ordPesqueroDataSet6.LosCabos);
-            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet5.Loreto' Puede moverla o quitarla según sea necesario.
-            this.loretoTableAdapter.Fill(this.ordPesqueroDataSet5.Loreto);
-            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet4.LaPaz' Puede moverla o quitarla según sea necesario.
-            this.laPazTableAdapter.Fill(this.ordPesqueroDataSet4.LaPaz);
-            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet3.Comondu' Puede moverla o quitarla según sea necesario.
-            this.comonduTableAdapter.Fill(this.ordPesqueroDataSet3.Comondu);
-            // TODO: esta línea de código carga datos en la tabla 'todospes.todos' Puede moverla o quitarla según sea necesario.
-            this.todosTableAdapter.Fill(this.todospes.todos);
+            //this.permiTableAdapter1.Fill(this.ordPesqueroDataSet9.permi);
+            //// TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet8.permi' Puede moverla o quitarla según sea necesario.
+            //this.permiTableAdapter.Fill(this.ordPesqueroDataSet8.permi);
+            //// TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet7.Mulege' Puede moverla o quitarla según sea necesario.
+            //this.mulegeTableAdapter.Fill(this.ordPesqueroDataSet7.Mulege);
+            //// TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet6.LosCabos' Puede moverla o quitarla según sea necesario.
+            //this.losCabosTableAdapter.Fill(this.ordPesqueroDataSet6.LosCabos);
+            //// TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet5.Loreto' Puede moverla o quitarla según sea necesario.
+            //this.loretoTableAdapter.Fill(this.ordPesqueroDataSet5.Loreto);
+            //// TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet4.LaPaz' Puede moverla o quitarla según sea necesario.
+            //this.laPazTableAdapter.Fill(this.ordPesqueroDataSet4.LaPaz);
+            //// TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet3.Comondu' Puede moverla o quitarla según sea necesario.
+            //this.comonduTableAdapter.Fill(this.ordPesqueroDataSet3.Comondu);
+            //// TODO: esta línea de código carga datos en la tabla 'todospes.todos' Puede moverla o quitarla según sea necesario.
+            //this.todosTableAdapter.Fill(this.todospes.todos);
             ReportDataSource datos = new ReportDataSource();
             ReportDataSource datos2 = new ReportDataSource();
             ReportDataSource datos3 = new ReportDataSource();
@@ -194,6 +197,36 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     datos3.Name = "DataSet5";
                     datos3.Value = ordPesqueroDataSetpescadores1.pescadores;
                     this.reportViewer1.LocalReport.DataSources.Add(datos3);
+
+                    try
+                    {
+                        this.vista_perm2TableAdapter.Fill(permisos_lista.vista_perm2, rnpa);
+
+                    }
+                    catch (Exception)
+                    {
+
+                        //throw;
+                    }
+                    datos4.Name = "DataSet11";
+                    datos4.Value = permisos_lista.vista_perm2;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos4);
+
+                    try
+                    {
+                        this.vista_perm3TableAdapter.Fill(permisos_lista.vista_perm3, rnpa);
+
+                    }
+                    catch (Exception)
+                    {
+
+                        //throw;
+                    }
+                    datos5.Name = "DataSet4";
+                    datos5.Value = permisos_lista.vista_perm3;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos5);
+
+
                     ReportParameter[] para2 = new ReportParameter[8];
                     dt = proc.ObtenerUnaFederacion(rnpa);
                     if (dt.Rows.Count != 0)
