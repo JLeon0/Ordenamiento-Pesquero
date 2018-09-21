@@ -19,7 +19,7 @@ namespace OrdenamientoPesquero
         {
             InitializeComponent();
             //this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
-            this.Width = 734;
+            this.Width = 981;
             Rnpa = rnpa;
             Municipio = muni;
             uni = unidad;
@@ -35,7 +35,7 @@ namespace OrdenamientoPesquero
         DataTable dt = null;
         private void Pantalla_Regitro_permiso_Load(object sender, EventArgs e)
         {
-            CargarRNPA();
+            CargarPermisos();
             Unid.Text = uni;
             dt = proc.ObtenerCertMatrXUnidad(Rnpa);
             for (int i = 0; i < dt.Rows.Count; i++)
@@ -61,14 +61,14 @@ namespace OrdenamientoPesquero
             dgvEmbarcacionesPerm[3, row.Index].Value = dt.Rows[combo.SelectedIndex]["MOTORHP"].ToString();
             dgvEmbarcacionesPerm[0, row.Index].Value = dt.Rows[combo.SelectedIndex]["NOMBREEMBARCACION"].ToString();
         }
-        private void CargarRNPA()
+        private void CargarPermisos()
         {
-            string a = nPer.Text;
             dt = proc.ObtenerNoPermisos(Rnpa);
-            nPer.DataSource = dt;
-            nPer.DisplayMember = "NPERMISO";
-            nPer.ValueMember = "NPERMISO";
-            nPer.Text = a;
+            ListaPermisos.Items.Clear();
+            foreach (DataRow fila in dt.Rows)
+            {
+                ListaPermisos.Items.Add(fila["NPERMISO"].ToString());
+            }
         }
 
         private void CargarPesquerias()
@@ -199,55 +199,7 @@ namespace OrdenamientoPesquero
         }
         private void pictureBox13_Click_1(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.WaitCursor;
-            if (nPer.Text != "")
-            {
-                string per = nPer.Text;
-                dt = proc.ObtenerPermiso(per);
-                limpiarpermiso();
-                nPer.Text = per;
-                if (dt.Rows.Count != 0)
-                {
-                    FolioPer.Text = dt.Rows[0]["FOLIO"].ToString();
-                    PesqueriaPer.Text = dt.Rows[0]["PESQUERIA"].ToString();
-                    LugarExpPer.Text = dt.Rows[0]["LUGAREXPEDICION"].ToString();
-                    diaExpPer.Text = dt.Rows[0]["DIAEXPEDICION"].ToString();
-                    finVigenciaPer.Text = dt.Rows[0]["FINVIGENCIA"].ToString();
-                    ZonaPescaPerm.Text = dt.Rows[0]["ZONAPESCA"].ToString();
-                    SitiosDesemPer.Text = dt.Rows[0]["SITIOSDESEMBARQUE"].ToString();
-                    string tp = dt.Rows[0]["TIPOPERMISO"].ToString();
-                    int tipoperm = 0;
-                    if (tp != "") { tipoperm = Convert.ToInt32(tp); }
-                    if(tipoperm == 1) { Acuicola.Checked = true; }else if(tipoperm==2){ Deportiva.Checked = true; } else { Comercial.Checked = true; }
-                    dt = proc.EquiposxPermiso(per);
-                    numericUpDown2.Value = dt.Rows.Count;
-                    dgvEquiposPescaPerm.RowCount = dt.Rows.Count;
-                    for (int i = 0; i < dt.Rows.Count; i++)
-                    {
-                        Tipo.Items.Add(dt.Rows[i]["TIPO"].ToString());
-                        dgvEquiposPescaPerm[0, i].Value = dt.Rows[i]["CANTIDAD"].ToString();
-                        dgvEquiposPescaPerm[1, i].Value = dt.Rows[i]["TIPO"].ToString();
-                        dgvEquiposPescaPerm[2, i].Value = dt.Rows[i]["CARACTERISTICAS"].ToString();
-                    }
-                    dt = proc.NumeroEmbarcaciones(per);
-                    numericUpDown1.Value = dt.Rows.Count;
-                    dt = proc.EmbarcacionesxPermiso(per);
-                    dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
-                    for (int i = 0; i < dt.Rows.Count; i++)
-                    {
-                        dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
-                       // Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
-                        dgvEmbarcacionesPerm[0, i].Value = dt.Rows[i]["NOMBREEMBARCACION"].ToString();
-                        dgvEmbarcacionesPerm[1, i].Value = dt.Rows[i]["MATRICULA"].ToString();
-                        dgvEmbarcacionesPerm[2, i].Value = dt.Rows[i]["MOTORMARCA"].ToString();
-                        dgvEmbarcacionesPerm[3, i].Value = dt.Rows[i]["MOTORHP"].ToString();
-
-                    }
-
-                }
-            }
-            dt = proc.ObtenerCertMatrXUnidad(Rnpa);
-            this.Cursor = Cursors.Default;
+            
         }
 
         private void Registrar_Click(object sender, EventArgs e)
@@ -275,7 +227,7 @@ namespace OrdenamientoPesquero
                 }
             }
             val.Exito(exito);
-            CargarRNPA();
+            CargarPermisos();
         }
 
         private void Actualizar_Click(object sender, EventArgs e)
@@ -383,6 +335,59 @@ namespace OrdenamientoPesquero
             {
                 pictureBox13_Click_1(sender, e);
             }
+        }
+
+        private void ListaPermisos_DoubleClick(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            if (ListaPermisos.SelectedIndex > -1)
+            {
+                string per = ListaPermisos.Text;
+                dt = proc.ObtenerPermiso(per);
+                limpiarpermiso();
+                nPer.Text = per;
+                if (dt.Rows.Count != 0)
+                {
+                    FolioPer.Text = dt.Rows[0]["FOLIO"].ToString();
+                    PesqueriaPer.Text = dt.Rows[0]["PESQUERIA"].ToString();
+                    LugarExpPer.Text = dt.Rows[0]["LUGAREXPEDICION"].ToString();
+                    diaExpPer.Text = dt.Rows[0]["DIAEXPEDICION"].ToString();
+                    finVigenciaPer.Text = dt.Rows[0]["FINVIGENCIA"].ToString();
+                    ZonaPescaPerm.Text = dt.Rows[0]["ZONAPESCA"].ToString();
+                    SitiosDesemPer.Text = dt.Rows[0]["SITIOSDESEMBARQUE"].ToString();
+                    string tp = dt.Rows[0]["TIPOPERMISO"].ToString();
+                    int tipoperm = 0;
+                    if (tp != "") { tipoperm = Convert.ToInt32(tp); }
+                    if (tipoperm == 1) { Acuicola.Checked = true; } else if (tipoperm == 2) { Deportiva.Checked = true; } else { Comercial.Checked = true; }
+                    dt = proc.EquiposxPermiso(per);
+                    numericUpDown2.Value = dt.Rows.Count;
+                    dgvEquiposPescaPerm.RowCount = dt.Rows.Count;
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        Tipo.Items.Add(dt.Rows[i]["TIPO"].ToString());
+                        dgvEquiposPescaPerm[0, i].Value = dt.Rows[i]["CANTIDAD"].ToString();
+                        dgvEquiposPescaPerm[1, i].Value = dt.Rows[i]["TIPO"].ToString();
+                        dgvEquiposPescaPerm[2, i].Value = dt.Rows[i]["CARACTERISTICAS"].ToString();
+                    }
+                    dt = proc.NumeroEmbarcaciones(per);
+                    numericUpDown1.Value = dt.Rows.Count;
+                    dt = proc.EmbarcacionesxPermiso(per);
+                    dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
+                    for (int i = 0; i < dt.Rows.Count; i++)
+                    {
+                        dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
+                        // Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
+                        dgvEmbarcacionesPerm[0, i].Value = dt.Rows[i]["NOMBREEMBARCACION"].ToString();
+                        dgvEmbarcacionesPerm[1, i].Value = dt.Rows[i]["MATRICULA"].ToString();
+                        dgvEmbarcacionesPerm[2, i].Value = dt.Rows[i]["MOTORMARCA"].ToString();
+                        dgvEmbarcacionesPerm[3, i].Value = dt.Rows[i]["MOTORHP"].ToString();
+
+                    }
+
+                }
+            }
+            dt = proc.ObtenerCertMatrXUnidad(Rnpa);
+            this.Cursor = Cursors.Default;
         }
     }
 
