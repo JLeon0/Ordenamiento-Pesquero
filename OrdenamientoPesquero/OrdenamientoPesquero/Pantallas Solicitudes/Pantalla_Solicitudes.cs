@@ -108,7 +108,7 @@ namespace OrdenamientoPesquero
 
         private void monto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsNumber(e.KeyChar))
+            if (!Char.IsNumber(e.KeyChar) && !Char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }
@@ -119,8 +119,9 @@ namespace OrdenamientoPesquero
         private void Entregar_Click(object sender, EventArgs e)
         {
             int exito = proc.Entregar_Solicitud(folio.Text);
-            if(exito == 1) { MessageBox.Show("EXITO"); } else { MessageBox.Show("HUBO UN ERROR"); }
+            if (exito == 1) { MessageBox.Show("EXITO"); } else { MessageBox.Show("HUBO UN ERROR"); }
             CargarSolicitudes();
+            LimpiarPantalla();
         }
 
         private void montoE_TextChanged(object sender, EventArgs e)
@@ -130,6 +131,14 @@ namespace OrdenamientoPesquero
             if (montoP.Text == "") { mP = 0; } else { mP = Convert.ToInt32(montoP.Text); }
 
             Total.Text = (mE + mF + mP).ToString();
+        }
+
+        private void LimpiarPantalla()
+        {
+            foreach (TextBox p in this.Controls.OfType<TextBox>())
+            {
+                p.Text = "";
+            }
         }
     }
 }

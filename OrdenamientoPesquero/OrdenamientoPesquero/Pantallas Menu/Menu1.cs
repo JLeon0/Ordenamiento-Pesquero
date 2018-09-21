@@ -49,7 +49,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         {
             CargarInstancia();
         }
-        public string setString(string CONEXIONPERRONA)
+        public void setString(string CONEXIONPERRONA)
         {
             Properties.Settings.Default.OrdPesqueroConnectionString = CONEXIONPERRONA;
             Properties.Settings.Default.OrdPesqueroConnectionString1 = CONEXIONPERRONA;
@@ -57,8 +57,6 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             Properties.Settings.Default.OrdPesqueroConnectionString3 = CONEXIONPERRONA;
             // modificamos el guardado
             Properties.Settings.Default.Save();
-
-            return Properties.Settings.Default.OrdPesqueroConnectionString;
         }
     }
 }
