@@ -10,9 +10,9 @@ using System.Windows.Forms;
 using Logica;
 using OrdenamientoPesquero.Pantallas_Registros;
 using System.IO;
-using FlexCodeSDK;
-using GriauleFingerprintLibrary;
-using GriauleFingerprintLibrary.Exceptions;
+//using FlexCodeSDK;
+//using GriauleFingerprintLibrary;
+//using GriauleFingerprintLibrary.Exceptions;
 
 namespace OrdenamientoPesquero
 {
@@ -34,9 +34,9 @@ namespace OrdenamientoPesquero
         //string template = "";
 
         //Griaule
-        private FingerprintCore fingerPrint;
-        private GriauleFingerprintLibrary.DataTypes.FingerprintRawImage rawImage;
-        GriauleFingerprintLibrary.DataTypes.FingerprintTemplate _template;
+        //private FingerprintCore fingerPrint;
+        //private GriauleFingerprintLibrary.DataTypes.FingerprintRawImage rawImage;
+        //GriauleFingerprintLibrary.DataTypes.FingerprintTemplate _template;
 
         public Pantalla_Registro_Usuario(string rnpa, string nombre)
         {
