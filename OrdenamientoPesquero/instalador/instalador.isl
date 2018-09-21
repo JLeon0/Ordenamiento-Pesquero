@@ -2627,7 +2627,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>SEPADA</td><td>0</td><td/><td>-1138328690</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>SEPADA</td><td>0</td><td/><td>-198813842</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-1138328690</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-1138328690</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>-1138328690</td></row>
@@ -3729,8 +3729,8 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>-1138328690</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-1138328690</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-1138328690</td></row>
-		<row><td>ID_STRING1</td><td>1033</td><td>http://sepadabcs.gob.mx</td><td>0</td><td/><td>-1138349138</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>SEPADA</td><td>0</td><td/><td>-1138328690</td></row>
+		<row><td>ID_STRING1</td><td>1033</td><td>http://www.SEPADA.com</td><td>0</td><td/><td>-198813842</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>SEPADA</td><td>0</td><td/><td>-198813842</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>-1138318322</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>-1138314194</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>ORDENA~1|Ordenamiento Pesquero</td><td>0</td><td/><td>-1138310002</td></row>
@@ -3981,7 +3981,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{46AF035C-51BC-4B87-8401-5BAACCBC2109}</td></row>
 		<row><td>ISUSSignature</td><td>{CD50E275-1101-40E6-B0F9-C4ED7D0DA6D4}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewShortcuts,viewRelease</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewShortcuts,viewRelease,viewISToday,viewAppFiles,viewSystemSearch</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
