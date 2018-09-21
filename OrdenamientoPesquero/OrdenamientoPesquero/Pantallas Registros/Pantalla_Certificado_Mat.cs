@@ -130,10 +130,11 @@ namespace OrdenamientoPesquero
         public void CertMatXUnidad()
         {
             dt = proc.ObtenerCertMatrXUnidad(RNPA);
-            MatriculaCertMat.DataSource = dt;
-            MatriculaCertMat.DisplayMember = "MATRICULA";
-            MatriculaCertMat.ValueMember = "MATRICULA";
-            MatriculaCertMat.Text = "";
+            ListaMatriculas.Items.Clear();
+            foreach (DataRow fila in dt.Rows)
+            {
+                ListaMatriculas.Items.Add(fila["MATRICULA"].ToString());
+            }
         }
 
         private void limpiar_Click(object sender, EventArgs e)
@@ -141,20 +142,6 @@ namespace OrdenamientoPesquero
             limpiarcertmat();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void MatriculaCertMat_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -162,6 +149,43 @@ namespace OrdenamientoPesquero
             {
                 pictureBox14_Click(sender, e);
             }
+        }
+
+        private void ListaMatriculas_DoubleClick(object sender, EventArgs e)
+        {
+            this.Cursor = Cursors.WaitCursor;
+            limpiarcertmat();
+            dt = proc.ObtenerCertMatrXUnidad(RNPA);
+            int i = dt.Rows.Count;
+            foreach (DataRow filas in dt.Rows)
+            {
+                string mat = filas["MATRICULA"].ToString();
+                if (mat == ListaMatriculas.Text)
+                {
+                    MatriculaCertMat.Text = ListaMatriculas.Text;
+                    NombreEmbCerMat.Text = filas["NOMBREEMBARCACION"].ToString();
+                    ArqBrutoCertMat.Text = filas["ARQUEOBRUTO"].ToString();
+                    ArqNetoCertMat.Text = filas["ARQUEONETO"].ToString();
+                    EsloraCertMat.Text = filas["ESLORA"].ToString();
+                    MangaCertMat.Text = filas["MANGA"].ToString();
+                    NMotoresCertMat.Text = filas["NMOTORES"].ToString();
+                    PesoMCertMat.Text = filas["TONELAJE"].ToString();
+                    PotenciaMotorCertMat.Text = filas["MOTORHP"].ToString();
+                    PuntalCertMat.Text = filas["PUNTAL"].ToString();
+                    ServicioCertMat.Text = filas["SERVICIO"].ToString();
+                    TraficoCertMat.Text = filas["TRAFICO"].ToString();
+                    NChipCertMat.Text = filas["NUMCHIP"].ToString();
+                    ResponsableChip.Text = filas["RESPONSABLECHIP"].ToString();
+                    FechaChip.Text = filas["FECHACHIPEADO"].ToString();
+                    RegNum.Text = filas["REGISTRONUM"].ToString();
+                    FechaExped.Text = filas["FECHAEXP"].ToString();
+                    Capitan.Text = filas["CAPITAN"].ToString();
+                    Marinero.Text = filas["MARINERO"].ToString();
+                    Marca.Text = filas["MOTORMARCA"].ToString();
+                }
+                i--;
+            }
+            this.Cursor = Cursors.Default;
         }
     }
 }

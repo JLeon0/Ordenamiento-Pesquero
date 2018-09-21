@@ -69,7 +69,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.Marca = new System.Windows.Forms.TextBox();
             this.limpiar = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.Marinero = new System.Windows.Forms.ComboBox();
             this.Capitan = new System.Windows.Forms.ComboBox();
@@ -89,10 +88,11 @@
             this.RegistrarUnidad = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.ListaMatriculas = new System.Windows.Forms.ListBox();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
@@ -109,7 +109,7 @@
             this.MatriculaCertMat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MatriculaCertMat.MaxLength = 15;
             this.MatriculaCertMat.Name = "MatriculaCertMat";
-            this.MatriculaCertMat.Size = new System.Drawing.Size(125, 24);
+            this.MatriculaCertMat.Size = new System.Drawing.Size(168, 24);
             this.MatriculaCertMat.TabIndex = 1;
             this.MatriculaCertMat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MatriculaCertMat_KeyPress);
             // 
@@ -406,7 +406,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(100, 40);
+            this.label1.Location = new System.Drawing.Point(266, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(273, 19);
             this.label1.TabIndex = 149;
@@ -416,34 +416,31 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(612, 575);
+            this.label4.Location = new System.Drawing.Point(778, 575);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 14);
             this.label4.TabIndex = 153;
             this.label4.Text = "Eliminar";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(529, 576);
+            this.label3.Location = new System.Drawing.Point(695, 576);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 14);
             this.label3.TabIndex = 154;
             this.label3.Text = "Actualizar";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(455, 576);
+            this.label2.Location = new System.Drawing.Point(621, 576);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 14);
             this.label2.TabIndex = 155;
             this.label2.Text = "Registrar";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label5
             // 
@@ -483,7 +480,6 @@
             this.groupBox1.Controls.Add(this.ArqBrutoCertMat);
             this.groupBox1.Controls.Add(this.label70);
             this.groupBox1.Controls.Add(this.EsloraCertMat);
-            this.groupBox1.Controls.Add(this.pictureBox14);
             this.groupBox1.Controls.Add(this.label68);
             this.groupBox1.Controls.Add(this.label71);
             this.groupBox1.Controls.Add(this.label78);
@@ -503,7 +499,7 @@
             this.groupBox1.Controls.Add(this.PotenciaMotorCertMat);
             this.groupBox1.Controls.Add(this.PuntalCertMat);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(20, 95);
+            this.groupBox1.Location = new System.Drawing.Point(186, 95);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(640, 218);
             this.groupBox1.TabIndex = 158;
@@ -542,20 +538,6 @@
             this.toolTip1.SetToolTip(this.limpiar, "Limpiar Formulario");
             this.limpiar.Click += new System.EventHandler(this.limpiar_Click);
             // 
-            // pictureBox14
-            // 
-            this.pictureBox14.BackColor = System.Drawing.Color.White;
-            this.pictureBox14.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Search;
-            this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox14.Location = new System.Drawing.Point(151, 38);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox14.TabIndex = 147;
-            this.pictureBox14.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox14, "Buscar Matricula");
-            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
-            // 
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.Marinero);
@@ -573,7 +555,7 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.NChipCertMat);
             this.groupBox2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox2.Location = new System.Drawing.Point(20, 319);
+            this.groupBox2.Location = new System.Drawing.Point(186, 319);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(640, 198);
             this.groupBox2.TabIndex = 159;
@@ -701,7 +683,7 @@
             // 
             this.EliminarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Eliminar;
             this.EliminarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EliminarUnidad.Location = new System.Drawing.Point(610, 523);
+            this.EliminarUnidad.Location = new System.Drawing.Point(776, 523);
             this.EliminarUnidad.Name = "EliminarUnidad";
             this.EliminarUnidad.Size = new System.Drawing.Size(50, 50);
             this.EliminarUnidad.TabIndex = 152;
@@ -713,7 +695,7 @@
             this.ActualizarUnidad.BackColor = System.Drawing.Color.Transparent;
             this.ActualizarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
             this.ActualizarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ActualizarUnidad.Location = new System.Drawing.Point(530, 523);
+            this.ActualizarUnidad.Location = new System.Drawing.Point(696, 523);
             this.ActualizarUnidad.Name = "ActualizarUnidad";
             this.ActualizarUnidad.Size = new System.Drawing.Size(50, 50);
             this.ActualizarUnidad.TabIndex = 151;
@@ -725,7 +707,7 @@
             this.RegistrarUnidad.BackColor = System.Drawing.Color.Transparent;
             this.RegistrarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.RegistrarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RegistrarUnidad.Location = new System.Drawing.Point(449, 523);
+            this.RegistrarUnidad.Location = new System.Drawing.Point(615, 523);
             this.RegistrarUnidad.Name = "RegistrarUnidad";
             this.RegistrarUnidad.Size = new System.Drawing.Size(50, 50);
             this.RegistrarUnidad.TabIndex = 150;
@@ -737,7 +719,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(455, 13);
+            this.pictureBox3.Location = new System.Drawing.Point(621, 13);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(200, 60);
@@ -749,12 +731,31 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(20, 13);
+            this.pictureBox2.Location = new System.Drawing.Point(186, 13);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 60);
             this.pictureBox2.TabIndex = 167;
             this.pictureBox2.TabStop = false;
+            // 
+            // ListaMatriculas
+            // 
+            this.ListaMatriculas.FormattingEnabled = true;
+            this.ListaMatriculas.ItemHeight = 16;
+            this.ListaMatriculas.Location = new System.Drawing.Point(23, 115);
+            this.ListaMatriculas.Name = "ListaMatriculas";
+            this.ListaMatriculas.Size = new System.Drawing.Size(136, 228);
+            this.ListaMatriculas.TabIndex = 170;
+            this.ListaMatriculas.DoubleClick += new System.EventHandler(this.ListaMatriculas_DoubleClick);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(49, 95);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(89, 16);
+            this.label13.TabIndex = 169;
+            this.label13.Text = "MATRICULAS";
             // 
             // Pantalla_Certificado_Mat
             // 
@@ -763,7 +764,9 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(690, 612);
+            this.ClientSize = new System.Drawing.Size(854, 612);
+            this.Controls.Add(this.ListaMatriculas);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.pictureBox2);
@@ -785,7 +788,6 @@
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).EndInit();
@@ -799,8 +801,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.ComboBox MatriculaCertMat;
         private System.Windows.Forms.Label label78;
         private System.Windows.Forms.Label label77;
@@ -860,5 +860,7 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ListBox ListaMatriculas;
+        private System.Windows.Forms.Label label13;
     }
 }
