@@ -31,22 +31,22 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         Conexion c;
         private void Vistas_Load(object sender, EventArgs e)
         {
-            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet9.permi' Puede moverla o quitarla según sea necesario.
-            //this.permiTableAdapter1.Fill(this.ordPesqueroDataSet9.permi);
-            //// TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet8.permi' Puede moverla o quitarla según sea necesario.
-            //this.permiTableAdapter.Fill(this.ordPesqueroDataSet8.permi);
-            //// TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet7.Mulege' Puede moverla o quitarla según sea necesario.
-            //this.mulegeTableAdapter.Fill(this.ordPesqueroDataSet7.Mulege);
-            //// TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet6.LosCabos' Puede moverla o quitarla según sea necesario.
-            //this.losCabosTableAdapter.Fill(this.ordPesqueroDataSet6.LosCabos);
-            //// TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet5.Loreto' Puede moverla o quitarla según sea necesario.
-            //this.loretoTableAdapter.Fill(this.ordPesqueroDataSet5.Loreto);
-            //// TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet4.LaPaz' Puede moverla o quitarla según sea necesario.
-            //this.laPazTableAdapter.Fill(this.ordPesqueroDataSet4.LaPaz);
-            //// TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet3.Comondu' Puede moverla o quitarla según sea necesario.
-            //this.comonduTableAdapter.Fill(this.ordPesqueroDataSet3.Comondu);
-            //// TODO: esta línea de código carga datos en la tabla 'todospes.todos' Puede moverla o quitarla según sea necesario.
-            //this.todosTableAdapter.Fill(this.todospes.todos);
+            //TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet9.permi' Puede moverla o quitarla según sea necesario.
+            this.permiTableAdapter1.Fill(this.ordPesqueroDataSet9.permi);
+            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet8.permi' Puede moverla o quitarla según sea necesario.
+            this.permiTableAdapter.Fill(this.ordPesqueroDataSet8.permi);
+            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet7.Mulege' Puede moverla o quitarla según sea necesario.
+            this.mulegeTableAdapter.Fill(this.ordPesqueroDataSet7.Mulege);
+            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet6.LosCabos' Puede moverla o quitarla según sea necesario.
+            this.losCabosTableAdapter.Fill(this.ordPesqueroDataSet6.LosCabos);
+            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet5.Loreto' Puede moverla o quitarla según sea necesario.
+            this.loretoTableAdapter.Fill(this.ordPesqueroDataSet5.Loreto);
+            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet4.LaPaz' Puede moverla o quitarla según sea necesario.
+            this.laPazTableAdapter.Fill(this.ordPesqueroDataSet4.LaPaz);
+            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet3.Comondu' Puede moverla o quitarla según sea necesario.
+            this.comonduTableAdapter.Fill(this.ordPesqueroDataSet3.Comondu);
+            // TODO: esta línea de código carga datos en la tabla 'todospes.todos' Puede moverla o quitarla según sea necesario.
+            this.todosTableAdapter.Fill(this.todospes.todos);
             ReportDataSource datos = new ReportDataSource();
             ReportDataSource datos2 = new ReportDataSource();
             ReportDataSource datos3 = new ReportDataSource();
