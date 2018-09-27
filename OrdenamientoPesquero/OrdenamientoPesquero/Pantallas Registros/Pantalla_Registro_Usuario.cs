@@ -57,7 +57,6 @@ namespace OrdenamientoPesquero
             CargarNoPescadores();
             CargarMatriculas();
             CargarMunicipios();
-            ObtenerImagen();
             limpiarpescador();
             cargando = false;
             if (NombreUnidad != "NO APLICA")
@@ -795,14 +794,18 @@ namespace OrdenamientoPesquero
                 Imagen.BackgroundImageLayout = ImageLayout.Zoom;
             }
             dt = proc.ObtenerFirma(CURPPesc.Text);
-            if(dt.Rows.Count > 0)
+            if (dt.Rows.Count > 0)
             {
-                Firma.BackColor = Color.White;
-                Firma.BackgroundImage = null;
-                imagenBuffer = (byte[])dt.Rows[0]["FIRMA"];
-                System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
-                Firma.BackgroundImage = (Image.FromStream(ms));
-                Firma.BackgroundImageLayout = ImageLayout.Zoom;
+                try
+                {
+                    Firma.BackColor = Color.White;
+                    Firma.BackgroundImage = null;
+                    imagenBuffer = (byte[])dt.Rows[0]["FIRMA"];
+                    System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
+                    Firma.BackgroundImage = (Image.FromStream(ms));
+                    Firma.BackgroundImageLayout = ImageLayout.Zoom;
+                }
+                catch (Exception) { }
             }
         }
 

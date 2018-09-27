@@ -238,6 +238,7 @@
             // Firma
             // 
             this.Firma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Firma.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Firma.Location = new System.Drawing.Point(11, 186);
             this.Firma.Name = "Firma";
             this.Firma.Size = new System.Drawing.Size(116, 53);
