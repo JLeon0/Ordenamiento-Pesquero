@@ -1,13 +1,20 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2003
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdenamientoPesquero", "OrdenamientoPesquero\OrdenamientoPesquero.csproj", "{26B25B8A-91B1-4FE6-B432-7B44611D744C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CapaDatos", "CapaDatos\CapaDatos.csproj", "{8E15FC49-4A3B-493E-B73B-CB5DD5A6D4F3}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{D48B06EC-8515-4AB1-87C2-0B6C56B225D6}"
+EndProject
+Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Instalador3.0", "Instalador3.0\Instalador3.0.isproj", "{7B1BD01C-6251-4D9F-BA03-0F424A3C3B01}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8E15FC49-4A3B-493E-B73B-CB5DD5A6D4F3} = {8E15FC49-4A3B-493E-B73B-CB5DD5A6D4F3}
+		{26B25B8A-91B1-4FE6-B432-7B44611D744C} = {26B25B8A-91B1-4FE6-B432-7B44611D744C}
+		{D48B06EC-8515-4AB1-87C2-0B6C56B225D6} = {D48B06EC-8515-4AB1-87C2-0B6C56B225D6}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +55,16 @@ Global
 		{D48B06EC-8515-4AB1-87C2-0B6C56B225D6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D48B06EC-8515-4AB1-87C2-0B6C56B225D6}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
 		{D48B06EC-8515-4AB1-87C2-0B6C56B225D6}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{7B1BD01C-6251-4D9F-BA03-0F424A3C3B01}.CD_ROM|Any CPU.ActiveCfg = CD_ROM
+		{7B1BD01C-6251-4D9F-BA03-0F424A3C3B01}.CD_ROM|Any CPU.Build.0 = CD_ROM
+		{7B1BD01C-6251-4D9F-BA03-0F424A3C3B01}.Debug|Any CPU.ActiveCfg = DVD-5
+		{7B1BD01C-6251-4D9F-BA03-0F424A3C3B01}.Debug|Any CPU.Build.0 = DVD-5
+		{7B1BD01C-6251-4D9F-BA03-0F424A3C3B01}.DVD-5|Any CPU.ActiveCfg = DVD-5
+		{7B1BD01C-6251-4D9F-BA03-0F424A3C3B01}.DVD-5|Any CPU.Build.0 = DVD-5
+		{7B1BD01C-6251-4D9F-BA03-0F424A3C3B01}.Release|Any CPU.ActiveCfg = SingleImage
+		{7B1BD01C-6251-4D9F-BA03-0F424A3C3B01}.Release|Any CPU.Build.0 = SingleImage
+		{7B1BD01C-6251-4D9F-BA03-0F424A3C3B01}.SingleImage|Any CPU.ActiveCfg = SingleImage
+		{7B1BD01C-6251-4D9F-BA03-0F424A3C3B01}.SingleImage|Any CPU.Build.0 = SingleImage
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

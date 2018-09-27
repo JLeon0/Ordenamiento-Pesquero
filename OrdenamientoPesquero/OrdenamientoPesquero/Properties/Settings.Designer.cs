@@ -31,10 +31,6 @@ namespace OrdenamientoPesquero.Properties {
             get {
                 return ((string)(this["OrdPesqueroConnectionString"]));
             }
-            set
-            {
-                this["OrdPesqueroConnectionString"] = value;
-            }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
@@ -45,37 +41,35 @@ namespace OrdenamientoPesquero.Properties {
             get {
                 return ((string)(this["OrdPesqueroConnectionString3"]));
             }
-            set
-            {
-                this["OrdPesqueroConnectionString3"] = value;
-            }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.dqwqwd;Initial Catalog=OrdPesquero;Integrated Security=true;")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=OrdPesquero;Integrated Security=true;")]
         public string OrdPesqueroConnectionString1 {
             get {
                 return ((string)(this["OrdPesqueroConnectionString1"]));
             }
-            set
-            {
-                this["OrdPesqueroConnectionString1"] = value;
+        }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.\\SQLEXPRESS;Initial Catalog=OrdPesquero;Integrated Security=true;")]
+        public string OrdPesqueroConnectionString2 {
+            get {
+                return ((string)(this["OrdPesqueroConnectionString2"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.dqwqwd;Initial Catalog=OrdPesquero;Integrated Security=true;")]
-        public string OrdPesqueroConnectionString2 {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=OrdPesquero;Integrated Security=True")]
+        public string OrdPesqueroConnectionString4 {
             get {
-                return ((string)(this["OrdPesqueroConnectionString2"]));
-            }
-            set
-            {
-                this["OrdPesqueroConnectionString2"] = value;
+                return ((string)(this["OrdPesqueroConnectionString4"]));
             }
         }
     }

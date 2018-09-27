@@ -638,7 +638,7 @@
         <ReportItems>
           <Image Name="Image4">
             <Source>Database</Source>
-            <Value>=First(Fields!IMAGEN.Value, "DataSet1")</Value>
+            <Value>=First(Fields!FIRMA.Value, "DataSet2")</Value>
             <MIMEType>image/jpeg</MIMEType>
             <Sizing>Fit</Sizing>
             <Top>4.21427cm</Top>
@@ -698,6 +698,13 @@
       </ConnectionProperties>
       <rd:DataSourceID>b046def3-dd9f-402e-980e-393ca708d0a9</rd:DataSourceID>
     </DataSource>
+    <DataSource Name="OrdPesqueroDataSet10">
+      <ConnectionProperties>
+        <DataProvider>System.Data.DataSet</DataProvider>
+        <ConnectString>/* Local Connection */</ConnectString>
+      </ConnectionProperties>
+      <rd:DataSourceID>a397cbf3-080d-4b46-bafb-135159a8296a</rd:DataSourceID>
+    </DataSource>
   </DataSources>
   <DataSets>
     <DataSet Name="DataSet1">
@@ -718,6 +725,26 @@
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
         <rd:TableAdapterName>ObtenerImagenTableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet2">
+      <Query>
+        <DataSourceName>OrdPesqueroDataSet10</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="FIRMA">
+          <DataField>FIRMA</DataField>
+          <rd:TypeName>System.Byte[]</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>OrdPesqueroDataSet10</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\OrdPesqueroDataSet10.xsd</rd:SchemaPath>
+        <rd:TableName>ObtenerFirma</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>ObtenerFirmaTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
