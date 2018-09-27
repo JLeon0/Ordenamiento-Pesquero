@@ -225,6 +225,11 @@ namespace Logica
             string[] Parametros = { "@curp" };
             return c.getDatosTabla("ObtenerImagen", Parametros, curp);
         }
+        public DataTable ObtenerFirma(string curp)
+        {
+            string[] Parametros = { "@curp" };
+            return c.getDatosTabla("ObtenerFirma", Parametros, curp);
+        }
         public DataTable BuscarNombre(string nombre, string rnpa)
         {
             string[] Parametros = { "@nombre", "@rnpa" };

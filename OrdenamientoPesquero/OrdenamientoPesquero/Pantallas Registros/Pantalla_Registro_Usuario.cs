@@ -782,6 +782,7 @@ namespace OrdenamientoPesquero
         private void ObtenerImagen()
         {
             Imagen.BackgroundImage = null;
+            Firma.BackgroundImage = null;
             dt = proc.ObtenerImagen(CURPPesc.Text);
             if (dt.Rows.Count > 0)
             {
@@ -791,6 +792,16 @@ namespace OrdenamientoPesquero
                 System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
                 Imagen.BackgroundImage = (Image.FromStream(ms));
                 Imagen.BackgroundImageLayout = ImageLayout.Zoom;
+            }
+            dt = proc.ObtenerFirma(CURPPesc.Text);
+            if(dt.Rows.Count > 0)
+            {
+                Firma.BackColor = Color.White;
+                Firma.BackgroundImage = null;
+                imagenBuffer = (byte[])dt.Rows[0]["FIRMA"];
+                System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
+                Firma.BackgroundImage = (Image.FromStream(ms));
+                Firma.BackgroundImageLayout = ImageLayout.Zoom;
             }
         }
 

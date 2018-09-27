@@ -226,9 +226,9 @@
             // Firma
             // 
             this.Firma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Firma.Location = new System.Drawing.Point(11, 189);
+            this.Firma.Location = new System.Drawing.Point(11, 186);
             this.Firma.Name = "Firma";
-            this.Firma.Size = new System.Drawing.Size(116, 74);
+            this.Firma.Size = new System.Drawing.Size(116, 53);
             this.Firma.TabIndex = 128;
             this.Firma.TabStop = false;
             // 
@@ -1324,7 +1324,7 @@
             this.CargarFirma.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.subir;
             this.CargarFirma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CargarFirma.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CargarFirma.Location = new System.Drawing.Point(11, 273);
+            this.CargarFirma.Location = new System.Drawing.Point(11, 245);
             this.CargarFirma.Name = "CargarFirma";
             this.CargarFirma.Size = new System.Drawing.Size(28, 28);
             this.CargarFirma.TabIndex = 127;
