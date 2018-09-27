@@ -165,6 +165,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     ruta = ruta.Replace("*", "/");
                     para1[8] = new ReportParameter("RutaImagen", ruta + "perfil.jpg");
                     reportViewer1.LocalReport.SetParameters(para1);
+                    this.reportViewer1.LocalReport.DataSources.Add(datos);
                     this.reportViewer1.RefreshReport();
                     break;
                 case 5:
