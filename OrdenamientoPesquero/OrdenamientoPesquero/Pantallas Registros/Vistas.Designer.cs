@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.vistaperm3BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.permisos_lista = new OrdenamientoPesquero.Permisos_lista();
             this.permiBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.ordPesqueroDataSet9 = new OrdenamientoPesquero.OrdPesqueroDataSet9();
             this.permiBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -37,7 +39,6 @@
             this.mulegeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ordPesqueroDataSet7 = new OrdenamientoPesquero.OrdPesqueroDataSet7();
             this.vistapermBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.permisos_lista = new OrdenamientoPesquero.Permisos_lista();
             this.todosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.todospesBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.todospes = new OrdenamientoPesquero.todospes();
@@ -74,8 +75,12 @@
             this.permiTableAdapter1 = new OrdenamientoPesquero.OrdPesqueroDataSet9TableAdapters.permiTableAdapter();
             this.vistaperm2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vista_perm2TableAdapter = new OrdenamientoPesquero.Permisos_listaTableAdapters.vista_perm2TableAdapter();
-            this.vistaperm3BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vista_perm3TableAdapter = new OrdenamientoPesquero.Permisos_listaTableAdapters.vista_perm3TableAdapter();
+            this.ordPesqueroDataSet10 = new OrdenamientoPesquero.OrdPesqueroDataSet10();
+            this.obtenerFirmaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.obtenerFirmaTableAdapter = new OrdenamientoPesquero.OrdPesqueroDataSet10TableAdapters.ObtenerFirmaTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.vistaperm3BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.permisos_lista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.permiBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.permiBindingSource)).BeginInit();
@@ -83,7 +88,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.mulegeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistapermBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.permisos_lista)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.todosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.todospesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.todospes)).BeginInit();
@@ -106,8 +110,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.losCabosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistaperm2BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistaperm3BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerFirmaBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // vistaperm3BindingSource
+            // 
+            this.vistaperm3BindingSource.DataMember = "vista_perm3";
+            this.vistaperm3BindingSource.DataSource = this.permisos_lista;
+            // 
+            // permisos_lista
+            // 
+            this.permisos_lista.DataSetName = "Permisos_lista";
+            this.permisos_lista.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // permiBindingSource1
             // 
@@ -143,11 +158,6 @@
             // 
             this.vistapermBindingSource1.DataMember = "vista_perm";
             this.vistapermBindingSource1.DataSource = this.permisos_lista;
-            // 
-            // permisos_lista
-            // 
-            this.permisos_lista.DataSetName = "Permisos_lista";
-            this.permisos_lista.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // todosBindingSource
             // 
@@ -193,7 +203,7 @@
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.vistaperm3BindingSource;
+            reportDataSource1.Value = this.obtenerFirmaBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.EnableExternalImages = true;
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "OrdenamientoPesquero.Reportes.Permisos.rdlc";
@@ -324,14 +334,23 @@
             // 
             this.vista_perm2TableAdapter.ClearBeforeFill = true;
             // 
-            // vistaperm3BindingSource
-            // 
-            this.vistaperm3BindingSource.DataMember = "vista_perm3";
-            this.vistaperm3BindingSource.DataSource = this.permisos_lista;
-            // 
             // vista_perm3TableAdapter
             // 
             this.vista_perm3TableAdapter.ClearBeforeFill = true;
+            // 
+            // ordPesqueroDataSet10
+            // 
+            this.ordPesqueroDataSet10.DataSetName = "OrdPesqueroDataSet10";
+            this.ordPesqueroDataSet10.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // obtenerFirmaBindingSource
+            // 
+            this.obtenerFirmaBindingSource.DataMember = "ObtenerFirma";
+            this.obtenerFirmaBindingSource.DataSource = this.ordPesqueroDataSet10;
+            // 
+            // obtenerFirmaTableAdapter
+            // 
+            this.obtenerFirmaTableAdapter.ClearBeforeFill = true;
             // 
             // Vistas
             // 
@@ -342,6 +361,8 @@
             this.Name = "Vistas";
             this.Text = "Vistas";
             this.Load += new System.EventHandler(this.Vistas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.vistaperm3BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.permisos_lista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.permiBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.permiBindingSource)).EndInit();
@@ -349,7 +370,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.mulegeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistapermBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.permisos_lista)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.todosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.todospesBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.todospes)).EndInit();
@@ -372,7 +392,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.losCabosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistaperm2BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vistaperm3BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerFirmaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -425,5 +446,8 @@
         private System.Windows.Forms.BindingSource vistaperm2BindingSource;
         private Permisos_listaTableAdapters.vista_perm2TableAdapter vista_perm2TableAdapter;
         private Permisos_listaTableAdapters.vista_perm3TableAdapter vista_perm3TableAdapter;
+        private System.Windows.Forms.BindingSource obtenerFirmaBindingSource;
+        private OrdPesqueroDataSet10 ordPesqueroDataSet10;
+        private OrdPesqueroDataSet10TableAdapters.ObtenerFirmaTableAdapter obtenerFirmaTableAdapter;
     }
 }

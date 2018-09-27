@@ -74,6 +74,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ObtenerImagen.xsd</DependentUpon>
     </Compile>
+    <Compile Include="OrdPesqueroDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet10.xsd</DependentUpon>
+    </Compile>
     <Compile Include="OrdPesqueroDataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -282,6 +287,17 @@
     </None>
     <None Include="ObtenerImagen.xss">
       <DependentUpon>ObtenerImagen.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet10.xsc">
+      <DependentUpon>OrdPesqueroDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet10.xss">
+      <DependentUpon>OrdPesqueroDataSet10.xsd</DependentUpon>
     </None>
     <None Include="OrdPesqueroDataSet11.xsc">
       <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>

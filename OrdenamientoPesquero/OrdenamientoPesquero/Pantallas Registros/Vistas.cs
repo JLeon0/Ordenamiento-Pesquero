@@ -146,6 +146,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Credencial.rdlc");
                     DataTable dt1 = proc.Obtener_Pescador(rnpa);
                     this.obtenerImagenTableAdapter.Fill(obtenerImagen._ObtenerImagen, rnpa);
+                    this.obtenerFirmaTableAdapter.Fill(ordPesqueroDataSet10.ObtenerFirma, rnpa);
                     ReportParameter[] para1 = new ReportParameter[9];
                     para1[0] = new ReportParameter("NOMBRE", dt1.Rows[0]["NOMBRE"].ToString() + " " + dt1.Rows[0]["AP_PAT"].ToString() + " " + dt1.Rows[0]["AP_MAT"].ToString());
                     para1[1] = new ReportParameter("CURP", dt1.Rows[0]["CURP"].ToString());
