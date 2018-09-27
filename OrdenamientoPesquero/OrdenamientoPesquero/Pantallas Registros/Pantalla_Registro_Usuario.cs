@@ -902,7 +902,11 @@ namespace OrdenamientoPesquero
             }            
         }
 
-     
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Vistas v = new Vistas(CURPPesc.Text, NombreUnidad, 4);
+            v.Show(this);
+        }
 
         private void ListaNombres2_MouseDoubleClick(object sender, MouseEventArgs e)
         {
