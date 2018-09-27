@@ -10,6 +10,8 @@ using System.Windows.Forms;
 using Logica;
 using OrdenamientoPesquero.Pantallas_Registros;
 using System.IO;
+using System.Diagnostics;
+using System.Drawing.Imaging;
 //using FlexCodeSDK;
 //using GriauleFingerprintLibrary;
 //using GriauleFingerprintLibrary.Exceptions;
@@ -763,7 +765,18 @@ namespace OrdenamientoPesquero
                         Imagen.BackgroundImage = OrdenamientoPesquero.Properties.Resources.perfil;
                     }
                 }
+                result = MessageBox.Show("Desea insertar la firma del usuario?", "¿?", MessageBoxButtons.YesNoCancel);
+                if (result == DialogResult.Yes)
+                {
+                    Process.Start("C:\\Windows\\SigPlus\\DemoOCX.exe");
+                }
             }
+        }
+        private void CargarFirma_Click(object sender, EventArgs e)
+        {
+            string mdoc = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+            Bitmap bmp = new Bitmap(Image.FromFile(mdoc + "\\FIRMA\\FIRMA.PNG"));
+            Firma.BackgroundImage = bmp;
         }
 
         private void ObtenerImagen()
@@ -788,18 +801,22 @@ namespace OrdenamientoPesquero
                 System.IO.MemoryStream ms = new System.IO.MemoryStream();
                 Imagen.BackgroundImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
 
+                System.IO.MemoryStream firma = new MemoryStream();
+                Firma.BackgroundImage.Save(firma, System.Drawing.Imaging.ImageFormat.Jpeg);
+
                 //System.Drawing.Image fullsizeImage = System.Drawing.Image.FromStream(ms);
                 //System.Drawing.Image newImage = fullsizeImage.GetThumbnailImage(131, 182, null, IntPtr.Zero);
                 //System.IO.MemoryStream myResult = new System.IO.MemoryStream();
                 //newImage.Save(myResult, System.Drawing.Imaging.ImageFormat.Gif);
 
-                int exito = proc.InsertarImagen(CURPPesc.Text, ms.GetBuffer());
+                int exito = proc.InsertarImagen(CURPPesc.Text, ms.GetBuffer(), firma.GetBuffer());
                 if (exito > 0)
                 {
                     MessageBox.Show("Imagen Insertada correctamente");
                 }
             }
         }
+
         #endregion
 
 
@@ -873,6 +890,8 @@ namespace OrdenamientoPesquero
                 CargarSolApo();
             }            
         }
+
+     
 
         private void ListaNombres2_MouseDoubleClick(object sender, MouseEventArgs e)
         {
