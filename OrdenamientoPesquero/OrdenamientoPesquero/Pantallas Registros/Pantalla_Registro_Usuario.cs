@@ -211,11 +211,11 @@ namespace OrdenamientoPesquero
                 {
                     ListaNombres.Items.Add(fila["NOMBRE"].ToString());
                 }
-                dt = proc.Obtener_curp(RNPA);
-                CURPPesc.DataSource = dt;
-                CURPPesc.DisplayMember = "CURP";
-                CURPPesc.ValueMember = "CURP";
-                CURPPesc.Text = "";
+                //dt = proc.Obtener_curp(RNPA);
+                //CURPPesc.DataSource = dt;
+                //CURPPesc.DisplayMember = "CURP";
+                //CURPPesc.ValueMember = "CURP";
+                //CURPPesc.Text = "";
             }
         }
 
