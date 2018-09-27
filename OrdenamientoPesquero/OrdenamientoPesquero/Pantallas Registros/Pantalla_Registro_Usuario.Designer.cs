@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Registro_Usuario));
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.Credencial = new System.Windows.Forms.Button();
             this.Firma = new System.Windows.Forms.PictureBox();
             this.CargarFirma = new System.Windows.Forms.PictureBox();
             this.CargarImagen = new System.Windows.Forms.PictureBox();
@@ -134,7 +135,6 @@
             this.Solicitud = new System.Windows.Forms.Button();
             this.Apoyo = new System.Windows.Forms.Button();
             this.Botones = new System.Windows.Forms.GroupBox();
-            this.button1 = new System.Windows.Forms.Button();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Firma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
@@ -163,7 +163,7 @@
             // 
             // groupBox7
             // 
-            this.groupBox7.Controls.Add(this.button1);
+            this.groupBox7.Controls.Add(this.Credencial);
             this.groupBox7.Controls.Add(this.Firma);
             this.groupBox7.Controls.Add(this.CargarFirma);
             this.groupBox7.Controls.Add(this.CargarImagen);
@@ -224,6 +224,16 @@
             this.groupBox7.TabIndex = 7;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Datos Generales";
+            // 
+            // Credencial
+            // 
+            this.Credencial.Location = new System.Drawing.Point(6, 284);
+            this.Credencial.Name = "Credencial";
+            this.Credencial.Size = new System.Drawing.Size(121, 61);
+            this.Credencial.TabIndex = 181;
+            this.Credencial.Text = "CREDENCIAL";
+            this.Credencial.UseVisualStyleBackColor = true;
+            this.Credencial.Click += new System.EventHandler(this.Credencial_Click);
             // 
             // Firma
             // 
@@ -1334,17 +1344,6 @@
             this.Botones.TabStop = false;
             this.Botones.Text = " ";
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(6, 284);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(121, 61);
-            this.button1.TabIndex = 181;
-            this.button1.Text = "CREDENCIAL";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Visible = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
             // Pantalla_Registro_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1512,6 +1511,6 @@
         private System.Windows.Forms.GroupBox Botones;
         private System.Windows.Forms.PictureBox Firma;
         private System.Windows.Forms.PictureBox CargarFirma;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button Credencial;
     }
 }
