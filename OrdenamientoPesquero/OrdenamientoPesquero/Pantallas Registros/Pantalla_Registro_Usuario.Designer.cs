@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Registro_Usuario));
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.Firma = new System.Windows.Forms.PictureBox();
             this.CargarImagen = new System.Windows.Forms.PictureBox();
             this.gbxOrdenado = new System.Windows.Forms.GroupBox();
             this.no = new System.Windows.Forms.RadioButton();
@@ -132,7 +133,9 @@
             this.Solicitud = new System.Windows.Forms.Button();
             this.Apoyo = new System.Windows.Forms.Button();
             this.Botones = new System.Windows.Forms.GroupBox();
+            this.CargarFirma = new System.Windows.Forms.PictureBox();
             this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Firma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarImagen)).BeginInit();
             this.gbxOrdenado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen)).BeginInit();
@@ -154,10 +157,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).BeginInit();
             this.Botones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.Firma);
+            this.groupBox7.Controls.Add(this.CargarFirma);
             this.groupBox7.Controls.Add(this.CargarImagen);
             this.groupBox7.Controls.Add(this.gbxOrdenado);
             this.groupBox7.Controls.Add(this.Seguro);
@@ -217,6 +223,15 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Datos Generales";
             // 
+            // Firma
+            // 
+            this.Firma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Firma.Location = new System.Drawing.Point(11, 186);
+            this.Firma.Name = "Firma";
+            this.Firma.Size = new System.Drawing.Size(116, 53);
+            this.Firma.TabIndex = 128;
+            this.Firma.TabStop = false;
+            // 
             // CargarImagen
             // 
             this.CargarImagen.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.subir;
@@ -227,7 +242,7 @@
             this.CargarImagen.Size = new System.Drawing.Size(28, 28);
             this.CargarImagen.TabIndex = 127;
             this.CargarImagen.TabStop = false;
-            this.toolTip1.SetToolTip(this.CargarImagen, "Subir Imagen");
+            this.toolTip1.SetToolTip(this.CargarImagen, "Tomar Imagen y Firma");
             this.CargarImagen.Click += new System.EventHandler(this.CargarImagen_Click_1);
             // 
             // gbxOrdenado
@@ -1304,13 +1319,26 @@
             this.Botones.TabStop = false;
             this.Botones.Text = " ";
             // 
+            // CargarFirma
+            // 
+            this.CargarFirma.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.subir;
+            this.CargarFirma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CargarFirma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CargarFirma.Location = new System.Drawing.Point(11, 245);
+            this.CargarFirma.Name = "CargarFirma";
+            this.CargarFirma.Size = new System.Drawing.Size(28, 28);
+            this.CargarFirma.TabIndex = 127;
+            this.CargarFirma.TabStop = false;
+            this.toolTip1.SetToolTip(this.CargarFirma, "Cargar Firma");
+            this.CargarFirma.Click += new System.EventHandler(this.CargarFirma_Click);
+            // 
             // Pantalla_Registro_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1387, 749);
             this.Controls.Add(this.Botones);
             this.Controls.Add(this.ListaNombres2);
             this.Controls.Add(this.BuscarNombre2);
@@ -1331,6 +1359,7 @@
             this.Load += new System.EventHandler(this.Pantalla_Registro_Usuario_Load);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Firma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarImagen)).EndInit();
             this.gbxOrdenado.ResumeLayout(false);
             this.gbxOrdenado.PerformLayout();
@@ -1359,6 +1388,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).EndInit();
             this.Botones.ResumeLayout(false);
             this.Botones.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1467,5 +1497,7 @@
         private System.Windows.Forms.LinkLabel solicitudes;
         private System.Windows.Forms.Button Apoyo;
         private System.Windows.Forms.GroupBox Botones;
+        private System.Windows.Forms.PictureBox Firma;
+        private System.Windows.Forms.PictureBox CargarFirma;
     }
 }
