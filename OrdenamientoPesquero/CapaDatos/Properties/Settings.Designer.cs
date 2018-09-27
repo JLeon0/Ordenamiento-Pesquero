@@ -31,6 +31,7 @@ namespace CapaDatos.Properties {
             get {
                 return ((string)(this["OrdPesqueroConnectionString"]));
             }
+            set { this["OrdPesqueroConnectionString"] = value; }
         }
     }
 }

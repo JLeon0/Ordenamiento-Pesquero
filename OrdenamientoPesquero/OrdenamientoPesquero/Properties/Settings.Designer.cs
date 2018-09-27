@@ -31,6 +31,7 @@ namespace OrdenamientoPesquero.Properties {
             get {
                 return ((string)(this["OrdPesqueroConnectionString"]));
             }
+            set { this["OrdPesqueroConnectionString"] = value; }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
@@ -41,6 +42,7 @@ namespace OrdenamientoPesquero.Properties {
             get {
                 return ((string)(this["OrdPesqueroConnectionString3"]));
             }
+            set { this["OrdPesqueroConnectionString3"] = value; }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
@@ -51,6 +53,7 @@ namespace OrdenamientoPesquero.Properties {
             get {
                 return ((string)(this["OrdPesqueroConnectionString1"]));
             }
+            set { this["OrdPesqueroConnectionString1"] = value; }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
@@ -61,6 +64,7 @@ namespace OrdenamientoPesquero.Properties {
             get {
                 return ((string)(this["OrdPesqueroConnectionString2"]));
             }
+            set { this["OrdPesqueroConnectionString2"] = value; }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
@@ -71,6 +75,7 @@ namespace OrdenamientoPesquero.Properties {
             get {
                 return ((string)(this["OrdPesqueroConnectionString4"]));
             }
+            set { this["OrdPesqueroConnectionString4"] = value; }
         }
     }
 }

@@ -375,6 +375,7 @@ namespace OrdenamientoPesquero
                 Solicitud.Visible = true;
                 Apoyo.Visible = true;
                 MatriculaPesc.Enabled = false;
+                Credencial.Visible = false;
                 groupBox4.Height = groupBox4.Height - 100;
                 Botones.Location = new Point(Botones.Location.X, Botones.Location.Y - 50);
             }
@@ -902,7 +903,7 @@ namespace OrdenamientoPesquero
             }            
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Credencial_Click(object sender, EventArgs e)
         {
             Vistas v = new Vistas(CURPPesc.Text, NombreUnidad, 4);
             v.Show(this);
