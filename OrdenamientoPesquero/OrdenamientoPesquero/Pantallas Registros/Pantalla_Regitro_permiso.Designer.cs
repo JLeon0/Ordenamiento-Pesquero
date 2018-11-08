@@ -479,7 +479,7 @@
             this.groupBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.groupBox3.Size = new System.Drawing.Size(688, 146);
+            this.groupBox3.Size = new System.Drawing.Size(823, 146);
             this.groupBox3.TabIndex = 80;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del Permiso";
@@ -521,7 +521,7 @@
             this.limpiar.BackColor = System.Drawing.Color.Transparent;
             this.limpiar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.limpiar;
             this.limpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.limpiar.Location = new System.Drawing.Point(654, 11);
+            this.limpiar.Location = new System.Drawing.Point(789, 11);
             this.limpiar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.limpiar.Name = "limpiar";
             this.limpiar.Size = new System.Drawing.Size(28, 28);
@@ -575,7 +575,7 @@
             // FolioPer
             // 
             this.FolioPer.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FolioPer.Location = new System.Drawing.Point(543, 42);
+            this.FolioPer.Location = new System.Drawing.Point(667, 41);
             this.FolioPer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.FolioPer.Name = "FolioPer";
             this.FolioPer.Size = new System.Drawing.Size(80, 25);
@@ -585,17 +585,17 @@
             // 
             this.PesqueriaPer.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PesqueriaPer.FormattingEnabled = true;
-            this.PesqueriaPer.Location = new System.Drawing.Point(239, 43);
+            this.PesqueriaPer.Location = new System.Drawing.Point(224, 42);
             this.PesqueriaPer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.PesqueriaPer.Name = "PesqueriaPer";
-            this.PesqueriaPer.Size = new System.Drawing.Size(163, 24);
+            this.PesqueriaPer.Size = new System.Drawing.Size(282, 24);
             this.PesqueriaPer.TabIndex = 2;
             // 
             // label27
             // 
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(540, 22);
+            this.label27.Location = new System.Drawing.Point(664, 21);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(43, 17);
             this.label27.TabIndex = 68;
@@ -605,7 +605,7 @@
             // 
             this.LugarExpPer.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LugarExpPer.FormattingEnabled = true;
-            this.LugarExpPer.Location = new System.Drawing.Point(414, 43);
+            this.LugarExpPer.Location = new System.Drawing.Point(538, 42);
             this.LugarExpPer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LugarExpPer.Name = "LugarExpPer";
             this.LugarExpPer.Size = new System.Drawing.Size(123, 24);
@@ -635,7 +635,7 @@
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(236, 23);
+            this.label32.Location = new System.Drawing.Point(221, 23);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(70, 16);
             this.label32.TabIndex = 3;
@@ -655,7 +655,7 @@
             // 
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label30.Location = new System.Drawing.Point(411, 23);
+            this.label30.Location = new System.Drawing.Point(535, 22);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(84, 16);
             this.label30.TabIndex = 1;
@@ -817,7 +817,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(411, 38);
+            this.label24.Location = new System.Drawing.Point(497, 39);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(214, 19);
             this.label24.TabIndex = 151;
@@ -828,7 +828,7 @@
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(705, 23);
+            this.pictureBox3.Location = new System.Drawing.Point(857, 23);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(200, 60);
@@ -934,7 +934,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(965, 707);
+            this.ClientSize = new System.Drawing.Size(1090, 707);
             this.Controls.Add(this.ListaPermisos);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.pictureBox3);

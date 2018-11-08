@@ -50,7 +50,6 @@
             this.limpiar = new System.Windows.Forms.PictureBox();
             this.LocalidadPesc = new System.Windows.Forms.ComboBox();
             this.MunicipioPesc = new System.Windows.Forms.ComboBox();
-            this.CURPPesc = new System.Windows.Forms.ComboBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
@@ -135,6 +134,7 @@
             this.Solicitud = new System.Windows.Forms.Button();
             this.Apoyo = new System.Windows.Forms.Button();
             this.Botones = new System.Windows.Forms.GroupBox();
+            this.CURPPesc = new System.Windows.Forms.TextBox();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Firma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
@@ -163,6 +163,7 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.CURPPesc);
             this.groupBox7.Controls.Add(this.Credencial);
             this.groupBox7.Controls.Add(this.Firma);
             this.groupBox7.Controls.Add(this.CargarFirma);
@@ -180,7 +181,6 @@
             this.groupBox7.Controls.Add(this.limpiar);
             this.groupBox7.Controls.Add(this.LocalidadPesc);
             this.groupBox7.Controls.Add(this.MunicipioPesc);
-            this.groupBox7.Controls.Add(this.CURPPesc);
             this.groupBox7.Controls.Add(this.pictureBox9);
             this.groupBox7.Controls.Add(this.pictureBox7);
             this.groupBox7.Controls.Add(this.pictureBox5);
@@ -238,6 +238,7 @@
             // Firma
             // 
             this.Firma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Firma.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Firma.Location = new System.Drawing.Point(11, 186);
             this.Firma.Name = "Firma";
             this.Firma.Size = new System.Drawing.Size(116, 53);
@@ -441,17 +442,6 @@
             this.MunicipioPesc.Size = new System.Drawing.Size(100, 24);
             this.MunicipioPesc.TabIndex = 12;
             this.MunicipioPesc.SelectedIndexChanged += new System.EventHandler(this.MunicipioPesc_SelectedIndexChanged);
-            // 
-            // CURPPesc
-            // 
-            this.CURPPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CURPPesc.FormattingEnabled = true;
-            this.CURPPesc.Location = new System.Drawing.Point(133, 149);
-            this.CURPPesc.Name = "CURPPesc";
-            this.CURPPesc.Size = new System.Drawing.Size(197, 24);
-            this.CURPPesc.TabIndex = 6;
-            this.CURPPesc.SelectedValueChanged += new System.EventHandler(this.CURPPesc_SelectedValueChanged);
-            this.CURPPesc.TextChanged += new System.EventHandler(this.CURPPesc_TextChanged);
             // 
             // pictureBox9
             // 
@@ -1344,6 +1334,13 @@
             this.Botones.TabStop = false;
             this.Botones.Text = " ";
             // 
+            // CURPPesc
+            // 
+            this.CURPPesc.Location = new System.Drawing.Point(134, 149);
+            this.CURPPesc.Name = "CURPPesc";
+            this.CURPPesc.Size = new System.Drawing.Size(193, 22);
+            this.CURPPesc.TabIndex = 182;
+            // 
             // Pantalla_Registro_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1408,7 +1405,6 @@
 
         #endregion
         private System.Windows.Forms.GroupBox groupBox7;
-        private System.Windows.Forms.ComboBox CURPPesc;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox5;
@@ -1512,5 +1508,6 @@
         private System.Windows.Forms.PictureBox Firma;
         private System.Windows.Forms.PictureBox CargarFirma;
         private System.Windows.Forms.Button Credencial;
+        private System.Windows.Forms.TextBox CURPPesc;
     }
 }
