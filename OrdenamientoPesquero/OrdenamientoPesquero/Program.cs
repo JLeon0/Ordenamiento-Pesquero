@@ -1,4 +1,5 @@
 ﻿using OrdenamientoPesquero.Pantallas_Registros;
+using OrdenamientoPesquero.Pantallas_Menu;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,7 +18,7 @@ namespace OrdenamientoPesquero
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Pantallas_Menu.Menu1());
+            Application.Run(new Menu1());
         }
     }
 }

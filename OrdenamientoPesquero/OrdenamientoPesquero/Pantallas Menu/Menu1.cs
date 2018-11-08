@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using CapaDatos;
+using System.ServiceProcess;
 
 namespace OrdenamientoPesquero.Pantallas_Menu
 {
@@ -43,8 +44,14 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             setString(c.CONEXIONPERRONA);
         }
 
-        private void Menu1_Load_1(object sender, EventArgs e)
+        private void Menu1_Load(object sender, EventArgs e)
         {
+            //ServiceController service = new ServiceController("MSSQL$SQLEXPRESS");
+            //if (service != null && service.Status != ServiceControllerStatus.Running)
+            //{
+            //    service.Start();
+            //    service.WaitForStatus(ServiceControllerStatus.Running, TimeSpan.FromMilliseconds(5000));
+            //}
             CargarInstancia();
         }
         public string setString(string CONEXIONPERRONA)
