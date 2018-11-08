@@ -31,6 +31,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         Conexion c;
         private void Vistas_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet9.permi2' Puede moverla o quitarla según sea necesario.
+            this.permi2TableAdapter.Fill(this.ordPesqueroDataSet9.permi2);
             this.obtenerFirmaTableAdapter.Fill(this.ordPesqueroDataSet10.ObtenerFirma, rnpa);
             //TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet9.permi' Puede moverla o quitarla según sea necesario.
             this.permiTableAdapter1.Fill(this.ordPesqueroDataSet9.permi);
@@ -354,6 +356,11 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     datos.Name = "permi";
                     datos.Value = ordPesqueroDataSet9.permi;
                     this.reportViewer1.LocalReport.DataSources.Add(datos);
+
+                    this.permi2TableAdapter.Fill(ordPesqueroDataSet9.permi2);
+                    datos2.Name = "permi2";
+                    datos2.Value = ordPesqueroDataSet9.permi2;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos2);
                     DataSet ds = proc.t();
                     ReportParameter[] para4 = new ReportParameter[6];
                     para4[0] = new ReportParameter("totu", ds.Tables[0].Rows[0][0].ToString());
