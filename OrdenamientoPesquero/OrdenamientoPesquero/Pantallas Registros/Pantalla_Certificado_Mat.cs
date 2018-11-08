@@ -96,8 +96,8 @@ namespace OrdenamientoPesquero
             exito = AccionesCertificado(true);
             val.Exito(exito);
             exito = 0;
-            MatriculaCertMat.Focus();
             CertMatXUnidad();
+            MatriculaCertMat.Focus();
         }
 
         private void ActualizarUnidad_Click(object sender, EventArgs e)

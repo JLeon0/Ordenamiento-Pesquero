@@ -501,11 +501,6 @@ namespace OrdenamientoPesquero
             }
         }
 
-        private void DataResumen_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             if (existe(cbRNPA.Text))

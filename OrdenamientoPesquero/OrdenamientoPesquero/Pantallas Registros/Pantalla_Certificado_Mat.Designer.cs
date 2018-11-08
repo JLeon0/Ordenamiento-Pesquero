@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.MatriculaCertMat = new System.Windows.Forms.ComboBox();
             this.label78 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
@@ -90,6 +89,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ListaMatriculas = new System.Windows.Forms.ListBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.MatriculaCertMat = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
@@ -100,18 +100,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
-            // 
-            // MatriculaCertMat
-            // 
-            this.MatriculaCertMat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MatriculaCertMat.FormattingEnabled = true;
-            this.MatriculaCertMat.Location = new System.Drawing.Point(20, 40);
-            this.MatriculaCertMat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.MatriculaCertMat.MaxLength = 15;
-            this.MatriculaCertMat.Name = "MatriculaCertMat";
-            this.MatriculaCertMat.Size = new System.Drawing.Size(168, 24);
-            this.MatriculaCertMat.TabIndex = 1;
-            this.MatriculaCertMat.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MatriculaCertMat_KeyPress);
             // 
             // label78
             // 
@@ -465,9 +453,9 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.MatriculaCertMat);
             this.groupBox1.Controls.Add(this.label12);
             this.groupBox1.Controls.Add(this.Marca);
-            this.groupBox1.Controls.Add(this.MatriculaCertMat);
             this.groupBox1.Controls.Add(this.label60);
             this.groupBox1.Controls.Add(this.label15);
             this.groupBox1.Controls.Add(this.limpiar);
@@ -757,6 +745,13 @@
             this.label13.TabIndex = 169;
             this.label13.Text = "MATRICULAS";
             // 
+            // MatriculaCertMat
+            // 
+            this.MatriculaCertMat.Location = new System.Drawing.Point(20, 40);
+            this.MatriculaCertMat.Name = "MatriculaCertMat";
+            this.MatriculaCertMat.Size = new System.Drawing.Size(168, 22);
+            this.MatriculaCertMat.TabIndex = 159;
+            // 
             // Pantalla_Certificado_Mat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -801,7 +796,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.ComboBox MatriculaCertMat;
         private System.Windows.Forms.Label label78;
         private System.Windows.Forms.Label label77;
         private System.Windows.Forms.Label label76;
@@ -862,5 +856,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ListBox ListaMatriculas;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox MatriculaCertMat;
     }
 }
