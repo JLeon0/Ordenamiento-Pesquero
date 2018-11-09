@@ -118,7 +118,7 @@ namespace CapaDatos
                              " FROM DISK = '" + archivo + "'" +
                              " WITH REPLACE";
             SqlConnectionStringBuilder csb = new SqlConnectionStringBuilder();
-            csb.DataSource = ".\\SQLEXPRESS";
+            csb.ConnectionString= Properties.Settings.Default.OrdPesqueroConnectionString;
             // Es mejor abrir la conexión con la base Master
             csb.InitialCatalog = "master";
             csb.IntegratedSecurity = true;
@@ -249,7 +249,7 @@ namespace CapaDatos
         {
             SqlCommand cmd = new SqlCommand();
             SqlConnectionStringBuilder csb = new SqlConnectionStringBuilder();
-            csb.DataSource = ".\\SQLEXPRESS";
+            csb.ConnectionString= Properties.Settings.Default.OrdPesqueroConnectionString;
             // Es mejor abrir la conexión con la base Master
             csb.InitialCatalog = "master";
             csb.IntegratedSecurity = true;

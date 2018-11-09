@@ -233,42 +233,42 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     this.reportViewer1.LocalReport.DataSources.Add(datos5);
 
 
-                    ReportParameter[] para2 = new ReportParameter[8];
+                    ReportParameter[] para3 = new ReportParameter[8];
                     dt = proc.ObtenerUnaFederacion(rnpa);
                     if (dt.Rows.Count != 0)
                     {
-                        para2[1] = new ReportParameter("Fed", dt.Rows[0]["NOMBRE"].ToString());
+                        para3[1] = new ReportParameter("Fed", dt.Rows[0]["NOMBRE"].ToString());
                     }
                     else
                     {
-                        para2[1] = new ReportParameter("Fed", "");
+                        para3[1] = new ReportParameter("Fed", "");
                     }
                     dt = proc.Obtener_unidades(rnpa);
                     if (dt.Rows.Count != 0)
                     {
-                        para2[0] = new ReportParameter("Unidad", dt.Rows[0]["NOMBRE"].ToString());
-                        para2[2] = new ReportParameter("Municipio", dt.Rows[0]["MUNICIO"].ToString());
-                        para2[3] = new ReportParameter("Localidad", dt.Rows[0]["LOCALIDAD"].ToString());
+                        para3[0] = new ReportParameter("Unidad", dt.Rows[0]["NOMBRE"].ToString());
+                        para3[2] = new ReportParameter("Municipio", dt.Rows[0]["MUNICIO"].ToString());
+                        para3[3] = new ReportParameter("Localidad", dt.Rows[0]["LOCALIDAD"].ToString());
                     }
                     else
                     {
-                        para2[0] = new ReportParameter("Unidad", "");
-                        para2[2] = new ReportParameter("Municipio", "");
-                        para2[3] = new ReportParameter("Localidad", "");
+                        para3[0] = new ReportParameter("Unidad", "");
+                        para3[2] = new ReportParameter("Municipio", "");
+                        para3[3] = new ReportParameter("Localidad", "");
                     }
                     dt = proc.ResumenSocios(rnpa);
                     if (dt.Rows.Count != 0)
                     {
-                        para2[7] = new ReportParameter("naseg", dt.Rows[0]["ASEGURADOS"].ToString());
+                        para3[7] = new ReportParameter("naseg", dt.Rows[0]["ASEGURADOS"].ToString());
                     }
                     else
                     {
-                        para2[7] = new ReportParameter("naseg", "0");
+                        para3[7] = new ReportParameter("naseg", "0");
                     }
-                    para2[4] = new ReportParameter("nper", permisos_lista.vista_perm.Count.ToString());
-                    para2[5] = new ReportParameter("nsoc", ordPesqueroDataSetpescadores1.pescadores.Count.ToString());
-                    para2[6] = new ReportParameter("nemb", embarcacionesSet.EmbarcacionesxUnidad.Count.ToString());
-                    reportViewer1.LocalReport.SetParameters(para2);
+                    para3[4] = new ReportParameter("nper", permisos_lista.vista_perm.Count.ToString());
+                    para3[5] = new ReportParameter("nsoc", ordPesqueroDataSetpescadores1.pescadores.Count.ToString());
+                    para3[6] = new ReportParameter("nemb", embarcacionesSet.EmbarcacionesxUnidad.Count.ToString());
+                    reportViewer1.LocalReport.SetParameters(para3);
                     this.reportViewer1.RefreshReport();
                     break;
                 case 7:
@@ -299,53 +299,53 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     datos5.Value = ordPesqueroDataSet5.Loreto;
                     this.reportViewer1.LocalReport.DataSources.Add(datos5);
 
-                    ReportParameter[] para3 = new ReportParameter[5];
+                    ReportParameter[] para7 = new ReportParameter[5];
                     int x = 0;
                     if (ordPesqueroDataSet7.Mulege.Rows.Count.ToString()==null)
                     {
-                        para3[0] = new ReportParameter("totM", "0");
+                        para7[0] = new ReportParameter("totM", "0");
                     }
                     else
                     {
-                        para3[0] = new ReportParameter("totM", ordPesqueroDataSet7.Mulege.Rows.Count.ToString());
+                        para7[0] = new ReportParameter("totM", ordPesqueroDataSet7.Mulege.Rows.Count.ToString());
                     }
 
                     if (ordPesqueroDataSet3.Comondu.Rows.Count.ToString() == null)
                     {
-                        para3[1] = new ReportParameter("totC", "0");
+                        para7[1] = new ReportParameter("totC", "0");
                     }
                     else
                     {
-                        para3[1] = new ReportParameter("totC", ordPesqueroDataSet3.Comondu.Rows.Count.ToString());
+                        para7[1] = new ReportParameter("totC", ordPesqueroDataSet3.Comondu.Rows.Count.ToString());
                     }
 
                     if (ordPesqueroDataSet4.LaPaz.Rows.Count.ToString() == null)
                     {
-                        para3[2] = new ReportParameter("totP", "0");
+                        para7[2] = new ReportParameter("totP", "0");
                     }
                     else
                     {
-                        para3[2] = new ReportParameter("totP", ordPesqueroDataSet4.LaPaz.Rows.Count.ToString());
+                        para7[2] = new ReportParameter("totP", ordPesqueroDataSet4.LaPaz.Rows.Count.ToString());
                     }
 
                     if (ordPesqueroDataSet5.Loreto.Rows.Count.ToString() == null)
                     {
-                        para3[2] = new ReportParameter("totL", "0");
+                        para7[2] = new ReportParameter("totL", "0");
                     }
                     else
                     {
-                        para3[3] = new ReportParameter("totL", ordPesqueroDataSet5.Loreto.Rows.Count.ToString());
+                        para7[3] = new ReportParameter("totL", ordPesqueroDataSet5.Loreto.Rows.Count.ToString());
                     }
 
                     if (ordPesqueroDataSet6.LosCabos.Rows.Count.ToString() == null)
                     {
-                        para3[4] = new ReportParameter("totL", "0");
+                        para7[4] = new ReportParameter("totL", "0");
                     }
                     else
                     {
-                        para3[4] = new ReportParameter("totCA", ordPesqueroDataSet6.LosCabos.Rows.Count.ToString());
+                        para7[4] = new ReportParameter("totCA", ordPesqueroDataSet6.LosCabos.Rows.Count.ToString());
                     }
-                    reportViewer1.LocalReport.SetParameters(para3);
+                    reportViewer1.LocalReport.SetParameters(para7);
 
                     this.reportViewer1.RefreshReport();
                     break;

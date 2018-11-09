@@ -38,25 +38,61 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
+                  <Width>1.21358cm</Width>
+                </TablixColumn>
+                <TablixColumn>
                   <Width>1.26348cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>4.0594cm</Width>
+                  <Width>3.96838cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>6.32041cm</Width>
+                  <Width>5.55533cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>2.18549cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>3.20574cm</Width>
+                  <Width>2.54428cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
                   <Height>0.58677cm</Height>
                   <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Folio</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
                     <TablixCell>
                       <CellContents>
                         <Textbox Name="Textbox7">
@@ -229,6 +265,38 @@
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
+                        <Textbox Name="FOLIO">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!FOLIO.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>FOLIO</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
                         <Textbox Name="Seguro">
                           <CanGrow>true</CanGrow>
                           <KeepTogether>true</KeepTogether>
@@ -398,6 +466,7 @@
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
+                <TablixMember />
               </TablixMembers>
             </TablixColumnHierarchy>
             <TablixRowHierarchy>
@@ -416,7 +485,7 @@
             <Top>1.04098cm</Top>
             <Left>0.00001cm</Left>
             <Height>1.17354cm</Height>
-            <Width>17.03452cm</Width>
+            <Width>16.73054cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -430,7 +499,7 @@
         <Top>4.45274cm</Top>
         <Left>0.99876cm</Left>
         <Height>2.21452cm</Height>
-        <Width>17.03453cm</Width>
+        <Width>16.73055cm</Width>
         <Style>
           <Border>
             <Color>Silver</Color>
@@ -1084,6 +1153,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
@@ -2599,7 +2669,7 @@
     <Height>26cm</Height>
     <Style />
   </Body>
-  <Width>19.58cm</Width>
+  <Width>20.53329cm</Width>
   <Page>
     <PageHeader>
       <Height>2.54cm</Height>
@@ -2738,10 +2808,14 @@
           <DataField>EMBARCACION</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="FOLIO">
+          <DataField>FOLIO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>ordPesqueroDataSetpescadores1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Desktop\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\ordPesqueroDataSetpescadores1.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\ordPesqueroDataSetpescadores1.xsd</rd:SchemaPath>
         <rd:TableName>pescadores</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -2789,7 +2863,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Permisos_lista</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Desktop\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Permisos_lista.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Permisos_lista.xsd</rd:SchemaPath>
         <rd:TableName>vista_perm</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -2881,7 +2955,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Permisos_lista</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Desktop\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Permisos_lista.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Permisos_lista.xsd</rd:SchemaPath>
         <rd:TableName>vista_perm2</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -2929,7 +3003,7 @@
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Permisos_lista</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Desktop\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Permisos_lista.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Permisos_lista.xsd</rd:SchemaPath>
         <rd:TableName>vista_perm3</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
