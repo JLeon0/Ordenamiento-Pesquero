@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Registro_Usuario));
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.CURPPesc = new System.Windows.Forms.TextBox();
             this.Credencial = new System.Windows.Forms.Button();
             this.Firma = new System.Windows.Forms.PictureBox();
             this.CargarFirma = new System.Windows.Forms.PictureBox();
@@ -125,16 +126,15 @@
             this.EliminarUnidad = new System.Windows.Forms.PictureBox();
             this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
             this.RegistrarUnidad = new System.Windows.Forms.PictureBox();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblP = new System.Windows.Forms.Label();
             this.BuscarNombre = new System.Windows.Forms.TextBox();
             this.ListaNombres = new System.Windows.Forms.ListBox();
             this.ListaNombres2 = new System.Windows.Forms.ListBox();
             this.BuscarNombre2 = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblNo = new System.Windows.Forms.Label();
             this.Solicitud = new System.Windows.Forms.Button();
             this.Apoyo = new System.Windows.Forms.Button();
             this.Botones = new System.Windows.Forms.GroupBox();
-            this.CURPPesc = new System.Windows.Forms.TextBox();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Firma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
@@ -224,6 +224,15 @@
             this.groupBox7.TabIndex = 7;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Datos Generales";
+            // 
+            // CURPPesc
+            // 
+            this.CURPPesc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.CURPPesc.Location = new System.Drawing.Point(134, 149);
+            this.CURPPesc.Name = "CURPPesc";
+            this.CURPPesc.Size = new System.Drawing.Size(193, 22);
+            this.CURPPesc.TabIndex = 5;
+            this.CURPPesc.TextChanged += new System.EventHandler(this.CURPPesc_TextChanged);
             // 
             // Credencial
             // 
@@ -446,10 +455,10 @@
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
+            this.pictureBox9.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox9.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox9.Location = new System.Drawing.Point(337, 152);
+            this.pictureBox9.Location = new System.Drawing.Point(337, 150);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(23, 21);
             this.pictureBox9.TabIndex = 111;
@@ -458,7 +467,7 @@
             // pictureBox7
             // 
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox7.BackgroundImage")));
+            this.pictureBox7.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox7.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
             this.pictureBox7.Location = new System.Drawing.Point(540, 150);
@@ -519,6 +528,7 @@
             // 
             this.CorreoPesc.BackColor = System.Drawing.Color.White;
             this.CorreoPesc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CorreoPesc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.CorreoPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CorreoPesc.ForeColor = System.Drawing.Color.Black;
             this.CorreoPesc.Location = new System.Drawing.Point(133, 338);
@@ -531,6 +541,7 @@
             // 
             // TSangrePesc
             // 
+            this.TSangrePesc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TSangrePesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TSangrePesc.Location = new System.Drawing.Point(741, 149);
             this.TSangrePesc.Name = "TSangrePesc";
@@ -612,6 +623,7 @@
             // 
             // ApeMatPescador
             // 
+            this.ApeMatPescador.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.ApeMatPescador.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ApeMatPescador.Location = new System.Drawing.Point(537, 42);
             this.ApeMatPescador.Name = "ApeMatPescador";
@@ -620,6 +632,7 @@
             // 
             // ApePatPescador
             // 
+            this.ApePatPescador.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.ApePatPescador.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ApePatPescador.Location = new System.Drawing.Point(337, 42);
             this.ApePatPescador.Name = "ApePatPescador";
@@ -689,6 +702,7 @@
             // 
             // ColoniaPesc
             // 
+            this.ColoniaPesc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.ColoniaPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ColoniaPesc.Location = new System.Drawing.Point(618, 195);
             this.ColoniaPesc.Name = "ColoniaPesc";
@@ -707,6 +721,7 @@
             // 
             // CalleYNumPesc
             // 
+            this.CalleYNumPesc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.CalleYNumPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CalleYNumPesc.Location = new System.Drawing.Point(133, 195);
             this.CalleYNumPesc.Name = "CalleYNumPesc";
@@ -725,6 +740,7 @@
             // 
             // RFCPesc
             // 
+            this.RFCPesc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.RFCPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RFCPesc.Location = new System.Drawing.Point(384, 149);
             this.RFCPesc.MaxLength = 13;
@@ -776,6 +792,7 @@
             // 
             // LugarNacPesc
             // 
+            this.LugarNacPesc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.LugarNacPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LugarNacPesc.Location = new System.Drawing.Point(133, 86);
             this.LugarNacPesc.Name = "LugarNacPesc";
@@ -815,6 +832,7 @@
             // 
             // NombrePesc
             // 
+            this.NombrePesc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.NombrePesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombrePesc.Location = new System.Drawing.Point(133, 42);
             this.NombrePesc.Name = "NombrePesc";
@@ -1238,14 +1256,14 @@
             this.RegistrarUnidad.TabStop = false;
             this.RegistrarUnidad.Click += new System.EventHandler(this.RegistrarUnidad_Click);
             // 
-            // label12
+            // lblP
             // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(64, 89);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(80, 13);
-            this.label12.TabIndex = 158;
-            this.label12.Text = "PESCADORES";
+            this.lblP.AutoSize = true;
+            this.lblP.Location = new System.Drawing.Point(64, 89);
+            this.lblP.Name = "lblP";
+            this.lblP.Size = new System.Drawing.Size(80, 13);
+            this.lblP.TabIndex = 158;
+            this.lblP.Text = "PESCADORES";
             // 
             // BuscarNombre
             // 
@@ -1284,14 +1302,14 @@
             this.BuscarNombre2.TabIndex = 178;
             this.BuscarNombre2.TextChanged += new System.EventHandler(this.BuscarNombre2_TextChanged);
             // 
-            // label13
+            // lblNo
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(64, 351);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(95, 13);
-            this.label13.TabIndex = 177;
-            this.label13.Text = "NO ORDENADOS";
+            this.lblNo.AutoSize = true;
+            this.lblNo.Location = new System.Drawing.Point(64, 351);
+            this.lblNo.Name = "lblNo";
+            this.lblNo.Size = new System.Drawing.Size(95, 13);
+            this.lblNo.TabIndex = 177;
+            this.lblNo.Text = "NO ORDENADOS";
             // 
             // Solicitud
             // 
@@ -1334,13 +1352,6 @@
             this.Botones.TabStop = false;
             this.Botones.Text = " ";
             // 
-            // CURPPesc
-            // 
-            this.CURPPesc.Location = new System.Drawing.Point(134, 149);
-            this.CURPPesc.Name = "CURPPesc";
-            this.CURPPesc.Size = new System.Drawing.Size(193, 22);
-            this.CURPPesc.TabIndex = 182;
-            // 
             // Pantalla_Registro_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1351,10 +1362,10 @@
             this.Controls.Add(this.Botones);
             this.Controls.Add(this.ListaNombres2);
             this.Controls.Add(this.BuscarNombre2);
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.lblNo);
             this.Controls.Add(this.ListaNombres);
             this.Controls.Add(this.BuscarNombre);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.lblP);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.groupBox1);
@@ -1494,12 +1505,12 @@
         private System.Windows.Forms.RadioButton radioButton11;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblP;
         private System.Windows.Forms.TextBox BuscarNombre;
         private System.Windows.Forms.ListBox ListaNombres;
         private System.Windows.Forms.ListBox ListaNombres2;
         private System.Windows.Forms.TextBox BuscarNombre2;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblNo;
         private System.Windows.Forms.Button Solicitud;
         private System.Windows.Forms.LinkLabel apoyos;
         private System.Windows.Forms.LinkLabel solicitudes;
