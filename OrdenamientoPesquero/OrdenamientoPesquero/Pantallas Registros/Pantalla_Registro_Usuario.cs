@@ -211,7 +211,7 @@ namespace OrdenamientoPesquero
                     ListaNombres.Items.Add(fila["NOMBRE"].ToString());
                 }
             }
-            lblP.Text += "  " + ListaNombres.Items.Count;
+            lblP.Text = "PESCADORES  " + ListaNombres.Items.Count;
         }
 
         private void CargarNoPescadores()
@@ -222,7 +222,7 @@ namespace OrdenamientoPesquero
             {
                 ListaNombres2.Items.Add(fila["NOMBRE"].ToString());
             }
-            lblNo.Text += "  " + ListaNombres2.Items.Count;
+            lblNo.Text = "NO ORDENADOS  " + ListaNombres2.Items.Count;
         }
 
         private void CargarMatriculas()
