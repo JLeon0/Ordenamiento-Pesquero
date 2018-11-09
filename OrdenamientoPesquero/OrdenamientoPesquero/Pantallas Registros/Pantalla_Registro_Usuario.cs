@@ -210,12 +210,8 @@ namespace OrdenamientoPesquero
                 {
                     ListaNombres.Items.Add(fila["NOMBRE"].ToString());
                 }
-                //dt = proc.Obtener_curp(RNPA);
-                //CURPPesc.DataSource = dt;
-                //CURPPesc.DisplayMember = "CURP";
-                //CURPPesc.ValueMember = "CURP";
-                //CURPPesc.Text = "";
             }
+            lblP.Text += "  " + ListaNombres.Items.Count;
         }
 
         private void CargarNoPescadores()
@@ -226,6 +222,7 @@ namespace OrdenamientoPesquero
             {
                 ListaNombres2.Items.Add(fila["NOMBRE"].ToString());
             }
+            lblNo.Text += "  " + ListaNombres2.Items.Count;
         }
 
         private void CargarMatriculas()
@@ -498,7 +495,7 @@ namespace OrdenamientoPesquero
             }
             else
             {
-                pictureBox9.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+                pictureBox9.BackgroundImage = OrdenamientoPesquero.Properties.Resources.Equis;
                 pescador[0, 0] = "0";
             }
         }
@@ -513,7 +510,7 @@ namespace OrdenamientoPesquero
             }
             else
             {
-                pictureBox7.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+                pictureBox7.BackgroundImage = OrdenamientoPesquero.Properties.Resources.Equis;
                 pescador[1, 0] = "0";
             }
         }
@@ -522,7 +519,7 @@ namespace OrdenamientoPesquero
         {
             if (CPPesc.Text.Contains(' ') || CPPesc.Text.Length != 5)
             {
-                pictureBox8.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+                pictureBox8.BackgroundImage = OrdenamientoPesquero.Properties.Resources.Equis;
                 pescador[2, 0] = "0";
             }
             else
@@ -536,7 +533,7 @@ namespace OrdenamientoPesquero
         {
             if (TelefonoPesc.Text.Contains(' ') || TelefonoPesc.Text.Length != 12)
             {
-                pictureBox5.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+                pictureBox5.BackgroundImage = OrdenamientoPesquero.Properties.Resources.Equis;
                 pescador[3, 0] = "0";
             }
             else
@@ -555,7 +552,7 @@ namespace OrdenamientoPesquero
             }
             else
             {
-                pictureBox6.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+                pictureBox6.BackgroundImage = OrdenamientoPesquero.Properties.Resources.Equis;
                 pescador[4, 0] = "0";
             }
         }
@@ -817,8 +814,8 @@ namespace OrdenamientoPesquero
                 Imagen.BackgroundImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
 
                 System.IO.MemoryStream firma = new MemoryStream();
-                Firma.BackgroundImage.Save(firma, System.Drawing.Imaging.ImageFormat.Jpeg);
-
+                if (Firma.BackgroundImage != null)
+                { Firma.BackgroundImage.Save(firma, System.Drawing.Imaging.ImageFormat.Jpeg); }
                 //System.Drawing.Image fullsizeImage = System.Drawing.Image.FromStream(ms);
                 //System.Drawing.Image newImage = fullsizeImage.GetThumbnailImage(131, 182, null, IntPtr.Zero);
                 //System.IO.MemoryStream myResult = new System.IO.MemoryStream();

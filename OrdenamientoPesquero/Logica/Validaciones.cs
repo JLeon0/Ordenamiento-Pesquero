@@ -181,7 +181,7 @@ namespace Logica
         public void CloseIt()
         {
             System.Threading.Thread.Sleep(2000);
-            System.Windows.Forms.SendKeys.SendWait(" ");
+            SendKeys.SendWait("{ESC}");
         }
 
         public bool existe(string rnpa)
