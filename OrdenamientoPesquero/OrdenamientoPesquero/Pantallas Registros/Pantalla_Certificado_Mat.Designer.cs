@@ -65,6 +65,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.NChipCertMat = new System.Windows.Forms.MaskedTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.MatriculaCertMat = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.Marca = new System.Windows.Forms.TextBox();
             this.limpiar = new System.Windows.Forms.PictureBox();
@@ -89,7 +90,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ListaMatriculas = new System.Windows.Forms.ListBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.MatriculaCertMat = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
@@ -152,6 +152,7 @@
             // 
             // TraficoCertMat
             // 
+            this.TraficoCertMat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.TraficoCertMat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TraficoCertMat.Location = new System.Drawing.Point(228, 88);
             this.TraficoCertMat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -171,6 +172,7 @@
             // 
             // PotenciaMotorCertMat
             // 
+            this.PotenciaMotorCertMat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.PotenciaMotorCertMat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PotenciaMotorCertMat.Location = new System.Drawing.Point(418, 88);
             this.PotenciaMotorCertMat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -320,6 +322,7 @@
             // 
             // ServicioCertMat
             // 
+            this.ServicioCertMat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.ServicioCertMat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ServicioCertMat.Location = new System.Drawing.Point(134, 88);
             this.ServicioCertMat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -342,7 +345,7 @@
             this.TipoEmbCertMar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TipoEmbCertMar.FormattingEnabled = true;
             this.TipoEmbCertMar.Items.AddRange(new object[] {
-            "Lancha"});
+            "LANCHA"});
             this.TipoEmbCertMar.Location = new System.Drawing.Point(20, 88);
             this.TipoEmbCertMar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.TipoEmbCertMar.Name = "TipoEmbCertMar";
@@ -362,6 +365,7 @@
             // 
             // NombreEmbCerMat
             // 
+            this.NombreEmbCerMat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.NombreEmbCerMat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombreEmbCerMat.Location = new System.Drawing.Point(198, 40);
             this.NombreEmbCerMat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -494,6 +498,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Certificado de Matrícula";
             // 
+            // MatriculaCertMat
+            // 
+            this.MatriculaCertMat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.MatriculaCertMat.Location = new System.Drawing.Point(20, 40);
+            this.MatriculaCertMat.Name = "MatriculaCertMat";
+            this.MatriculaCertMat.Size = new System.Drawing.Size(168, 22);
+            this.MatriculaCertMat.TabIndex = 159;
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -506,6 +518,7 @@
             // 
             // Marca
             // 
+            this.Marca.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.Marca.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Marca.Location = new System.Drawing.Point(526, 87);
             this.Marca.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -744,13 +757,6 @@
             this.label13.Size = new System.Drawing.Size(89, 16);
             this.label13.TabIndex = 169;
             this.label13.Text = "MATRICULAS";
-            // 
-            // MatriculaCertMat
-            // 
-            this.MatriculaCertMat.Location = new System.Drawing.Point(20, 40);
-            this.MatriculaCertMat.Name = "MatriculaCertMat";
-            this.MatriculaCertMat.Size = new System.Drawing.Size(168, 22);
-            this.MatriculaCertMat.TabIndex = 159;
             // 
             // Pantalla_Certificado_Mat
             // 
