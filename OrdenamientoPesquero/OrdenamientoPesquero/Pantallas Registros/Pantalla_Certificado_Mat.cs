@@ -130,11 +130,21 @@ namespace OrdenamientoPesquero
         public void CertMatXUnidad()
         {
             dt = proc.ObtenerCertMatrXUnidad(RNPA);
-            ListaMatriculas.Items.Clear();
+            DataTable embarcaciones = new DataTable();
+            ListaMatriculas.DataSource = embarcaciones;
+            embarcaciones.Columns.Add("MATRICULA");
+            embarcaciones.Columns.Add("NOMBREEMBARCACION");
             foreach (DataRow fila in dt.Rows)
             {
-                ListaMatriculas.Items.Add(fila["MATRICULA"].ToString());
+                if (fila["MATRICULA"].ToString() != RNPA)
+                {
+                    embarcaciones.Rows.Add(fila["MATRICULA"].ToString(), fila["NOMBREEMBARCACION"].ToString());
+                }
+                //ListaMatriculas.Items.Add(fila["MATRICULA"].ToString());
             }
+            ListaMatriculas.DataSource = embarcaciones;
+            ListaMatriculas.DisplayMember = "NOMBREEMBARCACION";
+            ListaMatriculas.ValueMember = "MATRICULA";
         }
 
         private void limpiar_Click(object sender, EventArgs e)
@@ -160,9 +170,9 @@ namespace OrdenamientoPesquero
             foreach (DataRow filas in dt.Rows)
             {
                 string mat = filas["MATRICULA"].ToString();
-                if (mat == ListaMatriculas.Text)
+                if (mat == ListaMatriculas.SelectedValue.ToString())
                 {
-                    MatriculaCertMat.Text = ListaMatriculas.Text;
+                    MatriculaCertMat.Text = ListaMatriculas.SelectedValue.ToString();
                     NombreEmbCerMat.Text = filas["NOMBREEMBARCACION"].ToString();
                     ArqBrutoCertMat.Text = filas["ARQUEOBRUTO"].ToString();
                     ArqNetoCertMat.Text = filas["ARQUEONETO"].ToString();
