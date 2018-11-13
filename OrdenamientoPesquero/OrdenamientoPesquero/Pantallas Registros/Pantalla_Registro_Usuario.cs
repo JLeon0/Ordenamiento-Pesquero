@@ -365,6 +365,8 @@ namespace OrdenamientoPesquero
         {
             if (RNPA == "")
             {
+                EliminarUnidad.Visible = false;
+                label4.Visible = false;
                 TipoPesc.Visible = false;
                 OcupacionEnEmbarPesc.Visible = false;
                 CuerpoDeAguaPesc.Visible = false;
@@ -611,10 +613,10 @@ namespace OrdenamientoPesquero
         #region Click
         private void EliminarUnidad_Click(object sender, EventArgs e)
         {
-            DialogResult Si = MessageBox.Show("¿Desea eliminar este Pescador?", "ADVERTENCIA", MessageBoxButtons.YesNo);
+            DialogResult Si = MessageBox.Show("¿Desea eliminar este Pescador de la Unidad?", "ADVERTENCIA", MessageBoxButtons.YesNo);
             if (Si == DialogResult.Yes)
             {
-                exito = proc.Eliminar_Pescador(CURPPesc.Text);
+                exito = proc.Eliminar_Pescador(CURPPesc.Text, 1);
                 if (exito > 0) { limpiarpescador(); exito = 0; }
                 CargarPescadores();
                 CargarNoPescadores();
@@ -909,18 +911,31 @@ namespace OrdenamientoPesquero
             v.Show(this);
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            DialogResult Si = MessageBox.Show("¿Desea eliminar este Pescador de forma definitiva?", "ADVERTENCIA", MessageBoxButtons.YesNo);
+            if (Si == DialogResult.Yes)
+            {
+                exito = proc.Eliminar_Pescador(CURPPesc.Text, 0);
+                if (exito > 0)
+                { val.Exito(-21); limpiarpescador(); exito = 0; }
+                CargarPescadores();
+                CargarNoPescadores();
+            }
+        }
+
         private void ListaNombres2_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             if (ListaNombres2.SelectedIndex != -1)
             {
                 Ord = 0;
                 ListaNombres.SelectedIndex = -1;
-                if (RNPA == "")
-                { LlenarDatos(NoOrdenados.Rows[ListaNombres2.SelectedIndex]["CURP"].ToString()); }
-                else
-                {
+                //if (RNPA == "")
+                //{ LlenarDatos(NoOrdenados.Rows[ListaNombres2.SelectedIndex]["CURP"].ToString()); }
+                //else
+                //{
                     LlenarDatos(NoOrdenados.Rows[ListaNombres2.SelectedIndex]["CURP"].ToString());
-                }
+                //}
             }
 
         }

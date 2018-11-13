@@ -200,10 +200,10 @@ namespace Logica
             return c.Ejecutar("Actualizar_pescador", Parametros, PES.NOMBRE, PES.AP_PAT, PES.AP_MAT, PES.CURP, PES.RFC, PES.ESCOLARIDAD, PES.TIP_SANG, PES.SEXO, PES.LUG_NACIMI, PES.FECH_NACIMI, PES.CALLENUM, PES.COLONIA, PES.MUNICIPIO, PES.CP, PES.TEL, PES.TIPO_PESC, PES.OCP_LABORAL, PES.CUERPO_DE_AGUA, PES.MATRICULA, PES.CORREO, PES.LOCALIDAD, PES.ORDENADO, PES.RNPA, PES.SEGURO, PES.FOLIO, PES.FECHAEXPF, PES.FECHAVENF);
 
         }
-        public int Eliminar_Pescador(string CURP)
+        public int Eliminar_Pescador(string CURP, int Eliminar)
         {
-            string[] Parametros = { "@curp" };
-            return c.Ejecutar("EliminarPescador", Parametros, CURP);
+            string[] Parametros = { "@curp", "@Eliminar" };
+            return c.Ejecutar("EliminarPescador", Parametros, CURP, Eliminar);
         }
         public DataTable Obtener_curp(string RNPA)
         {
