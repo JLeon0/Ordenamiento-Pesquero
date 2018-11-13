@@ -172,6 +172,11 @@ namespace Logica
                 (new System.Threading.Thread(CloseIt)).Start();
                 MessageBox.Show("Error al registrar la unidad a una Federación"); /* 1 segundo = 1000 */
             }
+            else if(ok == -21)
+            { 
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Pescador borrado de la base de datos","Exito"); /* 1 segundo = 1000 */
+            }
             else
             {
                 (new System.Threading.Thread(CloseIt)).Start();

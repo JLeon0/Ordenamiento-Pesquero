@@ -113,6 +113,10 @@
             this.Unid = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.EliminarUnidad = new System.Windows.Forms.PictureBox();
+            this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
+            this.RegistrarUnidad = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.apoyos = new System.Windows.Forms.LinkLabel();
             this.solicitudes = new System.Windows.Forms.LinkLabel();
@@ -123,9 +127,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.Ver = new System.Windows.Forms.PictureBox();
-            this.EliminarUnidad = new System.Windows.Forms.PictureBox();
-            this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
-            this.RegistrarUnidad = new System.Windows.Forms.PictureBox();
             this.lblP = new System.Windows.Forms.Label();
             this.BuscarNombre = new System.Windows.Forms.TextBox();
             this.ListaNombres = new System.Windows.Forms.ListBox();
@@ -135,6 +136,7 @@
             this.Solicitud = new System.Windows.Forms.Button();
             this.Apoyo = new System.Windows.Forms.Button();
             this.Botones = new System.Windows.Forms.GroupBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Firma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
@@ -151,13 +153,14 @@
             this.CuerpoDeAguaPesc.SuspendLayout();
             this.OcupacionEnEmbarPesc.SuspendLayout();
             this.TipoPesc.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ver)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).BeginInit();
             this.Botones.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -1079,11 +1082,11 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(745, 72);
+            this.label4.Location = new System.Drawing.Point(730, 72);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 14);
+            this.label4.Size = new System.Drawing.Size(98, 14);
             this.label4.TabIndex = 111;
-            this.label4.Text = "Eliminar";
+            this.label4.Text = "Quitar de la Unidad";
             // 
             // label5
             // 
@@ -1113,6 +1116,56 @@
             this.label24.Size = new System.Drawing.Size(221, 19);
             this.label24.TabIndex = 153;
             this.label24.Text = "REGISTRO DE PESCADOR";
+            // 
+            // EliminarUnidad
+            // 
+            this.EliminarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Eliminar;
+            this.EliminarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EliminarUnidad.Location = new System.Drawing.Point(756, 19);
+            this.EliminarUnidad.Name = "EliminarUnidad";
+            this.EliminarUnidad.Size = new System.Drawing.Size(50, 50);
+            this.EliminarUnidad.TabIndex = 110;
+            this.EliminarUnidad.TabStop = false;
+            this.toolTip1.SetToolTip(this.EliminarUnidad, "Quitar de la Unidad");
+            this.EliminarUnidad.Click += new System.EventHandler(this.EliminarUnidad_Click);
+            // 
+            // ActualizarUnidad
+            // 
+            this.ActualizarUnidad.BackColor = System.Drawing.Color.Transparent;
+            this.ActualizarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
+            this.ActualizarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ActualizarUnidad.Location = new System.Drawing.Point(662, 19);
+            this.ActualizarUnidad.Name = "ActualizarUnidad";
+            this.ActualizarUnidad.Size = new System.Drawing.Size(50, 50);
+            this.ActualizarUnidad.TabIndex = 109;
+            this.ActualizarUnidad.TabStop = false;
+            this.toolTip1.SetToolTip(this.ActualizarUnidad, "Actualizar");
+            this.ActualizarUnidad.Click += new System.EventHandler(this.ActualizarUnidad_Click);
+            // 
+            // RegistrarUnidad
+            // 
+            this.RegistrarUnidad.BackColor = System.Drawing.Color.Transparent;
+            this.RegistrarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
+            this.RegistrarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RegistrarUnidad.Location = new System.Drawing.Point(587, 19);
+            this.RegistrarUnidad.Name = "RegistrarUnidad";
+            this.RegistrarUnidad.Size = new System.Drawing.Size(50, 50);
+            this.RegistrarUnidad.TabIndex = 108;
+            this.RegistrarUnidad.TabStop = false;
+            this.toolTip1.SetToolTip(this.RegistrarUnidad, "Registrar");
+            this.RegistrarUnidad.Click += new System.EventHandler(this.RegistrarUnidad_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(1049, 19);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.TabIndex = 181;
+            this.pictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox1, "Eliminar Registro");
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // groupBox1
             // 
@@ -1221,41 +1274,6 @@
             this.Ver.TabStop = false;
             this.Ver.Click += new System.EventHandler(this.Ver_Click);
             // 
-            // EliminarUnidad
-            // 
-            this.EliminarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Eliminar;
-            this.EliminarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EliminarUnidad.Location = new System.Drawing.Point(739, 19);
-            this.EliminarUnidad.Name = "EliminarUnidad";
-            this.EliminarUnidad.Size = new System.Drawing.Size(50, 50);
-            this.EliminarUnidad.TabIndex = 110;
-            this.EliminarUnidad.TabStop = false;
-            this.EliminarUnidad.Click += new System.EventHandler(this.EliminarUnidad_Click);
-            // 
-            // ActualizarUnidad
-            // 
-            this.ActualizarUnidad.BackColor = System.Drawing.Color.Transparent;
-            this.ActualizarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
-            this.ActualizarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ActualizarUnidad.Location = new System.Drawing.Point(662, 19);
-            this.ActualizarUnidad.Name = "ActualizarUnidad";
-            this.ActualizarUnidad.Size = new System.Drawing.Size(50, 50);
-            this.ActualizarUnidad.TabIndex = 109;
-            this.ActualizarUnidad.TabStop = false;
-            this.ActualizarUnidad.Click += new System.EventHandler(this.ActualizarUnidad_Click);
-            // 
-            // RegistrarUnidad
-            // 
-            this.RegistrarUnidad.BackColor = System.Drawing.Color.Transparent;
-            this.RegistrarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
-            this.RegistrarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RegistrarUnidad.Location = new System.Drawing.Point(587, 19);
-            this.RegistrarUnidad.Name = "RegistrarUnidad";
-            this.RegistrarUnidad.Size = new System.Drawing.Size(50, 50);
-            this.RegistrarUnidad.TabIndex = 108;
-            this.RegistrarUnidad.TabStop = false;
-            this.RegistrarUnidad.Click += new System.EventHandler(this.RegistrarUnidad_Click);
-            // 
             // lblP
             // 
             this.lblP.AutoSize = true;
@@ -1335,6 +1353,8 @@
             // 
             // Botones
             // 
+            this.Botones.Controls.Add(this.pictureBox1);
+            this.Botones.Controls.Add(this.label12);
             this.Botones.Controls.Add(this.Solicitud);
             this.Botones.Controls.Add(this.Apoyo);
             this.Botones.Controls.Add(this.RegistrarUnidad);
@@ -1347,10 +1367,20 @@
             this.Botones.Controls.Add(this.label5);
             this.Botones.Location = new System.Drawing.Point(212, 665);
             this.Botones.Name = "Botones";
-            this.Botones.Size = new System.Drawing.Size(912, 89);
+            this.Botones.Size = new System.Drawing.Size(1117, 89);
             this.Botones.TabIndex = 181;
             this.Botones.TabStop = false;
             this.Botones.Text = " ";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(1031, 72);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(83, 14);
+            this.label12.TabIndex = 182;
+            this.label12.Text = "Eliminar registro";
             // 
             // Pantalla_Registro_Usuario
             // 
@@ -1399,14 +1429,15 @@
             this.OcupacionEnEmbarPesc.PerformLayout();
             this.TipoPesc.ResumeLayout(false);
             this.TipoPesc.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ver)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).EndInit();
             this.Botones.ResumeLayout(false);
             this.Botones.PerformLayout();
             this.ResumeLayout(false);
@@ -1520,5 +1551,7 @@
         private System.Windows.Forms.PictureBox CargarFirma;
         private System.Windows.Forms.Button Credencial;
         private System.Windows.Forms.TextBox CURPPesc;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label12;
     }
 }
