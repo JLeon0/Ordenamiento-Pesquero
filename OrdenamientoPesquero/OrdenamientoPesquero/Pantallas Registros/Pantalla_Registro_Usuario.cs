@@ -140,7 +140,7 @@ namespace OrdenamientoPesquero
             if (RNPA != "")
             {
                 DataRowView row = (DataRowView)MatriculaPesc.SelectedItem;
-                pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text, RFCPesc.Text, EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, row[0].ToString(), CorreoPesc.Text, LocalidadPesc.Text, o, RNPA, Seguro.Text, FolioCred.Text, fechaVenF, fechaExpF);
+                pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, row[0].ToString().Replace(" ", ""), CorreoPesc.Text, LocalidadPesc.Text, o, RNPA.Replace(" ", ""), Seguro.Text, FolioCred.Text, fechaVenF, fechaExpF);
                 dt = proc.ChecarCapitan(RNPA, row[0].ToString());
                 if (ocupacion != "Capitan" || Convert.ToInt32(dt.Rows[0]["Capitanes"].ToString()) <= 0)
                 {
@@ -164,7 +164,7 @@ namespace OrdenamientoPesquero
             {
                 string R = "NO APLICA";
                 if (ListaNombres.SelectedIndex > -1) { NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), ""); R = NOMBRES.Rows[0]["RNPTITULAR"].ToString(); }
-                pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text, RFCPesc.Text, EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, "NO APLICA", CorreoPesc.Text, LocalidadPesc.Text, o, R, Seguro.Text, FolioCred.Text, fechaVenF, fechaExpF);
+                pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, "NO APLICA", CorreoPesc.Text, LocalidadPesc.Text, o, R, Seguro.Text, FolioCred.Text, fechaVenF, fechaExpF);
                 if (registrar)
                 {
                     RegistrarImagen();
@@ -332,7 +332,7 @@ namespace OrdenamientoPesquero
                 ObtenerImagen();
                 if (ListaNombres.SelectedIndex != -1)
                 {
-                    NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), "");
+                    NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), RNPA);
                     dt = proc.Obtener_todas_unidades(NOMBRES.Rows[0]["RNPTITULAR"].ToString());
                     Unid.Text = dt.Rows[0]["NOMBRE"].ToString();
                 }
@@ -891,16 +891,16 @@ namespace OrdenamientoPesquero
             {
                 Ord = 1;
                 ListaNombres2.SelectedIndex = -1;
-                if (RNPA == "")
-                {
-                    NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), "");
-                    LlenarDatos(NOMBRES.Rows[0]["CURP"].ToString());
-                }
-                else
-                {
+                //if (RNPA == "")
+                //{
+                //    NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), "");
+                //    LlenarDatos(NOMBRES.Rows[0]["CURP"].ToString());
+                //}
+                //else
+                //{
                     NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), RNPA);
                     LlenarDatos(NOMBRES.Rows[0]["CURP"].ToString());
-                }
+                //}
                 CargarSolApo();
             }            
         }
