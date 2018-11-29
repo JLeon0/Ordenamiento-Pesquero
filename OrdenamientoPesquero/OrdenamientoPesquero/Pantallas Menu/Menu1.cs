@@ -52,10 +52,6 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             //    service.Start();
             //    service.WaitForStatus(ServiceControllerStatus.Running, TimeSpan.FromMilliseconds(5000));
             //}
-            CargarInstancia();
-            loading.Visible = false;
-            Ordenamiento.Visible = true;
-            Solicitudes.Visible = true;
         }
         public string setString(string CONEXIONPERRONA)
         {
@@ -68,6 +64,19 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             Properties.Settings.Default.Save();
 
             return Properties.Settings.Default.OrdPesqueroConnectionString;
+        }
+
+        bool activado = false;
+        private void Menu1_Activated(object sender, EventArgs e)
+        {
+            if (!activado)
+            {
+                activado = true;
+                CargarInstancia();
+                loading.Visible = false;
+                Ordenamiento.Visible = true;
+                Solicitudes.Visible = true;
+            }
         }
     }
 }
