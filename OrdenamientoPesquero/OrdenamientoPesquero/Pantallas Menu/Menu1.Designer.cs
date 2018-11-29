@@ -60,11 +60,11 @@
             // 
             // loading
             // 
-            this.loading.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.cargando;
-            this.loading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.loading.Location = new System.Drawing.Point(237, 46);
+            this.loading.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.cargando1;
+            this.loading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.loading.Location = new System.Drawing.Point(3, -94);
             this.loading.Name = "loading";
-            this.loading.Size = new System.Drawing.Size(301, 285);
+            this.loading.Size = new System.Drawing.Size(800, 552);
             this.loading.TabIndex = 1;
             this.loading.TabStop = false;
             // 
@@ -82,6 +82,7 @@
             this.Name = "Menu1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu1";
+            this.Activated += new System.EventHandler(this.Menu1_Activated);
             this.Load += new System.EventHandler(this.Menu1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.loading)).EndInit();
             this.ResumeLayout(false);
