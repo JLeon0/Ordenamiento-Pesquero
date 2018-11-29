@@ -45,6 +45,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         private void button4_Click(object sender, EventArgs e)
         {
             Vistas v = new Vistas(r, "", 9);
+
             v.ShowDialog(this);
         }
     }
