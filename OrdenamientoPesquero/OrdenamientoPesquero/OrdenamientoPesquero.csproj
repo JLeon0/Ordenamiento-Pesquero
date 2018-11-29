@@ -60,9 +60,21 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>F:\Nueva carpeta (3)\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\AForge.Video.DirectShow.dll</HintPath>
     </Reference>
+    <Reference Include="DPCtlUruNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7f32ef930fec5e5f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\DigitalPersona\U.are.U SDK\Windows\Lib\.NET\DPCtlUruNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DPCtlXUru, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7f32ef930fec5e5f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\DigitalPersona\U.are.U SDK\Windows\Lib\.NET\DPCtlXUru.dll</HintPath>
+    </Reference>
     <Reference Include="DPUruNet, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7f32ef930fec5e5f, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Program Files\DigitalPersona\U.are.U SDK\Windows\Lib\.NET\DPUruNet.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\DigitalPersona\U.are.U SDK\Windows\Lib\.NET\DPUruNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DPXUru, Version=1.0.0.0, Culture=neutral, PublicKeyToken=7f32ef930fec5e5f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Program Files\DigitalPersona\U.are.U SDK\Windows\Lib\.NET\DPXUru.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
@@ -234,6 +246,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>todospes.xsd</DependentUpon>
     </Compile>
+    <Compile Include="vencidos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>vencidos.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Pantallas Menu\Menu1.resx">
       <DependentUpon>Menu1.cs</DependentUpon>
     </EmbeddedResource>
@@ -278,6 +295,7 @@
     <EmbeddedResource Include="Reportes\Credencial.rdlc" />
     <EmbeddedResource Include="Reportes\Lista_Embarca.rdlc" />
     <EmbeddedResource Include="Reportes\Permisos.rdlc" />
+    <EmbeddedResource Include="Reportes\PermisosVencidos.rdlc" />
     <EmbeddedResource Include="Reportes\Pescadores.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteXUnidad.rdlc" />
@@ -479,6 +497,17 @@
     <None Include="todospes.xss">
       <DependentUpon>todospes.xsd</DependentUpon>
     </None>
+    <None Include="vencidos.xsc">
+      <DependentUpon>vencidos.xsd</DependentUpon>
+    </None>
+    <None Include="vencidos.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>vencidos.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="vencidos.xss">
+      <DependentUpon>vencidos.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -569,11 +598,21 @@
     <None Include="Resources\perfil.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <COMReference Include="FlexCodeSDK">
+      <Guid>{09275F52-48D5-4EA0-9D30-CE4AA8DBDDA7}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
     <None Include="Resources\Entregar.png" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="gbcs4x4.ico" />
-    <None Include="Resources\cargando.gif" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">

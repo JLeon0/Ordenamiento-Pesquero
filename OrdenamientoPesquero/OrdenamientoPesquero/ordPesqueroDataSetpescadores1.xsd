@@ -2,15 +2,16 @@
 <xs:schema id="ordPesqueroDataSetpescadores1" targetNamespace="http://tempuri.org/ordPesqueroDataSetpescadores1.xsd" xmlns:mstns="http://tempuri.org/ordPesqueroDataSetpescadores1.xsd" xmlns="http://tempuri.org/ordPesqueroDataSetpescadores1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="2" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OrdPesqueroConnectionString2" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OrdPesqueroConnectionString2 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OrdenamientoPesquero.Properties.Settings.GlobalReference.Default.OrdPesqueroConnectionString2" Provider="System.Data.SqlClient" />
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OrdPesqueroConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OrdPesqueroConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OrdenamientoPesquero.Properties.Settings.GlobalReference.Default.OrdPesqueroConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OrdPesqueroConnectionString4" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OrdPesqueroConnectionString4 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OrdenamientoPesquero.Properties.Settings.GlobalReference.Default.OrdPesqueroConnectionString4" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="pescadoresTableAdapter" GeneratorDataComponentClassName="pescadoresTableAdapter" Name="pescadores" UserDataComponentName="pescadoresTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="OrdPesqueroConnectionString (Settings)" DbObjectName="OrdPesquero.dbo.pescadores" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="OrdPesqueroConnectionString4 (Settings)" DbObjectName="OrdPesquero.dbo.pescadores" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.pescadores</CommandText>
@@ -29,6 +30,7 @@
               <Mapping SourceColumn="CURP" DataSetColumn="CURP" />
               <Mapping SourceColumn="NOMBREEMBARCACION" DataSetColumn="NOMBREEMBARCACION" />
               <Mapping SourceColumn="EMBARCACION" DataSetColumn="EMBARCACION" />
+              <Mapping SourceColumn="FOLIO" DataSetColumn="FOLIO" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -82,6 +84,13 @@
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FOLIO" msprop:Generator_ColumnVarNameInTable="columnFOLIO" msprop:Generator_ColumnPropNameInRow="FOLIO" msprop:Generator_ColumnPropNameInTable="FOLIOColumn" msprop:Generator_UserColumnName="FOLIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
