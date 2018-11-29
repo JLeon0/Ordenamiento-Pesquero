@@ -31,6 +31,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         Conexion c;
         private void Vistas_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'vencidos.PermisosVencidos' Puede moverla o quitarla según sea necesario.
+            this.permisosVencidosTableAdapter.Fill(this.vencidos.PermisosVencidos);
             // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet9.permi2' Puede moverla o quitarla según sea necesario.
             this.permi2TableAdapter.Fill(this.ordPesqueroDataSet9.permi2);
             this.obtenerFirmaTableAdapter.Fill(this.ordPesqueroDataSet10.ObtenerFirma, rnpa);
@@ -370,6 +372,15 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     para4[4] = new ReportParameter("totm", ds.Tables[4].Rows[0][0].ToString());
                     para4[5] = new ReportParameter("totc", ds.Tables[5].Rows[0][0].ToString());
                     reportViewer1.LocalReport.SetParameters(para4);
+                    this.reportViewer1.RefreshReport();
+                    break;
+                case 9:
+                    this.reportViewer1.ProcessingMode = ProcessingMode.Local;
+                    reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "PermisosVencidos.rdlc");
+                    this.permisosVencidosTableAdapter.Fill(vencidos.PermisosVencidos);
+                    datos.Name = "Vencidos";
+                    datos.Value = vencidos.PermisosVencidos;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos);
                     this.reportViewer1.RefreshReport();
                     break;
                 default:
