@@ -5,7 +5,6 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Configuration;
 using CapaDatos;
@@ -44,6 +43,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             setString(c.CONEXIONPERRONA);
         }
 
+        BackgroundWorker bw = new BackgroundWorker();
         private void Menu1_Load(object sender, EventArgs e)
         {
             //ServiceController service = new ServiceController("MSSQL$SQLEXPRESS");
@@ -52,7 +52,15 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             //    service.Start();
             //    service.WaitForStatus(ServiceControllerStatus.Running, TimeSpan.FromMilliseconds(5000));
             //}
+            bw.DoWork += (obj, ea) => TaskAsync();
+            bw.RunWorkerAsync();
         }
+        private async void TaskAsync()
+        {
+            CargarInstancia();
+        }
+
+
         public string setString(string CONEXIONPERRONA)
         {
             Properties.Settings.Default.OrdPesqueroConnectionString = CONEXIONPERRONA;
@@ -66,16 +74,13 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             return Properties.Settings.Default.OrdPesqueroConnectionString;
         }
 
-        bool activado = false;
         private void Menu1_Activated(object sender, EventArgs e)
         {
-            if (!activado)
+            if (!bw.WorkerReportsProgress)
             {
-                activado = true;
-                CargarInstancia();
                 loading.Visible = false;
-                Ordenamiento.Visible = true;
-                Solicitudes.Visible = true;
+                this.Ordenamiento.Visible = true;
+                this.Solicitudes.Visible = true;
             }
         }
     }
