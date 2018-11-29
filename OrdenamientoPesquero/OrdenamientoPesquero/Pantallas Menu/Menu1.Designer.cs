@@ -37,7 +37,7 @@
             // Solicitudes
             // 
             this.Solicitudes.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Solicitudes.Location = new System.Drawing.Point(62, 78);
+            this.Solicitudes.Location = new System.Drawing.Point(60, 97);
             this.Solicitudes.Name = "Solicitudes";
             this.Solicitudes.Size = new System.Drawing.Size(278, 199);
             this.Solicitudes.TabIndex = 0;
@@ -48,8 +48,9 @@
             // 
             // Ordenamiento
             // 
+            this.Ordenamiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Ordenamiento.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ordenamiento.Location = new System.Drawing.Point(440, 78);
+            this.Ordenamiento.Location = new System.Drawing.Point(432, 97);
             this.Ordenamiento.Name = "Ordenamiento";
             this.Ordenamiento.Size = new System.Drawing.Size(278, 199);
             this.Ordenamiento.TabIndex = 0;
@@ -60,11 +61,13 @@
             // 
             // loading
             // 
-            this.loading.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.cargando1;
             this.loading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.loading.Location = new System.Drawing.Point(3, -94);
+            this.loading.Image = global::OrdenamientoPesquero.Properties.Resources.loading;
+            this.loading.InitialImage = global::OrdenamientoPesquero.Properties.Resources.loading;
+            this.loading.Location = new System.Drawing.Point(3, 0);
             this.loading.Name = "loading";
-            this.loading.Size = new System.Drawing.Size(800, 552);
+            this.loading.Size = new System.Drawing.Size(800, 410);
+            this.loading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.loading.TabIndex = 1;
             this.loading.TabStop = false;
             // 
@@ -73,10 +76,12 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(803, 375);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ClientSize = new System.Drawing.Size(803, 409);
             this.Controls.Add(this.loading);
             this.Controls.Add(this.Ordenamiento);
             this.Controls.Add(this.Solicitudes);
+            this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Menu1";
