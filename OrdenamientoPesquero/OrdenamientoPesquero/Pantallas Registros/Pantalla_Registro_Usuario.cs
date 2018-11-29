@@ -12,9 +12,8 @@ using OrdenamientoPesquero.Pantallas_Registros;
 using System.IO;
 using System.Diagnostics;
 using System.Drawing.Imaging;
-//using FlexCodeSDK;
-//using GriauleFingerprintLibrary;
-//using GriauleFingerprintLibrary.Exceptions;
+using DPUruNet;
+
 
 namespace OrdenamientoPesquero
 {
@@ -30,15 +29,6 @@ namespace OrdenamientoPesquero
         string RNPA = "", NombreUnidad = "";
         string[] Municipios;
         byte[] imagenBuffer;
-
-        ////FlexCode
-        //FinFPReg reg;
-        //string template = "";
-
-        //Griaule
-        //private FingerprintCore fingerPrint;
-        //private GriauleFingerprintLibrary.DataTypes.FingerprintRawImage rawImage;
-        //GriauleFingerprintLibrary.DataTypes.FingerprintTemplate _template;
 
         public Pantalla_Registro_Usuario(string rnpa, string nombre)
         {
@@ -392,92 +382,7 @@ namespace OrdenamientoPesquero
 
         #endregion
 
-        ////#region FingerPrint
-        ////private void CargarFinger()
-        ////{
-        ////    //Inicializar FlexCode SDK
-        ////    reg = new FinFPReg();
-        ////    reg.FPSamplesNeeded += Reg_FPSamplesNeeded;
-        ////    reg.FPRegistrationTemplate += Reg_FPRegistrationTemplate; ;
-        ////    reg.FPRegistrationImage += Reg_FPRegistrationImage;
-        ////    reg.FPRegistrationStatus += Reg_FPRegistrationStatus;
-        ////    //Codigo de Activacion de FlexCode SDK
-        ////    reg.AddDeviceInfo("50013001103", "E44A32B335C4283", "NWVBAFB710662F041883ANCL");
-
-        ////    //Defini imagen de FingerPrint
-        ////    reg.PictureSampleHeight = (short)(Imagen.Height * 15);
-        ////    reg.PictureSampleWidth = (short)(Imagen.Width * 15);
-        ////    reg.PictureSamplePath = AppDomain.CurrentDomain.BaseDirectory + "Finger.bmp";
-
-        ////}
-
-        ////private void Reg_FPRegistrationStatus(RegistrationStatus Status)
-        ////{
-        ////    if(Status == RegistrationStatus.r_OK)
-        ////    {
-        ////        MessageBox.Show("READY");
-        ////    }
-        ////}
-
-        ////private void Reg_FPRegistrationImage()
-        ////{
-        ////    Imagen.Load(AppDomain.CurrentDomain.BaseDirectory + "Finger.bmp");
-        ////}
-
-        ////private void Reg_FPRegistrationTemplate(string FPTemplate)
-        ////{
-        ////    template = FPTemplate;
-        ////}
-
-        ////private void Reg_FPSamplesNeeded(short Samples)
-        ////{
-        ////    label24.Text = Samples.ToString();
-        ////}
-        ////#endregion
-
-        //#region FingerPrint2
-        //private void CargarFinger()
-        //{
-        //    fingerPrint = new FingerprintCore();
-        //    fingerPrint.onStatus += FingerPrint_onStatus;
-        //    fingerPrint.onImage += FingerPrint_onImage;
-        //}
-
-        //private void FingerPrint_onImage(object source, GriauleFingerprintLibrary.Events.ImageEventArgs ie)
-        //{
-        //    rawImage = ie.RawImage;
-        //    Imagen.BackgroundImage = ie.RawImage.Image;
-
-        //    ExtractTemplate();
-        //}
-        //private void ExtractTemplate()
-        //{
-        //    if(rawImage != null)
-        //    {
-        //        try
-        //        {
-        //            _template = null;
-        //            fingerPrint.Extract(rawImage, ref _template);
-        //            label24.Text = _template.Quality.ToString();
-        //        }
-        //        catch {
-                    
-        //        }
-        //    }
-        //}
-        //private void FingerPrint_onStatus(object source, GriauleFingerprintLibrary.Events.StatusEventArgs se)
-        //{
-        //    if(se.StatusEventType == GriauleFingerprintLibrary.Events.StatusEventType.SENSOR_PLUG)
-        //    {
-        //        fingerPrint.StartCapture(source.ToString());
-        //    }
-        //    else
-        //    {
-        //        fingerPrint.StopCapture(source);
-        //    }
-        //}
-        //#endregion
-
+        
         #region TextChanged
         private void CURPPesc_TextChanged(object sender, EventArgs e)
         {
@@ -722,15 +627,7 @@ namespace OrdenamientoPesquero
         #region Imagen
         private void CargarImagen_Click_1(object sender, EventArgs e)
         {
-            //reg.FPRegistrationStart("MySecretKey" + CURPPesc.Text);
-            //try
-            //{
-            //    fingerPrint.Initialize();
-            //}
-            //catch
-            //{
-            //    fingerPrint.CaptureInitialize();
-            //}
+            
             if (CURPPesc.Text != "")
             {
                 DialogResult result = MessageBox.Show("Desea capturar una nueva imagen?", "¿?", MessageBoxButtons.YesNoCancel);
@@ -891,18 +788,10 @@ namespace OrdenamientoPesquero
             {
                 Ord = 1;
                 ListaNombres2.SelectedIndex = -1;
-                //if (RNPA == "")
-                //{
-                //    NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), "");
-                //    LlenarDatos(NOMBRES.Rows[0]["CURP"].ToString());
-                //}
-                //else
-                //{
-                    NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), RNPA);
-                    LlenarDatos(NOMBRES.Rows[0]["CURP"].ToString());
-                //}
+                NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), RNPA);
+                LlenarDatos(NOMBRES.Rows[0]["CURP"].ToString());
                 CargarSolApo();
-            }            
+            }
         }
 
         private void Credencial_Click(object sender, EventArgs e)
@@ -930,12 +819,7 @@ namespace OrdenamientoPesquero
             {
                 Ord = 0;
                 ListaNombres.SelectedIndex = -1;
-                //if (RNPA == "")
-                //{ LlenarDatos(NoOrdenados.Rows[ListaNombres2.SelectedIndex]["CURP"].ToString()); }
-                //else
-                //{
-                    LlenarDatos(NoOrdenados.Rows[ListaNombres2.SelectedIndex]["CURP"].ToString());
-                //}
+                LlenarDatos(NoOrdenados.Rows[ListaNombres2.SelectedIndex]["CURP"].ToString());
             }
 
         }
@@ -953,8 +837,6 @@ namespace OrdenamientoPesquero
         #endregion
 
 
-       
 
-      
     }
 }

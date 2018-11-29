@@ -30,6 +30,8 @@
         {
             this.Solicitudes = new System.Windows.Forms.Button();
             this.Ordenamiento = new System.Windows.Forms.Button();
+            this.loading = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.loading)).BeginInit();
             this.SuspendLayout();
             // 
             // Solicitudes
@@ -41,6 +43,7 @@
             this.Solicitudes.TabIndex = 0;
             this.Solicitudes.Text = "Solicitudes";
             this.Solicitudes.UseVisualStyleBackColor = true;
+            this.Solicitudes.Visible = false;
             this.Solicitudes.Click += new System.EventHandler(this.Solicitudes_Click);
             // 
             // Ordenamiento
@@ -52,7 +55,18 @@
             this.Ordenamiento.TabIndex = 0;
             this.Ordenamiento.Text = "Ord Pesquero";
             this.Ordenamiento.UseVisualStyleBackColor = true;
+            this.Ordenamiento.Visible = false;
             this.Ordenamiento.Click += new System.EventHandler(this.Ordenamiento_Click);
+            // 
+            // loading
+            // 
+            this.loading.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.cargando;
+            this.loading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.loading.Location = new System.Drawing.Point(237, 46);
+            this.loading.Name = "loading";
+            this.loading.Size = new System.Drawing.Size(301, 285);
+            this.loading.TabIndex = 1;
+            this.loading.TabStop = false;
             // 
             // Menu1
             // 
@@ -60,6 +74,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(803, 375);
+            this.Controls.Add(this.loading);
             this.Controls.Add(this.Ordenamiento);
             this.Controls.Add(this.Solicitudes);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -68,6 +83,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu1";
             this.Load += new System.EventHandler(this.Menu1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.loading)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -76,5 +92,6 @@
 
         private System.Windows.Forms.Button Solicitudes;
         private System.Windows.Forms.Button Ordenamiento;
+        private System.Windows.Forms.PictureBox loading;
     }
 }
