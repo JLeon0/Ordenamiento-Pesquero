@@ -53,6 +53,9 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             //    service.WaitForStatus(ServiceControllerStatus.Running, TimeSpan.FromMilliseconds(5000));
             //}
             CargarInstancia();
+            loading.Visible = false;
+            Ordenamiento.Visible = true;
+            Solicitudes.Visible = true;
         }
         public string setString(string CONEXIONPERRONA)
         {
