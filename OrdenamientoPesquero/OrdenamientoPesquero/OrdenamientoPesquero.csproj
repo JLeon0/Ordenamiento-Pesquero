@@ -93,10 +93,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="comondu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>comondu.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EmbarcacionesSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>EmbarcacionesSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="la_paz_seguro.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>la_paz_seguro.xsd</DependentUpon>
     </Compile>
     <Compile Include="ObtenerImagen.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -112,6 +122,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OrdPesqueroDataSet111.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet111.xsd</DependentUpon>
     </Compile>
     <Compile Include="OrdPesqueroDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -236,6 +251,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="seguro.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>seguro.xsd</DependentUpon>
+    </Compile>
     <Compile Include="todos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -300,7 +320,19 @@
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteXUnidad.rdlc" />
     <EmbeddedResource Include="Reportes\Resumen_permisos.rdlc" />
+    <EmbeddedResource Include="Reportes\xMunicipio_seguro.rdlc" />
     <EmbeddedResource Include="Reportes\xMunicipio.rdlc" />
+    <None Include="comondu.xsc">
+      <DependentUpon>comondu.xsd</DependentUpon>
+    </None>
+    <None Include="comondu.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>comondu.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="comondu.xss">
+      <DependentUpon>comondu.xsd</DependentUpon>
+    </None>
     <None Include="EmbarcacionesSet.xsc">
       <DependentUpon>EmbarcacionesSet.xsd</DependentUpon>
     </None>
@@ -311,6 +343,17 @@
     </None>
     <None Include="EmbarcacionesSet.xss">
       <DependentUpon>EmbarcacionesSet.xsd</DependentUpon>
+    </None>
+    <None Include="la_paz_seguro.xsc">
+      <DependentUpon>la_paz_seguro.xsd</DependentUpon>
+    </None>
+    <None Include="la_paz_seguro.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>la_paz_seguro.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="la_paz_seguro.xss">
+      <DependentUpon>la_paz_seguro.xsd</DependentUpon>
     </None>
     <None Include="ObtenerImagen.xsc">
       <DependentUpon>ObtenerImagen.xsd</DependentUpon>
@@ -344,6 +387,17 @@
     </None>
     <None Include="OrdPesqueroDataSet11.xss">
       <DependentUpon>OrdPesqueroDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet111.xsc">
+      <DependentUpon>OrdPesqueroDataSet111.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet111.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet111.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet111.xss">
+      <DependentUpon>OrdPesqueroDataSet111.xsd</DependentUpon>
     </None>
     <None Include="OrdPesqueroDataSet2.xsc">
       <DependentUpon>OrdPesqueroDataSet2.xsd</DependentUpon>
@@ -475,6 +529,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="seguro.xsc">
+      <DependentUpon>seguro.xsd</DependentUpon>
+    </None>
+    <None Include="seguro.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>seguro.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="seguro.xss">
+      <DependentUpon>seguro.xsd</DependentUpon>
+    </None>
     <None Include="todos.xsc">
       <DependentUpon>todos.xsd</DependentUpon>
     </None>
