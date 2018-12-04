@@ -18,12 +18,10 @@ namespace OrdenamientoPesquero
     public partial class Pantalla_Registro_UnidadEconomica : Form
     {
         bool cargado = false;
-        bool escondido = false;
         Unidad_Economica ue;
         Permiso perm;
         Pescador pes;
         Embarcacion Emb;
-        Directiva dir;
         int exito = 0;
         Validaciones val = new Validaciones();
         Procedimientos proc = new Procedimientos();

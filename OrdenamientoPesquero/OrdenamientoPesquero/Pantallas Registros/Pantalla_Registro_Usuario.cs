@@ -651,7 +651,7 @@ namespace OrdenamientoPesquero
                                 Imagen.BackgroundImage = bmp2;
                             }
                         }
-                        catch (Exception ex)
+                        catch (Exception)
                         {
                             MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
                         }
@@ -665,14 +665,15 @@ namespace OrdenamientoPesquero
                 if (result == DialogResult.Yes)
                 {
                     Process.Start("C:\\Windows\\SigPlus\\DemoOCX.exe");
+                    result = MessageBox.Show("Ya ha capturado la firma del usuario?", "¿?", MessageBoxButtons.YesNoCancel);
+                    if (result == DialogResult.Yes)
+                    {
+                        string mdoc = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+                        Bitmap bmp = new Bitmap(Image.FromFile(mdoc + "\\FIRMA\\FIRMA.PNG"));
+                        Firma.BackgroundImage = bmp;
+                    }
                 }
             }
-        }
-        private void CargarFirma_Click(object sender, EventArgs e)
-        {
-            string mdoc = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
-            Bitmap bmp = new Bitmap(Image.FromFile(mdoc + "\\FIRMA\\FIRMA.PNG"));
-            Firma.BackgroundImage = bmp;
         }
 
         private void ObtenerImagen()
