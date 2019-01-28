@@ -130,10 +130,10 @@ namespace Logica
             string[] Parametros = { };
             return c.getDatosTabla("ObtenerPesquerias", Parametros);
         }
-        public int RegistrarPesqueria(string nombre)
+        public int RegistrarPesqueria(string pesqueria)
         {
-            string[] Parametros = { "@nombre" };
-            return c.Ejecutar("RegistrarPesqueria", Parametros, nombre);
+            string[] Parametros = { "@pesqueria" };
+            return c.Ejecutar("RegistrarPesqueria", Parametros, pesqueria);
         }
         #endregion
 

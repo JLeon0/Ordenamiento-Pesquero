@@ -128,6 +128,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OrdPesqueroDataSet111.xsd</DependentUpon>
     </Compile>
+    <Compile Include="OrdPesqueroDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OrdPesqueroDataSet12.xsd</DependentUpon>
+    </Compile>
     <Compile Include="OrdPesqueroDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -318,6 +323,7 @@
     <EmbeddedResource Include="Reportes\PermisosVencidos.rdlc" />
     <EmbeddedResource Include="Reportes\Pescadores.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
+    <EmbeddedResource Include="Reportes\reportepescadores.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteXUnidad.rdlc" />
     <EmbeddedResource Include="Reportes\Resumen_permisos.rdlc" />
     <EmbeddedResource Include="Reportes\xMunicipio_seguro.rdlc" />
@@ -398,6 +404,17 @@
     </None>
     <None Include="OrdPesqueroDataSet111.xss">
       <DependentUpon>OrdPesqueroDataSet111.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet12.xsc">
+      <DependentUpon>OrdPesqueroDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="OrdPesqueroDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>OrdPesqueroDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="OrdPesqueroDataSet12.xss">
+      <DependentUpon>OrdPesqueroDataSet12.xsd</DependentUpon>
     </None>
     <None Include="OrdPesqueroDataSet2.xsc">
       <DependentUpon>OrdPesqueroDataSet2.xsd</DependentUpon>

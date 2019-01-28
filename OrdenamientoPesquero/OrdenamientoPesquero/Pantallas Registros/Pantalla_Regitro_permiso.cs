@@ -73,11 +73,12 @@ namespace OrdenamientoPesquero
 
         private void CargarPesquerias()
         {
-            dt = proc.ObtenerPesquerias();
+            DataTable pesq = new DataTable();
+            pesq = proc.ObtenerPesquerias();
             PesqueriaPer.Items.Clear();
-            foreach (DataRow fila in dt.Rows)
+            foreach (DataRow fila in pesq.Rows)
             {
-                PesqueriaPer.Items.Add(fila["NOMBRE"].ToString());
+                PesqueriaPer.Items.Add(fila["PESQUERIA"].ToString());
             }
         }
 
