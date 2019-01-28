@@ -30,6 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.mULEGESEGUROBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.seguroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.seguro = new OrdenamientoPesquero.seguro();
+            this.permisosVencidosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vencidos = new OrdenamientoPesquero.vencidos();
             this.permi2BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ordPesqueroDataSet9 = new OrdenamientoPesquero.OrdPesqueroDataSet9();
             this.obtenerFirmaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -81,9 +86,24 @@
             this.vista_perm3TableAdapter = new OrdenamientoPesquero.Permisos_listaTableAdapters.vista_perm3TableAdapter();
             this.obtenerFirmaTableAdapter = new OrdenamientoPesquero.OrdPesqueroDataSet10TableAdapters.ObtenerFirmaTableAdapter();
             this.permi2TableAdapter = new OrdenamientoPesquero.OrdPesqueroDataSet9TableAdapters.permi2TableAdapter();
-            this.vencidos = new OrdenamientoPesquero.vencidos();
-            this.permisosVencidosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.permisosVencidosTableAdapter = new OrdenamientoPesquero.vencidosTableAdapters.PermisosVencidosTableAdapter();
+            this.cOMONDUSEGUROBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cOMONDU_SEGUROTableAdapter = new OrdenamientoPesquero.seguroTableAdapters.COMONDU_SEGUROTableAdapter();
+            this.lAPAZSEGUROBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lAPAZ_SEGUROTableAdapter = new OrdenamientoPesquero.seguroTableAdapters.LAPAZ_SEGUROTableAdapter();
+            this.lORETOSEGUROBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lORETO_SEGUROTableAdapter = new OrdenamientoPesquero.seguroTableAdapters.LORETO_SEGUROTableAdapter();
+            this.lOSCABOSSEGUROBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lOSCABOS_SEGUROTableAdapter = new OrdenamientoPesquero.seguroTableAdapters.LOSCABOS_SEGUROTableAdapter();
+            this.mULEGE_SEGUROTableAdapter = new OrdenamientoPesquero.seguroTableAdapters.MULEGE_SEGUROTableAdapter();
+            this.ordPesqueroDataSet12 = new OrdenamientoPesquero.OrdPesqueroDataSet12();
+            this.pesembarcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pesembarcaTableAdapter = new OrdenamientoPesquero.OrdPesqueroDataSet12TableAdapters.pesembarcaTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.mULEGESEGUROBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seguroBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seguro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.permisosVencidosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vencidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.permi2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerFirmaBindingSource)).BeginInit();
@@ -118,9 +138,38 @@
             ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.losCabosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistaperm2BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vencidos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.permisosVencidosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOMONDUSEGUROBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lAPAZSEGUROBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lORETOSEGUROBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOSCABOSSEGUROBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pesembarcaBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // mULEGESEGUROBindingSource
+            // 
+            this.mULEGESEGUROBindingSource.DataMember = "MULEGE_SEGURO";
+            this.mULEGESEGUROBindingSource.DataSource = this.seguroBindingSource;
+            // 
+            // seguroBindingSource
+            // 
+            this.seguroBindingSource.DataSource = this.seguro;
+            this.seguroBindingSource.Position = 0;
+            // 
+            // seguro
+            // 
+            this.seguro.DataSetName = "seguro";
+            this.seguro.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // permisosVencidosBindingSource
+            // 
+            this.permisosVencidosBindingSource.DataMember = "PermisosVencidos";
+            this.permisosVencidosBindingSource.DataSource = this.vencidos;
+            // 
+            // vencidos
+            // 
+            this.vencidos.DataSetName = "vencidos";
+            this.vencidos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // permi2BindingSource
             // 
@@ -226,7 +275,7 @@
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.permisosVencidosBindingSource;
+            reportDataSource1.Value = this.pesembarcaBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.EnableExternalImages = true;
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "OrdenamientoPesquero.Reportes.Permisos.rdlc";
@@ -369,19 +418,63 @@
             // 
             this.permi2TableAdapter.ClearBeforeFill = true;
             // 
-            // vencidos
-            // 
-            this.vencidos.DataSetName = "vencidos";
-            this.vencidos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // permisosVencidosBindingSource
-            // 
-            this.permisosVencidosBindingSource.DataMember = "PermisosVencidos";
-            this.permisosVencidosBindingSource.DataSource = this.vencidos;
-            // 
             // permisosVencidosTableAdapter
             // 
             this.permisosVencidosTableAdapter.ClearBeforeFill = true;
+            // 
+            // cOMONDUSEGUROBindingSource
+            // 
+            this.cOMONDUSEGUROBindingSource.DataMember = "COMONDU_SEGURO";
+            this.cOMONDUSEGUROBindingSource.DataSource = this.seguroBindingSource;
+            // 
+            // cOMONDU_SEGUROTableAdapter
+            // 
+            this.cOMONDU_SEGUROTableAdapter.ClearBeforeFill = true;
+            // 
+            // lAPAZSEGUROBindingSource
+            // 
+            this.lAPAZSEGUROBindingSource.DataMember = "LAPAZ_SEGURO";
+            this.lAPAZSEGUROBindingSource.DataSource = this.seguroBindingSource;
+            // 
+            // lAPAZ_SEGUROTableAdapter
+            // 
+            this.lAPAZ_SEGUROTableAdapter.ClearBeforeFill = true;
+            // 
+            // lORETOSEGUROBindingSource
+            // 
+            this.lORETOSEGUROBindingSource.DataMember = "LORETO_SEGURO";
+            this.lORETOSEGUROBindingSource.DataSource = this.seguroBindingSource;
+            // 
+            // lORETO_SEGUROTableAdapter
+            // 
+            this.lORETO_SEGUROTableAdapter.ClearBeforeFill = true;
+            // 
+            // lOSCABOSSEGUROBindingSource
+            // 
+            this.lOSCABOSSEGUROBindingSource.DataMember = "LOSCABOS_SEGURO";
+            this.lOSCABOSSEGUROBindingSource.DataSource = this.seguroBindingSource;
+            // 
+            // lOSCABOS_SEGUROTableAdapter
+            // 
+            this.lOSCABOS_SEGUROTableAdapter.ClearBeforeFill = true;
+            // 
+            // mULEGE_SEGUROTableAdapter
+            // 
+            this.mULEGE_SEGUROTableAdapter.ClearBeforeFill = true;
+            // 
+            // ordPesqueroDataSet12
+            // 
+            this.ordPesqueroDataSet12.DataSetName = "OrdPesqueroDataSet12";
+            this.ordPesqueroDataSet12.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pesembarcaBindingSource
+            // 
+            this.pesembarcaBindingSource.DataMember = "pesembarca";
+            this.pesembarcaBindingSource.DataSource = this.ordPesqueroDataSet12;
+            // 
+            // pesembarcaTableAdapter
+            // 
+            this.pesembarcaTableAdapter.ClearBeforeFill = true;
             // 
             // Vistas
             // 
@@ -392,6 +485,11 @@
             this.Name = "Vistas";
             this.Text = "Vistas";
             this.Load += new System.EventHandler(this.Vistas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.mULEGESEGUROBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seguroBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seguro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.permisosVencidosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vencidos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.permi2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerFirmaBindingSource)).EndInit();
@@ -426,8 +524,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.losCabosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vistaperm2BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.vencidos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.permisosVencidosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cOMONDUSEGUROBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lAPAZSEGUROBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lORETOSEGUROBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.lOSCABOSSEGUROBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pesembarcaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -488,5 +590,20 @@
         private vencidos vencidos;
         private System.Windows.Forms.BindingSource permisosVencidosBindingSource;
         private vencidosTableAdapters.PermisosVencidosTableAdapter permisosVencidosTableAdapter;
+        private seguro seguro;
+        private System.Windows.Forms.BindingSource seguroBindingSource;
+        private System.Windows.Forms.BindingSource cOMONDUSEGUROBindingSource;
+        private seguroTableAdapters.COMONDU_SEGUROTableAdapter cOMONDU_SEGUROTableAdapter;
+        private System.Windows.Forms.BindingSource lAPAZSEGUROBindingSource;
+        private seguroTableAdapters.LAPAZ_SEGUROTableAdapter lAPAZ_SEGUROTableAdapter;
+        private System.Windows.Forms.BindingSource lORETOSEGUROBindingSource;
+        private seguroTableAdapters.LORETO_SEGUROTableAdapter lORETO_SEGUROTableAdapter;
+        private System.Windows.Forms.BindingSource lOSCABOSSEGUROBindingSource;
+        private seguroTableAdapters.LOSCABOS_SEGUROTableAdapter lOSCABOS_SEGUROTableAdapter;
+        private System.Windows.Forms.BindingSource mULEGESEGUROBindingSource;
+        private seguroTableAdapters.MULEGE_SEGUROTableAdapter mULEGE_SEGUROTableAdapter;
+        private OrdPesqueroDataSet12 ordPesqueroDataSet12;
+        private System.Windows.Forms.BindingSource pesembarcaBindingSource;
+        private OrdPesqueroDataSet12TableAdapters.pesembarcaTableAdapter pesembarcaTableAdapter;
     }
 }

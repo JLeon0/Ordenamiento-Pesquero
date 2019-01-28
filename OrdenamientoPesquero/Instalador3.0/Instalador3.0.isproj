@@ -33,10 +33,6 @@
 			<Name>CapaDatos</Name>
 			<Project>{8E15FC49-4A3B-493E-B73B-CB5DD5A6D4F3}</Project>
 		</ProjectReference>
-		<ProjectReference Include="..\Logica\Logica.csproj">
-			<Name>Logica</Name>
-			<Project>{D48B06EC-8515-4AB1-87C2-0B6C56B225D6}</Project>
-		</ProjectReference>
 		<ProjectReference Include="..\OrdenamientoPesquero\OrdenamientoPesquero.csproj">
 			<Name>OrdenamientoPesquero</Name>
 			<Project>{26B25B8A-91B1-4FE6-B432-7B44611D744C}</Project>

@@ -31,25 +31,37 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         Conexion c;
         private void Vistas_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet12.pesembarca' Puede moverla o quitarla según sea necesario.
+            this.pesembarcaTableAdapter.Fill(this.ordPesqueroDataSet12.pesembarca);
+            // TODO: esta línea de código carga datos en la tabla 'seguro.MULEGE_SEGURO' Puede moverla o quitarla según sea necesario.
+            //this.mULEGE_SEGUROTableAdapter.Fill(this.seguro.MULEGE_SEGURO);
+            //// TODO: esta línea de código carga datos en la tabla 'seguro.LOSCABOS_SEGURO' Puede moverla o quitarla según sea necesario.
+            //this.lOSCABOS_SEGUROTableAdapter.Fill(this.seguro.LOSCABOS_SEGURO);
+            //// TODO: esta línea de código carga datos en la tabla 'seguro.LORETO_SEGURO' Puede moverla o quitarla según sea necesario.
+            //this.lORETO_SEGUROTableAdapter.Fill(this.seguro.LORETO_SEGURO);
+            //// TODO: esta línea de código carga datos en la tabla 'seguro.LAPAZ_SEGURO' Puede moverla o quitarla según sea necesario.
+            //this.lAPAZ_SEGUROTableAdapter.Fill(this.seguro.LAPAZ_SEGURO);
+            //// TODO: esta línea de código carga datos en la tabla 'seguro.COMONDU_SEGURO' Puede moverla o quitarla según sea necesario.
+            //this.cOMONDU_SEGUROTableAdapter.Fill(this.seguro.COMONDU_SEGURO);
             // TODO: esta línea de código carga datos en la tabla 'vencidos.PermisosVencidos' Puede moverla o quitarla según sea necesario.
-            this.permisosVencidosTableAdapter.Fill(this.vencidos.PermisosVencidos);
-            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet9.permi2' Puede moverla o quitarla según sea necesario.
-            this.permi2TableAdapter.Fill(this.ordPesqueroDataSet9.permi2);
-            this.obtenerFirmaTableAdapter.Fill(this.ordPesqueroDataSet10.ObtenerFirma, rnpa);
-            //TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet9.permi' Puede moverla o quitarla según sea necesario.
-            this.permiTableAdapter1.Fill(this.ordPesqueroDataSet9.permi);
-            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet8.permi' Puede moverla o quitarla según sea necesario.
-            this.permiTableAdapter.Fill(this.ordPesqueroDataSet8.permi);
-            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet7.Mulege' Puede moverla o quitarla según sea necesario.
-            this.mulegeTableAdapter.Fill(this.ordPesqueroDataSet7.Mulege);
-            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet6.LosCabos' Puede moverla o quitarla según sea necesario.
-            this.losCabosTableAdapter.Fill(this.ordPesqueroDataSet6.LosCabos);
-            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet5.Loreto' Puede moverla o quitarla según sea necesario.
-            this.loretoTableAdapter.Fill(this.ordPesqueroDataSet5.Loreto);
-            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet4.LaPaz' Puede moverla o quitarla según sea necesario.
-            this.laPazTableAdapter.Fill(this.ordPesqueroDataSet4.LaPaz);
-            // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet3.Comondu' Puede moverla o quitarla según sea necesario.
-            this.comonduTableAdapter.Fill(this.ordPesqueroDataSet3.Comondu);
+            //this.permisosVencidosTableAdapter.Fill(this.vencidos.PermisosVencidos);
+            //// TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet9.permi2' Puede moverla o quitarla según sea necesario.
+            //this.permi2TableAdapter.Fill(this.ordPesqueroDataSet9.permi2);
+            //this.obtenerFirmaTableAdapter.Fill(this.ordPesqueroDataSet10.ObtenerFirma, rnpa);
+            ////TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet9.permi' Puede moverla o quitarla según sea necesario.
+            //this.permiTableAdapter1.Fill(this.ordPesqueroDataSet9.permi);
+            //// TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet8.permi' Puede moverla o quitarla según sea necesario.
+            //this.permiTableAdapter.Fill(this.ordPesqueroDataSet8.permi);
+            //// TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet7.Mulege' Puede moverla o quitarla según sea necesario.
+            //this.mulegeTableAdapter.Fill(this.ordPesqueroDataSet7.Mulege);
+            //// TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet6.LosCabos' Puede moverla o quitarla según sea necesario.
+            //this.losCabosTableAdapter.Fill(this.ordPesqueroDataSet6.LosCabos);
+            //// TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet5.Loreto' Puede moverla o quitarla según sea necesario.
+            //this.loretoTableAdapter.Fill(this.ordPesqueroDataSet5.Loreto);
+            //// TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet4.LaPaz' Puede moverla o quitarla según sea necesario.
+            //this.laPazTableAdapter.Fill(this.ordPesqueroDataSet4.LaPaz);
+            //// TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet3.Comondu' Puede moverla o quitarla según sea necesario.
+            //this.comonduTableAdapter.Fill(this.ordPesqueroDataSet3.Comondu);
             // TODO: esta línea de código carga datos en la tabla 'todospes.todos' Puede moverla o quitarla según sea necesario.
             this.todosTableAdapter.Fill(this.todospes.todos);
             ReportDataSource datos = new ReportDataSource();
@@ -381,6 +393,44 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     datos.Name = "Vencidos";
                     datos.Value = vencidos.PermisosVencidos;
                     this.reportViewer1.LocalReport.DataSources.Add(datos);
+                    this.reportViewer1.RefreshReport();
+                    break;
+                case 10:
+                    this.reportViewer1.ProcessingMode = ProcessingMode.Local;
+                    reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "xMunicipio_seguro.rdlc");
+                    this.cOMONDU_SEGUROTableAdapter.Fill(seguro.COMONDU_SEGURO);
+                    datos.Name = "comondu";
+                    datos.Value = seguro.COMONDU_SEGURO;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos);
+
+                    this.mULEGE_SEGUROTableAdapter.Fill(seguro.MULEGE_SEGURO);
+                    datos2.Name = "mulege";
+                    datos2.Value = seguro.MULEGE_SEGURO;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos2);
+
+                    this.lAPAZ_SEGUROTableAdapter.Fill(seguro.LAPAZ_SEGURO);
+                    datos3.Name = "la_paz";
+                    datos3.Value = seguro.LAPAZ_SEGURO;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos3);
+
+                    this.lOSCABOS_SEGUROTableAdapter.Fill(seguro.LOSCABOS_SEGURO);
+                    datos4.Name = "los_cabos";
+                    datos4.Value = seguro.LOSCABOS_SEGURO;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos4);
+
+                    this.lORETO_SEGUROTableAdapter.Fill(seguro.LORETO_SEGURO);
+                    datos5.Name = "loreto";
+                    datos5.Value = seguro.LORETO_SEGURO;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos5);
+                    this.reportViewer1.RefreshReport();
+                    break;
+                case 11:
+                    this.reportViewer1.ProcessingMode = ProcessingMode.Local;
+                    reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "reportepescadores.rdlc");
+                    this.pesembarcaTableAdapter.Fill(ordPesqueroDataSet12.pesembarca);
+                    //datos.Name = "Vencidos";
+                    //datos.Value = vencidos.PermisosVencidos;
+                    //this.reportViewer1.LocalReport.DataSources.Add(datos);
                     this.reportViewer1.RefreshReport();
                     break;
                 default:

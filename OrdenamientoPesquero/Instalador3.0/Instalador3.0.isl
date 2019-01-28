@@ -342,7 +342,6 @@
 		<row><td>CapaDatos.Resultado_principal</td><td>{7BE731A8-F03F-48AF-88F5-4F93749490AB}</td><td>INSTALLDIR</td><td>2</td><td/><td>capadatos.resultado_principa</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{A5F30949-1D57-4A82-AD91-AD3CF928DFA9}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td>{353EADCF-53D9-495C-B463-2B10E4C42C79}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Logica.Resultado_principal</td><td>{583B426A-5A5D-4A0C-8901-B55DC5C01D87}</td><td>INSTALLDIR</td><td>2</td><td/><td>logica.resultado_principal</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>OrdenamientoPesquero.Resultado_principal</td><td>{1DEC1770-5994-4BF2-832E-64A4F0F955C1}</td><td>INSTALLDIR</td><td>2</td><td/><td>ordenamientopesquero.resulta</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
@@ -1055,7 +1054,6 @@
 		<row><td>INSTALLDIR</td><td>CapaDatos.Resultado_principal</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>IS_ININSTALL_SHORTCUT</td></row>
-		<row><td>INSTALLDIR</td><td>Logica.Resultado_principal</td></row>
 		<row><td>INSTALLDIR</td><td>OrdenamientoPesquero.Resultado_principal</td></row>
 	</table>
 
@@ -1872,7 +1870,6 @@
 		<row><td>AlwaysInstall</td><td>CapaDatos.Resultado_principal</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>IS_ININSTALL_SHORTCUT</td></row>
-		<row><td>AlwaysInstall</td><td>Logica.Resultado_principal</td></row>
 		<row><td>AlwaysInstall</td><td>OrdenamientoPesquero.Resultado_principal</td></row>
 	</table>
 
@@ -1893,15 +1890,17 @@
 		<row><td>credencial.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>CREDEN~1.RDL|Credencial.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Credencial.rdlc</td><td>1</td><td/></row>
 		<row><td>frontal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>FRONTA~1.RDL|Frontal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Frontal.rdlc</td><td>1</td><td/></row>
 		<row><td>lista_embarca.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>LISTA_~1.RDL|Lista_Embarca.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Lista_Embarca.rdlc</td><td>1</td><td/></row>
-		<row><td>logica.resultado_principal</td><td>Logica.Resultado_principal</td><td>Logica.Resultado principal</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;Logica&gt;|Built</td><td>3</td><td/></row>
 		<row><td>ordenamientopesquero.resulta</td><td>OrdenamientoPesquero.Resultado_principal</td><td>OrdenamientoPesquero.Resultado principal</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;OrdenamientoPesquero&gt;|Built</td><td>3</td><td/></row>
 		<row><td>permisos.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>PERMIS~1.RDL|Permisos.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Permisos.rdlc</td><td>1</td><td/></row>
+		<row><td>permisosvencidos.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>PERMIS~1.RDL|PermisosVencidos.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\PermisosVencidos.rdlc</td><td>1</td><td/></row>
 		<row><td>pescadores.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>PESCAD~1.RDL|Pescadores.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Pescadores.rdlc</td><td>1</td><td/></row>
 		<row><td>report1.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|Report1.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Report1.rdlc</td><td>1</td><td/></row>
 		<row><td>report3.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|Report3.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Report3.rdlc</td><td>1</td><td/></row>
+		<row><td>reportepescadores.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|reportepescadores.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\reportepescadores.rdlc</td><td>1</td><td/></row>
 		<row><td>reportexunidad.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|ReporteXUnidad.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\ReporteXUnidad.rdlc</td><td>1</td><td/></row>
 		<row><td>resumen_permisos.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>RESUME~1.RDL|Resumen_permisos.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Resumen_permisos.rdlc</td><td>1</td><td/></row>
 		<row><td>xmunicipio.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>XMUNIC~1.RDL|xMunicipio.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\xMunicipio.rdlc</td><td>1</td><td/></row>
+		<row><td>xmunicipio_seguro.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>XMUNIC~1.RDL|xMunicipio_seguro.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\xMunicipio_seguro.rdlc</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2047,7 +2046,6 @@
 		<row><td>CapaDatos.Resultado_principal</td><td/><td/><td>_A335B153_3FF5_4080_A2C6_84D931C9ED72_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_9A33AA96_390A_455E_AA18_B7F33BEB4B2E_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td/><td/><td>_7CB12811_8499_4998_A3E4_3486E2641680_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Logica.Resultado_principal</td><td/><td/><td>_CB019D04_1BC2_49F2_B0C1_1952E6D18631_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>OrdenamientoPesquero.Resultado_principal</td><td/><td/><td>_F90B1E10_663A_4348_84C0_83AA0B540795_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
@@ -2639,7 +2637,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>-1398349809</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>-928574899</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
@@ -3740,8 +3738,8 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
-		<row><td>ID_STRING1</td><td>1033</td><td>http://www.PARLET.com</td><td>0</td><td/><td>-1398349809</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>-1398349809</td></row>
+		<row><td>ID_STRING1</td><td>1033</td><td>http://www.PARLET.com</td><td>0</td><td/><td>-928574899</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>-928574899</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td/><td>0</td><td/><td>-1398364081</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>-1398349617</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>-1398349809</td></row>
