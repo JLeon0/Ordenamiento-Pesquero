@@ -78,7 +78,6 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         {
             if (!bw.WorkerReportsProgress)
             {
-                loading.Visible = false;
                 this.Ordenamiento.Visible = true;
                 this.Solicitudes.Visible = true;
             }

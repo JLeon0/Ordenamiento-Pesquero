@@ -78,7 +78,7 @@ namespace OrdenamientoPesquero
             PesqueriaPer.Items.Clear();
             foreach (DataRow fila in pesq.Rows)
             {
-                PesqueriaPer.Items.Add(fila["NOMBRE"].ToString());
+                PesqueriaPer.Items.Add(fila["PESQUERIA"].ToString());
             }
         }
 

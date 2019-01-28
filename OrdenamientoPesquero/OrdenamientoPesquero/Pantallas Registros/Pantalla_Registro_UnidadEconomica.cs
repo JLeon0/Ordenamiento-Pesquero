@@ -773,7 +773,7 @@ namespace OrdenamientoPesquero
                 this.Cursor = Cursors.Default;
             }
         }
-
+        
         private void button5_Click(object sender, EventArgs e)
         {
             Pantallas_Menu.MenuReportes mr = new Pantallas_Menu.MenuReportes(cbRNPA.Text);

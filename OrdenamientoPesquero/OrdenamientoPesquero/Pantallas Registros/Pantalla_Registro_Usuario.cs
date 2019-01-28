@@ -14,7 +14,6 @@ using System.Diagnostics;
 using System.Drawing.Imaging;
 using DPUruNet;
 
-
 namespace OrdenamientoPesquero
 {
     public partial class Pantalla_Registro_Usuario : Form
@@ -813,6 +812,7 @@ namespace OrdenamientoPesquero
                 CargarNoPescadores();
             }
         }
+        
 
         private void ListaNombres2_MouseDoubleClick(object sender, MouseEventArgs e)
         {

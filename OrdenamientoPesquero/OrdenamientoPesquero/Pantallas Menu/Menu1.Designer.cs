@@ -30,8 +30,6 @@
         {
             this.Solicitudes = new System.Windows.Forms.Button();
             this.Ordenamiento = new System.Windows.Forms.Button();
-            this.loading = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.loading)).BeginInit();
             this.SuspendLayout();
             // 
             // Solicitudes
@@ -59,18 +57,6 @@
             this.Ordenamiento.Visible = false;
             this.Ordenamiento.Click += new System.EventHandler(this.Ordenamiento_Click);
             // 
-            // loading
-            // 
-            this.loading.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.loading.Image = global::OrdenamientoPesquero.Properties.Resources.loading;
-            this.loading.InitialImage = global::OrdenamientoPesquero.Properties.Resources.loading;
-            this.loading.Location = new System.Drawing.Point(3, 0);
-            this.loading.Name = "loading";
-            this.loading.Size = new System.Drawing.Size(800, 410);
-            this.loading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.loading.TabIndex = 1;
-            this.loading.TabStop = false;
-            // 
             // Menu1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -78,7 +64,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(803, 409);
-            this.Controls.Add(this.loading);
             this.Controls.Add(this.Ordenamiento);
             this.Controls.Add(this.Solicitudes);
             this.DoubleBuffered = true;
@@ -89,7 +74,6 @@
             this.Text = "Menu1";
             this.Activated += new System.EventHandler(this.Menu1_Activated);
             this.Load += new System.EventHandler(this.Menu1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.loading)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -98,6 +82,5 @@
 
         private System.Windows.Forms.Button Solicitudes;
         private System.Windows.Forms.Button Ordenamiento;
-        private System.Windows.Forms.PictureBox loading;
     }
 }
