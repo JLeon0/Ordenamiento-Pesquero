@@ -292,7 +292,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.Location = new System.Drawing.Point(150, 48);
+            this.label3.Location = new System.Drawing.Point(388, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
@@ -414,6 +414,7 @@
             this.limpiar.BackColor = System.Drawing.Color.Transparent;
             this.limpiar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.limpiar;
             this.limpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.limpiar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.limpiar.Location = new System.Drawing.Point(878, 11);
             this.limpiar.Name = "limpiar";
             this.limpiar.Size = new System.Drawing.Size(28, 28);
@@ -477,6 +478,7 @@
             // 
             this.EliminarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Eliminar;
             this.EliminarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EliminarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EliminarUnidad.Location = new System.Drawing.Point(857, 265);
             this.EliminarUnidad.Name = "EliminarUnidad";
             this.EliminarUnidad.Size = new System.Drawing.Size(50, 50);
@@ -490,6 +492,7 @@
             this.ActualizarUnidad.BackColor = System.Drawing.Color.Transparent;
             this.ActualizarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
             this.ActualizarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ActualizarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ActualizarUnidad.Location = new System.Drawing.Point(785, 265);
             this.ActualizarUnidad.Name = "ActualizarUnidad";
             this.ActualizarUnidad.Size = new System.Drawing.Size(50, 50);
@@ -503,6 +506,7 @@
             this.RegistrarUnidad.BackColor = System.Drawing.Color.Transparent;
             this.RegistrarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.RegistrarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RegistrarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RegistrarUnidad.Location = new System.Drawing.Point(715, 265);
             this.RegistrarUnidad.Name = "RegistrarUnidad";
             this.RegistrarUnidad.Size = new System.Drawing.Size(50, 50);
@@ -1045,6 +1049,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Silver;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(371, 441);
@@ -1058,6 +1063,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.Color.Silver;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(523, 441);
@@ -1071,6 +1077,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Silver;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Location = new System.Drawing.Point(222, 441);
@@ -1149,6 +1156,7 @@
             // button4
             // 
             this.button4.BackColor = System.Drawing.Color.Silver;
+            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.Location = new System.Drawing.Point(371, 504);
@@ -1162,6 +1170,7 @@
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.Silver;
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Black;
             this.button5.Location = new System.Drawing.Point(523, 504);
@@ -1198,6 +1207,7 @@
             // 
             // ListaNombres
             // 
+            this.ListaNombres.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ListaNombres.ForeColor = System.Drawing.Color.Black;
             this.ListaNombres.FormattingEnabled = true;
             this.ListaNombres.Location = new System.Drawing.Point(12, 419);
@@ -1229,6 +1239,7 @@
             // 
             // ListaRNPA
             // 
+            this.ListaRNPA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ListaRNPA.ForeColor = System.Drawing.Color.Black;
             this.ListaRNPA.FormattingEnabled = true;
             this.ListaRNPA.Location = new System.Drawing.Point(12, 163);

@@ -34,7 +34,6 @@
             this.CURPPesc = new System.Windows.Forms.TextBox();
             this.Credencial = new System.Windows.Forms.Button();
             this.Firma = new System.Windows.Forms.PictureBox();
-            this.CargarFirma = new System.Windows.Forms.PictureBox();
             this.CargarImagen = new System.Windows.Forms.PictureBox();
             this.gbxOrdenado = new System.Windows.Forms.GroupBox();
             this.no = new System.Windows.Forms.RadioButton();
@@ -137,9 +136,9 @@
             this.Apoyo = new System.Windows.Forms.Button();
             this.Botones = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.groupBox7.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Firma)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarImagen)).BeginInit();
             this.gbxOrdenado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen)).BeginInit();
@@ -162,14 +161,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Ver)).BeginInit();
             this.Botones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.pictureBox4);
             this.groupBox7.Controls.Add(this.CURPPesc);
             this.groupBox7.Controls.Add(this.Credencial);
             this.groupBox7.Controls.Add(this.Firma);
-            this.groupBox7.Controls.Add(this.CargarFirma);
             this.groupBox7.Controls.Add(this.CargarImagen);
             this.groupBox7.Controls.Add(this.gbxOrdenado);
             this.groupBox7.Controls.Add(this.Seguro);
@@ -239,7 +239,7 @@
             // 
             // Credencial
             // 
-            this.Credencial.Location = new System.Drawing.Point(6, 284);
+            this.Credencial.Location = new System.Drawing.Point(6, 317);
             this.Credencial.Name = "Credencial";
             this.Credencial.Size = new System.Drawing.Size(121, 61);
             this.Credencial.TabIndex = 181;
@@ -251,36 +251,24 @@
             // 
             this.Firma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Firma.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Firma.Location = new System.Drawing.Point(11, 186);
+            this.Firma.Location = new System.Drawing.Point(11, 150);
             this.Firma.Name = "Firma";
             this.Firma.Size = new System.Drawing.Size(116, 53);
             this.Firma.TabIndex = 128;
             this.Firma.TabStop = false;
-            // 
-            // CargarFirma
-            // 
-            this.CargarFirma.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.subir;
-            this.CargarFirma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CargarFirma.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CargarFirma.Location = new System.Drawing.Point(11, 245);
-            this.CargarFirma.Name = "CargarFirma";
-            this.CargarFirma.Size = new System.Drawing.Size(28, 28);
-            this.CargarFirma.TabIndex = 127;
-            this.CargarFirma.TabStop = false;
-            this.toolTip1.SetToolTip(this.CargarFirma, "Cargar Firma");
-            this.CargarFirma.Click += new System.EventHandler(this.CargarFirma_Click);
+            this.toolTip1.SetToolTip(this.Firma, "Firma del Usuario");
             // 
             // CargarImagen
             // 
             this.CargarImagen.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.subir;
             this.CargarImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CargarImagen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CargarImagen.Location = new System.Drawing.Point(11, 152);
+            this.CargarImagen.Location = new System.Drawing.Point(99, 273);
             this.CargarImagen.Name = "CargarImagen";
             this.CargarImagen.Size = new System.Drawing.Size(28, 28);
             this.CargarImagen.TabIndex = 127;
             this.CargarImagen.TabStop = false;
-            this.toolTip1.SetToolTip(this.CargarImagen, "Tomar Imagen y Firma");
+            this.toolTip1.SetToolTip(this.CargarImagen, "Capturar Imagenes");
             this.CargarImagen.Click += new System.EventHandler(this.CargarImagen_Click_1);
             // 
             // gbxOrdenado
@@ -422,6 +410,7 @@
             this.Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Imagen.TabIndex = 118;
             this.Imagen.TabStop = false;
+            this.toolTip1.SetToolTip(this.Imagen, "Foto del Usuario");
             // 
             // limpiar
             // 
@@ -1382,6 +1371,15 @@
             this.label12.TabIndex = 182;
             this.label12.Text = "Eliminar registro";
             // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(11, 209);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(82, 90);
+            this.pictureBox4.TabIndex = 182;
+            this.pictureBox4.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox4, "Huella del Usuario");
+            // 
             // Pantalla_Registro_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1410,7 +1408,6 @@
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Firma)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarImagen)).EndInit();
             this.gbxOrdenado.ResumeLayout(false);
             this.gbxOrdenado.PerformLayout();
@@ -1440,6 +1437,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Ver)).EndInit();
             this.Botones.ResumeLayout(false);
             this.Botones.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1548,10 +1546,10 @@
         private System.Windows.Forms.Button Apoyo;
         private System.Windows.Forms.GroupBox Botones;
         private System.Windows.Forms.PictureBox Firma;
-        private System.Windows.Forms.PictureBox CargarFirma;
         private System.Windows.Forms.Button Credencial;
         private System.Windows.Forms.TextBox CURPPesc;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.PictureBox pictureBox4;
     }
 }

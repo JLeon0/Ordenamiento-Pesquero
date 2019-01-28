@@ -128,7 +128,7 @@ namespace Logica
         public DataTable ObtenerPesquerias()
         {
             string[] Parametros = { };
-            return c.getDatosTabla("ObtenerPesquerias", Parametros);
+            return c.getDatosTabla("ObtenerPesqueria", Parametros);
         }
         public int RegistrarPesqueria(string pesqueria)
         {
