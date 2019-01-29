@@ -173,6 +173,16 @@ namespace OrdenamientoPesquero.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Huella {
+            get {
+                object obj = ResourceManager.GetObject("Huella", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap limpiar {
             get {
                 object obj = ResourceManager.GetObject("limpiar", resourceCulture);

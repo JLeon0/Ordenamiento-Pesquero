@@ -5,7 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using Logica;
 using OrdenamientoPesquero.Pantallas_Registros;
@@ -839,5 +839,117 @@ namespace OrdenamientoPesquero
 
 
 
+        #region Lector de Huellas
+        public Reader CurrentReader
+        {
+            get { return currentReader; }
+            set
+            {
+                currentReader = value;
+            }
+        }
+
+        public bool streamingOn;
+        private Pantalla_Huella _captureStream;
+        private void CargarHuella_Click(object sender, EventArgs e)
+        {
+            streamingOn = false;
+
+            if (_captureStream == null)
+            {
+                _captureStream = new Pantalla_Huella();
+                _captureStream.Sender = this;
+            }
+
+            _captureStream.ShowDialog();
+
+            _captureStream.Dispose();
+            _captureStream = null;
+        }
+
+        private Reader currentReader;
+        public bool CaptureFinger(ref Fid fid)
+        {
+            try
+            {
+                Constants.ResultCode result = currentReader.GetStatus();
+
+                if ((result != Constants.ResultCode.DP_SUCCESS))
+                {
+                    MessageBox.Show("Get Status Error:  " + result);
+                    if (CurrentReader != null)
+                    {
+                        CurrentReader.Dispose();
+                        CurrentReader = null;
+                    }
+                    return false;
+                }
+
+                if ((currentReader.Status.Status == Constants.ReaderStatuses.DP_STATUS_BUSY))
+                {
+                    Thread.Sleep(50);
+                    return true;
+                }
+                else if ((currentReader.Status.Status == Constants.ReaderStatuses.DP_STATUS_NEED_CALIBRATION))
+                {
+                    currentReader.Calibrate();
+                }
+                else if ((currentReader.Status.Status != Constants.ReaderStatuses.DP_STATUS_READY))
+                {
+                    MessageBox.Show("Get Status:  " + currentReader.Status.Status);
+                    if (CurrentReader != null)
+                    {
+                        CurrentReader.Dispose();
+                        CurrentReader = null;
+                    }
+                    return false;
+                }
+
+                CaptureResult captureResult = currentReader.Capture(Constants.Formats.Fid.ANSI, Constants.CaptureProcessing.DP_IMG_PROC_DEFAULT, 5000, currentReader.Capabilities.Resolutions[0]);
+
+                if (captureResult.ResultCode != Constants.ResultCode.DP_SUCCESS)
+                {
+                    MessageBox.Show("Error:  " + captureResult.ResultCode);
+                    if (CurrentReader != null)
+                    {
+                        CurrentReader.Dispose();
+                        CurrentReader = null;
+                    }
+                    return false;
+                }
+
+                if (captureResult.Quality == Constants.CaptureQuality.DP_QUALITY_CANCELED)
+                {
+                    return false;
+                }
+
+                if ((captureResult.Quality == Constants.CaptureQuality.DP_QUALITY_NO_FINGER || captureResult.Quality == Constants.CaptureQuality.DP_QUALITY_TIMED_OUT))
+                {
+                    return true;
+                }
+
+                if ((captureResult.Quality == Constants.CaptureQuality.DP_QUALITY_FAKE_FINGER))
+                {
+                    MessageBox.Show("Quality Error:  " + captureResult.Quality);
+                    return true;
+                }
+
+                fid = captureResult.Data;
+
+                return true;
+            }
+            catch
+            {
+                MessageBox.Show("An error has occurred.");
+                if (CurrentReader != null)
+                {
+                    CurrentReader.Dispose();
+                    CurrentReader = null;
+                }
+                return false;
+            }
+        }
+
+        #endregion
     }
 }
