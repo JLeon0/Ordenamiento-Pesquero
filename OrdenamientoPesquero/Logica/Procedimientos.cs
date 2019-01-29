@@ -485,5 +485,7 @@ namespace Logica
             return c.Ejecutar2("limpiar", Parametros);
         }
         #endregion
+
+    
     }
 }
