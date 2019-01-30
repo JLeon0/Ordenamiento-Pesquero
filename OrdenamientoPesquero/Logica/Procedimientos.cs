@@ -215,10 +215,10 @@ namespace Logica
             string[] Parametros = { "@Curp" };
             return c.getDatosTabla("ObtenerPescador", Parametros, Curp);
         }
-        public int InsertarImagen(string CURP, byte[] imagen, byte[] firma)
+        public int InsertarImagen(string CURP, byte[] imagen, byte[] firma, byte[] huella)
         {
-            string[] Parametros = { "@curp", "@imagen", "@firma" };
-            return c.Ejecutar("InsertarImagen", Parametros, CURP, imagen, firma);
+            string[] Parametros = { "@curp", "@imagen", "@firma" ,"@huella"};
+            return c.Ejecutar("InsertarImagen", Parametros, CURP, imagen, firma, huella);
         }
         public DataTable ObtenerImagen(string curp)
         {
