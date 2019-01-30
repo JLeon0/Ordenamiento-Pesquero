@@ -16,15 +16,18 @@ namespace OrdenamientoPesquero.Pantallas_Registros
     public partial class Pantalla_Fotografia : Form
     {
         string CURP = "";
+        Image FIRMA, HUELLA;
         Procedimientos proc = new Procedimientos();
         private bool ExisteDispositivo = false;
         private FilterInfoCollection DispositivoDeVideo;
         private VideoCaptureDevice FuenteDeVideo = null;
 
-        public Pantalla_Fotografia(string curp)
+        public Pantalla_Fotografia(string curp, Image Firma, Image Huella)
         {
             InitializeComponent();
             CURP = curp;
+            FIRMA = Firma;
+            HUELLA = Huella;
             BuscarDispositivos();
         }
 
@@ -123,7 +126,13 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             System.IO.MemoryStream ms = new System.IO.MemoryStream();
             EspacioCamara.BackgroundImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
 
-            int exito = proc.InsertarImagen(CURP, ms.GetBuffer(),new byte[] { }, new byte[] { });
+            System.IO.MemoryStream firma = new System.IO.MemoryStream();
+            if (FIRMA != null) { FIRMA.Save(firma, System.Drawing.Imaging.ImageFormat.Jpeg); }
+
+            System.IO.MemoryStream huella = new System.IO.MemoryStream();
+            if (HUELLA != null) { HUELLA.Save(huella, System.Drawing.Imaging.ImageFormat.Jpeg); }
+
+            int exito = proc.InsertarImagen(CURP, ms.GetBuffer(), firma.GetBuffer(), huella.GetBuffer());
             if (exito > 0)
             {
                 MessageBox.Show("Imagen Insertada correctamente");
