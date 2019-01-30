@@ -123,7 +123,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             System.IO.MemoryStream ms = new System.IO.MemoryStream();
             EspacioCamara.BackgroundImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
 
-            int exito = proc.InsertarImagen(CURP, ms.GetBuffer(),new byte[] { });
+            int exito = proc.InsertarImagen(CURP, ms.GetBuffer(),new byte[] { }, new byte[] { });
             if (exito > 0)
             {
                 MessageBox.Show("Imagen Insertada correctamente");

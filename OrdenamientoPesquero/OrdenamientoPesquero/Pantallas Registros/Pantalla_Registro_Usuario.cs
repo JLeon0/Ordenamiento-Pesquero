@@ -865,7 +865,7 @@ namespace OrdenamientoPesquero
             }
 
             _captureStream.ShowDialog();
-
+            Huella.Refresh();
             _captureStream.Dispose();
             _captureStream = null;
         }
