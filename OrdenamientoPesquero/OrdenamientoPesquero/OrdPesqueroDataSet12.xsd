@@ -9,7 +9,7 @@
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="pesembarcaTableAdapter" GeneratorDataComponentClassName="pesembarcaTableAdapter" Name="pesembarca" UserDataComponentName="pesembarcaTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="OrdPesqueroConnectionString4 (Settings)" DbObjectName="OrdPesquero.dbo.pesembarca" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="OrdPesqueroConnectionString4 (Settings)" DbObjectName="OrdPesquero.dbo.pesembarca" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.pesembarca</CommandText>
@@ -72,6 +72,17 @@
               <Mapping SourceColumn="RESPONSABLECHIP" DataSetColumn="RESPONSABLECHIP" />
               <Mapping SourceColumn="CAPITAN" DataSetColumn="CAPITAN" />
               <Mapping SourceColumn="MARINERO" DataSetColumn="MARINERO" />
+              <Mapping SourceColumn="RNPA" DataSetColumn="RNPA" />
+              <Mapping SourceColumn="NOMBRE1" DataSetColumn="NOMBRE1" />
+              <Mapping SourceColumn="RFC1" DataSetColumn="RFC1" />
+              <Mapping SourceColumn="CALLEYNUM" DataSetColumn="CALLEYNUM" />
+              <Mapping SourceColumn="COLONIA1" DataSetColumn="COLONIA1" />
+              <Mapping SourceColumn="LOCALIDAD1" DataSetColumn="LOCALIDAD1" />
+              <Mapping SourceColumn="MUNICIO" DataSetColumn="MUNICIO" />
+              <Mapping SourceColumn="CODIGO_POSTAL1" DataSetColumn="CODIGO_POSTAL1" />
+              <Mapping SourceColumn="CORREO1" DataSetColumn="CORREO1" />
+              <Mapping SourceColumn="TELEFONO1" DataSetColumn="TELEFONO1" />
+              <Mapping SourceColumn="TIPO" DataSetColumn="TIPO" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -86,7 +97,7 @@
         <xs:element name="pesembarca" msprop:Generator_TableClassName="pesembarcaDataTable" msprop:Generator_TableVarName="tablepesembarca" msprop:Generator_TablePropName="pesembarca" msprop:Generator_RowDeletingName="pesembarcaRowDeleting" msprop:Generator_RowChangingName="pesembarcaRowChanging" msprop:Generator_RowEvHandlerName="pesembarcaRowChangeEventHandler" msprop:Generator_RowDeletedName="pesembarcaRowDeleted" msprop:Generator_UserTableName="pesembarca" msprop:Generator_RowChangedName="pesembarcaRowChanged" msprop:Generator_RowEvArgName="pesembarcaRowChangeEvent" msprop:Generator_RowClassName="pesembarcaRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="COD_REG" msdata:ReadOnly="true" msdata:AutoIncrement="true" msprop:Generator_ColumnVarNameInTable="columnCOD_REG" msprop:Generator_ColumnPropNameInRow="COD_REG" msprop:Generator_ColumnPropNameInTable="COD_REGColumn" msprop:Generator_UserColumnName="COD_REG" type="xs:int" />
+              <xs:element name="COD_REG" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCOD_REG" msprop:Generator_ColumnPropNameInRow="COD_REG" msprop:Generator_ColumnPropNameInTable="COD_REGColumn" msprop:Generator_UserColumnName="COD_REG" type="xs:int" />
               <xs:element name="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_UserColumnName="NOMBRE" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -425,6 +436,77 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="RNPA" msprop:Generator_ColumnVarNameInTable="columnRNPA" msprop:Generator_ColumnPropNameInRow="RNPA" msprop:Generator_ColumnPropNameInTable="RNPAColumn" msprop:Generator_UserColumnName="RNPA">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NOMBRE1" msprop:Generator_ColumnVarNameInTable="columnNOMBRE1" msprop:Generator_ColumnPropNameInRow="NOMBRE1" msprop:Generator_ColumnPropNameInTable="NOMBRE1Column" msprop:Generator_UserColumnName="NOMBRE1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RFC1" msprop:Generator_ColumnVarNameInTable="columnRFC1" msprop:Generator_ColumnPropNameInRow="RFC1" msprop:Generator_ColumnPropNameInTable="RFC1Column" msprop:Generator_UserColumnName="RFC1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CALLEYNUM" msprop:Generator_ColumnVarNameInTable="columnCALLEYNUM" msprop:Generator_ColumnPropNameInRow="CALLEYNUM" msprop:Generator_ColumnPropNameInTable="CALLEYNUMColumn" msprop:Generator_UserColumnName="CALLEYNUM" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="COLONIA1" msprop:Generator_ColumnVarNameInTable="columnCOLONIA1" msprop:Generator_ColumnPropNameInRow="COLONIA1" msprop:Generator_ColumnPropNameInTable="COLONIA1Column" msprop:Generator_UserColumnName="COLONIA1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="LOCALIDAD1" msprop:Generator_ColumnVarNameInTable="columnLOCALIDAD1" msprop:Generator_ColumnPropNameInRow="LOCALIDAD1" msprop:Generator_ColumnPropNameInTable="LOCALIDAD1Column" msprop:Generator_UserColumnName="LOCALIDAD1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MUNICIO" msprop:Generator_ColumnVarNameInTable="columnMUNICIO" msprop:Generator_ColumnPropNameInRow="MUNICIO" msprop:Generator_ColumnPropNameInTable="MUNICIOColumn" msprop:Generator_UserColumnName="MUNICIO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CODIGO_POSTAL1" msprop:Generator_ColumnVarNameInTable="columnCODIGO_POSTAL1" msprop:Generator_ColumnPropNameInRow="CODIGO_POSTAL1" msprop:Generator_ColumnPropNameInTable="CODIGO_POSTAL1Column" msprop:Generator_UserColumnName="CODIGO_POSTAL1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CORREO1" msprop:Generator_ColumnVarNameInTable="columnCORREO1" msprop:Generator_ColumnPropNameInRow="CORREO1" msprop:Generator_ColumnPropNameInTable="CORREO1Column" msprop:Generator_UserColumnName="CORREO1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TELEFONO1" msprop:Generator_ColumnVarNameInTable="columnTELEFONO1" msprop:Generator_ColumnPropNameInRow="TELEFONO1" msprop:Generator_ColumnPropNameInTable="TELEFONO1Column" msprop:Generator_UserColumnName="TELEFONO1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="13" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO" msprop:Generator_ColumnVarNameInTable="columnTIPO" msprop:Generator_ColumnPropNameInRow="TIPO" msprop:Generator_ColumnPropNameInTable="TIPOColumn" msprop:Generator_UserColumnName="TIPO" type="xs:int" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -434,6 +516,7 @@
       <xs:selector xpath=".//mstns:pesembarca" />
       <xs:field xpath="mstns:CURP" />
       <xs:field xpath="mstns:MATRICULA1" />
+      <xs:field xpath="mstns:RNPA" />
     </xs:unique>
   </xs:element>
 </xs:schema>
