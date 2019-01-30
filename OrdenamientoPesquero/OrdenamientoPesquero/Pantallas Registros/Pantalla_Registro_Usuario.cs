@@ -689,6 +689,13 @@ namespace OrdenamientoPesquero
                     System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
                     Firma.BackgroundImage = (Image.FromStream(ms));
                     Firma.BackgroundImageLayout = ImageLayout.Zoom;
+
+                    Huella.BackColor = Color.White;
+                    Huella.BackgroundImage = null;
+                    imagenBuffer = (byte[])dt.Rows[1]["HUELLA"];
+                    ms = new System.IO.MemoryStream(imagenBuffer);
+                    Huella.BackgroundImage = (Image.FromStream(ms));
+                    Huella.BackgroundImageLayout = ImageLayout.Zoom;
                 }
                 catch (Exception) { }
             }
@@ -956,8 +963,6 @@ namespace OrdenamientoPesquero
         }
 
         private delegate void SendMessageCallback(object payload);
-
-      
 
         private void SendMessage(object payload)
         {
