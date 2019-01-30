@@ -863,6 +863,8 @@ namespace OrdenamientoPesquero
             {
                 CurrentReader = _readers[0];
             }
+
+            CARGAR();
         }
 
         private bool backEnabled = false;
@@ -931,11 +933,11 @@ namespace OrdenamientoPesquero
 
             for (int i = 0; i <= bytes.Length - 1; i++)
             {
-                rgbBytes[(i * 3)] = bytes[i];
-                rgbBytes[(i * 3) + 1] = bytes[i];
-                rgbBytes[(i * 3) + 2] = bytes[i];
+                rgbBytes[(i)] = bytes[i];
+                rgbBytes[(i) + 1] = bytes[i];
+                rgbBytes[(i) + 2] = bytes[i];
             }
-            Bitmap bmp = new Bitmap(width, height, PixelFormat.Format24bppRgb);
+            Bitmap bmp = new Bitmap(width , height, PixelFormat.Format24bppRgb);
 
             BitmapData data = bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.WriteOnly, PixelFormat.Format24bppRgb);
 
@@ -963,7 +965,7 @@ namespace OrdenamientoPesquero
                 }
                 else
                 {
-                    Huella.BackgroundImage = (Bitmap)payload;
+                    Huella.Image = (Bitmap)payload;
                     Huella.Refresh();
                 }
             }
