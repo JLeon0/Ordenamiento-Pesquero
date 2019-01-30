@@ -15,8 +15,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
     public partial class Pantalla_Huella : Form
     {
         private ReaderCollection _readers;
-        private Reader _reader;
-        string SerialNumber;
+   
 
         public Pantalla_Huella()
         {
@@ -30,32 +29,6 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             {
                 _sender.CurrentReader = _readers[0];
             }
-            _sender.CurrentReader = _readers[0];
-            Constants.ResultCode result = Constants.ResultCode.DP_DEVICE_FAILURE;
-
-            result = _sender.CurrentReader.Open(Constants.CapturePriority.DP_PRIORITY_COOPERATIVE);
-
-            if (result != Constants.ResultCode.DP_SUCCESS)
-            {
-                MessageBox.Show("Error:  " + result.ToString());
-                if (_sender.CurrentReader != null)
-                {
-                    _sender.CurrentReader.Dispose();
-                    _sender.CurrentReader = null;
-                }
-                return;
-            }
-
-            // Check if streaming or capture was chosen.
-            streamingOn = true;
-
-            pbFingerprint.Image = null;
-
-                this.Text = "Capture";
-                threadHandle = new Thread(CaptureThread);
-                threadHandle.IsBackground = true;
-                threadHandle.Start();
-            
         }
         private bool backEnabled = false;
 
@@ -73,7 +46,6 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             set { _sender = value; }
         }
 
-        private bool streamingOn;
 
 
 
@@ -84,7 +56,26 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         /// <param name="e"></param>
         private void Capture_Stream_Load(object sender, EventArgs e)
         {
-            
+            Constants.ResultCode result = Constants.ResultCode.DP_DEVICE_FAILURE;
+
+            result = _sender.CurrentReader.Open(Constants.CapturePriority.DP_PRIORITY_COOPERATIVE);
+
+            if (result != Constants.ResultCode.DP_SUCCESS)
+            {
+                MessageBox.Show("Error:  " + result.ToString());
+                if (_sender.CurrentReader != null)
+                {
+                    _sender.CurrentReader.Dispose();
+                    _sender.CurrentReader = null;
+                }
+                return;
+            }
+            pbFingerprint.Image = null;
+
+            this.Text = "Capture";
+            threadHandle = new Thread(CaptureThread);
+            threadHandle.IsBackground = true;
+            threadHandle.Start();
         }
 
         /// <summary>
@@ -289,12 +280,33 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         {
             this.Close();
         }
-
+        bool streamingOn = false;
         private void Capture_Stream_Closed(object sender, EventArgs e)
         {
             if (_sender.CurrentReader != null)
             {
-      
+                if (streamingOn)
+                {
+                    // Waits until reader is open and streaming is on before resetting.
+                    int count = 0;
+                    while (!backEnabled && count++ < 30)
+                    {
+                        Thread.Sleep(250);
+                        Application.DoEvents();
+                    }
+
+                    reset = true;
+
+                    // Waits until thread is unlocked before continuing.
+                    count = 0;
+                    while (threadHandle_lock && count++ < 100)
+                    {
+                        Thread.Sleep(50);
+                        Application.DoEvents();
+                    }
+                }
+                else
+                {
                     reset = true;
                     _sender.CurrentReader.CancelCapture();
 
@@ -303,7 +315,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                         threadHandle.Join(5000);
                     }
                 }
-            
+            }
 
             // Disable flags in this thread.
             backEnabled = false;
