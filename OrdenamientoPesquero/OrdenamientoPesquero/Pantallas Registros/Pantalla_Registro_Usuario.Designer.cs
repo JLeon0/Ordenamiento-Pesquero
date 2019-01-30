@@ -31,11 +31,12 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Registro_Usuario));
             this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.CargarFirma = new System.Windows.Forms.PictureBox();
             this.Huella = new System.Windows.Forms.PictureBox();
             this.CURPPesc = new System.Windows.Forms.TextBox();
             this.Credencial = new System.Windows.Forms.Button();
             this.Firma = new System.Windows.Forms.PictureBox();
-            this.CapturarHuella = new System.Windows.Forms.PictureBox();
+            this.CargarHuella = new System.Windows.Forms.PictureBox();
             this.CargarImagen = new System.Windows.Forms.PictureBox();
             this.gbxOrdenado = new System.Windows.Forms.GroupBox();
             this.no = new System.Windows.Forms.RadioButton();
@@ -139,9 +140,10 @@
             this.Botones = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
             this.groupBox7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Huella)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Firma)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CapturarHuella)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CargarHuella)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarImagen)).BeginInit();
             this.gbxOrdenado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Imagen)).BeginInit();
@@ -168,11 +170,12 @@
             // 
             // groupBox7
             // 
+            this.groupBox7.Controls.Add(this.CargarFirma);
             this.groupBox7.Controls.Add(this.Huella);
             this.groupBox7.Controls.Add(this.CURPPesc);
             this.groupBox7.Controls.Add(this.Credencial);
             this.groupBox7.Controls.Add(this.Firma);
-            this.groupBox7.Controls.Add(this.CapturarHuella);
+            this.groupBox7.Controls.Add(this.CargarHuella);
             this.groupBox7.Controls.Add(this.CargarImagen);
             this.groupBox7.Controls.Add(this.gbxOrdenado);
             this.groupBox7.Controls.Add(this.Seguro);
@@ -231,8 +234,22 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Datos Generales";
             // 
+            // CargarFirma
+            // 
+            this.CargarFirma.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.subir;
+            this.CargarFirma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CargarFirma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CargarFirma.Location = new System.Drawing.Point(99, 241);
+            this.CargarFirma.Name = "CargarFirma";
+            this.CargarFirma.Size = new System.Drawing.Size(28, 28);
+            this.CargarFirma.TabIndex = 183;
+            this.CargarFirma.TabStop = false;
+            this.toolTip1.SetToolTip(this.CargarFirma, "Capturar Imagenes");
+            this.CargarFirma.Click += new System.EventHandler(this.CargarFirma_Click);
+            // 
             // Huella
             // 
+            this.Huella.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Huella.Location = new System.Drawing.Point(11, 209);
             this.Huella.Name = "Huella";
             this.Huella.Size = new System.Drawing.Size(82, 90);
@@ -270,18 +287,18 @@
             this.Firma.TabStop = false;
             this.toolTip1.SetToolTip(this.Firma, "Firma del Usuario");
             // 
-            // CapturarHuella
+            // CargarHuella
             // 
-            this.CapturarHuella.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Huella;
-            this.CapturarHuella.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CapturarHuella.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CapturarHuella.Location = new System.Drawing.Point(99, 271);
-            this.CapturarHuella.Name = "CapturarHuella";
-            this.CapturarHuella.Size = new System.Drawing.Size(28, 28);
-            this.CapturarHuella.TabIndex = 127;
-            this.CapturarHuella.TabStop = false;
-            this.toolTip1.SetToolTip(this.CapturarHuella, "Capturar Huella");
-            this.CapturarHuella.Click += new System.EventHandler(this.CargarHuella_Click);
+            this.CargarHuella.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Huella;
+            this.CargarHuella.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CargarHuella.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CargarHuella.Location = new System.Drawing.Point(99, 272);
+            this.CargarHuella.Name = "CargarHuella";
+            this.CargarHuella.Size = new System.Drawing.Size(28, 28);
+            this.CargarHuella.TabIndex = 127;
+            this.CargarHuella.TabStop = false;
+            this.toolTip1.SetToolTip(this.CargarHuella, "Capturar Huella");
+            this.CargarHuella.Click += new System.EventHandler(this.CargarHuella_Click);
             // 
             // CargarImagen
             // 
@@ -429,6 +446,7 @@
             // 
             this.Imagen.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.perfil;
             this.Imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Imagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Imagen.Location = new System.Drawing.Point(11, 21);
             this.Imagen.Name = "Imagen";
             this.Imagen.Size = new System.Drawing.Size(116, 125);
@@ -1402,7 +1420,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1404, 749);
+            this.ClientSize = new System.Drawing.Size(1438, 749);
             this.Controls.Add(this.Botones);
             this.Controls.Add(this.ListaNombres2);
             this.Controls.Add(this.BuscarNombre2);
@@ -1423,9 +1441,10 @@
             this.Load += new System.EventHandler(this.Pantalla_Registro_Usuario_Load);
             this.groupBox7.ResumeLayout(false);
             this.groupBox7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Huella)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Firma)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CapturarHuella)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CargarHuella)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarImagen)).EndInit();
             this.gbxOrdenado.ResumeLayout(false);
             this.gbxOrdenado.PerformLayout();
@@ -1568,6 +1587,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.PictureBox Huella;
-        private System.Windows.Forms.PictureBox CapturarHuella;
+        private System.Windows.Forms.PictureBox CargarHuella;
+        private System.Windows.Forms.PictureBox CargarFirma;
     }
 }
