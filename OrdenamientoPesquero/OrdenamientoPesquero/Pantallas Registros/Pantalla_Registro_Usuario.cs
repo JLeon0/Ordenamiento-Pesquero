@@ -626,7 +626,6 @@ namespace OrdenamientoPesquero
         #region Imagen
         private void CargarImagen_Click_1(object sender, EventArgs e)
         {
-
             if (CURPPesc.Text != "")
             {
                 DialogResult result = MessageBox.Show("Desea capturar una nueva imagen?", "¿?", MessageBoxButtons.YesNoCancel);
@@ -657,21 +656,11 @@ namespace OrdenamientoPesquero
                     }
                     else if (result == DialogResult.No)
                     {
-                        Imagen.BackgroundImage = OrdenamientoPesquero.Properties.Resources.perfil;
+                        if (Imagen.BackgroundImage == null)
+                        { Imagen.BackgroundImage = OrdenamientoPesquero.Properties.Resources.perfil; }
                     }
                 }
-                result = MessageBox.Show("Desea insertar la firma del usuario?", "¿?", MessageBoxButtons.YesNoCancel);
-                if (result == DialogResult.Yes)
-                {
-                    Process.Start("C:\\Windows\\SigPlus\\DemoOCX.exe");
-                    result = MessageBox.Show("Ya ha capturado la firma del usuario?", "¿?", MessageBoxButtons.YesNoCancel);
-                    if (result == DialogResult.Yes)
-                    {
-                        string mdoc = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                        Bitmap bmp = new Bitmap(Image.FromFile(mdoc + "\\FIRMA\\FIRMA.PNG"));
-                        Firma.BackgroundImage = bmp;
-                    }
-                }
+               
             }
         }
 
@@ -733,6 +722,21 @@ namespace OrdenamientoPesquero
             }
         }
 
+        private void CargarFirma_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Desea insertar la firma del usuario?", "¿?", MessageBoxButtons.YesNoCancel);
+            if (result == DialogResult.Yes)
+            {
+                Process.Start("C:\\Windows\\SigPlus\\DemoOCX.exe");
+                result = MessageBox.Show("Ya ha capturado la firma del usuario?", "¿?", MessageBoxButtons.YesNoCancel);
+                if (result == DialogResult.Yes)
+                {
+                    string mdoc = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                    Bitmap bmp = new Bitmap(Image.FromFile(mdoc + "\\FIRMA\\FIRMA.PNG"));
+                    Firma.BackgroundImage = bmp;
+                }
+            }
+        }
         #endregion
 
 
@@ -863,6 +867,7 @@ namespace OrdenamientoPesquero
             {
                 CurrentReader = _readers[0];
             }
+            CARGAR();
         }
 
         private bool backEnabled = false;
@@ -931,9 +936,9 @@ namespace OrdenamientoPesquero
 
             for (int i = 0; i <= bytes.Length - 1; i++)
             {
-                rgbBytes[(i * 3)] = bytes[i];
-                rgbBytes[(i * 3) + 1] = bytes[i];
-                rgbBytes[(i * 3) + 2] = bytes[i];
+                rgbBytes[(i)] = bytes[i];
+                rgbBytes[(i) + 1] = bytes[i];
+                rgbBytes[(i) + 2] = bytes[i];
             }
             Bitmap bmp = new Bitmap(width, height, PixelFormat.Format24bppRgb);
 
@@ -951,6 +956,8 @@ namespace OrdenamientoPesquero
         }
 
         private delegate void SendMessageCallback(object payload);
+
+      
 
         private void SendMessage(object payload)
         {
