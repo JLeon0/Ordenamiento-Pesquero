@@ -15,8 +15,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
     public partial class Pantalla_Huella : Form
     {
         private ReaderCollection _readers;
-        private Reader _reader;
-        string SerialNumber;
+   
 
         public Pantalla_Huella()
         {
@@ -47,7 +46,6 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             set { _sender = value; }
         }
 
-        private bool streamingOn;
 
 
 
@@ -72,41 +70,12 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 }
                 return;
             }
-
-            // Check if streaming or capture was chosen.
-            streamingOn = true;
-
             pbFingerprint.Image = null;
 
-            if (streamingOn)
-            {
-                if (!_sender.CurrentReader.Capabilities.CanStream)
-                {
-                    MessageBox.Show("This reader cannot stream in this environment.");
-
-                    backEnabled = true;
-
-                    this.Close();
-
-                    reset = true;
-
-                    _sender.CurrentReader.Dispose();
-
-                    return;
-                }
-
-                this.Text = "Streaming";
-                threadHandle = new Thread(StreamThread);
-                threadHandle.IsBackground = true;
-                threadHandle.Start();
-            }
-            else
-            {
-                this.Text = "Capture";
-                threadHandle = new Thread(CaptureThread);
-                threadHandle.IsBackground = true;
-                threadHandle.Start();
-            }
+            this.Text = "Capture";
+            threadHandle = new Thread(CaptureThread);
+            threadHandle.IsBackground = true;
+            threadHandle.Start();
         }
 
         /// <summary>
@@ -311,7 +280,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         {
             this.Close();
         }
-
+        bool streamingOn = false;
         private void Capture_Stream_Closed(object sender, EventArgs e)
         {
             if (_sender.CurrentReader != null)

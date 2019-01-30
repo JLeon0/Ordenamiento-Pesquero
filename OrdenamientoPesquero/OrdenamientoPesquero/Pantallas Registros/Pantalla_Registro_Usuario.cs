@@ -854,20 +854,122 @@ namespace OrdenamientoPesquero
 
         public bool streamingOn;
         private Pantalla_Huella _captureStream;
+
         private void CargarHuella_Click(object sender, EventArgs e)
         {
-            streamingOn = false;
-
-            if (_captureStream == null)
+            ReaderCollection _readers;
+            _readers = ReaderCollection.GetReaders();
+            foreach (Reader Reader in _readers)
             {
-                _captureStream = new Pantalla_Huella();
-                _captureStream.Sender = this;
+                CurrentReader = _readers[0];
+            }
+        }
+
+        private bool backEnabled = false;
+
+        private bool reset = false;
+
+        private bool threadHandle_lock = false;
+
+        private Thread threadHandle;
+        private void CARGAR()
+        {        
+            
+
+            Constants.ResultCode result = Constants.ResultCode.DP_DEVICE_FAILURE;
+
+            result = CurrentReader.Open(Constants.CapturePriority.DP_PRIORITY_COOPERATIVE);
+
+            if (result != Constants.ResultCode.DP_SUCCESS)
+            {
+                MessageBox.Show("Error:  " + result.ToString());
+                if (CurrentReader != null)
+                {
+                    CurrentReader.Dispose();
+                    CurrentReader = null;
+                }
+                return;
+            }
+            Huella.BackgroundImage = null;
+
+            this.Text = "Capture";
+            threadHandle = new Thread(CaptureThread);
+            threadHandle.IsBackground = true;
+            threadHandle.Start();
+        }
+
+        private void CaptureThread()
+        {
+            reset = false;
+            while (!reset)
+            {
+                Fid fid = null;
+
+                if (!CaptureFinger(ref fid))
+                {
+                    break;
+                }
+
+                if (fid == null)
+                {
+                    continue;
+                }
+
+                foreach (Fid.Fiv fiv in fid.Views)
+                {
+                    SendMessage(CreateBitmap(fiv.RawImage, fiv.Width, fiv.Height));
+                }
             }
 
-            _captureStream.ShowDialog();
+            if (CurrentReader != null)
+                CurrentReader.Dispose();
+        }
 
-            _captureStream.Dispose();
-            _captureStream = null;
+        public Bitmap CreateBitmap(byte[] bytes, int width, int height)
+        {
+            byte[] rgbBytes = new byte[bytes.Length * 3];
+
+            for (int i = 0; i <= bytes.Length - 1; i++)
+            {
+                rgbBytes[(i * 3)] = bytes[i];
+                rgbBytes[(i * 3) + 1] = bytes[i];
+                rgbBytes[(i * 3) + 2] = bytes[i];
+            }
+            Bitmap bmp = new Bitmap(width, height, PixelFormat.Format24bppRgb);
+
+            BitmapData data = bmp.LockBits(new Rectangle(0, 0, bmp.Width, bmp.Height), ImageLockMode.WriteOnly, PixelFormat.Format24bppRgb);
+
+            for (int i = 0; i <= bmp.Height - 1; i++)
+            {
+                IntPtr p = new IntPtr(data.Scan0.ToInt32() + data.Stride * i);
+                System.Runtime.InteropServices.Marshal.Copy(rgbBytes, i * bmp.Width * 3, p, bmp.Width * 3);
+            }
+
+            bmp.UnlockBits(data);
+
+            return bmp;
+        }
+
+        private delegate void SendMessageCallback(object payload);
+
+        private void SendMessage(object payload)
+        {
+            try
+            {
+                if (this.Huella.InvokeRequired)
+                {
+                    SendMessageCallback d = new SendMessageCallback(SendMessage);
+                    this.Invoke(d, new object[] { payload });
+                }
+                else
+                {
+                    Huella.BackgroundImage = (Bitmap)payload;
+                    Huella.Refresh();
+                }
+            }
+            catch (Exception)
+            {
+            }
         }
 
         public bool CaptureFinger(ref Fid fid)
