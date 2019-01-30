@@ -1581,7 +1581,7 @@
         private System.Windows.Forms.LinkLabel solicitudes;
         private System.Windows.Forms.Button Apoyo;
         private System.Windows.Forms.GroupBox Botones;
-        private System.Windows.Forms.PictureBox Firma;
+        public System.Windows.Forms.PictureBox Firma;
         private System.Windows.Forms.Button Credencial;
         private System.Windows.Forms.TextBox CURPPesc;
         private System.Windows.Forms.PictureBox pictureBox1;

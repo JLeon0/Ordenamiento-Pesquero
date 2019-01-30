@@ -631,7 +631,7 @@ namespace OrdenamientoPesquero
                 DialogResult result = MessageBox.Show("Desea capturar una nueva imagen?", "¿?", MessageBoxButtons.YesNoCancel);
                 if (result == DialogResult.Yes)
                 {
-                    Pantalla_Fotografia pf = new Pantalla_Fotografia(CURPPesc.Text);
+                    Pantalla_Fotografia pf = new Pantalla_Fotografia(CURPPesc.Text,Firma.BackgroundImage,Huella.BackgroundImage);
                     pf.ShowDialog();
                     ObtenerImagen();
                 }
