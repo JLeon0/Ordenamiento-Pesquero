@@ -506,7 +506,6 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <FixedColumnHeaders>true</FixedColumnHeaders>
-            <KeepTogether>true</KeepTogether>
             <DataSetName>DataSet5</DataSetName>
             <Top>0.72463cm</Top>
             <Left>0.05815cm</Left>
@@ -520,7 +519,6 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <KeepTogether>true</KeepTogether>
         <OmitBorderOnPageBreak>true</OmitBorderOnPageBreak>
         <Top>4.4473cm</Top>
         <Left>0.19016cm</Left>
@@ -824,7 +822,6 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <FixedColumnHeaders>true</FixedColumnHeaders>
-            <KeepTogether>true</KeepTogether>
             <DataSetName>DataSet3</DataSetName>
             <Top>0.9747cm</Top>
             <Left>0.01137cm</Left>
@@ -851,7 +848,6 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <KeepTogether>true</KeepTogether>
         <Top>14.3583cm</Top>
         <Left>0.19016cm</Left>
         <Height>2.09474cm</Height>
@@ -1831,7 +1827,6 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <FixedColumnHeaders>true</FixedColumnHeaders>
-        <KeepTogether>true</KeepTogether>
         <DataSetName>DataSet2</DataSetName>
         <Top>8.36365cm</Top>
         <Left>0.28136cm</Left>
@@ -2284,7 +2279,6 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <FixedColumnHeaders>true</FixedColumnHeaders>
-        <KeepTogether>true</KeepTogether>
         <DataSetName>DataSet11</DataSetName>
         <Top>10.55134cm</Top>
         <Left>0.28135cm</Left>
@@ -2704,7 +2698,6 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <FixedColumnHeaders>true</FixedColumnHeaders>
-        <KeepTogether>true</KeepTogether>
         <DataSetName>DataSet4</DataSetName>
         <Top>12.76061cm</Top>
         <Left>0.28135cm</Left>

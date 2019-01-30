@@ -340,6 +340,10 @@
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
 		<row><td>CapaDatos.Resultado_principal</td><td>{7BE731A8-F03F-48AF-88F5-4F93749490AB}</td><td>INSTALLDIR</td><td>2</td><td/><td>capadatos.resultado_principa</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DPCtlUruNet.dll</td><td>{39EBA64C-C031-4B01-9FAF-BE83F0691C2E}</td><td>INSTALLDIR</td><td>2</td><td/><td>dpctlurunet.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DPCtlXUru.dll</td><td>{4A46C04A-C818-49F8-A588-9DE63A7A7414}</td><td>INSTALLDIR</td><td>2</td><td/><td>dpctlxuru.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DPUruNet.dll</td><td>{6721B3A9-E331-4339-B4CC-440732962406}</td><td>INSTALLDIR</td><td>2</td><td/><td>dpurunet.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DPXUru.dll</td><td>{CF48192C-1E69-4DDD-B0AC-FE167E446DDE}</td><td>INSTALLDIR</td><td>2</td><td/><td>dpxuru.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{A5F30949-1D57-4A82-AD91-AD3CF928DFA9}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td>{353EADCF-53D9-495C-B463-2B10E4C42C79}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>OrdenamientoPesquero.Resultado_principal</td><td>{1DEC1770-5994-4BF2-832E-64A4F0F955C1}</td><td>INSTALLDIR</td><td>2</td><td/><td>ordenamientopesquero.resulta</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
@@ -1052,6 +1056,10 @@
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>INSTALLDIR</td><td>CapaDatos.Resultado_principal</td></row>
+		<row><td>INSTALLDIR</td><td>DPCtlUruNet.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DPCtlXUru.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DPUruNet.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DPXUru.dll</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>IS_ININSTALL_SHORTCUT</td></row>
 		<row><td>INSTALLDIR</td><td>OrdenamientoPesquero.Resultado_principal</td></row>
@@ -1868,6 +1876,10 @@
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
 		<row><td>AlwaysInstall</td><td>CapaDatos.Resultado_principal</td></row>
+		<row><td>AlwaysInstall</td><td>DPCtlUruNet.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DPCtlXUru.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DPUruNet.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DPXUru.dll</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>IS_ININSTALL_SHORTCUT</td></row>
 		<row><td>AlwaysInstall</td><td>OrdenamientoPesquero.Resultado_principal</td></row>
@@ -1888,6 +1900,10 @@
 		<row><td>anexo3.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>ANEXO3~1.RDL|Anexo3.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Anexo3.rdlc</td><td>1</td><td/></row>
 		<row><td>capadatos.resultado_principa</td><td>CapaDatos.Resultado_principal</td><td>CapaDatos.Resultado principal</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;CapaDatos&gt;|Built</td><td>3</td><td/></row>
 		<row><td>credencial.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>CREDEN~1.RDL|Credencial.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Credencial.rdlc</td><td>1</td><td/></row>
+		<row><td>dpctlurunet.dll</td><td>DPCtlUruNet.dll</td><td>DPCTLU~1.DLL|DPCtlUruNet.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\DPCtlUruNet.dll</td><td>1</td><td/></row>
+		<row><td>dpctlxuru.dll</td><td>DPCtlXUru.dll</td><td>DPCTLX~1.DLL|DPCtlXUru.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\DPCtlXUru.dll</td><td>1</td><td/></row>
+		<row><td>dpurunet.dll</td><td>DPUruNet.dll</td><td>DPUruNet.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\DPUruNet.dll</td><td>1</td><td/></row>
+		<row><td>dpxuru.dll</td><td>DPXUru.dll</td><td>DPXUru.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\DPXUru.dll</td><td>1</td><td/></row>
 		<row><td>frontal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>FRONTA~1.RDL|Frontal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Frontal.rdlc</td><td>1</td><td/></row>
 		<row><td>lista_embarca.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>LISTA_~1.RDL|Lista_Embarca.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Lista_Embarca.rdlc</td><td>1</td><td/></row>
 		<row><td>ordenamientopesquero.resulta</td><td>OrdenamientoPesquero.Resultado_principal</td><td>OrdenamientoPesquero.Resultado principal</td><td>0</td><td/><td/><td/><td>1</td><td>&lt;OrdenamientoPesquero&gt;|Built</td><td>3</td><td/></row>
@@ -2044,6 +2060,10 @@
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
 		<row><td>CapaDatos.Resultado_principal</td><td/><td/><td>_A335B153_3FF5_4080_A2C6_84D931C9ED72_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DPCtlUruNet.dll</td><td/><td/><td>_2237C31B_CF0F_42D9_950F_2276B9E55904_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DPCtlXUru.dll</td><td/><td/><td>_D74C1F89_050C_4FF5_94A6_9F61163BB314_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DPUruNet.dll</td><td/><td/><td>_3B87526B_8AE2_44BD_A0AC_FCA419860FBA_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DPXUru.dll</td><td/><td/><td>_1450CB09_772D_4E56_BA9F_AC9BC6E0E0F6_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_9A33AA96_390A_455E_AA18_B7F33BEB4B2E_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td/><td/><td>_7CB12811_8499_4998_A3E4_3486E2641680_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>OrdenamientoPesquero.Resultado_principal</td><td/><td/><td>_F90B1E10_663A_4348_84C0_83AA0B540795_FILTER</td><td/><td/><td/><td/></row>
@@ -3990,7 +4010,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{2779AFC2-EEC8-4721-8965-BF1991445859}</td></row>
 		<row><td>ISUSSignature</td><td>{84A30A5B-CE77-4733-9987-55DCE57AFBB5}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday,viewAppFiles</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>

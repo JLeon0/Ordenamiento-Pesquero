@@ -30,6 +30,32 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             {
                 SerialNumber = Reader.Description.SerialNumber;
             }
+            _sender.CurrentReader = _readers[0];
+            Constants.ResultCode result = Constants.ResultCode.DP_DEVICE_FAILURE;
+
+            result = _sender.CurrentReader.Open(Constants.CapturePriority.DP_PRIORITY_COOPERATIVE);
+
+            if (result != Constants.ResultCode.DP_SUCCESS)
+            {
+                MessageBox.Show("Error:  " + result.ToString());
+                if (_sender.CurrentReader != null)
+                {
+                    _sender.CurrentReader.Dispose();
+                    _sender.CurrentReader = null;
+                }
+                return;
+            }
+
+            // Check if streaming or capture was chosen.
+            streamingOn = true;
+
+            pbFingerprint.Image = null;
+
+                this.Text = "Capture";
+                threadHandle = new Thread(CaptureThread);
+                threadHandle.IsBackground = true;
+                threadHandle.Start();
+            
         }
         private bool backEnabled = false;
 
@@ -58,55 +84,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         /// <param name="e"></param>
         private void Capture_Stream_Load(object sender, EventArgs e)
         {
-            Constants.ResultCode result = Constants.ResultCode.DP_DEVICE_FAILURE;
-
-            result = _sender.CurrentReader.Open(Constants.CapturePriority.DP_PRIORITY_COOPERATIVE);
-
-            if (result != Constants.ResultCode.DP_SUCCESS)
-            {
-                MessageBox.Show("Error:  " + result.ToString());
-                if (_sender.CurrentReader != null)
-                {
-                    _sender.CurrentReader.Dispose();
-                    _sender.CurrentReader = null;
-                }
-                return;
-            }
-
-            // Check if streaming or capture was chosen.
-            streamingOn = true;
-
-            pbFingerprint.Image = null;
-
-            if (streamingOn)
-            {
-                if (!_sender.CurrentReader.Capabilities.CanStream)
-                {
-                    MessageBox.Show("This reader cannot stream in this environment.");
-
-                    backEnabled = true;
-
-                    this.Close();
-
-                    reset = true;
-
-                    _sender.CurrentReader.Dispose();
-
-                    return;
-                }
-
-                this.Text = "Streaming";
-                threadHandle = new Thread(StreamThread);
-                threadHandle.IsBackground = true;
-                threadHandle.Start();
-            }
-            else
-            {
-                this.Text = "Capture";
-                threadHandle = new Thread(CaptureThread);
-                threadHandle.IsBackground = true;
-                threadHandle.Start();
-            }
+            
         }
 
         /// <summary>
@@ -316,28 +294,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         {
             if (_sender.CurrentReader != null)
             {
-                if (streamingOn)
-                {
-                    // Waits until reader is open and streaming is on before resetting.
-                    int count = 0;
-                    while (!backEnabled && count++ < 30)
-                    {
-                        Thread.Sleep(250);
-                        Application.DoEvents();
-                    }
-
-                    reset = true;
-
-                    // Waits until thread is unlocked before continuing.
-                    count = 0;
-                    while (threadHandle_lock && count++ < 100)
-                    {
-                        Thread.Sleep(50);
-                        Application.DoEvents();
-                    }
-                }
-                else
-                {
+      
                     reset = true;
                     _sender.CurrentReader.CancelCapture();
 
@@ -346,7 +303,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                         threadHandle.Join(5000);
                     }
                 }
-            }
+            
 
             // Disable flags in this thread.
             backEnabled = false;
