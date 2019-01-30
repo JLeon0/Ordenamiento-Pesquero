@@ -626,7 +626,7 @@ namespace OrdenamientoPesquero
         #region Imagen
         private void CargarImagen_Click_1(object sender, EventArgs e)
         {
-            
+
             if (CURPPesc.Text != "")
             {
                 DialogResult result = MessageBox.Show("Desea capturar una nueva imagen?", "¿?", MessageBoxButtons.YesNoCancel);
@@ -667,7 +667,7 @@ namespace OrdenamientoPesquero
                     result = MessageBox.Show("Ya ha capturado la firma del usuario?", "¿?", MessageBoxButtons.YesNoCancel);
                     if (result == DialogResult.Yes)
                     {
-                        string mdoc = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory);
+                        string mdoc = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                         Bitmap bmp = new Bitmap(Image.FromFile(mdoc + "\\FIRMA\\FIRMA.PNG"));
                         Firma.BackgroundImage = bmp;
                     }
@@ -715,12 +715,17 @@ namespace OrdenamientoPesquero
                 System.IO.MemoryStream firma = new MemoryStream();
                 if (Firma.BackgroundImage != null)
                 { Firma.BackgroundImage.Save(firma, System.Drawing.Imaging.ImageFormat.Jpeg); }
+
+                System.IO.MemoryStream huella = new MemoryStream();
+                if(Huella.BackgroundImage != null)
+                { Huella.BackgroundImage.Save(huella, System.Drawing.Imaging.ImageFormat.Jpeg); }
+
                 //System.Drawing.Image fullsizeImage = System.Drawing.Image.FromStream(ms);
                 //System.Drawing.Image newImage = fullsizeImage.GetThumbnailImage(131, 182, null, IntPtr.Zero);
                 //System.IO.MemoryStream myResult = new System.IO.MemoryStream();
                 //newImage.Save(myResult, System.Drawing.Imaging.ImageFormat.Gif);
 
-                int exito = proc.InsertarImagen(CURPPesc.Text, ms.GetBuffer(), firma.GetBuffer());
+                int exito = proc.InsertarImagen(CURPPesc.Text, ms.GetBuffer(), firma.GetBuffer(), huella.GetBuffer());
                 if (exito > 0)
                 {
                     MessageBox.Show("Imagen Insertada correctamente");
@@ -840,13 +845,11 @@ namespace OrdenamientoPesquero
 
 
         #region Lector de Huellas
+        private Reader currentReader;
         public Reader CurrentReader
         {
             get { return currentReader; }
-            set
-            {
-                currentReader = value;
-            }
+            set { currentReader = value; }
         }
 
         public bool streamingOn;
@@ -867,7 +870,6 @@ namespace OrdenamientoPesquero
             _captureStream = null;
         }
 
-        private Reader currentReader;
         public bool CaptureFinger(ref Fid fid)
         {
             try
