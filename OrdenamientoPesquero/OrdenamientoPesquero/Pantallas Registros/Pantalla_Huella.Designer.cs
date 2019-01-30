@@ -28,30 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
             this.Salir = new System.Windows.Forms.Button();
             this.pbFingerprint = new System.Windows.Forms.PictureBox();
             this.lblPlaceFinger = new System.Windows.Forms.Label();
+            this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbFingerprint)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(12, 241);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 8;
-            this.button1.Text = "Guardar";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
             // Salir
             // 
-            this.Salir.Location = new System.Drawing.Point(156, 241);
+            this.Salir.Location = new System.Drawing.Point(156, 221);
             this.Salir.Name = "Salir";
             this.Salir.Size = new System.Drawing.Size(75, 23);
             this.Salir.TabIndex = 13;
             this.Salir.Text = "Salir";
             this.Salir.UseVisualStyleBackColor = true;
+            this.Salir.Click += new System.EventHandler(this.Salir_Click);
             // 
             // pbFingerprint
             // 
@@ -68,16 +60,26 @@
             this.lblPlaceFinger.Name = "lblPlaceFinger";
             this.lblPlaceFinger.Size = new System.Drawing.Size(187, 19);
             this.lblPlaceFinger.TabIndex = 14;
-            this.lblPlaceFinger.Text = "Place a finger on the reader";
+            this.lblPlaceFinger.Text = "Coloque su dedo sobre el lector";
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(15, 221);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 15;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // Pantalla_Huella
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(245, 276);
+            this.ClientSize = new System.Drawing.Size(245, 248);
+            this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.lblPlaceFinger);
             this.Controls.Add(this.Salir);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.pbFingerprint);
             this.Name = "Pantalla_Huella";
             this.Text = "Pantalla_Huella";
@@ -90,8 +92,8 @@
         #endregion
 
         internal System.Windows.Forms.PictureBox pbFingerprint;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button Salir;
         internal System.Windows.Forms.Label lblPlaceFinger;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }

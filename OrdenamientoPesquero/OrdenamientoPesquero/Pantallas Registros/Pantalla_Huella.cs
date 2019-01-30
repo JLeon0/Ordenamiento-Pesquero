@@ -28,7 +28,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             _readers = ReaderCollection.GetReaders();
             foreach (Reader Reader in _readers)
             {
-                SerialNumber = Reader.Description.SerialNumber;
+                _sender.CurrentReader = _readers[0];
             }
         }
         private bool backEnabled = false;
@@ -351,6 +351,16 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             // Disable flags in this thread.
             backEnabled = false;
             threadHandle_lock = false;
+        }
+
+        private void Salir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            _sender.Huella.BackgroundImage = pbFingerprint.BackgroundImage;
         }
     }
 }

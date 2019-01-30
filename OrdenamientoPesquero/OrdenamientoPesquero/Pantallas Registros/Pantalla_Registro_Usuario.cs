@@ -840,13 +840,11 @@ namespace OrdenamientoPesquero
 
 
         #region Lector de Huellas
+        private Reader currentReader;
         public Reader CurrentReader
         {
             get { return currentReader; }
-            set
-            {
-                currentReader = value;
-            }
+            set { currentReader = value; }
         }
 
         public bool streamingOn;
@@ -867,7 +865,6 @@ namespace OrdenamientoPesquero
             _captureStream = null;
         }
 
-        private Reader currentReader;
         public bool CaptureFinger(ref Fid fid)
         {
             try
