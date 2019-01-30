@@ -10,10 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Logica", "Logica\Logica.csproj", "{D48B06EC-8515-4AB1-87C2-0B6C56B225D6}"
 EndProject
 Project("{6141683F-8A12-4E36-9623-2EB02B2C2303}") = "Instalador3.0", "Instalador3.0\Instalador3.0.isproj", "{7B1BD01C-6251-4D9F-BA03-0F424A3C3B01}"
-	ProjectSection(ProjectDependencies) = postProject
-		{8E15FC49-4A3B-493E-B73B-CB5DD5A6D4F3} = {8E15FC49-4A3B-493E-B73B-CB5DD5A6D4F3}
-		{26B25B8A-91B1-4FE6-B432-7B44611D744C} = {26B25B8A-91B1-4FE6-B432-7B44611D744C}
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

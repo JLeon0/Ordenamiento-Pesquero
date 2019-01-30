@@ -668,6 +668,7 @@ namespace OrdenamientoPesquero
         {
             Imagen.BackgroundImage = null;
             Firma.BackgroundImage = null;
+            Huella.BackgroundImage = null;
             dt = proc.ObtenerImagen(CURPPesc.Text);
             if (dt.Rows.Count > 0)
             {
@@ -692,12 +693,11 @@ namespace OrdenamientoPesquero
 
                     Huella.BackColor = Color.White;
                     Huella.BackgroundImage = null;
-                    imagenBuffer = (byte[])dt.Rows[1]["HUELLA"];
+                    imagenBuffer = (byte[])dt.Rows[0]["HUELLA"];
                     ms = new System.IO.MemoryStream(imagenBuffer);
                     Huella.BackgroundImage = (Image.FromStream(ms));
-                    Huella.BackgroundImageLayout = ImageLayout.Zoom;
                 }
-                catch (Exception) { }
+                catch (Exception MS) { }
             }
         }
 
