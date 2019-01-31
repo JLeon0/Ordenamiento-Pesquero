@@ -12,7 +12,6 @@ using Microsoft.VisualBasic;
 using System.Text.RegularExpressions;
 using OrdenamientoPesquero.Pantallas_Registros;
 
-
 namespace OrdenamientoPesquero
 {
     public partial class Pantalla_Registro_UnidadEconomica : Form
@@ -593,6 +592,8 @@ namespace OrdenamientoPesquero
             //string direccion = ofd.FileName;
             //if (proc.Cargar(direccion))
             //{
+            if (cambiosToolStripMenuItem.Checked)
+            {
                 proc.PasarUnidad();
                 proc.PasarEmbarcaciones();
                 proc.PasarPescadores();
@@ -601,6 +602,11 @@ namespace OrdenamientoPesquero
                 proc.PasarEmbarcaPermis();
                 proc.PasarDirectiva();
                 this.OnLoad(e);
+            }
+            else
+            {
+                MessageBox.Show("No ah seleccionado cambios para cargar");
+            }
             //}
             //this.Cursor = Cursors.Default;
         }

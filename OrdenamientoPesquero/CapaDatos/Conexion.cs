@@ -60,7 +60,16 @@ namespace CapaDatos
             try
             {
                 SqlCommand cmd = new SqlCommand(back, con);
-                con.Open();
+                try
+                {
+                    con.Open();
+
+                }
+                catch (Exception)
+                {
+                    con = new SqlConnection(setString("."));
+                    con.Open();
+                }
                 cmd.ExecuteNonQuery();
                 // string temporaryTableName = "temp";
                 // string _sql = "";

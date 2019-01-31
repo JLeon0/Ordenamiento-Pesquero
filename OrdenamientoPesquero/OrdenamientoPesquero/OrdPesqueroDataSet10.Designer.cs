@@ -281,6 +281,8 @@ namespace OrdenamientoPesquero {
             
             private global::System.Data.DataColumn columnFIRMA;
             
+            private global::System.Data.DataColumn columnHUELLA;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public ObtenerFirmaDataTable() {
@@ -324,6 +326,14 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn HUELLAColumn {
+                get {
+                    return this.columnHUELLA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -359,10 +369,11 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ObtenerFirmaRow AddObtenerFirmaRow(byte[] FIRMA) {
+            public ObtenerFirmaRow AddObtenerFirmaRow(byte[] FIRMA, byte[] HUELLA) {
                 ObtenerFirmaRow rowObtenerFirmaRow = ((ObtenerFirmaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        FIRMA};
+                        FIRMA,
+                        HUELLA};
                 rowObtenerFirmaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowObtenerFirmaRow);
                 return rowObtenerFirmaRow;
@@ -386,6 +397,7 @@ namespace OrdenamientoPesquero {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             internal void InitVars() {
                 this.columnFIRMA = base.Columns["FIRMA"];
+                this.columnHUELLA = base.Columns["HUELLA"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -393,6 +405,8 @@ namespace OrdenamientoPesquero {
             private void InitClass() {
                 this.columnFIRMA = new global::System.Data.DataColumn("FIRMA", typeof(byte[]), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFIRMA);
+                this.columnHUELLA = new global::System.Data.DataColumn("HUELLA", typeof(byte[]), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnHUELLA);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -551,6 +565,22 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public byte[] HUELLA {
+                get {
+                    try {
+                        return ((byte[])(this[this.tableObtenerFirma.HUELLAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'HUELLA\' de la tabla \'ObtenerFirma\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableObtenerFirma.HUELLAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsFIRMANull() {
                 return this.IsNull(this.tableObtenerFirma.FIRMAColumn);
             }
@@ -559,6 +589,18 @@ namespace OrdenamientoPesquero {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetFIRMANull() {
                 this[this.tableObtenerFirma.FIRMAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsHUELLANull() {
+                return this.IsNull(this.tableObtenerFirma.HUELLAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetHUELLANull() {
+                this[this.tableObtenerFirma.HUELLAColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -722,6 +764,7 @@ namespace OrdenamientoPesquero.OrdPesqueroDataSet10TableAdapters {
             tableMapping.SourceTable = "Table";
             tableMapping.DataSetTable = "ObtenerFirma";
             tableMapping.ColumnMappings.Add("FIRMA", "FIRMA");
+            tableMapping.ColumnMappings.Add("HUELLA", "HUELLA");
             this._adapter.TableMappings.Add(tableMapping);
         }
         

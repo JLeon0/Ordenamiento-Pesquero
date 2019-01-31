@@ -163,9 +163,11 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Credencial.rdlc");
                     DataTable dt1 = proc.Obtener_Pescador(rnpa);
                     this.obtenerFirmaTableAdapter.Fill(ordPesqueroDataSet10.ObtenerFirma, rnpa);
-                    datos.Name = "DataSet2";
-                    datos.Value = ordPesqueroDataSet10.ObtenerFirma;
+                    datos2.Name = "DataSet2";
+                    datos2.Value = ordPesqueroDataSet10.ObtenerFirma;
                     this.obtenerImagenTableAdapter.Fill(obtenerImagen._ObtenerImagen, rnpa);
+                    datos.Name = "DataSet1";
+                    datos.Value = obtenerImagen._ObtenerImagen;
                     ReportParameter[] para1 = new ReportParameter[9];
                     para1[0] = new ReportParameter("NOMBRE", dt1.Rows[0]["NOMBRE"].ToString() + " " + dt1.Rows[0]["AP_PAT"].ToString() + " " + dt1.Rows[0]["AP_MAT"].ToString());
                     para1[1] = new ReportParameter("CURP", dt1.Rows[0]["CURP"].ToString());
@@ -182,6 +184,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     para1[8] = new ReportParameter("RutaImagen", ruta + "perfil.jpg");
                     reportViewer1.LocalReport.SetParameters(para1);
                     this.reportViewer1.LocalReport.DataSources.Add(datos);
+                    this.reportViewer1.LocalReport.DataSources.Add(datos2);
                     this.reportViewer1.RefreshReport();
                     break;
                 case 5:
