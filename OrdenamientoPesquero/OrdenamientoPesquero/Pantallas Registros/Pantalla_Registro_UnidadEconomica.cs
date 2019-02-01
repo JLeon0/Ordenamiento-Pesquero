@@ -815,11 +815,16 @@ namespace OrdenamientoPesquero
 
         private void ActualizarRNPA_Click(object sender, EventArgs e)
         {
-            if (proc.Actualizar_RNPA(RnpaMal.Text, RnpaNuevo.Text) > 0)
-            { MessageBox.Show("RNPA Actualizada"); }
-            else { MessageBox.Show("RNPA Ya existe")}
-            cbRNPA.Text = RnpaNuevo.Text;
-            CargarRNPA();            
+            if (RnpaNuevo.Text != "")
+            {
+                if (proc.Actualizar_RNPA(RnpaMal.Text, RnpaNuevo.Text) >= 1)
+                {
+                    cbRNPA.Text = RnpaNuevo.Text;
+                    MessageBox.Show("RNPA Actualizada");
+                }
+                else { MessageBox.Show("RNPA Ya existe"); }
+                CargarRNPA();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)
