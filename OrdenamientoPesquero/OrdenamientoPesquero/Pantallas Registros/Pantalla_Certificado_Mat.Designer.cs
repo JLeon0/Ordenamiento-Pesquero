@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Certificado_Mat));
             this.label78 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
             this.label76 = new System.Windows.Forms.Label();
@@ -741,7 +742,9 @@
             // 
             // ListaMatriculas
             // 
+            this.ListaMatriculas.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListaMatriculas.FormattingEnabled = true;
+            this.ListaMatriculas.HorizontalScrollbar = true;
             this.ListaMatriculas.ItemHeight = 16;
             this.ListaMatriculas.Location = new System.Drawing.Point(23, 115);
             this.ListaMatriculas.Name = "ListaMatriculas";
@@ -780,6 +783,7 @@
             this.Controls.Add(this.RegistrarUnidad);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Pantalla_Certificado_Mat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
