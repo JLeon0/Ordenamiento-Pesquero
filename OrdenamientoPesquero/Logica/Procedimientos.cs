@@ -56,6 +56,11 @@ namespace Logica
             string[] Parametros = { "@rnpa", "@matricula" };
             return c.getDatosTabla("ChecarCapitan", Parametros, RNPA, MATRICULA);
         }
+        public int Actualizar_RNPA(string RNPAViejo, string RNPANuevo)
+        {
+            string[] Parametros = { "@rnpaviejo", "@rnpanuevo" };
+            return c.Ejecutar("ActualizarRNPA", Parametros, RNPAViejo, RNPANuevo);
+        }
         #endregion
 
 
@@ -484,8 +489,9 @@ namespace Logica
             string[] Parametros = { };
             return c.Ejecutar2("limpiar", Parametros);
         }
+
         #endregion
 
-    
+
     }
 }

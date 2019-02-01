@@ -194,6 +194,7 @@ namespace OrdenamientoPesquero
             TotalSocios.Text = "0";
             DataResumen.RowCount = 0;
             NombreResumen.Text = "0";
+            cbRNPA.Enabled = true;
         }
         private void BuscarNombreOrg_Click(object sender, EventArgs e)
         {
@@ -646,10 +647,11 @@ namespace OrdenamientoPesquero
 
         private void cbRNPA_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            if (Char.IsDigit(e.KeyChar) || Char.IsControl(e.KeyChar))
             {
-                BuscarRNPA_Click(sender, e);
+                e.Handled = false;
             }
+            else { e.Handled = true; }
         }
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
@@ -686,26 +688,13 @@ namespace OrdenamientoPesquero
             fede.ShowDialog();
             CargarFederaciones();
         }
-
-        private void txtNombre_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void BuscarRNPA_Click(object sender, EventArgs e)
-        {
-        }
+        
 
 
         private void button4_Click(object sender, EventArgs e)
         {
             Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 5);
             v.ShowDialog(this);
-        }
-
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
-
         }
 
         private void BuscarR_TextChanged(object sender, EventArgs e)
@@ -734,6 +723,7 @@ namespace OrdenamientoPesquero
                     button1.Enabled = true;
                     button2.Enabled = true;
                     button3.Enabled = true;
+                    cbRNPA.Enabled = false;
                 }
                 else
                 {
@@ -770,10 +760,51 @@ namespace OrdenamientoPesquero
                 button1.Enabled = true;
                 button2.Enabled = true;
                 button3.Enabled = true;
+                cbRNPA.Enabled = false;
                 this.Cursor = Cursors.Default;
             }
         }
-        
+
+        private void CerrarPanel_Click(object sender, EventArgs e)
+        {
+            gbBotones.Enabled = true;
+            gbBusqueda.Enabled = true;
+            gbOrgPes.Enabled = true;
+            PanelRNPA.Visible = false;
+            PanelRNPA.Enabled = false;
+            RnpaNuevo.Text = "";
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+            gbBotones.Enabled = false;
+            gbBusqueda.Enabled = false;
+            gbOrgPes.Enabled = false;
+            PanelRNPA.Visible = true;
+            PanelRNPA.Enabled = true;
+        }
+
+        private void ActivarPanelRNPA_Click(object sender, EventArgs e)
+        {
+            if (cbRNPA.Text != "")
+            {
+                RnpaMal.Text = cbRNPA.Text;
+                gbBotones.Enabled = false;
+                gbBusqueda.Enabled = false;
+                gbOrgPes.Enabled = false;
+                PanelRNPA.Visible = true;
+                PanelRNPA.Enabled = true;
+            }
+        }
+
+        private void ActualizarRNPA_Click(object sender, EventArgs e)
+        {
+            if (proc.Actualizar_RNPA(RnpaMal.Text, RnpaNuevo.Text) > 0)
+            { MessageBox.Show("RNPA Actualizada"); }
+            cbRNPA.Text = RnpaNuevo.Text;
+            CargarRNPA();            
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
             Pantallas_Menu.MenuReportes mr = new Pantallas_Menu.MenuReportes(cbRNPA.Text);

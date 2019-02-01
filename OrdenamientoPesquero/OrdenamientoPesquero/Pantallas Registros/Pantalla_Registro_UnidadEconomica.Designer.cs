@@ -36,6 +36,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Registro_UnidadEconomica));
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.mtbCP = new System.Windows.Forms.MaskedTextBox();
@@ -51,6 +52,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.gbOrgPes = new System.Windows.Forms.GroupBox();
+            this.ActivarPanelRNPA = new System.Windows.Forms.PictureBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.cbRNPA = new System.Windows.Forms.TextBox();
             this.ModFed = new System.Windows.Forms.Button();
@@ -78,6 +80,8 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton0 = new System.Windows.Forms.RadioButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.ActualizarRNPA = new System.Windows.Forms.PictureBox();
+            this.CerrarPanel = new System.Windows.Forms.PictureBox();
             this.Resumen = new System.Windows.Forms.GroupBox();
             this.TotalEsfuerzos = new System.Windows.Forms.LinkLabel();
             this.Credencializados = new System.Windows.Forms.LinkLabel();
@@ -131,7 +135,19 @@
             this.ListaRNPA = new System.Windows.Forms.ListBox();
             this.BuscarR = new System.Windows.Forms.TextBox();
             this.label26 = new System.Windows.Forms.Label();
+            this.PanelRNPA = new System.Windows.Forms.Panel();
+            this.label30 = new System.Windows.Forms.Label();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label29 = new System.Windows.Forms.Label();
+            this.RnpaMal = new System.Windows.Forms.Label();
+            this.RnpaNuevo = new System.Windows.Forms.TextBox();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.gbBotones = new System.Windows.Forms.GroupBox();
+            this.gbBusqueda = new System.Windows.Forms.GroupBox();
             this.gbOrgPes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelRNPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
@@ -140,11 +156,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActualizarRNPA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).BeginInit();
             this.Resumen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataResumen)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.PanelRNPA.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            this.gbBotones.SuspendLayout();
+            this.gbBusqueda.SuspendLayout();
             this.SuspendLayout();
             // 
             // label13
@@ -292,7 +315,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.Location = new System.Drawing.Point(388, 50);
+            this.label3.Location = new System.Drawing.Point(348, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
@@ -313,6 +336,7 @@
             // gbOrgPes
             // 
             this.gbOrgPes.BackColor = System.Drawing.Color.Transparent;
+            this.gbOrgPes.Controls.Add(this.ActivarPanelRNPA);
             this.gbOrgPes.Controls.Add(this.txtNombre);
             this.gbOrgPes.Controls.Add(this.cbRNPA);
             this.gbOrgPes.Controls.Add(this.ModFed);
@@ -357,14 +381,27 @@
             this.gbOrgPes.ForeColor = System.Drawing.Color.Black;
             this.gbOrgPes.Location = new System.Drawing.Point(188, 95);
             this.gbOrgPes.Name = "gbOrgPes";
-            this.gbOrgPes.Size = new System.Drawing.Size(913, 336);
+            this.gbOrgPes.Size = new System.Drawing.Size(913, 344);
             this.gbOrgPes.TabIndex = 54;
             this.gbOrgPes.TabStop = false;
             this.gbOrgPes.Text = "DATOS GENERALES DE LA ORGANIZACIÓN PESQUERA";
             // 
+            // ActivarPanelRNPA
+            // 
+            this.ActivarPanelRNPA.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.actualizar;
+            this.ActivarPanelRNPA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ActivarPanelRNPA.Location = new System.Drawing.Point(221, 42);
+            this.ActivarPanelRNPA.Name = "ActivarPanelRNPA";
+            this.ActivarPanelRNPA.Size = new System.Drawing.Size(20, 20);
+            this.ActivarPanelRNPA.TabIndex = 126;
+            this.ActivarPanelRNPA.TabStop = false;
+            this.toolTip1.SetToolTip(this.ActivarPanelRNPA, "Cambiar RNPA de Unidad");
+            this.ActivarPanelRNPA.Click += new System.EventHandler(this.ActivarPanelRNPA_Click);
+            // 
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(257, 42);
+            this.txtNombre.MaxLength = 100;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(409, 22);
             this.txtNombre.TabIndex = 125;
@@ -372,9 +409,12 @@
             // cbRNPA
             // 
             this.cbRNPA.Location = new System.Drawing.Point(35, 42);
+            this.cbRNPA.MaxLength = 10;
             this.cbRNPA.Name = "cbRNPA";
             this.cbRNPA.Size = new System.Drawing.Size(179, 22);
             this.cbRNPA.TabIndex = 124;
+            this.cbRNPA.TextChanged += new System.EventHandler(this.cbRNPA_TextChanged);
+            this.cbRNPA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbRNPA_KeyPress);
             // 
             // ModFed
             // 
@@ -660,6 +700,34 @@
             this.radioButton0.Text = "Social";
             this.toolTip1.SetToolTip(this.radioButton0, "Seleccione si la Unidad Pesquera si pertenece a una Federación");
             this.radioButton0.UseVisualStyleBackColor = true;
+            // 
+            // ActualizarRNPA
+            // 
+            this.ActualizarRNPA.BackColor = System.Drawing.Color.Transparent;
+            this.ActualizarRNPA.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
+            this.ActualizarRNPA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ActualizarRNPA.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ActualizarRNPA.Location = new System.Drawing.Point(409, 141);
+            this.ActualizarRNPA.Name = "ActualizarRNPA";
+            this.ActualizarRNPA.Size = new System.Drawing.Size(50, 50);
+            this.ActualizarRNPA.TabIndex = 133;
+            this.ActualizarRNPA.TabStop = false;
+            this.toolTip1.SetToolTip(this.ActualizarRNPA, "Actualizar información de la Unidad Económica");
+            this.ActualizarRNPA.Click += new System.EventHandler(this.ActualizarRNPA_Click);
+            // 
+            // CerrarPanel
+            // 
+            this.CerrarPanel.BackColor = System.Drawing.Color.Transparent;
+            this.CerrarPanel.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
+            this.CerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CerrarPanel.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.CerrarPanel.Location = new System.Drawing.Point(451, 1);
+            this.CerrarPanel.Name = "CerrarPanel";
+            this.CerrarPanel.Size = new System.Drawing.Size(21, 21);
+            this.CerrarPanel.TabIndex = 135;
+            this.CerrarPanel.TabStop = false;
+            this.toolTip1.SetToolTip(this.CerrarPanel, "Cerrar");
+            this.CerrarPanel.Click += new System.EventHandler(this.CerrarPanel_Click);
             // 
             // Resumen
             // 
@@ -1052,7 +1120,7 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(371, 441);
+            this.button1.Location = new System.Drawing.Point(165, 19);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(137, 45);
             this.button1.TabIndex = 108;
@@ -1066,7 +1134,7 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(523, 441);
+            this.button2.Location = new System.Drawing.Point(317, 19);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(137, 45);
             this.button2.TabIndex = 108;
@@ -1080,7 +1148,7 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(222, 441);
+            this.button3.Location = new System.Drawing.Point(16, 19);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(137, 45);
             this.button3.TabIndex = 108;
@@ -1095,7 +1163,7 @@
             this.caToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1510, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1527, 24);
             this.menuStrip1.TabIndex = 115;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1159,7 +1227,7 @@
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(371, 504);
+            this.button4.Location = new System.Drawing.Point(165, 82);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(137, 45);
             this.button4.TabIndex = 155;
@@ -1173,7 +1241,7 @@
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(523, 504);
+            this.button5.Location = new System.Drawing.Point(317, 82);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(137, 45);
             this.button5.TabIndex = 156;
@@ -1208,20 +1276,25 @@
             // ListaNombres
             // 
             this.ListaNombres.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ListaNombres.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListaNombres.ForeColor = System.Drawing.Color.Black;
             this.ListaNombres.FormattingEnabled = true;
-            this.ListaNombres.Location = new System.Drawing.Point(12, 419);
+            this.ListaNombres.HorizontalScrollbar = true;
+            this.ListaNombres.ItemHeight = 16;
+            this.ListaNombres.Location = new System.Drawing.Point(4, 332);
             this.ListaNombres.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ListaNombres.Name = "ListaNombres";
-            this.ListaNombres.Size = new System.Drawing.Size(165, 160);
+            this.ListaNombres.Size = new System.Drawing.Size(165, 180);
             this.ListaNombres.TabIndex = 185;
             this.ListaNombres.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListaNombres_MouseDoubleClick);
             // 
             // BuscarN
             // 
+            this.BuscarN.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BuscarN.ForeColor = System.Drawing.Color.Black;
-            this.BuscarN.Location = new System.Drawing.Point(12, 390);
+            this.BuscarN.Location = new System.Drawing.Point(4, 303);
             this.BuscarN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.BuscarN.MaxLength = 100;
             this.BuscarN.Name = "BuscarN";
             this.BuscarN.Size = new System.Drawing.Size(165, 20);
             this.BuscarN.TabIndex = 184;
@@ -1231,7 +1304,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(25, 372);
+            this.label25.Location = new System.Drawing.Point(17, 285);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(113, 13);
             this.label25.TabIndex = 183;
@@ -1240,18 +1313,22 @@
             // ListaRNPA
             // 
             this.ListaRNPA.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ListaRNPA.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListaRNPA.ForeColor = System.Drawing.Color.Black;
             this.ListaRNPA.FormattingEnabled = true;
-            this.ListaRNPA.Location = new System.Drawing.Point(12, 163);
+            this.ListaRNPA.ItemHeight = 15;
+            this.ListaRNPA.Location = new System.Drawing.Point(4, 68);
             this.ListaRNPA.Name = "ListaRNPA";
-            this.ListaRNPA.Size = new System.Drawing.Size(165, 199);
+            this.ListaRNPA.Size = new System.Drawing.Size(165, 184);
             this.ListaRNPA.TabIndex = 182;
             this.ListaRNPA.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListaRNPA_MouseDoubleClick);
             // 
             // BuscarR
             // 
+            this.BuscarR.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BuscarR.ForeColor = System.Drawing.Color.Black;
-            this.BuscarR.Location = new System.Drawing.Point(12, 137);
+            this.BuscarR.Location = new System.Drawing.Point(4, 42);
+            this.BuscarR.MaxLength = 10;
             this.BuscarR.Name = "BuscarR";
             this.BuscarR.Size = new System.Drawing.Size(165, 20);
             this.BuscarR.TabIndex = 181;
@@ -1261,11 +1338,152 @@
             // 
             this.label26.AutoSize = true;
             this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(42, 108);
+            this.label26.Location = new System.Drawing.Point(34, 21);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(96, 13);
             this.label26.TabIndex = 180;
             this.label26.Text = "RNPA UNIDADES";
+            // 
+            // PanelRNPA
+            // 
+            this.PanelRNPA.BackColor = System.Drawing.Color.LightGray;
+            this.PanelRNPA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelRNPA.Controls.Add(this.label30);
+            this.PanelRNPA.Controls.Add(this.pictureBox8);
+            this.PanelRNPA.Controls.Add(this.pictureBox7);
+            this.PanelRNPA.Controls.Add(this.CerrarPanel);
+            this.PanelRNPA.Controls.Add(this.label29);
+            this.PanelRNPA.Controls.Add(this.ActualizarRNPA);
+            this.PanelRNPA.Controls.Add(this.RnpaMal);
+            this.PanelRNPA.Controls.Add(this.RnpaNuevo);
+            this.PanelRNPA.Controls.Add(this.label28);
+            this.PanelRNPA.Controls.Add(this.label27);
+            this.PanelRNPA.ForeColor = System.Drawing.Color.Black;
+            this.PanelRNPA.Location = new System.Drawing.Point(461, 290);
+            this.PanelRNPA.Name = "PanelRNPA";
+            this.PanelRNPA.Size = new System.Drawing.Size(477, 212);
+            this.PanelRNPA.TabIndex = 127;
+            this.PanelRNPA.Visible = false;
+            // 
+            // label30
+            // 
+            this.label30.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Black;
+            this.label30.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label30.Location = new System.Drawing.Point(87, 14);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(238, 22);
+            this.label30.TabIndex = 186;
+            this.label30.Text = "Actualizar RNPA de Unidad";
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox8.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox8.Location = new System.Drawing.Point(43, 3);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox8.TabIndex = 137;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Location = new System.Drawing.Point(325, 1);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(120, 40);
+            this.pictureBox7.TabIndex = 136;
+            this.pictureBox7.TabStop = false;
+            // 
+            // label29
+            // 
+            this.label29.AutoSize = true;
+            this.label29.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label29.ForeColor = System.Drawing.Color.Black;
+            this.label29.Location = new System.Drawing.Point(409, 195);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(56, 14);
+            this.label29.TabIndex = 134;
+            this.label29.Text = "Actualizar";
+            // 
+            // RnpaMal
+            // 
+            this.RnpaMal.AutoSize = true;
+            this.RnpaMal.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RnpaMal.Location = new System.Drawing.Point(43, 83);
+            this.RnpaMal.Name = "RnpaMal";
+            this.RnpaMal.Size = new System.Drawing.Size(70, 18);
+            this.RnpaMal.TabIndex = 132;
+            this.RnpaMal.Text = "RnpaMal";
+            // 
+            // RnpaNuevo
+            // 
+            this.RnpaNuevo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RnpaNuevo.Location = new System.Drawing.Point(43, 134);
+            this.RnpaNuevo.MaxLength = 10;
+            this.RnpaNuevo.Name = "RnpaNuevo";
+            this.RnpaNuevo.Size = new System.Drawing.Size(117, 25);
+            this.RnpaNuevo.TabIndex = 131;
+            // 
+            // label28
+            // 
+            this.label28.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label28.AutoSize = true;
+            this.label28.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label28.Location = new System.Drawing.Point(40, 115);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(91, 17);
+            this.label28.TabIndex = 130;
+            this.label28.Text = "RNPA Nuevo";
+            // 
+            // label27
+            // 
+            this.label27.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label27.AutoSize = true;
+            this.label27.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label27.Location = new System.Drawing.Point(40, 63);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(89, 17);
+            this.label27.TabIndex = 128;
+            this.label27.Text = "RNPA Actual";
+            // 
+            // gbBotones
+            // 
+            this.gbBotones.Controls.Add(this.button1);
+            this.gbBotones.Controls.Add(this.button2);
+            this.gbBotones.Controls.Add(this.button3);
+            this.gbBotones.Controls.Add(this.button4);
+            this.gbBotones.Controls.Add(this.button5);
+            this.gbBotones.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gbBotones.Location = new System.Drawing.Point(208, 449);
+            this.gbBotones.Name = "gbBotones";
+            this.gbBotones.Size = new System.Drawing.Size(893, 150);
+            this.gbBotones.TabIndex = 186;
+            this.gbBotones.TabStop = false;
+            this.gbBotones.Text = "Entidades";
+            // 
+            // gbBusqueda
+            // 
+            this.gbBusqueda.Controls.Add(this.ListaRNPA);
+            this.gbBusqueda.Controls.Add(this.label26);
+            this.gbBusqueda.Controls.Add(this.label25);
+            this.gbBusqueda.Controls.Add(this.BuscarN);
+            this.gbBusqueda.Controls.Add(this.ListaNombres);
+            this.gbBusqueda.Controls.Add(this.BuscarR);
+            this.gbBusqueda.Location = new System.Drawing.Point(12, 116);
+            this.gbBusqueda.Name = "gbBusqueda";
+            this.gbBusqueda.Size = new System.Drawing.Size(172, 523);
+            this.gbBusqueda.TabIndex = 187;
+            this.gbBusqueda.TabStop = false;
+            this.gbBusqueda.Text = "BUSCAR";
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -1273,20 +1491,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1527, 605);
-            this.Controls.Add(this.ListaNombres);
-            this.Controls.Add(this.BuscarN);
-            this.Controls.Add(this.label25);
-            this.Controls.Add(this.ListaRNPA);
-            this.Controls.Add(this.BuscarR);
-            this.Controls.Add(this.label26);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.ClientSize = new System.Drawing.Size(1544, 605);
+            this.Controls.Add(this.PanelRNPA);
+            this.Controls.Add(this.gbBusqueda);
+            this.Controls.Add(this.gbBotones);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.Resumen);
             this.Controls.Add(this.gbOrgPes);
             this.Controls.Add(this.label3);
@@ -1294,6 +1504,7 @@
             this.Controls.Add(this.label23);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Pantalla_Registro_UnidadEconomica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
@@ -1302,6 +1513,7 @@
             this.Load += new System.EventHandler(this.Pantalla_Registro_UnidadEconomica_Load);
             this.gbOrgPes.ResumeLayout(false);
             this.gbOrgPes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelRNPA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).EndInit();
@@ -1310,6 +1522,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActualizarRNPA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).EndInit();
             this.Resumen.ResumeLayout(false);
             this.Resumen.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataResumen)).EndInit();
@@ -1317,6 +1531,13 @@
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.PanelRNPA.ResumeLayout(false);
+            this.PanelRNPA.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            this.gbBotones.ResumeLayout(false);
+            this.gbBusqueda.ResumeLayout(false);
+            this.gbBusqueda.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1418,5 +1639,19 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Pesquería;
         private System.Windows.Forms.DataGridViewTextBoxColumn Esfuerzos;
         private System.Windows.Forms.DataGridViewTextBoxColumn Vigencia;
+        private System.Windows.Forms.PictureBox ActivarPanelRNPA;
+        private System.Windows.Forms.Panel PanelRNPA;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox CerrarPanel;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.PictureBox ActualizarRNPA;
+        private System.Windows.Forms.Label RnpaMal;
+        private System.Windows.Forms.TextBox RnpaNuevo;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.GroupBox gbBotones;
+        private System.Windows.Forms.GroupBox gbBusqueda;
     }
 }

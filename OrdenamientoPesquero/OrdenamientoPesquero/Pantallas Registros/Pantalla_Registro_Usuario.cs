@@ -732,7 +732,7 @@ namespace OrdenamientoPesquero
 
         private void CargarFirma_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Desea insertar la firma del usuario?", "¿?", MessageBoxButtons.YesNoCancel);
+            DialogResult result = MessageBox.Show("Desea capturar la firma del usuario?", "¿?", MessageBoxButtons.YesNoCancel);
             if (result == DialogResult.Yes)
             {
                 Process.Start("C:\\Windows\\SigPlus\\DemoOCX.exe");
@@ -742,6 +742,7 @@ namespace OrdenamientoPesquero
                     string mdoc = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                     Bitmap bmp = new Bitmap(Image.FromFile(mdoc + "\\FIRMA\\FIRMA.PNG"));
                     Firma.BackgroundImage = bmp;
+                    Firma.BackgroundImageLayout = ImageLayout.Zoom;
                 }
             }
         }
@@ -865,7 +866,6 @@ namespace OrdenamientoPesquero
         }
 
         public bool streamingOn;
-        private Pantalla_Huella _captureStream;
 
         private void CargarHuella_Click(object sender, EventArgs e)
         {
