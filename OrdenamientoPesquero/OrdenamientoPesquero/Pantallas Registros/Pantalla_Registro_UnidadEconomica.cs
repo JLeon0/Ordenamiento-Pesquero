@@ -596,11 +596,11 @@ namespace OrdenamientoPesquero
         {
             if (!cargando)
             {
-                dt = proc.ObtenerLocalidades(Municipios[txtMunicipio.SelectedIndex]);
-                txtLocalidad.DataSource = dt;
-                txtLocalidad.DisplayMember = "NombreL";
-                txtLocalidad.ValueMember = "NombreL";
-                txtLocalidad.Text = "Seleccione una Localidad";
+                //dt = proc.ObtenerLocalidades("COMONDU");
+                //txtLocalidad.DataSource = dt;
+                //txtLocalidad.DisplayMember = "NombreL";
+                //txtLocalidad.ValueMember = "NombreL";
+                //txtLocalidad.Text = "Seleccione una Localidad";
             }
         }
 
@@ -858,6 +858,7 @@ namespace OrdenamientoPesquero
         {
             if (proc.Actualizar_RNPA(RnpaMal.Text, RnpaNuevo.Text) > 0)
             { MessageBox.Show("RNPA Actualizada"); }
+            else { MessageBox.Show("RNPA Ya existe")}
             cbRNPA.Text = RnpaNuevo.Text;
             CargarRNPA();            
         }

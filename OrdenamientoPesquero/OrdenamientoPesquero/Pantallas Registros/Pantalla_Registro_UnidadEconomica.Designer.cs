@@ -315,7 +315,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.Location = new System.Drawing.Point(348, 50);
+            this.label3.Location = new System.Drawing.Point(339, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
@@ -1359,7 +1359,7 @@
             this.PanelRNPA.Controls.Add(this.label28);
             this.PanelRNPA.Controls.Add(this.label27);
             this.PanelRNPA.ForeColor = System.Drawing.Color.Black;
-            this.PanelRNPA.Location = new System.Drawing.Point(461, 290);
+            this.PanelRNPA.Location = new System.Drawing.Point(367, 266);
             this.PanelRNPA.Name = "PanelRNPA";
             this.PanelRNPA.Size = new System.Drawing.Size(477, 212);
             this.PanelRNPA.TabIndex = 127;
