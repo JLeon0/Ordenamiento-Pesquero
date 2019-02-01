@@ -34,17 +34,9 @@ namespace OrdenamientoPesquero
         public Pantalla_Registro_UnidadEconomica()
         {
             InitializeComponent();
-            Thread th1 = new Thread(new ThreadStart(rnp));
-            Thread th2 = new Thread(new ThreadStart(nom));
-            th2.Start();
-            th1.Start();
-            th2.Join();
-            th1.Join();
             val.ajustarResolucion(this);
             this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
             this.Width = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width);
-            CheckForIllegalCrossThreadCalls = false;
-
         }
 
         private void Pantalla_Registro_UnidadEconomica_Load(object sender, EventArgs e)
@@ -53,43 +45,10 @@ namespace OrdenamientoPesquero
             txtFecha.Text = DateTime.Today.ToString("dd/MM/yyyy");
             CargarRNPA();
             cbRNPA.Focus();
-            Thread th3 = new Thread(new ThreadStart(car));
-            th3.Start();
-            th3.Join();
-            
-            //CargarRNPA();
-
-
-        }
-        public void car()
-        {
             CargarMunicipios();
             CargarFederaciones();
-        }
-        public void rnp()
-        {
-            RNPA = proc.Obtener_todas_unidades(BuscarR.Text);
-            if (RNPA.Rows.Count == 0)
-            {
-                RNPA = proc.Obtener_todas_unidades(BuscarR.Text);
-            }
-            //ListaRNPA.Items.Clear();
-            //foreach (DataRow fila in RNPA.Rows)
-            //{
-            //    ListaRNPA.Items.Add(fila["RNPA"].ToString());
-            //}
-        }
-        public void nom()
-        {
-            CargarMunicipios();
-            CargarFederaciones();
-            NOMBRES = proc.Obtener_todos_los_nombres("");
-            //ListaNombres.Items.Clear();
-            //foreach (DataRow fila in NOMBRES.Rows)
-            //{
-            //    ListaNombres.Items.Add(fila["NOMBRE"].ToString());
-            //}
-            //cbRNPA.Focus();
+
+
         }
 
         #region Registros
@@ -188,17 +147,17 @@ namespace OrdenamientoPesquero
         bool cargando = true;
         private void CargarRNPA()
         {
-            //RNPA = proc.Obtener_todas_unidades(BuscarR.Text);
-            //if (RNPA.Rows.Count == 0)
-            //{
-            //    RNPA = proc.Obtener_todas_unidades(BuscarR.Text);
-            //}
+            RNPA = proc.Obtener_todas_unidades(BuscarR.Text);
+            if (RNPA.Rows.Count == 0)
+            {
+                RNPA = proc.Obtener_todas_unidades(BuscarR.Text);
+            }
             ListaRNPA.Items.Clear();
             foreach (DataRow fila in RNPA.Rows)
             {
                 ListaRNPA.Items.Add(fila["RNPA"].ToString());
             }
-            //NOMBRES = proc.Obtener_todos_los_nombres("");
+            NOMBRES = proc.Obtener_todos_los_nombres("");
             ListaNombres.Items.Clear();
             foreach (DataRow fila in NOMBRES.Rows)
             {
@@ -212,11 +171,11 @@ namespace OrdenamientoPesquero
             dt = proc.ObtenerMunicipios();
             if (dt.Rows.Count != 0)
             {
+                Municipios = dt.Rows.OfType<DataRow>().Select(k => k[0].ToString()).ToArray();
                 txtMunicipio.DataSource = dt;
                 txtMunicipio.DisplayMember = "NombreM";
                 txtMunicipio.ValueMember = "NombreM";
                 txtMunicipio.Text = "Seleccione un Municipio";
-                Municipios = dt.Rows.OfType<DataRow>().Select(k => k[0].ToString()).ToArray();
             }
         }
         public void limpiartodo()

@@ -16,18 +16,11 @@ namespace OrdenamientoPesquero.Pantallas_Menu
     public partial class Menu1 : Form
     {
         Conexion c;
-        Pantalla_Registro_UnidadEconomica unidad;
         public Menu1()
         {
             InitializeComponent();
-            Thread th1 = new Thread(new ThreadStart(pan));
-            th1.Start();
-            th1.Join();
         }
-        public void pan()
-        {
-            unidad = new Pantalla_Registro_UnidadEconomica();
-        }
+
 
         private void Solicitudes_Click(object sender, EventArgs e)
         {
@@ -37,7 +30,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 
         private void Ordenamiento_Click(object sender, EventArgs e)
         {
-            
+            Pantalla_Registro_UnidadEconomica unidad = new Pantalla_Registro_UnidadEconomica();
             unidad.ShowDialog();
         }
 
