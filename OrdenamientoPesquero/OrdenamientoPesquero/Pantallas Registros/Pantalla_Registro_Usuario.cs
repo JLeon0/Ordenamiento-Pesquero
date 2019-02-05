@@ -131,7 +131,7 @@ namespace OrdenamientoPesquero
                 DataRowView row = (DataRowView)MatriculaPesc.SelectedItem;
                 pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, row[0].ToString().Replace(" ", ""), CorreoPesc.Text, LocalidadPesc.Text, o, RNPA.Replace(" ", ""), Seguro.Text, FolioCred.Text, fechaVenF, fechaExpF);
                 dt = proc.ChecarCapitan(RNPA, row[0].ToString());
-                if (ocupacion != "Capitan" || ocupacion == "Capitan" && dt.Rows[0]["CURP"].ToString() == CURPPesc.Text || dt.Rows.Count <= 0)
+                if (ocupacion != "Capitan" || dt.Rows.Count <= 0 || ocupacion == "Capitan" && dt.Rows[0]["CURP"].ToString() == CURPPesc.Text)
                 {
                     if (registrar)
                     {

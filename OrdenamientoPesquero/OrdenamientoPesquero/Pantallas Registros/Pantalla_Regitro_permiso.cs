@@ -40,7 +40,8 @@ namespace OrdenamientoPesquero
             dt = proc.ObtenerCertMatrXUnidad(Rnpa);
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
+                if(dt.Rows[i]["NOMBREEMBARCACION"].ToString() != "NO APLICA")
+                    Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
             }
             CargarPesquerias();
         }
@@ -266,15 +267,17 @@ namespace OrdenamientoPesquero
                 proc.Borrar_equipo(nPer.Text);
                 equiposdepesca();
                 proc.EliminarRelac(nPer.Text);
+                int exitosembarcaciones = 0;
                 for (int i = 0; i < dgvEmbarcacionesPerm.RowCount; i++)
                 {
                     if (dgvEmbarcacionesPerm[0, i].Value != null)
                     {
                         Emb = new Embarcacion(dgvEmbarcacionesPerm[0, i].Value.ToString(), dgvEmbarcacionesPerm[1, i].Value.ToString(), dgvEmbarcacionesPerm[3, i].Value.ToString(), dgvEmbarcacionesPerm[2, i].Value.ToString(), Municipio, Rnpa);
-                        exito += proc.registrar_perm_emb(Emb, nPer.Text);
+                        exitosembarcaciones += proc.registrar_perm_emb(Emb, nPer.Text);
                     }
                 }
                 val.Exito(exito);
+                if (exitosembarcaciones == dgvEmbarcacionesPerm.RowCount) { val.Exito(-31); } else { val.Exito(-32); }
                 CargarPesquerias();
             }
             else { MessageBox.Show("La pesquería no existe y ha decidido no agregarla"); }
