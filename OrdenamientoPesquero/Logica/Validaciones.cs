@@ -177,6 +177,16 @@ namespace Logica
                 (new System.Threading.Thread(CloseIt)).Start();
                 MessageBox.Show("Pescador borrado de la base de datos","Exito"); /* 1 segundo = 1000 */
             }
+            else if (ok == -31)
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Todas las embarcaciones fueron registradas exitosamente", "Exito"); /* 1 segundo = 1000 */
+            }
+            else if (ok == -32)
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Hubo algún error al registrar una o más embarcaciones", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error); /* 1 segundo = 1000 */
+            }
             else
             {
                 (new System.Threading.Thread(CloseIt)).Start();
