@@ -339,25 +339,11 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
-		<row><td>AForge.Video.DirectShow.dll</td><td>{EBD21F73-E336-4C25-8739-6EBF58A946D5}</td><td>INSTALLDIR</td><td>2</td><td/><td>aforge.video.directshow.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>AForge.Video.dll</td><td>{AC7FC2F4-4FCA-4B7E-A789-D5290FAE30F7}</td><td>INSTALLDIR</td><td>2</td><td/><td>aforge.video.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>CapaDatos.dll</td><td>{5584C407-4C23-449C-BAB3-21566CE68C36}</td><td>INSTALLDIR</td><td>2</td><td/><td>capadatos.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DPCtlUruNet.dll</td><td>{09DE025D-C665-4B39-A05D-457D1B27EF16}</td><td>INSTALLDIR</td><td>2</td><td/><td>dpctlurunet.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DPCtlXUru.dll</td><td>{0A91F738-343E-4CD0-AC64-1044A5217D11}</td><td>INSTALLDIR</td><td>2</td><td/><td>dpctlxuru.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DPUruNet.dll</td><td>{B046B1E5-4BA0-48F6-BCF3-C1C120F3A130}</td><td>INSTALLDIR</td><td>2</td><td/><td>dpurunet.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>DPXUru.dll</td><td>{712995E9-F2C8-4733-AF6A-E8A0FA09077D}</td><td>INSTALLDIR</td><td>2</td><td/><td>dpxuru.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{A5F30949-1D57-4A82-AD91-AD3CF928DFA9}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td>{353EADCF-53D9-495C-B463-2B10E4C42C79}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>Logica.dll</td><td>{807CBE42-6033-43CD-A36F-D2A2B4315BF9}</td><td>INSTALLDIR</td><td>2</td><td/><td>logica.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.ReportViewer.WinForms.dll</td><td>{49058DD6-F52E-4A52-81DC-460B023B352D}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.reportviewer.winfo</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.SqlServer.Types.dll</td><td>{1340DDDA-E2C8-43AB-B230-DB388ADA16CE}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.sqlserver.types.dl</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Microsoft.mshtml.dll</td><td>{4EEFF537-B7F0-4149-A74E-23DFC4C32EC7}</td><td>INSTALLDIR</td><td>2</td><td/><td>microsoft.mshtml.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>OrdenamientoPesquero.exe</td><td>{E034A667-CCB3-49EA-B9AF-5C740AF9AB5F}</td><td>INSTALLDIR</td><td>2</td><td/><td>ordenamientopesquero.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>OrdenamientoPesquero.vshost.exe</td><td>{17CB7D00-A202-4930-91B8-A72494A0FC55}</td><td>INSTALLDIR</td><td>2</td><td/><td>ordenamientopesquero.vshost.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Spire.Common.dll</td><td>{ED2AE05D-EF11-4761-9637-FE840D928AF0}</td><td>INSTALLDIR</td><td>2</td><td/><td>spire.common.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Spire.License.dll</td><td>{7E0C0EDB-1B36-4808-844B-0C37490F0988}</td><td>INSTALLDIR</td><td>2</td><td/><td>spire.license.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Spire.Pdf.dll</td><td>{B7BA29EE-5D6C-4630-B87D-9982FCAEEDC8}</td><td>INSTALLDIR</td><td>2</td><td/><td>spire.pdf.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Spire.XLS.dll</td><td>{6C2E1306-9F18-46AF-816E-A37CABCB476E}</td><td>INSTALLDIR</td><td>2</td><td/><td>spire.xls.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1066,25 +1052,11 @@
 	<table name="CreateFolder">
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
-		<row><td>INSTALLDIR</td><td>AForge.Video.DirectShow.dll</td></row>
-		<row><td>INSTALLDIR</td><td>AForge.Video.dll</td></row>
-		<row><td>INSTALLDIR</td><td>CapaDatos.dll</td></row>
-		<row><td>INSTALLDIR</td><td>DPCtlUruNet.dll</td></row>
-		<row><td>INSTALLDIR</td><td>DPCtlXUru.dll</td></row>
-		<row><td>INSTALLDIR</td><td>DPUruNet.dll</td></row>
-		<row><td>INSTALLDIR</td><td>DPXUru.dll</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>IS_ININSTALL_SHORTCUT</td></row>
 		<row><td>INSTALLDIR</td><td>Logica.dll</td></row>
-		<row><td>INSTALLDIR</td><td>Microsoft.ReportViewer.WinForms.dll</td></row>
-		<row><td>INSTALLDIR</td><td>Microsoft.SqlServer.Types.dll</td></row>
-		<row><td>INSTALLDIR</td><td>Microsoft.mshtml.dll</td></row>
 		<row><td>INSTALLDIR</td><td>OrdenamientoPesquero.exe</td></row>
 		<row><td>INSTALLDIR</td><td>OrdenamientoPesquero.vshost.exe</td></row>
-		<row><td>INSTALLDIR</td><td>Spire.Common.dll</td></row>
-		<row><td>INSTALLDIR</td><td>Spire.License.dll</td></row>
-		<row><td>INSTALLDIR</td><td>Spire.Pdf.dll</td></row>
-		<row><td>INSTALLDIR</td><td>Spire.XLS.dll</td></row>
 	</table>
 
 	<table name="CustomAction">
@@ -1897,25 +1869,11 @@
 	<table name="FeatureComponents">
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
-		<row><td>AlwaysInstall</td><td>AForge.Video.DirectShow.dll</td></row>
-		<row><td>AlwaysInstall</td><td>AForge.Video.dll</td></row>
-		<row><td>AlwaysInstall</td><td>CapaDatos.dll</td></row>
-		<row><td>AlwaysInstall</td><td>DPCtlUruNet.dll</td></row>
-		<row><td>AlwaysInstall</td><td>DPCtlXUru.dll</td></row>
-		<row><td>AlwaysInstall</td><td>DPUruNet.dll</td></row>
-		<row><td>AlwaysInstall</td><td>DPXUru.dll</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>IS_ININSTALL_SHORTCUT</td></row>
 		<row><td>AlwaysInstall</td><td>Logica.dll</td></row>
-		<row><td>AlwaysInstall</td><td>Microsoft.ReportViewer.WinForms.dll</td></row>
-		<row><td>AlwaysInstall</td><td>Microsoft.SqlServer.Types.dll</td></row>
-		<row><td>AlwaysInstall</td><td>Microsoft.mshtml.dll</td></row>
 		<row><td>AlwaysInstall</td><td>OrdenamientoPesquero.exe</td></row>
 		<row><td>AlwaysInstall</td><td>OrdenamientoPesquero.vshost.exe</td></row>
-		<row><td>AlwaysInstall</td><td>Spire.Common.dll</td></row>
-		<row><td>AlwaysInstall</td><td>Spire.License.dll</td></row>
-		<row><td>AlwaysInstall</td><td>Spire.Pdf.dll</td></row>
-		<row><td>AlwaysInstall</td><td>Spire.XLS.dll</td></row>
 	</table>
 
 	<table name="File">
@@ -1930,24 +1888,13 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>aforge.video.directshow.dll</td><td>AForge.Video.DirectShow.dll</td><td>AFORGE~1.DLL|AForge.Video.DirectShow.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\AForge.Video.DirectShow.dll</td><td>1</td><td/></row>
-		<row><td>aforge.video.dll</td><td>AForge.Video.dll</td><td>AFORGE~1.DLL|AForge.Video.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\AForge.Video.dll</td><td>1</td><td/></row>
 		<row><td>anexo3.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>ANEXO3~1.RDL|Anexo3.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Anexo3.rdlc</td><td>1</td><td/></row>
-		<row><td>capadatos.dll</td><td>CapaDatos.dll</td><td>CAPADA~1.DLL|CapaDatos.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\CapaDatos.dll</td><td>1</td><td/></row>
 		<row><td>capadatos.dll.config</td><td>ISX_DEFAULTCOMPONENT</td><td>CAPADA~1.CON|CapaDatos.dll.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\CapaDatos.dll.config</td><td>1</td><td/></row>
 		<row><td>capadatos.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>CAPADA~1.PDB|CapaDatos.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\CapaDatos.pdb</td><td>1</td><td/></row>
 		<row><td>credencial.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>CREDEN~1.RDL|Credencial.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Credencial.rdlc</td><td>1</td><td/></row>
-		<row><td>dpctlurunet.dll</td><td>DPCtlUruNet.dll</td><td>DPCTLU~1.DLL|DPCtlUruNet.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\DPCtlUruNet.dll</td><td>1</td><td/></row>
-		<row><td>dpctlxuru.dll</td><td>DPCtlXUru.dll</td><td>DPCTLX~1.DLL|DPCtlXUru.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\DPCtlXUru.dll</td><td>1</td><td/></row>
-		<row><td>dpurunet.dll</td><td>DPUruNet.dll</td><td>DPUruNet.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\DPUruNet.dll</td><td>1</td><td/></row>
-		<row><td>dpxuru.dll</td><td>DPXUru.dll</td><td>DPXUru.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\DPXUru.dll</td><td>1</td><td/></row>
 		<row><td>frontal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>FRONTA~1.RDL|Frontal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Frontal.rdlc</td><td>1</td><td/></row>
 		<row><td>lista_embarca.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>LISTA_~1.RDL|Lista_Embarca.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Lista_Embarca.rdlc</td><td>1</td><td/></row>
 		<row><td>logica.dll</td><td>Logica.dll</td><td>Logica.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Logica.dll</td><td>1</td><td/></row>
-		<row><td>logica.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>Logica.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Logica.pdb</td><td>1</td><td/></row>
-		<row><td>microsoft.mshtml.dll</td><td>Microsoft.mshtml.dll</td><td>MICROS~1.DLL|Microsoft.mshtml.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Microsoft.mshtml.dll</td><td>1</td><td/></row>
-		<row><td>microsoft.reportviewer.winfo</td><td>Microsoft.ReportViewer.WinForms.dll</td><td>MICROS~1.DLL|Microsoft.ReportViewer.WinForms.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Microsoft.ReportViewer.WinForms.dll</td><td>1</td><td/></row>
-		<row><td>microsoft.sqlserver.types.dl</td><td>Microsoft.SqlServer.Types.dll</td><td>MICROS~1.DLL|Microsoft.SqlServer.Types.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Microsoft.SqlServer.Types.dll</td><td>1</td><td/></row>
 		<row><td>ordenamientopesquero.exe</td><td>OrdenamientoPesquero.exe</td><td>ORDENA~1.EXE|OrdenamientoPesquero.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.exe</td><td>1</td><td/></row>
 		<row><td>ordenamientopesquero.exe.con</td><td>ISX_DEFAULTCOMPONENT</td><td>ORDENA~1.CON|OrdenamientoPesquero.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.exe.config</td><td>1</td><td/></row>
 		<row><td>ordenamientopesquero.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>ORDENA~1.PDB|OrdenamientoPesquero.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.pdb</td><td>1</td><td/></row>
@@ -1962,10 +1909,6 @@
 		<row><td>reportepescadores.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|reportepescadores.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\reportepescadores.rdlc</td><td>1</td><td/></row>
 		<row><td>reportexunidad.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|ReporteXUnidad.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\ReporteXUnidad.rdlc</td><td>1</td><td/></row>
 		<row><td>resumen_permisos.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>RESUME~1.RDL|Resumen_permisos.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Resumen_permisos.rdlc</td><td>1</td><td/></row>
-		<row><td>spire.common.dll</td><td>Spire.Common.dll</td><td>SPIREC~1.DLL|Spire.Common.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Spire.Common.dll</td><td>1</td><td/></row>
-		<row><td>spire.license.dll</td><td>Spire.License.dll</td><td>SPIREL~1.DLL|Spire.License.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Spire.License.dll</td><td>1</td><td/></row>
-		<row><td>spire.pdf.dll</td><td>Spire.Pdf.dll</td><td>SPIREP~1.DLL|Spire.Pdf.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Spire.Pdf.dll</td><td>1</td><td/></row>
-		<row><td>spire.xls.dll</td><td>Spire.XLS.dll</td><td>SPIREX~1.DLL|Spire.XLS.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Spire.XLS.dll</td><td>1</td><td/></row>
 		<row><td>xmunicipio.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>XMUNIC~1.RDL|xMunicipio.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\xMunicipio.rdlc</td><td>1</td><td/></row>
 		<row><td>xmunicipio_seguro.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>XMUNIC~1.RDL|xMunicipio_seguro.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\xMunicipio_seguro.rdlc</td><td>1</td><td/></row>
 	</table>
@@ -1984,6 +1927,7 @@
 		<col key="yes" def="s72">Tag</col>
 		<col def="S255">Data</col>
 		<row><td>PROJECT_ASSISTANT_DEFAULT_FEATURE</td><td>AlwaysInstall</td></row>
+		<row><td>RegistryPageEnabled</td><td>No</td></row>
 	</table>
 
 	<table name="ISBillBoard">
@@ -2110,25 +2054,11 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
-		<row><td>AForge.Video.DirectShow.dll</td><td/><td/><td>_85B35189_CACE_49CD_B42E_8C5B37EB871F_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>AForge.Video.dll</td><td/><td/><td>_8008CEE2_2449_417C_8F30_FCB8D0A3DD5B_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>CapaDatos.dll</td><td/><td/><td>_F3D9E630_4BF2_435B_99B3_084C3034FDD7_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DPCtlUruNet.dll</td><td/><td/><td>_C67F8E33_76CA_48E3_92FE_A0BB1C4A0549_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DPCtlXUru.dll</td><td/><td/><td>_CECBB43F_61B3_4E9E_BEE1_DC89A044FB9A_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DPUruNet.dll</td><td/><td/><td>_EF0CA000_7F89_4F13_B423_F00B27756668_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>DPXUru.dll</td><td/><td/><td>_D1010F77_BFA8_4E13_AB11_18B28BBE687F_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_9A33AA96_390A_455E_AA18_B7F33BEB4B2E_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td/><td/><td>_7CB12811_8499_4998_A3E4_3486E2641680_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>Logica.dll</td><td/><td/><td>_7118EBA8_405D_4304_B91F_C74509F29714_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.ReportViewer.WinForms.dll</td><td/><td/><td>_FC7DFE13_B91D_439D_B3E2_EC7173957B36_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.SqlServer.Types.dll</td><td/><td/><td>_40880704_A393_4C4E_A118_F5E923498A6D_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Microsoft.mshtml.dll</td><td/><td/><td>_6A38294C_0F44_4FE5_A05F_0622E970118E_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>OrdenamientoPesquero.exe</td><td/><td/><td>_567708A2_953B_4706_A6EE_2BD7446A145B_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>OrdenamientoPesquero.vshost.exe</td><td/><td/><td>_C356053B_4FDB_4ADC_8E4A_08AAF82F982B_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Spire.Common.dll</td><td/><td/><td>_7F947434_015D_4A2E_85DB_4D536FEEB735_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Spire.License.dll</td><td/><td/><td>_260B94E3_8D67_40F1_A10D_F25AF30D3A95_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Spire.Pdf.dll</td><td/><td/><td>_846B0DF7_A65B_4A06_91ED_ED79002B6EAF_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Spire.XLS.dll</td><td/><td/><td>_B0BF32C2_F51A_4AC4_94A8_322AEA868689_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2719,7 +2649,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>-928574899</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>153577867</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
@@ -3822,8 +3752,8 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
-		<row><td>ID_STRING1</td><td>1033</td><td>http://www.PARLET.com</td><td>0</td><td/><td>-928574899</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>-928574899</td></row>
+		<row><td>ID_STRING1</td><td>1033</td><td>http://www.PARLET.com</td><td>0</td><td/><td>153577867</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>153577867</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td/><td>0</td><td/><td>-1398364081</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>-1398349617</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>LAUNCH~1.EXE|Launch OrdenamientoPesquero.exe</td><td>0</td><td/><td>-257479893</td></row>
@@ -4078,7 +4008,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{2779AFC2-EEC8-4721-8965-BF1991445859}</td></row>
 		<row><td>ISUSSignature</td><td>{84A30A5B-CE77-4733-9987-55DCE57AFBB5}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday,viewAppFiles</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday,viewAppFiles,viewUpdateService,viewLearnMore</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
