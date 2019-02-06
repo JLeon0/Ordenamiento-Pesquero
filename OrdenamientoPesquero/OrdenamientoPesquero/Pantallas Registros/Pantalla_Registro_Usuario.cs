@@ -547,7 +547,71 @@ namespace OrdenamientoPesquero
             }
             else { MessageBox.Show("No se puede registrar un pescador sin CURP"); }
         }
+        private void ActivarPanelCURP_Click(object sender, EventArgs e)
+        {
+            if (CURPPesc.Text != "")
+            {
+                CurpMal.Text = CURPPesc.Text;
+                Botones.Enabled = false;
+                gbBusqueda.Enabled = false;
+                gbDatosGenerales.Enabled = false;
+                gbInformacion.Enabled = false;
+                gbRelacion.Enabled = false;
+                PanelCURP.Visible = true;
+                PanelCURP.Enabled = true;
+            }
+        }
 
+        private void CerrarPanel_Click(object sender, EventArgs e)
+        {
+            Botones.Enabled = true;
+            gbBusqueda.Enabled = true;
+            gbDatosGenerales.Enabled = true;
+            gbInformacion.Enabled = true;
+            gbRelacion.Enabled = true;
+            PanelCURP.Visible = false;
+            PanelCURP.Enabled = false;
+        }
+
+        private void ActualizarCURP_Click(object sender, EventArgs e)
+        {
+            if (CurpNuevo.Text != "")
+            {
+                DialogResult res = MessageBox.Show("Usted está por cambiar el CURP de un Pescador.\n Desea continuar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (res == DialogResult.Yes)
+                {
+                    if (proc.Actualizar_CURP(CurpMal.Text, CurpNuevo.Text) >= 1)
+                    {
+                        CURPPesc.Text = CurpNuevo.Text;
+                        MessageBox.Show("CURP Actualizado");
+                    }
+                    else { MessageBox.Show("CURP Ya existe"); }
+                    CargarPescadores();
+                    CargarNoPescadores();
+                }
+            }
+        }
+
+        private void CurpNuevo_TextChanged(object sender, EventArgs e)
+        {
+            if (val.validarcurp(CurpNuevo.Text))
+            {
+                pictureBox11.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+                FechaNacPesc.Value = val.Fechanac(CurpNuevo.Text);
+                if (CurpNuevo.Text[10] == 'H')
+                {
+                    MasculinoPesc.Checked = true;
+                }
+                else
+                {
+                    FemeninoPesc.Checked = true;
+                }
+            }
+            else
+            {
+                pictureBox11.BackgroundImage = OrdenamientoPesquero.Properties.Resources.Equis;
+            }
+        }
         private void ActualizarUnidad_Click(object sender, EventArgs e)
         {
             if (!val.validaralgo(pescador))
@@ -885,17 +949,10 @@ namespace OrdenamientoPesquero
             catch (Exception) { MessageBox.Show("Hubo un problema con el sensor, retirelo y vuelva a insertarlo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
-        private bool backEnabled = false;
-
         private bool reset = false;
-
-        private bool threadHandle_lock = false;
-
         private Thread threadHandle;
         private void CARGAR()
         {        
-            
-
             Constants.ResultCode result = Constants.ResultCode.DP_DEVICE_FAILURE;
 
             result = CurrentReader.Open(Constants.CapturePriority.DP_PRIORITY_COOPERATIVE);
@@ -971,72 +1028,6 @@ namespace OrdenamientoPesquero
         }
 
         private delegate void SendMessageCallback(object payload);
-
-        private void ActivarPanelCURP_Click(object sender, EventArgs e)
-        {
-            if (CURPPesc.Text != "")
-            {
-                CurpMal.Text = CURPPesc.Text;
-                Botones.Enabled = false;
-                gbBusqueda.Enabled = false;
-                gbDatosGenerales.Enabled = false;
-                gbInformacion.Enabled = false;
-                gbRelacion.Enabled = false;
-                PanelCURP.Visible = true;
-                PanelCURP.Enabled = true;
-            }
-        }
-
-        private void CerrarPanel_Click(object sender, EventArgs e)
-        {
-            Botones.Enabled = true;
-            gbBusqueda.Enabled = true;
-            gbDatosGenerales.Enabled = true;
-            gbInformacion.Enabled = true;
-            gbRelacion.Enabled = true;
-            PanelCURP.Visible = false;
-            PanelCURP.Enabled = false;
-        }
-
-        private void ActualizarCURP_Click(object sender, EventArgs e)
-        {
-            if (CurpNuevo.Text != "")
-            {
-                DialogResult res = MessageBox.Show("Usted está por cambiar el CURP de un Pescador.\n Desea continuar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-                if (res == DialogResult.Yes)
-                {
-                    if (proc.Actualizar_CURP(CurpMal.Text, CurpNuevo.Text) >= 1)
-                    {
-                        CURPPesc.Text = CurpNuevo.Text;
-                        MessageBox.Show("CURP Actualizado");
-                    }
-                    else { MessageBox.Show("CURP Ya existe"); }
-                    CargarPescadores();
-                    CargarNoPescadores();
-                }
-            }
-        }
-
-        private void CurpNuevo_TextChanged(object sender, EventArgs e)
-        {
-            if (val.validarcurp(CurpNuevo.Text))
-            {
-                pictureBox11.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
-                FechaNacPesc.Value = val.Fechanac(CurpNuevo.Text);
-                if (CurpNuevo.Text[10] == 'H')
-                {
-                    MasculinoPesc.Checked = true;
-                }
-                else
-                {
-                    FemeninoPesc.Checked = true;
-                }
-            }
-            else
-            {
-                pictureBox11.BackgroundImage = OrdenamientoPesquero.Properties.Resources.Equis;
-            }
-        }
 
         private void SendMessage(object payload)
         {
