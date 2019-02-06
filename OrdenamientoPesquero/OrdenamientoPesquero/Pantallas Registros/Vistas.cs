@@ -250,7 +250,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     this.reportViewer1.LocalReport.DataSources.Add(datos5);
 
 
-                    ReportParameter[] para3 = new ReportParameter[8];
+                    ReportParameter[] para3 = new ReportParameter[9];
                     dt = proc.ObtenerUnaFederacion(rnpa);
                     if (dt.Rows.Count != 0)
                     {
@@ -277,6 +277,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     if (dt.Rows.Count != 0)
                     {
                         para3[7] = new ReportParameter("naseg", dt.Rows[0]["ASEGURADOS"].ToString());
+                        para3[8] = new ReportParameter("nord", dt.Rows[0]["ORDENADOS"].ToString());
                     }
                     else
                     {
