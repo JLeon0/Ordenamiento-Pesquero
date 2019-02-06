@@ -315,7 +315,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.Location = new System.Drawing.Point(339, 50);
+            this.label3.Location = new System.Drawing.Point(321, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
@@ -712,7 +712,7 @@
             this.ActualizarRNPA.Size = new System.Drawing.Size(50, 50);
             this.ActualizarRNPA.TabIndex = 133;
             this.ActualizarRNPA.TabStop = false;
-            this.toolTip1.SetToolTip(this.ActualizarRNPA, "Actualizar información de la Unidad Económica");
+            this.toolTip1.SetToolTip(this.ActualizarRNPA, "Actualizar RNPA de la Unidad Económica");
             this.ActualizarRNPA.Click += new System.EventHandler(this.ActualizarRNPA_Click);
             // 
             // CerrarPanel
