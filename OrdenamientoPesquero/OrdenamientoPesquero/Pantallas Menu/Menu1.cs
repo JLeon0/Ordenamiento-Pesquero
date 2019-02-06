@@ -24,7 +24,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 
         private void Solicitudes_Click(object sender, EventArgs e)
         {
-            Pantalla_Registro_Usuario pantalla = new Pantalla_Registro_Usuario("", "");
+            Pantalla_Registro_Usuario pantalla = new Pantalla_Registro_Usuario("", "",2);
             pantalla.ShowDialog();
         }
 

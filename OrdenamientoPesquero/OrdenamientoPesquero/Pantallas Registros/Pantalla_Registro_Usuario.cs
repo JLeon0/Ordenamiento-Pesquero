@@ -29,13 +29,15 @@ namespace OrdenamientoPesquero
         string[] Municipios;
         byte[] imagenBuffer;
 
-        public Pantalla_Registro_Usuario(string rnpa, string nombre)
+        public Pantalla_Registro_Usuario(string rnpa, string nombre, int tipo)
         {
             InitializeComponent();
             this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
             RNPA = rnpa;
             NombreUnidad = nombre;
-
+            if (tipo == 0)
+            { TipoSocio.Enabled = false; TipoExtra.Enabled = false; }
+            else if(tipo== 1) { TipoTitular.Enabled = false; TipoEventual.Enabled = false; }
         }
 
         private void Pantalla_Registro_Usuario_Load(object sender, EventArgs e)
@@ -484,8 +486,8 @@ namespace OrdenamientoPesquero
         {
             if (MatriculaPesc.Text == "NO APLICA")
             {
-                radioButton1.Checked = true;
-                radioButton4.Checked = true;
+                OcupAcua.Checked = true;
+                TipoAcuac.Checked = true;
             }
         }
 

@@ -19,9 +19,6 @@ namespace OrdenamientoPesquero
     {
         bool cargado = false;
         Unidad_Economica ue;
-        Permiso perm;
-        Pescador pes;
-        Embarcacion Emb;
         int exito = 0;
         Validaciones val = new Validaciones();
         Procedimientos proc = new Procedimientos();
@@ -61,12 +58,12 @@ namespace OrdenamientoPesquero
                 {
                     if (!existe(cbRNPA.Text))
                     {
-                        if (radioButton0.Checked)
+                        if (Social.Checked)
                         {
                             ue = new Unidad_Economica(r, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
                             exito = proc.Registrar_Unidad(ue);
                         }
-                        else if (radioButton1.Checked)
+                        else if (Privado.Checked)
                         {
                             ue = new Unidad_Economica(r, txtNombre.Text, "1", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
                             exito = proc.Registrar_Unidad(ue);
@@ -94,12 +91,12 @@ namespace OrdenamientoPesquero
             if (validaralgo(unidad))
             {
 
-                if (radioButton0.Checked)
+                if (Social.Checked)
                 {
                     ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "0", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
                     exito = proc.Actualizar_Unidad(ue);
                 }
-                else if (radioButton1.Checked)
+                else if (Privado.Checked)
                 {
                     ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "1", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
                     exito = proc.Actualizar_Unidad(ue);
@@ -232,8 +229,8 @@ namespace OrdenamientoPesquero
                     if (x != "") { tipo = Convert.ToInt32(fila["TIPO"]); }
                 }
                 if (tipo == 0)
-                { radioButton0.Checked = true; }
-                else { radioButton1.Checked = true; }
+                { Social.Checked = true; }
+                else { Privado.Checked = true; }
             }
         }
 
@@ -259,8 +256,8 @@ namespace OrdenamientoPesquero
                 if (x != "") { tipo = Convert.ToInt32(fila["TIPO"]); }
 
                 if (tipo == 0)
-                { radioButton0.Checked = true; }
-                else { radioButton1.Checked = true; }
+                { Social.Checked = true; }
+                else { Privado.Checked = true; }
             }
         }
         #endregion
@@ -518,7 +515,9 @@ namespace OrdenamientoPesquero
         {
             if (existe(cbRNPA.Text))
             {
-                Pantalla_Registro_Usuario pesc = new Pantalla_Registro_Usuario(cbRNPA.Text, txtNombre.Text);
+                int tipo = 0;
+                if (Privado.Checked) { tipo = 1; }
+                Pantalla_Registro_Usuario pesc = new Pantalla_Registro_Usuario(cbRNPA.Text, txtNombre.Text,tipo);
                 pesc.ShowDialog();
                 Resumenes(cbRNPA.Text);
             }

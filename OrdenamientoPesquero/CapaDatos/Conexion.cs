@@ -180,11 +180,6 @@ namespace CapaDatos
                     try
                     {
                         return cmd.ExecuteNonQuery();
-                        try
-                        {
-                            cn.Close();
-                        }
-                        catch { }
                     }
                     catch (Exception ms)
                     {
@@ -309,11 +304,6 @@ namespace CapaDatos
                     try
                     {
                         return cmd.ExecuteNonQuery();
-                        try
-                        {
-                            cn.Close();
-                        }
-                        catch { }
                     }
                     catch (Exception ms)
                     {
