@@ -77,8 +77,8 @@
             this.txtCorreo = new System.Windows.Forms.TextBox();
             this.label21 = new System.Windows.Forms.Label();
             this.txtFecha = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton0 = new System.Windows.Forms.RadioButton();
+            this.Privado = new System.Windows.Forms.RadioButton();
+            this.Social = new System.Windows.Forms.RadioButton();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.ActualizarRNPA = new System.Windows.Forms.PictureBox();
             this.CerrarPanel = new System.Windows.Forms.PictureBox();
@@ -315,7 +315,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.Location = new System.Drawing.Point(321, 50);
+            this.label3.Location = new System.Drawing.Point(312, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
@@ -361,8 +361,8 @@
             this.gbOrgPes.Controls.Add(this.txtCorreo);
             this.gbOrgPes.Controls.Add(this.label21);
             this.gbOrgPes.Controls.Add(this.txtFecha);
-            this.gbOrgPes.Controls.Add(this.radioButton1);
-            this.gbOrgPes.Controls.Add(this.radioButton0);
+            this.gbOrgPes.Controls.Add(this.Privado);
+            this.gbOrgPes.Controls.Add(this.Social);
             this.gbOrgPes.Controls.Add(this.label7);
             this.gbOrgPes.Controls.Add(this.label11);
             this.gbOrgPes.Controls.Add(this.label5);
@@ -675,31 +675,31 @@
             this.txtFecha.Size = new System.Drawing.Size(120, 22);
             this.txtFecha.TabIndex = 6;
             // 
-            // radioButton1
+            // Privado
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton1.Location = new System.Drawing.Point(771, 140);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(68, 20);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.Text = "Privado";
-            this.toolTip1.SetToolTip(this.radioButton1, "Seleccione si la Unidad Pesquera si NO pertenece a una Federación");
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.Privado.AutoSize = true;
+            this.Privado.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Privado.Location = new System.Drawing.Point(771, 140);
+            this.Privado.Name = "Privado";
+            this.Privado.Size = new System.Drawing.Size(68, 20);
+            this.Privado.TabIndex = 3;
+            this.Privado.Text = "Privado";
+            this.toolTip1.SetToolTip(this.Privado, "Seleccione si la Unidad Pesquera si NO pertenece a una Federación");
+            this.Privado.UseVisualStyleBackColor = true;
             // 
-            // radioButton0
+            // Social
             // 
-            this.radioButton0.AutoSize = true;
-            this.radioButton0.Checked = true;
-            this.radioButton0.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.radioButton0.Location = new System.Drawing.Point(703, 140);
-            this.radioButton0.Name = "radioButton0";
-            this.radioButton0.Size = new System.Drawing.Size(62, 20);
-            this.radioButton0.TabIndex = 2;
-            this.radioButton0.TabStop = true;
-            this.radioButton0.Text = "Social";
-            this.toolTip1.SetToolTip(this.radioButton0, "Seleccione si la Unidad Pesquera si pertenece a una Federación");
-            this.radioButton0.UseVisualStyleBackColor = true;
+            this.Social.AutoSize = true;
+            this.Social.Checked = true;
+            this.Social.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Social.Location = new System.Drawing.Point(703, 140);
+            this.Social.Name = "Social";
+            this.Social.Size = new System.Drawing.Size(62, 20);
+            this.Social.TabIndex = 2;
+            this.Social.TabStop = true;
+            this.Social.Text = "Social";
+            this.toolTip1.SetToolTip(this.Social, "Seleccione si la Unidad Pesquera si pertenece a una Federación");
+            this.Social.UseVisualStyleBackColor = true;
             // 
             // ActualizarRNPA
             // 
@@ -1561,8 +1561,8 @@
         private System.Windows.Forms.GroupBox gbOrgPes;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.TextBox txtFecha;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton0;
+        private System.Windows.Forms.RadioButton Privado;
+        private System.Windows.Forms.RadioButton Social;
         private System.Windows.Forms.MaskedTextBox mtbTelefono;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.TextBox txtCorreo;

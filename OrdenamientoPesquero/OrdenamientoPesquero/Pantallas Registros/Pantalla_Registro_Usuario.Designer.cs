@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Registro_Usuario));
             this.gbDatosGenerales = new System.Windows.Forms.GroupBox();
+            this.ActivarPanelCURP = new System.Windows.Forms.PictureBox();
             this.CargarFirma = new System.Windows.Forms.PictureBox();
             this.Huella = new System.Windows.Forms.PictureBox();
             this.CURPPesc = new System.Windows.Forms.TextBox();
@@ -96,18 +97,15 @@
             this.radioButton6 = new System.Windows.Forms.RadioButton();
             this.radioButton10 = new System.Windows.Forms.RadioButton();
             this.OcupacionEnEmbarPesc = new System.Windows.Forms.GroupBox();
-            this.radioButton5 = new System.Windows.Forms.RadioButton();
-            this.radioButton7 = new System.Windows.Forms.RadioButton();
-            this.radioButton8 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.OcupSinAct = new System.Windows.Forms.RadioButton();
+            this.OcupMarin = new System.Windows.Forms.RadioButton();
+            this.OcupCapi = new System.Windows.Forms.RadioButton();
+            this.OcupAcua = new System.Windows.Forms.RadioButton();
             this.TipoPesc = new System.Windows.Forms.GroupBox();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
-            this.radioButton13 = new System.Windows.Forms.RadioButton();
-            this.radioButton12 = new System.Windows.Forms.RadioButton();
-            this.radioButton11 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton9 = new System.Windows.Forms.RadioButton();
+            this.TipoSocio = new System.Windows.Forms.RadioButton();
+            this.TipoTitular = new System.Windows.Forms.RadioButton();
+            this.TipoExtra = new System.Windows.Forms.RadioButton();
+            this.TipoAcuac = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -119,6 +117,8 @@
             this.RegistrarUnidad = new System.Windows.Forms.PictureBox();
             this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
             this.EliminarUnidad = new System.Windows.Forms.PictureBox();
+            this.CerrarPanel = new System.Windows.Forms.PictureBox();
+            this.ActualizarCURP = new System.Windows.Forms.PictureBox();
             this.gbInformacion = new System.Windows.Forms.GroupBox();
             this.apoyos = new System.Windows.Forms.LinkLabel();
             this.solicitudes = new System.Windows.Forms.LinkLabel();
@@ -140,20 +140,19 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PanelCURP = new System.Windows.Forms.Panel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label30 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.CerrarPanel = new System.Windows.Forms.PictureBox();
             this.label29 = new System.Windows.Forms.Label();
-            this.ActualizarCURP = new System.Windows.Forms.PictureBox();
             this.CurpMal = new System.Windows.Forms.Label();
             this.CurpNuevo = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
-            this.ActivarPanelCURP = new System.Windows.Forms.PictureBox();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.TipoEventual = new System.Windows.Forms.RadioButton();
             this.gbDatosGenerales.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Huella)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Firma)).BeginInit();
@@ -175,19 +174,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActualizarCURP)).BeginInit();
             this.gbInformacion.SuspendLayout();
             this.Botones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.PanelCURP.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActualizarCURP)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).BeginInit();
             this.gbBusqueda.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatosGenerales
@@ -256,6 +254,19 @@
             this.gbDatosGenerales.TabIndex = 7;
             this.gbDatosGenerales.TabStop = false;
             this.gbDatosGenerales.Text = "Datos Generales";
+            // 
+            // ActivarPanelCURP
+            // 
+            this.ActivarPanelCURP.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.actualizar;
+            this.ActivarPanelCURP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ActivarPanelCURP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ActivarPanelCURP.Location = new System.Drawing.Point(360, 150);
+            this.ActivarPanelCURP.Name = "ActivarPanelCURP";
+            this.ActivarPanelCURP.Size = new System.Drawing.Size(20, 20);
+            this.ActivarPanelCURP.TabIndex = 187;
+            this.ActivarPanelCURP.TabStop = false;
+            this.toolTip1.SetToolTip(this.ActivarPanelCURP, "Cambiar CURP de Pescador");
+            this.ActivarPanelCURP.Click += new System.EventHandler(this.ActivarPanelCURP_Click);
             // 
             // CargarFirma
             // 
@@ -971,10 +982,10 @@
             // 
             // OcupacionEnEmbarPesc
             // 
-            this.OcupacionEnEmbarPesc.Controls.Add(this.radioButton5);
-            this.OcupacionEnEmbarPesc.Controls.Add(this.radioButton7);
-            this.OcupacionEnEmbarPesc.Controls.Add(this.radioButton8);
-            this.OcupacionEnEmbarPesc.Controls.Add(this.radioButton1);
+            this.OcupacionEnEmbarPesc.Controls.Add(this.OcupSinAct);
+            this.OcupacionEnEmbarPesc.Controls.Add(this.OcupMarin);
+            this.OcupacionEnEmbarPesc.Controls.Add(this.OcupCapi);
+            this.OcupacionEnEmbarPesc.Controls.Add(this.OcupAcua);
             this.OcupacionEnEmbarPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OcupacionEnEmbarPesc.Location = new System.Drawing.Point(524, 18);
             this.OcupacionEnEmbarPesc.Name = "OcupacionEnEmbarPesc";
@@ -983,57 +994,55 @@
             this.OcupacionEnEmbarPesc.TabStop = false;
             this.OcupacionEnEmbarPesc.Text = "Ocupación laboral";
             // 
-            // radioButton5
+            // OcupSinAct
             // 
-            this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(10, 60);
-            this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(100, 20);
-            this.radioButton5.TabIndex = 31;
-            this.radioButton5.Text = "Sin Actividad";
-            this.radioButton5.UseVisualStyleBackColor = true;
+            this.OcupSinAct.AutoSize = true;
+            this.OcupSinAct.Location = new System.Drawing.Point(10, 60);
+            this.OcupSinAct.Name = "OcupSinAct";
+            this.OcupSinAct.Size = new System.Drawing.Size(100, 20);
+            this.OcupSinAct.TabIndex = 31;
+            this.OcupSinAct.Text = "Sin Actividad";
+            this.OcupSinAct.UseVisualStyleBackColor = true;
             // 
-            // radioButton7
+            // OcupMarin
             // 
-            this.radioButton7.AutoSize = true;
-            this.radioButton7.Location = new System.Drawing.Point(10, 41);
-            this.radioButton7.Name = "radioButton7";
-            this.radioButton7.Size = new System.Drawing.Size(76, 20);
-            this.radioButton7.TabIndex = 30;
-            this.radioButton7.Text = "Marinero";
-            this.radioButton7.UseVisualStyleBackColor = true;
+            this.OcupMarin.AutoSize = true;
+            this.OcupMarin.Location = new System.Drawing.Point(10, 41);
+            this.OcupMarin.Name = "OcupMarin";
+            this.OcupMarin.Size = new System.Drawing.Size(76, 20);
+            this.OcupMarin.TabIndex = 30;
+            this.OcupMarin.Text = "Marinero";
+            this.OcupMarin.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // OcupCapi
             // 
-            this.radioButton8.AutoSize = true;
-            this.radioButton8.Checked = true;
-            this.radioButton8.Location = new System.Drawing.Point(10, 20);
-            this.radioButton8.Name = "radioButton8";
-            this.radioButton8.Size = new System.Drawing.Size(70, 20);
-            this.radioButton8.TabIndex = 29;
-            this.radioButton8.TabStop = true;
-            this.radioButton8.Text = "Capitan";
-            this.radioButton8.UseVisualStyleBackColor = true;
+            this.OcupCapi.AutoSize = true;
+            this.OcupCapi.Checked = true;
+            this.OcupCapi.Location = new System.Drawing.Point(10, 20);
+            this.OcupCapi.Name = "OcupCapi";
+            this.OcupCapi.Size = new System.Drawing.Size(70, 20);
+            this.OcupCapi.TabIndex = 29;
+            this.OcupCapi.TabStop = true;
+            this.OcupCapi.Text = "Capitan";
+            this.OcupCapi.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // OcupAcua
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(10, 80);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(88, 20);
-            this.radioButton1.TabIndex = 32;
-            this.radioButton1.Text = "Acuacultor";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.OcupAcua.AutoSize = true;
+            this.OcupAcua.Location = new System.Drawing.Point(10, 80);
+            this.OcupAcua.Name = "OcupAcua";
+            this.OcupAcua.Size = new System.Drawing.Size(88, 20);
+            this.OcupAcua.TabIndex = 32;
+            this.OcupAcua.Text = "Acuacultor";
+            this.OcupAcua.UseVisualStyleBackColor = true;
             // 
             // TipoPesc
             // 
-            this.TipoPesc.Controls.Add(this.radioButton4);
-            this.TipoPesc.Controls.Add(this.radioButton13);
-            this.TipoPesc.Controls.Add(this.radioButton12);
-            this.TipoPesc.Controls.Add(this.radioButton11);
-            this.TipoPesc.Controls.Add(this.radioButton2);
-            this.TipoPesc.Controls.Add(this.radioButton3);
-            this.TipoPesc.Controls.Add(this.radioButton9);
+            this.TipoPesc.Controls.Add(this.TipoSocio);
+            this.TipoPesc.Controls.Add(this.TipoTitular);
+            this.TipoPesc.Controls.Add(this.TipoEventual);
+            this.TipoPesc.Controls.Add(this.TipoExtra);
+            this.TipoPesc.Controls.Add(this.TipoAcuac);
             this.TipoPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TipoPesc.Location = new System.Drawing.Point(302, 15);
             this.TipoPesc.Name = "TipoPesc";
@@ -1042,77 +1051,47 @@
             this.TipoPesc.TabStop = false;
             this.TipoPesc.Text = "Tipo de Pescador:";
             // 
-            // radioButton4
+            // TipoSocio
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(12, 80);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(103, 20);
-            this.radioButton4.TabIndex = 25;
-            this.radioButton4.Text = "Socio Acuac.";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.TipoSocio.AutoSize = true;
+            this.TipoSocio.Location = new System.Drawing.Point(12, 90);
+            this.TipoSocio.Name = "TipoSocio";
+            this.TipoSocio.Size = new System.Drawing.Size(59, 20);
+            this.TipoSocio.TabIndex = 27;
+            this.TipoSocio.Text = "Socio";
+            this.TipoSocio.UseVisualStyleBackColor = true;
             // 
-            // radioButton13
+            // TipoTitular
             // 
-            this.radioButton13.AutoSize = true;
-            this.radioButton13.Location = new System.Drawing.Point(12, 148);
-            this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(53, 20);
-            this.radioButton13.TabIndex = 28;
-            this.radioButton13.Text = "SEA";
-            this.radioButton13.UseVisualStyleBackColor = true;
+            this.TipoTitular.AutoSize = true;
+            this.TipoTitular.Location = new System.Drawing.Point(12, 46);
+            this.TipoTitular.Name = "TipoTitular";
+            this.TipoTitular.Size = new System.Drawing.Size(61, 20);
+            this.TipoTitular.TabIndex = 26;
+            this.TipoTitular.Text = "Titular";
+            this.TipoTitular.UseVisualStyleBackColor = true;
             // 
-            // radioButton12
+            // TipoExtra
             // 
-            this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(12, 123);
-            this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(59, 20);
-            this.radioButton12.TabIndex = 27;
-            this.radioButton12.Text = "Socio";
-            this.radioButton12.UseVisualStyleBackColor = true;
+            this.TipoExtra.AutoSize = true;
+            this.TipoExtra.Location = new System.Drawing.Point(12, 107);
+            this.TipoExtra.Name = "TipoExtra";
+            this.TipoExtra.Size = new System.Drawing.Size(57, 20);
+            this.TipoExtra.TabIndex = 23;
+            this.TipoExtra.Text = "Extra";
+            this.TipoExtra.UseVisualStyleBackColor = true;
             // 
-            // radioButton11
+            // TipoAcuac
             // 
-            this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(12, 100);
-            this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(61, 20);
-            this.radioButton11.TabIndex = 26;
-            this.radioButton11.Text = "Titular";
-            this.radioButton11.UseVisualStyleBackColor = true;
-            // 
-            // radioButton2
-            // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(12, 59);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(54, 20);
-            this.radioButton2.TabIndex = 24;
-            this.radioButton2.Text = "Libre";
-            this.radioButton2.UseVisualStyleBackColor = true;
-            // 
-            // radioButton3
-            // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(12, 40);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(57, 20);
-            this.radioButton3.TabIndex = 23;
-            this.radioButton3.Text = "Extra";
-            this.radioButton3.UseVisualStyleBackColor = true;
-            // 
-            // radioButton9
-            // 
-            this.radioButton9.AutoSize = true;
-            this.radioButton9.Checked = true;
-            this.radioButton9.Location = new System.Drawing.Point(12, 20);
-            this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(75, 20);
-            this.radioButton9.TabIndex = 22;
-            this.radioButton9.TabStop = true;
-            this.radioButton9.Text = "Eventual";
-            this.radioButton9.UseVisualStyleBackColor = true;
+            this.TipoAcuac.AutoSize = true;
+            this.TipoAcuac.Checked = true;
+            this.TipoAcuac.Location = new System.Drawing.Point(12, 20);
+            this.TipoAcuac.Name = "TipoAcuac";
+            this.TipoAcuac.Size = new System.Drawing.Size(124, 20);
+            this.TipoAcuac.TabIndex = 22;
+            this.TipoAcuac.TabStop = true;
+            this.TipoAcuac.Text = "Socio Acuacultor";
+            this.TipoAcuac.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -1222,6 +1201,35 @@
             this.EliminarUnidad.TabStop = false;
             this.toolTip1.SetToolTip(this.EliminarUnidad, "Quitar de la Unidad");
             this.EliminarUnidad.Click += new System.EventHandler(this.EliminarUnidad_Click);
+            // 
+            // CerrarPanel
+            // 
+            this.CerrarPanel.BackColor = System.Drawing.Color.Transparent;
+            this.CerrarPanel.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
+            this.CerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CerrarPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CerrarPanel.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.CerrarPanel.Location = new System.Drawing.Point(451, 1);
+            this.CerrarPanel.Name = "CerrarPanel";
+            this.CerrarPanel.Size = new System.Drawing.Size(21, 21);
+            this.CerrarPanel.TabIndex = 135;
+            this.CerrarPanel.TabStop = false;
+            this.toolTip1.SetToolTip(this.CerrarPanel, "Cerrar");
+            this.CerrarPanel.Click += new System.EventHandler(this.CerrarPanel_Click);
+            // 
+            // ActualizarCURP
+            // 
+            this.ActualizarCURP.BackColor = System.Drawing.Color.Transparent;
+            this.ActualizarCURP.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
+            this.ActualizarCURP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ActualizarCURP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ActualizarCURP.Location = new System.Drawing.Point(409, 141);
+            this.ActualizarCURP.Name = "ActualizarCURP";
+            this.ActualizarCURP.Size = new System.Drawing.Size(50, 50);
+            this.ActualizarCURP.TabIndex = 133;
+            this.ActualizarCURP.TabStop = false;
+            this.toolTip1.SetToolTip(this.ActualizarCURP, "Actualizar CURP del Pescador");
+            this.ActualizarCURP.Click += new System.EventHandler(this.ActualizarCURP_Click);
             // 
             // gbInformacion
             // 
@@ -1466,6 +1474,18 @@
             this.PanelCURP.TabIndex = 182;
             this.PanelCURP.Visible = false;
             // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox11.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox11.Location = new System.Drawing.Point(229, 136);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox11.TabIndex = 187;
+            this.pictureBox11.TabStop = false;
+            // 
             // label30
             // 
             this.label30.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -1502,21 +1522,6 @@
             this.pictureBox10.TabIndex = 136;
             this.pictureBox10.TabStop = false;
             // 
-            // CerrarPanel
-            // 
-            this.CerrarPanel.BackColor = System.Drawing.Color.Transparent;
-            this.CerrarPanel.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
-            this.CerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CerrarPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CerrarPanel.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.CerrarPanel.Location = new System.Drawing.Point(451, 1);
-            this.CerrarPanel.Name = "CerrarPanel";
-            this.CerrarPanel.Size = new System.Drawing.Size(21, 21);
-            this.CerrarPanel.TabIndex = 135;
-            this.CerrarPanel.TabStop = false;
-            this.toolTip1.SetToolTip(this.CerrarPanel, "Cerrar");
-            this.CerrarPanel.Click += new System.EventHandler(this.CerrarPanel_Click);
-            // 
             // label29
             // 
             this.label29.AutoSize = true;
@@ -1527,20 +1532,6 @@
             this.label29.Size = new System.Drawing.Size(56, 14);
             this.label29.TabIndex = 134;
             this.label29.Text = "Actualizar";
-            // 
-            // ActualizarCURP
-            // 
-            this.ActualizarCURP.BackColor = System.Drawing.Color.Transparent;
-            this.ActualizarCURP.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
-            this.ActualizarCURP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ActualizarCURP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ActualizarCURP.Location = new System.Drawing.Point(409, 141);
-            this.ActualizarCURP.Name = "ActualizarCURP";
-            this.ActualizarCURP.Size = new System.Drawing.Size(50, 50);
-            this.ActualizarCURP.TabIndex = 133;
-            this.ActualizarCURP.TabStop = false;
-            this.toolTip1.SetToolTip(this.ActualizarCURP, "Actualizar CURP del Pescador");
-            this.ActualizarCURP.Click += new System.EventHandler(this.ActualizarCURP_Click);
             // 
             // CurpMal
             // 
@@ -1586,19 +1577,6 @@
             this.label27.TabIndex = 128;
             this.label27.Text = "CURP Actual";
             // 
-            // ActivarPanelCURP
-            // 
-            this.ActivarPanelCURP.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.actualizar;
-            this.ActivarPanelCURP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ActivarPanelCURP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ActivarPanelCURP.Location = new System.Drawing.Point(360, 150);
-            this.ActivarPanelCURP.Name = "ActivarPanelCURP";
-            this.ActivarPanelCURP.Size = new System.Drawing.Size(20, 20);
-            this.ActivarPanelCURP.TabIndex = 187;
-            this.ActivarPanelCURP.TabStop = false;
-            this.toolTip1.SetToolTip(this.ActivarPanelCURP, "Cambiar CURP de Pescador");
-            this.ActivarPanelCURP.Click += new System.EventHandler(this.ActivarPanelCURP_Click);
-            // 
             // gbBusqueda
             // 
             this.gbBusqueda.Controls.Add(this.ListaNombres2);
@@ -1614,17 +1592,15 @@
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
             // 
-            // pictureBox11
+            // TipoEventual
             // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox11.Location = new System.Drawing.Point(229, 136);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(23, 21);
-            this.pictureBox11.TabIndex = 187;
-            this.pictureBox11.TabStop = false;
+            this.TipoEventual.AutoSize = true;
+            this.TipoEventual.Location = new System.Drawing.Point(12, 63);
+            this.TipoEventual.Name = "TipoEventual";
+            this.TipoEventual.Size = new System.Drawing.Size(75, 20);
+            this.TipoEventual.TabIndex = 23;
+            this.TipoEventual.Text = "Eventual";
+            this.TipoEventual.UseVisualStyleBackColor = true;
             // 
             // Pantalla_Registro_Usuario
             // 
@@ -1651,6 +1627,7 @@
             this.Load += new System.EventHandler(this.Pantalla_Registro_Usuario_Load);
             this.gbDatosGenerales.ResumeLayout(false);
             this.gbDatosGenerales.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Huella)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Firma)).EndInit();
@@ -1677,6 +1654,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActualizarCURP)).EndInit();
             this.gbInformacion.ResumeLayout(false);
             this.gbInformacion.PerformLayout();
             this.Botones.ResumeLayout(false);
@@ -1686,14 +1665,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.PanelCURP.ResumeLayout(false);
             this.PanelCURP.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActualizarCURP)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).EndInit();
             this.gbBusqueda.ResumeLayout(false);
             this.gbBusqueda.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1742,13 +1718,12 @@
         private System.Windows.Forms.RadioButton radioButton6;
         private System.Windows.Forms.RadioButton radioButton10;
         private System.Windows.Forms.GroupBox OcupacionEnEmbarPesc;
-        private System.Windows.Forms.RadioButton radioButton5;
-        private System.Windows.Forms.RadioButton radioButton7;
-        private System.Windows.Forms.RadioButton radioButton8;
+        private System.Windows.Forms.RadioButton OcupSinAct;
+        private System.Windows.Forms.RadioButton OcupMarin;
+        private System.Windows.Forms.RadioButton OcupCapi;
         private System.Windows.Forms.GroupBox TipoPesc;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton9;
+        private System.Windows.Forms.RadioButton TipoExtra;
+        private System.Windows.Forms.RadioButton TipoAcuac;
         private System.Windows.Forms.PictureBox EliminarUnidad;
         private System.Windows.Forms.PictureBox ActualizarUnidad;
         private System.Windows.Forms.PictureBox RegistrarUnidad;
@@ -1781,13 +1756,11 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton OcupAcua;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.PictureBox CargarImagen;
-        private System.Windows.Forms.RadioButton radioButton13;
-        private System.Windows.Forms.RadioButton radioButton12;
-        private System.Windows.Forms.RadioButton radioButton11;
+        private System.Windows.Forms.RadioButton TipoSocio;
+        private System.Windows.Forms.RadioButton TipoTitular;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblP;
@@ -1823,5 +1796,6 @@
         private System.Windows.Forms.PictureBox ActivarPanelCURP;
         private System.Windows.Forms.GroupBox gbBusqueda;
         private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.RadioButton TipoEventual;
     }
 }
