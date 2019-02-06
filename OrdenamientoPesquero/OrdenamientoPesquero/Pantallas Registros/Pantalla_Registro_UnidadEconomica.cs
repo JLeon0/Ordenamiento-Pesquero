@@ -808,6 +808,7 @@ namespace OrdenamientoPesquero
                 gbBotones.Enabled = false;
                 gbBusqueda.Enabled = false;
                 gbOrgPes.Enabled = false;
+                Resumen.Enabled = false;
                 PanelRNPA.Visible = true;
                 PanelRNPA.Enabled = true;
             }
@@ -817,13 +818,17 @@ namespace OrdenamientoPesquero
         {
             if (RnpaNuevo.Text != "")
             {
-                if (proc.Actualizar_RNPA(RnpaMal.Text, RnpaNuevo.Text) >= 1)
+                DialogResult res = MessageBox.Show("Usted está por cambiar el RNPA de una Unidad, con todas sus EMBARCACIONES, PERMISOS, PESCADORES, FEDERACIÓN.\n Desea continuar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (res == DialogResult.Yes)
                 {
-                    cbRNPA.Text = RnpaNuevo.Text;
-                    MessageBox.Show("RNPA Actualizada");
+                    if (proc.Actualizar_RNPA(RnpaMal.Text, RnpaNuevo.Text) >= 1)
+                    {
+                        cbRNPA.Text = RnpaNuevo.Text;
+                        MessageBox.Show("RNPA Actualizada");
+                    }
+                    else { MessageBox.Show("RNPA Ya existe"); }
+                    CargarRNPA();
                 }
-                else { MessageBox.Show("RNPA Ya existe"); }
-                CargarRNPA();
             }
         }
 

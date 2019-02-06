@@ -205,6 +205,12 @@ namespace Logica
             return c.Ejecutar("Actualizar_pescador", Parametros, PES.NOMBRE, PES.AP_PAT, PES.AP_MAT, PES.CURP, PES.RFC, PES.ESCOLARIDAD, PES.TIP_SANG, PES.SEXO, PES.LUG_NACIMI, PES.FECH_NACIMI, PES.CALLENUM, PES.COLONIA, PES.MUNICIPIO, PES.CP, PES.TEL, PES.TIPO_PESC, PES.OCP_LABORAL, PES.CUERPO_DE_AGUA, PES.MATRICULA, PES.CORREO, PES.LOCALIDAD, PES.ORDENADO, PES.RNPA, PES.SEGURO, PES.FOLIO, PES.FECHAEXPF, PES.FECHAVENF);
 
         }
+
+        public int Actualizar_CURP(string CurpVieja, string CurpNueva)
+        {
+            string[] Parametros = { "@curpvieja", "@curpnueva" };
+            return c.Ejecutar("ActualizarCurp", Parametros, CurpVieja, CurpNueva);
+        }
         public int Eliminar_Pescador(string CURP, int Eliminar)
         {
             string[] Parametros = { "@curp", "@Eliminar" };
@@ -489,6 +495,7 @@ namespace Logica
             string[] Parametros = { };
             return c.Ejecutar2("limpiar", Parametros);
         }
+
 
         #endregion
 

@@ -61,7 +61,7 @@ namespace OrdenamientoPesquero
             string tipo_pes = "";
             string ocupacion = "";
             string cuerpo = "";
-            foreach (RadioButton item in groupBox7.Controls.OfType<RadioButton>())
+            foreach (RadioButton item in gbDatosGenerales.Controls.OfType<RadioButton>())
             {
                 if (item.Checked)
                 {
@@ -334,15 +334,15 @@ namespace OrdenamientoPesquero
         {
             Imagen.BackgroundImage = OrdenamientoPesquero.Properties.Resources.perfil;
             no.Checked = true;
-            foreach (TextBox item in groupBox7.Controls.OfType<TextBox>())
+            foreach (TextBox item in gbDatosGenerales.Controls.OfType<TextBox>())
             {
                 item.Text = "";
             }
-            foreach (MaskedTextBox item in groupBox7.Controls.OfType<MaskedTextBox>())
+            foreach (MaskedTextBox item in gbDatosGenerales.Controls.OfType<MaskedTextBox>())
             {
                 item.Text = "";
             }
-            foreach (ComboBox item in groupBox7.Controls.OfType<ComboBox>())
+            foreach (ComboBox item in gbDatosGenerales.Controls.OfType<ComboBox>())
             {
                 item.Text = "";
             }
@@ -363,7 +363,7 @@ namespace OrdenamientoPesquero
                 Apoyo.Visible = true;
                 MatriculaPesc.Enabled = false;
                 Credencial.Visible = false;
-                groupBox4.Height = groupBox4.Height - 100;
+                gbRelacion.Height = gbRelacion.Height - 100;
                 Botones.Location = new Point(Botones.Location.X, Botones.Location.Y - 50);
             }
         }
@@ -969,6 +969,72 @@ namespace OrdenamientoPesquero
         }
 
         private delegate void SendMessageCallback(object payload);
+
+        private void ActivarPanelCURP_Click(object sender, EventArgs e)
+        {
+            if (CURPPesc.Text != "")
+            {
+                CurpMal.Text = CURPPesc.Text;
+                Botones.Enabled = false;
+                gbBusqueda.Enabled = false;
+                gbDatosGenerales.Enabled = false;
+                gbInformacion.Enabled = false;
+                gbRelacion.Enabled = false;
+                PanelCURP.Visible = true;
+                PanelCURP.Enabled = true;
+            }
+        }
+
+        private void CerrarPanel_Click(object sender, EventArgs e)
+        {
+            Botones.Enabled = true;
+            gbBusqueda.Enabled = true;
+            gbDatosGenerales.Enabled = true;
+            gbInformacion.Enabled = true;
+            gbRelacion.Enabled = true;
+            PanelCURP.Visible = false;
+            PanelCURP.Enabled = false;
+        }
+
+        private void ActualizarCURP_Click(object sender, EventArgs e)
+        {
+            if (CurpNuevo.Text != "")
+            {
+                DialogResult res = MessageBox.Show("Usted está por cambiar el CURP de un Pescador.\n Desea continuar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (res == DialogResult.Yes)
+                {
+                    if (proc.Actualizar_CURP(CurpMal.Text, CurpNuevo.Text) >= 1)
+                    {
+                        CURPPesc.Text = CurpNuevo.Text;
+                        MessageBox.Show("CURP Actualizado");
+                    }
+                    else { MessageBox.Show("CURP Ya existe"); }
+                    CargarPescadores();
+                    CargarNoPescadores();
+                }
+            }
+        }
+
+        private void CurpNuevo_TextChanged(object sender, EventArgs e)
+        {
+            if (val.validarcurp(CurpNuevo.Text))
+            {
+                pictureBox11.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+                FechaNacPesc.Value = val.Fechanac(CurpNuevo.Text);
+                if (CurpNuevo.Text[10] == 'H')
+                {
+                    MasculinoPesc.Checked = true;
+                }
+                else
+                {
+                    FemeninoPesc.Checked = true;
+                }
+            }
+            else
+            {
+                pictureBox11.BackgroundImage = OrdenamientoPesquero.Properties.Resources.Equis;
+            }
+        }
 
         private void SendMessage(object payload)
         {
