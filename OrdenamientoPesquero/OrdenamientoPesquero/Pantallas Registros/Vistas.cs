@@ -282,6 +282,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     else
                     {
                         para3[7] = new ReportParameter("naseg", "0");
+                        para3[8] = new ReportParameter("nord", "0");
                     }
                     para3[4] = new ReportParameter("nper", permisos_lista.vista_perm.Count.ToString());
                     para3[5] = new ReportParameter("nsoc", ordPesqueroDataSetpescadores1.pescadores.Count.ToString());
