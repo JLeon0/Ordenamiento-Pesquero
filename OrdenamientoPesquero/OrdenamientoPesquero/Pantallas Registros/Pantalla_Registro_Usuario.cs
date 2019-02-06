@@ -35,9 +35,9 @@ namespace OrdenamientoPesquero
             this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
             RNPA = rnpa;
             NombreUnidad = nombre;
-            if (tipo == 0)
+            if (tipo == 1)
             { TipoSocio.Enabled = false; TipoExtra.Enabled = false; }
-            else if(tipo== 1) { TipoTitular.Enabled = false; TipoEventual.Enabled = false; }
+            else if(tipo== 0) { TipoTitular.Enabled = false; TipoEventual.Enabled = false; }
         }
 
         private void Pantalla_Registro_Usuario_Load(object sender, EventArgs e)
