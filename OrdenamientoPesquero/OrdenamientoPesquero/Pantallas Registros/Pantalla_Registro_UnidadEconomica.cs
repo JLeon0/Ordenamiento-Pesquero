@@ -554,11 +554,11 @@ namespace OrdenamientoPesquero
         {
             if (!cargando)
             {
-                //dt = proc.ObtenerLocalidades("COMONDU");
-                //txtLocalidad.DataSource = dt;
-                //txtLocalidad.DisplayMember = "NombreL";
-                //txtLocalidad.ValueMember = "NombreL";
-                //txtLocalidad.Text = "Seleccione una Localidad";
+                dt = proc.ObtenerLocalidades(Municipios[txtMunicipio.SelectedIndex]);
+                txtLocalidad.DataSource = dt;
+                txtLocalidad.DisplayMember = "NombreL";
+                txtLocalidad.ValueMember = "NombreL";
+                txtLocalidad.Text = "Seleccione una Localidad";
             }
         }
 
