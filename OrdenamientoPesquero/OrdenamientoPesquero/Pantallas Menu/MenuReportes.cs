@@ -13,12 +13,14 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 {
     public partial class MenuReportes : Form
     {
-        public MenuReportes(string rnpa)
+        public MenuReportes(string rnpa, string tip)
         {
             InitializeComponent();
             r = rnpa;
+            t = tip;
         }
         string r;
+        string t;
         private void button1_Click(object sender, EventArgs e)
         {
             Vistas v = new Vistas("", "", 7);
@@ -27,7 +29,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Vistas v = new Vistas(r, "", 6);
+            Vistas v = new Vistas(r, t, 6);
             v.ShowDialog(this);
         }
 

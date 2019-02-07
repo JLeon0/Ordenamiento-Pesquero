@@ -29,6 +29,7 @@
               <Mapping SourceColumn="OCUPACION_LABORAL" DataSetColumn="OCUPACION_LABORAL" />
               <Mapping SourceColumn="CURP" DataSetColumn="CURP" />
               <Mapping SourceColumn="NOMBREEMBARCACION" DataSetColumn="NOMBREEMBARCACION" />
+              <Mapping SourceColumn="TIPO_PESCADOR" DataSetColumn="TIPO_PESCADOR" />
               <Mapping SourceColumn="EMBARCACION" DataSetColumn="EMBARCACION" />
               <Mapping SourceColumn="FOLIO" DataSetColumn="FOLIO" />
             </Mappings>
@@ -77,6 +78,13 @@
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TIPO_PESCADOR" msprop:Generator_ColumnVarNameInTable="columnTIPO_PESCADOR" msprop:Generator_ColumnPropNameInRow="TIPO_PESCADOR" msprop:Generator_ColumnPropNameInTable="TIPO_PESCADORColumn" msprop:Generator_UserColumnName="TIPO_PESCADOR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
