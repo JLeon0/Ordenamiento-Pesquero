@@ -110,6 +110,7 @@ namespace OrdenamientoPesquero
             exito = AccionesCertificado(false);
             val.Exito(exito);
             exito = 0;
+            CertMatXUnidad();
             MatriculaCertMat.Focus();
         }
 
