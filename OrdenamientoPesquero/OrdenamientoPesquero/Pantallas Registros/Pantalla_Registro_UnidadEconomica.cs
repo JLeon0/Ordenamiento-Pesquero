@@ -12,6 +12,7 @@ using System.Threading;
 using Microsoft.VisualBasic;
 using System.Text.RegularExpressions;
 using OrdenamientoPesquero.Pantallas_Registros;
+using System.Data.SqlClient;
 
 namespace OrdenamientoPesquero
 {
@@ -46,6 +47,18 @@ namespace OrdenamientoPesquero
             CargarFederaciones();
 
 
+
+            string CONEXIONPERRONA = "Data source = .\\SQLEXPRESS; Initial Catalog = OrdPesquero; Integrated Security = true;";
+            SqlConnection con = new SqlConnection(CONEXIONPERRONA);
+            con.Open();
+            int n = 1;
+            DataTable NoOrdenados = proc.BuscarNombre("", "");
+            foreach (DataRow fila in NoOrdenados.Rows)
+            {
+                SqlCommand cmdDrop = new SqlCommand("update PESCADOR set COD_REG = " + n + " where CURP = '" + fila["CURP"].ToString()+"'", con);
+                cmdDrop.ExecuteNonQuery();
+                n = n + 1;
+            }
         }
 
         #region Registros

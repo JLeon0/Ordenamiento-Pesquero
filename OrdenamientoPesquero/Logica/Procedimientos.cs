@@ -51,6 +51,8 @@ namespace Logica
             string[] Parametros = { "@rnpa" };
             return c.Ejecutar("Eliminarunidad", Parametros, RNPA);
         }
+
+
         public DataTable ChecarCapitan(string RNPA, string MATRICULA)
         {
             string[] Parametros = { "@rnpa", "@matricula" };
