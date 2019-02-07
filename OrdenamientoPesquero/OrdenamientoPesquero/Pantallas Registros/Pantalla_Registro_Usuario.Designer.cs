@@ -91,6 +91,8 @@
             this.label53 = new System.Windows.Forms.Label();
             this.NombrePesc = new System.Windows.Forms.TextBox();
             this.gbRelacion = new System.Windows.Forms.GroupBox();
+            this.MatriculaRelacion = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
             this.MatriculaPesc = new System.Windows.Forms.ComboBox();
             this.label37 = new System.Windows.Forms.Label();
             this.CuerpoDeAguaPesc = new System.Windows.Forms.GroupBox();
@@ -104,6 +106,7 @@
             this.TipoPesc = new System.Windows.Forms.GroupBox();
             this.TipoSocio = new System.Windows.Forms.RadioButton();
             this.TipoTitular = new System.Windows.Forms.RadioButton();
+            this.TipoEventual = new System.Windows.Forms.RadioButton();
             this.TipoExtra = new System.Windows.Forms.RadioButton();
             this.TipoAcuac = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
@@ -150,7 +153,6 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
-            this.TipoEventual = new System.Windows.Forms.RadioButton();
             this.gbDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
@@ -250,7 +252,7 @@
             this.gbDatosGenerales.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbDatosGenerales.Location = new System.Drawing.Point(216, 89);
             this.gbDatosGenerales.Name = "gbDatosGenerales";
-            this.gbDatosGenerales.Size = new System.Drawing.Size(894, 387);
+            this.gbDatosGenerales.Size = new System.Drawing.Size(894, 385);
             this.gbDatosGenerales.TabIndex = 7;
             this.gbDatosGenerales.TabStop = false;
             this.gbDatosGenerales.Text = "Datos Generales";
@@ -390,7 +392,7 @@
             "ACTIVO",
             "BAJA",
             "OCCISO",
-            "OTRO"});
+            "NO"});
             this.Seguro.Location = new System.Drawing.Point(643, 290);
             this.Seguro.Name = "Seguro";
             this.Seguro.Size = new System.Drawing.Size(122, 24);
@@ -468,6 +470,7 @@
             // 
             this.FolioCred.BackColor = System.Drawing.Color.White;
             this.FolioCred.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.FolioCred.Enabled = false;
             this.FolioCred.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FolioCred.ForeColor = System.Drawing.Color.Black;
             this.FolioCred.Location = new System.Drawing.Point(133, 292);
@@ -911,6 +914,8 @@
             // 
             // gbRelacion
             // 
+            this.gbRelacion.Controls.Add(this.MatriculaRelacion);
+            this.gbRelacion.Controls.Add(this.label13);
             this.gbRelacion.Controls.Add(this.MatriculaPesc);
             this.gbRelacion.Controls.Add(this.label37);
             this.gbRelacion.Controls.Add(this.CuerpoDeAguaPesc);
@@ -924,11 +929,31 @@
             this.gbRelacion.TabStop = false;
             this.gbRelacion.Text = "Relación Pescador-Embarcación";
             // 
+            // MatriculaRelacion
+            // 
+            this.MatriculaRelacion.AutoSize = true;
+            this.MatriculaRelacion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MatriculaRelacion.Location = new System.Drawing.Point(95, 65);
+            this.MatriculaRelacion.Name = "MatriculaRelacion";
+            this.MatriculaRelacion.Size = new System.Drawing.Size(28, 16);
+            this.MatriculaRelacion.TabIndex = 26;
+            this.MatriculaRelacion.Text = "-----";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(7, 65);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(65, 16);
+            this.label13.TabIndex = 25;
+            this.label13.Text = "Matricula:";
+            // 
             // MatriculaPesc
             // 
             this.MatriculaPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MatriculaPesc.FormattingEnabled = true;
-            this.MatriculaPesc.Location = new System.Drawing.Point(75, 30);
+            this.MatriculaPesc.Location = new System.Drawing.Point(98, 30);
             this.MatriculaPesc.Name = "MatriculaPesc";
             this.MatriculaPesc.Size = new System.Drawing.Size(198, 24);
             this.MatriculaPesc.TabIndex = 21;
@@ -942,9 +967,9 @@
             this.label37.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label37.Location = new System.Drawing.Point(7, 33);
             this.label37.Name = "label37";
-            this.label37.Size = new System.Drawing.Size(65, 16);
+            this.label37.Size = new System.Drawing.Size(88, 16);
             this.label37.TabIndex = 4;
-            this.label37.Text = "Matricula:";
+            this.label37.Text = "Embarcación:";
             // 
             // CuerpoDeAguaPesc
             // 
@@ -1070,6 +1095,16 @@
             this.TipoTitular.TabIndex = 26;
             this.TipoTitular.Text = "Titular";
             this.TipoTitular.UseVisualStyleBackColor = true;
+            // 
+            // TipoEventual
+            // 
+            this.TipoEventual.AutoSize = true;
+            this.TipoEventual.Location = new System.Drawing.Point(12, 63);
+            this.TipoEventual.Name = "TipoEventual";
+            this.TipoEventual.Size = new System.Drawing.Size(75, 20);
+            this.TipoEventual.TabIndex = 23;
+            this.TipoEventual.Text = "Eventual";
+            this.TipoEventual.UseVisualStyleBackColor = true;
             // 
             // TipoExtra
             // 
@@ -1468,7 +1503,7 @@
             this.PanelCURP.Controls.Add(this.label28);
             this.PanelCURP.Controls.Add(this.label27);
             this.PanelCURP.ForeColor = System.Drawing.Color.Black;
-            this.PanelCURP.Location = new System.Drawing.Point(352, 268);
+            this.PanelCURP.Location = new System.Drawing.Point(395, 266);
             this.PanelCURP.Name = "PanelCURP";
             this.PanelCURP.Size = new System.Drawing.Size(477, 212);
             this.PanelCURP.TabIndex = 182;
@@ -1591,16 +1626,6 @@
             this.gbBusqueda.TabIndex = 188;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
-            // 
-            // TipoEventual
-            // 
-            this.TipoEventual.AutoSize = true;
-            this.TipoEventual.Location = new System.Drawing.Point(12, 63);
-            this.TipoEventual.Name = "TipoEventual";
-            this.TipoEventual.Size = new System.Drawing.Size(75, 20);
-            this.TipoEventual.TabIndex = 23;
-            this.TipoEventual.Text = "Eventual";
-            this.TipoEventual.UseVisualStyleBackColor = true;
             // 
             // Pantalla_Registro_Usuario
             // 
@@ -1797,5 +1822,7 @@
         private System.Windows.Forms.GroupBox gbBusqueda;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.RadioButton TipoEventual;
+        private System.Windows.Forms.Label MatriculaRelacion;
+        private System.Windows.Forms.Label label13;
     }
 }
