@@ -510,7 +510,7 @@ namespace OrdenamientoPesquero {
                 this.columnNOMBREEMBARCACION.MaxLength = 40;
                 this.columnTIPO_PESCADOR.MaxLength = 30;
                 this.columnEMBARCACION.MaxLength = 20;
-                this.columnFOLIO.MaxLength = 10;
+                this.columnFOLIO.MaxLength = 12;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

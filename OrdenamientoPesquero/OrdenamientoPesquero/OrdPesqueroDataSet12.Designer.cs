@@ -970,6 +970,7 @@ namespace OrdenamientoPesquero {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public pesembarcaRow AddpesembarcaRow(
+                        int COD_REG, 
                         string NOMBRE, 
                         string AP_PAT, 
                         string AP_MAT, 
@@ -1033,7 +1034,7 @@ namespace OrdenamientoPesquero {
                         int TIPO) {
                 pesembarcaRow rowpesembarcaRow = ((pesembarcaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
-                        null,
+                        COD_REG,
                         NOMBRE,
                         AP_PAT,
                         AP_MAT,
@@ -1321,11 +1322,7 @@ namespace OrdenamientoPesquero {
                                 this.columnCURP,
                                 this.columnMATRICULA1,
                                 this.columnRNPA}, true));
-                this.columnCOD_REG.AutoIncrement = true;
-                this.columnCOD_REG.AutoIncrementSeed = -1;
-                this.columnCOD_REG.AutoIncrementStep = -1;
                 this.columnCOD_REG.AllowDBNull = false;
-                this.columnCOD_REG.ReadOnly = true;
                 this.columnNOMBRE.MaxLength = 40;
                 this.columnAP_PAT.MaxLength = 30;
                 this.columnAP_MAT.MaxLength = 30;
@@ -1350,7 +1347,7 @@ namespace OrdenamientoPesquero {
                 this.columnCORREO.MaxLength = 40;
                 this.columnLOCALIDAD.MaxLength = 50;
                 this.columnSEGURO.MaxLength = 10;
-                this.columnFOLIO.MaxLength = 10;
+                this.columnFOLIO.MaxLength = 12;
                 this.columnFECHAEXP_FOLIO.MaxLength = 20;
                 this.columnFECHAVEN_FOLIO.MaxLength = 20;
                 this.columnMATRICULA1.AllowDBNull = false;

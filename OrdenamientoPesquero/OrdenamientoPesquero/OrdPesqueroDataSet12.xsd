@@ -97,7 +97,7 @@
         <xs:element name="pesembarca" msprop:Generator_TableClassName="pesembarcaDataTable" msprop:Generator_TableVarName="tablepesembarca" msprop:Generator_TablePropName="pesembarca" msprop:Generator_RowDeletingName="pesembarcaRowDeleting" msprop:Generator_RowChangingName="pesembarcaRowChanging" msprop:Generator_RowEvHandlerName="pesembarcaRowChangeEventHandler" msprop:Generator_RowDeletedName="pesembarcaRowDeleted" msprop:Generator_UserTableName="pesembarca" msprop:Generator_RowChangedName="pesembarcaRowChanged" msprop:Generator_RowEvArgName="pesembarcaRowChangeEvent" msprop:Generator_RowClassName="pesembarcaRow">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="COD_REG" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnCOD_REG" msprop:Generator_ColumnPropNameInRow="COD_REG" msprop:Generator_ColumnPropNameInTable="COD_REGColumn" msprop:Generator_UserColumnName="COD_REG" type="xs:int" />
+              <xs:element name="COD_REG" msprop:Generator_ColumnVarNameInTable="columnCOD_REG" msprop:Generator_ColumnPropNameInRow="COD_REG" msprop:Generator_ColumnPropNameInTable="COD_REGColumn" msprop:Generator_UserColumnName="COD_REG" type="xs:int" />
               <xs:element name="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_UserColumnName="NOMBRE" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -256,7 +256,7 @@
               <xs:element name="FOLIO" msprop:Generator_ColumnVarNameInTable="columnFOLIO" msprop:Generator_ColumnPropNameInRow="FOLIO" msprop:Generator_ColumnPropNameInTable="FOLIOColumn" msprop:Generator_UserColumnName="FOLIO" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
+                    <xs:maxLength value="12" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
