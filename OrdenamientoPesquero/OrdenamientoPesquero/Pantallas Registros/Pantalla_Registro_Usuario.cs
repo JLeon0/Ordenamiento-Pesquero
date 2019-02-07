@@ -319,6 +319,9 @@ namespace OrdenamientoPesquero
                 }
                 if (ord == 1) { si.Checked = true; }
                 else { no.Checked = true; }
+
+
+
                 CURPPesc.Text = c;
                 ObtenerImagen();
                 if (ListaNombres.SelectedIndex != -1)
@@ -1030,6 +1033,13 @@ namespace OrdenamientoPesquero
         }
 
         private delegate void SendMessageCallback(object payload);
+
+        private void FechaNacPesc_ValueChanged(object sender, EventArgs e)
+        {
+            //TimeSpan tS = new TimeSpan();
+            lblEdad.Text = (DateTime.Now.Year - (FechaNacPesc.Value.Year)).ToString() + " Años";
+            //lblEdad.Text = ((tS.Days) / 365).ToString() + " Años";
+        }
 
         private void SendMessage(object payload)
         {
