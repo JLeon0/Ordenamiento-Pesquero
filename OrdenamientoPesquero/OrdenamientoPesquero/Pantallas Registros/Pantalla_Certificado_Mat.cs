@@ -26,6 +26,11 @@ namespace OrdenamientoPesquero
             RNPA = rnpa;
         }
 
+        private void Pantalla_Certificado_Mat_Load(object sender, EventArgs e)
+        {
+            val.ajustarResolucion(this);
+            CertMatXUnidad();
+        }
         private void pictureBox14_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
@@ -76,15 +81,15 @@ namespace OrdenamientoPesquero
         }
         public void limpiarcertmat()
         {
-            foreach (TextBox item in groupBox1.Controls.OfType<TextBox>())
+            foreach (TextBox item in gbCertificado.Controls.OfType<TextBox>())
             { 
                 item.Text = "";
             }
-            foreach (ComboBox item in groupBox2.Controls.OfType<ComboBox>())
+            foreach (ComboBox item in gbVerificacion.Controls.OfType<ComboBox>())
             {
                 item.Text = "";
             }
-            foreach (MaskedTextBox item in groupBox2.Controls.OfType<MaskedTextBox>())
+            foreach (MaskedTextBox item in gbVerificacion.Controls.OfType<MaskedTextBox>())
             {
                 item.Text = "";
             }
@@ -121,11 +126,6 @@ namespace OrdenamientoPesquero
             MatriculaCertMat.Focus();
         }
 
-        private void Pantalla_Certificado_Mat_Load(object sender, EventArgs e)
-        {
-            val.ajustarResolucion(this);
-            CertMatXUnidad();
-        }
 
         public void CertMatXUnidad()
         {
@@ -196,6 +196,46 @@ namespace OrdenamientoPesquero
                 i--;
             }
             this.Cursor = Cursors.Default;
+        }
+
+        private void ActivarPanelMATRICULA_Click(object sender, EventArgs e)
+        {
+            MatriculaMal.Text = MatriculaCertMat.Text;
+            gbBotones.Enabled = false;
+            gbBusqueda.Enabled = false;
+            gbCertificado.Enabled = false;
+            gbVerificacion.Enabled = false;
+            PanelMATRICULA.Visible = true;
+            PanelMATRICULA.Enabled = true;
+        }
+
+        private void CerrarPanel_Click(object sender, EventArgs e)
+        {
+            gbBotones.Enabled = true;
+            gbBusqueda.Enabled = true;
+            gbCertificado.Enabled = true;
+            gbVerificacion.Enabled = true;
+            PanelMATRICULA.Visible = false;
+            PanelMATRICULA.Enabled = false;
+            MatriculaNueva.Text = "";
+        }
+
+        private void ActualizarMATRICULA_Click(object sender, EventArgs e)
+        {
+            if (MatriculaNueva.Text != "")
+            {
+                DialogResult res = MessageBox.Show("Usted está por cambiar la MATRICULA de una Embarcación, en todos sus PERMISOS, PESCADORES.\n Desea continuar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (res == DialogResult.Yes)
+                {
+                    if (proc.Actualizar_MATRICULA(MatriculaMal.Text, MatriculaNueva.Text) >= 1)
+                    {
+                        MatriculaCertMat.Text = MatriculaNueva.Text;
+                        MessageBox.Show("MATRICULA Actualizada");
+                    }
+                    else { MessageBox.Show("MATRICULA Ya existe"); }
+                    CertMatXUnidad();
+                }
+            }
         }
     }
 }

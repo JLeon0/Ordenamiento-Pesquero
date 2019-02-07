@@ -605,6 +605,9 @@
             // 
             this.LugarExpPer.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LugarExpPer.FormattingEnabled = true;
+            this.LugarExpPer.Items.AddRange(new object[] {
+            "LA PAZ",
+            "MAZATLAN"});
             this.LugarExpPer.Location = new System.Drawing.Point(538, 42);
             this.LugarExpPer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.LugarExpPer.Name = "LugarExpPer";
