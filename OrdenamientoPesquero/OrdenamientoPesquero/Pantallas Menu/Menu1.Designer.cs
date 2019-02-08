@@ -31,43 +31,16 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu1));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.Solicitudes = new System.Windows.Forms.Button();
             this.Ordenamiento = new System.Windows.Forms.Button();
+            this.CerrarPanel = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.pangas;
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.Solicitudes);
-            this.panel1.Controls.Add(this.Ordenamiento);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(895, 451);
-            this.panel1.TabIndex = 191;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.SEPADA;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(44, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(525, 88);
-            this.pictureBox1.TabIndex = 188;
-            this.pictureBox1.TabStop = false;
             // 
             // Solicitudes
             // 
@@ -112,6 +85,52 @@
             this.Ordenamiento.Visible = false;
             this.Ordenamiento.Click += new System.EventHandler(this.Ordenamiento_Click);
             // 
+            // CerrarPanel
+            // 
+            this.CerrarPanel.BackColor = System.Drawing.Color.Transparent;
+            this.CerrarPanel.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
+            this.CerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CerrarPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CerrarPanel.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.CerrarPanel.FlatAppearance.BorderSize = 0;
+            this.CerrarPanel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.CerrarPanel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.CerrarPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CerrarPanel.Location = new System.Drawing.Point(857, 8);
+            this.CerrarPanel.Name = "CerrarPanel";
+            this.CerrarPanel.Size = new System.Drawing.Size(30, 30);
+            this.CerrarPanel.TabIndex = 189;
+            this.toolTip1.SetToolTip(this.CerrarPanel, "Salir");
+            this.CerrarPanel.UseVisualStyleBackColor = false;
+            this.CerrarPanel.Click += new System.EventHandler(this.CerrarPanel_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.pangas;
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.CerrarPanel);
+            this.panel1.Controls.Add(this.pictureBox1);
+            this.panel1.Controls.Add(this.Solicitudes);
+            this.panel1.Controls.Add(this.Ordenamiento);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(4, 4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(895, 451);
+            this.panel1.TabIndex = 191;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.SEPADA;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(44, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(525, 88);
+            this.pictureBox1.TabIndex = 188;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -135,24 +154,6 @@
             this.label2.Size = new System.Drawing.Size(256, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ordenamiento Pesquero";
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(857, 8);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(30, 30);
-            this.button1.TabIndex = 189;
-            this.toolTip1.SetToolTip(this.button1, "Salir");
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // Menu1
             // 
@@ -188,6 +189,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button CerrarPanel;
     }
 }
