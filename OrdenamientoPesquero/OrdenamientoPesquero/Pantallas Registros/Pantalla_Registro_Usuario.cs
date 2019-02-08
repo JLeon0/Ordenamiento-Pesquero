@@ -403,7 +403,7 @@ namespace OrdenamientoPesquero
                 {
                     FemeninoPesc.Checked = true;
                 }
-                if(CURPPesc.TextLength >= 9 && RFCPesc.Text == "") { RFCPesc.Text = CURPPesc.Text.Substring(0,9); }
+                if(CURPPesc.TextLength >= 9 && RFCPesc.Text == "") { RFCPesc.Text = CURPPesc.Text.Substring(0,10); }
             }
             else
             {

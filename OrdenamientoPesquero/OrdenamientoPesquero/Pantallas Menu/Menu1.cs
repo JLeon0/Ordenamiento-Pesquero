@@ -87,7 +87,6 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 
         private void CerrarPanel_Click(object sender, EventArgs e)
         {
-            Application.Exit();
         }
     }
 }
