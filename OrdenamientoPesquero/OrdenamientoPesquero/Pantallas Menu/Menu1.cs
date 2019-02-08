@@ -84,6 +84,11 @@ namespace OrdenamientoPesquero.Pantallas_Menu
                 this.Solicitudes.Visible = true;
             }
         }
+
+        private void CerrarPanel_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
 
