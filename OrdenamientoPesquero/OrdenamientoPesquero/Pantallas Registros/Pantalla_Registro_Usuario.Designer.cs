@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Registro_Usuario));
             this.gbDatosGenerales = new System.Windows.Forms.GroupBox();
+            this.lblEdad = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.ActivarPanelCURP = new System.Windows.Forms.PictureBox();
             this.CargarFirma = new System.Windows.Forms.PictureBox();
             this.Huella = new System.Windows.Forms.PictureBox();
@@ -153,8 +155,6 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.lblEdad = new System.Windows.Forms.Label();
             this.gbDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
@@ -261,6 +261,26 @@
             this.gbDatosGenerales.TabStop = false;
             this.gbDatosGenerales.Text = "Datos Generales";
             // 
+            // lblEdad
+            // 
+            this.lblEdad.AutoSize = true;
+            this.lblEdad.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEdad.Location = new System.Drawing.Point(619, 109);
+            this.lblEdad.Name = "lblEdad";
+            this.lblEdad.Size = new System.Drawing.Size(28, 16);
+            this.lblEdad.TabIndex = 189;
+            this.lblEdad.Text = "-----";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(584, 109);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(36, 16);
+            this.label14.TabIndex = 188;
+            this.label14.Text = "Edad:";
+            // 
             // ActivarPanelCURP
             // 
             this.ActivarPanelCURP.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.actualizar;
@@ -301,6 +321,7 @@
             // 
             this.CURPPesc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.CURPPesc.Location = new System.Drawing.Point(134, 149);
+            this.CURPPesc.MaxLength = 18;
             this.CURPPesc.Name = "CURPPesc";
             this.CURPPesc.Size = new System.Drawing.Size(193, 22);
             this.CURPPesc.TabIndex = 5;
@@ -1631,26 +1652,6 @@
             this.gbBusqueda.TabIndex = 188;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(584, 109);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(36, 16);
-            this.label14.TabIndex = 188;
-            this.label14.Text = "Edad:";
-            // 
-            // lblEdad
-            // 
-            this.lblEdad.AutoSize = true;
-            this.lblEdad.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEdad.Location = new System.Drawing.Point(619, 109);
-            this.lblEdad.Name = "lblEdad";
-            this.lblEdad.Size = new System.Drawing.Size(28, 16);
-            this.lblEdad.TabIndex = 189;
-            this.lblEdad.Text = "-----";
             // 
             // Pantalla_Registro_Usuario
             // 

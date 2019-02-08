@@ -698,6 +698,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gbcs4x4.ico" />
+    <None Include="Resources\pedir.png" />
     <None Include="Resources\Firma.png" />
     <None Include="Resources\Huella.png" />
     <None Include="Resources\loading.gif" />
