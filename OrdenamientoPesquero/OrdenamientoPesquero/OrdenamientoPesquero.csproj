@@ -141,6 +141,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>OrdPesqueroDataSet111.xsd</DependentUpon>
     </Compile>
+    <Compile Include="OrdPesqueroDataSet12.cs">
+      <DependentUpon>OrdPesqueroDataSet12.xsd</DependentUpon>
+    </Compile>
     <Compile Include="OrdPesqueroDataSet12.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -2,14 +2,15 @@
 <xs:schema id="EmbarcacionesSet" targetNamespace="http://tempuri.org/EmbarcacionesSet.xsd" xmlns:mstns="http://tempuri.org/EmbarcacionesSet.xsd" xmlns="http://tempuri.org/EmbarcacionesSet.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OrdPesqueroConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OrdPesqueroConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OrdenamientoPesquero.Properties.Settings.GlobalReference.Default.OrdPesqueroConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OrdPesqueroConnectionString4" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OrdPesqueroConnectionString4 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OrdenamientoPesquero.Properties.Settings.GlobalReference.Default.OrdPesqueroConnectionString4" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="EmbarcacionesxUnidadTableAdapter" GeneratorDataComponentClassName="EmbarcacionesxUnidadTableAdapter" Name="EmbarcacionesxUnidad" UserDataComponentName="EmbarcacionesxUnidadTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="OrdPesqueroConnectionString (Settings)" DbObjectName="OrdPesquero.dbo.EmbarcacionesxUnidad" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="OrdPesqueroConnectionString4 (Settings)" DbObjectName="OrdPesquero.dbo.EmbarcacionesxUnidad" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.EmbarcacionesxUnidad</CommandText>
@@ -29,6 +30,9 @@
               <Mapping SourceColumn="MUNICIPIO" DataSetColumn="MUNICIPIO" />
               <Mapping SourceColumn="MOTORMARCA" DataSetColumn="MOTORMARCA" />
               <Mapping SourceColumn="MOTORHP" DataSetColumn="MOTORHP" />
+              <Mapping SourceColumn="ESLORA" DataSetColumn="ESLORA" />
+              <Mapping SourceColumn="MANGA" DataSetColumn="MANGA" />
+              <Mapping SourceColumn="PUNTAL" DataSetColumn="PUNTAL" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -89,6 +93,27 @@
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="4" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ESLORA" msprop:Generator_ColumnVarNameInTable="columnESLORA" msprop:Generator_ColumnPropNameInRow="ESLORA" msprop:Generator_ColumnPropNameInTable="ESLORAColumn" msprop:Generator_UserColumnName="ESLORA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MANGA" msprop:Generator_ColumnVarNameInTable="columnMANGA" msprop:Generator_ColumnPropNameInRow="MANGA" msprop:Generator_ColumnPropNameInTable="MANGAColumn" msprop:Generator_UserColumnName="MANGA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PUNTAL" msprop:Generator_ColumnVarNameInTable="columnPUNTAL" msprop:Generator_ColumnPropNameInRow="PUNTAL" msprop:Generator_ColumnPropNameInTable="PUNTALColumn" msprop:Generator_UserColumnName="PUNTAL" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="5" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

@@ -436,9 +436,9 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     this.reportViewer1.ProcessingMode = ProcessingMode.Local;
                     reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "reportepescadores.rdlc");
                     this.pesembarcaTableAdapter.Fill(ordPesqueroDataSet12.pesembarca);
-                    //datos.Name = "Vencidos";
-                    //datos.Value = vencidos.PermisosVencidos;
-                    //this.reportViewer1.LocalReport.DataSources.Add(datos);
+                    datos.Name = "DataSet1";
+                    datos.Value = ordPesqueroDataSet12.pesembarca;
+                   this.reportViewer1.LocalReport.DataSources.Add(datos);
                     this.reportViewer1.RefreshReport();
                     break;
                 default:

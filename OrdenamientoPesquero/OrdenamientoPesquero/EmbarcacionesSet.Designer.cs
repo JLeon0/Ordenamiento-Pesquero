@@ -293,6 +293,12 @@ namespace OrdenamientoPesquero {
             
             private global::System.Data.DataColumn columnMOTORHP;
             
+            private global::System.Data.DataColumn columnESLORA;
+            
+            private global::System.Data.DataColumn columnMANGA;
+            
+            private global::System.Data.DataColumn columnPUNTAL;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public EmbarcacionesxUnidadDataTable() {
@@ -384,6 +390,30 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ESLORAColumn {
+                get {
+                    return this.columnESLORA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn MANGAColumn {
+                get {
+                    return this.columnMANGA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PUNTALColumn {
+                get {
+                    return this.columnPUNTAL;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -419,7 +449,7 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public EmbarcacionesxUnidadRow AddEmbarcacionesxUnidadRow(string NOMBREEMBARCACION, string MATRICULA, string NUMCHIP, string FECHACHIPEADO, string MUNICIPIO, string MOTORMARCA, string MOTORHP) {
+            public EmbarcacionesxUnidadRow AddEmbarcacionesxUnidadRow(string NOMBREEMBARCACION, string MATRICULA, string NUMCHIP, string FECHACHIPEADO, string MUNICIPIO, string MOTORMARCA, string MOTORHP, string ESLORA, string MANGA, string PUNTAL) {
                 EmbarcacionesxUnidadRow rowEmbarcacionesxUnidadRow = ((EmbarcacionesxUnidadRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NOMBREEMBARCACION,
@@ -428,7 +458,10 @@ namespace OrdenamientoPesquero {
                         FECHACHIPEADO,
                         MUNICIPIO,
                         MOTORMARCA,
-                        MOTORHP};
+                        MOTORHP,
+                        ESLORA,
+                        MANGA,
+                        PUNTAL};
                 rowEmbarcacionesxUnidadRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEmbarcacionesxUnidadRow);
                 return rowEmbarcacionesxUnidadRow;
@@ -465,6 +498,9 @@ namespace OrdenamientoPesquero {
                 this.columnMUNICIPIO = base.Columns["MUNICIPIO"];
                 this.columnMOTORMARCA = base.Columns["MOTORMARCA"];
                 this.columnMOTORHP = base.Columns["MOTORHP"];
+                this.columnESLORA = base.Columns["ESLORA"];
+                this.columnMANGA = base.Columns["MANGA"];
+                this.columnPUNTAL = base.Columns["PUNTAL"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -484,6 +520,12 @@ namespace OrdenamientoPesquero {
                 base.Columns.Add(this.columnMOTORMARCA);
                 this.columnMOTORHP = new global::System.Data.DataColumn("MOTORHP", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMOTORHP);
+                this.columnESLORA = new global::System.Data.DataColumn("ESLORA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnESLORA);
+                this.columnMANGA = new global::System.Data.DataColumn("MANGA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnMANGA);
+                this.columnPUNTAL = new global::System.Data.DataColumn("PUNTAL", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPUNTAL);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnMATRICULA}, true));
                 this.columnNOMBREEMBARCACION.MaxLength = 40;
@@ -495,6 +537,9 @@ namespace OrdenamientoPesquero {
                 this.columnMUNICIPIO.MaxLength = 20;
                 this.columnMOTORMARCA.MaxLength = 20;
                 this.columnMOTORHP.MaxLength = 4;
+                this.columnESLORA.MaxLength = 5;
+                this.columnMANGA.MaxLength = 5;
+                this.columnPUNTAL.MaxLength = 5;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -747,6 +792,54 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ESLORA {
+                get {
+                    try {
+                        return ((string)(this[this.tableEmbarcacionesxUnidad.ESLORAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ESLORA\' de la tabla \'EmbarcacionesxUnidad\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmbarcacionesxUnidad.ESLORAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string MANGA {
+                get {
+                    try {
+                        return ((string)(this[this.tableEmbarcacionesxUnidad.MANGAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'MANGA\' de la tabla \'EmbarcacionesxUnidad\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmbarcacionesxUnidad.MANGAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PUNTAL {
+                get {
+                    try {
+                        return ((string)(this[this.tableEmbarcacionesxUnidad.PUNTALColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PUNTAL\' de la tabla \'EmbarcacionesxUnidad\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmbarcacionesxUnidad.PUNTALColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNOMBREEMBARCACIONNull() {
                 return this.IsNull(this.tableEmbarcacionesxUnidad.NOMBREEMBARCACIONColumn);
             }
@@ -815,6 +908,42 @@ namespace OrdenamientoPesquero {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetMOTORHPNull() {
                 this[this.tableEmbarcacionesxUnidad.MOTORHPColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsESLORANull() {
+                return this.IsNull(this.tableEmbarcacionesxUnidad.ESLORAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetESLORANull() {
+                this[this.tableEmbarcacionesxUnidad.ESLORAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsMANGANull() {
+                return this.IsNull(this.tableEmbarcacionesxUnidad.MANGAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetMANGANull() {
+                this[this.tableEmbarcacionesxUnidad.MANGAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPUNTALNull() {
+                return this.IsNull(this.tableEmbarcacionesxUnidad.PUNTALColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPUNTALNull() {
+                this[this.tableEmbarcacionesxUnidad.PUNTALColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -984,6 +1113,9 @@ namespace OrdenamientoPesquero.EmbarcacionesSetTableAdapters {
             tableMapping.ColumnMappings.Add("MUNICIPIO", "MUNICIPIO");
             tableMapping.ColumnMappings.Add("MOTORMARCA", "MOTORMARCA");
             tableMapping.ColumnMappings.Add("MOTORHP", "MOTORHP");
+            tableMapping.ColumnMappings.Add("ESLORA", "ESLORA");
+            tableMapping.ColumnMappings.Add("MANGA", "MANGA");
+            tableMapping.ColumnMappings.Add("PUNTAL", "PUNTAL");
             this._adapter.TableMappings.Add(tableMapping);
         }
         
@@ -991,7 +1123,7 @@ namespace OrdenamientoPesquero.EmbarcacionesSetTableAdapters {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::OrdenamientoPesquero.Properties.Settings.Default.OrdPesqueroConnectionString;
+            this._connection.ConnectionString = global::OrdenamientoPesquero.Properties.Settings.Default.OrdPesqueroConnectionString4;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

@@ -46,13 +46,13 @@
                   <Width>1.34231cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>4.04721cm</Width>
+                  <Width>3.65158cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>5.66707cm</Width>
+                  <Width>5.52851cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.57683cm</Width>
+                  <Width>2.20025cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.81487cm</Width>
@@ -218,7 +218,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>TIPO PESCADOR</Value>
+                                  <Value>TIPO DE PESCADOR</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -580,10 +580,10 @@
             </TablixRowHierarchy>
             <FixedColumnHeaders>true</FixedColumnHeaders>
             <DataSetName>DataSet5</DataSetName>
-            <Top>0.72463cm</Top>
-            <Left>0.05815cm</Left>
+            <Top>0.66203cm</Top>
+            <Left>0.02288cm</Left>
             <Height>0.91492cm</Height>
-            <Width>18.6772cm</Width>
+            <Width>18.76643cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -593,9 +593,9 @@
           </Tablix>
         </ReportItems>
         <OmitBorderOnPageBreak>true</OmitBorderOnPageBreak>
-        <Top>5.7173cm</Top>
+        <Top>4.7648cm</Top>
         <Left>0.47926cm</Left>
-        <Height>2.03046cm</Height>
+        <Height>1.57695cm</Height>
         <Width>18.80661cm</Width>
         <Style>
           <Border>
@@ -644,13 +644,28 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>7.87464cm</Width>
+                  <Width>5.6396cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>6.78606cm</Width>
+                  <Width>2.3825cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>4.06328cm</Width>
+                  <Width>2.13822cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.45844cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.55408cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.59026cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.5cm</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.41521cm</Width>
                 </TablixColumn>
               </TablixColumns>
               <TablixRows>
@@ -751,6 +766,186 @@
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>Textbox43</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox21">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Eslora</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox21</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox23">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Manga</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox23</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox26">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>Puntal</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox26</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox35">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>MOTOR</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox35</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox50">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>HP</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox50</rd:DefaultName>
                           <Style>
                             <Border>
                               <Color>LightGrey</Color>
@@ -873,12 +1068,192 @@
                         </Textbox>
                       </CellContents>
                     </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="ESLORA">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!ESLORA.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>ESLORA</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="MANGA">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!MANGA.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>MANGA</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="PUNTAL">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PUNTAL.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PUNTAL</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="MOTORMARCA">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!MOTORMARCA.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>MOTORMARCA</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="MOTORHP">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!MOTORHP.Value</Value>
+                                  <Style>
+                                    <FontSize>8pt</FontSize>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style>
+                                <TextAlign>Center</TextAlign>
+                              </Style>
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>MOTORHP</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                              <Width>0.5pt</Width>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
                   </TablixCells>
                 </TablixRow>
               </TablixRows>
             </TablixBody>
             <TablixColumnHierarchy>
               <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
                 <TablixMember />
                 <TablixMember />
                 <TablixMember />
@@ -896,10 +1271,10 @@
             </TablixRowHierarchy>
             <FixedColumnHeaders>true</FixedColumnHeaders>
             <DataSetName>DataSet3</DataSetName>
-            <Top>0.9747cm</Top>
-            <Left>0.01137cm</Left>
+            <Top>1.06648cm</Top>
+            <Left>0.05705cm</Left>
             <Height>0.96129cm</Height>
-            <Width>18.72398cm</Width>
+            <Width>18.67831cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -921,10 +1296,10 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Top>15.68779cm</Top>
+        <Top>14.17966cm</Top>
         <Left>0.44509cm</Left>
-        <Height>2.09474cm</Height>
-        <Width>18.80661cm</Width>
+        <Height>2.21297cm</Height>
+        <Width>18.8152cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -1341,7 +1716,7 @@
         </TablixRowHierarchy>
         <FixedColumnHeaders>true</FixedColumnHeaders>
         <DataSetName>DataSet2</DataSetName>
-        <Top>9.61517cm</Top>
+        <Top>8.10705cm</Top>
         <Left>0.53629cm</Left>
         <Height>1.34816cm</Height>
         <Width>18.7154cm</Width>
@@ -1370,7 +1745,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>8.06554cm</Top>
+        <Top>6.55742cm</Top>
         <Left>0.53741cm</Left>
         <Height>0.68589cm</Height>
         <Width>18.71539cm</Width>
@@ -1793,7 +2168,7 @@
         </TablixRowHierarchy>
         <FixedColumnHeaders>true</FixedColumnHeaders>
         <DataSetName>DataSet11</DataSetName>
-        <Top>11.81028cm</Top>
+        <Top>10.30216cm</Top>
         <Left>0.53628cm</Left>
         <Height>1.40108cm</Height>
         <Width>18.7154cm</Width>
@@ -2212,7 +2587,7 @@
         </TablixRowHierarchy>
         <FixedColumnHeaders>true</FixedColumnHeaders>
         <DataSetName>DataSet4</DataSetName>
-        <Top>14.0901cm</Top>
+        <Top>12.58198cm</Top>
         <Left>0.53628cm</Left>
         <Height>1.42131cm</Height>
         <Width>18.7154cm</Width>
@@ -2239,8 +2614,8 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox42</rd:DefaultName>
-        <Top>11.10444cm</Top>
-        <Left>0.85381cm</Left>
+        <Top>10.15194cm</Top>
+        <Left>0.53741cm</Left>
         <Height>0.6cm</Height>
         <Width>3.82292cm</Width>
         <ZIndex>6</ZIndex>
@@ -2269,7 +2644,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox42</rd:DefaultName>
-        <Top>13.31371cm</Top>
+        <Top>12.36121cm</Top>
         <Left>0.85378cm</Left>
         <Height>0.6cm</Height>
         <Width>3.82292cm</Width>
@@ -2315,7 +2690,7 @@
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>9.01517cm</Top>
+        <Top>7.50705cm</Top>
         <Left>0.50214cm</Left>
         <Height>0.6cm</Height>
         <Width>18.74956cm</Width>
@@ -2639,278 +3014,6 @@
               </Border>
             </Style>
           </Rectangle>
-          <Textbox Name="Textbox61">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Capitanes:</Value>
-                    <Style>
-                      <FontSize>7pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Right</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox45</rd:DefaultName>
-            <Top>2.63493cm</Top>
-            <Left>1.07648cm</Left>
-            <Height>0.41192cm</Height>
-            <Width>1.99171cm</Width>
-            <ZIndex>1</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>1pt</PaddingLeft>
-              <PaddingRight>1pt</PaddingRight>
-              <PaddingTop>1pt</PaddingTop>
-              <PaddingBottom>1pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="naseg3">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!ncap.Value</Value>
-                    <Style>
-                      <FontSize>7pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Center</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>naseg</rd:DefaultName>
-            <Top>2.63493cm</Top>
-            <Left>3.24457cm</Left>
-            <Height>0.41192cm</Height>
-            <Width>1.5118cm</Width>
-            <ZIndex>2</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>1pt</PaddingLeft>
-              <PaddingRight>1pt</PaddingRight>
-              <PaddingTop>1pt</PaddingTop>
-              <PaddingBottom>1pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox62">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value> Marineros:</Value>
-                    <Style>
-                      <FontSize>7pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Right</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox45</rd:DefaultName>
-            <Top>3.16437cm</Top>
-            <Left>1.07648cm</Left>
-            <Height>0.41192cm</Height>
-            <Width>1.99171cm</Width>
-            <ZIndex>3</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>1pt</PaddingLeft>
-              <PaddingRight>1pt</PaddingRight>
-              <PaddingTop>1pt</PaddingTop>
-              <PaddingBottom>1pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="nemb5">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!nmar.Value</Value>
-                    <Style>
-                      <FontSize>7pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Center</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>nemb</rd:DefaultName>
-            <Top>3.16437cm</Top>
-            <Left>3.24457cm</Left>
-            <Height>0.41192cm</Height>
-            <Width>1.5118cm</Width>
-            <ZIndex>4</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>1pt</PaddingLeft>
-              <PaddingRight>1pt</PaddingRight>
-              <PaddingTop>1pt</PaddingTop>
-              <PaddingBottom>1pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox63">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Acuacultores:</Value>
-                    <Style>
-                      <FontSize>7pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Right</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox45</rd:DefaultName>
-            <Top>3.69382cm</Top>
-            <Left>1.07648cm</Left>
-            <Height>0.41192cm</Height>
-            <Width>1.99171cm</Width>
-            <ZIndex>5</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>1pt</PaddingLeft>
-              <PaddingRight>1pt</PaddingRight>
-              <PaddingTop>1pt</PaddingTop>
-              <PaddingBottom>1pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="naseg4">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!nacu.Value</Value>
-                    <Style>
-                      <FontSize>7pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Center</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>naseg</rd:DefaultName>
-            <Top>3.69382cm</Top>
-            <Left>3.24457cm</Left>
-            <Height>0.41192cm</Height>
-            <Width>1.5118cm</Width>
-            <ZIndex>6</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>1pt</PaddingLeft>
-              <PaddingRight>1pt</PaddingRight>
-              <PaddingTop>1pt</PaddingTop>
-              <PaddingBottom>1pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox65">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Sin actividad:</Value>
-                    <Style>
-                      <FontSize>7pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Right</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox45</rd:DefaultName>
-            <Top>4.22327cm</Top>
-            <Left>1.07648cm</Left>
-            <Height>0.41192cm</Height>
-            <Width>1.99171cm</Width>
-            <ZIndex>7</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>1pt</PaddingLeft>
-              <PaddingRight>1pt</PaddingRight>
-              <PaddingTop>1pt</PaddingTop>
-              <PaddingBottom>1pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="naseg5">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!nsin.Value</Value>
-                    <Style>
-                      <FontSize>7pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Center</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>naseg</rd:DefaultName>
-            <Top>4.22327cm</Top>
-            <Left>3.24457cm</Left>
-            <Height>0.41192cm</Height>
-            <Width>1.5118cm</Width>
-            <ZIndex>8</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>1pt</PaddingLeft>
-              <PaddingRight>1pt</PaddingRight>
-              <PaddingTop>1pt</PaddingTop>
-              <PaddingBottom>1pt</PaddingBottom>
-            </Style>
-          </Textbox>
           <Textbox Name="Textbox66">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
@@ -2934,7 +3037,7 @@
             <Left>0.60556cm</Left>
             <Height>0.41192cm</Height>
             <Width>1.28292cm</Width>
-            <ZIndex>9</ZIndex>
+            <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -2968,11 +3071,363 @@
             <Left>2.06486cm</Left>
             <Height>0.41192cm</Height>
             <Width>1.5118cm</Width>
-            <ZIndex>10</ZIndex>
+            <ZIndex>2</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
+              <PaddingLeft>1pt</PaddingLeft>
+              <PaddingRight>1pt</PaddingRight>
+              <PaddingTop>1pt</PaddingTop>
+              <PaddingBottom>1pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox61">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Capitanes:</Value>
+                    <Style>
+                      <FontSize>7.5pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox45</rd:DefaultName>
+            <Top>2.35384cm</Top>
+            <Left>1.56176cm</Left>
+            <Height>0.41192cm</Height>
+            <Width>1.99171cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>0.5pt</Width>
+              </Border>
+              <TopBorder>
+                <Width>0.5pt</Width>
+              </TopBorder>
+              <LeftBorder>
+                <Width>0.5pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Width>0.5pt</Width>
+              </RightBorder>
+              <PaddingLeft>1pt</PaddingLeft>
+              <PaddingRight>1pt</PaddingRight>
+              <PaddingTop>1pt</PaddingTop>
+              <PaddingBottom>1pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="naseg3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!ncap.Value</Value>
+                    <Style>
+                      <FontSize>7.5pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>naseg</rd:DefaultName>
+            <Top>2.35384cm</Top>
+            <Left>3.72986cm</Left>
+            <Height>0.41192cm</Height>
+            <Width>1.5118cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>0.5pt</Width>
+              </Border>
+              <TopBorder>
+                <Width>0.5pt</Width>
+              </TopBorder>
+              <LeftBorder>
+                <Width>0.5pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Width>0.5pt</Width>
+              </RightBorder>
+              <PaddingLeft>1pt</PaddingLeft>
+              <PaddingRight>1pt</PaddingRight>
+              <PaddingTop>1pt</PaddingTop>
+              <PaddingBottom>1pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox62">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value> Marineros:</Value>
+                    <Style>
+                      <FontSize>7.5pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox45</rd:DefaultName>
+            <Top>2.76576cm</Top>
+            <Left>1.56176cm</Left>
+            <Height>0.41192cm</Height>
+            <Width>1.99171cm</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>0.5pt</Width>
+              </Border>
+              <TopBorder>
+                <Width>0.5pt</Width>
+              </TopBorder>
+              <LeftBorder>
+                <Width>0.5pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Width>0.5pt</Width>
+              </RightBorder>
+              <PaddingLeft>1pt</PaddingLeft>
+              <PaddingRight>1pt</PaddingRight>
+              <PaddingTop>1pt</PaddingTop>
+              <PaddingBottom>1pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="nemb5">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!nmar.Value</Value>
+                    <Style>
+                      <FontSize>7.5pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>nemb</rd:DefaultName>
+            <Top>2.76576cm</Top>
+            <Left>3.72986cm</Left>
+            <Height>0.41192cm</Height>
+            <Width>1.5118cm</Width>
+            <ZIndex>6</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>0.5pt</Width>
+              </Border>
+              <TopBorder>
+                <Width>0.5pt</Width>
+              </TopBorder>
+              <LeftBorder>
+                <Width>0.5pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Width>0.5pt</Width>
+              </RightBorder>
+              <PaddingLeft>1pt</PaddingLeft>
+              <PaddingRight>1pt</PaddingRight>
+              <PaddingTop>1pt</PaddingTop>
+              <PaddingBottom>1pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox63">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Acuacultores:</Value>
+                    <Style>
+                      <FontSize>7.5pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox45</rd:DefaultName>
+            <Top>3.17768cm</Top>
+            <Left>1.56176cm</Left>
+            <Height>0.41192cm</Height>
+            <Width>1.99171cm</Width>
+            <ZIndex>7</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>0.5pt</Width>
+              </Border>
+              <TopBorder>
+                <Width>0.5pt</Width>
+              </TopBorder>
+              <LeftBorder>
+                <Width>0.5pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Width>0.5pt</Width>
+              </RightBorder>
+              <PaddingLeft>1pt</PaddingLeft>
+              <PaddingRight>1pt</PaddingRight>
+              <PaddingTop>1pt</PaddingTop>
+              <PaddingBottom>1pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="naseg4">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!nacu.Value</Value>
+                    <Style>
+                      <FontSize>7.5pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>naseg</rd:DefaultName>
+            <Top>3.17768cm</Top>
+            <Left>3.72986cm</Left>
+            <Height>0.41192cm</Height>
+            <Width>1.5118cm</Width>
+            <ZIndex>8</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>0.5pt</Width>
+              </Border>
+              <TopBorder>
+                <Width>0.5pt</Width>
+              </TopBorder>
+              <LeftBorder>
+                <Width>0.5pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Width>0.5pt</Width>
+              </RightBorder>
+              <PaddingLeft>1pt</PaddingLeft>
+              <PaddingRight>1pt</PaddingRight>
+              <PaddingTop>1pt</PaddingTop>
+              <PaddingBottom>1pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox65">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Sin actividad:</Value>
+                    <Style>
+                      <FontSize>7.5pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox45</rd:DefaultName>
+            <Top>3.5896cm</Top>
+            <Left>1.56176cm</Left>
+            <Height>0.41192cm</Height>
+            <Width>1.99171cm</Width>
+            <ZIndex>9</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>0.5pt</Width>
+              </Border>
+              <TopBorder>
+                <Width>0.5pt</Width>
+              </TopBorder>
+              <LeftBorder>
+                <Width>0.5pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Width>0.5pt</Width>
+              </RightBorder>
+              <PaddingLeft>1pt</PaddingLeft>
+              <PaddingRight>1pt</PaddingRight>
+              <PaddingTop>1pt</PaddingTop>
+              <PaddingBottom>1pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="naseg5">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!nsin.Value</Value>
+                    <Style>
+                      <FontSize>7.5pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>naseg</rd:DefaultName>
+            <Top>3.5896cm</Top>
+            <Left>3.72986cm</Left>
+            <Height>0.41192cm</Height>
+            <Width>1.5118cm</Width>
+            <ZIndex>10</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>0.5pt</Width>
+              </Border>
+              <TopBorder>
+                <Width>0.5pt</Width>
+              </TopBorder>
+              <LeftBorder>
+                <Width>0.5pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Width>0.5pt</Width>
+              </RightBorder>
               <PaddingLeft>1pt</PaddingLeft>
               <PaddingRight>1pt</PaddingRight>
               <PaddingTop>1pt</PaddingTop>
@@ -2988,7 +3443,7 @@
                   <TextRun>
                     <Value>Asegurados:</Value>
                     <Style>
-                      <FontSize>8pt</FontSize>
+                      <FontSize>7.5pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -2998,15 +3453,25 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox45</rd:DefaultName>
-            <Top>1.92938cm</Top>
-            <Left>6.38577cm</Left>
-            <Height>0.45cm</Height>
+            <Top>2.47136cm</Top>
+            <Left>6.58278cm</Left>
+            <Height>0.41192cm</Height>
             <Width>2.58348cm</Width>
             <ZIndex>11</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
+                <Width>0.5pt</Width>
               </Border>
+              <TopBorder>
+                <Width>0.5pt</Width>
+              </TopBorder>
+              <LeftBorder>
+                <Width>0.5pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Width>0.5pt</Width>
+              </RightBorder>
               <PaddingLeft>1pt</PaddingLeft>
               <PaddingRight>1pt</PaddingRight>
               <PaddingTop>1pt</PaddingTop>
@@ -3022,7 +3487,7 @@
                   <TextRun>
                     <Value>=Parameters!naseg.Value</Value>
                     <Style>
-                      <FontSize>8pt</FontSize>
+                      <FontSize>7.5pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -3032,151 +3497,25 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>naseg</rd:DefaultName>
-            <Top>1.92938cm</Top>
-            <Left>9.08563cm</Left>
-            <Height>0.45cm</Height>
+            <Top>2.47136cm</Top>
+            <Left>9.28264cm</Left>
+            <Height>0.41192cm</Height>
             <Width>1.5118cm</Width>
             <ZIndex>12</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
+                <Width>0.5pt</Width>
               </Border>
-              <PaddingLeft>1pt</PaddingLeft>
-              <PaddingRight>1pt</PaddingRight>
-              <PaddingTop>1pt</PaddingTop>
-              <PaddingBottom>1pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox58">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>  Permisos:</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Right</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox45</rd:DefaultName>
-            <Top>3.80855cm</Top>
-            <Left>6.38577cm</Left>
-            <Height>0.45cm</Height>
-            <Width>2.58348cm</Width>
-            <ZIndex>13</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>1pt</PaddingLeft>
-              <PaddingRight>1pt</PaddingRight>
-              <PaddingTop>1pt</PaddingTop>
-              <PaddingBottom>1pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox59">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>     Esfuerzos:</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Right</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox45</rd:DefaultName>
-            <Top>4.43494cm</Top>
-            <Left>6.38577cm</Left>
-            <Height>0.45cm</Height>
-            <Width>2.58348cm</Width>
-            <ZIndex>14</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>1pt</PaddingLeft>
-              <PaddingRight>1pt</PaddingRight>
-              <PaddingTop>1pt</PaddingTop>
-              <PaddingBottom>1pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="nper2">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!nper.Value</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>nper</rd:DefaultName>
-            <Top>3.80855cm</Top>
-            <Left>9.08563cm</Left>
-            <Height>0.45cm</Height>
-            <Width>1.5118cm</Width>
-            <ZIndex>15</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>1pt</PaddingLeft>
-              <PaddingRight>1pt</PaddingRight>
-              <PaddingTop>1pt</PaddingTop>
-              <PaddingBottom>1pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="nemb3">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!nemb.Value</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>nemb</rd:DefaultName>
-            <Top>4.43494cm</Top>
-            <Left>9.08563cm</Left>
-            <Height>0.45cm</Height>
-            <Width>1.5118cm</Width>
-            <ZIndex>16</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
+              <TopBorder>
+                <Width>0.5pt</Width>
+              </TopBorder>
+              <LeftBorder>
+                <Width>0.5pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Width>0.5pt</Width>
+              </RightBorder>
               <PaddingLeft>1pt</PaddingLeft>
               <PaddingRight>1pt</PaddingRight>
               <PaddingTop>1pt</PaddingTop>
@@ -3192,7 +3531,7 @@
                   <TextRun>
                     <Value>  Ordenados:</Value>
                     <Style>
-                      <FontSize>8pt</FontSize>
+                      <FontSize>7.5pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -3202,15 +3541,25 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox45</rd:DefaultName>
-            <Top>2.55577cm</Top>
-            <Left>6.38577cm</Left>
-            <Height>0.45cm</Height>
+            <Top>2.88328cm</Top>
+            <Left>6.58278cm</Left>
+            <Height>0.41192cm</Height>
             <Width>2.58348cm</Width>
-            <ZIndex>17</ZIndex>
+            <ZIndex>13</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
+                <Width>0.5pt</Width>
               </Border>
+              <TopBorder>
+                <Width>0.5pt</Width>
+              </TopBorder>
+              <LeftBorder>
+                <Width>0.5pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Width>0.5pt</Width>
+              </RightBorder>
               <PaddingLeft>1pt</PaddingLeft>
               <PaddingRight>1pt</PaddingRight>
               <PaddingTop>1pt</PaddingTop>
@@ -3226,7 +3575,7 @@
                   <TextRun>
                     <Value>=Parameters!nord.Value</Value>
                     <Style>
-                      <FontSize>8pt</FontSize>
+                      <FontSize>7.5pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -3236,15 +3585,25 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>nemb</rd:DefaultName>
-            <Top>2.55577cm</Top>
-            <Left>9.08563cm</Left>
-            <Height>0.45cm</Height>
+            <Top>2.88328cm</Top>
+            <Left>9.28264cm</Left>
+            <Height>0.41192cm</Height>
             <Width>1.5118cm</Width>
-            <ZIndex>18</ZIndex>
+            <ZIndex>14</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
+                <Width>0.5pt</Width>
               </Border>
+              <TopBorder>
+                <Width>0.5pt</Width>
+              </TopBorder>
+              <LeftBorder>
+                <Width>0.5pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Width>0.5pt</Width>
+              </RightBorder>
               <PaddingLeft>1pt</PaddingLeft>
               <PaddingRight>1pt</PaddingRight>
               <PaddingTop>1pt</PaddingTop>
@@ -3260,7 +3619,7 @@
                   <TextRun>
                     <Value>  Credencializados:</Value>
                     <Style>
-                      <FontSize>8pt</FontSize>
+                      <FontSize>7.5pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -3270,15 +3629,25 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox45</rd:DefaultName>
-            <Top>3.18216cm</Top>
-            <Left>6.38577cm</Left>
-            <Height>0.45cm</Height>
+            <Top>3.2952cm</Top>
+            <Left>6.58278cm</Left>
+            <Height>0.41192cm</Height>
             <Width>2.58348cm</Width>
-            <ZIndex>19</ZIndex>
+            <ZIndex>15</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
+                <Width>0.5pt</Width>
               </Border>
+              <TopBorder>
+                <Width>0.5pt</Width>
+              </TopBorder>
+              <LeftBorder>
+                <Width>0.5pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Width>0.5pt</Width>
+              </RightBorder>
               <PaddingLeft>1pt</PaddingLeft>
               <PaddingRight>1pt</PaddingRight>
               <PaddingTop>1pt</PaddingTop>
@@ -3294,7 +3663,7 @@
                   <TextRun>
                     <Value>=Parameters!ncred.Value</Value>
                     <Style>
-                      <FontSize>8pt</FontSize>
+                      <FontSize>7.5pt</FontSize>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -3304,15 +3673,201 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>nemb</rd:DefaultName>
-            <Top>3.18216cm</Top>
-            <Left>9.08563cm</Left>
-            <Height>0.45cm</Height>
+            <Top>3.2952cm</Top>
+            <Left>9.28264cm</Left>
+            <Height>0.41192cm</Height>
+            <Width>1.5118cm</Width>
+            <ZIndex>16</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>0.5pt</Width>
+              </Border>
+              <TopBorder>
+                <Width>0.5pt</Width>
+              </TopBorder>
+              <LeftBorder>
+                <Width>0.5pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Width>0.5pt</Width>
+              </RightBorder>
+              <PaddingLeft>1pt</PaddingLeft>
+              <PaddingRight>1pt</PaddingRight>
+              <PaddingTop>1pt</PaddingTop>
+              <PaddingBottom>1pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox58">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>  Permisos:</Value>
+                    <Style>
+                      <FontSize>7.5pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox45</rd:DefaultName>
+            <Top>2.47136cm</Top>
+            <Left>12.30697cm</Left>
+            <Height>0.41192cm</Height>
+            <Width>2.58348cm</Width>
+            <ZIndex>17</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>0.5pt</Width>
+              </Border>
+              <TopBorder>
+                <Width>0.5pt</Width>
+              </TopBorder>
+              <LeftBorder>
+                <Width>0.5pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Width>0.5pt</Width>
+              </RightBorder>
+              <PaddingLeft>1pt</PaddingLeft>
+              <PaddingRight>1pt</PaddingRight>
+              <PaddingTop>1pt</PaddingTop>
+              <PaddingBottom>1pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="Textbox59">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>     Esfuerzos:</Value>
+                    <Style>
+                      <FontSize>7.5pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox45</rd:DefaultName>
+            <Top>2.88328cm</Top>
+            <Left>12.30697cm</Left>
+            <Height>0.41192cm</Height>
+            <Width>2.58348cm</Width>
+            <ZIndex>18</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>0.5pt</Width>
+              </Border>
+              <TopBorder>
+                <Width>0.5pt</Width>
+              </TopBorder>
+              <LeftBorder>
+                <Width>0.5pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Width>0.5pt</Width>
+              </RightBorder>
+              <PaddingLeft>1pt</PaddingLeft>
+              <PaddingRight>1pt</PaddingRight>
+              <PaddingTop>1pt</PaddingTop>
+              <PaddingBottom>1pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="nper2">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!nper.Value</Value>
+                    <Style>
+                      <FontSize>7.5pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>nper</rd:DefaultName>
+            <Top>2.47136cm</Top>
+            <Left>15.00682cm</Left>
+            <Height>0.41192cm</Height>
+            <Width>1.5118cm</Width>
+            <ZIndex>19</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+                <Width>0.5pt</Width>
+              </Border>
+              <TopBorder>
+                <Width>0.5pt</Width>
+              </TopBorder>
+              <LeftBorder>
+                <Width>0.5pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Width>0.5pt</Width>
+              </RightBorder>
+              <PaddingLeft>1pt</PaddingLeft>
+              <PaddingRight>1pt</PaddingRight>
+              <PaddingTop>1pt</PaddingTop>
+              <PaddingBottom>1pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Textbox Name="nemb3">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!nemb.Value</Value>
+                    <Style>
+                      <FontSize>7.5pt</FontSize>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Left</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>nemb</rd:DefaultName>
+            <Top>2.88328cm</Top>
+            <Left>15.00682cm</Left>
+            <Height>0.41192cm</Height>
             <Width>1.5118cm</Width>
             <ZIndex>20</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
+                <Width>0.5pt</Width>
               </Border>
+              <TopBorder>
+                <Width>0.5pt</Width>
+              </TopBorder>
+              <LeftBorder>
+                <Width>0.5pt</Width>
+              </LeftBorder>
+              <RightBorder>
+                <Width>0.5pt</Width>
+              </RightBorder>
               <PaddingLeft>1pt</PaddingLeft>
               <PaddingRight>1pt</PaddingRight>
               <PaddingTop>1pt</PaddingTop>
@@ -3323,7 +3878,7 @@
         <KeepTogether>true</KeepTogether>
         <Top>0.30091cm</Top>
         <Left>0.635cm</Left>
-        <Height>5.08535cm</Height>
+        <Height>4.00152cm</Height>
         <Width>18.71539cm</Width>
         <ZIndex>9</ZIndex>
         <Style>
@@ -3338,7 +3893,7 @@
     <Height>18.91232cm</Height>
     <Style />
   </Body>
-  <Width>19.35039cm</Width>
+  <Width>19.37591cm</Width>
   <Page>
     <PageHeader>
       <Height>1.94373cm</Height>
@@ -3473,7 +4028,7 @@
         <DataProvider>System.Data.DataSet</DataProvider>
         <ConnectString>/* Local Connection */</ConnectString>
       </ConnectionProperties>
-      <rd:DataSourceID>3999c4df-221b-49f7-87ba-c4c1e2c677c3</rd:DataSourceID>
+      <rd:DataSourceID>ca0e2a78-8a91-41c5-904b-19b29637fd72</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
@@ -3573,50 +4128,6 @@
         <rd:TableAdapterName>vista_permTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="DataSet3">
-      <Query>
-        <DataSourceName>EmbarcacionesSet</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="NOMBREEMBARCACION">
-          <DataField>NOMBREEMBARCACION</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MATRICULA">
-          <DataField>MATRICULA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="NUMCHIP">
-          <DataField>NUMCHIP</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="FECHACHIPEADO">
-          <DataField>FECHACHIPEADO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MUNICIPIO">
-          <DataField>MUNICIPIO</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MOTORMARCA">
-          <DataField>MOTORMARCA</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="MOTORHP">
-          <DataField>MOTORHP</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>EmbarcacionesSet</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Desktop\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\EmbarcacionesSet.xsd</rd:SchemaPath>
-        <rd:TableName>EmbarcacionesxUnidad</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>EmbarcacionesxUnidadTableAdapter</rd:TableAdapterName>
-      </rd:DataSetInfo>
-    </DataSet>
     <DataSet Name="DataSet11">
       <Query>
         <DataSourceName>Permisos_lista</DataSourceName>
@@ -3711,6 +4222,62 @@
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
         <rd:TableAdapterName>vista_perm3TableAdapter</rd:TableAdapterName>
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DataSet3">
+      <Query>
+        <DataSourceName>EmbarcacionesSet</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="NOMBREEMBARCACION">
+          <DataField>NOMBREEMBARCACION</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MATRICULA">
+          <DataField>MATRICULA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NUMCHIP">
+          <DataField>NUMCHIP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FECHACHIPEADO">
+          <DataField>FECHACHIPEADO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MUNICIPIO">
+          <DataField>MUNICIPIO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MOTORMARCA">
+          <DataField>MOTORMARCA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MOTORHP">
+          <DataField>MOTORHP</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="ESLORA">
+          <DataField>ESLORA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MANGA">
+          <DataField>MANGA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PUNTAL">
+          <DataField>PUNTAL</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>EmbarcacionesSet</rd:DataSetName>
+        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\EmbarcacionesSet.xsd</rd:SchemaPath>
+        <rd:TableName>EmbarcacionesxUnidad</rd:TableName>
+        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
+        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
+        <rd:TableAdapterName>EmbarcacionesxUnidadTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
