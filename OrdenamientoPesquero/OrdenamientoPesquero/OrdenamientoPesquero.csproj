@@ -337,6 +337,7 @@
     <EmbeddedResource Include="Reportes\Pescadores.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
     <EmbeddedResource Include="Reportes\reportepescadores.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteXPermicionario.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteXUnidad.rdlc" />
     <EmbeddedResource Include="Reportes\Resumen_permisos.rdlc" />
     <EmbeddedResource Include="Reportes\xMunicipio_seguro.rdlc" />

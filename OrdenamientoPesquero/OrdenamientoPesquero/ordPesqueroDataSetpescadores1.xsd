@@ -29,6 +29,7 @@
               <Mapping SourceColumn="OCUPACION_LABORAL" DataSetColumn="OCUPACION_LABORAL" />
               <Mapping SourceColumn="CURP" DataSetColumn="CURP" />
               <Mapping SourceColumn="NOMBREEMBARCACION" DataSetColumn="NOMBREEMBARCACION" />
+              <Mapping SourceColumn="TIPO_PESCADOR" DataSetColumn="TIPO_PESCADOR" />
               <Mapping SourceColumn="EMBARCACION" DataSetColumn="EMBARCACION" />
               <Mapping SourceColumn="FOLIO" DataSetColumn="FOLIO" />
             </Mappings>
@@ -80,6 +81,13 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="TIPO_PESCADOR" msprop:Generator_ColumnVarNameInTable="columnTIPO_PESCADOR" msprop:Generator_ColumnPropNameInRow="TIPO_PESCADOR" msprop:Generator_ColumnPropNameInTable="TIPO_PESCADORColumn" msprop:Generator_UserColumnName="TIPO_PESCADOR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
               <xs:element name="EMBARCACION" msprop:Generator_ColumnVarNameInTable="columnEMBARCACION" msprop:Generator_ColumnPropNameInRow="EMBARCACION" msprop:Generator_ColumnPropNameInTable="EMBARCACIONColumn" msprop:Generator_UserColumnName="EMBARCACION" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
@@ -90,7 +98,7 @@
               <xs:element name="FOLIO" msprop:Generator_ColumnVarNameInTable="columnFOLIO" msprop:Generator_ColumnPropNameInRow="FOLIO" msprop:Generator_ColumnPropNameInTable="FOLIOColumn" msprop:Generator_UserColumnName="FOLIO" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="10" />
+                    <xs:maxLength value="12" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
