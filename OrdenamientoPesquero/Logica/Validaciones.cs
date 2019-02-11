@@ -165,12 +165,20 @@ namespace Logica
             else if (ok == -10)
             {
                 (new System.Threading.Thread(CloseIt)).Start();
-                MessageBox.Show("No se pueden registrar más de 1 capitan en una misma embarcación"); /* 1 segundo = 1000 */
+                MessageBox.Show("No se puede registrar más de 1 capitan en una misma embarcación"); /* 1 segundo = 1000 */
             }
             else if(ok == -11)
             {
                 (new System.Threading.Thread(CloseIt)).Start();
                 MessageBox.Show("Error al registrar la unidad a una Federación"); /* 1 segundo = 1000 */
+            }
+            else if (ok == -12)
+            {
+                MessageBox.Show("La embarcación no está chipeada, no se puede registrar ningún pescador","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error); /* 1 segundo = 1000 */
+            }
+            else if (ok == -13)
+            {
+                MessageBox.Show("No se puede registrar más de 2 pescadores con cuerpo de agua Ribereño Marino. \n Ni más de 5 en cuerpo de agua Flota Costera en una misma embarcación","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error); /* 1 segundo = 1000 */
             }
             else if(ok == -21)
             { 
@@ -195,7 +203,7 @@ namespace Logica
         }
         public void CloseIt()
         {
-            System.Threading.Thread.Sleep(2000);
+            System.Threading.Thread.Sleep(3000);
             SendKeys.SendWait("{ESC}");
         }
 

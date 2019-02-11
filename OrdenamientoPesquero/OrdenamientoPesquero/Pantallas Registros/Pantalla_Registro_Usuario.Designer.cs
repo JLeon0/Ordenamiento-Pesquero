@@ -98,9 +98,10 @@
             this.MatriculaPesc = new System.Windows.Forms.ComboBox();
             this.label37 = new System.Windows.Forms.Label();
             this.CuerpoDeAguaPesc = new System.Windows.Forms.GroupBox();
-            this.radioButton6 = new System.Windows.Forms.RadioButton();
-            this.radioButton10 = new System.Windows.Forms.RadioButton();
+            this.FlotasCos = new System.Windows.Forms.RadioButton();
+            this.Ribereño = new System.Windows.Forms.RadioButton();
             this.OcupacionEnEmbarPesc = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.OcupSinAct = new System.Windows.Forms.RadioButton();
             this.OcupMarin = new System.Windows.Forms.RadioButton();
             this.OcupCapi = new System.Windows.Forms.RadioButton();
@@ -110,7 +111,6 @@
             this.TipoTitular = new System.Windows.Forms.RadioButton();
             this.TipoEventual = new System.Windows.Forms.RadioButton();
             this.TipoExtra = new System.Windows.Forms.RadioButton();
-            this.TipoAcuac = new System.Windows.Forms.RadioButton();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -119,7 +119,7 @@
             this.label24 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.RegistrarUnidad = new System.Windows.Forms.PictureBox();
+            this.RegistrarPescador = new System.Windows.Forms.PictureBox();
             this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
             this.EliminarUnidad = new System.Windows.Forms.PictureBox();
             this.CerrarPanel = new System.Windows.Forms.PictureBox();
@@ -175,7 +175,7 @@
             this.OcupacionEnEmbarPesc.SuspendLayout();
             this.TipoPesc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegistrarPescador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).BeginInit();
@@ -999,8 +999,8 @@
             // 
             // CuerpoDeAguaPesc
             // 
-            this.CuerpoDeAguaPesc.Controls.Add(this.radioButton6);
-            this.CuerpoDeAguaPesc.Controls.Add(this.radioButton10);
+            this.CuerpoDeAguaPesc.Controls.Add(this.FlotasCos);
+            this.CuerpoDeAguaPesc.Controls.Add(this.Ribereño);
             this.CuerpoDeAguaPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CuerpoDeAguaPesc.Location = new System.Drawing.Point(728, 18);
             this.CuerpoDeAguaPesc.Name = "CuerpoDeAguaPesc";
@@ -1009,30 +1009,31 @@
             this.CuerpoDeAguaPesc.TabStop = false;
             this.CuerpoDeAguaPesc.Text = "Cuerpo de agua";
             // 
-            // radioButton6
+            // FlotasCos
             // 
-            this.radioButton6.AutoSize = true;
-            this.radioButton6.Location = new System.Drawing.Point(6, 43);
-            this.radioButton6.Name = "radioButton6";
-            this.radioButton6.Size = new System.Drawing.Size(144, 20);
-            this.radioButton6.TabIndex = 34;
-            this.radioButton6.Text = "Aguas continentales";
-            this.radioButton6.UseVisualStyleBackColor = true;
+            this.FlotasCos.AutoSize = true;
+            this.FlotasCos.Location = new System.Drawing.Point(6, 43);
+            this.FlotasCos.Name = "FlotasCos";
+            this.FlotasCos.Size = new System.Drawing.Size(118, 20);
+            this.FlotasCos.TabIndex = 34;
+            this.FlotasCos.Text = "Flotas Costeras";
+            this.FlotasCos.UseVisualStyleBackColor = true;
             // 
-            // radioButton10
+            // Ribereño
             // 
-            this.radioButton10.AutoSize = true;
-            this.radioButton10.Checked = true;
-            this.radioButton10.Location = new System.Drawing.Point(6, 21);
-            this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(120, 20);
-            this.radioButton10.TabIndex = 33;
-            this.radioButton10.TabStop = true;
-            this.radioButton10.Text = "Ribereño marino";
-            this.radioButton10.UseVisualStyleBackColor = true;
+            this.Ribereño.AutoSize = true;
+            this.Ribereño.Checked = true;
+            this.Ribereño.Location = new System.Drawing.Point(6, 21);
+            this.Ribereño.Name = "Ribereño";
+            this.Ribereño.Size = new System.Drawing.Size(120, 20);
+            this.Ribereño.TabIndex = 33;
+            this.Ribereño.TabStop = true;
+            this.Ribereño.Text = "Ribereño marino";
+            this.Ribereño.UseVisualStyleBackColor = true;
             // 
             // OcupacionEnEmbarPesc
             // 
+            this.OcupacionEnEmbarPesc.Controls.Add(this.radioButton1);
             this.OcupacionEnEmbarPesc.Controls.Add(this.OcupSinAct);
             this.OcupacionEnEmbarPesc.Controls.Add(this.OcupMarin);
             this.OcupacionEnEmbarPesc.Controls.Add(this.OcupCapi);
@@ -1040,10 +1041,20 @@
             this.OcupacionEnEmbarPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OcupacionEnEmbarPesc.Location = new System.Drawing.Point(524, 18);
             this.OcupacionEnEmbarPesc.Name = "OcupacionEnEmbarPesc";
-            this.OcupacionEnEmbarPesc.Size = new System.Drawing.Size(130, 109);
+            this.OcupacionEnEmbarPesc.Size = new System.Drawing.Size(130, 124);
             this.OcupacionEnEmbarPesc.TabIndex = 23;
             this.OcupacionEnEmbarPesc.TabStop = false;
             this.OcupacionEnEmbarPesc.Text = "Ocupación laboral";
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(10, 98);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(107, 20);
+            this.radioButton1.TabIndex = 33;
+            this.radioButton1.Text = "Administrativo";
+            this.radioButton1.UseVisualStyleBackColor = true;
             // 
             // OcupSinAct
             // 
@@ -1093,11 +1104,10 @@
             this.TipoPesc.Controls.Add(this.TipoTitular);
             this.TipoPesc.Controls.Add(this.TipoEventual);
             this.TipoPesc.Controls.Add(this.TipoExtra);
-            this.TipoPesc.Controls.Add(this.TipoAcuac);
             this.TipoPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TipoPesc.Location = new System.Drawing.Point(302, 15);
             this.TipoPesc.Name = "TipoPesc";
-            this.TipoPesc.Size = new System.Drawing.Size(139, 174);
+            this.TipoPesc.Size = new System.Drawing.Size(139, 127);
             this.TipoPesc.TabIndex = 22;
             this.TipoPesc.TabStop = false;
             this.TipoPesc.Text = "Tipo de Pescador:";
@@ -1105,7 +1115,7 @@
             // TipoSocio
             // 
             this.TipoSocio.AutoSize = true;
-            this.TipoSocio.Location = new System.Drawing.Point(12, 90);
+            this.TipoSocio.Location = new System.Drawing.Point(12, 67);
             this.TipoSocio.Name = "TipoSocio";
             this.TipoSocio.Size = new System.Drawing.Size(59, 20);
             this.TipoSocio.TabIndex = 27;
@@ -1115,7 +1125,7 @@
             // TipoTitular
             // 
             this.TipoTitular.AutoSize = true;
-            this.TipoTitular.Location = new System.Drawing.Point(12, 46);
+            this.TipoTitular.Location = new System.Drawing.Point(12, 23);
             this.TipoTitular.Name = "TipoTitular";
             this.TipoTitular.Size = new System.Drawing.Size(61, 20);
             this.TipoTitular.TabIndex = 26;
@@ -1125,7 +1135,7 @@
             // TipoEventual
             // 
             this.TipoEventual.AutoSize = true;
-            this.TipoEventual.Location = new System.Drawing.Point(12, 63);
+            this.TipoEventual.Location = new System.Drawing.Point(12, 40);
             this.TipoEventual.Name = "TipoEventual";
             this.TipoEventual.Size = new System.Drawing.Size(75, 20);
             this.TipoEventual.TabIndex = 23;
@@ -1135,24 +1145,12 @@
             // TipoExtra
             // 
             this.TipoExtra.AutoSize = true;
-            this.TipoExtra.Location = new System.Drawing.Point(12, 107);
+            this.TipoExtra.Location = new System.Drawing.Point(12, 84);
             this.TipoExtra.Name = "TipoExtra";
             this.TipoExtra.Size = new System.Drawing.Size(57, 20);
             this.TipoExtra.TabIndex = 23;
             this.TipoExtra.Text = "Extra";
             this.TipoExtra.UseVisualStyleBackColor = true;
-            // 
-            // TipoAcuac
-            // 
-            this.TipoAcuac.AutoSize = true;
-            this.TipoAcuac.Checked = true;
-            this.TipoAcuac.Location = new System.Drawing.Point(12, 20);
-            this.TipoAcuac.Name = "TipoAcuac";
-            this.TipoAcuac.Size = new System.Drawing.Size(124, 20);
-            this.TipoAcuac.TabIndex = 22;
-            this.TipoAcuac.TabStop = true;
-            this.TipoAcuac.Text = "Socio Acuacultor";
-            this.TipoAcuac.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -1225,18 +1223,18 @@
             this.toolTip1.SetToolTip(this.pictureBox1, "Eliminar Registro");
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // RegistrarUnidad
+            // RegistrarPescador
             // 
-            this.RegistrarUnidad.BackColor = System.Drawing.Color.Transparent;
-            this.RegistrarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
-            this.RegistrarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RegistrarUnidad.Location = new System.Drawing.Point(587, 19);
-            this.RegistrarUnidad.Name = "RegistrarUnidad";
-            this.RegistrarUnidad.Size = new System.Drawing.Size(50, 50);
-            this.RegistrarUnidad.TabIndex = 108;
-            this.RegistrarUnidad.TabStop = false;
-            this.toolTip1.SetToolTip(this.RegistrarUnidad, "Registrar");
-            this.RegistrarUnidad.Click += new System.EventHandler(this.RegistrarUnidad_Click);
+            this.RegistrarPescador.BackColor = System.Drawing.Color.Transparent;
+            this.RegistrarPescador.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
+            this.RegistrarPescador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RegistrarPescador.Location = new System.Drawing.Point(587, 19);
+            this.RegistrarPescador.Name = "RegistrarPescador";
+            this.RegistrarPescador.Size = new System.Drawing.Size(50, 50);
+            this.RegistrarPescador.TabIndex = 108;
+            this.RegistrarPescador.TabStop = false;
+            this.toolTip1.SetToolTip(this.RegistrarPescador, "Registrar");
+            this.RegistrarPescador.Click += new System.EventHandler(this.RegistrarUnidad_Click);
             // 
             // ActualizarUnidad
             // 
@@ -1453,7 +1451,7 @@
             this.Botones.Controls.Add(this.label12);
             this.Botones.Controls.Add(this.Solicitud);
             this.Botones.Controls.Add(this.Apoyo);
-            this.Botones.Controls.Add(this.RegistrarUnidad);
+            this.Botones.Controls.Add(this.RegistrarPescador);
             this.Botones.Controls.Add(this.ActualizarUnidad);
             this.Botones.Controls.Add(this.EliminarUnidad);
             this.Botones.Controls.Add(this.label2);
@@ -1702,7 +1700,7 @@
             this.TipoPesc.ResumeLayout(false);
             this.TipoPesc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegistrarPescador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).EndInit();
@@ -1766,18 +1764,17 @@
         private System.Windows.Forms.GroupBox gbRelacion;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.GroupBox CuerpoDeAguaPesc;
-        private System.Windows.Forms.RadioButton radioButton6;
-        private System.Windows.Forms.RadioButton radioButton10;
+        private System.Windows.Forms.RadioButton FlotasCos;
+        private System.Windows.Forms.RadioButton Ribereño;
         private System.Windows.Forms.GroupBox OcupacionEnEmbarPesc;
         private System.Windows.Forms.RadioButton OcupSinAct;
         private System.Windows.Forms.RadioButton OcupMarin;
         private System.Windows.Forms.RadioButton OcupCapi;
         private System.Windows.Forms.GroupBox TipoPesc;
         private System.Windows.Forms.RadioButton TipoExtra;
-        private System.Windows.Forms.RadioButton TipoAcuac;
         private System.Windows.Forms.PictureBox EliminarUnidad;
         private System.Windows.Forms.PictureBox ActualizarUnidad;
-        private System.Windows.Forms.PictureBox RegistrarUnidad;
+        private System.Windows.Forms.PictureBox RegistrarPescador;
         private System.Windows.Forms.ComboBox MatriculaPesc;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -1852,5 +1849,6 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label lblEdad;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.RadioButton radioButton1;
     }
 }
