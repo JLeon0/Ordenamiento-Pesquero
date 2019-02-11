@@ -243,7 +243,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     datos5.Name = "DataSet4";
                     datos5.Value = permisos_lista.vista_perm3;
                     this.reportViewer1.LocalReport.DataSources.Add(datos5);
-                    ReportParameter[] para3 = new ReportParameter[14];
+                    ReportParameter[] para3 = new ReportParameter[15];
                     dt = proc.ObtenerUnaFederacion(rnpa);
                     if (dt.Rows.Count != 0)
                     {
@@ -287,6 +287,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                         para3[12] = new ReportParameter("nsin", "0");
                         para3[13] = new ReportParameter("ncred", "0");
                     }
+                    dt = proc.Resumen(rnpa);
+                    para3[14] = new ReportParameter("schip", dt.Rows[0]["ESFUERZOS CHIPEADOS"].ToString());
                     para3[4] = new ReportParameter("nper", permisos_lista.vista_perm.Count.ToString());
                     para3[5] = new ReportParameter("nsoc", ordPesqueroDataSetpescadores1.pescadores.Count.ToString());
                     para3[6] = new ReportParameter("nemb", embarcacionesSet.EmbarcacionesxUnidad.Count.ToString());
