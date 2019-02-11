@@ -250,6 +250,12 @@
     <Compile Include="Pantallas Registros\Pantalla_Regitro_permiso.Designer.cs">
       <DependentUpon>Pantalla_Regitro_permiso.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas Registros\Personalizar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas Registros\Personalizar.Designer.cs">
+      <DependentUpon>Personalizar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas Solicitudes\Pantalla_Solicitudes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -315,6 +321,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas Registros\Pantalla_Regitro_permiso.resx">
       <DependentUpon>Pantalla_Regitro_permiso.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas Registros\Personalizar.resx">
+      <DependentUpon>Personalizar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas Solicitudes\Pantalla_Solicitudes.resx">
       <DependentUpon>Pantalla_Solicitudes.cs</DependentUpon>

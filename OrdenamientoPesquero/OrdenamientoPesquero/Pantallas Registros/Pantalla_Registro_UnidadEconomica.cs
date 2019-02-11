@@ -407,16 +407,14 @@ namespace OrdenamientoPesquero
                     if (dt.Rows[0]["SOCIOS"].ToString()=="0")
                     {
                         linkLabel1.Text = "0";
-                        TotalSocios.Text = dt.Rows[0]["SOCIOS"].ToString();
-                        
+                        TotalSocios.Text = dt.Rows[0]["SOCIOS"].ToString();     
                     }
                     else
                     {
                         int soc= Convert.ToInt32(dt.Rows[0]["SOCIOS"].ToString());
                         soc--;
                         TotalSocios.Text = soc.ToString();
-                    }
-                    
+                    }     
                 }
                 else
                 {
@@ -465,7 +463,6 @@ namespace OrdenamientoPesquero
                 TotalEsfuerzos.Text = "0";
             }
         }
-
         public void ResumenSocios(string RNPA)
         {
             dt = proc.ResumenSocios(cbRNPA.Text);
