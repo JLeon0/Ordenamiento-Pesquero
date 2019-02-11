@@ -846,7 +846,7 @@
             this.PanelMATRICULA.Controls.Add(this.label28);
             this.PanelMATRICULA.Controls.Add(this.label27);
             this.PanelMATRICULA.ForeColor = System.Drawing.Color.Black;
-            this.PanelMATRICULA.Location = new System.Drawing.Point(152, 476);
+            this.PanelMATRICULA.Location = new System.Drawing.Point(229, 164);
             this.PanelMATRICULA.Name = "PanelMATRICULA";
             this.PanelMATRICULA.Size = new System.Drawing.Size(477, 212);
             this.PanelMATRICULA.TabIndex = 183;
