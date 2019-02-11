@@ -92,7 +92,6 @@
             this.Ordenados = new System.Windows.Forms.LinkLabel();
             this.Capitanes = new System.Windows.Forms.LinkLabel();
             this.TotalSocios = new System.Windows.Forms.LinkLabel();
-            this.TotalPermisos = new System.Windows.Forms.LinkLabel();
             this.NombreResumen = new System.Windows.Forms.Label();
             this.DataResumen = new System.Windows.Forms.DataGridView();
             this.Pesquería = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -108,7 +107,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -146,6 +144,12 @@
             this.label27 = new System.Windows.Forms.Label();
             this.gbBotones = new System.Windows.Forms.GroupBox();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
+            this.chipeados = new System.Windows.Forms.LinkLabel();
+            this.label31 = new System.Windows.Forms.Label();
+            this.TotalPermisos = new System.Windows.Forms.LinkLabel();
+            this.label59 = new System.Windows.Forms.Label();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.Titular = new System.Windows.Forms.Label();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelRNPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
@@ -315,7 +319,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.Location = new System.Drawing.Point(276, 50);
+            this.label3.Location = new System.Drawing.Point(254, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
@@ -732,6 +736,12 @@
             // Resumen
             // 
             this.Resumen.BackColor = System.Drawing.Color.Transparent;
+            this.Resumen.Controls.Add(this.linkLabel1);
+            this.Resumen.Controls.Add(this.Titular);
+            this.Resumen.Controls.Add(this.TotalPermisos);
+            this.Resumen.Controls.Add(this.label59);
+            this.Resumen.Controls.Add(this.chipeados);
+            this.Resumen.Controls.Add(this.label31);
             this.Resumen.Controls.Add(this.TotalEsfuerzos);
             this.Resumen.Controls.Add(this.Credencializados);
             this.Resumen.Controls.Add(this.SinActividad);
@@ -741,7 +751,6 @@
             this.Resumen.Controls.Add(this.Ordenados);
             this.Resumen.Controls.Add(this.Capitanes);
             this.Resumen.Controls.Add(this.TotalSocios);
-            this.Resumen.Controls.Add(this.TotalPermisos);
             this.Resumen.Controls.Add(this.NombreResumen);
             this.Resumen.Controls.Add(this.DataResumen);
             this.Resumen.Controls.Add(this.label65);
@@ -754,7 +763,6 @@
             this.Resumen.Controls.Add(this.label17);
             this.Resumen.Controls.Add(this.label14);
             this.Resumen.Controls.Add(this.label61);
-            this.Resumen.Controls.Add(this.label59);
             this.Resumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Resumen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Resumen.ForeColor = System.Drawing.Color.Black;
@@ -763,13 +771,14 @@
             this.Resumen.Size = new System.Drawing.Size(381, 602);
             this.Resumen.TabIndex = 101;
             this.Resumen.TabStop = false;
+            this.Resumen.Enter += new System.EventHandler(this.Resumen_Enter);
             // 
             // TotalEsfuerzos
             // 
             this.TotalEsfuerzos.AutoSize = true;
             this.TotalEsfuerzos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalEsfuerzos.LinkColor = System.Drawing.Color.Black;
-            this.TotalEsfuerzos.Location = new System.Drawing.Point(149, 229);
+            this.TotalEsfuerzos.Location = new System.Drawing.Point(150, 236);
             this.TotalEsfuerzos.Name = "TotalEsfuerzos";
             this.TotalEsfuerzos.Size = new System.Drawing.Size(13, 16);
             this.TotalEsfuerzos.TabIndex = 12;
@@ -782,7 +791,7 @@
             this.Credencializados.AutoSize = true;
             this.Credencializados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Credencializados.LinkColor = System.Drawing.Color.Black;
-            this.Credencializados.Location = new System.Drawing.Point(134, 206);
+            this.Credencializados.Location = new System.Drawing.Point(134, 197);
             this.Credencializados.Name = "Credencializados";
             this.Credencializados.Size = new System.Drawing.Size(13, 16);
             this.Credencializados.TabIndex = 11;
@@ -796,7 +805,7 @@
             this.SinActividad.AutoSize = true;
             this.SinActividad.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SinActividad.LinkColor = System.Drawing.Color.Black;
-            this.SinActividad.Location = new System.Drawing.Point(162, 130);
+            this.SinActividad.Location = new System.Drawing.Point(162, 121);
             this.SinActividad.Name = "SinActividad";
             this.SinActividad.Size = new System.Drawing.Size(11, 14);
             this.SinActividad.TabIndex = 11;
@@ -810,7 +819,7 @@
             this.Asegurados.AutoSize = true;
             this.Asegurados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Asegurados.LinkColor = System.Drawing.Color.Black;
-            this.Asegurados.Location = new System.Drawing.Point(134, 187);
+            this.Asegurados.Location = new System.Drawing.Point(134, 178);
             this.Asegurados.Name = "Asegurados";
             this.Asegurados.Size = new System.Drawing.Size(13, 16);
             this.Asegurados.TabIndex = 11;
@@ -824,7 +833,7 @@
             this.Marineros.AutoSize = true;
             this.Marineros.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Marineros.LinkColor = System.Drawing.Color.Black;
-            this.Marineros.Location = new System.Drawing.Point(162, 113);
+            this.Marineros.Location = new System.Drawing.Point(162, 104);
             this.Marineros.Name = "Marineros";
             this.Marineros.Size = new System.Drawing.Size(11, 14);
             this.Marineros.TabIndex = 11;
@@ -838,7 +847,7 @@
             this.Acuacultores.AutoSize = true;
             this.Acuacultores.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Acuacultores.LinkColor = System.Drawing.Color.Black;
-            this.Acuacultores.Location = new System.Drawing.Point(162, 148);
+            this.Acuacultores.Location = new System.Drawing.Point(162, 139);
             this.Acuacultores.Name = "Acuacultores";
             this.Acuacultores.Size = new System.Drawing.Size(11, 14);
             this.Acuacultores.TabIndex = 11;
@@ -852,7 +861,7 @@
             this.Ordenados.AutoSize = true;
             this.Ordenados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ordenados.LinkColor = System.Drawing.Color.Black;
-            this.Ordenados.Location = new System.Drawing.Point(134, 171);
+            this.Ordenados.Location = new System.Drawing.Point(134, 162);
             this.Ordenados.Name = "Ordenados";
             this.Ordenados.Size = new System.Drawing.Size(13, 16);
             this.Ordenados.TabIndex = 11;
@@ -866,7 +875,7 @@
             this.Capitanes.AutoSize = true;
             this.Capitanes.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Capitanes.LinkColor = System.Drawing.Color.Black;
-            this.Capitanes.Location = new System.Drawing.Point(162, 96);
+            this.Capitanes.Location = new System.Drawing.Point(162, 87);
             this.Capitanes.Name = "Capitanes";
             this.Capitanes.Size = new System.Drawing.Size(11, 14);
             this.Capitanes.TabIndex = 11;
@@ -880,7 +889,7 @@
             this.TotalSocios.AutoSize = true;
             this.TotalSocios.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalSocios.LinkColor = System.Drawing.Color.Black;
-            this.TotalSocios.Location = new System.Drawing.Point(149, 78);
+            this.TotalSocios.Location = new System.Drawing.Point(149, 69);
             this.TotalSocios.Name = "TotalSocios";
             this.TotalSocios.Size = new System.Drawing.Size(13, 16);
             this.TotalSocios.TabIndex = 11;
@@ -888,20 +897,6 @@
             this.TotalSocios.Text = "*";
             this.TotalSocios.VisitedLinkColor = System.Drawing.Color.Black;
             this.TotalSocios.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TotalSocios_LinkClicked);
-            // 
-            // TotalPermisos
-            // 
-            this.TotalPermisos.AutoSize = true;
-            this.TotalPermisos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalPermisos.LinkColor = System.Drawing.Color.Black;
-            this.TotalPermisos.Location = new System.Drawing.Point(149, 60);
-            this.TotalPermisos.Name = "TotalPermisos";
-            this.TotalPermisos.Size = new System.Drawing.Size(13, 16);
-            this.TotalPermisos.TabIndex = 10;
-            this.TotalPermisos.TabStop = true;
-            this.TotalPermisos.Text = "*";
-            this.TotalPermisos.VisitedLinkColor = System.Drawing.Color.Black;
-            this.TotalPermisos.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.TotalPermisos_LinkClicked);
             // 
             // NombreResumen
             // 
@@ -940,7 +935,7 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DataResumen.DefaultCellStyle = dataGridViewCellStyle5;
             this.DataResumen.GridColor = System.Drawing.Color.White;
-            this.DataResumen.Location = new System.Drawing.Point(0, 281);
+            this.DataResumen.Location = new System.Drawing.Point(0, 299);
             this.DataResumen.MinimumSize = new System.Drawing.Size(100, 50);
             this.DataResumen.Name = "DataResumen";
             this.DataResumen.ReadOnly = true;
@@ -960,7 +955,7 @@
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
             this.DataResumen.RowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.DataResumen.Size = new System.Drawing.Size(365, 315);
+            this.DataResumen.Size = new System.Drawing.Size(365, 297);
             this.DataResumen.TabIndex = 8;
             // 
             // Pesquería
@@ -996,7 +991,7 @@
             // 
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(7, 262);
+            this.label65.Location = new System.Drawing.Point(7, 280);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(77, 16);
             this.label65.TabIndex = 6;
@@ -1006,7 +1001,7 @@
             // 
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(7, 229);
+            this.label63.Location = new System.Drawing.Point(7, 236);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(124, 16);
             this.label63.TabIndex = 4;
@@ -1016,7 +1011,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(7, 206);
+            this.label19.Location = new System.Drawing.Point(7, 197);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(111, 16);
             this.label19.TabIndex = 2;
@@ -1026,7 +1021,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(35, 130);
+            this.label16.Location = new System.Drawing.Point(35, 121);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(72, 14);
             this.label16.TabIndex = 2;
@@ -1036,7 +1031,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(7, 188);
+            this.label18.Location = new System.Drawing.Point(7, 179);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(81, 16);
             this.label18.TabIndex = 2;
@@ -1046,7 +1041,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(35, 113);
+            this.label15.Location = new System.Drawing.Point(35, 104);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(58, 14);
             this.label15.TabIndex = 2;
@@ -1056,7 +1051,7 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(35, 148);
+            this.label22.Location = new System.Drawing.Point(35, 139);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(75, 14);
             this.label22.TabIndex = 2;
@@ -1066,7 +1061,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(7, 171);
+            this.label17.Location = new System.Drawing.Point(7, 162);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(75, 16);
             this.label17.TabIndex = 2;
@@ -1076,7 +1071,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(35, 96);
+            this.label14.Location = new System.Drawing.Point(35, 87);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(58, 14);
             this.label14.TabIndex = 2;
@@ -1086,21 +1081,11 @@
             // 
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(7, 78);
+            this.label61.Location = new System.Drawing.Point(7, 69);
             this.label61.Name = "label61";
             this.label61.Size = new System.Drawing.Size(52, 16);
             this.label61.TabIndex = 2;
             this.label61.Text = "Socios:";
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.Location = new System.Drawing.Point(6, 60);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(67, 16);
-            this.label59.TabIndex = 0;
-            this.label59.Text = "Permisos:";
             // 
             // label23
             // 
@@ -1163,7 +1148,7 @@
             this.caToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1527, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1501, 24);
             this.menuStrip1.TabIndex = 115;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1485,13 +1470,84 @@
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
             // 
+            // chipeados
+            // 
+            this.chipeados.AutoSize = true;
+            this.chipeados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chipeados.LinkColor = System.Drawing.Color.Black;
+            this.chipeados.Location = new System.Drawing.Point(224, 255);
+            this.chipeados.Name = "chipeados";
+            this.chipeados.Size = new System.Drawing.Size(13, 16);
+            this.chipeados.TabIndex = 14;
+            this.chipeados.TabStop = true;
+            this.chipeados.Text = "*";
+            this.chipeados.VisitedLinkColor = System.Drawing.Color.Black;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(40, 256);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(182, 16);
+            this.label31.TabIndex = 13;
+            this.label31.Text = "Esf. Pesq. Nominal Chipeado:";
+            // 
+            // TotalPermisos
+            // 
+            this.TotalPermisos.AutoSize = true;
+            this.TotalPermisos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalPermisos.LinkColor = System.Drawing.Color.Black;
+            this.TotalPermisos.Location = new System.Drawing.Point(150, 217);
+            this.TotalPermisos.Name = "TotalPermisos";
+            this.TotalPermisos.Size = new System.Drawing.Size(13, 16);
+            this.TotalPermisos.TabIndex = 16;
+            this.TotalPermisos.TabStop = true;
+            this.TotalPermisos.Text = "*";
+            this.TotalPermisos.VisitedLinkColor = System.Drawing.Color.Black;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(7, 217);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(67, 16);
+            this.label59.TabIndex = 15;
+            this.label59.Text = "Permisos:";
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(149, 49);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(15, 16);
+            this.linkLabel1.TabIndex = 18;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "1";
+            this.linkLabel1.Visible = false;
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Black;
+            // 
+            // Titular
+            // 
+            this.Titular.AutoSize = true;
+            this.Titular.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titular.Location = new System.Drawing.Point(6, 49);
+            this.Titular.Name = "Titular";
+            this.Titular.Size = new System.Drawing.Size(47, 16);
+            this.Titular.TabIndex = 17;
+            this.Titular.Text = "Titular:";
+            this.Titular.Visible = false;
+            // 
             // Pantalla_Registro_UnidadEconomica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1544, 605);
+            this.ClientSize = new System.Drawing.Size(1370, 605);
             this.Controls.Add(this.PanelRNPA);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.gbBotones);
@@ -1579,13 +1635,11 @@
         private System.Windows.Forms.Label label65;
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label61;
-        private System.Windows.Forms.Label label59;
         private System.Windows.Forms.DataGridView DataResumen;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label NombreResumen;
-        private System.Windows.Forms.LinkLabel TotalPermisos;
         private System.Windows.Forms.LinkLabel TotalEsfuerzos;
         private System.Windows.Forms.LinkLabel TotalSocios;
         private System.Windows.Forms.ComboBox NomFed;
@@ -1653,5 +1707,11 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.GroupBox gbBotones;
         private System.Windows.Forms.GroupBox gbBusqueda;
+        private System.Windows.Forms.LinkLabel chipeados;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label Titular;
+        private System.Windows.Forms.LinkLabel TotalPermisos;
+        private System.Windows.Forms.Label label59;
     }
 }

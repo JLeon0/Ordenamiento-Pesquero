@@ -400,9 +400,32 @@ namespace OrdenamientoPesquero
             dt = proc.Resumen(cbRNPA.Text);
             if (dt.Rows.Count != 0)
             {
+                if (Privado.Checked)
+                {
+                    linkLabel1.Visible = true;
+                    Titular.Visible = true;
+                    if (dt.Rows[0]["SOCIOS"].ToString()=="0")
+                    {
+                        linkLabel1.Text = "0";
+                        TotalSocios.Text = dt.Rows[0]["SOCIOS"].ToString();
+                        
+                    }
+                    else
+                    {
+                        int soc= Convert.ToInt32(dt.Rows[0]["SOCIOS"].ToString());
+                        soc--;
+                        TotalSocios.Text = soc.ToString();
+                    }
+                    
+                }
+                else
+                {
+                    Titular.Visible = false;
+                    linkLabel1.Visible = false;
+                }
                 TotalPermisos.Text = dt.Rows[0]["PERMISOS"].ToString();
-                TotalSocios.Text = dt.Rows[0]["SOCIOS"].ToString();
                 TotalEsfuerzos.Text = dt.Rows[0]["ESFUERZOS PESQUEROS"].ToString();
+                chipeados.Text = dt.Rows[0]["ESFUERZOS CHIPEADOS"].ToString();
 
                 dt = proc.ResumenPesqueria(cbRNPA.Text);
                 if (dt.Rows.Count > 0)
@@ -829,6 +852,11 @@ namespace OrdenamientoPesquero
                     CargarRNPA();
                 }
             }
+        }
+
+        private void Resumen_Enter(object sender, EventArgs e)
+        {
+
         }
 
         private void button5_Click(object sender, EventArgs e)

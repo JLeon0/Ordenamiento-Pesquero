@@ -109,6 +109,7 @@
             this.Controls.Add(this.button1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuReportes";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "MenuReportes";
             this.Load += new System.EventHandler(this.MenuReportes_Load);
             this.ResumeLayout(false);

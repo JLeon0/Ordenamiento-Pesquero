@@ -32,7 +32,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         private void Vistas_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet12.pesembarca' Puede moverla o quitarla según sea necesario.
-            this.pesembarcaTableAdapter.Fill(this.ordPesqueroDataSet12.pesembarca);
+            //this.pesembarcaTableAdapter.Fill(this.ordPesqueroDataSet12.pesembarca);
             // TODO: esta línea de código carga datos en la tabla 'seguro.MULEGE_SEGURO' Puede moverla o quitarla según sea necesario.
             //this.mULEGE_SEGUROTableAdapter.Fill(this.seguro.MULEGE_SEGURO);
             //// TODO: esta línea de código carga datos en la tabla 'seguro.LOSCABOS_SEGURO' Puede moverla o quitarla según sea necesario.
@@ -436,7 +436,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     this.reportViewer1.ProcessingMode = ProcessingMode.Local;
                     reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "reportepescadores.rdlc");
                     this.pesembarcaTableAdapter.Fill(ordPesqueroDataSet12.pesembarca);
-                    datos.Name = "DataSet1";
+                    datos.Name = "DataSet2";
                     datos.Value = ordPesqueroDataSet12.pesembarca;
                    this.reportViewer1.LocalReport.DataSources.Add(datos);
                     this.reportViewer1.RefreshReport();
