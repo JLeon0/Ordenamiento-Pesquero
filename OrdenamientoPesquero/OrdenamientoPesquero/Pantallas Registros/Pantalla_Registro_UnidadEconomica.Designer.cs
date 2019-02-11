@@ -146,6 +146,8 @@
             this.label27 = new System.Windows.Forms.Label();
             this.gbBotones = new System.Windows.Forms.GroupBox();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
+            this.EsfuerzosChipeados = new System.Windows.Forms.LinkLabel();
+            this.label31 = new System.Windows.Forms.Label();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelRNPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
@@ -315,7 +317,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.Location = new System.Drawing.Point(276, 50);
+            this.label3.Location = new System.Drawing.Point(267, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
@@ -732,6 +734,8 @@
             // Resumen
             // 
             this.Resumen.BackColor = System.Drawing.Color.Transparent;
+            this.Resumen.Controls.Add(this.EsfuerzosChipeados);
+            this.Resumen.Controls.Add(this.label31);
             this.Resumen.Controls.Add(this.TotalEsfuerzos);
             this.Resumen.Controls.Add(this.Credencializados);
             this.Resumen.Controls.Add(this.SinActividad);
@@ -760,7 +764,7 @@
             this.Resumen.ForeColor = System.Drawing.Color.Black;
             this.Resumen.Location = new System.Drawing.Point(1120, 95);
             this.Resumen.Name = "Resumen";
-            this.Resumen.Size = new System.Drawing.Size(381, 602);
+            this.Resumen.Size = new System.Drawing.Size(381, 611);
             this.Resumen.TabIndex = 101;
             this.Resumen.TabStop = false;
             // 
@@ -782,7 +786,7 @@
             this.Credencializados.AutoSize = true;
             this.Credencializados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Credencializados.LinkColor = System.Drawing.Color.Black;
-            this.Credencializados.Location = new System.Drawing.Point(134, 206);
+            this.Credencializados.Location = new System.Drawing.Point(150, 206);
             this.Credencializados.Name = "Credencializados";
             this.Credencializados.Size = new System.Drawing.Size(13, 16);
             this.Credencializados.TabIndex = 11;
@@ -810,7 +814,7 @@
             this.Asegurados.AutoSize = true;
             this.Asegurados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Asegurados.LinkColor = System.Drawing.Color.Black;
-            this.Asegurados.Location = new System.Drawing.Point(134, 187);
+            this.Asegurados.Location = new System.Drawing.Point(150, 187);
             this.Asegurados.Name = "Asegurados";
             this.Asegurados.Size = new System.Drawing.Size(13, 16);
             this.Asegurados.TabIndex = 11;
@@ -852,7 +856,7 @@
             this.Ordenados.AutoSize = true;
             this.Ordenados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ordenados.LinkColor = System.Drawing.Color.Black;
-            this.Ordenados.Location = new System.Drawing.Point(134, 171);
+            this.Ordenados.Location = new System.Drawing.Point(150, 171);
             this.Ordenados.Name = "Ordenados";
             this.Ordenados.Size = new System.Drawing.Size(13, 16);
             this.Ordenados.TabIndex = 11;
@@ -940,7 +944,7 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DataResumen.DefaultCellStyle = dataGridViewCellStyle5;
             this.DataResumen.GridColor = System.Drawing.Color.White;
-            this.DataResumen.Location = new System.Drawing.Point(0, 281);
+            this.DataResumen.Location = new System.Drawing.Point(0, 290);
             this.DataResumen.MinimumSize = new System.Drawing.Size(100, 50);
             this.DataResumen.Name = "DataResumen";
             this.DataResumen.ReadOnly = true;
@@ -996,7 +1000,7 @@
             // 
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(7, 262);
+            this.label65.Location = new System.Drawing.Point(7, 269);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(77, 16);
             this.label65.TabIndex = 6;
@@ -1016,7 +1020,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(7, 206);
+            this.label19.Location = new System.Drawing.Point(23, 206);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(111, 16);
             this.label19.TabIndex = 2;
@@ -1036,7 +1040,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(7, 188);
+            this.label18.Location = new System.Drawing.Point(23, 188);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(81, 16);
             this.label18.TabIndex = 2;
@@ -1066,7 +1070,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(7, 171);
+            this.label17.Location = new System.Drawing.Point(23, 171);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(75, 16);
             this.label17.TabIndex = 2;
@@ -1485,6 +1489,29 @@
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
             // 
+            // EsfuerzosChipeados
+            // 
+            this.EsfuerzosChipeados.AutoSize = true;
+            this.EsfuerzosChipeados.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EsfuerzosChipeados.LinkColor = System.Drawing.Color.Black;
+            this.EsfuerzosChipeados.Location = new System.Drawing.Point(162, 249);
+            this.EsfuerzosChipeados.Name = "EsfuerzosChipeados";
+            this.EsfuerzosChipeados.Size = new System.Drawing.Size(11, 14);
+            this.EsfuerzosChipeados.TabIndex = 14;
+            this.EsfuerzosChipeados.TabStop = true;
+            this.EsfuerzosChipeados.Text = "*";
+            this.EsfuerzosChipeados.VisitedLinkColor = System.Drawing.Color.Black;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(35, 249);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(113, 14);
+            this.label31.TabIndex = 13;
+            this.label31.Text = "Esf. Pesq. Chipeados:";
+            // 
             // Pantalla_Registro_UnidadEconomica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1653,5 +1680,7 @@
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.GroupBox gbBotones;
         private System.Windows.Forms.GroupBox gbBusqueda;
+        private System.Windows.Forms.LinkLabel EsfuerzosChipeados;
+        private System.Windows.Forms.Label label31;
     }
 }

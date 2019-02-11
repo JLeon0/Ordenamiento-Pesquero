@@ -17,15 +17,17 @@ namespace OrdenamientoPesquero.Pantallas_Registros
     {
         string CURP = "";
         Image FIRMA, HUELLA;
+        Pantalla_Registro_Usuario USUARIO;
         Procedimientos proc = new Procedimientos();
         private bool ExisteDispositivo = false;
         private FilterInfoCollection DispositivoDeVideo;
         private VideoCaptureDevice FuenteDeVideo = null;
 
-        public Pantalla_Fotografia(string curp, Image Firma, Image Huella)
+        public Pantalla_Fotografia(string curp, Image Firma, Image Huella, Pantalla_Registro_Usuario usu)
         {
             InitializeComponent();
             CURP = curp;
+            USUARIO = usu;
             FIRMA = Firma;
             HUELLA = Huella;
             BuscarDispositivos();
@@ -79,7 +81,6 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             Imagen = Imagen.Clone(rectangle, Imagen.PixelFormat);
             EspacioCamara.BackgroundImage = Imagen;
             EspacioCamara.BackgroundImageLayout = ImageLayout.Zoom;
-
         }
 
         private void btnIniciar_Click(object sender, EventArgs e)
@@ -115,28 +116,9 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             }
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (btnIniciar.Text == "Capturar")
-                btnIniciar_Click(sender, e);
-        }
-
         private void Guardar_Click(object sender, EventArgs e)
         {
-            System.IO.MemoryStream ms = new System.IO.MemoryStream();
-            EspacioCamara.BackgroundImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-
-            System.IO.MemoryStream firma = new System.IO.MemoryStream();
-            if (FIRMA != null) { FIRMA.Save(firma, System.Drawing.Imaging.ImageFormat.Jpeg); }
-
-            System.IO.MemoryStream huella = new System.IO.MemoryStream();
-            if (HUELLA != null) { HUELLA.Save(huella, System.Drawing.Imaging.ImageFormat.Jpeg); }
-
-            int exito = proc.InsertarImagen(CURP, ms.GetBuffer(), firma.GetBuffer(), huella.GetBuffer());
-            if (exito > 0)
-            {
-                MessageBox.Show("Imagen Insertada correctamente");
-            }
+            USUARIO.ImagenBackGround(EspacioCamara.BackgroundImage);
         }
 
         private void Salir_Click(object sender, EventArgs e)
@@ -162,9 +144,5 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             }
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

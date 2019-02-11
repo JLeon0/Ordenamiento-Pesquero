@@ -58,6 +58,11 @@ namespace Logica
             string[] Parametros = { "@rnpa", "@matricula" };
             return c.getDatosTabla("ChecarCapitan", Parametros, RNPA, MATRICULA);
         }
+        public DataTable ChecarMarineros(string RNPA, string MATRICULA)
+        {
+            string[] Parametros = { "@rnpa", "@matricula" };
+            return c.getDatosTabla("ChecarMarineros", Parametros, RNPA, MATRICULA);
+        }
         public int Actualizar_RNPA(string RNPAViejo, string RNPANuevo)
         {
             string[] Parametros = { "@rnpaviejo", "@rnpanuevo" };

@@ -24,7 +24,7 @@ namespace OrdenamientoPesquero
         Pescador pes;
         Procedimientos proc = new Procedimientos();
         Validaciones val = new Validaciones();
-        DataTable dt, NoOrdenados;
+        DataTable dt, NoOrdenados, Embarcaciones;
         string RNPA = "", NombreUnidad = "";
         string[] Municipios;
         byte[] imagenBuffer;
@@ -132,8 +132,8 @@ namespace OrdenamientoPesquero
             {
                 DataRowView row = (DataRowView)MatriculaPesc.SelectedItem;
                 pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, row[0].ToString().Replace(" ", ""), CorreoPesc.Text, LocalidadPesc.Text, o, RNPA.Replace(" ", ""), Seguro.Text, fechaVenF, fechaExpF);
-                dt = proc.ChecarCapitan(RNPA, row[0].ToString());
-                if (ocupacion != "Capitan" || dt.Rows.Count <= 0 || ocupacion == "Capitan" && dt.Rows[0]["CURP"].ToString() == CURPPesc.Text)
+                int ret=0;
+                if (ChecarCapitan(ocupacion, row, ref ret) && ChecarMarineros(row,ref ret))
                 {
                     if (registrar)
                     {
@@ -146,10 +146,7 @@ namespace OrdenamientoPesquero
                         return proc.Actualizar_Pescador(pes);
                     }
                 }
-                else
-                {
-                    return -10;
-                }
+                return ret;
             }
             else
             {
@@ -168,8 +165,31 @@ namespace OrdenamientoPesquero
                 }
             }
         }
+        private bool ChecarCapitan(string ocupacion, DataRowView row,ref int ret)
+        {
+            dt = proc.ChecarCapitan(RNPA, row[0].ToString());
+            if (ocupacion != "Capitan" || dt.Rows.Count <= 0 || ocupacion == "Capitan" && dt.Rows[0]["CURP"].ToString() == CURPPesc.Text)
+            { return true; }
+            else { ret = -10; return false; }
+        }
+        private bool ChecarMarineros(DataRowView row,ref int ret)
+        {
+            dt = proc.ChecarMarineros(RNPA, row[0].ToString());
+            if (dt.Rows.Count <= 2 && Ribereño.Checked == true || dt.Rows.Count <= 5 && FlotasCos.Checked == true)
+            {
+                foreach (DataRow fila in dt.Rows)
+                {
+                    if(fila[0].ToString() == CURPPesc.Text)
+                    {
+                        return true;
+                    }
+                }
 
-
+                ret = -13;
+                return false;
+            }
+            else { ret = -13; return false; }
+        }
 
         #region Cargar
         private void CargarMunicipios()
@@ -219,23 +239,23 @@ namespace OrdenamientoPesquero
         private void CargarMatriculas()
         {
             if (RNPA != ""){
-                dt = proc.ObtenerCertMatrXUnidad(RNPA);
+                Embarcaciones = proc.ObtenerCertMatrXUnidad(RNPA);
                 int I = 0;
-                foreach (DataRow filas in dt.Rows)
+                foreach (DataRow filas in Embarcaciones.Rows)
                 {
                     if (filas["MATRICULA"].ToString() == RNPA) { break; }
                     I++;
                 }
-                if (dt.Rows.Count <= I || I == 0)
+                if (Embarcaciones.Rows.Count <= I || I == 0)
                 {
-                    if (dt.Rows.Count > I) { dt.Rows.RemoveAt(I); }
+                    if (dt.Rows.Count > I) { Embarcaciones.Rows.RemoveAt(I); }
 
-                    DataRow na = dt.NewRow();
+                    DataRow na = Embarcaciones.NewRow();
                     na["MATRICULA"] = RNPA;
                     na["NOMBREEMBARCACION"] = "NO APLICA";
-                    dt.Rows.Add(na);
+                    Embarcaciones.Rows.Add(na);
                 }
-                MatriculaPesc.DataSource = dt;
+                MatriculaPesc.DataSource = Embarcaciones;
                 MatriculaPesc.DisplayMember = "NOMBREEMBARCACION";
                 MatriculaPesc.ValueMember = "MATRICULA";
                 MatriculaPesc.Text = "";
@@ -491,7 +511,7 @@ namespace OrdenamientoPesquero
             if (MatriculaPesc.Text == "NO APLICA")
             {
                 OcupAcua.Checked = true;
-                TipoAcuac.Checked = true;
+                TipoSocio.Checked = true;
             }
             MatriculaRelacion.Text = MatriculaPesc.SelectedValue.ToString();
         }
@@ -543,7 +563,11 @@ namespace OrdenamientoPesquero
                 }
                 else
                 {
-                    exito = AccionesPescador(true);
+                    if (Embarcaciones.Rows[0]["NUMCHIP"].ToString() != "   *   *   ")
+                    {
+                        exito = AccionesPescador(true);
+                    }
+                    exito = -12;
                 }
                 val.Exito(exito);
                 exito = 0;
@@ -624,7 +648,11 @@ namespace OrdenamientoPesquero
             }
             else
             {
-                exito = AccionesPescador(false);
+                if (Embarcaciones.Rows[MatriculaPesc.SelectedIndex]["NUMCHIP"].ToString() != "   *   *")
+                {
+                    exito = AccionesPescador(false);
+                }
+                else { exito = -12; }
             }
             val.Exito(exito);
             exito = 0;
@@ -702,9 +730,8 @@ namespace OrdenamientoPesquero
                 DialogResult result = MessageBox.Show("Desea capturar una nueva imagen?", "¿?", MessageBoxButtons.YesNoCancel);
                 if (result == DialogResult.Yes)
                 {
-                    Pantalla_Fotografia pf = new Pantalla_Fotografia(CURPPesc.Text,Firma.BackgroundImage,Huella.BackgroundImage);
+                    Pantalla_Fotografia pf = new Pantalla_Fotografia(CURPPesc.Text,Firma.BackgroundImage,Huella.BackgroundImage,this);
                     pf.ShowDialog();
-                    ObtenerImagen();
                 }
                 else if (result == DialogResult.No)
                 {
@@ -733,6 +760,11 @@ namespace OrdenamientoPesquero
                 }
                
             }
+        }
+
+        public void ImagenBackGround(Image img)
+        {
+            Imagen.BackgroundImage = img;
         }
 
         private void ObtenerImagen()
@@ -787,26 +819,21 @@ namespace OrdenamientoPesquero
                 if(Huella.BackgroundImage != null)
                 { Huella.BackgroundImage.Save(huella, System.Drawing.Imaging.ImageFormat.Jpeg); }
 
-                //System.Drawing.Image fullsizeImage = System.Drawing.Image.FromStream(ms);
-                //System.Drawing.Image newImage = fullsizeImage.GetThumbnailImage(131, 182, null, IntPtr.Zero);
-                //System.IO.MemoryStream myResult = new System.IO.MemoryStream();
-                //newImage.Save(myResult, System.Drawing.Imaging.ImageFormat.Gif);
-
                 int exito = proc.InsertarImagen(CURPPesc.Text, ms.GetBuffer(), firma.GetBuffer(), huella.GetBuffer());
                 if (exito > 0)
                 {
-                    MessageBox.Show("Imagen Insertada correctamente");
+                    MessageBox.Show("Imagen, firma y huella Insertadas correctamente");
                 }
             }
         }
 
         private void CargarFirma_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Desea capturar la firma del usuario?", "¿?", MessageBoxButtons.YesNoCancel);
+            DialogResult result = MessageBox.Show("Desea capturar la firma del usuario?", "¿?", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 Process.Start("C:\\Windows\\SigPlus\\DemoOCX.exe");
-                result = MessageBox.Show("Ya ha capturado la firma del usuario?", "¿?", MessageBoxButtons.YesNoCancel);
+                result = MessageBox.Show("Ya ha capturado la firma del usuario?", "¿?", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     string mdoc = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
