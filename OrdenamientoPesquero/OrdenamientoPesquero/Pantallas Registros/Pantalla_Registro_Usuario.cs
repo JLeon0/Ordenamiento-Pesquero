@@ -253,7 +253,7 @@ namespace OrdenamientoPesquero
                 }
                 if (Embarcaciones.Rows.Count <= I || I == 0)
                 {
-                    if (dt.Rows.Count > I) { Embarcaciones.Rows.RemoveAt(I); }
+                    if (Embarcaciones.Rows.Count > I) { Embarcaciones.Rows.RemoveAt(I); }
 
                     DataRow na = Embarcaciones.NewRow();
                     na["MATRICULA"] = RNPA;
@@ -654,7 +654,7 @@ namespace OrdenamientoPesquero
             }
             else
             {
-                if (Embarcaciones.Rows[MatriculaPesc.SelectedIndex]["NUMCHIP"].ToString() != "   *   *")
+                if (Embarcaciones.Rows[MatriculaPesc.SelectedIndex]["NUMCHIP"].ToString() != "   *   *" || MatriculaPesc.Text == "NO APLICA")
                 {
                     exito = AccionesPescador(false);
                 }
