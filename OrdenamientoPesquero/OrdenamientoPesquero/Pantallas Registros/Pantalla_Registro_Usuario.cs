@@ -568,11 +568,11 @@ namespace OrdenamientoPesquero
                 }
                 else
                 {
-                    if (Embarcaciones.Rows[0]["NUMCHIP"].ToString() != "   *   *   ")
+                    if (Embarcaciones.Rows[MatriculaPesc.SelectedIndex]["NUMCHIP"].ToString() != "   *   *")
                     {
                         exito = AccionesPescador(true);
                     }
-                    exito = -12;
+                    else { exito = -12; }
                 }
                 val.Exito(exito);
                 exito = 0;
