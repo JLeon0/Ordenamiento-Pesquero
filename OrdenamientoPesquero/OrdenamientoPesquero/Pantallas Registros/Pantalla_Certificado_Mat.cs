@@ -201,7 +201,7 @@ namespace OrdenamientoPesquero
 
         private void ActivarPanelMATRICULA_Click(object sender, EventArgs e)
         {
-            MatriculaMal.Text = MatriculaCertMat.Text;
+            MatriculaMal.Text = ListaMatriculas.SelectedValue.ToString();
             gbBotones.Enabled = false;
             gbBusqueda.Enabled = false;
             gbCertificado.Enabled = false;

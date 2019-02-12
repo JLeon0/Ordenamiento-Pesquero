@@ -66,6 +66,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.NChipCertMat = new System.Windows.Forms.MaskedTextBox();
             this.gbCertificado = new System.Windows.Forms.GroupBox();
+            this.MatriculaCertMat = new System.Windows.Forms.MaskedTextBox();
             this.ActivarPanelMATRICULA = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.Marca = new System.Windows.Forms.TextBox();
@@ -105,7 +106,6 @@
             this.label27 = new System.Windows.Forms.Label();
             this.gbBotones = new System.Windows.Forms.GroupBox();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
-            this.MatriculaCertMat = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.gbCertificado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelMATRICULA)).BeginInit();
@@ -533,6 +533,14 @@
             this.gbCertificado.TabIndex = 158;
             this.gbCertificado.TabStop = false;
             this.gbCertificado.Text = "Certificado de Matrícula";
+            // 
+            // MatriculaCertMat
+            // 
+            this.MatriculaCertMat.Location = new System.Drawing.Point(18, 39);
+            this.MatriculaCertMat.Mask = "9999999999-9";
+            this.MatriculaCertMat.Name = "MatriculaCertMat";
+            this.MatriculaCertMat.Size = new System.Drawing.Size(100, 22);
+            this.MatriculaCertMat.TabIndex = 189;
             // 
             // ActivarPanelMATRICULA
             // 
@@ -980,14 +988,6 @@
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
             // 
-            // MatriculaCertMat
-            // 
-            this.MatriculaCertMat.Location = new System.Drawing.Point(18, 39);
-            this.MatriculaCertMat.Mask = "9999999999-9";
-            this.MatriculaCertMat.Name = "MatriculaCertMat";
-            this.MatriculaCertMat.Size = new System.Drawing.Size(100, 22);
-            this.MatriculaCertMat.TabIndex = 189;
-            // 
             // Pantalla_Certificado_Mat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -995,7 +995,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(854, 612);
+            this.ClientSize = new System.Drawing.Size(871, 612);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.gbBotones);
             this.Controls.Add(this.PanelMATRICULA);
