@@ -71,5 +71,11 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         {
 
         }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Vistas v = new Vistas(comboBox1.Text.ToUpper(), t, 12);
+            v.ShowDialog(this);
+        }
     }
 }

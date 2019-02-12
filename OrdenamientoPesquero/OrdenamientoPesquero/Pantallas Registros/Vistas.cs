@@ -443,6 +443,116 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                    this.reportViewer1.LocalReport.DataSources.Add(datos);
                     this.reportViewer1.RefreshReport();
                     break;
+                case 12:
+                    DataTable dtx = proc.RNPAXMunicipio(rnpa);
+                    string muni = rnpa;
+                    string nombre = "";
+                    for (int i = 0; i < dtx.Rows.Count; i++)
+                    {
+                        this.reportViewer1.ProcessingMode = ProcessingMode.Local;
+                        rnpa = dtx.Rows[i][0].ToString();
+                        reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, unidad);
+                        try
+                        {
+                            this.vista_permTableAdapter.Fill(permisos_lista.vista_perm, rnpa);
+                        }
+                        catch (Exception)
+                        {
+
+                            //throw;
+                        }
+                        datos.Name = "DataSet2";
+                        datos.Value = permisos_lista.vista_perm;
+                        this.reportViewer1.LocalReport.DataSources.Add(datos);
+                        this.embarcacionesxUnidadTableAdapter.Fill(embarcacionesSet.EmbarcacionesxUnidad, rnpa);
+                        datos2.Name = "DataSet3";
+                        datos2.Value = embarcacionesSet.EmbarcacionesxUnidad;
+                        this.reportViewer1.LocalReport.DataSources.Add(datos2);
+                        this.pescadoresTableAdapter.Fill(ordPesqueroDataSetpescadores1.pescadores, rnpa);
+                        datos3.Name = "DataSet5";
+                        datos3.Value = ordPesqueroDataSetpescadores1.pescadores;
+                        this.reportViewer1.LocalReport.DataSources.Add(datos3);
+
+                        try
+                        {
+                            this.vista_perm2TableAdapter.Fill(permisos_lista.vista_perm2, rnpa);
+                        }
+                        catch (Exception)
+                        {
+                            //throw;
+                        }
+                        datos4.Name = "DataSet11";
+                        datos4.Value = permisos_lista.vista_perm2;
+                        this.reportViewer1.LocalReport.DataSources.Add(datos4);
+
+                        try
+                        {
+                            this.vista_perm3TableAdapter.Fill(permisos_lista.vista_perm3, rnpa);
+                        }
+                        catch (Exception)
+                        {
+                            //throw;
+                        }
+                        datos5.Name = "DataSet4";
+                        datos5.Value = permisos_lista.vista_perm3;
+                        this.reportViewer1.LocalReport.DataSources.Add(datos5);
+                        para3 = new ReportParameter[15];
+                        dt = proc.ObtenerUnaFederacion(rnpa);
+                        if (dt.Rows.Count != 0)
+                        {
+                            para3[1] = new ReportParameter("Fed", dt.Rows[0]["NOMBRE"].ToString());
+                        }
+                        else
+                        {
+                            para3[1] = new ReportParameter("Fed", "");
+                        }
+                        dt = proc.Obtener_unidades(rnpa);
+                        if (dt.Rows.Count != 0)
+                        {
+                            para3[0] = new ReportParameter("Unidad", dt.Rows[0]["NOMBRE"].ToString());
+                            nombre = dt.Rows[0]["NOMBRE"].ToString();
+                            para3[2] = new ReportParameter("Municipio", dt.Rows[0]["MUNICIO"].ToString());
+                            para3[3] = new ReportParameter("Localidad", dt.Rows[0]["LOCALIDAD"].ToString());
+                        }
+                        else
+                        {
+                            para3[0] = new ReportParameter("Unidad", "");
+                            para3[2] = new ReportParameter("Municipio", "");
+                            para3[3] = new ReportParameter("Localidad", "");
+                        }
+                        dt = proc.ResumenSocios(rnpa);
+                        if (dt.Rows.Count != 0)
+                        {
+                            para3[7] = new ReportParameter("naseg", dt.Rows[0]["ASEGURADOS"].ToString());
+                            para3[8] = new ReportParameter("nord", dt.Rows[0]["ORDENADOS"].ToString());
+                            para3[9] = new ReportParameter("ncap", dt.Rows[0]["CAPITANES"].ToString());
+                            para3[10] = new ReportParameter("nmar", dt.Rows[0]["MARINEROS"].ToString());
+                            para3[11] = new ReportParameter("nacu", dt.Rows[0]["ACUACULTORES"].ToString());
+                            para3[12] = new ReportParameter("nsin", dt.Rows[0]["SINACTIVIDAD"].ToString());
+                            para3[13] = new ReportParameter("ncred", dt.Rows[0]["CREDENCIALIZADOS"].ToString());
+                        }
+                        else
+                        {
+                            para3[7] = new ReportParameter("naseg", "0");
+                            para3[8] = new ReportParameter("nord", "0");
+                            para3[9] = new ReportParameter("ncap", "0");
+                            para3[10] = new ReportParameter("nmar", "0");
+                            para3[11] = new ReportParameter("nacu", "0");
+                            para3[12] = new ReportParameter("nsin", "0");
+                            para3[13] = new ReportParameter("ncred", "0");
+                        }
+                        dt = proc.Resumen(rnpa);
+                        para3[14] = new ReportParameter("schip", dt.Rows[0]["ESFUERZOS CHIPEADOS"].ToString());
+                        para3[4] = new ReportParameter("nper", permisos_lista.vista_perm.Count.ToString());
+                        para3[5] = new ReportParameter("nsoc", ordPesqueroDataSetpescadores1.pescadores.Count.ToString());
+                        para3[6] = new ReportParameter("nemb", embarcacionesSet.EmbarcacionesxUnidad.Count.ToString());
+                        reportViewer1.LocalReport.SetParameters(para3);
+                        this.reportViewer1.RefreshReport();
+                        nombre = nombre.Replace("\"", "");
+                        File.WriteAllBytes(@"C:\FICHAS\"+muni+@"\" + nombre+".pdf", reportViewer1.LocalReport.Render("PDF"));
+                    }
+                    this.Close();
+                    break;
                 default:
                     break;
             }
