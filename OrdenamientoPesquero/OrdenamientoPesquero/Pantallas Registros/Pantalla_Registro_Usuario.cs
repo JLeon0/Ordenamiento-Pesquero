@@ -133,7 +133,7 @@ namespace OrdenamientoPesquero
                 DataRowView row = (DataRowView)MatriculaPesc.SelectedItem;
                 pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, row[0].ToString().Replace(" ", ""), CorreoPesc.Text, LocalidadPesc.Text, o, RNPA.Replace(" ", ""), Seguro.Text, fechaVenF, fechaExpF);
                 int ret=0;
-                if (ChecarCapitan(ocupacion, row, ref ret) && ChecarMarineros(row,ref ret))
+                //if (ChecarCapitan(ocupacion, row, ref ret) && ChecarMarineros(row,ref ret))
                 {
                     if (registrar)
                     {
@@ -165,6 +165,7 @@ namespace OrdenamientoPesquero
                 }
             }
         }
+
         private bool ChecarCapitan(string ocupacion, DataRowView row,ref int ret)
         {
             dt = proc.ChecarCapitan(RNPA, row[0].ToString());
@@ -177,13 +178,17 @@ namespace OrdenamientoPesquero
             dt = proc.ChecarMarineros(RNPA, row[0].ToString());
             if (dt.Rows.Count <= 2 && Ribereño.Checked == true || dt.Rows.Count <= 5 && FlotasCos.Checked == true)
             {
-                foreach (DataRow fila in dt.Rows)
+                if (dt.Rows.Count == 2 && Ribereño.Checked == true || dt.Rows.Count == 5 && FlotasCos.Checked == true)
                 {
-                    if(fila[0].ToString() == CURPPesc.Text)
+                    foreach (DataRow fila in dt.Rows)
                     {
-                        return true;
+                        if (fila[0].ToString() == CURPPesc.Text)
+                        {
+                            return true;
+                        }
                     }
                 }
+                else { return true; }
 
                 ret = -13;
                 return false;
@@ -641,6 +646,7 @@ namespace OrdenamientoPesquero
                 pictureBox11.BackgroundImage = OrdenamientoPesquero.Properties.Resources.Equis;
             }
         }
+
         private void ActualizarUnidad_Click(object sender, EventArgs e)
         {
             if (!val.validaralgo(pescador))
