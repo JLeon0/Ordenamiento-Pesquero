@@ -40,8 +40,9 @@ namespace OrdenamientoPesquero
             dt = proc.ObtenerCertMatrXUnidad(Rnpa);
             for (int i = 0; i < dt.Rows.Count; i++)
             {
-                if(dt.Rows[i]["NOMBREEMBARCACION"].ToString() != "NO APLICA")
+                if (dt.Rows[i]["NOMBREEMBARCACION"].ToString() != "NO APLICA")
                     Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
+                else { dt.Rows.RemoveAt(i); i--; }
             }
             CargarPesquerias();
         }
