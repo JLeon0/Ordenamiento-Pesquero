@@ -202,6 +202,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ordPesqueroDataSetpescadores1.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Pantallas Archivos\Expediente_Embarcacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas Archivos\Expediente_Embarcacion.Designer.cs">
+      <DependentUpon>Expediente_Embarcacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas Archivos\Expediente_Permiso.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas Archivos\Expediente_Permiso.Designer.cs">
+      <DependentUpon>Expediente_Permiso.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas Archivos\Expediente_Pescador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas Archivos\Expediente_Pescador.Designer.cs">
+      <DependentUpon>Expediente_Pescador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Pantallas Archivos\Expediente_UE.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas Archivos\Expediente_UE.Designer.cs">
+      <DependentUpon>Expediente_UE.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas Menu\Menu1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -298,6 +322,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>vencidos.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Pantallas Archivos\Expediente_Pescador.resx">
+      <DependentUpon>Expediente_Pescador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas Archivos\Expediente_UE.resx">
+      <DependentUpon>Expediente_UE.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas Menu\Menu1.resx">
       <DependentUpon>Menu1.cs</DependentUpon>
     </EmbeddedResource>
@@ -734,6 +764,23 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
     <COMReference Include="Microsoft.Office.Core">
       <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
       <VersionMajor>2</VersionMajor>

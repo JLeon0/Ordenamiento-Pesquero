@@ -72,6 +72,19 @@ namespace Logica
             string[] Parametros = { "@rnpaviejo", "@rnpanuevo" };
             return c.Ejecutar("ActualizarRNPA", Parametros, RNPAViejo, RNPANuevo);
         }
+
+        public DataTable ObtenerExpedientePescadorXUnidad(string RNPA)
+        {
+            string[] Parametros = { "@rnpa" };
+            return c.getDatosTabla("ObtenerExpedientePescadorXUnidad", Parametros, RNPA);
+        }
+        public DataTable PescadoresXUnidad(string RNPA)
+        {
+            string[] Parametros = { "@RNPA" };
+            return c.getDatosTabla("CurpxUnidad", Parametros, RNPA);
+        }
+
+
         #endregion
 
 
@@ -153,6 +166,7 @@ namespace Logica
         }
         #endregion
 
+
         #region Obtener
         public DataTable ObtenerMunicipios()
         {
@@ -193,7 +207,6 @@ namespace Logica
         #endregion
 
 
-
         #region Pescador
         public int Registrar_Pescador(Pescador PES)
         {
@@ -229,11 +242,7 @@ namespace Logica
             string[] Parametros = { "@curp", "@Eliminar" };
             return c.Ejecutar("EliminarPescador", Parametros, CURP, Eliminar);
         }
-        public DataTable Obtener_curp(string RNPA)
-        {
-            string[] Parametros = { "@RNPA" };
-            return c.getDatosTabla("CurpxUnidad", Parametros, RNPA);
-        }
+
         public DataTable Obtener_Pescador(string Curp)
         {
             string[] Parametros = { "@Curp" };
@@ -244,6 +253,18 @@ namespace Logica
             string[] Parametros = { "@curp", "@imagen", "@firma" ,"@huella"};
             return c.Ejecutar("InsertarImagen", Parametros, CURP, imagen, firma, huella);
         }
+        public int InsertarArchivos(string CURP, byte[] archivo)
+        {
+            string[] Parametros = { "@curp", "@actanac" };
+            return c.Ejecutar("InsertarPDF", Parametros, CURP, archivo);
+        }
+        public DataTable ObtenerExpedientePescador(string curp)
+        {
+            string[] Parametros = { "@curp" };
+            return c.getDatosTabla("ObtenerExpedientePescador", Parametros, curp);
+        }
+
+
         public DataTable ObtenerImagen(string curp)
         {
             string[] Parametros = { "@curp" };
@@ -350,6 +371,7 @@ namespace Logica
         }
         #endregion
 
+
         #region Federacion
         public int Registar_Federacion(string Nombre, string Presidente, string Telefono, string Correo)
         {
@@ -411,6 +433,7 @@ namespace Logica
         }
         #endregion
 
+
         #region Apoyos
         public int Registrar_Apoyo(Solicitud soli)
         {
@@ -430,6 +453,7 @@ namespace Logica
             return c.getDatosTabla("ObtenerApoyosxCurp", Parametros, curp);
         }
         #endregion
+
 
         #region Respaldos
         public int PasarPescadores()
@@ -513,7 +537,6 @@ namespace Logica
             string[] Parametros = { };
             return c.Ejecutar2("limpiar", Parametros);
         }
-
 
         #endregion
 

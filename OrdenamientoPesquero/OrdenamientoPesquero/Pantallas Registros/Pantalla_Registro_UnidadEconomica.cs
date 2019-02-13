@@ -797,12 +797,6 @@ namespace OrdenamientoPesquero
             }
         }
 
-        private void Pantalla_Registro_UnidadEconomica_Shown(object sender, EventArgs e)
-        {
-            //PintarGroupBox();
-
-        }
-
         private void CerrarPanel_Click(object sender, EventArgs e)
         {
             gbBotones.Enabled = true;
@@ -811,15 +805,6 @@ namespace OrdenamientoPesquero
             PanelRNPA.Visible = false;
             PanelRNPA.Enabled = false;
             RnpaNuevo.Text = "";
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-            gbBotones.Enabled = false;
-            gbBusqueda.Enabled = false;
-            gbOrgPes.Enabled = false;
-            PanelRNPA.Visible = true;
-            PanelRNPA.Enabled = true;
         }
 
         private void ActivarPanelRNPA_Click(object sender, EventArgs e)
@@ -854,9 +839,11 @@ namespace OrdenamientoPesquero
             }
         }
 
-        private void Resumen_Enter(object sender, EventArgs e)
-        {
 
+        private void Expediente_Click(object sender, EventArgs e)
+        {
+            Pantallas_Archivos.Expediente_UE expue = new Pantallas_Archivos.Expediente_UE(cbRNPA.Text);
+            expue.ShowDialog();
         }
 
         private void button5_Click(object sender, EventArgs e)

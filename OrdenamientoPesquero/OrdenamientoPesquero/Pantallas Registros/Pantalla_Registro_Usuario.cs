@@ -54,7 +54,6 @@ namespace OrdenamientoPesquero
             {
                 Unid.Text = NombreUnidad;
             }
-            //CargarFinger();
         }
 
         public int AccionesPescador(bool registrar)
@@ -133,7 +132,7 @@ namespace OrdenamientoPesquero
                 DataRowView row = (DataRowView)MatriculaPesc.SelectedItem;
                 pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, row[0].ToString().Replace(" ", ""), CorreoPesc.Text, LocalidadPesc.Text, o, RNPA.Replace(" ", ""), Seguro.Text, fechaVenF, fechaExpF);
                 int ret=0;
-                if (ChecarCapitan(ocupacion, row, ref ret) && ChecarMarineros(row,ref ret) || MatriculaPesc.Text == "NO APLICA")
+                if (ChecarCapitan(ocupacion, row, ref ret) && ChecarMarineros(ocupacion, row,ref ret) || MatriculaPesc.Text == "NO APLICA")
                 {
                     if (registrar)
                     {
@@ -173,27 +172,31 @@ namespace OrdenamientoPesquero
             { return true; }
             else { ret = -10; return false; }
         }
-        private bool ChecarMarineros(DataRowView row,ref int ret)
+        private bool ChecarMarineros(string ocupacion, DataRowView row,ref int ret)
         {
             dt = proc.ChecarMarineros(RNPA, row[0].ToString());
-            if (dt.Rows.Count <= 2 && Ribereño.Checked == true || dt.Rows.Count <= 5 && FlotasCos.Checked == true)
+            if (ocupacion == "Marinero")
             {
-                if (dt.Rows.Count == 2 && Ribereño.Checked == true || dt.Rows.Count == 5 && FlotasCos.Checked == true)
+                if (dt.Rows.Count <= 2 && Ribereño.Checked == true || dt.Rows.Count <= 5 && FlotasCos.Checked == true)
                 {
-                    foreach (DataRow fila in dt.Rows)
+                    if (dt.Rows.Count == 2 && Ribereño.Checked == true || dt.Rows.Count == 5 && FlotasCos.Checked == true)
                     {
-                        if (fila[0].ToString() == CURPPesc.Text)
+                        foreach (DataRow fila in dt.Rows)
                         {
-                            return true;
+                            if (fila[0].ToString() == CURPPesc.Text)
+                            {
+                                return true;
+                            }
                         }
                     }
-                }
-                else { return true; }
+                    else { return true; }
 
-                ret = -13;
-                return false;
+                    ret = -13;
+                    return false;
+                }
+                else { ret = -13; return false; }
             }
-            else { ret = -13; return false; }
+            else { return true; }
         }
 
         #region Cargar
@@ -408,7 +411,17 @@ namespace OrdenamientoPesquero
 
         }
 
+        private void CargarResumenExpedientes()
+        {
+            DataTable expediente = proc.ObtenerExpedientePescador(CURPPesc.Text);
+            string temp = "";
+            if (expediente.Rows.Count > 0)
+            {
+                temp = expediente.Rows[0]["ACTANAC"].ToString();
+                if (temp == "") { ActaNac.ForeColor = Color.Red; } else { ActaNac.ForeColor = Color.Green; }
+            }
 
+        }
         #endregion
 
         
@@ -749,7 +762,7 @@ namespace OrdenamientoPesquero
                             if (openFileDialog1.ShowDialog() == DialogResult.OK)
                             {
                                 Bitmap bmp = new Bitmap(Image.FromFile(openFileDialog1.FileName));
-                                Bitmap bmp2 = new Bitmap(bmp, new Size(131, 182));
+                                Bitmap bmp2 = new Bitmap(bmp, new Size(135, 182));
                                 Imagen.BackgroundImage = bmp2;
                             }
                         }
@@ -783,10 +796,13 @@ namespace OrdenamientoPesquero
             {
                 Imagen.BackColor = Color.White;
                 Imagen.BackgroundImage = null;
-                imagenBuffer = (byte[])dt.Rows[0]["IMAGEN"];
-                System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
-                Imagen.BackgroundImage = (Image.FromStream(ms));
-                Imagen.BackgroundImageLayout = ImageLayout.Zoom;
+                if (dt.Rows[0]["IMAGEN"].ToString() != "")
+                {
+                    imagenBuffer = (byte[])dt.Rows[0]["IMAGEN"];
+                    System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
+                    Imagen.BackgroundImage = (Image.FromStream(ms));
+                    Imagen.BackgroundImageLayout = ImageLayout.Zoom;
+                }
             }
             dt = proc.ObtenerFirma(CURPPesc.Text);
             if (dt.Rows.Count > 0)
@@ -815,15 +831,15 @@ namespace OrdenamientoPesquero
             if (Imagen.BackgroundImage != null)
             {
                 System.IO.MemoryStream ms = new System.IO.MemoryStream();
-                Imagen.BackgroundImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                Imagen.BackgroundImage.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
 
                 System.IO.MemoryStream firma = new MemoryStream();
                 if (Firma.BackgroundImage != null)
-                { Firma.BackgroundImage.Save(firma, System.Drawing.Imaging.ImageFormat.Jpeg); }
+                { Firma.BackgroundImage.Save(firma, System.Drawing.Imaging.ImageFormat.Png); }
 
                 System.IO.MemoryStream huella = new MemoryStream();
                 if(Huella.BackgroundImage != null)
-                { Huella.BackgroundImage.Save(huella, System.Drawing.Imaging.ImageFormat.Jpeg); }
+                { Huella.BackgroundImage.Save(huella, System.Drawing.Imaging.ImageFormat.Png); }
 
                 int exito = proc.InsertarImagen(CURPPesc.Text, ms.GetBuffer(), firma.GetBuffer(), huella.GetBuffer());
                 if (exito > 0)
@@ -912,6 +928,7 @@ namespace OrdenamientoPesquero
                 NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), RNPA);
                 LlenarDatos(NOMBRES.Rows[0]["CURP"].ToString());
                 CargarSolApo();
+                CargarResumenExpedientes();
             }
         }
 
@@ -957,7 +974,6 @@ namespace OrdenamientoPesquero
             }
         }
         #endregion
-
 
 
         #region Lector de Huellas
@@ -1066,6 +1082,12 @@ namespace OrdenamientoPesquero
         }
 
         private delegate void SendMessageCallback(object payload);
+
+        private void AbrirExpediente_Click(object sender, EventArgs e)
+        {
+            Pantallas_Archivos.Expediente_Pescador expesc = new Pantallas_Archivos.Expediente_Pescador(CURPPesc.Text);
+            expesc.ShowDialog();
+        }
 
         private void FechaNacPesc_ValueChanged(object sender, EventArgs e)
         {

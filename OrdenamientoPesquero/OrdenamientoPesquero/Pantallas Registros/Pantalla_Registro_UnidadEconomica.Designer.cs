@@ -149,6 +149,7 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.gbBotones = new System.Windows.Forms.GroupBox();
+            this.Expediente = new System.Windows.Forms.Button();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelRNPA)).BeginInit();
@@ -319,7 +320,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.Location = new System.Drawing.Point(319, 50);
+            this.label3.Location = new System.Drawing.Point(384, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
@@ -771,7 +772,6 @@
             this.Resumen.Size = new System.Drawing.Size(381, 602);
             this.Resumen.TabIndex = 101;
             this.Resumen.TabStop = false;
-            this.Resumen.Enter += new System.EventHandler(this.Resumen_Enter);
             // 
             // linkLabel1
             // 
@@ -826,7 +826,7 @@
             this.chipeados.AutoSize = true;
             this.chipeados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chipeados.LinkColor = System.Drawing.Color.Black;
-            this.chipeados.Location = new System.Drawing.Point(255, 255);
+            this.chipeados.Location = new System.Drawing.Point(224, 255);
             this.chipeados.Name = "chipeados";
             this.chipeados.Size = new System.Drawing.Size(13, 16);
             this.chipeados.TabIndex = 14;
@@ -840,9 +840,9 @@
             this.label31.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.Location = new System.Drawing.Point(40, 256);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(212, 16);
+            this.label31.Size = new System.Drawing.Size(182, 16);
             this.label31.TabIndex = 13;
-            this.label31.Text = "Esf. Pesq. Nominal NO Chipeados:";
+            this.label31.Text = "Esf. Pesq. Nominal Chipeado:";
             // 
             // TotalEsfuerzos
             // 
@@ -1513,6 +1513,7 @@
             // 
             // gbBotones
             // 
+            this.gbBotones.Controls.Add(this.Expediente);
             this.gbBotones.Controls.Add(this.button1);
             this.gbBotones.Controls.Add(this.button2);
             this.gbBotones.Controls.Add(this.button3);
@@ -1525,6 +1526,20 @@
             this.gbBotones.TabIndex = 186;
             this.gbBotones.TabStop = false;
             this.gbBotones.Text = "Entidades";
+            // 
+            // Expediente
+            // 
+            this.Expediente.BackColor = System.Drawing.Color.Silver;
+            this.Expediente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Expediente.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Expediente.ForeColor = System.Drawing.Color.Black;
+            this.Expediente.Location = new System.Drawing.Point(16, 82);
+            this.Expediente.Name = "Expediente";
+            this.Expediente.Size = new System.Drawing.Size(137, 45);
+            this.Expediente.TabIndex = 157;
+            this.Expediente.Text = "EXPEDIENTE";
+            this.Expediente.UseVisualStyleBackColor = false;
+            this.Expediente.Click += new System.EventHandler(this.Expediente_Click);
             // 
             // gbBusqueda
             // 
@@ -1713,5 +1728,6 @@
         private System.Windows.Forms.Label Titular;
         private System.Windows.Forms.LinkLabel TotalPermisos;
         private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Button Expediente;
     }
 }
