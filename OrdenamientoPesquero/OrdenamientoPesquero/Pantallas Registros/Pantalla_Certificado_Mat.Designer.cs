@@ -105,7 +105,7 @@
             this.label27 = new System.Windows.Forms.Label();
             this.gbBotones = new System.Windows.Forms.GroupBox();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
-            this.MatriculaCertMat = new System.Windows.Forms.MaskedTextBox();
+            this.MatriculaCertMat = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.gbCertificado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelMATRICULA)).BeginInit();
@@ -982,11 +982,10 @@
             // 
             // MatriculaCertMat
             // 
-            this.MatriculaCertMat.Location = new System.Drawing.Point(18, 39);
-            this.MatriculaCertMat.Mask = "9999999999-9";
+            this.MatriculaCertMat.Location = new System.Drawing.Point(20, 38);
             this.MatriculaCertMat.Name = "MatriculaCertMat";
-            this.MatriculaCertMat.Size = new System.Drawing.Size(100, 22);
-            this.MatriculaCertMat.TabIndex = 189;
+            this.MatriculaCertMat.Size = new System.Drawing.Size(105, 22);
+            this.MatriculaCertMat.TabIndex = 190;
             // 
             // Pantalla_Certificado_Mat
             // 
@@ -995,7 +994,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(854, 612);
+            this.ClientSize = new System.Drawing.Size(871, 612);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.gbBotones);
             this.Controls.Add(this.PanelMATRICULA);
@@ -1115,6 +1114,6 @@
         private System.Windows.Forms.GroupBox gbBotones;
         private System.Windows.Forms.GroupBox gbBusqueda;
         private System.Windows.Forms.PictureBox ActivarPanelMATRICULA;
-        private System.Windows.Forms.MaskedTextBox MatriculaCertMat;
+        private System.Windows.Forms.TextBox MatriculaCertMat;
     }
 }

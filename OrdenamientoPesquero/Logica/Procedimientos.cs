@@ -51,7 +51,11 @@ namespace Logica
             string[] Parametros = { "@rnpa" };
             return c.Ejecutar("Eliminarunidad", Parametros, RNPA);
         }
-
+        public DataTable RNPAXMunicipio(String Municipio)
+        {
+            string[] Parametros = { "@municipio" };
+            return c.getDatosTabla("RNPAXMunicipio", Parametros, Municipio);
+        }
 
         public DataTable ChecarCapitan(string RNPA, string MATRICULA)
         {

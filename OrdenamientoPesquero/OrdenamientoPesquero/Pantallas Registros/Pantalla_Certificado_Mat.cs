@@ -19,7 +19,6 @@ namespace OrdenamientoPesquero
         int exito = 0;
         Embarcacion Emb;
         Validaciones val = new Validaciones();
-
         public Pantalla_Certificado_Mat(string rnpa)
         {
             InitializeComponent();
@@ -198,10 +197,9 @@ namespace OrdenamientoPesquero
             }
             this.Cursor = Cursors.Default;
         }
-
         private void ActivarPanelMATRICULA_Click(object sender, EventArgs e)
         {
-            MatriculaMal.Text = MatriculaCertMat.Text;
+            MatriculaMal.Text = ListaMatriculas.SelectedValue.ToString();
             gbBotones.Enabled = false;
             gbBusqueda.Enabled = false;
             gbCertificado.Enabled = false;

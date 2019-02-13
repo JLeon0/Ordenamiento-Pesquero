@@ -420,10 +420,13 @@ namespace OrdenamientoPesquero
                 {
                     Titular.Visible = false;
                     linkLabel1.Visible = false;
+                    TotalSocios.Text=dt.Rows[0]["SOCIOS"].ToString();
                 }
                 TotalPermisos.Text = dt.Rows[0]["PERMISOS"].ToString();
                 TotalEsfuerzos.Text = dt.Rows[0]["ESFUERZOS PESQUEROS"].ToString();
-               // chipeados.Text = dt.Rows[0]["ESFUERZOS CHIPEADOS"].ToString();
+                chipeados.Text = dt.Rows[0]["ESFUERZOS CHIPEADOS"].ToString();
+                int no = Convert.ToInt32(TotalEsfuerzos.Text) - Convert.ToInt32(chipeados.Text);
+                chipeados.Text = no.ToString();
 
                 dt = proc.ResumenPesqueria(cbRNPA.Text);
                 if (dt.Rows.Count > 0)
