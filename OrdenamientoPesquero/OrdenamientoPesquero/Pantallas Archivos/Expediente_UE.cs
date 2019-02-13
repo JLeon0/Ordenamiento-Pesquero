@@ -47,7 +47,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             INEPesc.Text = aine + "/" + pescadores.Rows.Count;
             if (aine == pescadores.Rows.Count) { check.SetItemChecked(2, true); } else { check.SetItemChecked(2, false); }
             ComprPesc.Text = acompdom + "/" + pescadores.Rows.Count;
-            if (acompdom == pescadores.Rows.Count) { check.SetItemChecked(0, true); } else { check.SetItemChecked(3, false); }
+            if (acompdom == pescadores.Rows.Count) { check.SetItemChecked(3, true); } else { check.SetItemChecked(3, false); }
 
         }
     }
