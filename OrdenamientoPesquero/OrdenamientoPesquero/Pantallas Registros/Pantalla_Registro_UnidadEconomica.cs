@@ -596,17 +596,17 @@ namespace OrdenamientoPesquero
             if (result == DialogResult.OK) // Test result.
             {
                 this.Cursor = Cursors.WaitCursor;
-                proc.cambiarbd("OrdPesquero2");
-                proc.limpiar();
-                proc.PasarUnidad2(cbRNPA.Text);
-                proc.PasarEmbarcaciones2(cbRNPA.Text);
-                proc.PasarPescadores2(cbRNPA.Text);
-                proc.PasarPermisos2(cbRNPA.Text);
-                proc.PasarEquipoPesca2(cbRNPA.Text);
-                proc.PasarEmbarcaPermis2(cbRNPA.Text);
-                proc.PasarDirectiva2(cbRNPA.Text);
+                //proc.cambiarbd("OrdPesquero2");
+                //proc.limpiar();
+                //proc.PasarUnidad2(cbRNPA.Text);
+                //proc.PasarEmbarcaciones2(cbRNPA.Text);
+                //proc.PasarPescadores2(cbRNPA.Text);
+                //proc.PasarPermisos2(cbRNPA.Text);
+                //proc.PasarEquipoPesca2(cbRNPA.Text);
+                //proc.PasarEmbarcaPermis2(cbRNPA.Text);
+                //proc.PasarDirectiva2(cbRNPA.Text);
                 proc.Generar(folderBrowserDialog1.SelectedPath, cbRNPA.Text);
-                proc.cambiarbd("OrdPesquero");
+                //proc.cambiarbd("OrdPesquero");
                 this.Cursor = Cursors.Default;
             }
         }
