@@ -320,7 +320,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.Location = new System.Drawing.Point(384, 50);
+            this.label3.Location = new System.Drawing.Point(449, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
@@ -826,7 +826,7 @@
             this.chipeados.AutoSize = true;
             this.chipeados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chipeados.LinkColor = System.Drawing.Color.Black;
-            this.chipeados.Location = new System.Drawing.Point(224, 255);
+            this.chipeados.Location = new System.Drawing.Point(249, 255);
             this.chipeados.Name = "chipeados";
             this.chipeados.Size = new System.Drawing.Size(13, 16);
             this.chipeados.TabIndex = 14;
@@ -840,9 +840,9 @@
             this.label31.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label31.Location = new System.Drawing.Point(40, 256);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(182, 16);
+            this.label31.Size = new System.Drawing.Size(205, 16);
             this.label31.TabIndex = 13;
-            this.label31.Text = "Esf. Pesq. Nominal Chipeado:";
+            this.label31.Text = "Esf. Pesq. Nominal NO Chipeado:";
             // 
             // TotalEsfuerzos
             // 
