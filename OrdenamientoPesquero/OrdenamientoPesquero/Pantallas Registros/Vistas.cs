@@ -199,6 +199,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 case 6:
                     this.reportViewer1.ProcessingMode = ProcessingMode.Local;
                     reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, unidad);
+                    
                     try
                     {
                         this.vista_permTableAdapter.Fill(permisos_lista.vista_perm, rnpa);
@@ -257,6 +258,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     if (dt.Rows.Count != 0)
                     {
                         para3[0] = new ReportParameter("Unidad", dt.Rows[0]["NOMBRE"].ToString());
+                        reportViewer1.LocalReport.DisplayName = dt.Rows[0]["NOMBRE"].ToString();
+                        reportViewer1.LocalReport.DisplayName = reportViewer1.LocalReport.DisplayName.Replace("\"", "");
                         para3[2] = new ReportParameter("Municipio", dt.Rows[0]["MUNICIO"].ToString());
                         para3[3] = new ReportParameter("Localidad", dt.Rows[0]["LOCALIDAD"].ToString());
                     }
@@ -548,7 +551,6 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                         para3[6] = new ReportParameter("nemb", embarcacionesSet.EmbarcacionesxUnidad.Count.ToString());
                         reportViewer1.LocalReport.SetParameters(para3);
                         this.reportViewer1.RefreshReport();
-                        nombre = nombre.Replace("\"", "");
                         File.WriteAllBytes(@"C:\FICHAS\"+muni+@"\" + nombre+".pdf", reportViewer1.LocalReport.Render("PDF"));
                     }
                     this.Close();

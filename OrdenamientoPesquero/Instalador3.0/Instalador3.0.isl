@@ -4383,9 +4383,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>PROGMSG_IIS_ROLLBACKAPPPOOLS</td><td>##IDS_PROGMSG_IIS_ROLLBACKAPPPOOLS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKVROOTS</td><td>##IDS_PROGMSG_IIS_ROLLBACKVROOTS##</td><td/></row>
 		<row><td>PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS</td><td>##IDS_PROGMSG_IIS_ROLLBACKWEBSERVICEEXTENSIONS##</td><td/></row>
-		<row><td>ProductCode</td><td>{E4AB1E76-12D4-491A-A3D5-27995AC7D631}</td><td/></row>
+		<row><td>ProductCode</td><td>{E323A380-1547-4DB7-809A-AAF3A993A228}</td><td/></row>
 		<row><td>ProductName</td><td>Ordenamiento Pesquero</td><td/></row>
-		<row><td>ProductVersion</td><td>4.00</td><td/></row>
+		<row><td>ProductVersion</td><td>5.00</td><td/></row>
 		<row><td>ProgressType0</td><td>install</td><td/></row>
 		<row><td>ProgressType1</td><td>Installing</td><td/></row>
 		<row><td>ProgressType2</td><td>installed</td><td/></row>

@@ -122,10 +122,11 @@ namespace CapaDatos
         {
             //con.ChangeDatabase("master");
             //con.Close();
+            string fileonly = "RESTORE FILELISTONLY FROM DISK = '" + archivo + "'";
             string deleete = "Drop database OrdPesquero2";
             string sBackup = " RESTORE DATABASE OrdPesquero2" +
                              " FROM DISK = '" + archivo + "'" +
-                             " WITH REPLACE";
+                             " WITH REPLACE, STATS=10, MOVE 'OrdPesquero' TO" + @"'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\OrdPesquero2.mdf', MOVE 'OrdPesquero_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\OrdPesquero2.ldf'";
             SqlConnectionStringBuilder csb = new SqlConnectionStringBuilder();
             csb.ConnectionString= Properties.Settings.Default.OrdPesqueroConnectionString;
             // Es mejor abrir la conexión con la base Master
@@ -140,6 +141,8 @@ namespace CapaDatos
                     cn.Open();
                     SqlCommand cmdDrop = new SqlCommand(deleete, cn);
                     cmdDrop.ExecuteNonQuery();
+                    SqlCommand cmdfile = new SqlCommand(fileonly, cn);
+                    cmdfile.ExecuteNonQuery();
                     SqlCommand cmdBackUp = new SqlCommand(sBackup, cn);
                     cmdBackUp.ExecuteNonQuery();
                     //MessageBox.Show("Se ha restaurado la copia de la base de datos.",
