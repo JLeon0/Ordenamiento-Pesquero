@@ -83,6 +83,12 @@
             this.ActualizarRNPA = new System.Windows.Forms.PictureBox();
             this.CerrarPanel = new System.Windows.Forms.PictureBox();
             this.Resumen = new System.Windows.Forms.GroupBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.Titular = new System.Windows.Forms.Label();
+            this.TotalPermisos = new System.Windows.Forms.LinkLabel();
+            this.label59 = new System.Windows.Forms.Label();
+            this.chipeados = new System.Windows.Forms.LinkLabel();
+            this.label31 = new System.Windows.Forms.Label();
             this.TotalEsfuerzos = new System.Windows.Forms.LinkLabel();
             this.Credencializados = new System.Windows.Forms.LinkLabel();
             this.SinActividad = new System.Windows.Forms.LinkLabel();
@@ -143,13 +149,8 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.gbBotones = new System.Windows.Forms.GroupBox();
+            this.Expediente = new System.Windows.Forms.Button();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
-            this.chipeados = new System.Windows.Forms.LinkLabel();
-            this.label31 = new System.Windows.Forms.Label();
-            this.TotalPermisos = new System.Windows.Forms.LinkLabel();
-            this.label59 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.Titular = new System.Windows.Forms.Label();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelRNPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
@@ -319,7 +320,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.Location = new System.Drawing.Point(254, 50);
+            this.label3.Location = new System.Drawing.Point(384, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
@@ -771,7 +772,77 @@
             this.Resumen.Size = new System.Drawing.Size(381, 602);
             this.Resumen.TabIndex = 101;
             this.Resumen.TabStop = false;
-            this.Resumen.Enter += new System.EventHandler(this.Resumen_Enter);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
+            this.linkLabel1.Location = new System.Drawing.Point(149, 49);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(15, 16);
+            this.linkLabel1.TabIndex = 18;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "1";
+            this.linkLabel1.Visible = false;
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Black;
+            // 
+            // Titular
+            // 
+            this.Titular.AutoSize = true;
+            this.Titular.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Titular.Location = new System.Drawing.Point(6, 49);
+            this.Titular.Name = "Titular";
+            this.Titular.Size = new System.Drawing.Size(47, 16);
+            this.Titular.TabIndex = 17;
+            this.Titular.Text = "Titular:";
+            this.Titular.Visible = false;
+            // 
+            // TotalPermisos
+            // 
+            this.TotalPermisos.AutoSize = true;
+            this.TotalPermisos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalPermisos.LinkColor = System.Drawing.Color.Black;
+            this.TotalPermisos.Location = new System.Drawing.Point(150, 217);
+            this.TotalPermisos.Name = "TotalPermisos";
+            this.TotalPermisos.Size = new System.Drawing.Size(13, 16);
+            this.TotalPermisos.TabIndex = 16;
+            this.TotalPermisos.TabStop = true;
+            this.TotalPermisos.Text = "*";
+            this.TotalPermisos.VisitedLinkColor = System.Drawing.Color.Black;
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label59.Location = new System.Drawing.Point(7, 217);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(67, 16);
+            this.label59.TabIndex = 15;
+            this.label59.Text = "Permisos:";
+            // 
+            // chipeados
+            // 
+            this.chipeados.AutoSize = true;
+            this.chipeados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chipeados.LinkColor = System.Drawing.Color.Black;
+            this.chipeados.Location = new System.Drawing.Point(224, 255);
+            this.chipeados.Name = "chipeados";
+            this.chipeados.Size = new System.Drawing.Size(13, 16);
+            this.chipeados.TabIndex = 14;
+            this.chipeados.TabStop = true;
+            this.chipeados.Text = "*";
+            this.chipeados.VisitedLinkColor = System.Drawing.Color.Black;
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label31.Location = new System.Drawing.Point(40, 256);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(182, 16);
+            this.label31.TabIndex = 13;
+            this.label31.Text = "Esf. Pesq. Nominal Chipeado:";
             // 
             // TotalEsfuerzos
             // 
@@ -1442,6 +1513,7 @@
             // 
             // gbBotones
             // 
+            this.gbBotones.Controls.Add(this.Expediente);
             this.gbBotones.Controls.Add(this.button1);
             this.gbBotones.Controls.Add(this.button2);
             this.gbBotones.Controls.Add(this.button3);
@@ -1454,6 +1526,20 @@
             this.gbBotones.TabIndex = 186;
             this.gbBotones.TabStop = false;
             this.gbBotones.Text = "Entidades";
+            // 
+            // Expediente
+            // 
+            this.Expediente.BackColor = System.Drawing.Color.Silver;
+            this.Expediente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Expediente.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Expediente.ForeColor = System.Drawing.Color.Black;
+            this.Expediente.Location = new System.Drawing.Point(16, 82);
+            this.Expediente.Name = "Expediente";
+            this.Expediente.Size = new System.Drawing.Size(137, 45);
+            this.Expediente.TabIndex = 157;
+            this.Expediente.Text = "EXPEDIENTE";
+            this.Expediente.UseVisualStyleBackColor = false;
+            this.Expediente.Click += new System.EventHandler(this.Expediente_Click);
             // 
             // gbBusqueda
             // 
@@ -1469,77 +1555,6 @@
             this.gbBusqueda.TabIndex = 187;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
-            // 
-            // chipeados
-            // 
-            this.chipeados.AutoSize = true;
-            this.chipeados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chipeados.LinkColor = System.Drawing.Color.Black;
-            this.chipeados.Location = new System.Drawing.Point(224, 255);
-            this.chipeados.Name = "chipeados";
-            this.chipeados.Size = new System.Drawing.Size(13, 16);
-            this.chipeados.TabIndex = 14;
-            this.chipeados.TabStop = true;
-            this.chipeados.Text = "*";
-            this.chipeados.VisitedLinkColor = System.Drawing.Color.Black;
-            // 
-            // label31
-            // 
-            this.label31.AutoSize = true;
-            this.label31.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(40, 256);
-            this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(182, 16);
-            this.label31.TabIndex = 13;
-            this.label31.Text = "Esf. Pesq. Nominal Chipeado:";
-            // 
-            // TotalPermisos
-            // 
-            this.TotalPermisos.AutoSize = true;
-            this.TotalPermisos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalPermisos.LinkColor = System.Drawing.Color.Black;
-            this.TotalPermisos.Location = new System.Drawing.Point(150, 217);
-            this.TotalPermisos.Name = "TotalPermisos";
-            this.TotalPermisos.Size = new System.Drawing.Size(13, 16);
-            this.TotalPermisos.TabIndex = 16;
-            this.TotalPermisos.TabStop = true;
-            this.TotalPermisos.Text = "*";
-            this.TotalPermisos.VisitedLinkColor = System.Drawing.Color.Black;
-            // 
-            // label59
-            // 
-            this.label59.AutoSize = true;
-            this.label59.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.Location = new System.Drawing.Point(7, 217);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(67, 16);
-            this.label59.TabIndex = 15;
-            this.label59.Text = "Permisos:";
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(149, 49);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(15, 16);
-            this.linkLabel1.TabIndex = 18;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "1";
-            this.linkLabel1.Visible = false;
-            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Black;
-            // 
-            // Titular
-            // 
-            this.Titular.AutoSize = true;
-            this.Titular.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Titular.Location = new System.Drawing.Point(6, 49);
-            this.Titular.Name = "Titular";
-            this.Titular.Size = new System.Drawing.Size(47, 16);
-            this.Titular.TabIndex = 17;
-            this.Titular.Text = "Titular:";
-            this.Titular.Visible = false;
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -1713,5 +1728,6 @@
         private System.Windows.Forms.Label Titular;
         private System.Windows.Forms.LinkLabel TotalPermisos;
         private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Button Expediente;
     }
 }
