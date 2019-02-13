@@ -56,7 +56,7 @@ namespace CapaDatos
         }
         public void Generer_respaldo(string direc, string rnpa)
         {
-            string back = "BACKUP DATABASE[OrdPesquero2] TO DISK = N'" + direc + "\\" + rnpa + ".bak" + "' WITH NOFORMAT, NOINIT, NAME = N'test-Completa Base de datos Copia de seguridad', SKIP,NOREWIND, NOUNLOAD,  STATS = 10";
+            string back = "BACKUP DATABASE[OrdPesquero] TO DISK = N'" + direc + "\\" + rnpa + ".bak" + "' WITH NOFORMAT, NOINIT, NAME = N'test-Completa Base de datos Copia de seguridad', SKIP,NOREWIND, NOUNLOAD,  STATS = 10";
             try
             {
                 SqlCommand cmd = new SqlCommand(back, con);
