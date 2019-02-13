@@ -46,21 +46,23 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
         {
 
             DataTable oDocument = proc.ObtenerExpedientePescador(CURPPesc);
+            if (oDocument.Rows.Count > 0)
+            {
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                string folder = path + "/PDF/";
+                folder = folder.Replace("\\", "/");
+                string fullFilePath = folder + CURPPesc;
 
 
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-            string folder = path + "/PDF/";
-            folder = folder.Replace("\\", "/");
-            string fullFilePath = folder + CURPPesc;
+                if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
+
+                if (File.Exists(fullFilePath)) { try { Directory.Delete(fullFilePath); } catch (Exception ms) { } }
 
 
-            if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
-
-            if (File.Exists(fullFilePath)) { try { Directory.Delete(fullFilePath); } catch (Exception ms) { } }
-
-            byte[] file = (byte[])oDocument.Rows[0]["ACTANAC"];
-            File.WriteAllBytes(fullFilePath, file);
-            Process.Start(fullFilePath);
+                byte[] file = (byte[])oDocument.Rows[0]["ACTANAC"];
+                File.WriteAllBytes(fullFilePath, file);
+                Process.Start(fullFilePath);
+            }
         }
     }
 }
