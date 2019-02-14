@@ -126,6 +126,9 @@ namespace CapaDatos
             string deleete = "Drop database OrdPesquero2";
             string sBackup = " RESTORE DATABASE OrdPesquero2" +
                              " FROM DISK = '" + archivo + "'" +
+                             " WITH REPLACE, STATS=10, MOVE 'OrdPesquero' TO" + @"'C:\Program Files\Microsoft SQL Server\MSSQL12.SQLEXPRESS\MSSQL\DATA\OrdPesquero2.mdf', MOVE 'OrdPesquero_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\OrdPesquero2.ldf'";
+            string sBackup2 = " RESTORE DATABASE OrdPesquero2" +
+                             " FROM DISK = '" + archivo + "'" +
                              " WITH REPLACE, STATS=10, MOVE 'OrdPesquero' TO" + @"'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\OrdPesquero2.mdf', MOVE 'OrdPesquero_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\OrdPesquero2.ldf'";
             SqlConnectionStringBuilder csb = new SqlConnectionStringBuilder();
             csb.ConnectionString= Properties.Settings.Default.OrdPesqueroConnectionString;
