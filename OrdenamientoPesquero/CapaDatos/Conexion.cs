@@ -146,8 +146,25 @@ namespace CapaDatos
                     cmdDrop.ExecuteNonQuery();
                     SqlCommand cmdfile = new SqlCommand(fileonly, cn);
                     cmdfile.ExecuteNonQuery();
-                    SqlCommand cmdBackUp = new SqlCommand(sBackup, cn);
-                    cmdBackUp.ExecuteNonQuery();
+                    try
+                    {
+                        SqlCommand cmdBackUp = new SqlCommand(sBackup, cn);
+                        cmdBackUp.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        try
+                        {
+                            SqlCommand cmdBackUp = new SqlCommand(sBackup2, cn);
+                            cmdBackUp.ExecuteNonQuery();
+                        }
+                        catch (Exception)
+                        {
+
+                            throw;
+                        }
+                    }
+                    
                     //MessageBox.Show("Se ha restaurado la copia de la base de datos.",
                     //                "Restaurar base de datos",
                     //                MessageBoxButtons.OK,
