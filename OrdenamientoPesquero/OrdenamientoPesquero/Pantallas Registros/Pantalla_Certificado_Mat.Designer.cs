@@ -853,7 +853,7 @@
             this.PanelMATRICULA.Controls.Add(this.label28);
             this.PanelMATRICULA.Controls.Add(this.label27);
             this.PanelMATRICULA.ForeColor = System.Drawing.Color.Black;
-            this.PanelMATRICULA.Location = new System.Drawing.Point(51, 280);
+            this.PanelMATRICULA.Location = new System.Drawing.Point(261, 170);
             this.PanelMATRICULA.Name = "PanelMATRICULA";
             this.PanelMATRICULA.Size = new System.Drawing.Size(477, 212);
             this.PanelMATRICULA.TabIndex = 183;
@@ -980,7 +980,6 @@
             // 
             this.gbBusqueda.Controls.Add(this.ListaMatriculas);
             this.gbBusqueda.Controls.Add(this.label13);
-            this.gbBusqueda.Controls.Add(this.PanelMATRICULA);
             this.gbBusqueda.Location = new System.Drawing.Point(11, 95);
             this.gbBusqueda.Name = "gbBusqueda";
             this.gbBusqueda.Size = new System.Drawing.Size(168, 347);
@@ -998,6 +997,7 @@
             this.ClientSize = new System.Drawing.Size(871, 612);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.gbBotones);
+            this.Controls.Add(this.PanelMATRICULA);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.gbVerificacion);
             this.Controls.Add(this.pictureBox2);
