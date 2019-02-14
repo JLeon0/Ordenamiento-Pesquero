@@ -148,14 +148,14 @@ namespace CapaDatos
                     cmdfile.ExecuteNonQuery();
                     try
                     {
-                        SqlCommand cmdBackUp = new SqlCommand(sBackup, cn);
+                        SqlCommand cmdBackUp = new SqlCommand(sBackup2, cn);
                         cmdBackUp.ExecuteNonQuery();
                     }
                     catch (Exception ex)
                     {
                         try
                         {
-                            SqlCommand cmdBackUp = new SqlCommand(sBackup2, cn);
+                            SqlCommand cmdBackUp = new SqlCommand(sBackup, cn);
                             cmdBackUp.ExecuteNonQuery();
                         }
                         catch (Exception)
