@@ -64,5 +64,25 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 Process.Start(fullFilePath);
             }
         }
+
+        private void Expediente_Pescador_Load(object sender, EventArgs e)
+        {
+            CargarExpediente();
+        }
+
+        private void CargarExpediente()
+        {
+            DataTable exp = proc.ObtenerExpedientePescador(CURPPesc);
+            dgvArchivos.RowCount = 4;
+            dgvArchivos[0, 0].Value = "Acta de Nacimiento";
+            dgvArchivos[0, 1].Value = "CURP";
+            dgvArchivos[0, 2].Value = "Identificación Oficial (INE)";
+            dgvArchivos[0, 3].Value = "Comprobante de domicilio";
+            if (exp.Rows[0]["ACTANAC"].ToString() != "") { dgvArchivos[1, 0].Value = true; }
+            if (exp.Rows[0]["ACURP"].ToString() != "") { dgvArchivos[1, 1].Value = true; }
+            if (exp.Rows[0]["AINE"].ToString() != "") { dgvArchivos[1, 2].Value = true; }
+            if (exp.Rows[0]["ACOMPDOM"].ToString() != "") { dgvArchivos[1, 3].Value = true; }
+            
+        }
     }
 }
