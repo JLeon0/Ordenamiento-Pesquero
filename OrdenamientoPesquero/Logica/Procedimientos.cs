@@ -253,10 +253,10 @@ namespace Logica
             string[] Parametros = { "@curp", "@imagen", "@firma" ,"@huella"};
             return c.Ejecutar("InsertarImagen", Parametros, CURP, imagen, firma, huella);
         }
-        public int InsertarArchivos(string CURP, byte[] archivo)
+        public int InsertarArchivos(string CURP, byte[] acta, byte[] acurp, byte[] aine, byte[] acomp)
         {
-            string[] Parametros = { "@curp", "@actanac" };
-            return c.Ejecutar("InsertarPDF", Parametros, CURP, archivo);
+            string[] Parametros = { "@curp", "@actanac","@acurp","@aine","@acompdom" };
+            return c.Ejecutar("InsertarPDF", Parametros, CURP, acta,acurp,aine,acomp);
         }
         public DataTable ObtenerExpedientePescador(string curp)
         {
