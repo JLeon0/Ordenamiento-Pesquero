@@ -840,8 +840,11 @@ namespace OrdenamientoPesquero
 
         private void Expediente_Click(object sender, EventArgs e)
         {
-            Pantallas_Archivos.Expediente_UE expue = new Pantallas_Archivos.Expediente_UE(cbRNPA.Text);
-            expue.ShowDialog();
+            if (cbRNPA.Text != "")
+            {
+                Pantallas_Archivos.Expediente_UE expue = new Pantallas_Archivos.Expediente_UE(cbRNPA.Text);
+                expue.ShowDialog();
+            }
         }
 
         private void button5_Click(object sender, EventArgs e)

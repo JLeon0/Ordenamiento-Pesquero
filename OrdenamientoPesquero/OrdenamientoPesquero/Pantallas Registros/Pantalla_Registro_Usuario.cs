@@ -1085,8 +1085,11 @@ namespace OrdenamientoPesquero
 
         private void AbrirExpediente_Click(object sender, EventArgs e)
         {
-            Pantallas_Archivos.Expediente_Pescador expesc = new Pantallas_Archivos.Expediente_Pescador(CURPPesc.Text, NombrePesc.Text + " " + ApePatPescador.Text + " " + ApeMatPescador.Text);
-            expesc.ShowDialog();
+            if (CURPPesc.Text != "")
+            {
+                Pantallas_Archivos.Expediente_Pescador expesc = new Pantallas_Archivos.Expediente_Pescador(CURPPesc.Text, NombrePesc.Text + " " + ApePatPescador.Text + " " + ApeMatPescador.Text);
+                expesc.ShowDialog();
+            }
         }
 
         private void FechaNacPesc_ValueChanged(object sender, EventArgs e)
