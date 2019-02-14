@@ -66,6 +66,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.NChipCertMat = new System.Windows.Forms.MaskedTextBox();
             this.gbCertificado = new System.Windows.Forms.GroupBox();
+            this.MatriculaCertMat = new System.Windows.Forms.TextBox();
             this.ActivarPanelMATRICULA = new System.Windows.Forms.PictureBox();
             this.label12 = new System.Windows.Forms.Label();
             this.Marca = new System.Windows.Forms.TextBox();
@@ -105,7 +106,6 @@
             this.label27 = new System.Windows.Forms.Label();
             this.gbBotones = new System.Windows.Forms.GroupBox();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
-            this.MatriculaCertMat = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.gbCertificado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelMATRICULA)).BeginInit();
@@ -534,6 +534,13 @@
             this.gbCertificado.TabStop = false;
             this.gbCertificado.Text = "Certificado de Matrícula";
             // 
+            // MatriculaCertMat
+            // 
+            this.MatriculaCertMat.Location = new System.Drawing.Point(20, 38);
+            this.MatriculaCertMat.Name = "MatriculaCertMat";
+            this.MatriculaCertMat.Size = new System.Drawing.Size(105, 22);
+            this.MatriculaCertMat.TabIndex = 190;
+            // 
             // ActivarPanelMATRICULA
             // 
             this.ActivarPanelMATRICULA.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.actualizar;
@@ -846,7 +853,7 @@
             this.PanelMATRICULA.Controls.Add(this.label28);
             this.PanelMATRICULA.Controls.Add(this.label27);
             this.PanelMATRICULA.ForeColor = System.Drawing.Color.Black;
-            this.PanelMATRICULA.Location = new System.Drawing.Point(229, 164);
+            this.PanelMATRICULA.Location = new System.Drawing.Point(51, 280);
             this.PanelMATRICULA.Name = "PanelMATRICULA";
             this.PanelMATRICULA.Size = new System.Drawing.Size(477, 212);
             this.PanelMATRICULA.TabIndex = 183;
@@ -973,19 +980,13 @@
             // 
             this.gbBusqueda.Controls.Add(this.ListaMatriculas);
             this.gbBusqueda.Controls.Add(this.label13);
+            this.gbBusqueda.Controls.Add(this.PanelMATRICULA);
             this.gbBusqueda.Location = new System.Drawing.Point(11, 95);
             this.gbBusqueda.Name = "gbBusqueda";
             this.gbBusqueda.Size = new System.Drawing.Size(168, 347);
             this.gbBusqueda.TabIndex = 185;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
-            // 
-            // MatriculaCertMat
-            // 
-            this.MatriculaCertMat.Location = new System.Drawing.Point(20, 38);
-            this.MatriculaCertMat.Name = "MatriculaCertMat";
-            this.MatriculaCertMat.Size = new System.Drawing.Size(105, 22);
-            this.MatriculaCertMat.TabIndex = 190;
             // 
             // Pantalla_Certificado_Mat
             // 
@@ -997,7 +998,6 @@
             this.ClientSize = new System.Drawing.Size(871, 612);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.gbBotones);
-            this.Controls.Add(this.PanelMATRICULA);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.gbVerificacion);
             this.Controls.Add(this.pictureBox2);

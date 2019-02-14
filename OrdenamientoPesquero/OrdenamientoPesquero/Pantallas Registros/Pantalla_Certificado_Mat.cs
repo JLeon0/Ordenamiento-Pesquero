@@ -92,7 +92,12 @@ namespace OrdenamientoPesquero
             {
                 item.Text = "";
             }
-            NMotoresCertMat.Value = 0;
+            ServicioCertMat.Text = "PESCA";
+            TraficoCertMat.Text = "INTERIOR";
+            NMotoresCertMat.Value = 1;
+            ArqBrutoCertMat.Text = "1.200";
+            ArqNetoCertMat.Text = "0.840";
+            PesoMCertMat.Text = "0.000";
         }
 
         private void RegistrarUnidad_Click(object sender, EventArgs e)

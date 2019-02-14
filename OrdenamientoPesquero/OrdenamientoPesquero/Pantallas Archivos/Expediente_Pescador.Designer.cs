@@ -32,13 +32,13 @@
             this.SubirPDF = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dgvArchivos = new System.Windows.Forms.DataGridView();
-            this.Expediente = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.label30 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.NombrePesc = new System.Windows.Forms.Label();
+            this.Expediente = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Check = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArchivos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -88,23 +88,6 @@
             this.dgvArchivos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvArchivos.Size = new System.Drawing.Size(269, 194);
             this.dgvArchivos.TabIndex = 187;
-            // 
-            // Expediente
-            // 
-            this.Expediente.Frozen = true;
-            this.Expediente.HeaderText = "Archivo";
-            this.Expediente.Name = "Expediente";
-            this.Expediente.ReadOnly = true;
-            this.Expediente.Width = 150;
-            // 
-            // Check
-            // 
-            this.Check.Frozen = true;
-            this.Check.HeaderText = "Check";
-            this.Check.Name = "Check";
-            this.Check.ReadOnly = true;
-            this.Check.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Check.Width = 75;
             // 
             // label30
             // 
@@ -162,6 +145,24 @@
             this.NombrePesc.TabIndex = 193;
             this.NombrePesc.Text = "----";
             // 
+            // Expediente
+            // 
+            this.Expediente.Frozen = true;
+            this.Expediente.HeaderText = "Archivo";
+            this.Expediente.Name = "Expediente";
+            this.Expediente.ReadOnly = true;
+            this.Expediente.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Expediente.Width = 150;
+            // 
+            // Check
+            // 
+            this.Check.Frozen = true;
+            this.Check.HeaderText = "Check";
+            this.Check.Name = "Check";
+            this.Check.ReadOnly = true;
+            this.Check.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Check.Width = 75;
+            // 
             // Expediente_Pescador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -196,12 +197,12 @@
         private System.Windows.Forms.Button SubirPDF;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DataGridView dgvArchivos;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Expediente;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn Check;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label NombrePesc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Expediente;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Check;
     }
 }
