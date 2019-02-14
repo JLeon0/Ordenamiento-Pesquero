@@ -19,10 +19,11 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
         string CURPPesc = "";
 
 
-        public Expediente_Pescador(string curp)
+        public Expediente_Pescador(string curp,string nombre)
         {
             InitializeComponent();
             CURPPesc = curp;
+            NombrePesc.Text = nombre;
         }
 
         private void SubirPDF_Click(object sender, EventArgs e)
@@ -38,8 +39,16 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
 
                 MemoryStream pdf = new MemoryStream();
                 myStream.CopyTo(pdf);
-                proc.InsertarArchivos(CURPPesc, pdf.GetBuffer());
+                if (dgvArchivos.SelectedCells[0].RowIndex == 0)
+                    proc.InsertarArchivos(CURPPesc, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
+                if (dgvArchivos.SelectedCells[0].RowIndex == 1)
+                    proc.InsertarArchivos(CURPPesc, new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
+                if (dgvArchivos.SelectedCells[0].RowIndex == 2)
+                    proc.InsertarArchivos(CURPPesc, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
+                if (dgvArchivos.SelectedCells[0].RowIndex == 3)
+                    proc.InsertarArchivos(CURPPesc, new byte[0], new byte[0],new byte[0], pdf.GetBuffer());
             }
+            CargarExpediente();
         }
 
         private void AbrirPDF_Click(object sender, EventArgs e)
@@ -51,7 +60,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                 string folder = path + "/PDF/";
                 folder = folder.Replace("\\", "/");
-                string fullFilePath = folder + CURPPesc;
+                string fullFilePath = folder + CURPPesc + dgvArchivos.SelectedCells[0].Value;
 
 
                 if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
@@ -59,9 +68,22 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 if (File.Exists(fullFilePath)) { try { Directory.Delete(fullFilePath); } catch (Exception ms) { } }
 
 
-                byte[] file = (byte[])oDocument.Rows[0]["ACTANAC"];
-                File.WriteAllBytes(fullFilePath, file);
-                Process.Start(fullFilePath);
+                string archivo = "";
+                if (dgvArchivos.SelectedCells[0].RowIndex == 0)
+                    archivo = "ACTANAC";
+                else if (dgvArchivos.SelectedCells[0].RowIndex == 1)
+                    archivo = "ACURP";
+                else if (dgvArchivos.SelectedCells[0].RowIndex == 2)
+                    archivo = "AINE";
+                else if (dgvArchivos.SelectedCells[0].RowIndex == 3)
+                    archivo = "ACOMPDOM";
+
+                if (archivo != "")
+                {
+                    byte[] file = (byte[])oDocument.Rows[0][archivo];
+                    File.WriteAllBytes(fullFilePath, file);
+                    Process.Start(fullFilePath);
+                }
             }
         }
 
@@ -78,10 +100,10 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             dgvArchivos[0, 1].Value = "CURP";
             dgvArchivos[0, 2].Value = "Identificación Oficial (INE)";
             dgvArchivos[0, 3].Value = "Comprobante de domicilio";
-            if (exp.Rows[0]["ACTANAC"].ToString() != "") { dgvArchivos[1, 0].Value = true; }
-            if (exp.Rows[0]["ACURP"].ToString() != "") { dgvArchivos[1, 1].Value = true; }
-            if (exp.Rows[0]["AINE"].ToString() != "") { dgvArchivos[1, 2].Value = true; }
-            if (exp.Rows[0]["ACOMPDOM"].ToString() != "") { dgvArchivos[1, 3].Value = true; }
+            if (exp.Rows[0]["ACTANAC"].ToString() != "") { dgvArchivos[1, 0].Value = true; dgvArchivos[1, 0].Style.BackColor = Color.Green; }
+            if (exp.Rows[0]["ACURP"].ToString() != "") { dgvArchivos[1, 1].Value = true; dgvArchivos[1, 1].Style.BackColor = Color.Green; }
+            if (exp.Rows[0]["AINE"].ToString() != "") { dgvArchivos[1, 2].Value = true; dgvArchivos[1, 2].Style.BackColor = Color.Green; }
+            if (exp.Rows[0]["ACOMPDOM"].ToString() != "") { dgvArchivos[1, 3].Value = true; dgvArchivos[1, 3].Style.BackColor = Color.Green; }
             
         }
     }
