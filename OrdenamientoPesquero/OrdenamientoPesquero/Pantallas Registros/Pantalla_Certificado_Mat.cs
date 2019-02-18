@@ -241,5 +241,14 @@ namespace OrdenamientoPesquero
                 }
             }
         }
+
+        private void AbrirExpediente_Click(object sender, EventArgs e)
+        {
+            if (MatriculaCertMat.Text != "")
+            {
+                Pantallas_Archivos.Expediente_Embarcacion expem = new Pantallas_Archivos.Expediente_Embarcacion(MatriculaCertMat.Text, NombreEmbCerMat.Text);
+                expem.ShowDialog();
+            }
+        }
     }
 }

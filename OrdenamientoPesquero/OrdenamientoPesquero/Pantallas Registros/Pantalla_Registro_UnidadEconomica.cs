@@ -844,7 +844,7 @@ namespace OrdenamientoPesquero
         {
             if (cbRNPA.Text != "")
             {
-                Pantallas_Archivos.Expediente_UE expue = new Pantallas_Archivos.Expediente_UE(cbRNPA.Text);
+                Pantallas_Archivos.Expediente_UE expue = new Pantallas_Archivos.Expediente_UE(cbRNPA.Text,txtNombre.Text);
                 expue.ShowDialog();
             }
         }

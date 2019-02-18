@@ -801,7 +801,7 @@ namespace OrdenamientoPesquero
                     imagenBuffer = (byte[])dt.Rows[0]["IMAGEN"];
                     System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
                     Imagen.BackgroundImage = (Image.FromStream(ms));
-                    Imagen.BackgroundImageLayout = ImageLayout.Zoom;
+                    //Imagen.BackgroundImageLayout = ImageLayout.Zoom;
                 }
             }
             dt = proc.ObtenerFirma(CURPPesc.Text);

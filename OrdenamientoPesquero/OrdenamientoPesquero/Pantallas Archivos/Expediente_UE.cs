@@ -2,7 +2,9 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -14,18 +16,41 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
     public partial class Expediente_UE : Form
     {
         Procedimientos proc = new Procedimientos();
+        Validaciones val = new Validaciones();
         string RNPA = "";
+        int exito = 0;
 
-
-        public Expediente_UE(string rnpa)
+        public Expediente_UE(string rnpa, string nombre)
         {
             InitializeComponent();
             RNPA = rnpa;
+            Nombre.Text = nombre;
         }
 
         private void Expediente_UE_Load(object sender, EventArgs e)
         {
+            CargarExpedienteUnidad();
+            CargarExpedienteEmbarcacion();
             CargarExpedientePescador();
+        }
+        private void CargarExpedienteUnidad()
+        {
+            DataTable expediente = proc.ObtenerExpedienteUnidad(RNPA);
+            dgvUnidad.RowCount = 5;
+            dgvUnidad[0, 0].Value = "Acta Constitutiva";
+            dgvUnidad[0, 1].Value = "Formato de Registro";
+            dgvUnidad[0, 2].Value = "Formato de Verificacion de Embarcacion";
+            dgvUnidad[0, 3].Value = "RFC Unidad";
+            dgvUnidad[0, 4].Value = "INE Representante Legal";
+            if (expediente.Rows.Count > 0)
+            {
+                if (expediente.Rows[0]["ACTACONS"].ToString() != "") { dgvUnidad[1, 0].Value = true; dgvUnidad[1, 0].Style.BackColor = Color.Green; }
+                if (expediente.Rows[0]["FORMATOREG"].ToString() != "") { dgvUnidad[1, 1].Value = true; dgvUnidad[1, 1].Style.BackColor = Color.Green; }
+                if (expediente.Rows[0]["FORMATOVERF"].ToString() != "") { dgvUnidad[1, 2].Value = true; dgvUnidad[1, 2].Style.BackColor = Color.Green; }
+                if (expediente.Rows[0]["RFCUE"].ToString() != "") { dgvUnidad[1, 3].Value = true; dgvUnidad[1, 3].Style.BackColor = Color.Green; }
+                if (expediente.Rows[0]["INEREPR"].ToString() != "") { dgvUnidad[1, 4].Value = true; dgvUnidad[1, 4].Style.BackColor = Color.Green; }
+            }
+            dgvUnidad.ClearSelection();
         }
 
         private void CargarExpedientePescador()
@@ -33,6 +58,12 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             DataTable expediente = proc.ObtenerExpedientePescadorXUnidad(RNPA);
             DataTable pescadores = proc.PescadoresXUnidad(RNPA);
             int acta = 0, aine = 0, acurp = 0, acompdom = 0;
+            dgvPescadores.RowCount = 4;
+            dgvPescadores[0, 0].Value = "Actas de Nacimiento";
+            dgvPescadores[0, 1].Value = "CURP";
+            dgvPescadores[0, 2].Value = "INE (Identificacion Oficial)";
+            dgvPescadores[0, 3].Value = "Comprobante de Domicilio";
+
             foreach (DataRow fila in expediente.Rows)
             {
                 if (fila["ACTANAC"].ToString() != "") { acta++; }
@@ -40,15 +71,117 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 if (fila["AINE"].ToString() != "") { aine++; }
                 if (fila["ACOMPDOM"].ToString() != "") { acompdom++; }
             }
-            ActasPesc.Text = acta + "/" + pescadores.Rows.Count;
-            if (acta == pescadores.Rows.Count) { check.SetItemChecked(0, true); } else { check.SetItemChecked(0, false); }
-            CurpsPesc.Text = acurp + "/" + pescadores.Rows.Count;
-            if (acurp == pescadores.Rows.Count) { check.SetItemChecked(1, true); } else { check.SetItemChecked(1, false); }
-            INEPesc.Text = aine + "/" + pescadores.Rows.Count;
-            if (aine == pescadores.Rows.Count) { check.SetItemChecked(2, true); } else { check.SetItemChecked(2, false); }
-            ComprPesc.Text = acompdom + "/" + pescadores.Rows.Count;
-            if (acompdom == pescadores.Rows.Count) { check.SetItemChecked(3, true); } else { check.SetItemChecked(3, false); }
+            dgvPescadores[2,0].Value = acta + "/" + pescadores.Rows.Count;
+            if (acta == pescadores.Rows.Count) { dgvPescadores[1, 0].Value = true; dgvPescadores[1, 0].Style.BackColor = Color.Green; }
+            dgvPescadores[2, 1].Value = acurp + "/" + pescadores.Rows.Count;
+            if (acurp == pescadores.Rows.Count) { dgvPescadores[1, 1].Value = true; dgvPescadores[1, 1].Style.BackColor = Color.Green; }
+            dgvPescadores[2, 2].Value = aine + "/" + pescadores.Rows.Count;
+            if (aine == pescadores.Rows.Count) { dgvPescadores[1, 2].Value = true; dgvPescadores[1, 2].Style.BackColor = Color.Green; }
+            dgvPescadores[2, 3].Value = acompdom + "/" + pescadores.Rows.Count;
+            if (acompdom == pescadores.Rows.Count) { dgvPescadores[1, 3].Value = true; dgvPescadores[1, 3].Style.BackColor = Color.Green; }
+            dgvPescadores.ClearSelection();
+        }
 
+        private void CargarExpedienteEmbarcacion()
+        {
+            DataTable expediente = proc.ObtenerExpedienteEmbarcacionXUnidad(RNPA);
+            DataTable embarcaciones = proc.ObtenerCertMatrXUnidad(RNPA);
+            int certmat = 0, certsegu = 0, certprop = 0, factmotor = 0, factembarca = 0, papelchipeo = 0;
+            dgvEmbarcacion.RowCount = 6;
+            dgvEmbarcacion[0, 0].Value = "Certif. Matricula";
+            dgvEmbarcacion[0, 1].Value = "Certif. Seguridad";
+            dgvEmbarcacion[0, 2].Value = "Certif. Propiedad";
+            dgvEmbarcacion[0, 3].Value = "Factura Motor";
+            dgvEmbarcacion[0, 4].Value = "Factura Embarcacion";
+            dgvEmbarcacion[0, 5].Value = "Papeleta de Chipeo";
+
+            foreach (DataRow fila in expediente.Rows)
+            {
+                if (fila["CERTMATRICULA"].ToString() != "") { certmat++; }
+                if (fila["CERTSEGURIDAD"].ToString() != "") { certsegu++; }
+                if (fila["CERTPROPIEDAD"].ToString() != "") { certprop++; }
+                if (fila["FACTMOTOR"].ToString() != "") { factmotor++; }
+                if (fila["FACTEMBARCACION"].ToString() != "") { factembarca++; }
+                if (fila["PAPELETACHIPEO"].ToString() != "") { papelchipeo++; }
+            }
+            dgvEmbarcacion[2, 0].Value = certmat + "/" + embarcaciones.Rows.Count;
+            if (certmat == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 0].Value = true; dgvEmbarcacion[1, 0].Style.BackColor = Color.Green; }
+            dgvEmbarcacion[2, 1].Value = certsegu + "/" + embarcaciones.Rows.Count;
+            if (certsegu == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 1].Value = true; dgvEmbarcacion[1, 1].Style.BackColor = Color.Green; }
+            dgvEmbarcacion[2, 2].Value = certprop + "/" + embarcaciones.Rows.Count;
+            if (certprop == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 2].Value = true; dgvEmbarcacion[1, 2].Style.BackColor = Color.Green; }
+            dgvEmbarcacion[2, 3].Value = factmotor + "/" + embarcaciones.Rows.Count;
+            if (factmotor == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 3].Value = true; dgvEmbarcacion[1, 3].Style.BackColor = Color.Green; }
+            dgvEmbarcacion[2, 4].Value = factembarca + "/" + embarcaciones.Rows.Count;
+            if (factembarca == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 4].Value = true; dgvEmbarcacion[1, 4].Style.BackColor = Color.Green; }
+            dgvEmbarcacion[2, 5].Value = papelchipeo + "/" + embarcaciones.Rows.Count;
+            if (papelchipeo == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 5].Value = true; dgvEmbarcacion[1, 5].Style.BackColor = Color.Green; }
+            dgvEmbarcacion.ClearSelection();
+        }
+
+        private void SubirPDF_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.InitialDirectory = "C:\\";
+            openFileDialog1.Filter = "Todos los archivos (*.pdf)|*.*";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Stream myStream = openFileDialog1.OpenFile();
+
+                MemoryStream pdf = new MemoryStream();
+                myStream.CopyTo(pdf);
+                if (dgvUnidad.SelectedCells[0].RowIndex == 0)
+                    exito = proc.InsertarPDFUnidad(RNPA, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0]);
+                else if (dgvUnidad.SelectedCells[0].RowIndex == 1)
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
+                else if (dgvUnidad.SelectedCells[0].RowIndex == 2)
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
+                else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
+                else if (dgvUnidad.SelectedCells[0].RowIndex == 4)
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
+                val.Exito(exito);
+            }
+            CargarExpedienteUnidad();
+        }
+
+        private void AbrirPDF_Click(object sender, EventArgs e)
+        {
+            DataTable oDocument = proc.ObtenerExpedienteUnidad(RNPA);
+            if (oDocument.Rows.Count > 0)
+            {
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                string folder = path + "/PDF/";
+                folder = folder.Replace("\\", "/");
+                string fullFilePath = folder + RNPA + "-" + dgvUnidad.SelectedCells[0].Value.ToString().Replace(' ', '-');
+
+
+                if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
+
+                if (File.Exists(fullFilePath)) { try { Directory.Delete(fullFilePath); } catch (Exception ms) { } }
+
+
+                string archivo = "";
+                if (dgvUnidad.SelectedCells[0].RowIndex == 0)
+                    archivo = "ACTACONS";
+                else if (dgvUnidad.SelectedCells[0].RowIndex == 1)
+                    archivo = "FORMATOREG";
+                else if (dgvUnidad.SelectedCells[0].RowIndex == 2)
+                    archivo = "FORMATOVERF";
+                else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
+                    archivo = "RFCUE";
+                else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
+                    archivo = "INEREPR";
+
+                if (archivo != "")
+                {
+                    byte[] file = (byte[])oDocument.Rows[0][archivo];
+                    File.WriteAllBytes(fullFilePath, file);
+                    Process.Start(fullFilePath);
+                }
+            }
         }
     }
 }

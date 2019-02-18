@@ -1503,7 +1503,7 @@
             // 
             // Ver
             // 
-            this.Ver.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ver;
+            this.Ver.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.show;
             this.Ver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Ver.Location = new System.Drawing.Point(845, 19);
             this.Ver.Name = "Ver";
