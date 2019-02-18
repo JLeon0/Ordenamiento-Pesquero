@@ -106,6 +106,7 @@
             this.label27 = new System.Windows.Forms.Label();
             this.gbBotones = new System.Windows.Forms.GroupBox();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
+            this.AbrirExpediente = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.gbCertificado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelMATRICULA)).BeginInit();
@@ -987,6 +988,16 @@
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
             // 
+            // AbrirExpediente
+            // 
+            this.AbrirExpediente.Location = new System.Drawing.Point(475, 537);
+            this.AbrirExpediente.Name = "AbrirExpediente";
+            this.AbrirExpediente.Size = new System.Drawing.Size(98, 50);
+            this.AbrirExpediente.TabIndex = 186;
+            this.AbrirExpediente.Text = "EXPEDIENTE";
+            this.AbrirExpediente.UseVisualStyleBackColor = true;
+            this.AbrirExpediente.Click += new System.EventHandler(this.AbrirExpediente_Click);
+            // 
             // Pantalla_Certificado_Mat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -994,7 +1005,8 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(871, 612);
+            this.ClientSize = new System.Drawing.Size(871, 619);
+            this.Controls.Add(this.AbrirExpediente);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.gbBotones);
             this.Controls.Add(this.PanelMATRICULA);
@@ -1115,5 +1127,6 @@
         private System.Windows.Forms.GroupBox gbBusqueda;
         private System.Windows.Forms.PictureBox ActivarPanelMATRICULA;
         private System.Windows.Forms.TextBox MatriculaCertMat;
+        private System.Windows.Forms.Button AbrirExpediente;
     }
 }

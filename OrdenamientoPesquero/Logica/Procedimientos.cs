@@ -83,13 +83,22 @@ namespace Logica
             string[] Parametros = { "@RNPA" };
             return c.getDatosTabla("CurpxUnidad", Parametros, RNPA);
         }
+        public DataTable ObtenerExpedienteUnidad(string RNPA)
+        {
+            string[] Parametros = { "@RNPA" };
+            return c.getDatosTabla("ObtenerExpedienteUnidad", Parametros, RNPA);
+        }
+        public int InsertarPDFUnidad(string RNPA, byte[] actacons, byte[] formatoreg, byte[] formatoverf, byte[] rfcue, byte[] inerepr)
+        {
+            string[] Parametros = { "@rnpa", "@actacons", "@formatoreg", "@formatoverf", "@rfcue", "@inerepr" };
+            return c.Ejecutar("InsertarPDFUnidad", Parametros, RNPA, actacons, formatoreg, formatoverf, rfcue, inerepr);
+        }
+
+            #endregion
 
 
-        #endregion
-
-
-        #region Permisos
-        public int EliminarRelac(string perm)
+            #region Permisos
+            public int EliminarRelac(string perm)
         {
             string[] Parametros = { "@PERMISO" };
             return c.Ejecutar("EliminarRelacion", Parametros, perm);
@@ -257,10 +266,10 @@ namespace Logica
             string[] Parametros = { "@curp", "@imagen", "@firma" ,"@huella"};
             return c.Ejecutar("InsertarImagen", Parametros, CURP, imagen, firma, huella);
         }
-        public int InsertarArchivos(string CURP, byte[] acta, byte[] acurp, byte[] aine, byte[] acomp)
+        public int InsertarPDFPescador(string CURP, byte[] acta, byte[] acurp, byte[] aine, byte[] acomp)
         {
             string[] Parametros = { "@curp", "@actanac","@acurp","@aine","@acompdom" };
-            return c.Ejecutar("InsertarPDF", Parametros, CURP, acta,acurp,aine,acomp);
+            return c.Ejecutar("InsertarPDFPescador", Parametros, CURP, acta,acurp,aine,acomp);
         }
         public DataTable ObtenerExpedientePescador(string curp)
         {
@@ -337,7 +346,21 @@ namespace Logica
             string[] Parametros = { "@matricula" };
             return c.getDatosTabla("PermisosxEmbarca", Parametros, Matricula);
         }
-
+        public int InsertarPDFEmbarcacion(string MATRICULA, byte[] certmatricula, byte[] certseguridad, byte[] certpropiedad, byte[] factmotor, byte[] factembarcacion, byte[] papeletachipeo)
+        {
+            string[] Parametros = { "@matricula", "@certmatricula", "@certseguridad", "@certpropiedad", "@factmotor", "@factembarcacion", "@papeletachipeo" };
+            return c.Ejecutar("InsertarPDFEmbarcacion", Parametros, MATRICULA, certmatricula, certseguridad, certpropiedad, factmotor, factembarcacion, papeletachipeo);
+        }
+        public DataTable ObtenerExpedienteEmbarcacion(string Matricula)
+        {
+            string[] Parametros = { "@matricula" };
+            return c.getDatosTabla("ObtenerExpedienteEmbarcacion", Parametros, Matricula);
+        }
+        public DataTable ObtenerExpedienteEmbarcacionXUnidad(string RNPA)
+        {
+            string[] Parametros = { "@rnpa" };
+            return c.getDatosTabla("ObtenerExpedienteEmbarcacionXUnidad", Parametros, RNPA);
+        }
         #endregion
 
 

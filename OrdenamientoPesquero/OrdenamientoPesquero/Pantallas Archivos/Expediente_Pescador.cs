@@ -23,7 +23,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
         {
             InitializeComponent();
             CURPPesc = curp;
-            NombrePesc.Text = nombre;
+            Nombre.Text = nombre;
         }
 
         private void SubirPDF_Click(object sender, EventArgs e)
@@ -40,27 +40,27 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 MemoryStream pdf = new MemoryStream();
                 myStream.CopyTo(pdf);
                 if (dgvArchivos.SelectedCells[0].RowIndex == 0)
-                    proc.InsertarArchivos(CURPPesc, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
+                    proc.InsertarPDFPescador(CURPPesc, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
                 if (dgvArchivos.SelectedCells[0].RowIndex == 1)
-                    proc.InsertarArchivos(CURPPesc, new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
+                    proc.InsertarPDFPescador(CURPPesc, new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
                 if (dgvArchivos.SelectedCells[0].RowIndex == 2)
-                    proc.InsertarArchivos(CURPPesc, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
+                    proc.InsertarPDFPescador(CURPPesc, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
                 if (dgvArchivos.SelectedCells[0].RowIndex == 3)
-                    proc.InsertarArchivos(CURPPesc, new byte[0], new byte[0],new byte[0], pdf.GetBuffer());
+                    proc.InsertarPDFPescador(CURPPesc, new byte[0], new byte[0],new byte[0], pdf.GetBuffer());
             }
             CargarExpediente();
         }
 
         private void AbrirPDF_Click(object sender, EventArgs e)
         {
-
             DataTable oDocument = proc.ObtenerExpedientePescador(CURPPesc);
             if (oDocument.Rows.Count > 0)
             {
                 string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                 string folder = path + "/PDF/";
                 folder = folder.Replace("\\", "/");
-                string fullFilePath = folder + CURPPesc + dgvArchivos.SelectedCells[0].Value;
+                string[] ext = dgvArchivos.SelectedCells[0].Value.ToString().Split(' ');
+                string fullFilePath = folder + CURPPesc + "-" + ext[0];
 
 
                 if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
@@ -98,13 +98,16 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             dgvArchivos.RowCount = 4;
             dgvArchivos[0, 0].Value = "Acta de Nacimiento";
             dgvArchivos[0, 1].Value = "CURP";
-            dgvArchivos[0, 2].Value = "Identificación Oficial (INE)";
+            dgvArchivos[0, 2].Value = "INE (Identificación Oficial)";
             dgvArchivos[0, 3].Value = "Comprobante de domicilio";
-            if (exp.Rows[0]["ACTANAC"].ToString() != "") { dgvArchivos[1, 0].Value = true; dgvArchivos[1, 0].Style.BackColor = Color.Green; }
-            if (exp.Rows[0]["ACURP"].ToString() != "") { dgvArchivos[1, 1].Value = true; dgvArchivos[1, 1].Style.BackColor = Color.Green; }
-            if (exp.Rows[0]["AINE"].ToString() != "") { dgvArchivos[1, 2].Value = true; dgvArchivos[1, 2].Style.BackColor = Color.Green; }
-            if (exp.Rows[0]["ACOMPDOM"].ToString() != "") { dgvArchivos[1, 3].Value = true; dgvArchivos[1, 3].Style.BackColor = Color.Green; }
-            
+            if (exp.Rows.Count > 0)
+            {
+                if (exp.Rows[0]["ACTANAC"].ToString() != "") { dgvArchivos[1, 0].Value = true; dgvArchivos[1, 0].Style.BackColor = Color.Green; }
+                if (exp.Rows[0]["ACURP"].ToString() != "") { dgvArchivos[1, 1].Value = true; dgvArchivos[1, 1].Style.BackColor = Color.Green; }
+                if (exp.Rows[0]["AINE"].ToString() != "") { dgvArchivos[1, 2].Value = true; dgvArchivos[1, 2].Style.BackColor = Color.Green; }
+                if (exp.Rows[0]["ACOMPDOM"].ToString() != "") { dgvArchivos[1, 3].Value = true; dgvArchivos[1, 3].Style.BackColor = Color.Green; }
+            }
+            dgvArchivos.ClearSelection();
         }
     }
 }

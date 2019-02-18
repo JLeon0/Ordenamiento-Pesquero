@@ -307,6 +307,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="seguro.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -327,6 +332,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>vencidos.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Pantallas Archivos\Expediente_Embarcacion.resx">
+      <DependentUpon>Expediente_Embarcacion.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Pantallas Archivos\Expediente_Pescador.resx">
       <DependentUpon>Expediente_Pescador.cs</DependentUpon>
     </EmbeddedResource>
@@ -368,14 +376,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <EmbeddedResource Include="Reportes\Anexo3.rdlc" />
     <EmbeddedResource Include="Reportes\Credencial.rdlc" />
     <EmbeddedResource Include="Reportes\Lista_Embarca.rdlc" />
@@ -706,9 +709,6 @@
     <None Include="Resources\borrar.png" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\ver.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\lupa.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -758,6 +758,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gbcs4x4.ico" />
+    <None Include="Resources\show.png" />
     <None Include="Resources\pangas.jpg" />
     <None Include="Resources\SEPADA.jpg" />
     <None Include="Resources\pedir.png" />

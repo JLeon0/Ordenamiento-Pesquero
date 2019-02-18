@@ -333,9 +333,9 @@ namespace OrdenamientoPesquero.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap subir {
+        internal static System.Drawing.Bitmap show {
             get {
-                object obj = ResourceManager.GetObject("subir", resourceCulture);
+                object obj = ResourceManager.GetObject("show", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,9 +343,9 @@ namespace OrdenamientoPesquero.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap ver {
+        internal static System.Drawing.Bitmap subir {
             get {
-                object obj = ResourceManager.GetObject("ver", resourceCulture);
+                object obj = ResourceManager.GetObject("subir", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
