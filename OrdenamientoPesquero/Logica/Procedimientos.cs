@@ -166,6 +166,10 @@ namespace Logica
         }
         #endregion
 
+        public DataTable ObtenerTablaConsulta(string consulta)
+        {
+            return c.getDatosTablaConsulta(consulta);
+        }
 
         #region Obtener
         public DataTable ObtenerMunicipios()

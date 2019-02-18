@@ -26,7 +26,7 @@ namespace CapaDatos
         {
             CONEXIONPERRONA = "Data source = " + instancia + "; Initial Catalog = OrdPesquero; Integrated Security = true;";
             Properties.Settings.Default.OrdPesqueroConnectionString = CONEXIONPERRONA;
-            
+
             // modificamos el guardado
             Properties.Settings.Default.Save();
             con = new SqlConnection(obtenertconexion());
@@ -80,6 +80,7 @@ namespace CapaDatos
                 {
                 }
                 cmd.ExecuteNonQuery();
+                MessageBox.Show("Respaldo Generado Correctamente");
                 // string temporaryTableName = "temp";
                 // string _sql = "";
                 // string AremoteTempPath = "C:/wamp64/resp.bak";
@@ -140,7 +141,7 @@ namespace CapaDatos
                              " FROM DISK = '" + archivo + "'" +
                              " WITH REPLACE, STATS=10, MOVE 'OrdPesquero' TO" + @"'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\OrdPesquero2.mdf', MOVE 'OrdPesquero_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\OrdPesquero2.ldf'";
             SqlConnectionStringBuilder csb = new SqlConnectionStringBuilder();
-            csb.ConnectionString= Properties.Settings.Default.OrdPesqueroConnectionString;
+            csb.ConnectionString = Properties.Settings.Default.OrdPesqueroConnectionString;
             // Es mejor abrir la conexión con la base Master
             csb.InitialCatalog = "master";
             csb.IntegratedSecurity = true;
@@ -178,7 +179,7 @@ namespace CapaDatos
 
                         }
                     }
-                    
+
                     //MessageBox.Show("Se ha restaurado la copia de la base de datos.",
                     //                "Restaurar base de datos",
                     //                MessageBoxButtons.OK,
@@ -290,7 +291,7 @@ namespace CapaDatos
         {
             SqlCommand cmd = new SqlCommand();
             SqlConnectionStringBuilder csb = new SqlConnectionStringBuilder();
-            csb.ConnectionString= Properties.Settings.Default.OrdPesqueroConnectionString;
+            csb.ConnectionString = Properties.Settings.Default.OrdPesqueroConnectionString;
             // Es mejor abrir la conexión con la base Master
             csb.InitialCatalog = "master";
             csb.IntegratedSecurity = true;
@@ -351,6 +352,41 @@ namespace CapaDatos
                 cn.Close();
                 return 0;
             }
-        }      
+        }
+        public DataTable getDatosTablaConsulta(string Consulta)
+        {
+            DataTable dt = new DataTable();
+            SqlCommand cmd = new SqlCommand();
+            using (SqlConnection cn = new SqlConnection(obtenertconexion()))
+            {
+                try
+                {
+                    cn.Open();
+                    cn.ChangeDatabase(bdda);
+                    cmd.Connection = cn;
+                    cmd.CommandText = Consulta;
+
+                    if (Consulta.Length != 0)
+                    {
+                        try
+                        {
+                            SqlDataReader dr = null;
+                            dr = cmd.ExecuteReader();
+                            dt.Load(dr);
+                            cn.Close();
+                            return dt;
+                        }
+                        catch (Exception ms)
+                        { }
+                    }
+                    cn.Close();
+                    return dt;
+                }
+                catch (Exception s)
+                {
+                    return dt;
+                }
+            }
+        }
     }
 }
