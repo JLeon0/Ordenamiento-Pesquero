@@ -53,6 +53,7 @@ namespace CapaDatos
         {
             bdda = bd;
             con = new SqlConnection(setString(instancia));
+
         }
         public void Generer_respaldo(string direc, string rnpa)
         {
@@ -68,7 +69,15 @@ namespace CapaDatos
                 catch (Exception)
                 {
                     con = new SqlConnection(setString("."));
+                    cmd = new SqlCommand(back, con);
                     con.Open();
+                }
+                try
+                {
+                    con.Open();
+                }
+                catch (Exception)
+                {
                 }
                 cmd.ExecuteNonQuery();
                 // string temporaryTableName = "temp";
@@ -143,7 +152,13 @@ namespace CapaDatos
                 {
                     cn.Open();
                     SqlCommand cmdDrop = new SqlCommand(deleete, cn);
-                    cmdDrop.ExecuteNonQuery();
+                    try
+                    {
+                        cmdDrop.ExecuteNonQuery();
+                    }
+                    catch (Exception)
+                    {
+                    }
                     SqlCommand cmdfile = new SqlCommand(fileonly, cn);
                     cmdfile.ExecuteNonQuery();
                     try
@@ -161,7 +176,6 @@ namespace CapaDatos
                         catch (Exception)
                         {
 
-                            throw;
                         }
                     }
                     

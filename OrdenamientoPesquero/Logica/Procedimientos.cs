@@ -12,7 +12,7 @@ namespace Logica
     public class Procedimientos
     {
         public string bdd = "OrdPesquero";
-        Conexion c;
+        public Conexion c;
         public Procedimientos()
         {
             c = new Conexion(bdd);

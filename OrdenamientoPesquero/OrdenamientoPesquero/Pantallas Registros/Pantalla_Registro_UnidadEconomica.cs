@@ -13,6 +13,7 @@ using Microsoft.VisualBasic;
 using System.Text.RegularExpressions;
 using OrdenamientoPesquero.Pantallas_Registros;
 using System.Data.SqlClient;
+using CapaDatos;
 
 namespace OrdenamientoPesquero
 {
