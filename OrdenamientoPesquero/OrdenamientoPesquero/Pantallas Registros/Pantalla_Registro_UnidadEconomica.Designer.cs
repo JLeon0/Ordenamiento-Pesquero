@@ -52,6 +52,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.gbOrgPes = new System.Windows.Forms.GroupBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.mtbTelefonoPresidente = new System.Windows.Forms.MaskedTextBox();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label32 = new System.Windows.Forms.Label();
+            this.NombrePresidenteUE = new System.Windows.Forms.TextBox();
             this.ActivarPanelRNPA = new System.Windows.Forms.PictureBox();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.cbRNPA = new System.Windows.Forms.TextBox();
@@ -151,12 +156,8 @@
             this.gbBotones = new System.Windows.Forms.GroupBox();
             this.Expediente = new System.Windows.Forms.Button();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
-            this.label32 = new System.Windows.Forms.Label();
-            this.NombrePresidenteUE = new System.Windows.Forms.TextBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.mtbTelefonoPresidente = new System.Windows.Forms.MaskedTextBox();
-            this.label33 = new System.Windows.Forms.Label();
             this.gbOrgPes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelRNPA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
@@ -178,7 +179,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.gbBotones.SuspendLayout();
             this.gbBusqueda.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // label13
@@ -326,7 +326,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.Location = new System.Drawing.Point(579, 50);
+            this.label3.Location = new System.Drawing.Point(382, 50);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
@@ -401,6 +401,65 @@
             this.gbOrgPes.TabIndex = 54;
             this.gbOrgPes.TabStop = false;
             this.gbOrgPes.Text = "DATOS GENERALES DE LA ORGANIZACIÓN PESQUERA";
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox6.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
+            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox6.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox6.Location = new System.Drawing.Point(555, 241);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(21, 21);
+            this.pictureBox6.TabIndex = 131;
+            this.pictureBox6.TabStop = false;
+            // 
+            // mtbTelefonoPresidente
+            // 
+            this.mtbTelefonoPresidente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbTelefonoPresidente.Location = new System.Drawing.Point(452, 241);
+            this.mtbTelefonoPresidente.Mask = "000-000-0000";
+            this.mtbTelefonoPresidente.Name = "mtbTelefonoPresidente";
+            this.mtbTelefonoPresidente.Size = new System.Drawing.Size(97, 22);
+            this.mtbTelefonoPresidente.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.mtbTelefonoPresidente, "Ingrese el Telefono de la Organización");
+            this.mtbTelefonoPresidente.TextChanged += new System.EventHandler(this.mtbTelefonoPresidente_TextChanged);
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label33.Location = new System.Drawing.Point(449, 220);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(142, 16);
+            this.label33.TabIndex = 130;
+            this.label33.Text = "Telefono del Presidente";
+            // 
+            // label32
+            // 
+            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label32.AutoSize = true;
+            this.label32.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label32.Location = new System.Drawing.Point(449, 171);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(191, 16);
+            this.label32.TabIndex = 128;
+            this.label32.Text = "Nombre de Presidente de la UE";
+            // 
+            // NombrePresidenteUE
+            // 
+            this.NombrePresidenteUE.BackColor = System.Drawing.Color.White;
+            this.NombrePresidenteUE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.NombrePresidenteUE.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombrePresidenteUE.ForeColor = System.Drawing.Color.Black;
+            this.NombrePresidenteUE.Location = new System.Drawing.Point(452, 190);
+            this.NombrePresidenteUE.MaxLength = 30;
+            this.NombrePresidenteUE.Name = "NombrePresidenteUE";
+            this.NombrePresidenteUE.Size = new System.Drawing.Size(373, 22);
+            this.NombrePresidenteUE.TabIndex = 13;
+            this.NombrePresidenteUE.Tag = "";
+            this.toolTip1.SetToolTip(this.NombrePresidenteUE, "Ingrese el correo de la Organización");
             // 
             // ActivarPanelRNPA
             // 
@@ -1567,65 +1626,6 @@
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
             // 
-            // label32
-            // 
-            this.label32.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label32.AutoSize = true;
-            this.label32.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(449, 171);
-            this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(191, 16);
-            this.label32.TabIndex = 128;
-            this.label32.Text = "Nombre de Presidente de la UE";
-            // 
-            // NombrePresidenteUE
-            // 
-            this.NombrePresidenteUE.BackColor = System.Drawing.Color.White;
-            this.NombrePresidenteUE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.NombrePresidenteUE.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombrePresidenteUE.ForeColor = System.Drawing.Color.Black;
-            this.NombrePresidenteUE.Location = new System.Drawing.Point(452, 190);
-            this.NombrePresidenteUE.MaxLength = 30;
-            this.NombrePresidenteUE.Name = "NombrePresidenteUE";
-            this.NombrePresidenteUE.Size = new System.Drawing.Size(373, 22);
-            this.NombrePresidenteUE.TabIndex = 13;
-            this.NombrePresidenteUE.Tag = "";
-            this.toolTip1.SetToolTip(this.NombrePresidenteUE, "Ingrese el correo de la Organización");
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
-            this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox6.Location = new System.Drawing.Point(555, 241);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(21, 21);
-            this.pictureBox6.TabIndex = 131;
-            this.pictureBox6.TabStop = false;
-            // 
-            // mtbTelefonoPresidente
-            // 
-            this.mtbTelefonoPresidente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbTelefonoPresidente.Location = new System.Drawing.Point(452, 241);
-            this.mtbTelefonoPresidente.Mask = "000-000-0000";
-            this.mtbTelefonoPresidente.Name = "mtbTelefonoPresidente";
-            this.mtbTelefonoPresidente.Size = new System.Drawing.Size(97, 22);
-            this.mtbTelefonoPresidente.TabIndex = 14;
-            this.toolTip1.SetToolTip(this.mtbTelefonoPresidente, "Ingrese el Telefono de la Organización");
-            this.mtbTelefonoPresidente.TextChanged += new System.EventHandler(this.mtbTelefonoPresidente_TextChanged);
-            // 
-            // label33
-            // 
-            this.label33.AutoSize = true;
-            this.label33.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(449, 220);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(142, 16);
-            this.label33.TabIndex = 130;
-            this.label33.Text = "Telefono del Presidente";
-            // 
             // Pantalla_Registro_UnidadEconomica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1654,6 +1654,7 @@
             this.Load += new System.EventHandler(this.Pantalla_Registro_UnidadEconomica_Load);
             this.gbOrgPes.ResumeLayout(false);
             this.gbOrgPes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelRNPA)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).EndInit();
@@ -1679,7 +1680,6 @@
             this.gbBotones.ResumeLayout(false);
             this.gbBusqueda.ResumeLayout(false);
             this.gbBusqueda.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -414,11 +414,12 @@ namespace OrdenamientoPesquero
         private void CargarResumenExpedientes()
         {
             DataTable expediente = proc.ObtenerExpedientePescador(CURPPesc.Text);
-            string temp = "";
             if (expediente.Rows.Count > 0)
             {
-                temp = expediente.Rows[0]["ACTANAC"].ToString();
-                if (temp == "") { ActaNac.ForeColor = Color.Red; } else { ActaNac.ForeColor = Color.Green; }
+                if (expediente.Rows[0]["ACTANAC"].ToString() == "") { ActaNac.ForeColor = Color.Red; } else { ActaNac.ForeColor = Color.Green; }
+                if (expediente.Rows[0]["ACURP"].ToString() == "") { ACurp.ForeColor = Color.Red; } else { ACurp.ForeColor = Color.Green; }
+                if (expediente.Rows[0]["AINE"].ToString() == "") { AIne.ForeColor = Color.Red; } else { AIne.ForeColor = Color.Green; }
+                if (expediente.Rows[0]["ACOMPDOM"].ToString() == "") { AComp.ForeColor = Color.Red; } else { AComp.ForeColor = Color.Green; }
             }
 
         }
@@ -1091,7 +1092,7 @@ namespace OrdenamientoPesquero
                 expesc.ShowDialog();
             }
         }
-
+        
         private void FechaNacPesc_ValueChanged(object sender, EventArgs e)
         {
             //TimeSpan tS = new TimeSpan();
