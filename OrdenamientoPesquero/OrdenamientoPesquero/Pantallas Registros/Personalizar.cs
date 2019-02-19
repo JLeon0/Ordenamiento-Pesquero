@@ -80,6 +80,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             consulta += " Order by "+comboBox5.Text.Replace(" ","_");
             ds.Value = proc.ObtenerTablaConsulta(consulta);
             this.reportViewer1.LocalReport.DataSources.Add(ds);
+            this.reportViewer1.s
             this.reportViewer1.RefreshReport();
         }
     }
