@@ -208,12 +208,6 @@
     <Compile Include="Pantallas Archivos\Expediente_Embarcacion.Designer.cs">
       <DependentUpon>Expediente_Embarcacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Pantallas Archivos\Expediente_Permiso.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Pantallas Archivos\Expediente_Permiso.Designer.cs">
-      <DependentUpon>Expediente_Permiso.cs</DependentUpon>
-    </Compile>
     <Compile Include="Pantallas Archivos\Expediente_Pescador.cs">
       <SubType>Form</SubType>
     </Compile>

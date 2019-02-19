@@ -92,7 +92,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 {
                     string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                     string folder = path + "/PDF/";
-                    string fullFilePath = folder + MATRICULA+".pdf";
+                    string fullFilePath = folder + MATRICULA;
 
 
                     if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
