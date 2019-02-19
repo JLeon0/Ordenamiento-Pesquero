@@ -28,68 +28,74 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
 
         private void SubirPDF_Click(object sender, EventArgs e)
         {
-            openFileDialog1.InitialDirectory = "C:\\";
-            openFileDialog1.Filter = "Todos los archivos (*.pdf)|*.*";
-            openFileDialog1.FilterIndex = 1;
-            openFileDialog1.RestoreDirectory = true;
-
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (dgvArchivos.CurrentCell.Selected != false)
             {
-                Stream myStream = openFileDialog1.OpenFile();
+                openFileDialog1.InitialDirectory = "C:\\";
+                openFileDialog1.Filter = "Todos los archivos (*.pdf)|*.*";
+                openFileDialog1.FilterIndex = 1;
+                openFileDialog1.RestoreDirectory = true;
 
-                MemoryStream pdf = new MemoryStream();
-                myStream.CopyTo(pdf);
-                if (dgvArchivos.SelectedCells[0].RowIndex == 0)
-                    proc.InsertarPDFPescador(CURPPesc, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
-                if (dgvArchivos.SelectedCells[0].RowIndex == 1)
-                    proc.InsertarPDFPescador(CURPPesc, new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
-                if (dgvArchivos.SelectedCells[0].RowIndex == 2)
-                    proc.InsertarPDFPescador(CURPPesc, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
-                if (dgvArchivos.SelectedCells[0].RowIndex == 3)
-                    proc.InsertarPDFPescador(CURPPesc, new byte[0], new byte[0],new byte[0], pdf.GetBuffer());
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    Stream myStream = openFileDialog1.OpenFile();
+
+                    MemoryStream pdf = new MemoryStream();
+                    myStream.CopyTo(pdf);
+                    if (dgvArchivos.SelectedCells[0].RowIndex == 0)
+                        proc.InsertarPDFPescador(CURPPesc, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
+                    if (dgvArchivos.SelectedCells[0].RowIndex == 1)
+                        proc.InsertarPDFPescador(CURPPesc, new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
+                    if (dgvArchivos.SelectedCells[0].RowIndex == 2)
+                        proc.InsertarPDFPescador(CURPPesc, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
+                    if (dgvArchivos.SelectedCells[0].RowIndex == 3)
+                        proc.InsertarPDFPescador(CURPPesc, new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
+                }
+                CargarExpediente();
             }
-            CargarExpediente();
-        }
+            else { MessageBox.Show("Debe seleccionar la fila correspondiente al archivo que desea subir", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }        }
 
         private void AbrirPDF_Click(object sender, EventArgs e)
         {
-            DataTable oDocument = proc.ObtenerExpedientePescador(CURPPesc);
-            if (oDocument.Rows.Count > 0)
+            if (dgvArchivos.CurrentCell.Selected != false)
             {
-                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                string folder = path + "/PDF/";
-                folder = folder.Replace("\\", "/");
-                string[] ext = dgvArchivos.SelectedCells[0].Value.ToString().Split(' ');
-                string fullFilePath = folder + CURPPesc + "-" + ext[0];
-
-
-                if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
-
-                if (File.Exists(fullFilePath)) { try { Directory.Delete(fullFilePath); } catch (Exception ms) { } }
-
-
-                string archivo = "";
-                if (dgvArchivos.SelectedCells[0].RowIndex == 0)
-                    archivo = "ACTANAC";
-                else if (dgvArchivos.SelectedCells[0].RowIndex == 1)
-                    archivo = "ACURP";
-                else if (dgvArchivos.SelectedCells[0].RowIndex == 2)
-                    archivo = "AINE";
-                else if (dgvArchivos.SelectedCells[0].RowIndex == 3)
-                    archivo = "ACOMPDOM";
-
-                if (archivo != "")
+                DataTable oDocument = proc.ObtenerExpedientePescador(CURPPesc);
+                if (oDocument.Rows.Count > 0)
                 {
-                    byte[] file = (byte[])oDocument.Rows[0][archivo];
-                    File.WriteAllBytes(fullFilePath, file);
-                    Process.Start(fullFilePath);
+                    string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                    string folder = path + "/PDF/";
+                    string fullFilePath = folder + CURPPesc + ".pdf";
+
+
+                    if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
+
+                    if (File.Exists(fullFilePath)) { try { Directory.Delete(fullFilePath); } catch (Exception ms) { } }
+
+
+                    string archivo = "";
+                    if (dgvArchivos.SelectedCells[0].RowIndex == 0)
+                        archivo = "ACTANAC";
+                    else if (dgvArchivos.SelectedCells[0].RowIndex == 1)
+                        archivo = "ACURP";
+                    else if (dgvArchivos.SelectedCells[0].RowIndex == 2)
+                        archivo = "AINE";
+                    else if (dgvArchivos.SelectedCells[0].RowIndex == 3)
+                        archivo = "ACOMPDOM";
+
+                    if (archivo != "")
+                    {
+                        byte[] file = (byte[])oDocument.Rows[0][archivo];
+                        File.WriteAllBytes(fullFilePath, file);
+                        Process.Start(fullFilePath);
+                    }
                 }
             }
+            else { MessageBox.Show("Debe seleccionar la fila correspondiente al archivo que desea subir", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void Expediente_Pescador_Load(object sender, EventArgs e)
         {
             CargarExpediente();
+            dgvArchivos.ClearSelection();
         }
 
         private void CargarExpediente()
@@ -107,7 +113,6 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 if (exp.Rows[0]["AINE"].ToString() != "") { dgvArchivos[1, 2].Value = true; dgvArchivos[1, 2].Style.BackColor = Color.Green; }
                 if (exp.Rows[0]["ACOMPDOM"].ToString() != "") { dgvArchivos[1, 3].Value = true; dgvArchivos[1, 3].Style.BackColor = Color.Green; }
             }
-            dgvArchivos.ClearSelection();
         }
     }
 }

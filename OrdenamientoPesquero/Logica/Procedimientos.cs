@@ -88,10 +88,10 @@ namespace Logica
             string[] Parametros = { "@RNPA" };
             return c.getDatosTabla("ObtenerExpedienteUnidad", Parametros, RNPA);
         }
-        public int InsertarPDFUnidad(string RNPA, byte[] actacons, byte[] formatoreg, byte[] formatoverf, byte[] rfcue, byte[] inerepr)
+        public int InsertarPDFUnidad(string RNPA, byte[] actacons, byte[] actaasamblea, byte[] compdom, byte[] rfcue, byte[] cedinscrue, byte[] cedinscremb)
         {
-            string[] Parametros = { "@rnpa", "@actacons", "@formatoreg", "@formatoverf", "@rfcue", "@inerepr" };
-            return c.Ejecutar("InsertarPDFUnidad", Parametros, RNPA, actacons, formatoreg, formatoverf, rfcue, inerepr);
+            string[] Parametros = { "@rnpa", "@actacons", "@actaasamblea", "@compdom", "@rfcue", "@cedinscrue","@cedinscremb" };
+            return c.Ejecutar("InsertarPDFUnidad", Parametros, RNPA, actacons, actaasamblea, compdom, rfcue, cedinscrue, cedinscremb);
         }
 
             #endregion
@@ -425,7 +425,16 @@ namespace Logica
         {
             string[] Parametros = { "@RNPA" };
             return c.getDatosTabla("ObtenerUnaFederacion", Parametros, RNPA);
-
+        }
+        public int InsertarPresidenteUnidad(string RNPA, string Nombre, string Telefono)
+        {
+            string[] Parametros = { "@rnpa","@nombre","@tel" };
+            return c.Ejecutar("InsertarPresidenteUnidad", Parametros, RNPA, Nombre, Telefono);
+        }
+        public DataTable ObtenerPresidenteUnidad(string RNPA)
+        {
+            string[] Parametros = { "@rnpa" };
+            return c.getDatosTabla("ObtenerPresidenteUnidad", Parametros, RNPA);
         }
         #endregion
 

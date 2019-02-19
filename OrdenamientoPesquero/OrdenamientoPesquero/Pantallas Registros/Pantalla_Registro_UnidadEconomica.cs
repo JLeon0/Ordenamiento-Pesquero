@@ -26,7 +26,7 @@ namespace OrdenamientoPesquero
         DataSet ds = new DataSet();
         DataTable dt = null;
         DataTable RNPA,NOMBRES = null;
-        string[,] unidad = { { "0", "RFC" }, { "0", "Codigo Postal" }, { "0", "Correo Electronico" }, { "0", "Telefono de la Cooperativa" },{"0","RNPA" } };
+        string[,] unidad = { { "0", "RFC" }, { "0", "Codigo Postal" }, { "0", "Correo Electronico" }, { "0", "Telefono de la Cooperativa" },{"0","RNPA" } , {"0","Telefono del Presidente" } };
         string[,] pescador = { { "0", "CURP" }, { "0", "RFC" }, { "0", "Codigo postal" }, { "0", "Telefono" } , { "0","Correo Electronico"} };
         string[] Municipios;
         public Pantalla_Registro_UnidadEconomica()
@@ -69,7 +69,11 @@ namespace OrdenamientoPesquero
                             exito = proc.Registrar_Unidad(ue);
                         }
                         int Folio = ObtenerFolio();
-                        exito = proc.AsignarFederacion(Folio, cbRNPA.Text);
+                        if (exito > 0)
+                        {
+                            exito = proc.AsignarFederacion(Folio, cbRNPA.Text);
+                            exito = proc.InsertarPresidenteUnidad(cbRNPA.Text, NombrePresidenteUE.Text, mtbTelefonoPresidente.Text);
+                        }
                         CargarRNPA();
                         val.Exito(exito);
                         cargado = true;
@@ -102,7 +106,10 @@ namespace OrdenamientoPesquero
                     exito = proc.Actualizar_Unidad(ue);
                 }
                 int Folio = ObtenerFolio();
-                exito = proc.AsignarFederacion(Folio, cbRNPA.Text);
+                if (exito > 0) {
+                    exito = proc.AsignarFederacion(Folio, cbRNPA.Text);
+                    exito = proc.InsertarPresidenteUnidad(cbRNPA.Text, NombrePresidenteUE.Text, mtbTelefonoPresidente.Text);
+                }
                 val.Exito(exito);
 
 
@@ -175,6 +182,7 @@ namespace OrdenamientoPesquero
                 txtMunicipio.Text = "Seleccione un Municipio";
             }
         }
+
         public void limpiartodo()
         {
             foreach (TextBox item in gbOrgPes.Controls.OfType<TextBox>())
@@ -196,11 +204,6 @@ namespace OrdenamientoPesquero
             NombreResumen.Text = "0";
             cbRNPA.Enabled = true;
         }
-        private void BuscarNombreOrg_Click(object sender, EventArgs e)
-        {
-          
-        }
-        
 
         private void LlenarCampos()
         {
@@ -390,6 +393,49 @@ namespace OrdenamientoPesquero
                 unidad[0, 0] = "0";
             }
         }
+        private void cbRNPA_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsDigit(e.KeyChar) || Char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else { e.Handled = true; }
+        }
+
+        private void BuscarR_TextChanged(object sender, EventArgs e)
+        {
+            RNPA = proc.Obtener_todas_unidades(BuscarR.Text);
+            ListaRNPA.Items.Clear();
+            foreach (DataRow fila in RNPA.Rows)
+            {
+                ListaRNPA.Items.Add(fila["RNPA"].ToString());
+            }
+        }
+
+        private void BuscarN_TextChanged(object sender, EventArgs e)
+        {
+            string x = BuscarN.Text;
+            NOMBRES = proc.Obtener_todos_los_nombres(x);
+            ListaNombres.Items.Clear();
+            foreach (DataRow fila in NOMBRES.Rows)
+            {
+                ListaNombres.Items.Add(fila["NOMBRE"].ToString());
+            }
+        }
+
+        private void mtbTelefonoPresidente_TextChanged(object sender, EventArgs e)
+        {
+            if (mtbTelefonoPresidente.Text.Contains(' ') || mtbTelefonoPresidente.Text.Length != 12)
+            {
+                pictureBox6.BackgroundImage = OrdenamientoPesquero.Properties.Resources.x;
+                unidad[5, 0] = "0";
+            }
+            else
+            {
+                pictureBox6.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+                unidad[5, 0] = "1";
+            }
+        }
         #endregion
 
 
@@ -492,15 +538,16 @@ namespace OrdenamientoPesquero
         }
         #endregion
 
+        #region Federaciones
 
         private void CargarFederaciones()
         {
             dt = proc.Obtener_Federaciones();
             NomFed.DataSource = dt;
             NomFed.DisplayMember = "NOMBRE";
-            //NomFed.ValueMember = "NOMBRE";
             NomFed.Text = "Seleccione una Federación";
         }
+
         private int ObtenerFolio()
         {
             dt = proc.Obtener_Federaciones();
@@ -514,6 +561,7 @@ namespace OrdenamientoPesquero
             }
             return 0;
         }
+
         private void ObtenerFederacion()
         {
             dt = proc.ObtenerUnaFederacion(cbRNPA.Text);
@@ -523,73 +571,25 @@ namespace OrdenamientoPesquero
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void ObtenerPresidente()
         {
-            if (existe(cbRNPA.Text))
+            dt = proc.ObtenerPresidenteUnidad(cbRNPA.Text);
+            if(dt.Rows.Count > 0)
             {
-                Pantalla_Regitro_permiso perm = new Pantalla_Regitro_permiso(cbRNPA.Text, txtMunicipio.Text, txtNombre.Text);
-                perm.ShowDialog();
-                Resumenes(cbRNPA.Text);
+                NombrePresidenteUE.Text = dt.Rows[0]["NOMBREPRESIDENTE"].ToString();
+                mtbTelefonoPresidente.Text = dt.Rows[0]["TELEFONOPRESIDENTE"].ToString();
             }
-            else { MessageBox.Show("Debe elegir una unidad economica que esté registrada", "Error"); }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            if (existe(cbRNPA.Text))
+            else
             {
-                int tipo = 0;
-                if (Privado.Checked) { tipo = 1; }
-                Pantalla_Registro_Usuario pesc = new Pantalla_Registro_Usuario(cbRNPA.Text, txtNombre.Text,tipo);
-                pesc.ShowDialog();
-                Resumenes(cbRNPA.Text);
-            }
-            else { MessageBox.Show("Debe elegir una unidad economica que esté registrada", "Error"); }
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            if (existe(cbRNPA.Text))
-            {
-                Pantalla_Certificado_Mat certmat = new Pantalla_Certificado_Mat(cbRNPA.Text);
-                certmat.ShowDialog();
-                Resumenes(cbRNPA.Text);
-            }
-            else { MessageBox.Show("Debe elegir una unidad economica que esté registrada", "Error"); }
-        }
-
-        private void TotalPermisos_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 2);
-            v.ShowDialog(this);
-        }
-
-        private void TotalSocios_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            if (cbRNPA.Text != "" && cbRNPA.Text != null)
-            {
-                Vistas vista = new Vistas(cbRNPA.Text, txtNombre.Text,1);
-                vista.ShowDialog();
-            }
-        }
-              
-        private void txtMunicipio_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if (!cargando)
-            {
-                dt = proc.ObtenerLocalidades(Municipios[txtMunicipio.SelectedIndex]);
-                txtLocalidad.DataSource = dt;
-                txtLocalidad.DisplayMember = "NombreL";
-                txtLocalidad.ValueMember = "NombreL";
-                txtLocalidad.Text = "Seleccione una Localidad";
+                NombrePresidenteUE.Text = "";
+                mtbTelefonoPresidente.Text = "";
             }
         }
 
-        private void limpiar_Click(object sender, EventArgs e)
-        {
-            limpiartodo();
-        }
+        #endregion
 
+
+        #region RespaldosBD
         private void generarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult result = folderBrowserDialog1.ShowDialog();
@@ -677,34 +677,75 @@ namespace OrdenamientoPesquero
             this.Cursor = Cursors.Default;
         }
 
-        private void cbRNPA_KeyPress(object sender, KeyPressEventArgs e)
+        #endregion
+
+
+        #region Clicks
+        private void button2_Click(object sender, EventArgs e)
         {
-            if (Char.IsDigit(e.KeyChar) || Char.IsControl(e.KeyChar))
+            if (existe(cbRNPA.Text))
             {
-                e.Handled = false;
+                Pantalla_Regitro_permiso perm = new Pantalla_Regitro_permiso(cbRNPA.Text, txtMunicipio.Text, txtNombre.Text);
+                perm.ShowDialog();
+                Resumenes(cbRNPA.Text);
             }
-            else { e.Handled = true; }
+            else { MessageBox.Show("Debe elegir una unidad economica que esté registrada", "Error"); }
         }
 
-        private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            if (existe(cbRNPA.Text))
             {
-                BuscarNombreOrg_Click(sender, e);
+                int tipo = 0;
+                if (Privado.Checked) { tipo = 1; }
+                Pantalla_Registro_Usuario pesc = new Pantalla_Registro_Usuario(cbRNPA.Text, txtNombre.Text, tipo);
+                pesc.ShowDialog();
+                Resumenes(cbRNPA.Text);
             }
-            //else
-            //{
-            //    string a = txtNombre.Text;
-            //    dt = proc.Obtener_todas_unidades("");
-            //    NOMBRES = proc.Obtener_todos_los_nombres(txtNombre.Text);
-            //    if (dt.Rows.Count != 0)
-            //    {
-            //        txtNombre.DataSource = NOMBRES;
-            //        txtNombre.DisplayMember = "Nombre";
-            //        txtNombre.ValueMember = "Nombre";
-            //        txtNombre.Text = a;
-            //    }
-            //}
+            else { MessageBox.Show("Debe elegir una unidad economica que esté registrada", "Error"); }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (existe(cbRNPA.Text))
+            {
+                Pantalla_Certificado_Mat certmat = new Pantalla_Certificado_Mat(cbRNPA.Text);
+                certmat.ShowDialog();
+                Resumenes(cbRNPA.Text);
+            }
+            else { MessageBox.Show("Debe elegir una unidad economica que esté registrada", "Error"); }
+        }
+
+        private void TotalPermisos_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 2);
+            v.ShowDialog(this);
+        }
+
+        private void TotalSocios_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (cbRNPA.Text != "" && cbRNPA.Text != null)
+            {
+                Vistas vista = new Vistas(cbRNPA.Text, txtNombre.Text, 1);
+                vista.ShowDialog();
+            }
+        }
+
+        private void txtMunicipio_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (!cargando)
+            {
+                dt = proc.ObtenerLocalidades(Municipios[txtMunicipio.SelectedIndex]);
+                txtLocalidad.DataSource = dt;
+                txtLocalidad.DisplayMember = "NombreL";
+                txtLocalidad.ValueMember = "NombreL";
+                txtLocalidad.Text = "Seleccione una Localidad";
+            }
+        }
+
+        private void limpiar_Click(object sender, EventArgs e)
+        {
+            limpiartodo();
         }
 
         private void RegFed_Click(object sender, EventArgs e)
@@ -720,24 +761,11 @@ namespace OrdenamientoPesquero
             fede.ShowDialog();
             CargarFederaciones();
         }
-        
-
 
         private void button4_Click(object sender, EventArgs e)
         {
             Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 5);
             v.ShowDialog(this);
-        }
-
-        private void BuscarR_TextChanged(object sender, EventArgs e)
-        {
-            RNPA = proc.Obtener_todas_unidades(BuscarR.Text);
-            ListaRNPA.Items.Clear();
-            foreach (DataRow fila in RNPA.Rows)
-            {
-                ListaRNPA.Items.Add(fila["RNPA"].ToString());
-            }
-
         }
 
         private void ListaRNPA_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -750,6 +778,7 @@ namespace OrdenamientoPesquero
                 {
                     LlenarCampos();
                     ObtenerFederacion();
+                    ObtenerPresidente();
                     Resumenes(ListaRNPA.Text);
                     ResumenSocios(ListaRNPA.Text);
                     button1.Enabled = true;
@@ -768,25 +797,15 @@ namespace OrdenamientoPesquero
             }
         }
 
-        private void BuscarN_TextChanged(object sender, EventArgs e)
-        {
-            string x = BuscarN.Text;
-            NOMBRES = proc.Obtener_todos_los_nombres(x);
-            ListaNombres.Items.Clear();
-            foreach (DataRow fila in NOMBRES.Rows)
-            {
-                ListaNombres.Items.Add(fila["NOMBRE"].ToString());
-            }
-        }
-
         private void ListaNombres_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            if (ListaNombres.SelectedIndex >=0)
+            if (ListaNombres.SelectedIndex >= 0)
             {
                 ListaRNPA.SelectedIndex = -1;
                 this.Cursor = Cursors.WaitCursor;
                 LlenarCamposNombre();
                 ObtenerFederacion();
+                ObtenerPresidente();
                 Resumenes(cbRNPA.Text);
                 ResumenSocios(cbRNPA.Text);
                 button1.Enabled = true;
@@ -839,12 +858,13 @@ namespace OrdenamientoPesquero
             }
         }
 
-
         private void Expediente_Click(object sender, EventArgs e)
         {
             if (cbRNPA.Text != "")
             {
-                Pantallas_Archivos.Expediente_UE expue = new Pantallas_Archivos.Expediente_UE(cbRNPA.Text,txtNombre.Text);
+                int tipo = 0;
+                if (Privado.Checked) { tipo = 1; }
+                Pantallas_Archivos.Expediente_UE expue = new Pantallas_Archivos.Expediente_UE(cbRNPA.Text, txtNombre.Text, tipo);
                 expue.ShowDialog();
             }
         }
@@ -860,5 +880,7 @@ namespace OrdenamientoPesquero
                 Pantallas_Menu.MenuReportes mr = new Pantallas_Menu.MenuReportes(cbRNPA.Text, "ReporteXPermicionario.rdlc"); mr.Show(this);
             }
         }
+        #endregion
+
     }
 }

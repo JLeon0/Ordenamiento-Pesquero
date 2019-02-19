@@ -136,12 +136,11 @@ namespace OrdenamientoPesquero
         {
             dt = proc.ObtenerCertMatrXUnidad(RNPA);
             DataTable embarcaciones = new DataTable();
-            ListaMatriculas.DataSource = embarcaciones;
             embarcaciones.Columns.Add("MATRICULA");
             embarcaciones.Columns.Add("NOMBREEMBARCACION");
             foreach (DataRow fila in dt.Rows)
             {
-                if (fila["MATRICULA"].ToString() != RNPA)
+                if (fila["NOMBREEMBARCACION"].ToString() != "NO APLICA")
                 {
                     embarcaciones.Rows.Add(fila["MATRICULA"].ToString(), fila["NOMBREEMBARCACION"].ToString());
                 }
