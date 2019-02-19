@@ -23,6 +23,7 @@
             <Mappings>
               <Mapping SourceColumn="FOLIO" DataSetColumn="FOLIO" />
               <Mapping SourceColumn="NOMBRE" DataSetColumn="NOMBRE" />
+              <Mapping SourceColumn="FECHA_NACIMIENTO" DataSetColumn="FECHA_NACIMIENTO" />
               <Mapping SourceColumn="SEGURO" DataSetColumn="SEGURO" />
               <Mapping SourceColumn="CURP" DataSetColumn="CURP" />
               <Mapping SourceColumn="MUNICIPIO" DataSetColumn="MUNICIPIO" />
@@ -33,6 +34,7 @@
               <Mapping SourceColumn="CORREO" DataSetColumn="CORREO" />
               <Mapping SourceColumn="DIRECCION" DataSetColumn="DIRECCION" />
               <Mapping SourceColumn="ESCOLARIDAD" DataSetColumn="ESCOLARIDAD" />
+              <Mapping SourceColumn="RFC" DataSetColumn="RFC" />
               <Mapping SourceColumn="ORDENAMIENTO" DataSetColumn="ORDENAMIENTO" />
               <Mapping SourceColumn="MATRICULA" DataSetColumn="MATRICULA" />
               <Mapping SourceColumn="EMBARCACION" DataSetColumn="EMBARCACION" />
@@ -61,6 +63,13 @@
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHA_NACIMIENTO" msprop:Generator_ColumnVarNameInTable="columnFECHA_NACIMIENTO" msprop:Generator_ColumnPropNameInRow="FECHA_NACIMIENTO" msprop:Generator_ColumnPropNameInTable="FECHA_NACIMIENTOColumn" msprop:Generator_UserColumnName="FECHA_NACIMIENTO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -131,6 +140,13 @@
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RFC" msprop:Generator_ColumnVarNameInTable="columnRFC" msprop:Generator_ColumnPropNameInRow="RFC" msprop:Generator_ColumnPropNameInTable="RFCColumn" msprop:Generator_UserColumnName="RFC">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="25" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>

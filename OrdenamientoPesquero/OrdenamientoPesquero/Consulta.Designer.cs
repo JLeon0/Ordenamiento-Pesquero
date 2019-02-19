@@ -283,6 +283,8 @@ namespace OrdenamientoPesquero {
             
             private global::System.Data.DataColumn columnNOMBRE;
             
+            private global::System.Data.DataColumn columnFECHA_NACIMIENTO;
+            
             private global::System.Data.DataColumn columnSEGURO;
             
             private global::System.Data.DataColumn columnCURP;
@@ -302,6 +304,8 @@ namespace OrdenamientoPesquero {
             private global::System.Data.DataColumn columnDIRECCION;
             
             private global::System.Data.DataColumn columnESCOLARIDAD;
+            
+            private global::System.Data.DataColumn columnRFC;
             
             private global::System.Data.DataColumn columnORDENAMIENTO;
             
@@ -355,6 +359,14 @@ namespace OrdenamientoPesquero {
             public global::System.Data.DataColumn NOMBREColumn {
                 get {
                     return this.columnNOMBRE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FECHA_NACIMIENTOColumn {
+                get {
+                    return this.columnFECHA_NACIMIENTO;
                 }
             }
             
@@ -440,6 +452,14 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RFCColumn {
+                get {
+                    return this.columnRFC;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public global::System.Data.DataColumn ORDENAMIENTOColumn {
                 get {
                     return this.columnORDENAMIENTO;
@@ -499,11 +519,29 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Pescadores_EmbarcacionesRow AddPescadores_EmbarcacionesRow(string FOLIO, string NOMBRE, string SEGURO, string CURP, string MUNICIPIO, string LOCALIDAD, string TIPO_PESCADOR, string OCUPACION_LABORAL, string TELEFONO, string CORREO, string DIRECCION, string ESCOLARIDAD, int ORDENAMIENTO, string MATRICULA, string EMBARCACION) {
+            public Pescadores_EmbarcacionesRow AddPescadores_EmbarcacionesRow(
+                        string FOLIO, 
+                        string NOMBRE, 
+                        string FECHA_NACIMIENTO, 
+                        string SEGURO, 
+                        string CURP, 
+                        string MUNICIPIO, 
+                        string LOCALIDAD, 
+                        string TIPO_PESCADOR, 
+                        string OCUPACION_LABORAL, 
+                        string TELEFONO, 
+                        string CORREO, 
+                        string DIRECCION, 
+                        string ESCOLARIDAD, 
+                        string RFC, 
+                        int ORDENAMIENTO, 
+                        string MATRICULA, 
+                        string EMBARCACION) {
                 Pescadores_EmbarcacionesRow rowPescadores_EmbarcacionesRow = ((Pescadores_EmbarcacionesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         FOLIO,
                         NOMBRE,
+                        FECHA_NACIMIENTO,
                         SEGURO,
                         CURP,
                         MUNICIPIO,
@@ -514,6 +552,7 @@ namespace OrdenamientoPesquero {
                         CORREO,
                         DIRECCION,
                         ESCOLARIDAD,
+                        RFC,
                         ORDENAMIENTO,
                         MATRICULA,
                         EMBARCACION};
@@ -548,6 +587,7 @@ namespace OrdenamientoPesquero {
             internal void InitVars() {
                 this.columnFOLIO = base.Columns["FOLIO"];
                 this.columnNOMBRE = base.Columns["NOMBRE"];
+                this.columnFECHA_NACIMIENTO = base.Columns["FECHA_NACIMIENTO"];
                 this.columnSEGURO = base.Columns["SEGURO"];
                 this.columnCURP = base.Columns["CURP"];
                 this.columnMUNICIPIO = base.Columns["MUNICIPIO"];
@@ -558,6 +598,7 @@ namespace OrdenamientoPesquero {
                 this.columnCORREO = base.Columns["CORREO"];
                 this.columnDIRECCION = base.Columns["DIRECCION"];
                 this.columnESCOLARIDAD = base.Columns["ESCOLARIDAD"];
+                this.columnRFC = base.Columns["RFC"];
                 this.columnORDENAMIENTO = base.Columns["ORDENAMIENTO"];
                 this.columnMATRICULA = base.Columns["MATRICULA"];
                 this.columnEMBARCACION = base.Columns["EMBARCACION"];
@@ -570,6 +611,8 @@ namespace OrdenamientoPesquero {
                 base.Columns.Add(this.columnFOLIO);
                 this.columnNOMBRE = new global::System.Data.DataColumn("NOMBRE", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnNOMBRE);
+                this.columnFECHA_NACIMIENTO = new global::System.Data.DataColumn("FECHA_NACIMIENTO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFECHA_NACIMIENTO);
                 this.columnSEGURO = new global::System.Data.DataColumn("SEGURO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnSEGURO);
                 this.columnCURP = new global::System.Data.DataColumn("CURP", typeof(string), null, global::System.Data.MappingType.Element);
@@ -590,6 +633,8 @@ namespace OrdenamientoPesquero {
                 base.Columns.Add(this.columnDIRECCION);
                 this.columnESCOLARIDAD = new global::System.Data.DataColumn("ESCOLARIDAD", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnESCOLARIDAD);
+                this.columnRFC = new global::System.Data.DataColumn("RFC", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRFC);
                 this.columnORDENAMIENTO = new global::System.Data.DataColumn("ORDENAMIENTO", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnORDENAMIENTO);
                 this.columnMATRICULA = new global::System.Data.DataColumn("MATRICULA", typeof(string), null, global::System.Data.MappingType.Element);
@@ -601,6 +646,7 @@ namespace OrdenamientoPesquero {
                 this.columnFOLIO.MaxLength = 12;
                 this.columnNOMBRE.ReadOnly = true;
                 this.columnNOMBRE.MaxLength = 100;
+                this.columnFECHA_NACIMIENTO.MaxLength = 20;
                 this.columnSEGURO.MaxLength = 10;
                 this.columnCURP.AllowDBNull = false;
                 this.columnCURP.Unique = true;
@@ -614,6 +660,8 @@ namespace OrdenamientoPesquero {
                 this.columnDIRECCION.ReadOnly = true;
                 this.columnDIRECCION.MaxLength = 150;
                 this.columnESCOLARIDAD.MaxLength = 40;
+                this.columnRFC.AllowDBNull = false;
+                this.columnRFC.MaxLength = 25;
                 this.columnMATRICULA.MaxLength = 20;
                 this.columnEMBARCACION.MaxLength = 40;
             }
@@ -791,6 +839,23 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string FECHA_NACIMIENTO {
+                get {
+                    try {
+                        return ((string)(this[this.tablePescadores_Embarcaciones.FECHA_NACIMIENTOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FECHA_NACIMIENTO\' de la tabla \'Pescadores_Embarcaciones\' " +
+                                "es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePescadores_Embarcaciones.FECHA_NACIMIENTOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public string SEGURO {
                 get {
                     try {
@@ -955,6 +1020,17 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string RFC {
+                get {
+                    return ((string)(this[this.tablePescadores_Embarcaciones.RFCColumn]));
+                }
+                set {
+                    this[this.tablePescadores_Embarcaciones.RFCColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public int ORDENAMIENTO {
                 get {
                     try {
@@ -1026,6 +1102,18 @@ namespace OrdenamientoPesquero {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetNOMBRENull() {
                 this[this.tablePescadores_Embarcaciones.NOMBREColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFECHA_NACIMIENTONull() {
+                return this.IsNull(this.tablePescadores_Embarcaciones.FECHA_NACIMIENTOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFECHA_NACIMIENTONull() {
+                this[this.tablePescadores_Embarcaciones.FECHA_NACIMIENTOColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1334,6 +1422,7 @@ namespace OrdenamientoPesquero.ConsultaTableAdapters {
             tableMapping.DataSetTable = "Pescadores_Embarcaciones";
             tableMapping.ColumnMappings.Add("FOLIO", "FOLIO");
             tableMapping.ColumnMappings.Add("NOMBRE", "NOMBRE");
+            tableMapping.ColumnMappings.Add("FECHA_NACIMIENTO", "FECHA_NACIMIENTO");
             tableMapping.ColumnMappings.Add("SEGURO", "SEGURO");
             tableMapping.ColumnMappings.Add("CURP", "CURP");
             tableMapping.ColumnMappings.Add("MUNICIPIO", "MUNICIPIO");
@@ -1344,6 +1433,7 @@ namespace OrdenamientoPesquero.ConsultaTableAdapters {
             tableMapping.ColumnMappings.Add("CORREO", "CORREO");
             tableMapping.ColumnMappings.Add("DIRECCION", "DIRECCION");
             tableMapping.ColumnMappings.Add("ESCOLARIDAD", "ESCOLARIDAD");
+            tableMapping.ColumnMappings.Add("RFC", "RFC");
             tableMapping.ColumnMappings.Add("ORDENAMIENTO", "ORDENAMIENTO");
             tableMapping.ColumnMappings.Add("MATRICULA", "MATRICULA");
             tableMapping.ColumnMappings.Add("EMBARCACION", "EMBARCACION");

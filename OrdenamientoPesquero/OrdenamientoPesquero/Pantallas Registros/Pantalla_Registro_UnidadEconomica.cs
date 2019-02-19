@@ -687,23 +687,7 @@ namespace OrdenamientoPesquero
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                BuscarNombreOrg_Click(sender, e);
-            }
-            //else
-            //{
-            //    string a = txtNombre.Text;
-            //    dt = proc.Obtener_todas_unidades("");
-            //    NOMBRES = proc.Obtener_todos_los_nombres(txtNombre.Text);
-            //    if (dt.Rows.Count != 0)
-            //    {
-            //        txtNombre.DataSource = NOMBRES;
-            //        txtNombre.DisplayMember = "Nombre";
-            //        txtNombre.ValueMember = "Nombre";
-            //        txtNombre.Text = a;
-            //    }
-            //}
+           
         }
 
         private void RegFed_Click(object sender, EventArgs e)
