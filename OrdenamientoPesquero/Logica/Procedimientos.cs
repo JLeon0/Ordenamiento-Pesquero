@@ -97,7 +97,7 @@ namespace Logica
             #endregion
 
 
-            #region Permisos
+        #region Permisos
             public int EliminarRelac(string perm)
         {
             string[] Parametros = { "@PERMISO" };
@@ -348,7 +348,7 @@ namespace Logica
         }
         public int InsertarPDFEmbarcacion(string MATRICULA, byte[] certmatricula, byte[] certseguridad, byte[] certpropiedad, byte[] factmotor, byte[] factembarcacion, byte[] papeletachipeo)
         {
-            string[] Parametros = { "@matricula", "@certmatricula", "@certseguridad", "@certpropiedad", "@factmotor", "@factembarcacion", "@papeletachipeo" };
+            string[] Parametros = { "@matricula", "@certmatricula", "@certseguridad", "@factartepesca", "@factmotor", "@factembarcacion", "@papeletachipeo" };
             return c.Ejecutar("InsertarPDFEmbarcacion", Parametros, MATRICULA, certmatricula, certseguridad, certpropiedad, factmotor, factembarcacion, papeletachipeo);
         }
         public DataTable ObtenerExpedienteEmbarcacion(string Matricula)

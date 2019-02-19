@@ -125,6 +125,9 @@
             this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
             this.EliminarUnidad = new System.Windows.Forms.PictureBox();
             this.gbInformacion = new System.Windows.Forms.GroupBox();
+            this.AComp = new System.Windows.Forms.Label();
+            this.AIne = new System.Windows.Forms.Label();
+            this.ACurp = new System.Windows.Forms.Label();
             this.ActaNac = new System.Windows.Forms.Label();
             this.apoyos = new System.Windows.Forms.LinkLabel();
             this.solicitudes = new System.Windows.Forms.LinkLabel();
@@ -1294,6 +1297,9 @@
             // 
             // gbInformacion
             // 
+            this.gbInformacion.Controls.Add(this.AComp);
+            this.gbInformacion.Controls.Add(this.AIne);
+            this.gbInformacion.Controls.Add(this.ACurp);
             this.gbInformacion.Controls.Add(this.ActaNac);
             this.gbInformacion.Controls.Add(this.apoyos);
             this.gbInformacion.Controls.Add(this.solicitudes);
@@ -1308,12 +1314,45 @@
             this.gbInformacion.TabStop = false;
             this.gbInformacion.Text = "INFORMACIÓN";
             // 
+            // AComp
+            // 
+            this.AComp.AutoSize = true;
+            this.AComp.BackColor = System.Drawing.Color.White;
+            this.AComp.ForeColor = System.Drawing.Color.Black;
+            this.AComp.Location = new System.Drawing.Point(6, 247);
+            this.AComp.Name = "AComp";
+            this.AComp.Size = new System.Drawing.Size(130, 13);
+            this.AComp.TabIndex = 129;
+            this.AComp.Text = "Comprobante de Domicilio";
+            // 
+            // AIne
+            // 
+            this.AIne.AutoSize = true;
+            this.AIne.BackColor = System.Drawing.Color.White;
+            this.AIne.ForeColor = System.Drawing.Color.Black;
+            this.AIne.Location = new System.Drawing.Point(6, 227);
+            this.AIne.Name = "AIne";
+            this.AIne.Size = new System.Drawing.Size(123, 13);
+            this.AIne.TabIndex = 128;
+            this.AIne.Text = "INE (Idenfitiación Oficial)";
+            // 
+            // ACurp
+            // 
+            this.ACurp.AutoSize = true;
+            this.ACurp.BackColor = System.Drawing.Color.White;
+            this.ACurp.ForeColor = System.Drawing.Color.Black;
+            this.ACurp.Location = new System.Drawing.Point(6, 206);
+            this.ACurp.Name = "ACurp";
+            this.ACurp.Size = new System.Drawing.Size(37, 13);
+            this.ACurp.TabIndex = 127;
+            this.ACurp.Text = "CURP";
+            // 
             // ActaNac
             // 
             this.ActaNac.AutoSize = true;
             this.ActaNac.BackColor = System.Drawing.Color.White;
             this.ActaNac.ForeColor = System.Drawing.Color.Black;
-            this.ActaNac.Location = new System.Drawing.Point(9, 185);
+            this.ActaNac.Location = new System.Drawing.Point(6, 185);
             this.ActaNac.Name = "ActaNac";
             this.ActaNac.Size = new System.Drawing.Size(100, 13);
             this.ActaNac.TabIndex = 126;
@@ -1877,5 +1916,8 @@
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.Button AbrirExpediente;
         private System.Windows.Forms.Label ActaNac;
+        private System.Windows.Forms.Label AComp;
+        private System.Windows.Forms.Label AIne;
+        private System.Windows.Forms.Label ACurp;
     }
 }
