@@ -4,7 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,7 +34,7 @@ namespace OrdenamientoPesquero
         int exito = 0;
         Procedimientos proc = new Procedimientos();
         DataSet ds = new DataSet();
-        DataTable dt = null;
+        DataTable dt = null, permisos=null;
         private void Pantalla_Regitro_permiso_Load(object sender, EventArgs e)
         {
             CargarPermisos();
@@ -65,12 +67,17 @@ namespace OrdenamientoPesquero
         }
         private void CargarPermisos()
         {
-            dt = proc.ObtenerNoPermisos(Rnpa);
+            permisos = proc.ObtenerNoPermisos(Rnpa);
             ListaPermisos.Items.Clear();
-            foreach (DataRow fila in dt.Rows)
-            {
-                ListaPermisos.Items.Add(fila["NPERMISO"].ToString());
-            }
+            //foreach (DataRow fila in dt.Rows)
+            //{
+            //    ListaPermisos.Items.Add(fila["NPERMISO"].ToString());
+            //}
+
+
+            ListaPermisos.DataSource = permisos;
+            ListaPermisos.ValueMember = "NPERMISO";
+            ListaPermisos.DisplayMember = "PESQUERIA";
         }
 
         private void CargarPesquerias()
@@ -378,7 +385,7 @@ namespace OrdenamientoPesquero
             this.Cursor = Cursors.WaitCursor;
             if (ListaPermisos.SelectedIndex > -1)
             {
-                string per = ListaPermisos.Text;
+                string per = ListaPermisos.SelectedValue.ToString();
                 dt = proc.ObtenerPermiso(per);
                 limpiarpermiso();
                 nPer.Text = per;
@@ -419,11 +426,75 @@ namespace OrdenamientoPesquero
                         dgvEmbarcacionesPerm[3, i].Value = dt.Rows[i]["MOTORHP"].ToString();
 
                     }
-
                 }
             }
             dt = proc.ObtenerCertMatrXUnidad(Rnpa);
+            CargarExpediente();
+            dgvArchivos.ClearSelection();
             this.Cursor = Cursors.Default;
+        }
+        private void CargarExpediente()
+        {
+            string per = ListaPermisos.SelectedValue.ToString();
+            DataTable exp = proc.ObtenerPermiso(per);
+            dgvArchivos.RowCount = 1;
+            dgvArchivos[0, 0].Value = "Permiso Escaneado";
+            if (exp.Rows[0]["APERMISO"].ToString() != "") { dgvArchivos[1, 0].Value = true; dgvArchivos[1, 0].Style.BackColor = Color.Green; }
+
+        }
+
+        private void SubirPDF_Click(object sender, EventArgs e)
+        {
+            if (dgvArchivos.CurrentCell.Selected != false)
+            {
+                openFileDialog1.InitialDirectory = "C:\\";
+                openFileDialog1.Filter = "Todos los archivos (*.pdf)|*.pdf";
+                openFileDialog1.FilterIndex = 1;
+                openFileDialog1.RestoreDirectory = true;
+
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    Stream myStream = openFileDialog1.OpenFile();
+
+                    MemoryStream pdf = new MemoryStream();
+                    myStream.CopyTo(pdf);
+                    if (dgvArchivos.SelectedCells[0].RowIndex == 0)
+                        proc.InsertarPDFPermiso(nPer.Text, pdf.GetBuffer());
+                }
+                CargarExpediente();
+            }
+            else { MessageBox.Show("Debe seleccionar la fila correspondiente al archivo que desea subir", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+
+        private void AbrirPDF_Click(object sender, EventArgs e)
+        {
+            if (dgvArchivos.CurrentCell.Selected != false)
+            {
+                DataTable oDocument = proc.ObtenerPermiso(nPer.Text);
+                if (oDocument.Rows.Count > 0)
+                {
+                    if (oDocument.Rows[0]["APERMISO"].ToString() != "")
+                    {
+                        string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                        string folder = path + "/PDF/";
+                        string fullFilePath = folder + nPer.Text;
+
+
+                        if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
+
+                        if (File.Exists(fullFilePath)) { try { Directory.Delete(fullFilePath); } catch (Exception ms) { } }
+
+
+                        byte[] file = (byte[])oDocument.Rows[0]["APERMISO"];
+                        File.WriteAllBytes(fullFilePath, file);
+                        Process.Start(fullFilePath);
+                    }
+                }
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar la fila correspondiente al archivo que desea visualizar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 

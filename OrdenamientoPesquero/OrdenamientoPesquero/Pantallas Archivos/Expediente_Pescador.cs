@@ -65,7 +65,6 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                     string folder = path + "/PDF/";
                     string fullFilePath = folder + CURPPesc;
 
-
                     if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
 
                     if (File.Exists(fullFilePath)) { try { Directory.Delete(fullFilePath); } catch (Exception ms) { } }

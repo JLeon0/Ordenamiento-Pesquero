@@ -173,6 +173,11 @@ namespace Logica
             string[] Parametros = { "@pesqueria" };
             return c.Ejecutar("RegistrarPesqueria", Parametros, pesqueria);
         }
+        public int InsertarPDFPermiso(string nper, byte[] aper)
+        {
+            string[] Parametros = { "@npermiso", "@apermiso" };
+            return c.Ejecutar("InsertarPDFPermiso", Parametros, nper, aper);
+        }
         #endregion
 
         public DataTable ObtenerTablaConsulta(string consulta)
