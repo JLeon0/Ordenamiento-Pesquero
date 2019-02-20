@@ -22,14 +22,17 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         }
         Procedimientos proc = new Procedimientos();
         ReportDataSource ds = new ReportDataSource();
+        DataTable dt;
 
         private void Personalizar_Load(object sender, EventArgs e)
         {
 
             this.reportViewer1.RefreshReport();
             ds.Name = "Consulta";
-        }
+            dt = proc.Obtener_todos_los_nombres("");
+            comboBox14.DataSource = dt;
 
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             this.reportViewer1.ProcessingMode = ProcessingMode.Local;
@@ -40,7 +43,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             foreach (CheckBox a in ColumasPescador.Controls)
             {
                 column[i] = a.Checked;
-                dato[i] = a.Text.Replace(" ","_");
+                dato[i] = a.Text.Replace(" ", "_");
                 dato[i] = dato[i].ToLower();
                 i++;
             }
@@ -56,7 +59,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             {
                 if (a.Checked)
                 {
-                    if (a.Text== "Municipio")
+                    if (a.Text == "Municipio")
                     {
                         consulta += " AND PESCADOR." + a.Text.Replace(" ", "_").ToLower() + " = ";
                     }
@@ -67,9 +70,9 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     int m = 0;
                     foreach (ComboBox cb in FiltrosPescador.Controls.OfType<ComboBox>())
                     {
-                        if (m==r)
+                        if (m == r)
                         {
-                            consulta += "'"+cb.Text+"'";
+                            consulta += "'" + cb.Text + "'";
                             break;
                         }
                         m++;
@@ -77,7 +80,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 }
                 r++;
             }
-            consulta += " Order by "+OrdenaPescador.Text.Replace(" ","_");
+            consulta += " Order by " + OrdenaPescador.Text.Replace(" ", "_");
             ds.Value = proc.ObtenerTablaConsulta(consulta);
             this.reportViewer1.LocalReport.DataSources.Add(ds);
             this.reportViewer1.RefreshReport();
@@ -138,7 +141,92 @@ namespace OrdenamientoPesquero.Pantallas_Registros
 
         private void button3_Click(object sender, EventArgs e)
         {
+            this.reportViewer1.ProcessingMode = ProcessingMode.Local;
+            reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Pescador_Personal.rdlc");
+            bool[] column = new bool[13];
+            string[] dato = new string[13];
+            int i = 0;
+            foreach (CheckBox a in ColumnasPermiso.Controls)
+            {
+                column[i] = a.Checked;
+                dato[i] = a.Text.Replace(" ", "");
+                dato[i] = dato[i].ToLower();
+                i++;
+            }
+            ReportParameter[] para = new ReportParameter[37];
+            for (int c = 0; c < 13; c++)
+            {
+                para[c] = new ReportParameter(dato[c], column[c].ToString());
+            }
+            reportViewer1.LocalReport.SetParameters(para);
+            string consulta = "Select FOLIO, RNPA, NPERMISO, PESQUERIA, LUGAREXPEDICION, DIAEXPEDICION, FINVIGENCIA, ZONAPESCA, SITIOSDESEMBARQUE, OBSERVACIONES, TIPOPERMISO, ((STUFF(( SELECT ', '+ CANTIDAD +' '+TIPO FROM EQUIPOSPESCA a WHERE b.NPERMISO = a.NUMPERMISO FOR XML PATH('')),1 ,1, ''))) AS 'EQUIPOS DE PESCA', ((STUFF((SELECT ', ' + NOMBREEMBARCACION FROM EMBARCACIONES a, EMBARCA_PERMIS c  WHERE b.NPERMISO = c.PERMISO and a.MATRICULA = c.MATRICULA FOR XML PATH('')),1 ,1, ''))) AS 'EMBARCACIONES' from PERMISOS b where rnpa != ''";
+            int r = 0;
+            foreach (CheckBox a in FiltrosPermiso.Controls.OfType<CheckBox>())
+            {
+                if (a.Checked)
+                {
+                    if (a.Text == "Municipio")
+                    {
+                        consulta += " AND PESCADOR." + a.Text.Replace(" ", "").ToLower() + " = ";
+                    }
+                    else
+                    {
+                        consulta += " AND " + a.Text.Replace(" ", "").ToLower() + " = ";
+                    }
+                    int m = 0;
+                    foreach (ComboBox cb in FiltrosPescador.Controls.OfType<ComboBox>())
+                    {
+                        if (m == r)
+                        {
+                            if (a.Text=="Tipo Permiso")
+                            {
+                                consulta += "'" + cb.SelectedIndex.ToString() + "'";
+                                break;
+                            }
+                            consulta += "'" + cb.Text + "'";
+                            break;
+                        }
+                        m++;
+                    }
+                }
+                r++;
+            }
+            consulta += " Order by " + OrdenaPermiso.Text.Replace(" ", "");
+            ds.Value = proc.ObtenerTablaConsulta(consulta);
+            this.reportViewer1.LocalReport.DataSources.Add(ds);
+            this.reportViewer1.RefreshReport();
+        }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.reportViewer1.ProcessingMode = ProcessingMode.Local;
+            reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Embarcacion_Personal.rdlc");
+            bool[] column = new bool[22];
+            string[] dato = new string[22];
+            int i = 0;
+            foreach (CheckBox a in ColumasPescador.Controls)
+            {
+                column[i] = a.Checked;
+                dato[i] = a.Text.Replace(" ", "_");
+                dato[i] = dato[i].ToLower();
+                i++;
+            }
+            ReportParameter[] para = new ReportParameter[22];
+            for (int c = 0; c < 22; c++)
+            {
+                para[c] = new ReportParameter(dato[c], column[c].ToString());
+            }
+            reportViewer1.LocalReport.SetParameters(para);
+            string consulta = "select * from EMBARCACIONES where MATRICULA!='NO APLICA'";
+            if (checkBox32.Checked)
+            {
+                consulta += "AND RNPTITULAR = '" + comboBox14.Text+"'";
+            }
+            consulta += " Order by " + OrdenaEmbarca.Text.Replace(" ", "");
+            ds.Value = proc.ObtenerTablaConsulta(consulta);
+            this.reportViewer1.LocalReport.DataSources.Add(ds);
+            this.reportViewer1.RefreshReport();
         }
     }
 }
+
