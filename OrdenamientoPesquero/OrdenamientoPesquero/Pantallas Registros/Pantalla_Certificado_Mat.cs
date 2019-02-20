@@ -100,6 +100,20 @@ namespace OrdenamientoPesquero
             PesoMCertMat.Text = "0.000";
         }
 
+        private void CargarExpediente()
+        {
+            DataTable exp = proc.ObtenerExpedienteEmbarcacion(MatriculaCertMat.Text);
+            if (exp.Rows.Count > 0)
+            {
+                if (exp.Rows[0]["CERTMATRICULA"].ToString() != "") { CertMatr.ForeColor = Color.Green; } else { CertMatr.ForeColor = Color.Red; }
+                if (exp.Rows[0]["CERTSEGURIDAD"].ToString() != "") { CertSeg.ForeColor = Color.Green; } else { CertSeg.ForeColor = Color.Red; }
+                if (exp.Rows[0]["FACTARTESPESCA"].ToString() != "") { FactArtes.ForeColor = Color.Green; } else { FactArtes.ForeColor = Color.Red; }
+                if (exp.Rows[0]["FACTMOTOR"].ToString() != "") { FactMotor.ForeColor = Color.Green; } else { FactMotor.ForeColor = Color.Red; }
+                if (exp.Rows[0]["FACTEMBARCACION"].ToString() != "") { FactEmb.ForeColor = Color.Green; } else { FactEmb.ForeColor = Color.Red; }
+                if (exp.Rows[0]["PAPELETACHIPEO"].ToString() != "") { PapChip.ForeColor = Color.Green; } else { PapChip.ForeColor = Color.Red; }
+            }
+        }
+
         private void RegistrarUnidad_Click(object sender, EventArgs e)
         {
             exito = AccionesCertificado(true);
@@ -199,6 +213,7 @@ namespace OrdenamientoPesquero
                 }
                 i--;
             }
+            CargarExpediente();
             this.Cursor = Cursors.Default;
         }
         private void ActivarPanelMATRICULA_Click(object sender, EventArgs e)

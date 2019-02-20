@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Regitro_permiso));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -112,9 +112,11 @@
             this.AbrirPDF = new System.Windows.Forms.PictureBox();
             this.SubirPDF = new System.Windows.Forms.PictureBox();
             this.dgvArchivos = new System.Windows.Forms.DataGridView();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewCheckBoxColumn3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.gbBusqueda = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposPescaPerm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbarcacionesPerm)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -131,6 +133,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.AbrirPDF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubirPDF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArchivos)).BeginInit();
+            this.groupBox1.SuspendLayout();
+            this.gbBusqueda.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -929,7 +933,7 @@
             // 
             this.ListaPermisos.FormattingEnabled = true;
             this.ListaPermisos.ItemHeight = 16;
-            this.ListaPermisos.Location = new System.Drawing.Point(21, 135);
+            this.ListaPermisos.Location = new System.Drawing.Point(8, 40);
             this.ListaPermisos.Name = "ListaPermisos";
             this.ListaPermisos.Size = new System.Drawing.Size(185, 228);
             this.ListaPermisos.TabIndex = 164;
@@ -938,7 +942,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(70, 115);
+            this.label11.Location = new System.Drawing.Point(57, 20);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(77, 16);
             this.label11.TabIndex = 162;
@@ -947,7 +951,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(129, 501);
+            this.label34.Location = new System.Drawing.Point(114, 140);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(80, 16);
             this.label34.TabIndex = 224;
@@ -956,7 +960,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(23, 501);
+            this.label35.Location = new System.Drawing.Point(8, 140);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(83, 16);
             this.label35.TabIndex = 223;
@@ -966,7 +970,8 @@
             // 
             this.AbrirPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.show;
             this.AbrirPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AbrirPDF.Location = new System.Drawing.Point(150, 458);
+            this.AbrirPDF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AbrirPDF.Location = new System.Drawing.Point(135, 97);
             this.AbrirPDF.Name = "AbrirPDF";
             this.AbrirPDF.Size = new System.Drawing.Size(40, 40);
             this.AbrirPDF.TabIndex = 222;
@@ -977,12 +982,12 @@
             // 
             this.SubirPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.SubirPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SubirPDF.Location = new System.Drawing.Point(41, 458);
+            this.SubirPDF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SubirPDF.Location = new System.Drawing.Point(26, 97);
             this.SubirPDF.Name = "SubirPDF";
             this.SubirPDF.Size = new System.Drawing.Size(40, 40);
             this.SubirPDF.TabIndex = 221;
             this.SubirPDF.TabStop = false;
-            this.SubirPDF.Click += new System.EventHandler(this.SubirPDF_Click);
             // 
             // dgvArchivos
             // 
@@ -995,7 +1000,7 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewCheckBoxColumn3});
             this.dgvArchivos.GridColor = System.Drawing.Color.White;
-            this.dgvArchivos.Location = new System.Drawing.Point(21, 383);
+            this.dgvArchivos.Location = new System.Drawing.Point(6, 22);
             this.dgvArchivos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvArchivos.Name = "dgvArchivos";
             this.dgvArchivos.ReadOnly = true;
@@ -1003,10 +1008,6 @@
             this.dgvArchivos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvArchivos.Size = new System.Drawing.Size(185, 68);
             this.dgvArchivos.TabIndex = 220;
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -1019,10 +1020,10 @@
             // 
             // dataGridViewCheckBoxColumn3
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle2.NullValue = false;
-            this.dataGridViewCheckBoxColumn3.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.NullValue = false;
+            this.dataGridViewCheckBoxColumn3.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewCheckBoxColumn3.Frozen = true;
             this.dataGridViewCheckBoxColumn3.HeaderText = "Check";
             this.dataGridViewCheckBoxColumn3.Name = "dataGridViewCheckBoxColumn3";
@@ -1030,19 +1031,43 @@
             this.dataGridViewCheckBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewCheckBoxColumn3.Width = 50;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.dgvArchivos);
+            this.groupBox1.Controls.Add(this.label34);
+            this.groupBox1.Controls.Add(this.SubirPDF);
+            this.groupBox1.Controls.Add(this.label35);
+            this.groupBox1.Controls.Add(this.AbrirPDF);
+            this.groupBox1.Location = new System.Drawing.Point(1063, 121);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(217, 162);
+            this.groupBox1.TabIndex = 225;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Resumen Expediente";
+            // 
+            // gbBusqueda
+            // 
+            this.gbBusqueda.Controls.Add(this.label11);
+            this.gbBusqueda.Controls.Add(this.ListaPermisos);
+            this.gbBusqueda.Location = new System.Drawing.Point(12, 121);
+            this.gbBusqueda.Name = "gbBusqueda";
+            this.gbBusqueda.Size = new System.Drawing.Size(200, 277);
+            this.gbBusqueda.TabIndex = 226;
+            this.gbBusqueda.TabStop = false;
+            this.gbBusqueda.Text = "BUSCAR";
+            // 
             // Pantalla_Regitro_permiso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1090, 707);
-            this.Controls.Add(this.label34);
-            this.Controls.Add(this.label35);
-            this.Controls.Add(this.AbrirPDF);
-            this.Controls.Add(this.SubirPDF);
-            this.Controls.Add(this.dgvArchivos);
-            this.Controls.Add(this.ListaPermisos);
-            this.Controls.Add(this.label11);
+            this.ClientSize = new System.Drawing.Size(1292, 707);
+            this.Controls.Add(this.gbBusqueda);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.pictureBox2);
@@ -1117,6 +1142,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.AbrirPDF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubirPDF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArchivos)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            this.gbBusqueda.ResumeLayout(false);
+            this.gbBusqueda.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1209,5 +1238,7 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn3;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox gbBusqueda;
     }
 }
