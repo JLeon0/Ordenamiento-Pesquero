@@ -160,6 +160,7 @@
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.OcupBuzo = new System.Windows.Forms.RadioButton();
             this.gbDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
@@ -1038,6 +1039,7 @@
             // 
             // OcupacionEnEmbarPesc
             // 
+            this.OcupacionEnEmbarPesc.Controls.Add(this.OcupBuzo);
             this.OcupacionEnEmbarPesc.Controls.Add(this.radioButton1);
             this.OcupacionEnEmbarPesc.Controls.Add(this.OcupSinAct);
             this.OcupacionEnEmbarPesc.Controls.Add(this.OcupMarin);
@@ -1046,7 +1048,7 @@
             this.OcupacionEnEmbarPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.OcupacionEnEmbarPesc.Location = new System.Drawing.Point(524, 18);
             this.OcupacionEnEmbarPesc.Name = "OcupacionEnEmbarPesc";
-            this.OcupacionEnEmbarPesc.Size = new System.Drawing.Size(130, 124);
+            this.OcupacionEnEmbarPesc.Size = new System.Drawing.Size(130, 139);
             this.OcupacionEnEmbarPesc.TabIndex = 23;
             this.OcupacionEnEmbarPesc.TabStop = false;
             this.OcupacionEnEmbarPesc.Text = "Ocupación laboral";
@@ -1054,7 +1056,7 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(10, 98);
+            this.radioButton1.Location = new System.Drawing.Point(10, 115);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(107, 20);
             this.radioButton1.TabIndex = 33;
@@ -1064,7 +1066,7 @@
             // OcupSinAct
             // 
             this.OcupSinAct.AutoSize = true;
-            this.OcupSinAct.Location = new System.Drawing.Point(10, 60);
+            this.OcupSinAct.Location = new System.Drawing.Point(10, 78);
             this.OcupSinAct.Name = "OcupSinAct";
             this.OcupSinAct.Size = new System.Drawing.Size(100, 20);
             this.OcupSinAct.TabIndex = 31;
@@ -1096,7 +1098,7 @@
             // OcupAcua
             // 
             this.OcupAcua.AutoSize = true;
-            this.OcupAcua.Location = new System.Drawing.Point(10, 80);
+            this.OcupAcua.Location = new System.Drawing.Point(10, 97);
             this.OcupAcua.Name = "OcupAcua";
             this.OcupAcua.Size = new System.Drawing.Size(88, 20);
             this.OcupAcua.TabIndex = 32;
@@ -1715,6 +1717,16 @@
             this.pictureBox2.TabIndex = 155;
             this.pictureBox2.TabStop = false;
             // 
+            // OcupBuzo
+            // 
+            this.OcupBuzo.AutoSize = true;
+            this.OcupBuzo.Location = new System.Drawing.Point(10, 60);
+            this.OcupBuzo.Name = "OcupBuzo";
+            this.OcupBuzo.Size = new System.Drawing.Size(56, 20);
+            this.OcupBuzo.TabIndex = 34;
+            this.OcupBuzo.Text = "Buzo";
+            this.OcupBuzo.UseVisualStyleBackColor = true;
+            // 
             // Pantalla_Registro_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1919,5 +1931,6 @@
         private System.Windows.Forms.Label AComp;
         private System.Windows.Forms.Label AIne;
         private System.Windows.Forms.Label ACurp;
+        private System.Windows.Forms.RadioButton OcupBuzo;
     }
 }

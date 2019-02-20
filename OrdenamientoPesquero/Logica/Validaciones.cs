@@ -160,45 +160,53 @@ namespace Logica
             if (ok >= 1)
             {
                 (new System.Threading.Thread(CloseIt)).Start();
-                MessageBox.Show("Registrado exitosamente"); /* 1 segundo = 1000 */
+                MessageBox.Show("Registrado exitosamente","Exito",MessageBoxButtons.OK,MessageBoxIcon.Asterisk); /* 1 segundo = 1000 */
             }
             else if (ok == -10)
             {
                 (new System.Threading.Thread(CloseIt)).Start();
-                MessageBox.Show("No se puede registrar más de 1 capitan en una misma embarcación"); /* 1 segundo = 1000 */
+                MessageBox.Show("No se puede registrar más de 1 capitan en una misma Embarcación","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error); /* 1 segundo = 1000 */
             }
             else if(ok == -11)
             {
                 (new System.Threading.Thread(CloseIt)).Start();
-                MessageBox.Show("Error al registrar la unidad a una Federación"); /* 1 segundo = 1000 */
+                MessageBox.Show("Error al registrar la unidad a una Federación", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); /* 1 segundo = 1000 */
             }
             else if (ok == -12)
             {
-                MessageBox.Show("La embarcación no está chipeada, no se puede registrar ningún pescador","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error); /* 1 segundo = 1000 */
+                MessageBox.Show("La Embarcación no está chipeada, no se puede registrar ningún Pescador","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error); /* 1 segundo = 1000 */
             }
             else if (ok == -13)
             {
-                MessageBox.Show("No se puede registrar más de 2 pescadores con cuerpo de agua Ribereño Marino. \n Ni más de 5 en cuerpo de agua Flota Costera en una misma embarcación","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error); /* 1 segundo = 1000 */
+                MessageBox.Show("No se puede registrar más de 2 Marineros con cuerpo de agua Ribereño Marino. \n Ni más de 5 en cuerpo de agua Flota Costera en una misma Embarcación", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); /* 1 segundo = 1000 */
+            }
+            else if (ok == -14)
+            {
+                MessageBox.Show("No se puede registrar más de 1 Buzo en una misma Embarcación", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); /* 1 segundo = 1000 */
+            }
+            else if (ok == -15)
+            {
+                MessageBox.Show("No se puede registrar ningún Buzo en una Embarcación que no pertenece a un Permiso para bucear", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); /* 1 segundo = 1000 */
             }
             else if(ok == -21)
             { 
                 (new System.Threading.Thread(CloseIt)).Start();
-                MessageBox.Show("Pescador borrado de la base de datos","Exito"); /* 1 segundo = 1000 */
+                MessageBox.Show("Pescador borrado de la base de datos","Exito", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); /* 1 segundo = 1000 */
             }
             else if (ok == -31)
             {
                 (new System.Threading.Thread(CloseIt)).Start();
-                MessageBox.Show("Todas las embarcaciones fueron registradas exitosamente", "Exito"); /* 1 segundo = 1000 */
+                MessageBox.Show("Todas las Embarcaciones fueron registradas exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); /* 1 segundo = 1000 */
             }
             else if (ok == -32)
             {
                 (new System.Threading.Thread(CloseIt)).Start();
-                MessageBox.Show("Hubo algún error al registrar una o más embarcaciones", "Error",MessageBoxButtons.OK,MessageBoxIcon.Error); /* 1 segundo = 1000 */
+                MessageBox.Show("Hubo algún error al registrar una o más Embarcaciones", "ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error); /* 1 segundo = 1000 */
             }
             else
             {
                 (new System.Threading.Thread(CloseIt)).Start();
-                MessageBox.Show("Error durante el registro"); /* 1 segundo = 1000 */
+                MessageBox.Show("Error durante el registro", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); /* 1 segundo = 1000 */
             }
         }
         public void CloseIt()
