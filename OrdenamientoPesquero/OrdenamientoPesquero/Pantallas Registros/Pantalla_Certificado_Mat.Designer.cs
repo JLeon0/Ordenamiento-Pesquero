@@ -107,6 +107,13 @@
             this.gbBotones = new System.Windows.Forms.GroupBox();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
             this.AbrirExpediente = new System.Windows.Forms.Button();
+            this.CertMatr = new System.Windows.Forms.Label();
+            this.CertSeg = new System.Windows.Forms.Label();
+            this.FactArtes = new System.Windows.Forms.Label();
+            this.FactMotor = new System.Windows.Forms.Label();
+            this.FactEmb = new System.Windows.Forms.Label();
+            this.PapChip = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.gbCertificado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelMATRICULA)).BeginInit();
@@ -125,6 +132,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.gbBotones.SuspendLayout();
             this.gbBusqueda.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label78
@@ -983,7 +991,7 @@
             this.gbBusqueda.Controls.Add(this.label13);
             this.gbBusqueda.Location = new System.Drawing.Point(11, 95);
             this.gbBusqueda.Name = "gbBusqueda";
-            this.gbBusqueda.Size = new System.Drawing.Size(168, 347);
+            this.gbBusqueda.Size = new System.Drawing.Size(168, 285);
             this.gbBusqueda.TabIndex = 185;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
@@ -998,6 +1006,88 @@
             this.AbrirExpediente.UseVisualStyleBackColor = true;
             this.AbrirExpediente.Click += new System.EventHandler(this.AbrirExpediente_Click);
             // 
+            // CertMatr
+            // 
+            this.CertMatr.AutoSize = true;
+            this.CertMatr.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CertMatr.ForeColor = System.Drawing.Color.Black;
+            this.CertMatr.Location = new System.Drawing.Point(5, 18);
+            this.CertMatr.Name = "CertMatr";
+            this.CertMatr.Size = new System.Drawing.Size(144, 16);
+            this.CertMatr.TabIndex = 187;
+            this.CertMatr.Text = "Certificado de Matricula";
+            // 
+            // CertSeg
+            // 
+            this.CertSeg.AutoSize = true;
+            this.CertSeg.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CertSeg.ForeColor = System.Drawing.Color.Black;
+            this.CertSeg.Location = new System.Drawing.Point(5, 43);
+            this.CertSeg.Name = "CertSeg";
+            this.CertSeg.Size = new System.Drawing.Size(149, 16);
+            this.CertSeg.TabIndex = 187;
+            this.CertSeg.Text = "Certificado de Seguridad";
+            // 
+            // FactArtes
+            // 
+            this.FactArtes.AutoSize = true;
+            this.FactArtes.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FactArtes.ForeColor = System.Drawing.Color.Black;
+            this.FactArtes.Location = new System.Drawing.Point(5, 67);
+            this.FactArtes.Name = "FactArtes";
+            this.FactArtes.Size = new System.Drawing.Size(163, 16);
+            this.FactArtes.TabIndex = 187;
+            this.FactArtes.Text = "Factura de Artes de Pesca";
+            // 
+            // FactMotor
+            // 
+            this.FactMotor.AutoSize = true;
+            this.FactMotor.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FactMotor.ForeColor = System.Drawing.Color.Black;
+            this.FactMotor.Location = new System.Drawing.Point(5, 93);
+            this.FactMotor.Name = "FactMotor";
+            this.FactMotor.Size = new System.Drawing.Size(110, 16);
+            this.FactMotor.TabIndex = 188;
+            this.FactMotor.Text = "Factura del Motor";
+            // 
+            // FactEmb
+            // 
+            this.FactEmb.AutoSize = true;
+            this.FactEmb.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FactEmb.ForeColor = System.Drawing.Color.Black;
+            this.FactEmb.Location = new System.Drawing.Point(5, 116);
+            this.FactEmb.Name = "FactEmb";
+            this.FactEmb.Size = new System.Drawing.Size(150, 16);
+            this.FactEmb.TabIndex = 189;
+            this.FactEmb.Text = "Factura de Embarcación";
+            // 
+            // PapChip
+            // 
+            this.PapChip.AutoSize = true;
+            this.PapChip.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PapChip.ForeColor = System.Drawing.Color.Black;
+            this.PapChip.Location = new System.Drawing.Point(5, 143);
+            this.PapChip.Name = "PapChip";
+            this.PapChip.Size = new System.Drawing.Size(121, 16);
+            this.PapChip.TabIndex = 190;
+            this.PapChip.Text = "Papeleta de Chipeo";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.CertMatr);
+            this.groupBox1.Controls.Add(this.FactMotor);
+            this.groupBox1.Controls.Add(this.CertSeg);
+            this.groupBox1.Controls.Add(this.FactEmb);
+            this.groupBox1.Controls.Add(this.FactArtes);
+            this.groupBox1.Controls.Add(this.PapChip);
+            this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(849, 95);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(169, 168);
+            this.groupBox1.TabIndex = 191;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Resumen Expediente";
+            // 
             // Pantalla_Certificado_Mat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1005,7 +1095,8 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(871, 619);
+            this.ClientSize = new System.Drawing.Size(1030, 619);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.AbrirExpediente);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.gbBotones);
@@ -1045,6 +1136,8 @@
             this.gbBotones.PerformLayout();
             this.gbBusqueda.ResumeLayout(false);
             this.gbBusqueda.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1128,5 +1221,12 @@
         private System.Windows.Forms.PictureBox ActivarPanelMATRICULA;
         private System.Windows.Forms.TextBox MatriculaCertMat;
         private System.Windows.Forms.Button AbrirExpediente;
+        private System.Windows.Forms.Label CertMatr;
+        private System.Windows.Forms.Label CertSeg;
+        private System.Windows.Forms.Label FactArtes;
+        private System.Windows.Forms.Label FactMotor;
+        private System.Windows.Forms.Label FactEmb;
+        private System.Windows.Forms.Label PapChip;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }

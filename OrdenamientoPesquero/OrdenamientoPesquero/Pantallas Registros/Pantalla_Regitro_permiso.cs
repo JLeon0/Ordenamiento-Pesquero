@@ -21,7 +21,7 @@ namespace OrdenamientoPesquero
         {
             InitializeComponent();
             //this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
-            this.Width = 1106;
+            this.Width = 1308;
             Rnpa = rnpa;
             Municipio = muni;
             uni = unidad;
@@ -440,36 +440,15 @@ namespace OrdenamientoPesquero
             dgvArchivos.RowCount = 1;
             dgvArchivos[0, 0].Value = "Permiso Escaneado";
             if (exp.Rows[0]["APERMISO"].ToString() != "") { dgvArchivos[1, 0].Value = true; dgvArchivos[1, 0].Style.BackColor = Color.Green; }
+            else { dgvArchivos[1, 0].Value = false; dgvArchivos[1, 0].Style.BackColor = Color.Red   ; }
 
-        }
-
-        private void SubirPDF_Click(object sender, EventArgs e)
-        {
-            if (dgvArchivos.CurrentCell.Selected != false)
-            {
-                openFileDialog1.InitialDirectory = "C:\\";
-                openFileDialog1.Filter = "Todos los archivos (*.pdf)|*.pdf";
-                openFileDialog1.FilterIndex = 1;
-                openFileDialog1.RestoreDirectory = true;
-
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    Stream myStream = openFileDialog1.OpenFile();
-
-                    MemoryStream pdf = new MemoryStream();
-                    myStream.CopyTo(pdf);
-                    if (dgvArchivos.SelectedCells[0].RowIndex == 0)
-                        proc.InsertarPDFPermiso(nPer.Text, pdf.GetBuffer());
-                }
-                CargarExpediente();
-            }
-            else { MessageBox.Show("Debe seleccionar la fila correspondiente al archivo que desea subir", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void AbrirPDF_Click(object sender, EventArgs e)
         {
             if (dgvArchivos.CurrentCell.Selected != false)
             {
+                this.Cursor = Cursors.WaitCursor;
                 DataTable oDocument = proc.ObtenerPermiso(nPer.Text);
                 if (oDocument.Rows.Count > 0)
                 {
@@ -477,7 +456,7 @@ namespace OrdenamientoPesquero
                     {
                         string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                         string folder = path + "/PDF/";
-                        string fullFilePath = folder + nPer.Text;
+                        string fullFilePath = folder + nPer.Text + "-APERMISO";
 
 
                         if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
@@ -490,6 +469,8 @@ namespace OrdenamientoPesquero
                         Process.Start(fullFilePath);
                     }
                 }
+
+                this.Cursor = Cursors.Default;
             }
             else
             {

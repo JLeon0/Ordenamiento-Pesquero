@@ -34,6 +34,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             dgvUnidad.ClearSelection();
             CargarExpedienteEmbarcacion();
             CargarExpedientePescador();
+            CargarExpedientePermisos();
         }
         private void CargarExpedienteUnidad()
         {
@@ -144,12 +145,28 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             dgvEmbarcacion.ClearSelection();
         }
 
+        private void CargarExpedientePermisos()
+        {
+            DataTable expediente = proc.ObtenerNoPermisos(RNPA);
+            dgvPermisos.RowCount = 1;
+            dgvPermisos[0, 0].Value = "Permisos Escaneados";
+
+            int aperm = 0;
+            foreach (DataRow fila in expediente.Rows)
+            {
+                if (fila["APERMISO"].ToString() != "") { aperm++; }
+            }
+            dgvPermisos[2, 0].Value = aperm + "/" + expediente.Rows.Count;
+            if (aperm == expediente.Rows.Count) { dgvPermisos[1, 0].Value = true; dgvPermisos[1, 0].Style.BackColor = Color.Green; }
+            dgvPermisos.ClearSelection();
+        }
+
         private void SubirPDF_Click(object sender, EventArgs e)
         {
             if (dgvUnidad.CurrentCell.Selected != false)
             {
                 openFileDialog1.InitialDirectory = "C:\\";
-                openFileDialog1.Filter = "Todos los archivos (*.pdf)|*.*";
+                openFileDialog1.Filter = "Todos los archivos (*.*)|*.pdf";
                 openFileDialog1.FilterIndex = 1;
                 openFileDialog1.RestoreDirectory = true;
 
@@ -199,9 +216,36 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 DataTable oDocument = proc.ObtenerExpedienteUnidad(RNPA);
                 if (oDocument.Rows.Count > 0)
                 {
+                    string archivo = "";
+                    if (TIPO == 0)
+                    {
+                        if (dgvUnidad.SelectedCells[0].RowIndex == 0)
+                            archivo = "ACTACONS";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 1)
+                            archivo = "ACTAASAMBLEA";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 2)
+                            archivo = "RFCUE";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
+                            archivo = "COMPDOM";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 4)
+                            archivo = "CEDINSCRUE";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 5)
+                            archivo = "CEDINSCREMBARCA";
+                    }
+                    else
+                    {
+                        if (dgvUnidad.SelectedCells[0].RowIndex == 0)
+                            archivo = "RFCUE";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 1)
+                            archivo = "COMPDOM";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 2)
+                            archivo = "CEDINSCRUE";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
+                            archivo = "CEDINSCREMBARCA";
+                    }
                     string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                     string folder = path + "/PDF/";
-                    string fullFilePath = folder + RNPA;
+                    string fullFilePath = folder + RNPA + "-" + archivo;
 
 
                     if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
@@ -209,18 +253,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                     if (File.Exists(fullFilePath)) { try { Directory.Delete(fullFilePath); } catch (Exception ms) { } }
 
 
-                    string archivo = "";
-                    if (dgvUnidad.SelectedCells[0].RowIndex == 0)
-                        archivo = "ACTACONS";
-                    else if (dgvUnidad.SelectedCells[0].RowIndex == 1)
-                        archivo = "FORMATOREG";
-                    else if (dgvUnidad.SelectedCells[0].RowIndex == 2)
-                        archivo = "FORMATOVERF";
-                    else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
-                        archivo = "RFCUE";
-                    else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
-                        archivo = "INEREPR";
-
+                 
                     if (archivo != "")
                     {
                         byte[] file = (byte[])oDocument.Rows[0][archivo];

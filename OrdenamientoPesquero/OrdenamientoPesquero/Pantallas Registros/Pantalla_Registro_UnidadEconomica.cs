@@ -13,6 +13,7 @@ using Microsoft.VisualBasic;
 using System.Text.RegularExpressions;
 using OrdenamientoPesquero.Pantallas_Registros;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace OrdenamientoPesquero
 {
@@ -39,13 +40,13 @@ namespace OrdenamientoPesquero
 
         private void Pantalla_Registro_UnidadEconomica_Load(object sender, EventArgs e)
         {
-            cargando = false;
+            this.Cursor = Cursors.WaitCursor; cargando = false;
             txtFecha.Text = DateTime.Today.ToString("dd/MM/yyyy");
             CargarRNPA();
             cbRNPA.Focus();
             CargarMunicipios();
             CargarFederaciones();
-
+            this.Cursor = Cursors.Default;
         }
 
         #region Registros
@@ -688,6 +689,7 @@ namespace OrdenamientoPesquero
                 Pantalla_Regitro_permiso perm = new Pantalla_Regitro_permiso(cbRNPA.Text, txtMunicipio.Text, txtNombre.Text);
                 perm.ShowDialog();
                 Resumenes(cbRNPA.Text);
+                BorrarCarpeta();
             }
             else { MessageBox.Show("Debe elegir una unidad economica que esté registrada", "Error"); }
         }
@@ -701,6 +703,7 @@ namespace OrdenamientoPesquero
                 Pantalla_Registro_Usuario pesc = new Pantalla_Registro_Usuario(cbRNPA.Text, txtNombre.Text, tipo);
                 pesc.ShowDialog();
                 Resumenes(cbRNPA.Text);
+                BorrarCarpeta();
             }
             else { MessageBox.Show("Debe elegir una unidad economica que esté registrada", "Error"); }
         }
@@ -712,6 +715,7 @@ namespace OrdenamientoPesquero
                 Pantalla_Certificado_Mat certmat = new Pantalla_Certificado_Mat(cbRNPA.Text);
                 certmat.ShowDialog();
                 Resumenes(cbRNPA.Text);
+                BorrarCarpeta();
             }
             else { MessageBox.Show("Debe elegir una unidad economica que esté registrada", "Error"); }
         }
@@ -866,6 +870,7 @@ namespace OrdenamientoPesquero
                 if (Privado.Checked) { tipo = 1; }
                 Pantallas_Archivos.Expediente_UE expue = new Pantallas_Archivos.Expediente_UE(cbRNPA.Text, txtNombre.Text, tipo);
                 expue.ShowDialog();
+                BorrarCarpeta();
             }
         }
 
@@ -878,6 +883,23 @@ namespace OrdenamientoPesquero
             else
             {
                 Pantallas_Menu.MenuReportes mr = new Pantallas_Menu.MenuReportes(cbRNPA.Text, "ReporteXPermicionario.rdlc"); mr.Show(this);
+            }
+        }
+
+        private void BorrarCarpeta()
+        {
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            string folder = path + "/PDF/";
+
+            if (Directory.Exists(folder))
+            {
+                try
+                {
+                    foreach (string fichero in Directory.GetFiles(folder)){
+                        File.Delete(fichero);
+                    }
+                }
+                catch (Exception ms) { }
             }
         }
         #endregion

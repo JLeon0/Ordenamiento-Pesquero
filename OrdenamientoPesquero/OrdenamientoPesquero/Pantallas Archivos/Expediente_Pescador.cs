@@ -31,7 +31,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             if (dgvArchivos.CurrentCell.Selected != false)
             {
                 openFileDialog1.InitialDirectory = "C:\\";
-                openFileDialog1.Filter = "Todos los archivos (*.pdf)|*.*";
+                openFileDialog1.Filter = "Todos los archivos (*.*)|*.pdf";
                 openFileDialog1.FilterIndex = 1;
                 openFileDialog1.RestoreDirectory = true;
 
@@ -58,18 +58,10 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
         {
             if (dgvArchivos.CurrentCell.Selected != false)
             {
+                this.Cursor = Cursors.WaitCursor;
                 DataTable oDocument = proc.ObtenerExpedientePescador(CURPPesc);
                 if (oDocument.Rows.Count > 0)
                 {
-                    string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                    string folder = path + "/PDF/";
-                    string fullFilePath = folder + CURPPesc;
-
-                    if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
-
-                    if (File.Exists(fullFilePath)) { try { Directory.Delete(fullFilePath); } catch (Exception ms) { } }
-
-
                     string archivo = "";
                     if (dgvArchivos.SelectedCells[0].RowIndex == 0)
                         archivo = "ACTANAC";
@@ -80,6 +72,17 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                     else if (dgvArchivos.SelectedCells[0].RowIndex == 3)
                         archivo = "ACOMPDOM";
 
+                    string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                    string folder = path + "/PDF/";
+                    string fullFilePath = folder + CURPPesc + "-" + archivo;
+
+                    if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
+
+                    if (File.Exists(fullFilePath)) { try { Directory.Delete(fullFilePath); } catch (Exception ms) { } }
+
+
+                
+
                     if (archivo != "")
                     {
                         byte[] file = (byte[])oDocument.Rows[0][archivo];
@@ -87,6 +90,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                         Process.Start(fullFilePath);
                     }
                 }
+                this.Cursor = Cursors.Default;
             }
             else { MessageBox.Show("Debe seleccionar la fila correspondiente al archivo que desea subir", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }

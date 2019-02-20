@@ -55,7 +55,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             if (dgvArchivos.CurrentCell.Selected != false)
             {
                 openFileDialog1.InitialDirectory = "C:\\";
-                openFileDialog1.Filter = "Todos los archivos (*.pdf)|*.pdf";
+                openFileDialog1.Filter = "Todos los archivos (*.*)|*.pdf";
                 openFileDialog1.FilterIndex = 1;
                 openFileDialog1.RestoreDirectory = true;
 
@@ -87,19 +87,10 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
         {
             if (dgvArchivos.CurrentCell.Selected != false)
             {
+                this.Cursor = Cursors.WaitCursor;
                 DataTable oDocument = proc.ObtenerExpedienteEmbarcacion(MATRICULA);
                 if (oDocument.Rows.Count > 0)
                 {
-                    string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-                    string folder = path + "/PDF/";
-                    string fullFilePath = folder + MATRICULA;
-
-
-                    if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
-
-                    if (File.Exists(fullFilePath)) { try { Directory.Delete(fullFilePath); } catch (Exception ms) { } }
-
-
                     string archivo = "";
                     if (dgvArchivos.SelectedCells[0].RowIndex == 0)
                         archivo = "CERTMATRICULA";
@@ -114,6 +105,17 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                     else if (dgvArchivos.SelectedCells[0].RowIndex == 5)
                         archivo = "PAPELETACHIPEO";
 
+                    string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+                    string folder = path + "/PDF/";
+                    string fullFilePath = folder + MATRICULA + "-" + archivo;
+
+
+                    if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
+
+                    if (File.Exists(fullFilePath)) { try { Directory.Delete(fullFilePath); } catch (Exception ms) { } }
+
+
+
 
                     if (archivo != "")
                     {
@@ -122,6 +124,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                         Process.Start(fullFilePath);
                     }
                 }
+                this.Cursor = Cursors.Default;
             }
             else
             {
