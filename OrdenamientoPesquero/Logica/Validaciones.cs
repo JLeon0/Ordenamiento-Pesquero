@@ -188,6 +188,10 @@ namespace Logica
             {
                 MessageBox.Show("No se puede registrar ningún Buzo en una Embarcación que no pertenece a un Permiso para bucear", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); /* 1 segundo = 1000 */
             }
+            else if (ok == -16)
+            {
+                MessageBox.Show("No se puede registrar más Buzos que Equipos de Buceo registrados", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); /* 1 segundo = 1000 */
+            }
             else if(ok == -21)
             { 
                 (new System.Threading.Thread(CloseIt)).Start();
