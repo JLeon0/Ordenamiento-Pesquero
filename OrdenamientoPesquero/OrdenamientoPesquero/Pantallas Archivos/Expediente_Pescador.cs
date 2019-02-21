@@ -17,7 +17,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
     {
         Procedimientos proc = new Procedimientos();
         string CURPPesc = "";
-
+        Scanner scan;
 
         public Expediente_Pescador(string curp,string nombre)
         {
@@ -31,7 +31,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             if (dgvArchivos.CurrentCell.Selected != false)
             {
                 openFileDialog1.InitialDirectory = "C:\\";
-                openFileDialog1.Filter = "Todos los archivos (*.*)|*.pdf";
+                openFileDialog1.Filter = "Todos los archivos (*.*)|*.*";
                 openFileDialog1.FilterIndex = 1;
                 openFileDialog1.RestoreDirectory = true;
 
@@ -41,6 +41,17 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
 
                     MemoryStream pdf = new MemoryStream();
                     myStream.CopyTo(pdf);
+
+                    string n = openFileDialog1.FileName;
+                    string x = n[n.Length - 4].ToString() + n[n.Length - 3].ToString() + n[n.Length - 2].ToString() + n[n.Length - 1].ToString();
+                    if (x != ".pdf")
+                    {
+                        scan = new Scanner(false);
+                        openFileDialog1.FileName = scan.ConvertToPDF(pdf);
+                        myStream = openFileDialog1.OpenFile();
+                        pdf = new MemoryStream();
+                        myStream.CopyTo(pdf);
+                    }
                     if (dgvArchivos.SelectedCells[0].RowIndex == 0)
                         proc.InsertarPDFPescador(CURPPesc, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
                     if (dgvArchivos.SelectedCells[0].RowIndex == 1)
@@ -74,14 +85,12 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
 
                     string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                     string folder = path + "/PDF/";
-                    string fullFilePath = folder + CURPPesc + "-" + archivo;
+                    string fullFilePath = folder + CURPPesc + "-" + archivo + ".pdf";
 
                     if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
 
                     if (File.Exists(fullFilePath)) { try { Directory.Delete(fullFilePath); } catch (Exception ms) { } }
 
-
-                
 
                     if (archivo != "")
                     {

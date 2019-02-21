@@ -103,10 +103,10 @@ namespace Logica
             string[] Parametros = { "@RNPA" };
             return c.getDatosTabla("ObtenerExpedienteUnidad", Parametros, RNPA);
         }
-        public int InsertarPDFUnidad(string RNPA, byte[] actacons, byte[] actaasamblea, byte[] compdom, byte[] rfcue, byte[] cedinscrue, byte[] cedinscremb)
+        public int InsertarPDFUnidad(string RNPA, byte[] actacons, byte[] actaasamblea, byte[] rfcue, byte[] compdom, byte[] cedinscrue, byte[] cedinscremb)
         {
-            string[] Parametros = { "@rnpa", "@actacons", "@actaasamblea", "@compdom", "@rfcue", "@cedinscrue","@cedinscremb" };
-            return c.Ejecutar("InsertarPDFUnidad", Parametros, RNPA, actacons, actaasamblea, compdom, rfcue, cedinscrue, cedinscremb);
+            string[] Parametros = { "@rnpa", "@actacons", "@actaasamblea",  "@rfcue", "@compdom", "@cedinscrue", "@cedinscremb" };
+            return c.Ejecutar("InsertarPDFUnidad", Parametros, RNPA, actacons, actaasamblea, rfcue, compdom, cedinscrue, cedinscremb);
         }
 
             #endregion
