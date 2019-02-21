@@ -132,17 +132,20 @@ namespace OrdenamientoPesquero
                 DataRowView row = (DataRowView)MatriculaPesc.SelectedItem;
                 pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, row[0].ToString().Replace(" ", ""), CorreoPesc.Text, LocalidadPesc.Text, o, RNPA.Replace(" ", ""), Seguro.Text, fechaVenF, fechaExpF);
                 int ret=0;
-                if (ChecarCapitan(ocupacion, row, ref ret) && ChecarMarineros(ocupacion, row,ref ret) || MatriculaPesc.Text == "NO APLICA")
+                if (ChecarBuzosXEquipoBuceo(ocupacion,row,ref ret))
                 {
-                    if (registrar)
+                    if (ChecarCapitan(ocupacion, row, ref ret) && ChecarMarineros(ocupacion, row, ref ret) && ChecarBuzo(ocupacion, row, ref ret) || MatriculaPesc.Text == "NO APLICA")
                     {
-                        RegistrarImagen();
-                        return proc.Registrar_Pescador(pes);
-                    }
-                    else
-                    {
-                        RegistrarImagen();
-                        return proc.Actualizar_Pescador(pes);
+                        if (registrar)
+                        {
+                            RegistrarImagen();
+                            return proc.Registrar_Pescador(pes);
+                        }
+                        else
+                        {
+                            RegistrarImagen();
+                            return proc.Actualizar_Pescador(pes);
+                        }
                     }
                 }
                 return ret;
@@ -198,7 +201,60 @@ namespace OrdenamientoPesquero
             }
             else { return true; }
         }
-
+        private bool ChecarBuzo(string ocupacion, DataRowView row, ref int ret)
+        {
+            dt = proc.ChecarBuzo(RNPA, row[0].ToString());
+            DataTable embarcaciones = proc.EmbarcaXPermisosBuceo(RNPA);
+            if(ocupacion == "Buzo")
+            {
+                bool acceso = false;
+                foreach (DataRow fila in embarcaciones.Rows)
+                {
+                    if (fila[0].ToString() == MatriculaPesc.SelectedValue.ToString()) { acceso = true; break; }
+                }
+                if (acceso)
+                {
+                    if (dt.Rows.Count <= 1)
+                    {
+                        if (dt.Rows.Count == 0) { return true; }
+                        foreach (DataRow fila in dt.Rows)
+                        {
+                            if (fila[0].ToString() == CURPPesc.Text)
+                            {
+                                return true;
+                            }
+                        }
+                        ret = -14;
+                        return false;
+                    }
+                    else { ret = -14; return false; }
+                }
+                else { ret = -15; return false; }
+            }
+            else { return true; }
+        }
+        private bool ChecarBuzosXEquipoBuceo(string ocupacion, DataRowView row, ref int ret)
+        {
+            DataTable buzos = proc.ChecarBuzosXEquipoBuceo(RNPA);
+            if (ocupacion == "Buzo")
+            {
+                if (buzos.Rows.Count == 0) { return true; }
+                if (buzos.Rows.Count >= Convert.ToInt32(buzos.Rows[0][0].ToString()))
+                {
+                    foreach (DataRow fila in dt.Rows)
+                    {
+                        if (fila[0].ToString() == CURPPesc.Text)
+                        {
+                            return true;
+                        }
+                    }
+                    ret = -16; return false;
+                }
+                return true;
+            }
+            else
+            { return true; }
+        }
         #region Cargar
         private void CargarMunicipios()
         {
@@ -595,6 +651,7 @@ namespace OrdenamientoPesquero
             }
             else { MessageBox.Show("No se puede registrar un pescador sin CURP"); }
         }
+
         private void ActivarPanelCURP_Click(object sender, EventArgs e)
         {
             if (CURPPesc.Text != "")
