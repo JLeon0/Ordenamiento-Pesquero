@@ -28,9 +28,9 @@ namespace OrdenamientoPesquero {
         
         private Embarcacion_PersonalDataTable tableEmbarcacion_Personal;
         
-        private Permisos_PersonalDataTable tablePermisos_Personal;
-        
         private UNIDAD_PERSONALDataTable tableUNIDAD_PERSONAL;
+        
+        private Permisos_PersonalDataTable tablePermisos_Personal;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -66,11 +66,11 @@ namespace OrdenamientoPesquero {
                 if ((ds.Tables["Embarcacion_Personal"] != null)) {
                     base.Tables.Add(new Embarcacion_PersonalDataTable(ds.Tables["Embarcacion_Personal"]));
                 }
-                if ((ds.Tables["Permisos_Personal"] != null)) {
-                    base.Tables.Add(new Permisos_PersonalDataTable(ds.Tables["Permisos_Personal"]));
-                }
                 if ((ds.Tables["UNIDAD_PERSONAL"] != null)) {
                     base.Tables.Add(new UNIDAD_PERSONALDataTable(ds.Tables["UNIDAD_PERSONAL"]));
+                }
+                if ((ds.Tables["Permisos_Personal"] != null)) {
+                    base.Tables.Add(new Permisos_PersonalDataTable(ds.Tables["Permisos_Personal"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -114,9 +114,9 @@ namespace OrdenamientoPesquero {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public Permisos_PersonalDataTable Permisos_Personal {
+        public UNIDAD_PERSONALDataTable UNIDAD_PERSONAL {
             get {
-                return this.tablePermisos_Personal;
+                return this.tableUNIDAD_PERSONAL;
             }
         }
         
@@ -124,9 +124,9 @@ namespace OrdenamientoPesquero {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public UNIDAD_PERSONALDataTable UNIDAD_PERSONAL {
+        public Permisos_PersonalDataTable Permisos_Personal {
             get {
-                return this.tableUNIDAD_PERSONAL;
+                return this.tablePermisos_Personal;
             }
         }
         
@@ -203,11 +203,11 @@ namespace OrdenamientoPesquero {
                 if ((ds.Tables["Embarcacion_Personal"] != null)) {
                     base.Tables.Add(new Embarcacion_PersonalDataTable(ds.Tables["Embarcacion_Personal"]));
                 }
-                if ((ds.Tables["Permisos_Personal"] != null)) {
-                    base.Tables.Add(new Permisos_PersonalDataTable(ds.Tables["Permisos_Personal"]));
-                }
                 if ((ds.Tables["UNIDAD_PERSONAL"] != null)) {
                     base.Tables.Add(new UNIDAD_PERSONALDataTable(ds.Tables["UNIDAD_PERSONAL"]));
+                }
+                if ((ds.Tables["Permisos_Personal"] != null)) {
+                    base.Tables.Add(new Permisos_PersonalDataTable(ds.Tables["Permisos_Personal"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -254,16 +254,16 @@ namespace OrdenamientoPesquero {
                     this.tableEmbarcacion_Personal.InitVars();
                 }
             }
-            this.tablePermisos_Personal = ((Permisos_PersonalDataTable)(base.Tables["Permisos_Personal"]));
-            if ((initTable == true)) {
-                if ((this.tablePermisos_Personal != null)) {
-                    this.tablePermisos_Personal.InitVars();
-                }
-            }
             this.tableUNIDAD_PERSONAL = ((UNIDAD_PERSONALDataTable)(base.Tables["UNIDAD_PERSONAL"]));
             if ((initTable == true)) {
                 if ((this.tableUNIDAD_PERSONAL != null)) {
                     this.tableUNIDAD_PERSONAL.InitVars();
+                }
+            }
+            this.tablePermisos_Personal = ((Permisos_PersonalDataTable)(base.Tables["Permisos_Personal"]));
+            if ((initTable == true)) {
+                if ((this.tablePermisos_Personal != null)) {
+                    this.tablePermisos_Personal.InitVars();
                 }
             }
         }
@@ -280,10 +280,10 @@ namespace OrdenamientoPesquero {
             base.Tables.Add(this.tablePescadores_Embarcaciones);
             this.tableEmbarcacion_Personal = new Embarcacion_PersonalDataTable();
             base.Tables.Add(this.tableEmbarcacion_Personal);
-            this.tablePermisos_Personal = new Permisos_PersonalDataTable();
-            base.Tables.Add(this.tablePermisos_Personal);
             this.tableUNIDAD_PERSONAL = new UNIDAD_PERSONALDataTable();
             base.Tables.Add(this.tableUNIDAD_PERSONAL);
+            this.tablePermisos_Personal = new Permisos_PersonalDataTable();
+            base.Tables.Add(this.tablePermisos_Personal);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -300,13 +300,13 @@ namespace OrdenamientoPesquero {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializePermisos_Personal() {
+        private bool ShouldSerializeUNIDAD_PERSONAL() {
             return false;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private bool ShouldSerializeUNIDAD_PERSONAL() {
+        private bool ShouldSerializePermisos_Personal() {
             return false;
         }
         
@@ -372,10 +372,10 @@ namespace OrdenamientoPesquero {
         public delegate void Embarcacion_PersonalRowChangeEventHandler(object sender, Embarcacion_PersonalRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void Permisos_PersonalRowChangeEventHandler(object sender, Permisos_PersonalRowChangeEvent e);
+        public delegate void UNIDAD_PERSONALRowChangeEventHandler(object sender, UNIDAD_PERSONALRowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public delegate void UNIDAD_PERSONALRowChangeEventHandler(object sender, UNIDAD_PERSONALRowChangeEvent e);
+        public delegate void Permisos_PersonalRowChangeEventHandler(object sender, Permisos_PersonalRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -1527,447 +1527,6 @@ namespace OrdenamientoPesquero {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class Permisos_PersonalDataTable : global::System.Data.TypedTableBase<Permisos_PersonalRow> {
-            
-            private global::System.Data.DataColumn columnFOLIO;
-            
-            private global::System.Data.DataColumn columnRNPA;
-            
-            private global::System.Data.DataColumn columnNPERMISO;
-            
-            private global::System.Data.DataColumn columnPESQUERIA;
-            
-            private global::System.Data.DataColumn columnLUGAREXPEDICION;
-            
-            private global::System.Data.DataColumn columnDIAEXPEDICION;
-            
-            private global::System.Data.DataColumn columnFINVIGENCIA;
-            
-            private global::System.Data.DataColumn columnZONAPESCA;
-            
-            private global::System.Data.DataColumn columnSITIOSDESEMBARQUE;
-            
-            private global::System.Data.DataColumn columnOBSERVACIONES;
-            
-            private global::System.Data.DataColumn columnTIPOPERMISO;
-            
-            private global::System.Data.DataColumn columnEQUIPOS_DE_PESCA;
-            
-            private global::System.Data.DataColumn columnEMBARCACIONES;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Permisos_PersonalDataTable() {
-                this.TableName = "Permisos_Personal";
-                this.BeginInit();
-                this.InitClass();
-                this.EndInit();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Permisos_PersonalDataTable(global::System.Data.DataTable table) {
-                this.TableName = table.TableName;
-                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
-                    this.CaseSensitive = table.CaseSensitive;
-                }
-                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
-                    this.Locale = table.Locale;
-                }
-                if ((table.Namespace != table.DataSet.Namespace)) {
-                    this.Namespace = table.Namespace;
-                }
-                this.Prefix = table.Prefix;
-                this.MinimumCapacity = table.MinimumCapacity;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected Permisos_PersonalDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
-                    base(info, context) {
-                this.InitVars();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FOLIOColumn {
-                get {
-                    return this.columnFOLIO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn RNPAColumn {
-                get {
-                    return this.columnRNPA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn NPERMISOColumn {
-                get {
-                    return this.columnNPERMISO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn PESQUERIAColumn {
-                get {
-                    return this.columnPESQUERIA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn LUGAREXPEDICIONColumn {
-                get {
-                    return this.columnLUGAREXPEDICION;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn DIAEXPEDICIONColumn {
-                get {
-                    return this.columnDIAEXPEDICION;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn FINVIGENCIAColumn {
-                get {
-                    return this.columnFINVIGENCIA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn ZONAPESCAColumn {
-                get {
-                    return this.columnZONAPESCA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn SITIOSDESEMBARQUEColumn {
-                get {
-                    return this.columnSITIOSDESEMBARQUE;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn OBSERVACIONESColumn {
-                get {
-                    return this.columnOBSERVACIONES;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn TIPOPERMISOColumn {
-                get {
-                    return this.columnTIPOPERMISO;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EQUIPOS_DE_PESCAColumn {
-                get {
-                    return this.columnEQUIPOS_DE_PESCA;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public global::System.Data.DataColumn EMBARCACIONESColumn {
-                get {
-                    return this.columnEMBARCACIONES;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            [global::System.ComponentModel.Browsable(false)]
-            public int Count {
-                get {
-                    return this.Rows.Count;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Permisos_PersonalRow this[int index] {
-                get {
-                    return ((Permisos_PersonalRow)(this.Rows[index]));
-                }
-            }
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Permisos_PersonalRowChangeEventHandler Permisos_PersonalRowChanging;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Permisos_PersonalRowChangeEventHandler Permisos_PersonalRowChanged;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Permisos_PersonalRowChangeEventHandler Permisos_PersonalRowDeleting;
-            
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public event Permisos_PersonalRowChangeEventHandler Permisos_PersonalRowDeleted;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void AddPermisos_PersonalRow(Permisos_PersonalRow row) {
-                this.Rows.Add(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Permisos_PersonalRow AddPermisos_PersonalRow(string FOLIO, string RNPA, string NPERMISO, string PESQUERIA, string LUGAREXPEDICION, string DIAEXPEDICION, string FINVIGENCIA, string ZONAPESCA, string SITIOSDESEMBARQUE, string OBSERVACIONES, int TIPOPERMISO, string EQUIPOS_DE_PESCA, string EMBARCACIONES) {
-                Permisos_PersonalRow rowPermisos_PersonalRow = ((Permisos_PersonalRow)(this.NewRow()));
-                object[] columnValuesArray = new object[] {
-                        FOLIO,
-                        RNPA,
-                        NPERMISO,
-                        PESQUERIA,
-                        LUGAREXPEDICION,
-                        DIAEXPEDICION,
-                        FINVIGENCIA,
-                        ZONAPESCA,
-                        SITIOSDESEMBARQUE,
-                        OBSERVACIONES,
-                        TIPOPERMISO,
-                        EQUIPOS_DE_PESCA,
-                        EMBARCACIONES};
-                rowPermisos_PersonalRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowPermisos_PersonalRow);
-                return rowPermisos_PersonalRow;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Permisos_PersonalRow FindByNPERMISO(string NPERMISO) {
-                return ((Permisos_PersonalRow)(this.Rows.Find(new object[] {
-                            NPERMISO})));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public override global::System.Data.DataTable Clone() {
-                Permisos_PersonalDataTable cln = ((Permisos_PersonalDataTable)(base.Clone()));
-                cln.InitVars();
-                return cln;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataTable CreateInstance() {
-                return new Permisos_PersonalDataTable();
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal void InitVars() {
-                this.columnFOLIO = base.Columns["FOLIO"];
-                this.columnRNPA = base.Columns["RNPA"];
-                this.columnNPERMISO = base.Columns["NPERMISO"];
-                this.columnPESQUERIA = base.Columns["PESQUERIA"];
-                this.columnLUGAREXPEDICION = base.Columns["LUGAREXPEDICION"];
-                this.columnDIAEXPEDICION = base.Columns["DIAEXPEDICION"];
-                this.columnFINVIGENCIA = base.Columns["FINVIGENCIA"];
-                this.columnZONAPESCA = base.Columns["ZONAPESCA"];
-                this.columnSITIOSDESEMBARQUE = base.Columns["SITIOSDESEMBARQUE"];
-                this.columnOBSERVACIONES = base.Columns["OBSERVACIONES"];
-                this.columnTIPOPERMISO = base.Columns["TIPOPERMISO"];
-                this.columnEQUIPOS_DE_PESCA = base.Columns["EQUIPOS DE PESCA"];
-                this.columnEMBARCACIONES = base.Columns["EMBARCACIONES"];
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            private void InitClass() {
-                this.columnFOLIO = new global::System.Data.DataColumn("FOLIO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFOLIO);
-                this.columnRNPA = new global::System.Data.DataColumn("RNPA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnRNPA);
-                this.columnNPERMISO = new global::System.Data.DataColumn("NPERMISO", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnNPERMISO);
-                this.columnPESQUERIA = new global::System.Data.DataColumn("PESQUERIA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnPESQUERIA);
-                this.columnLUGAREXPEDICION = new global::System.Data.DataColumn("LUGAREXPEDICION", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnLUGAREXPEDICION);
-                this.columnDIAEXPEDICION = new global::System.Data.DataColumn("DIAEXPEDICION", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnDIAEXPEDICION);
-                this.columnFINVIGENCIA = new global::System.Data.DataColumn("FINVIGENCIA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnFINVIGENCIA);
-                this.columnZONAPESCA = new global::System.Data.DataColumn("ZONAPESCA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnZONAPESCA);
-                this.columnSITIOSDESEMBARQUE = new global::System.Data.DataColumn("SITIOSDESEMBARQUE", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnSITIOSDESEMBARQUE);
-                this.columnOBSERVACIONES = new global::System.Data.DataColumn("OBSERVACIONES", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnOBSERVACIONES);
-                this.columnTIPOPERMISO = new global::System.Data.DataColumn("TIPOPERMISO", typeof(int), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnTIPOPERMISO);
-                this.columnEQUIPOS_DE_PESCA = new global::System.Data.DataColumn("EQUIPOS DE PESCA", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEQUIPOS_DE_PESCA);
-                this.columnEMBARCACIONES = new global::System.Data.DataColumn("EMBARCACIONES", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnEMBARCACIONES);
-                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
-                                this.columnNPERMISO}, true));
-                this.columnFOLIO.AllowDBNull = false;
-                this.columnFOLIO.MaxLength = 20;
-                this.columnRNPA.MaxLength = 20;
-                this.columnNPERMISO.AllowDBNull = false;
-                this.columnNPERMISO.Unique = true;
-                this.columnNPERMISO.MaxLength = 20;
-                this.columnPESQUERIA.MaxLength = 50;
-                this.columnLUGAREXPEDICION.MaxLength = 50;
-                this.columnDIAEXPEDICION.MaxLength = 30;
-                this.columnFINVIGENCIA.MaxLength = 30;
-                this.columnZONAPESCA.MaxLength = 500;
-                this.columnSITIOSDESEMBARQUE.MaxLength = 200;
-                this.columnOBSERVACIONES.MaxLength = 1000;
-                this.columnEQUIPOS_DE_PESCA.ReadOnly = true;
-                this.columnEQUIPOS_DE_PESCA.MaxLength = 2147483647;
-                this.columnEMBARCACIONES.ReadOnly = true;
-                this.columnEMBARCACIONES.MaxLength = 2147483647;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Permisos_PersonalRow NewPermisos_PersonalRow() {
-                return ((Permisos_PersonalRow)(this.NewRow()));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new Permisos_PersonalRow(builder);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override global::System.Type GetRowType() {
-                return typeof(Permisos_PersonalRow);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanged(e);
-                if ((this.Permisos_PersonalRowChanged != null)) {
-                    this.Permisos_PersonalRowChanged(this, new Permisos_PersonalRowChangeEvent(((Permisos_PersonalRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowChanging(e);
-                if ((this.Permisos_PersonalRowChanging != null)) {
-                    this.Permisos_PersonalRowChanging(this, new Permisos_PersonalRowChangeEvent(((Permisos_PersonalRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleted(e);
-                if ((this.Permisos_PersonalRowDeleted != null)) {
-                    this.Permisos_PersonalRowDeleted(this, new Permisos_PersonalRowChangeEvent(((Permisos_PersonalRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
-                base.OnRowDeleting(e);
-                if ((this.Permisos_PersonalRowDeleting != null)) {
-                    this.Permisos_PersonalRowDeleting(this, new Permisos_PersonalRowChangeEvent(((Permisos_PersonalRow)(e.Row)), e.Action));
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void RemovePermisos_PersonalRow(Permisos_PersonalRow row) {
-                this.Rows.Remove(row);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
-                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
-                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
-                Consulta ds = new Consulta();
-                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
-                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
-                any1.MinOccurs = new decimal(0);
-                any1.MaxOccurs = decimal.MaxValue;
-                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any1);
-                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
-                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
-                any2.MinOccurs = new decimal(1);
-                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
-                sequence.Items.Add(any2);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute1.Name = "namespace";
-                attribute1.FixedValue = ds.Namespace;
-                type.Attributes.Add(attribute1);
-                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
-                attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "Permisos_PersonalDataTable";
-                type.Attributes.Add(attribute2);
-                type.Particle = sequence;
-                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
-                if (xs.Contains(dsSchema.TargetNamespace)) {
-                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
-                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
-                    try {
-                        global::System.Xml.Schema.XmlSchema schema = null;
-                        dsSchema.Write(s1);
-                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
-                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
-                            s2.SetLength(0);
-                            schema.Write(s2);
-                            if ((s1.Length == s2.Length)) {
-                                s1.Position = 0;
-                                s2.Position = 0;
-                                for (; ((s1.Position != s1.Length) 
-                                            && (s1.ReadByte() == s2.ReadByte())); ) {
-                                    ;
-                                }
-                                if ((s1.Position == s1.Length)) {
-                                    return type;
-                                }
-                            }
-                        }
-                    }
-                    finally {
-                        if ((s1 != null)) {
-                            s1.Close();
-                        }
-                        if ((s2 != null)) {
-                            s2.Close();
-                        }
-                    }
-                }
-                xs.Add(dsSchema);
-                return type;
-            }
-        }
-        
-        /// <summary>
-        ///Represents the strongly named DataTable class.
-        ///</summary>
-        [global::System.Serializable()]
-        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class UNIDAD_PERSONALDataTable : global::System.Data.TypedTableBase<UNIDAD_PERSONALRow> {
             
             private global::System.Data.DataColumn columnRNPA;
@@ -2317,6 +1876,447 @@ namespace OrdenamientoPesquero {
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
                 attribute2.FixedValue = "UNIDAD_PERSONALDataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class Permisos_PersonalDataTable : global::System.Data.TypedTableBase<Permisos_PersonalRow> {
+            
+            private global::System.Data.DataColumn columnFOLIO;
+            
+            private global::System.Data.DataColumn columnRNPA;
+            
+            private global::System.Data.DataColumn columnNPERMISO;
+            
+            private global::System.Data.DataColumn columnPESQUERIA;
+            
+            private global::System.Data.DataColumn columnLUGAREXPEDICION;
+            
+            private global::System.Data.DataColumn columnDIAEXPEDICION;
+            
+            private global::System.Data.DataColumn columnFINVIGENCIA;
+            
+            private global::System.Data.DataColumn columnZONAPESCA;
+            
+            private global::System.Data.DataColumn columnSITIOSDESEMBARQUE;
+            
+            private global::System.Data.DataColumn columnOBSERVACIONES;
+            
+            private global::System.Data.DataColumn columnTIPOPERMISO;
+            
+            private global::System.Data.DataColumn columnEQUIPOSDEPESCA;
+            
+            private global::System.Data.DataColumn columnEMBARCACIONES;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Permisos_PersonalDataTable() {
+                this.TableName = "Permisos_Personal";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Permisos_PersonalDataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected Permisos_PersonalDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FOLIOColumn {
+                get {
+                    return this.columnFOLIO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn RNPAColumn {
+                get {
+                    return this.columnRNPA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn NPERMISOColumn {
+                get {
+                    return this.columnNPERMISO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PESQUERIAColumn {
+                get {
+                    return this.columnPESQUERIA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn LUGAREXPEDICIONColumn {
+                get {
+                    return this.columnLUGAREXPEDICION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn DIAEXPEDICIONColumn {
+                get {
+                    return this.columnDIAEXPEDICION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FINVIGENCIAColumn {
+                get {
+                    return this.columnFINVIGENCIA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn ZONAPESCAColumn {
+                get {
+                    return this.columnZONAPESCA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn SITIOSDESEMBARQUEColumn {
+                get {
+                    return this.columnSITIOSDESEMBARQUE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn OBSERVACIONESColumn {
+                get {
+                    return this.columnOBSERVACIONES;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TIPOPERMISOColumn {
+                get {
+                    return this.columnTIPOPERMISO;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EQUIPOSDEPESCAColumn {
+                get {
+                    return this.columnEQUIPOSDEPESCA;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn EMBARCACIONESColumn {
+                get {
+                    return this.columnEMBARCACIONES;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Permisos_PersonalRow this[int index] {
+                get {
+                    return ((Permisos_PersonalRow)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Permisos_PersonalRowChangeEventHandler Permisos_PersonalRowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Permisos_PersonalRowChangeEventHandler Permisos_PersonalRowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Permisos_PersonalRowChangeEventHandler Permisos_PersonalRowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public event Permisos_PersonalRowChangeEventHandler Permisos_PersonalRowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void AddPermisos_PersonalRow(Permisos_PersonalRow row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Permisos_PersonalRow AddPermisos_PersonalRow(string FOLIO, string RNPA, string NPERMISO, string PESQUERIA, string LUGAREXPEDICION, string DIAEXPEDICION, string FINVIGENCIA, string ZONAPESCA, string SITIOSDESEMBARQUE, string OBSERVACIONES, int TIPOPERMISO, string EQUIPOSDEPESCA, string EMBARCACIONES) {
+                Permisos_PersonalRow rowPermisos_PersonalRow = ((Permisos_PersonalRow)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        FOLIO,
+                        RNPA,
+                        NPERMISO,
+                        PESQUERIA,
+                        LUGAREXPEDICION,
+                        DIAEXPEDICION,
+                        FINVIGENCIA,
+                        ZONAPESCA,
+                        SITIOSDESEMBARQUE,
+                        OBSERVACIONES,
+                        TIPOPERMISO,
+                        EQUIPOSDEPESCA,
+                        EMBARCACIONES};
+                rowPermisos_PersonalRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPermisos_PersonalRow);
+                return rowPermisos_PersonalRow;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Permisos_PersonalRow FindByNPERMISO(string NPERMISO) {
+                return ((Permisos_PersonalRow)(this.Rows.Find(new object[] {
+                            NPERMISO})));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                Permisos_PersonalDataTable cln = ((Permisos_PersonalDataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new Permisos_PersonalDataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal void InitVars() {
+                this.columnFOLIO = base.Columns["FOLIO"];
+                this.columnRNPA = base.Columns["RNPA"];
+                this.columnNPERMISO = base.Columns["NPERMISO"];
+                this.columnPESQUERIA = base.Columns["PESQUERIA"];
+                this.columnLUGAREXPEDICION = base.Columns["LUGAREXPEDICION"];
+                this.columnDIAEXPEDICION = base.Columns["DIAEXPEDICION"];
+                this.columnFINVIGENCIA = base.Columns["FINVIGENCIA"];
+                this.columnZONAPESCA = base.Columns["ZONAPESCA"];
+                this.columnSITIOSDESEMBARQUE = base.Columns["SITIOSDESEMBARQUE"];
+                this.columnOBSERVACIONES = base.Columns["OBSERVACIONES"];
+                this.columnTIPOPERMISO = base.Columns["TIPOPERMISO"];
+                this.columnEQUIPOSDEPESCA = base.Columns["EQUIPOSDEPESCA"];
+                this.columnEMBARCACIONES = base.Columns["EMBARCACIONES"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            private void InitClass() {
+                this.columnFOLIO = new global::System.Data.DataColumn("FOLIO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFOLIO);
+                this.columnRNPA = new global::System.Data.DataColumn("RNPA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnRNPA);
+                this.columnNPERMISO = new global::System.Data.DataColumn("NPERMISO", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnNPERMISO);
+                this.columnPESQUERIA = new global::System.Data.DataColumn("PESQUERIA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPESQUERIA);
+                this.columnLUGAREXPEDICION = new global::System.Data.DataColumn("LUGAREXPEDICION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnLUGAREXPEDICION);
+                this.columnDIAEXPEDICION = new global::System.Data.DataColumn("DIAEXPEDICION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDIAEXPEDICION);
+                this.columnFINVIGENCIA = new global::System.Data.DataColumn("FINVIGENCIA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFINVIGENCIA);
+                this.columnZONAPESCA = new global::System.Data.DataColumn("ZONAPESCA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnZONAPESCA);
+                this.columnSITIOSDESEMBARQUE = new global::System.Data.DataColumn("SITIOSDESEMBARQUE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnSITIOSDESEMBARQUE);
+                this.columnOBSERVACIONES = new global::System.Data.DataColumn("OBSERVACIONES", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnOBSERVACIONES);
+                this.columnTIPOPERMISO = new global::System.Data.DataColumn("TIPOPERMISO", typeof(int), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTIPOPERMISO);
+                this.columnEQUIPOSDEPESCA = new global::System.Data.DataColumn("EQUIPOSDEPESCA", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEQUIPOSDEPESCA);
+                this.columnEMBARCACIONES = new global::System.Data.DataColumn("EMBARCACIONES", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnEMBARCACIONES);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
+                                this.columnNPERMISO}, true));
+                this.columnFOLIO.AllowDBNull = false;
+                this.columnFOLIO.MaxLength = 20;
+                this.columnRNPA.MaxLength = 20;
+                this.columnNPERMISO.AllowDBNull = false;
+                this.columnNPERMISO.Unique = true;
+                this.columnNPERMISO.MaxLength = 20;
+                this.columnPESQUERIA.MaxLength = 50;
+                this.columnLUGAREXPEDICION.MaxLength = 50;
+                this.columnDIAEXPEDICION.MaxLength = 30;
+                this.columnFINVIGENCIA.MaxLength = 30;
+                this.columnZONAPESCA.MaxLength = 500;
+                this.columnSITIOSDESEMBARQUE.MaxLength = 200;
+                this.columnOBSERVACIONES.MaxLength = 1000;
+                this.columnEQUIPOSDEPESCA.ReadOnly = true;
+                this.columnEQUIPOSDEPESCA.MaxLength = 2147483647;
+                this.columnEMBARCACIONES.ReadOnly = true;
+                this.columnEMBARCACIONES.MaxLength = 2147483647;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public Permisos_PersonalRow NewPermisos_PersonalRow() {
+                return ((Permisos_PersonalRow)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new Permisos_PersonalRow(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(Permisos_PersonalRow);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.Permisos_PersonalRowChanged != null)) {
+                    this.Permisos_PersonalRowChanged(this, new Permisos_PersonalRowChangeEvent(((Permisos_PersonalRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.Permisos_PersonalRowChanging != null)) {
+                    this.Permisos_PersonalRowChanging(this, new Permisos_PersonalRowChangeEvent(((Permisos_PersonalRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.Permisos_PersonalRowDeleted != null)) {
+                    this.Permisos_PersonalRowDeleted(this, new Permisos_PersonalRowChangeEvent(((Permisos_PersonalRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.Permisos_PersonalRowDeleting != null)) {
+                    this.Permisos_PersonalRowDeleting(this, new Permisos_PersonalRowChangeEvent(((Permisos_PersonalRow)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void RemovePermisos_PersonalRow(Permisos_PersonalRow row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                Consulta ds = new Consulta();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "Permisos_PersonalDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -3511,357 +3511,6 @@ namespace OrdenamientoPesquero {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class Permisos_PersonalRow : global::System.Data.DataRow {
-            
-            private Permisos_PersonalDataTable tablePermisos_Personal;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            internal Permisos_PersonalRow(global::System.Data.DataRowBuilder rb) : 
-                    base(rb) {
-                this.tablePermisos_Personal = ((Permisos_PersonalDataTable)(this.Table));
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string FOLIO {
-                get {
-                    return ((string)(this[this.tablePermisos_Personal.FOLIOColumn]));
-                }
-                set {
-                    this[this.tablePermisos_Personal.FOLIOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string RNPA {
-                get {
-                    try {
-                        return ((string)(this[this.tablePermisos_Personal.RNPAColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'RNPA\' de la tabla \'Permisos_Personal\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePermisos_Personal.RNPAColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string NPERMISO {
-                get {
-                    return ((string)(this[this.tablePermisos_Personal.NPERMISOColumn]));
-                }
-                set {
-                    this[this.tablePermisos_Personal.NPERMISOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string PESQUERIA {
-                get {
-                    try {
-                        return ((string)(this[this.tablePermisos_Personal.PESQUERIAColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PESQUERIA\' de la tabla \'Permisos_Personal\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePermisos_Personal.PESQUERIAColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string LUGAREXPEDICION {
-                get {
-                    try {
-                        return ((string)(this[this.tablePermisos_Personal.LUGAREXPEDICIONColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'LUGAREXPEDICION\' de la tabla \'Permisos_Personal\' es DBNul" +
-                                "l.", e);
-                    }
-                }
-                set {
-                    this[this.tablePermisos_Personal.LUGAREXPEDICIONColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string DIAEXPEDICION {
-                get {
-                    try {
-                        return ((string)(this[this.tablePermisos_Personal.DIAEXPEDICIONColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DIAEXPEDICION\' de la tabla \'Permisos_Personal\' es DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tablePermisos_Personal.DIAEXPEDICIONColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string FINVIGENCIA {
-                get {
-                    try {
-                        return ((string)(this[this.tablePermisos_Personal.FINVIGENCIAColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FINVIGENCIA\' de la tabla \'Permisos_Personal\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePermisos_Personal.FINVIGENCIAColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string ZONAPESCA {
-                get {
-                    try {
-                        return ((string)(this[this.tablePermisos_Personal.ZONAPESCAColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ZONAPESCA\' de la tabla \'Permisos_Personal\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePermisos_Personal.ZONAPESCAColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string SITIOSDESEMBARQUE {
-                get {
-                    try {
-                        return ((string)(this[this.tablePermisos_Personal.SITIOSDESEMBARQUEColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'SITIOSDESEMBARQUE\' de la tabla \'Permisos_Personal\' es DBN" +
-                                "ull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePermisos_Personal.SITIOSDESEMBARQUEColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string OBSERVACIONES {
-                get {
-                    try {
-                        return ((string)(this[this.tablePermisos_Personal.OBSERVACIONESColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'OBSERVACIONES\' de la tabla \'Permisos_Personal\' es DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tablePermisos_Personal.OBSERVACIONESColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int TIPOPERMISO {
-                get {
-                    try {
-                        return ((int)(this[this.tablePermisos_Personal.TIPOPERMISOColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TIPOPERMISO\' de la tabla \'Permisos_Personal\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tablePermisos_Personal.TIPOPERMISOColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string EQUIPOS_DE_PESCA {
-                get {
-                    try {
-                        return ((string)(this[this.tablePermisos_Personal.EQUIPOS_DE_PESCAColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'EQUIPOS DE PESCA\' de la tabla \'Permisos_Personal\' es DBNu" +
-                                "ll.", e);
-                    }
-                }
-                set {
-                    this[this.tablePermisos_Personal.EQUIPOS_DE_PESCAColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public string EMBARCACIONES {
-                get {
-                    try {
-                        return ((string)(this[this.tablePermisos_Personal.EMBARCACIONESColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'EMBARCACIONES\' de la tabla \'Permisos_Personal\' es DBNull." +
-                                "", e);
-                    }
-                }
-                set {
-                    this[this.tablePermisos_Personal.EMBARCACIONESColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsRNPANull() {
-                return this.IsNull(this.tablePermisos_Personal.RNPAColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetRNPANull() {
-                this[this.tablePermisos_Personal.RNPAColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsPESQUERIANull() {
-                return this.IsNull(this.tablePermisos_Personal.PESQUERIAColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetPESQUERIANull() {
-                this[this.tablePermisos_Personal.PESQUERIAColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsLUGAREXPEDICIONNull() {
-                return this.IsNull(this.tablePermisos_Personal.LUGAREXPEDICIONColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetLUGAREXPEDICIONNull() {
-                this[this.tablePermisos_Personal.LUGAREXPEDICIONColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsDIAEXPEDICIONNull() {
-                return this.IsNull(this.tablePermisos_Personal.DIAEXPEDICIONColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetDIAEXPEDICIONNull() {
-                this[this.tablePermisos_Personal.DIAEXPEDICIONColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsFINVIGENCIANull() {
-                return this.IsNull(this.tablePermisos_Personal.FINVIGENCIAColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetFINVIGENCIANull() {
-                this[this.tablePermisos_Personal.FINVIGENCIAColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsZONAPESCANull() {
-                return this.IsNull(this.tablePermisos_Personal.ZONAPESCAColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetZONAPESCANull() {
-                this[this.tablePermisos_Personal.ZONAPESCAColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsSITIOSDESEMBARQUENull() {
-                return this.IsNull(this.tablePermisos_Personal.SITIOSDESEMBARQUEColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetSITIOSDESEMBARQUENull() {
-                this[this.tablePermisos_Personal.SITIOSDESEMBARQUEColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsOBSERVACIONESNull() {
-                return this.IsNull(this.tablePermisos_Personal.OBSERVACIONESColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetOBSERVACIONESNull() {
-                this[this.tablePermisos_Personal.OBSERVACIONESColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsTIPOPERMISONull() {
-                return this.IsNull(this.tablePermisos_Personal.TIPOPERMISOColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetTIPOPERMISONull() {
-                this[this.tablePermisos_Personal.TIPOPERMISOColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEQUIPOS_DE_PESCANull() {
-                return this.IsNull(this.tablePermisos_Personal.EQUIPOS_DE_PESCAColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEQUIPOS_DE_PESCANull() {
-                this[this.tablePermisos_Personal.EQUIPOS_DE_PESCAColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public bool IsEMBARCACIONESNull() {
-                return this.IsNull(this.tablePermisos_Personal.EMBARCACIONESColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public void SetEMBARCACIONESNull() {
-                this[this.tablePermisos_Personal.EMBARCACIONESColumn] = global::System.Convert.DBNull;
-            }
-        }
-        
-        /// <summary>
-        ///Represents strongly named DataRow class.
-        ///</summary>
         public partial class UNIDAD_PERSONALRow : global::System.Data.DataRow {
             
             private UNIDAD_PERSONALDataTable tableUNIDAD_PERSONAL;
@@ -4138,6 +3787,357 @@ namespace OrdenamientoPesquero {
         }
         
         /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class Permisos_PersonalRow : global::System.Data.DataRow {
+            
+            private Permisos_PersonalDataTable tablePermisos_Personal;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            internal Permisos_PersonalRow(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablePermisos_Personal = ((Permisos_PersonalDataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string FOLIO {
+                get {
+                    return ((string)(this[this.tablePermisos_Personal.FOLIOColumn]));
+                }
+                set {
+                    this[this.tablePermisos_Personal.FOLIOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string RNPA {
+                get {
+                    try {
+                        return ((string)(this[this.tablePermisos_Personal.RNPAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'RNPA\' de la tabla \'Permisos_Personal\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePermisos_Personal.RNPAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string NPERMISO {
+                get {
+                    return ((string)(this[this.tablePermisos_Personal.NPERMISOColumn]));
+                }
+                set {
+                    this[this.tablePermisos_Personal.NPERMISOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PESQUERIA {
+                get {
+                    try {
+                        return ((string)(this[this.tablePermisos_Personal.PESQUERIAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PESQUERIA\' de la tabla \'Permisos_Personal\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePermisos_Personal.PESQUERIAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string LUGAREXPEDICION {
+                get {
+                    try {
+                        return ((string)(this[this.tablePermisos_Personal.LUGAREXPEDICIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'LUGAREXPEDICION\' de la tabla \'Permisos_Personal\' es DBNul" +
+                                "l.", e);
+                    }
+                }
+                set {
+                    this[this.tablePermisos_Personal.LUGAREXPEDICIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string DIAEXPEDICION {
+                get {
+                    try {
+                        return ((string)(this[this.tablePermisos_Personal.DIAEXPEDICIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'DIAEXPEDICION\' de la tabla \'Permisos_Personal\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablePermisos_Personal.DIAEXPEDICIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string FINVIGENCIA {
+                get {
+                    try {
+                        return ((string)(this[this.tablePermisos_Personal.FINVIGENCIAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FINVIGENCIA\' de la tabla \'Permisos_Personal\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePermisos_Personal.FINVIGENCIAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string ZONAPESCA {
+                get {
+                    try {
+                        return ((string)(this[this.tablePermisos_Personal.ZONAPESCAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'ZONAPESCA\' de la tabla \'Permisos_Personal\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePermisos_Personal.ZONAPESCAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string SITIOSDESEMBARQUE {
+                get {
+                    try {
+                        return ((string)(this[this.tablePermisos_Personal.SITIOSDESEMBARQUEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'SITIOSDESEMBARQUE\' de la tabla \'Permisos_Personal\' es DBN" +
+                                "ull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePermisos_Personal.SITIOSDESEMBARQUEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string OBSERVACIONES {
+                get {
+                    try {
+                        return ((string)(this[this.tablePermisos_Personal.OBSERVACIONESColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'OBSERVACIONES\' de la tabla \'Permisos_Personal\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablePermisos_Personal.OBSERVACIONESColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public int TIPOPERMISO {
+                get {
+                    try {
+                        return ((int)(this[this.tablePermisos_Personal.TIPOPERMISOColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TIPOPERMISO\' de la tabla \'Permisos_Personal\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePermisos_Personal.TIPOPERMISOColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string EQUIPOSDEPESCA {
+                get {
+                    try {
+                        return ((string)(this[this.tablePermisos_Personal.EQUIPOSDEPESCAColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'EQUIPOSDEPESCA\' de la tabla \'Permisos_Personal\' es DBNull" +
+                                ".", e);
+                    }
+                }
+                set {
+                    this[this.tablePermisos_Personal.EQUIPOSDEPESCAColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string EMBARCACIONES {
+                get {
+                    try {
+                        return ((string)(this[this.tablePermisos_Personal.EMBARCACIONESColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'EMBARCACIONES\' de la tabla \'Permisos_Personal\' es DBNull." +
+                                "", e);
+                    }
+                }
+                set {
+                    this[this.tablePermisos_Personal.EMBARCACIONESColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsRNPANull() {
+                return this.IsNull(this.tablePermisos_Personal.RNPAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetRNPANull() {
+                this[this.tablePermisos_Personal.RNPAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPESQUERIANull() {
+                return this.IsNull(this.tablePermisos_Personal.PESQUERIAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPESQUERIANull() {
+                this[this.tablePermisos_Personal.PESQUERIAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsLUGAREXPEDICIONNull() {
+                return this.IsNull(this.tablePermisos_Personal.LUGAREXPEDICIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetLUGAREXPEDICIONNull() {
+                this[this.tablePermisos_Personal.LUGAREXPEDICIONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsDIAEXPEDICIONNull() {
+                return this.IsNull(this.tablePermisos_Personal.DIAEXPEDICIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetDIAEXPEDICIONNull() {
+                this[this.tablePermisos_Personal.DIAEXPEDICIONColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFINVIGENCIANull() {
+                return this.IsNull(this.tablePermisos_Personal.FINVIGENCIAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFINVIGENCIANull() {
+                this[this.tablePermisos_Personal.FINVIGENCIAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsZONAPESCANull() {
+                return this.IsNull(this.tablePermisos_Personal.ZONAPESCAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetZONAPESCANull() {
+                this[this.tablePermisos_Personal.ZONAPESCAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsSITIOSDESEMBARQUENull() {
+                return this.IsNull(this.tablePermisos_Personal.SITIOSDESEMBARQUEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetSITIOSDESEMBARQUENull() {
+                this[this.tablePermisos_Personal.SITIOSDESEMBARQUEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsOBSERVACIONESNull() {
+                return this.IsNull(this.tablePermisos_Personal.OBSERVACIONESColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetOBSERVACIONESNull() {
+                this[this.tablePermisos_Personal.OBSERVACIONESColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTIPOPERMISONull() {
+                return this.IsNull(this.tablePermisos_Personal.TIPOPERMISOColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTIPOPERMISONull() {
+                this[this.tablePermisos_Personal.TIPOPERMISOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEQUIPOSDEPESCANull() {
+                return this.IsNull(this.tablePermisos_Personal.EQUIPOSDEPESCAColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEQUIPOSDEPESCANull() {
+                this[this.tablePermisos_Personal.EQUIPOSDEPESCAColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsEMBARCACIONESNull() {
+                return this.IsNull(this.tablePermisos_Personal.EMBARCACIONESColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetEMBARCACIONESNull() {
+                this[this.tablePermisos_Personal.EMBARCACIONESColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
@@ -4209,22 +4209,22 @@ namespace OrdenamientoPesquero {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class Permisos_PersonalRowChangeEvent : global::System.EventArgs {
+        public class UNIDAD_PERSONALRowChangeEvent : global::System.EventArgs {
             
-            private Permisos_PersonalRow eventRow;
+            private UNIDAD_PERSONALRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Permisos_PersonalRowChangeEvent(Permisos_PersonalRow row, global::System.Data.DataRowAction action) {
+            public UNIDAD_PERSONALRowChangeEvent(UNIDAD_PERSONALRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public Permisos_PersonalRow Row {
+            public UNIDAD_PERSONALRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4243,22 +4243,22 @@ namespace OrdenamientoPesquero {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public class UNIDAD_PERSONALRowChangeEvent : global::System.EventArgs {
+        public class Permisos_PersonalRowChangeEvent : global::System.EventArgs {
             
-            private UNIDAD_PERSONALRow eventRow;
+            private Permisos_PersonalRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public UNIDAD_PERSONALRowChangeEvent(UNIDAD_PERSONALRow row, global::System.Data.DataRowAction action) {
+            public Permisos_PersonalRowChangeEvent(Permisos_PersonalRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public UNIDAD_PERSONALRow Row {
+            public Permisos_PersonalRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -4661,186 +4661,6 @@ namespace OrdenamientoPesquero.ConsultaTableAdapters {
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class Permisos_PersonalTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public Permisos_PersonalTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "Permisos_Personal";
-            tableMapping.ColumnMappings.Add("FOLIO", "FOLIO");
-            tableMapping.ColumnMappings.Add("RNPA", "RNPA");
-            tableMapping.ColumnMappings.Add("NPERMISO", "NPERMISO");
-            tableMapping.ColumnMappings.Add("PESQUERIA", "PESQUERIA");
-            tableMapping.ColumnMappings.Add("LUGAREXPEDICION", "LUGAREXPEDICION");
-            tableMapping.ColumnMappings.Add("DIAEXPEDICION", "DIAEXPEDICION");
-            tableMapping.ColumnMappings.Add("FINVIGENCIA", "FINVIGENCIA");
-            tableMapping.ColumnMappings.Add("ZONAPESCA", "ZONAPESCA");
-            tableMapping.ColumnMappings.Add("SITIOSDESEMBARQUE", "SITIOSDESEMBARQUE");
-            tableMapping.ColumnMappings.Add("OBSERVACIONES", "OBSERVACIONES");
-            tableMapping.ColumnMappings.Add("TIPOPERMISO", "TIPOPERMISO");
-            tableMapping.ColumnMappings.Add("EQUIPOS DE PESCA", "EQUIPOS DE PESCA");
-            tableMapping.ColumnMappings.Add("EMBARCACIONES", "EMBARCACIONES");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::OrdenamientoPesquero.Properties.Settings.Default.OrdPesqueroConnectionString4;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.Permisos_Personal";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(Consulta.Permisos_PersonalDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual Consulta.Permisos_PersonalDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            Consulta.Permisos_PersonalDataTable dataTable = new Consulta.Permisos_PersonalDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
     public partial class UNIDAD_PERSONALTableAdapter : global::System.ComponentModel.Component {
         
         private global::System.Data.SqlClient.SqlDataAdapter _adapter;
@@ -5004,6 +4824,186 @@ namespace OrdenamientoPesquero.ConsultaTableAdapters {
         public virtual Consulta.UNIDAD_PERSONALDataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             Consulta.UNIDAD_PERSONALDataTable dataTable = new Consulta.UNIDAD_PERSONALDataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class Permisos_PersonalTableAdapter : global::System.ComponentModel.Component {
+        
+        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
+        
+        private global::System.Data.SqlClient.SqlConnection _connection;
+        
+        private global::System.Data.SqlClient.SqlTransaction _transaction;
+        
+        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public Permisos_PersonalTableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        internal global::System.Data.SqlClient.SqlTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "Permisos_Personal";
+            tableMapping.ColumnMappings.Add("FOLIO", "FOLIO");
+            tableMapping.ColumnMappings.Add("RNPA", "RNPA");
+            tableMapping.ColumnMappings.Add("NPERMISO", "NPERMISO");
+            tableMapping.ColumnMappings.Add("PESQUERIA", "PESQUERIA");
+            tableMapping.ColumnMappings.Add("LUGAREXPEDICION", "LUGAREXPEDICION");
+            tableMapping.ColumnMappings.Add("DIAEXPEDICION", "DIAEXPEDICION");
+            tableMapping.ColumnMappings.Add("FINVIGENCIA", "FINVIGENCIA");
+            tableMapping.ColumnMappings.Add("ZONAPESCA", "ZONAPESCA");
+            tableMapping.ColumnMappings.Add("SITIOSDESEMBARQUE", "SITIOSDESEMBARQUE");
+            tableMapping.ColumnMappings.Add("OBSERVACIONES", "OBSERVACIONES");
+            tableMapping.ColumnMappings.Add("TIPOPERMISO", "TIPOPERMISO");
+            tableMapping.ColumnMappings.Add("EQUIPOSDEPESCA", "EQUIPOSDEPESCA");
+            tableMapping.ColumnMappings.Add("EMBARCACIONES", "EMBARCACIONES");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::System.Data.SqlClient.SqlConnection();
+            this._connection.ConnectionString = global::OrdenamientoPesquero.Properties.Settings.Default.OrdPesqueroConnectionString4;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "dbo.Permisos_Personal";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
+            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(Consulta.Permisos_PersonalDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual Consulta.Permisos_PersonalDataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            Consulta.Permisos_PersonalDataTable dataTable = new Consulta.Permisos_PersonalDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }

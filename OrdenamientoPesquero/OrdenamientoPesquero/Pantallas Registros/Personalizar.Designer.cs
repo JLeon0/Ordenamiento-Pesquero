@@ -63,8 +63,6 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button2 = new System.Windows.Forms.Button();
             this.OrdenaUnidad = new System.Windows.Forms.ComboBox();
@@ -85,6 +83,7 @@
             this.checkBox40 = new System.Windows.Forms.CheckBox();
             this.checkBox41 = new System.Windows.Forms.CheckBox();
             this.checkBox42 = new System.Windows.Forms.CheckBox();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.button3 = new System.Windows.Forms.Button();
             this.OrdenaPermiso = new System.Windows.Forms.ComboBox();
@@ -108,6 +107,7 @@
             this.checkBox52 = new System.Windows.Forms.CheckBox();
             this.checkBox53 = new System.Windows.Forms.CheckBox();
             this.checkBox54 = new System.Windows.Forms.CheckBox();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.button4 = new System.Windows.Forms.Button();
             this.OrdenaEmbarca = new System.Windows.Forms.ComboBox();
@@ -116,6 +116,11 @@
             this.checkBox32 = new System.Windows.Forms.CheckBox();
             this.comboBox14 = new System.Windows.Forms.ComboBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.checkBox71 = new System.Windows.Forms.CheckBox();
+            this.checkBox70 = new System.Windows.Forms.CheckBox();
+            this.checkBox30 = new System.Windows.Forms.CheckBox();
+            this.checkBox23 = new System.Windows.Forms.CheckBox();
+            this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.checkBox35 = new System.Windows.Forms.CheckBox();
             this.checkBox47 = new System.Windows.Forms.CheckBox();
             this.checkBox55 = new System.Windows.Forms.CheckBox();
@@ -133,25 +138,20 @@
             this.checkBox67 = new System.Windows.Forms.CheckBox();
             this.checkBox68 = new System.Windows.Forms.CheckBox();
             this.checkBox69 = new System.Windows.Forms.CheckBox();
-            this.checkBox7 = new System.Windows.Forms.CheckBox();
-            this.checkBox23 = new System.Windows.Forms.CheckBox();
-            this.checkBox30 = new System.Windows.Forms.CheckBox();
-            this.checkBox70 = new System.Windows.Forms.CheckBox();
-            this.checkBox71 = new System.Windows.Forms.CheckBox();
             this.ColumasPescador.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.FiltrosPescador.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.FiltrosUnidad.SuspendLayout();
             this.ColumasUnidad.SuspendLayout();
+            this.tabPage3.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.FiltrosPermiso.SuspendLayout();
             this.ColumnasPermiso.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox8.SuspendLayout();
@@ -162,9 +162,9 @@
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.reportViewer1.Location = new System.Drawing.Point(310, 0);
+            this.reportViewer1.Location = new System.Drawing.Point(328, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(566, 523);
+            this.reportViewer1.Size = new System.Drawing.Size(704, 566);
             this.reportViewer1.TabIndex = 0;
             // 
             // checkBox1
@@ -272,7 +272,7 @@
             this.ColumasPescador.Controls.Add(this.checkBox1);
             this.ColumasPescador.Location = new System.Drawing.Point(10, 250);
             this.ColumasPescador.Name = "ColumasPescador";
-            this.ColumasPescador.Size = new System.Drawing.Size(244, 243);
+            this.ColumasPescador.Size = new System.Drawing.Size(286, 243);
             this.ColumasPescador.TabIndex = 1;
             this.ColumasPescador.TabStop = false;
             this.ColumasPescador.Text = "Columnas";
@@ -409,7 +409,7 @@
             this.groupBox1.Controls.Add(this.ColumasPescador);
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(280, 485);
+            this.groupBox1.Size = new System.Drawing.Size(302, 528);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pescador";
@@ -463,7 +463,7 @@
             this.FiltrosPescador.Controls.Add(this.comboBox1);
             this.FiltrosPescador.Location = new System.Drawing.Point(10, 107);
             this.FiltrosPescador.Name = "FiltrosPescador";
-            this.FiltrosPescador.Size = new System.Drawing.Size(243, 138);
+            this.FiltrosPescador.Size = new System.Drawing.Size(286, 138);
             this.FiltrosPescador.TabIndex = 2;
             this.FiltrosPescador.TabStop = false;
             this.FiltrosPescador.Text = "Filtros";
@@ -518,7 +518,7 @@
             "Extra"});
             this.comboBox4.Location = new System.Drawing.Point(123, 100);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(99, 21);
+            this.comboBox4.Size = new System.Drawing.Size(129, 21);
             this.comboBox4.TabIndex = 3;
             this.comboBox4.Text = "Socio";
             // 
@@ -532,7 +532,7 @@
             "Sin actividad"});
             this.comboBox3.Location = new System.Drawing.Point(123, 73);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(99, 21);
+            this.comboBox3.Size = new System.Drawing.Size(129, 21);
             this.comboBox3.TabIndex = 2;
             this.comboBox3.Text = "Capitan";
             // 
@@ -547,7 +547,7 @@
             "Loreto"});
             this.comboBox2.Location = new System.Drawing.Point(123, 46);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(99, 21);
+            this.comboBox2.Size = new System.Drawing.Size(129, 21);
             this.comboBox2.TabIndex = 1;
             this.comboBox2.Text = "La Paz";
             // 
@@ -560,9 +560,9 @@
             "NO"});
             this.comboBox1.Location = new System.Drawing.Point(123, 19);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(99, 21);
+            this.comboBox1.Size = new System.Drawing.Size(129, 21);
             this.comboBox1.TabIndex = 0;
-            this.comboBox1.Text = "Activo";
+            this.comboBox1.Text = "ACTIVO";
             // 
             // tabControl1
             // 
@@ -575,50 +575,30 @@
             this.tabControl1.Location = new System.Drawing.Point(4, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(300, 523);
+            this.tabControl1.Size = new System.Drawing.Size(322, 566);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
             // 
-            this.tabPage1.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage1.BackColor = System.Drawing.Color.DarkGray;
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(292, 497);
+            this.tabPage1.Size = new System.Drawing.Size(314, 540);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Pescador";
             // 
             // tabPage2
             // 
-            this.tabPage2.BackColor = System.Drawing.Color.Gainsboro;
+            this.tabPage2.BackColor = System.Drawing.Color.DarkGray;
             this.tabPage2.Controls.Add(this.groupBox2);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(292, 497);
+            this.tabPage2.Size = new System.Drawing.Size(314, 497);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Unidad Economica";
-            // 
-            // tabPage3
-            // 
-            this.tabPage3.BackColor = System.Drawing.Color.Gainsboro;
-            this.tabPage3.Controls.Add(this.groupBox5);
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(292, 497);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "Permisos";
-            // 
-            // tabPage4
-            // 
-            this.tabPage4.BackColor = System.Drawing.Color.Gainsboro;
-            this.tabPage4.Controls.Add(this.groupBox3);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(292, 497);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Embarcaciones";
             // 
             // groupBox2
             // 
@@ -632,7 +612,7 @@
             this.groupBox2.Controls.Add(this.ColumasUnidad);
             this.groupBox2.Location = new System.Drawing.Point(6, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(280, 485);
+            this.groupBox2.Size = new System.Drawing.Size(302, 485);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Unidad Economica";
@@ -680,7 +660,7 @@
             this.FiltrosUnidad.Controls.Add(this.comboBox10);
             this.FiltrosUnidad.Location = new System.Drawing.Point(10, 107);
             this.FiltrosUnidad.Name = "FiltrosUnidad";
-            this.FiltrosUnidad.Size = new System.Drawing.Size(243, 89);
+            this.FiltrosUnidad.Size = new System.Drawing.Size(286, 89);
             this.FiltrosUnidad.TabIndex = 2;
             this.FiltrosUnidad.TabStop = false;
             this.FiltrosUnidad.Text = "Filtros";
@@ -746,7 +726,7 @@
             this.ColumasUnidad.Controls.Add(this.checkBox42);
             this.ColumasUnidad.Location = new System.Drawing.Point(10, 202);
             this.ColumasUnidad.Name = "ColumasUnidad";
-            this.ColumasUnidad.Size = new System.Drawing.Size(244, 152);
+            this.ColumasUnidad.Size = new System.Drawing.Size(286, 152);
             this.ColumasUnidad.TabIndex = 1;
             this.ColumasUnidad.TabStop = false;
             this.ColumasUnidad.Text = "Columnas";
@@ -871,6 +851,16 @@
             this.checkBox42.Text = "Nombre";
             this.checkBox42.UseVisualStyleBackColor = true;
             // 
+            // tabPage3
+            // 
+            this.tabPage3.BackColor = System.Drawing.Color.DarkGray;
+            this.tabPage3.Controls.Add(this.groupBox5);
+            this.tabPage3.Location = new System.Drawing.Point(4, 22);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(314, 497);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Permisos";
+            // 
             // groupBox5
             // 
             this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -883,7 +873,7 @@
             this.groupBox5.Controls.Add(this.ColumnasPermiso);
             this.groupBox5.Location = new System.Drawing.Point(6, 6);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(280, 485);
+            this.groupBox5.Size = new System.Drawing.Size(302, 485);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Permiso";
@@ -928,7 +918,7 @@
             this.FiltrosPermiso.Controls.Add(this.comboBox13);
             this.FiltrosPermiso.Location = new System.Drawing.Point(10, 107);
             this.FiltrosPermiso.Name = "FiltrosPermiso";
-            this.FiltrosPermiso.Size = new System.Drawing.Size(264, 90);
+            this.FiltrosPermiso.Size = new System.Drawing.Size(286, 90);
             this.FiltrosPermiso.TabIndex = 2;
             this.FiltrosPermiso.TabStop = false;
             this.FiltrosPermiso.Text = "Filtros";
@@ -962,7 +952,7 @@
             "Pesca Deportiva"});
             this.comboBox12.Location = new System.Drawing.Point(123, 46);
             this.comboBox12.Name = "comboBox12";
-            this.comboBox12.Size = new System.Drawing.Size(99, 21);
+            this.comboBox12.Size = new System.Drawing.Size(157, 21);
             this.comboBox12.TabIndex = 1;
             this.comboBox12.Text = "Pesca Comercial";
             // 
@@ -971,7 +961,7 @@
             this.comboBox13.FormattingEnabled = true;
             this.comboBox13.Location = new System.Drawing.Point(123, 19);
             this.comboBox13.Name = "comboBox13";
-            this.comboBox13.Size = new System.Drawing.Size(99, 21);
+            this.comboBox13.Size = new System.Drawing.Size(157, 21);
             this.comboBox13.TabIndex = 0;
             this.comboBox13.Text = "Almeja Generosa";
             // 
@@ -992,7 +982,7 @@
             this.ColumnasPermiso.Controls.Add(this.checkBox54);
             this.ColumnasPermiso.Location = new System.Drawing.Point(10, 203);
             this.ColumnasPermiso.Name = "ColumnasPermiso";
-            this.ColumnasPermiso.Size = new System.Drawing.Size(264, 211);
+            this.ColumnasPermiso.Size = new System.Drawing.Size(286, 211);
             this.ColumnasPermiso.TabIndex = 1;
             this.ColumnasPermiso.TabStop = false;
             this.ColumnasPermiso.Text = "Columnas";
@@ -1153,6 +1143,16 @@
             this.checkBox54.Text = "Folio";
             this.checkBox54.UseVisualStyleBackColor = true;
             // 
+            // tabPage4
+            // 
+            this.tabPage4.BackColor = System.Drawing.Color.DarkGray;
+            this.tabPage4.Controls.Add(this.groupBox3);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Size = new System.Drawing.Size(314, 497);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Embarcaciones";
+            // 
             // groupBox3
             // 
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -1165,7 +1165,7 @@
             this.groupBox3.Controls.Add(this.groupBox8);
             this.groupBox3.Location = new System.Drawing.Point(6, 6);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(280, 485);
+            this.groupBox3.Size = new System.Drawing.Size(302, 485);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Embarcaciones";
@@ -1193,7 +1193,7 @@
             "Trafico"});
             this.OrdenaEmbarca.Location = new System.Drawing.Point(93, 73);
             this.OrdenaEmbarca.Name = "OrdenaEmbarca";
-            this.OrdenaEmbarca.Size = new System.Drawing.Size(139, 21);
+            this.OrdenaEmbarca.Size = new System.Drawing.Size(135, 21);
             this.OrdenaEmbarca.TabIndex = 8;
             this.OrdenaEmbarca.Text = "Nombre Embarcacion";
             // 
@@ -1212,7 +1212,7 @@
             this.groupBox4.Controls.Add(this.comboBox14);
             this.groupBox4.Location = new System.Drawing.Point(10, 107);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(264, 57);
+            this.groupBox4.Size = new System.Drawing.Size(286, 57);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Filtros";
@@ -1229,6 +1229,7 @@
             // 
             // comboBox14
             // 
+            this.comboBox14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBox14.FormattingEnabled = true;
             this.comboBox14.Items.AddRange(new object[] {
             "ACTIVO",
@@ -1236,7 +1237,7 @@
             "NO"});
             this.comboBox14.Location = new System.Drawing.Point(123, 19);
             this.comboBox14.Name = "comboBox14";
-            this.comboBox14.Size = new System.Drawing.Size(135, 21);
+            this.comboBox14.Size = new System.Drawing.Size(157, 21);
             this.comboBox14.TabIndex = 0;
             // 
             // groupBox8
@@ -1265,10 +1266,70 @@
             this.groupBox8.Controls.Add(this.checkBox69);
             this.groupBox8.Location = new System.Drawing.Point(10, 170);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(264, 295);
+            this.groupBox8.Size = new System.Drawing.Size(286, 295);
             this.groupBox8.TabIndex = 1;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Columnas";
+            // 
+            // checkBox71
+            // 
+            this.checkBox71.AutoSize = true;
+            this.checkBox71.Checked = true;
+            this.checkBox71.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox71.Location = new System.Drawing.Point(134, 265);
+            this.checkBox71.Name = "checkBox71";
+            this.checkBox71.Size = new System.Drawing.Size(67, 17);
+            this.checkBox71.TabIndex = 22;
+            this.checkBox71.Text = "Marinero";
+            this.checkBox71.UseVisualStyleBackColor = true;
+            // 
+            // checkBox70
+            // 
+            this.checkBox70.AutoSize = true;
+            this.checkBox70.Checked = true;
+            this.checkBox70.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox70.Location = new System.Drawing.Point(7, 265);
+            this.checkBox70.Name = "checkBox70";
+            this.checkBox70.Size = new System.Drawing.Size(62, 17);
+            this.checkBox70.TabIndex = 21;
+            this.checkBox70.Text = "Capitan";
+            this.checkBox70.UseVisualStyleBackColor = true;
+            // 
+            // checkBox30
+            // 
+            this.checkBox30.AutoSize = true;
+            this.checkBox30.Checked = true;
+            this.checkBox30.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox30.Location = new System.Drawing.Point(134, 242);
+            this.checkBox30.Name = "checkBox30";
+            this.checkBox30.Size = new System.Drawing.Size(128, 17);
+            this.checkBox30.TabIndex = 20;
+            this.checkBox30.Text = "Responsable del chip";
+            this.checkBox30.UseVisualStyleBackColor = true;
+            // 
+            // checkBox23
+            // 
+            this.checkBox23.AutoSize = true;
+            this.checkBox23.Checked = true;
+            this.checkBox23.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox23.Location = new System.Drawing.Point(7, 242);
+            this.checkBox23.Name = "checkBox23";
+            this.checkBox23.Size = new System.Drawing.Size(64, 17);
+            this.checkBox23.TabIndex = 19;
+            this.checkBox23.Text = "Servicio";
+            this.checkBox23.UseVisualStyleBackColor = true;
+            // 
+            // checkBox7
+            // 
+            this.checkBox7.AutoSize = true;
+            this.checkBox7.Checked = true;
+            this.checkBox7.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox7.Location = new System.Drawing.Point(134, 218);
+            this.checkBox7.Name = "checkBox7";
+            this.checkBox7.Size = new System.Drawing.Size(59, 17);
+            this.checkBox7.TabIndex = 18;
+            this.checkBox7.Text = "Trafico";
+            this.checkBox7.UseVisualStyleBackColor = true;
             // 
             // checkBox35
             // 
@@ -1474,74 +1535,16 @@
             this.checkBox69.Text = "Nombre";
             this.checkBox69.UseVisualStyleBackColor = true;
             // 
-            // checkBox7
-            // 
-            this.checkBox7.AutoSize = true;
-            this.checkBox7.Checked = true;
-            this.checkBox7.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox7.Location = new System.Drawing.Point(134, 218);
-            this.checkBox7.Name = "checkBox7";
-            this.checkBox7.Size = new System.Drawing.Size(59, 17);
-            this.checkBox7.TabIndex = 18;
-            this.checkBox7.Text = "Trafico";
-            this.checkBox7.UseVisualStyleBackColor = true;
-            // 
-            // checkBox23
-            // 
-            this.checkBox23.AutoSize = true;
-            this.checkBox23.Checked = true;
-            this.checkBox23.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox23.Location = new System.Drawing.Point(7, 242);
-            this.checkBox23.Name = "checkBox23";
-            this.checkBox23.Size = new System.Drawing.Size(64, 17);
-            this.checkBox23.TabIndex = 19;
-            this.checkBox23.Text = "Servicio";
-            this.checkBox23.UseVisualStyleBackColor = true;
-            // 
-            // checkBox30
-            // 
-            this.checkBox30.AutoSize = true;
-            this.checkBox30.Checked = true;
-            this.checkBox30.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox30.Location = new System.Drawing.Point(134, 242);
-            this.checkBox30.Name = "checkBox30";
-            this.checkBox30.Size = new System.Drawing.Size(128, 17);
-            this.checkBox30.TabIndex = 20;
-            this.checkBox30.Text = "Responsable del chip";
-            this.checkBox30.UseVisualStyleBackColor = true;
-            // 
-            // checkBox70
-            // 
-            this.checkBox70.AutoSize = true;
-            this.checkBox70.Checked = true;
-            this.checkBox70.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox70.Location = new System.Drawing.Point(7, 265);
-            this.checkBox70.Name = "checkBox70";
-            this.checkBox70.Size = new System.Drawing.Size(62, 17);
-            this.checkBox70.TabIndex = 21;
-            this.checkBox70.Text = "Capitan";
-            this.checkBox70.UseVisualStyleBackColor = true;
-            // 
-            // checkBox71
-            // 
-            this.checkBox71.AutoSize = true;
-            this.checkBox71.Checked = true;
-            this.checkBox71.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox71.Location = new System.Drawing.Point(134, 265);
-            this.checkBox71.Name = "checkBox71";
-            this.checkBox71.Size = new System.Drawing.Size(67, 17);
-            this.checkBox71.TabIndex = 22;
-            this.checkBox71.Text = "Marinero";
-            this.checkBox71.UseVisualStyleBackColor = true;
-            // 
             // Personalizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 525);
+            this.ClientSize = new System.Drawing.Size(1033, 568);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.reportViewer1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Personalizar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personalizar";
             this.Load += new System.EventHandler(this.Personalizar_Load);
             this.ColumasPescador.ResumeLayout(false);
@@ -1553,20 +1556,20 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
-            this.tabPage3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.FiltrosUnidad.ResumeLayout(false);
             this.FiltrosUnidad.PerformLayout();
             this.ColumasUnidad.ResumeLayout(false);
             this.ColumasUnidad.PerformLayout();
+            this.tabPage3.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
             this.FiltrosPermiso.ResumeLayout(false);
             this.FiltrosPermiso.PerformLayout();
             this.ColumnasPermiso.ResumeLayout(false);
             this.ColumnasPermiso.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);

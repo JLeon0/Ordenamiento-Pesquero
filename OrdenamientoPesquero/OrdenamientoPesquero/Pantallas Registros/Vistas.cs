@@ -552,7 +552,11 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                         reportViewer1.LocalReport.SetParameters(para3);
                         this.reportViewer1.RefreshReport();
                         nombre= nombre.Replace("\"","");
-                        File.WriteAllBytes(@"C:\FICHAS\"+muni+@"\" + nombre+".pdf", reportViewer1.LocalReport.Render("PDF"));
+                        if (!Directory.Exists(@"C:\FICHAS\" + muni + @"\" + nombre + @"\"))
+                        {
+                            DirectoryInfo di = Directory.CreateDirectory(@"C:\FICHAS\" + muni + @"\" + nombre + @"\");
+                        }
+                            File.WriteAllBytes(@"C:\FICHAS\"+muni+@"\" + nombre+@"\Ficha Informativa.pdf", reportViewer1.LocalReport.Render("PDF"));
                     }
                     this.Close();
                     break;
