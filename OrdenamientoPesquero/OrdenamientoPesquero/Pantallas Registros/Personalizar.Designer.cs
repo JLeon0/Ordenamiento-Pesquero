@@ -115,7 +115,7 @@
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.checkBox32 = new System.Windows.Forms.CheckBox();
             this.comboBox14 = new System.Windows.Forms.ComboBox();
-            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.ColumnasEmbarca = new System.Windows.Forms.GroupBox();
             this.checkBox30 = new System.Windows.Forms.CheckBox();
             this.checkBox23 = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
@@ -152,7 +152,7 @@
             this.tabPage4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox4.SuspendLayout();
-            this.groupBox8.SuspendLayout();
+            this.ColumnasEmbarca.SuspendLayout();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -1160,7 +1160,7 @@
             this.groupBox3.Controls.Add(this.OrdenaEmbarca);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.groupBox4);
-            this.groupBox3.Controls.Add(this.groupBox8);
+            this.groupBox3.Controls.Add(this.ColumnasEmbarca);
             this.groupBox3.Location = new System.Drawing.Point(6, 6);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(302, 528);
@@ -1238,34 +1238,34 @@
             this.comboBox14.Size = new System.Drawing.Size(157, 21);
             this.comboBox14.TabIndex = 0;
             // 
-            // groupBox8
+            // ColumnasEmbarca
             // 
-            this.groupBox8.Controls.Add(this.checkBox30);
-            this.groupBox8.Controls.Add(this.checkBox23);
-            this.groupBox8.Controls.Add(this.checkBox7);
-            this.groupBox8.Controls.Add(this.checkBox35);
-            this.groupBox8.Controls.Add(this.checkBox47);
-            this.groupBox8.Controls.Add(this.checkBox55);
-            this.groupBox8.Controls.Add(this.checkBox56);
-            this.groupBox8.Controls.Add(this.checkBox57);
-            this.groupBox8.Controls.Add(this.checkBox58);
-            this.groupBox8.Controls.Add(this.checkBox59);
-            this.groupBox8.Controls.Add(this.checkBox60);
-            this.groupBox8.Controls.Add(this.checkBox61);
-            this.groupBox8.Controls.Add(this.checkBox62);
-            this.groupBox8.Controls.Add(this.checkBox63);
-            this.groupBox8.Controls.Add(this.checkBox64);
-            this.groupBox8.Controls.Add(this.checkBox65);
-            this.groupBox8.Controls.Add(this.checkBox66);
-            this.groupBox8.Controls.Add(this.checkBox67);
-            this.groupBox8.Controls.Add(this.checkBox68);
-            this.groupBox8.Controls.Add(this.checkBox69);
-            this.groupBox8.Location = new System.Drawing.Point(10, 170);
-            this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(286, 273);
-            this.groupBox8.TabIndex = 1;
-            this.groupBox8.TabStop = false;
-            this.groupBox8.Text = "Columnas";
+            this.ColumnasEmbarca.Controls.Add(this.checkBox30);
+            this.ColumnasEmbarca.Controls.Add(this.checkBox23);
+            this.ColumnasEmbarca.Controls.Add(this.checkBox7);
+            this.ColumnasEmbarca.Controls.Add(this.checkBox35);
+            this.ColumnasEmbarca.Controls.Add(this.checkBox47);
+            this.ColumnasEmbarca.Controls.Add(this.checkBox55);
+            this.ColumnasEmbarca.Controls.Add(this.checkBox56);
+            this.ColumnasEmbarca.Controls.Add(this.checkBox57);
+            this.ColumnasEmbarca.Controls.Add(this.checkBox58);
+            this.ColumnasEmbarca.Controls.Add(this.checkBox59);
+            this.ColumnasEmbarca.Controls.Add(this.checkBox60);
+            this.ColumnasEmbarca.Controls.Add(this.checkBox61);
+            this.ColumnasEmbarca.Controls.Add(this.checkBox62);
+            this.ColumnasEmbarca.Controls.Add(this.checkBox63);
+            this.ColumnasEmbarca.Controls.Add(this.checkBox64);
+            this.ColumnasEmbarca.Controls.Add(this.checkBox65);
+            this.ColumnasEmbarca.Controls.Add(this.checkBox66);
+            this.ColumnasEmbarca.Controls.Add(this.checkBox67);
+            this.ColumnasEmbarca.Controls.Add(this.checkBox68);
+            this.ColumnasEmbarca.Controls.Add(this.checkBox69);
+            this.ColumnasEmbarca.Location = new System.Drawing.Point(10, 170);
+            this.ColumnasEmbarca.Name = "ColumnasEmbarca";
+            this.ColumnasEmbarca.Size = new System.Drawing.Size(286, 273);
+            this.ColumnasEmbarca.TabIndex = 1;
+            this.ColumnasEmbarca.TabStop = false;
+            this.ColumnasEmbarca.Text = "Columnas";
             // 
             // checkBox30
             // 
@@ -1546,8 +1546,8 @@
             this.groupBox3.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            this.groupBox8.ResumeLayout(false);
-            this.groupBox8.PerformLayout();
+            this.ColumnasEmbarca.ResumeLayout(false);
+            this.ColumnasEmbarca.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1641,7 +1641,7 @@
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.CheckBox checkBox32;
         private System.Windows.Forms.ComboBox comboBox14;
-        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.GroupBox ColumnasEmbarca;
         private System.Windows.Forms.CheckBox checkBox35;
         private System.Windows.Forms.CheckBox checkBox47;
         private System.Windows.Forms.CheckBox checkBox55;

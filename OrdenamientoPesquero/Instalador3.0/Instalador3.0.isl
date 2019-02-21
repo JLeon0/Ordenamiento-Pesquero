@@ -1902,6 +1902,7 @@
 		<row><td>ordenamientopesquero.vshost.</td><td>OrdenamientoPesquero.vshost.exe</td><td>ORDENA~1.EXE|OrdenamientoPesquero.vshost.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.vshost.exe</td><td>1</td><td/></row>
 		<row><td>ordenamientopesquero.vshost.1</td><td>ISX_DEFAULTCOMPONENT</td><td>ORDENA~1.CON|OrdenamientoPesquero.vshost.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.vshost.exe.config</td><td>1</td><td/></row>
 		<row><td>ordenamientopesquero.vshost.2</td><td>ISX_DEFAULTCOMPONENT</td><td>ORDENA~1.MAN|OrdenamientoPesquero.vshost.exe.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.vshost.exe.manifest</td><td>1</td><td/></row>
+		<row><td>permiso_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>PERMIS~1.RDL|Permiso_Personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Permiso_Personal.rdlc</td><td>1</td><td/></row>
 		<row><td>permisos.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>PERMIS~1.RDL|Permisos.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Permisos.rdlc</td><td>1</td><td/></row>
 		<row><td>permisosvencidos.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>PERMIS~1.RDL|PermisosVencidos.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\PermisosVencidos.rdlc</td><td>1</td><td/></row>
 		<row><td>pescador_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>PESCAD~1.RDL|Pescador_Personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Pescador_Personal.rdlc</td><td>1</td><td/></row>
@@ -1912,6 +1913,7 @@
 		<row><td>reportexpermicionario.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|ReporteXPermicionario.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\ReporteXPermicionario.rdlc</td><td>1</td><td/></row>
 		<row><td>reportexunidad.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|ReporteXUnidad.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\ReporteXUnidad.rdlc</td><td>1</td><td/></row>
 		<row><td>resumen_permisos.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>RESUME~1.RDL|Resumen_permisos.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Resumen_permisos.rdlc</td><td>1</td><td/></row>
+		<row><td>unidad_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>UNIDAD~1.RDL|Unidad_Personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Unidad_Personal.rdlc</td><td>1</td><td/></row>
 		<row><td>xmunicipio.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>XMUNIC~1.RDL|xMunicipio.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\xMunicipio.rdlc</td><td>1</td><td/></row>
 		<row><td>xmunicipio_seguro.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>XMUNIC~1.RDL|xMunicipio_seguro.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\xMunicipio_seguro.rdlc</td><td>1</td><td/></row>
 	</table>
@@ -2652,7 +2654,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>-1859668533</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>-1457024277</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
@@ -3755,8 +3757,8 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
-		<row><td>ID_STRING1</td><td>1033</td><td>http://www.PARLET.com</td><td>0</td><td/><td>-1859668533</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>-1859668533</td></row>
+		<row><td>ID_STRING1</td><td>1033</td><td>http://www.PARLET.com</td><td>0</td><td/><td>-1457024277</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>-1457024277</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td/><td>0</td><td/><td>-1398364081</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>-1398349617</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>LAUNCH~1.EXE|Launch OrdenamientoPesquero.exe</td><td>0</td><td/><td>-257479893</td></row>

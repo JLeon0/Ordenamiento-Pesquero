@@ -213,18 +213,18 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         {
             this.reportViewer1.ProcessingMode = ProcessingMode.Local;
             reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Embarcacion_Personal.rdlc");
-            bool[] column = new bool[22];
-            string[] dato = new string[22];
+            bool[] column = new bool[20];
+            string[] dato = new string[20];
             int i = 0;
-            foreach (CheckBox a in ColumasPescador.Controls)
+            foreach (CheckBox a in ColumnasEmbarca.Controls)
             {
                 column[i] = a.Checked;
                 dato[i] = a.Text.Replace(" ", "_");
                 dato[i] = dato[i].ToLower();
                 i++;
             }
-            ReportParameter[] para = new ReportParameter[22];
-            for (int c = 0; c < 22; c++)
+            ReportParameter[] para = new ReportParameter[20];
+            for (int c = 0; c < 20; c++)
             {
                 para[c] = new ReportParameter(dato[c], column[c].ToString());
             }
