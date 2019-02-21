@@ -19,6 +19,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
         Validaciones val = new Validaciones();
         string RNPA = "";
         int exito = 0, TIPO = 0;
+        Scanner scan;
 
         public Expediente_UE(string rnpa, string nombre,int tipo)
         {
@@ -165,46 +166,69 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
         {
             if (dgvUnidad.CurrentCell.Selected != false)
             {
-                openFileDialog1.InitialDirectory = "C:\\";
-                openFileDialog1.Filter = "Todos los archivos (*.*)|*.pdf";
-                openFileDialog1.FilterIndex = 1;
-                openFileDialog1.RestoreDirectory = true;
-
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                DialogResult result = MessageBox.Show("Desea escanear un nuevo documento?", "¿?", MessageBoxButtons.YesNoCancel);
+                if (result == DialogResult.Yes)
                 {
-                    Stream myStream = openFileDialog1.OpenFile();
-
-                    MemoryStream pdf = new MemoryStream();
-                    myStream.CopyTo(pdf);
-                    if (TIPO == 0)
-                    {
-                        if (dgvUnidad.SelectedCells[0].RowIndex == 0)
-                            exito = proc.InsertarPDFUnidad(RNPA, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0], new byte[0]);
-                        else if (dgvUnidad.SelectedCells[0].RowIndex == 1)
-                            exito = proc.InsertarPDFUnidad(RNPA, new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0]);
-                        else if (dgvUnidad.SelectedCells[0].RowIndex == 2)
-                            exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
-                        else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
-                            exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
-                        else if (dgvUnidad.SelectedCells[0].RowIndex == 4)
-                            exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
-                        else if (dgvUnidad.SelectedCells[0].RowIndex == 5)
-                            exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
-                    }
-                    else
-                    {
-                        if (dgvUnidad.SelectedCells[0].RowIndex == 0)
-                            exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
-                        else if (dgvUnidad.SelectedCells[0].RowIndex == 1)
-                            exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
-                        else if (dgvUnidad.SelectedCells[0].RowIndex == 2)
-                            exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
-                        else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
-                            exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
-                    }
-                    val.Exito(exito);
                 }
-                CargarExpedienteUnidad();
+                else if (result == DialogResult.No)
+                {
+                    result = MessageBox.Show("Desea subir un archivo desde su computadora?", "¿?", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        openFileDialog1.InitialDirectory = "C:\\";
+                        openFileDialog1.Filter = "Todos los archivos (*.*)|*.*";
+                        openFileDialog1.FilterIndex = 1;
+                        openFileDialog1.RestoreDirectory = true;
+
+                        if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                        {
+                            Stream myStream = openFileDialog1.OpenFile();
+
+                            MemoryStream pdf = new MemoryStream();
+                            myStream.CopyTo(pdf);
+
+                            string n = openFileDialog1.FileName;
+                            string x = n[n.Length - 4].ToString() + n[n.Length - 3].ToString() + n[n.Length - 2].ToString() + n[n.Length - 1].ToString();
+                            if (x != ".pdf")
+                            {
+                                scan = new Scanner(false);
+                                openFileDialog1.FileName = scan.ConvertToPDF(pdf);
+                                myStream = openFileDialog1.OpenFile();
+                                pdf = new MemoryStream();
+                                myStream.CopyTo(pdf);
+                            }
+
+                            if (TIPO == 0)
+                            {
+                                if (dgvUnidad.SelectedCells[0].RowIndex == 0)
+                                    exito = proc.InsertarPDFUnidad(RNPA, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0], new byte[0]);
+                                else if (dgvUnidad.SelectedCells[0].RowIndex == 1)
+                                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0]);
+                                else if (dgvUnidad.SelectedCells[0].RowIndex == 2)
+                                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
+                                else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
+                                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
+                                else if (dgvUnidad.SelectedCells[0].RowIndex == 4)
+                                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
+                                else if (dgvUnidad.SelectedCells[0].RowIndex == 5)
+                                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
+                            }
+                            else
+                            {
+                                if (dgvUnidad.SelectedCells[0].RowIndex == 0)
+                                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
+                                else if (dgvUnidad.SelectedCells[0].RowIndex == 1)
+                                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
+                                else if (dgvUnidad.SelectedCells[0].RowIndex == 2)
+                                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
+                                else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
+                                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
+                            }
+                            val.Exito(exito);
+                        }
+                        CargarExpedienteUnidad();
+                    }
+                }
             }
             else { MessageBox.Show("Debe seleccionar la fila correspondiente al archivo que desea subir", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
@@ -245,7 +269,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                     }
                     string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                     string folder = path + "/PDF/";
-                    string fullFilePath = folder + RNPA + "-" + archivo;
+                    string fullFilePath = folder + RNPA + "-" + archivo + ".pdf";
 
 
                     if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }

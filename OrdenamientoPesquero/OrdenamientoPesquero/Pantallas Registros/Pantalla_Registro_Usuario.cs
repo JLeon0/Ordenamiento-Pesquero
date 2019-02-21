@@ -477,6 +477,13 @@ namespace OrdenamientoPesquero
                 if (expediente.Rows[0]["AINE"].ToString() == "") { AIne.ForeColor = Color.Red; } else { AIne.ForeColor = Color.Green; }
                 if (expediente.Rows[0]["ACOMPDOM"].ToString() == "") { AComp.ForeColor = Color.Red; } else { AComp.ForeColor = Color.Green; }
             }
+            else
+            {
+                ActaNac.ForeColor = Color.Red;
+                ACurp.ForeColor = Color.Red;
+                AIne.ForeColor = Color.Red;
+                AComp.ForeColor = Color.Red;
+            }
 
         }
         #endregion
