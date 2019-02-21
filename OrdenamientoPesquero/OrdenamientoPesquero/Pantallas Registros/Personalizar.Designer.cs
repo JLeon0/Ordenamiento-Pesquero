@@ -116,8 +116,6 @@
             this.checkBox32 = new System.Windows.Forms.CheckBox();
             this.comboBox14 = new System.Windows.Forms.ComboBox();
             this.groupBox8 = new System.Windows.Forms.GroupBox();
-            this.checkBox71 = new System.Windows.Forms.CheckBox();
-            this.checkBox70 = new System.Windows.Forms.CheckBox();
             this.checkBox30 = new System.Windows.Forms.CheckBox();
             this.checkBox23 = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
@@ -1149,7 +1147,7 @@
             this.tabPage4.Controls.Add(this.groupBox3);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(314, 497);
+            this.tabPage4.Size = new System.Drawing.Size(314, 540);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Embarcaciones";
             // 
@@ -1165,7 +1163,7 @@
             this.groupBox3.Controls.Add(this.groupBox8);
             this.groupBox3.Location = new System.Drawing.Point(6, 6);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(302, 485);
+            this.groupBox3.Size = new System.Drawing.Size(302, 528);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Embarcaciones";
@@ -1242,8 +1240,6 @@
             // 
             // groupBox8
             // 
-            this.groupBox8.Controls.Add(this.checkBox71);
-            this.groupBox8.Controls.Add(this.checkBox70);
             this.groupBox8.Controls.Add(this.checkBox30);
             this.groupBox8.Controls.Add(this.checkBox23);
             this.groupBox8.Controls.Add(this.checkBox7);
@@ -1266,34 +1262,10 @@
             this.groupBox8.Controls.Add(this.checkBox69);
             this.groupBox8.Location = new System.Drawing.Point(10, 170);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(286, 295);
+            this.groupBox8.Size = new System.Drawing.Size(286, 273);
             this.groupBox8.TabIndex = 1;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Columnas";
-            // 
-            // checkBox71
-            // 
-            this.checkBox71.AutoSize = true;
-            this.checkBox71.Checked = true;
-            this.checkBox71.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox71.Location = new System.Drawing.Point(134, 265);
-            this.checkBox71.Name = "checkBox71";
-            this.checkBox71.Size = new System.Drawing.Size(67, 17);
-            this.checkBox71.TabIndex = 22;
-            this.checkBox71.Text = "Marinero";
-            this.checkBox71.UseVisualStyleBackColor = true;
-            // 
-            // checkBox70
-            // 
-            this.checkBox70.AutoSize = true;
-            this.checkBox70.Checked = true;
-            this.checkBox70.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox70.Location = new System.Drawing.Point(7, 265);
-            this.checkBox70.Name = "checkBox70";
-            this.checkBox70.Size = new System.Drawing.Size(62, 17);
-            this.checkBox70.TabIndex = 21;
-            this.checkBox70.Text = "Capitan";
-            this.checkBox70.UseVisualStyleBackColor = true;
             // 
             // checkBox30
             // 
@@ -1687,8 +1659,6 @@
         private System.Windows.Forms.CheckBox checkBox67;
         private System.Windows.Forms.CheckBox checkBox68;
         private System.Windows.Forms.CheckBox checkBox69;
-        private System.Windows.Forms.CheckBox checkBox71;
-        private System.Windows.Forms.CheckBox checkBox70;
         private System.Windows.Forms.CheckBox checkBox30;
         private System.Windows.Forms.CheckBox checkBox23;
         private System.Windows.Forms.CheckBox checkBox7;
