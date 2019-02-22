@@ -410,11 +410,11 @@ namespace OrdenamientoPesquero
                 ObtenerImagen();
                 if (ListaNombres.SelectedIndex != -1)
                 {
-                    NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), RNPA);
-                    dt = proc.Obtener_todas_unidades(NOMBRES.Rows[0]["RNPTITULAR"].ToString());
+                    //NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), RNPA);
+                    dt = proc.Obtener_todas_unidades(RNPA);
                     Unid.Text = dt.Rows[0]["NOMBRE"].ToString();
                 }
-                
+
                 this.Cursor = Cursors.Default;
             }
         }
@@ -940,11 +940,14 @@ namespace OrdenamientoPesquero
         {
             string x = BuscarNombre.Text;
             NOMBRES = proc.BuscarNombre(x, RNPA);
-            ListaNombres.Items.Clear();
-            foreach (DataRow fila in NOMBRES.Rows)
-            {
-                ListaNombres.Items.Add(fila["NOMBRE"].ToString());
-            }
+            ListaNombres.DataSource = NOMBRES;
+            ListaNombres.ValueMember = "CURP";
+            ListaNombres.DisplayMember = "NOMBRE";
+            //ListaNombres.Items.Clear();
+            //foreach (DataRow fila in NOMBRES.Rows)
+            //{
+            //    ListaNombres.Items.Add(fila["NOMBRE"].ToString());
+            //}
         }
 
         private void BuscarNombre_KeyPress(object sender, KeyPressEventArgs e)
@@ -990,8 +993,9 @@ namespace OrdenamientoPesquero
             {
                 Ord = 1;
                 ListaNombres2.SelectedIndex = -1;
-                NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), RNPA);
-                LlenarDatos(NOMBRES.Rows[0]["CURP"].ToString());
+                //NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), RNPA);
+                //LlenarDatos(NOMBRES.Rows[0]["CURP"].ToString());
+                LlenarDatos(ListaNombres.SelectedValue.ToString());
                 CargarSolApo();
                 CargarResumenExpedientes();
             }
@@ -1032,11 +1036,14 @@ namespace OrdenamientoPesquero
         {
             string x = BuscarNombre2.Text;
             NoOrdenados = proc.BuscarNombre(x, "NO APLICA");
-            ListaNombres2.Items.Clear();
-            foreach (DataRow fila in NoOrdenados.Rows)
-            {
-                ListaNombres2.Items.Add(fila["NOMBRE"].ToString());
-            }
+            ListaNombres2.DataSource = NoOrdenados;
+            ListaNombres2.ValueMember = "CURP";
+            ListaNombres2.DisplayMember = "NOMBRE";
+            //ListaNombres2.Items.Clear();
+            //foreach (DataRow fila in NoOrdenados.Rows)
+            //{
+            //    ListaNombres2.Items.Add(fila["NOMBRE"].ToString());
+            //}
         }
         #endregion
 
