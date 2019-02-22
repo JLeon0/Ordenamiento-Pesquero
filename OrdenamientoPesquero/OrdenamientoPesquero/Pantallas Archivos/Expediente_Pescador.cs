@@ -18,8 +18,8 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
         Procedimientos proc = new Procedimientos();
         string CURPPesc = "";
         Scanner scan;
-
-        public Expediente_Pescador(string curp,string nombre)
+        Validaciones val = new Validaciones();
+        public Expediente_Pescador(string curp, string nombre)
         {
             InitializeComponent();
             CURPPesc = curp;
@@ -30,40 +30,56 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
         {
             if (dgvArchivos.CurrentCell.Selected != false)
             {
-                openFileDialog1.InitialDirectory = "C:\\";
-                openFileDialog1.Filter = "Todos los archivos (*.*)|*.*";
-                openFileDialog1.FilterIndex = 1;
-                openFileDialog1.RestoreDirectory = true;
-
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                DialogResult result = MessageBox.Show("Desea escanear un nuevo documento?", "¿?", MessageBoxButtons.YesNoCancel);
+                if (result == DialogResult.Yes)
                 {
+                    this.Cursor = Cursors.WaitCursor;
+                    scan = new Scanner(true);
+                    openFileDialog1.FileName = scan.Scann();
                     Stream myStream = openFileDialog1.OpenFile();
-
                     MemoryStream pdf = new MemoryStream();
                     myStream.CopyTo(pdf);
-
-                    string n = openFileDialog1.FileName;
-                    string x = n[n.Length - 4].ToString() + n[n.Length - 3].ToString() + n[n.Length - 2].ToString() + n[n.Length - 1].ToString();
-                    if (x != ".pdf")
-                    {
-                        scan = new Scanner(false);
-                        openFileDialog1.FileName = scan.ConvertToPDF(pdf);
-                        myStream = openFileDialog1.OpenFile();
-                        pdf = new MemoryStream();
-                        myStream.CopyTo(pdf);
-                    }
-                    if (dgvArchivos.SelectedCells[0].RowIndex == 0)
-                        proc.InsertarPDFPescador(CURPPesc, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
-                    if (dgvArchivos.SelectedCells[0].RowIndex == 1)
-                        proc.InsertarPDFPescador(CURPPesc, new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
-                    if (dgvArchivos.SelectedCells[0].RowIndex == 2)
-                        proc.InsertarPDFPescador(CURPPesc, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
-                    if (dgvArchivos.SelectedCells[0].RowIndex == 3)
-                        proc.InsertarPDFPescador(CURPPesc, new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
+                    GuardarEnBD(pdf);
+                    CargarExpediente();
+                    this.Cursor = Cursors.Default;
                 }
-                CargarExpediente();
+                else if (result == DialogResult.No)
+                {
+                    result = MessageBox.Show("Desea subir un archivo desde su computadora?", "¿?", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        this.Cursor = Cursors.WaitCursor;
+                        openFileDialog1.InitialDirectory = "C:\\";
+                        openFileDialog1.Filter = "Todos los archivos (*.*)|*.*";
+                        openFileDialog1.FilterIndex = 1;
+                        openFileDialog1.RestoreDirectory = true;
+
+                        if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                        {
+                            Stream myStream = openFileDialog1.OpenFile();
+
+                            MemoryStream pdf = new MemoryStream();
+                            myStream.CopyTo(pdf);
+
+                            string n = openFileDialog1.FileName;
+                            string x = n[n.Length - 4].ToString() + n[n.Length - 3].ToString() + n[n.Length - 2].ToString() + n[n.Length - 1].ToString();
+                            if (x != ".pdf")
+                            {
+                                scan = new Scanner(false);
+                                openFileDialog1.FileName = scan.ConvertToPDF(pdf);
+                                myStream = openFileDialog1.OpenFile();
+                                pdf = new MemoryStream();
+                                myStream.CopyTo(pdf);
+                            }
+                            GuardarEnBD(pdf);
+                        }
+                        CargarExpediente();
+                        this.Cursor = Cursors.Default;
+                    }
+                }
             }
-            else { MessageBox.Show("Debe seleccionar la fila correspondiente al archivo que desea subir", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }        }
+            else { MessageBox.Show("Debe seleccionar la fila correspondiente al archivo que desea subir", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
 
         private void AbrirPDF_Click(object sender, EventArgs e)
         {
@@ -102,6 +118,21 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 this.Cursor = Cursors.Default;
             }
             else { MessageBox.Show("Debe seleccionar la fila correspondiente al archivo que desea subir", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+
+        private void GuardarEnBD(MemoryStream pdf)
+        {
+            int exito = 0;
+            if (dgvArchivos.SelectedCells[0].RowIndex == 0)
+                exito = proc.InsertarPDFPescador(CURPPesc, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
+            else if (dgvArchivos.SelectedCells[0].RowIndex == 1)
+                exito = proc.InsertarPDFPescador(CURPPesc, new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
+            else if (dgvArchivos.SelectedCells[0].RowIndex == 2)
+                exito = proc.InsertarPDFPescador(CURPPesc, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
+            else if (dgvArchivos.SelectedCells[0].RowIndex == 3)
+                exito = proc.InsertarPDFPescador(CURPPesc, new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
+
+            val.Exito(exito);
         }
 
         private void Expediente_Pescador_Load(object sender, EventArgs e)

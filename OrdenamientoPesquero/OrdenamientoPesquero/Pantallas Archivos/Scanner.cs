@@ -16,7 +16,7 @@ public class Scanner
             oDevice = dlg.ShowSelectDevice(WiaDeviceType.ScannerDeviceType, true, false);
         }
     }
-    public void Scann(string archivo)
+    public string Scann()
     {
         var x = oDevice.Properties.Count;
         ImageFile imageFile = dlg.ShowAcquireImage(oDevice.Type, WiaImageIntent.GrayscaleIntent, WiaImageBias.MaximizeQuality,
@@ -26,8 +26,8 @@ public class Scanner
 
         string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         string folder = path + "/PDF/";
-        string fullFilePath = folder + "-" + archivo + ".pdf";
-        string fullFilePath2 = folder + "-" + archivo + "2.pdf";
+        string fullFilePath = folder + "-.pdf";
+        string fullFilePath2 = folder + "-2.pdf";
 
         if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
 
@@ -46,6 +46,8 @@ public class Scanner
         xgr.DrawImage(img, 0, 0);
         doc.Save(fullFilePath2);
         doc.Close();
+
+        return fullFilePath2;
     }
 
 

@@ -271,20 +271,16 @@ namespace OrdenamientoPesquero
             if (RNPA == "")
             {
                 NoOrdenados = proc.BuscarNombre("", "");
-                ListaNombres.Items.Clear();
-                foreach (DataRow fila in NoOrdenados.Rows)
-                {
-                    ListaNombres.Items.Add(fila["NOMBRE"].ToString());
-                }
+                ListaNombres.DataSource = NoOrdenados;
+                ListaNombres.ValueMember = "CURP";
+                ListaNombres.DisplayMember = "NOMBRE";
             }
             else
             {
                 dt = proc.BuscarNombre("", RNPA);
-                ListaNombres.Items.Clear();
-                foreach (DataRow fila in dt.Rows)
-                {
-                    ListaNombres.Items.Add(fila["NOMBRE"].ToString());
-                }
+                ListaNombres.DataSource = dt;
+                ListaNombres.ValueMember = "CURP";
+                ListaNombres.DisplayMember = "NOMBRE";
             }
             lblP.Text = "PESCADORES  " + ListaNombres.Items.Count;
         }
@@ -1161,6 +1157,7 @@ namespace OrdenamientoPesquero
             {
                 Pantallas_Archivos.Expediente_Pescador expesc = new Pantallas_Archivos.Expediente_Pescador(CURPPesc.Text, NombrePesc.Text + " " + ApePatPescador.Text + " " + ApeMatPescador.Text);
                 expesc.ShowDialog();
+                CargarResumenExpedientes();
             }
         }
         
