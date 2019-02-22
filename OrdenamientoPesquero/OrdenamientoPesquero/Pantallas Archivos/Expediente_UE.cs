@@ -169,12 +169,22 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 DialogResult result = MessageBox.Show("Desea escanear un nuevo documento?", "¿?", MessageBoxButtons.YesNoCancel);
                 if (result == DialogResult.Yes)
                 {
+                    this.Cursor = Cursors.WaitCursor;
+                    scan = new Scanner(true);
+                    openFileDialog1.FileName = scan.Scann();
+                    Stream myStream = openFileDialog1.OpenFile();
+                    MemoryStream pdf = new MemoryStream();
+                    myStream.CopyTo(pdf);
+                    GuardarEnBD(pdf);
+                    CargarExpedienteUnidad();
+                    this.Cursor = Cursors.Default;
                 }
                 else if (result == DialogResult.No)
                 {
                     result = MessageBox.Show("Desea subir un archivo desde su computadora?", "¿?", MessageBoxButtons.YesNo);
                     if (result == DialogResult.Yes)
                     {
+                        this.Cursor = Cursors.WaitCursor;
                         openFileDialog1.InitialDirectory = "C:\\";
                         openFileDialog1.Filter = "Todos los archivos (*.*)|*.*";
                         openFileDialog1.FilterIndex = 1;
@@ -197,36 +207,10 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                                 pdf = new MemoryStream();
                                 myStream.CopyTo(pdf);
                             }
-
-                            if (TIPO == 0)
-                            {
-                                if (dgvUnidad.SelectedCells[0].RowIndex == 0)
-                                    exito = proc.InsertarPDFUnidad(RNPA, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0], new byte[0]);
-                                else if (dgvUnidad.SelectedCells[0].RowIndex == 1)
-                                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0]);
-                                else if (dgvUnidad.SelectedCells[0].RowIndex == 2)
-                                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
-                                else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
-                                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
-                                else if (dgvUnidad.SelectedCells[0].RowIndex == 4)
-                                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
-                                else if (dgvUnidad.SelectedCells[0].RowIndex == 5)
-                                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
-                            }
-                            else
-                            {
-                                if (dgvUnidad.SelectedCells[0].RowIndex == 0)
-                                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
-                                else if (dgvUnidad.SelectedCells[0].RowIndex == 1)
-                                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
-                                else if (dgvUnidad.SelectedCells[0].RowIndex == 2)
-                                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
-                                else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
-                                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
-                            }
-                            val.Exito(exito);
+                            GuardarEnBD(pdf);
                         }
                         CargarExpedienteUnidad();
+                        this.Cursor = Cursors.Default;
                     }
                 }
             }
@@ -287,6 +271,37 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 }
             }
             else { MessageBox.Show("Debe seleccionar la fila correspondiente al archivo que desea visualizar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+
+        private void GuardarEnBD(MemoryStream pdf)
+        {
+            if (TIPO == 0)
+            {
+                if (dgvUnidad.SelectedCells[0].RowIndex == 0)
+                    exito = proc.InsertarPDFUnidad(RNPA, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0], new byte[0]);
+                else if (dgvUnidad.SelectedCells[0].RowIndex == 1)
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0]);
+                else if (dgvUnidad.SelectedCells[0].RowIndex == 2)
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
+                else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
+                else if (dgvUnidad.SelectedCells[0].RowIndex == 4)
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
+                else if (dgvUnidad.SelectedCells[0].RowIndex == 5)
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
+            }
+            else
+            {
+                if (dgvUnidad.SelectedCells[0].RowIndex == 0)
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
+                else if (dgvUnidad.SelectedCells[0].RowIndex == 1)
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
+                else if (dgvUnidad.SelectedCells[0].RowIndex == 2)
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
+                else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
+            }
+            val.Exito(exito);
         }
     }
 }

@@ -18,6 +18,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
         Procedimientos proc = new Procedimientos();
         string MATRICULA = "";
         Scanner scan;
+        Validaciones val = new Validaciones();
         public Expediente_Embarcacion(string matricula, string nombre)
         {
             InitializeComponent();
@@ -54,43 +55,51 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
         {
             if (dgvArchivos.CurrentCell.Selected != false)
             {
-                openFileDialog1.InitialDirectory = "C:\\";
-                openFileDialog1.Filter = "Todos los archivos (*.*)|*.*";
-                openFileDialog1.FilterIndex = 1;
-                openFileDialog1.RestoreDirectory = true;
-
-                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                DialogResult result = MessageBox.Show("Desea escanear un nuevo documento?", "¿?", MessageBoxButtons.YesNoCancel);
+                if (result == DialogResult.Yes)
                 {
+                    this.Cursor = Cursors.WaitCursor;
+                    scan = new Scanner(true);
+                    openFileDialog1.FileName = scan.Scann();
                     Stream myStream = openFileDialog1.OpenFile();
-
                     MemoryStream pdf = new MemoryStream();
                     myStream.CopyTo(pdf);
-
-                    string n = openFileDialog1.FileName;
-                    string x = n[n.Length - 4].ToString() + n[n.Length - 3].ToString() + n[n.Length - 2].ToString() + n[n.Length - 1].ToString();
-                    if (x != ".pdf")
-                    {
-                        scan = new Scanner(false);
-                        openFileDialog1.FileName = scan.ConvertToPDF(pdf);
-                        myStream = openFileDialog1.OpenFile();
-                        pdf = new MemoryStream();
-                        myStream.CopyTo(pdf);
-                    }
-
-                    if (dgvArchivos.SelectedCells[0].RowIndex == 0)
-                        proc.InsertarPDFEmbarcacion(MATRICULA, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0], new byte[0]);
-                    if (dgvArchivos.SelectedCells[0].RowIndex == 1)
-                        proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0]);
-                    if (dgvArchivos.SelectedCells[0].RowIndex == 2)
-                        proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
-                    if (dgvArchivos.SelectedCells[0].RowIndex == 3)
-                        proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
-                    if (dgvArchivos.SelectedCells[0].RowIndex == 4)
-                        proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
-                    if (dgvArchivos.SelectedCells[0].RowIndex == 5)
-                        proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
+                    GuardarEnBD(pdf);
+                    CargarExpediente();
+                    this.Cursor = Cursors.Default;
                 }
-                CargarExpediente();
+                else if (result == DialogResult.No)
+                {
+                    result = MessageBox.Show("Desea subir un archivo desde su computadora?", "¿?", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
+                    {
+                        openFileDialog1.InitialDirectory = "C:\\";
+                        openFileDialog1.Filter = "Todos los archivos (*.*)|*.*";
+                        openFileDialog1.FilterIndex = 1;
+                        openFileDialog1.RestoreDirectory = true;
+
+                        if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                        {
+                            Stream myStream = openFileDialog1.OpenFile();
+
+                            MemoryStream pdf = new MemoryStream();
+                            myStream.CopyTo(pdf);
+
+                            string n = openFileDialog1.FileName;
+                            string x = n[n.Length - 4].ToString() + n[n.Length - 3].ToString() + n[n.Length - 2].ToString() + n[n.Length - 1].ToString();
+                            if (x != ".pdf")
+                            {
+                                scan = new Scanner(false);
+                                openFileDialog1.FileName = scan.ConvertToPDF(pdf);
+                                myStream = openFileDialog1.OpenFile();
+                                pdf = new MemoryStream();
+                                myStream.CopyTo(pdf);
+                            }
+                            GuardarEnBD(pdf);
+                            CargarExpediente();
+                        }
+                    }
+                }
             }
             else { MessageBox.Show("Debe seleccionar la fila correspondiente al archivo que desea subir", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
@@ -109,7 +118,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                     else if (dgvArchivos.SelectedCells[0].RowIndex == 1)
                         archivo = "CERTSEGURIDAD";
                     else if (dgvArchivos.SelectedCells[0].RowIndex == 2)
-                        archivo = "CERTPROPIEDAD";
+                        archivo = "FACTARTESPESCA";
                     else if (dgvArchivos.SelectedCells[0].RowIndex == 3)
                         archivo = "FACTMOTOR";
                     else if (dgvArchivos.SelectedCells[0].RowIndex == 4)
@@ -126,9 +135,6 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
 
                     if (File.Exists(fullFilePath)) { try { Directory.Delete(fullFilePath); } catch (Exception ms) { } }
 
-
-
-
                     if (archivo != "")
                     {
                         byte[] file = (byte[])oDocument.Rows[0][archivo];
@@ -142,6 +148,24 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             {
                 MessageBox.Show("Debe seleccionar la fila correspondiente al archivo que desea visualizar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void GuardarEnBD(MemoryStream pdf)        {
+
+            int exito = 0;
+            if (dgvArchivos.SelectedCells[0].RowIndex == 0)
+                exito = proc.InsertarPDFEmbarcacion(MATRICULA, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0], new byte[0]);
+            if (dgvArchivos.SelectedCells[0].RowIndex == 1)
+                exito = proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0]);
+            if (dgvArchivos.SelectedCells[0].RowIndex == 2)
+                exito = proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
+            if (dgvArchivos.SelectedCells[0].RowIndex == 3)
+                exito = proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
+            if (dgvArchivos.SelectedCells[0].RowIndex == 4)
+                exito = proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
+            if (dgvArchivos.SelectedCells[0].RowIndex == 5)
+                exito = proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
+            val.Exito(exito);
         }
     }
 }
