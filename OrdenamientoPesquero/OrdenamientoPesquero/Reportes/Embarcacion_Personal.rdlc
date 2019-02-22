@@ -6,64 +6,64 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>2.41732cm</Width>
+              <Width>2.75797cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>5.1892cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.09744cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.84065cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.84065cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.84065cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.84065cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>1.62178cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.76223cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>1.97852cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>1.91907cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>1.65151cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>1.97852cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>1.88934cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.27581cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.97033cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.42445cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>3.19739cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>2.84065cm</Width>
             </TablixColumn>
             <TablixColumn>
-              <Width>2.5cm</Width>
+              <Width>8.69716cm</Width>
             </TablixColumn>
           </TablixColumns>
           <TablixRows>
@@ -109,7 +109,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>NOMBREEMBARCACION</Value>
+                              <Value>NOMBRE</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -139,7 +139,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>NUMCHIP</Value>
+                              <Value>CHIP</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -169,7 +169,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>REGISTRONUM</Value>
+                              <Value>REGISTRO</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -199,7 +199,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>FECHAEXP</Value>
+                              <Value>EXPIRACION</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -229,7 +229,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>FECHACHIPEADO</Value>
+                              <Value>FECHA DE CHIPEADO</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -259,7 +259,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>RNPTITULAR</Value>
+                              <Value>RNP TITULAR</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -289,7 +289,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>MOTORHP</Value>
+                              <Value>HP</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -319,7 +319,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>MOTORMARCA</Value>
+                              <Value>MARCA DEL MOTOR</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -439,7 +439,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ARQUEOBRUTO</Value>
+                              <Value>ARQUEO BRUTO</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -469,7 +469,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ARQUEONETO</Value>
+                              <Value>ARQUEO NETO</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -559,7 +559,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>NMOTORES</Value>
+                              <Value>NUMERO DE MOTORES</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -649,7 +649,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>RESPONSABLECHIP</Value>
+                              <Value>RESPONSABLE DEL CHIP</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -1281,26 +1281,106 @@
         </TablixBody>
         <TablixColumnHierarchy>
           <TablixMembers>
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
-            <TablixMember />
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!matricula.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!nombre.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!chip.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!numero_de_registro.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!fecha_de_expiracion.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!fecha_de_chipeado.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!rnp_titular.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!hp.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!marca_del_motor.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!eslora.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!manga.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!puntal.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!arqueo_bruto.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!arqueo_neto.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!tonelaje.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!observaciones.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!numero_de_motores.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!servicio.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!trafico.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
+            <TablixMember>
+              <Visibility>
+                <Hidden>= IIF(Parameters!responsable_del_chip.Value="True", false,true)</Hidden>
+              </Visibility>
+            </TablixMember>
           </TablixMembers>
         </TablixColumnHierarchy>
         <TablixRowHierarchy>
@@ -1313,11 +1393,11 @@
             </TablixMember>
           </TablixMembers>
         </TablixRowHierarchy>
-        <DataSetName>DataSet1</DataSetName>
+        <DataSetName>Consulta</DataSetName>
         <Top>2.40453cm</Top>
         <Left>1.21391cm</Left>
         <Height>1.2cm</Height>
-        <Width>49.91732cm</Width>
+        <Width>59.614cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1325,13 +1405,13 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>3.57292in</Height>
+    <Height>6.90625in</Height>
     <Style />
   </Body>
-  <Width>23.12738in</Width>
+  <Width>24.97634in</Width>
   <Page>
     <PageHeight>29.7cm</PageHeight>
-    <PageWidth>21cm</PageWidth>
+    <PageWidth>80cm</PageWidth>
     <LeftMargin>2cm</LeftMargin>
     <RightMargin>2cm</RightMargin>
     <TopMargin>2cm</TopMargin>
@@ -1350,7 +1430,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DataSet1">
+    <DataSet Name="Consulta">
       <Query>
         <DataSourceName>Consulta</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -1472,7 +1552,7 @@
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
-    <ReportParameter Name="rnptitular">
+    <ReportParameter Name="rnp_titular">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>

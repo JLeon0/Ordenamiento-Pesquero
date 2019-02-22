@@ -594,7 +594,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(314, 497);
+            this.tabPage2.Size = new System.Drawing.Size(314, 540);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Unidad Economica";
             // 
@@ -855,7 +855,7 @@
             this.tabPage3.Controls.Add(this.groupBox5);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(314, 497);
+            this.tabPage3.Size = new System.Drawing.Size(314, 540);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Permisos";
             // 
@@ -1184,9 +1184,7 @@
             this.OrdenaEmbarca.Items.AddRange(new object[] {
             "Nombre Embarcacion",
             "Matricula",
-            "RNP Titula",
-            "Capitan",
-            "Marinero",
+            "RNP Titular",
             "Servicio",
             "Trafico"});
             this.OrdenaEmbarca.Location = new System.Drawing.Point(93, 73);
