@@ -101,6 +101,7 @@
             this.FlotasCos = new System.Windows.Forms.RadioButton();
             this.Ribereño = new System.Windows.Forms.RadioButton();
             this.OcupacionEnEmbarPesc = new System.Windows.Forms.GroupBox();
+            this.OcupBuzo = new System.Windows.Forms.RadioButton();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.OcupSinAct = new System.Windows.Forms.RadioButton();
             this.OcupMarin = new System.Windows.Forms.RadioButton();
@@ -144,7 +145,6 @@
             this.Solicitud = new System.Windows.Forms.Button();
             this.Apoyo = new System.Windows.Forms.Button();
             this.Botones = new System.Windows.Forms.GroupBox();
-            this.AbrirExpediente = new System.Windows.Forms.Button();
             this.label12 = new System.Windows.Forms.Label();
             this.Ver = new System.Windows.Forms.PictureBox();
             this.PanelCURP = new System.Windows.Forms.Panel();
@@ -160,7 +160,8 @@
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.OcupBuzo = new System.Windows.Forms.RadioButton();
+            this.label15 = new System.Windows.Forms.Label();
+            this.AbrirExpediente = new System.Windows.Forms.PictureBox();
             this.gbDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
@@ -196,6 +197,7 @@
             this.gbBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AbrirExpediente)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatosGenerales
@@ -1053,6 +1055,16 @@
             this.OcupacionEnEmbarPesc.TabStop = false;
             this.OcupacionEnEmbarPesc.Text = "Ocupación laboral";
             // 
+            // OcupBuzo
+            // 
+            this.OcupBuzo.AutoSize = true;
+            this.OcupBuzo.Location = new System.Drawing.Point(10, 60);
+            this.OcupBuzo.Name = "OcupBuzo";
+            this.OcupBuzo.Size = new System.Drawing.Size(56, 20);
+            this.OcupBuzo.TabIndex = 34;
+            this.OcupBuzo.Text = "Buzo";
+            this.OcupBuzo.UseVisualStyleBackColor = true;
+            // 
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
@@ -1502,6 +1514,7 @@
             // 
             // Botones
             // 
+            this.Botones.Controls.Add(this.label15);
             this.Botones.Controls.Add(this.AbrirExpediente);
             this.Botones.Controls.Add(this.pictureBox1);
             this.Botones.Controls.Add(this.label12);
@@ -1521,16 +1534,6 @@
             this.Botones.TabIndex = 181;
             this.Botones.TabStop = false;
             this.Botones.Text = " ";
-            // 
-            // AbrirExpediente
-            // 
-            this.AbrirExpediente.Location = new System.Drawing.Point(473, 19);
-            this.AbrirExpediente.Name = "AbrirExpediente";
-            this.AbrirExpediente.Size = new System.Drawing.Size(91, 50);
-            this.AbrirExpediente.TabIndex = 183;
-            this.AbrirExpediente.Text = "EXPEDIENTE";
-            this.AbrirExpediente.UseVisualStyleBackColor = true;
-            this.AbrirExpediente.Click += new System.EventHandler(this.AbrirExpediente_Click);
             // 
             // label12
             // 
@@ -1717,15 +1720,26 @@
             this.pictureBox2.TabIndex = 155;
             this.pictureBox2.TabStop = false;
             // 
-            // OcupBuzo
+            // label15
             // 
-            this.OcupBuzo.AutoSize = true;
-            this.OcupBuzo.Location = new System.Drawing.Point(10, 60);
-            this.OcupBuzo.Name = "OcupBuzo";
-            this.OcupBuzo.Size = new System.Drawing.Size(56, 20);
-            this.OcupBuzo.TabIndex = 34;
-            this.OcupBuzo.Text = "Buzo";
-            this.OcupBuzo.UseVisualStyleBackColor = true;
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(516, 72);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(60, 14);
+            this.label15.TabIndex = 195;
+            this.label15.Text = "Expediente";
+            // 
+            // AbrirExpediente
+            // 
+            this.AbrirExpediente.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Expediente;
+            this.AbrirExpediente.Location = new System.Drawing.Point(519, 19);
+            this.AbrirExpediente.Name = "AbrirExpediente";
+            this.AbrirExpediente.Size = new System.Drawing.Size(48, 50);
+            this.AbrirExpediente.TabIndex = 194;
+            this.AbrirExpediente.TabStop = false;
+            this.toolTip1.SetToolTip(this.AbrirExpediente, "Abrir Expediente");
+            this.AbrirExpediente.Click += new System.EventHandler(this.AbrirExpediente_Click);
             // 
             // Pantalla_Registro_Usuario
             // 
@@ -1795,6 +1809,7 @@
             this.gbBusqueda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AbrirExpediente)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1926,11 +1941,12 @@
         private System.Windows.Forms.Label lblEdad;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button AbrirExpediente;
         private System.Windows.Forms.Label ActaNac;
         private System.Windows.Forms.Label AComp;
         private System.Windows.Forms.Label AIne;
         private System.Windows.Forms.Label ACurp;
         private System.Windows.Forms.RadioButton OcupBuzo;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.PictureBox AbrirExpediente;
     }
 }

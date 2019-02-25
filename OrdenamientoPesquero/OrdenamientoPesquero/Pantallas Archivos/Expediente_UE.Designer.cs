@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.Label();
@@ -140,10 +140,10 @@
             // 
             // dataGridViewCheckBoxColumn1
             // 
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle8.NullValue = false;
-            this.dataGridViewCheckBoxColumn1.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.NullValue = false;
+            this.dataGridViewCheckBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridViewCheckBoxColumn1.Frozen = true;
             this.dataGridViewCheckBoxColumn1.HeaderText = "Check";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
@@ -153,8 +153,8 @@
             // 
             // Registrados
             // 
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Registrados.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Registrados.DefaultCellStyle = dataGridViewCellStyle2;
             this.Registrados.Frozen = true;
             this.Registrados.HeaderText = "Registrados";
             this.Registrados.Name = "Registrados";
@@ -204,10 +204,10 @@
             // 
             // dataGridViewCheckBoxColumn2
             // 
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle10.NullValue = false;
-            this.dataGridViewCheckBoxColumn2.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle3.NullValue = false;
+            this.dataGridViewCheckBoxColumn2.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewCheckBoxColumn2.Frozen = true;
             this.dataGridViewCheckBoxColumn2.HeaderText = "Check";
             this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
@@ -217,8 +217,8 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle4;
             this.dataGridViewTextBoxColumn2.Frozen = true;
             this.dataGridViewTextBoxColumn2.HeaderText = "Registrados";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
@@ -237,13 +237,13 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewCheckBoxColumn3});
             this.dgvUnidad.GridColor = System.Drawing.Color.White;
-            this.dgvUnidad.Location = new System.Drawing.Point(455, 125);
+            this.dgvUnidad.Location = new System.Drawing.Point(455, 110);
             this.dgvUnidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvUnidad.Name = "dgvUnidad";
             this.dgvUnidad.ReadOnly = true;
             this.dgvUnidad.RowHeadersVisible = false;
             this.dgvUnidad.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvUnidad.Size = new System.Drawing.Size(280, 149);
+            this.dgvUnidad.Size = new System.Drawing.Size(280, 168);
             this.dgvUnidad.TabIndex = 207;
             // 
             // dataGridViewTextBoxColumn3
@@ -257,10 +257,10 @@
             // 
             // dataGridViewCheckBoxColumn3
             // 
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle12.NullValue = false;
-            this.dataGridViewCheckBoxColumn3.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle5.NullValue = false;
+            this.dataGridViewCheckBoxColumn3.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewCheckBoxColumn3.Frozen = true;
             this.dataGridViewCheckBoxColumn3.HeaderText = "Check";
             this.dataGridViewCheckBoxColumn3.Name = "dataGridViewCheckBoxColumn3";
@@ -276,7 +276,8 @@
             // 
             this.AbrirPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.show;
             this.AbrirPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AbrirPDF.Location = new System.Drawing.Point(685, 281);
+            this.AbrirPDF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AbrirPDF.Location = new System.Drawing.Point(685, 285);
             this.AbrirPDF.Name = "AbrirPDF";
             this.AbrirPDF.Size = new System.Drawing.Size(50, 50);
             this.AbrirPDF.TabIndex = 211;
@@ -288,7 +289,8 @@
             // 
             this.SubirPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.SubirPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SubirPDF.Location = new System.Drawing.Point(455, 281);
+            this.SubirPDF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SubirPDF.Location = new System.Drawing.Point(455, 285);
             this.SubirPDF.Name = "SubirPDF";
             this.SubirPDF.Size = new System.Drawing.Size(50, 50);
             this.SubirPDF.TabIndex = 210;
@@ -323,7 +325,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(674, 334);
+            this.label3.Location = new System.Drawing.Point(674, 338);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 16);
             this.label3.TabIndex = 219;
@@ -332,7 +334,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(443, 334);
+            this.label4.Location = new System.Drawing.Point(443, 338);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 16);
             this.label4.TabIndex = 218;
@@ -370,10 +372,10 @@
             // 
             // dataGridViewCheckBoxColumn4
             // 
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle13.NullValue = false;
-            this.dataGridViewCheckBoxColumn4.DefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle6.NullValue = false;
+            this.dataGridViewCheckBoxColumn4.DefaultCellStyle = dataGridViewCellStyle6;
             this.dataGridViewCheckBoxColumn4.Frozen = true;
             this.dataGridViewCheckBoxColumn4.HeaderText = "Check";
             this.dataGridViewCheckBoxColumn4.Name = "dataGridViewCheckBoxColumn4";
@@ -383,8 +385,8 @@
             // 
             // dataGridViewTextBoxColumn5
             // 
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle7;
             this.dataGridViewTextBoxColumn5.Frozen = true;
             this.dataGridViewTextBoxColumn5.HeaderText = "Registrados";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";

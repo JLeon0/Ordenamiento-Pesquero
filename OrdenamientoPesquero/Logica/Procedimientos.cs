@@ -366,10 +366,10 @@ namespace Logica
             string[] Parametros = { "@matricula" };
             return c.getDatosTabla("PermisosxEmbarca", Parametros, Matricula);
         }
-        public int InsertarPDFEmbarcacion(string MATRICULA, byte[] certmatricula, byte[] certseguridad, byte[] certpropiedad, byte[] factmotor, byte[] factembarcacion, byte[] papeletachipeo)
+        public int InsertarPDFEmbarcacion(string MATRICULA, byte[] certmatricula, byte[] certseguridad, byte[] certpropiedad, byte[] factmotor, byte[] factembarcacion, byte[] papeletachipeo, byte[] fotoemb)
         {
-            string[] Parametros = { "@matricula", "@certmatricula", "@certseguridad", "@factartepesca", "@factmotor", "@factembarcacion", "@papeletachipeo" };
-            return c.Ejecutar("InsertarPDFEmbarcacion", Parametros, MATRICULA, certmatricula, certseguridad, certpropiedad, factmotor, factembarcacion, papeletachipeo);
+            string[] Parametros = { "@matricula", "@certmatricula", "@certseguridad", "@factartepesca", "@factmotor", "@factembarcacion", "@papeletachipeo", "@fotoemb" };
+            return c.Ejecutar("InsertarPDFEmbarcacion", Parametros, MATRICULA, certmatricula, certseguridad, certpropiedad, factmotor, factembarcacion, papeletachipeo,fotoemb);
         }
         public DataTable ObtenerExpedienteEmbarcacion(string Matricula)
         {

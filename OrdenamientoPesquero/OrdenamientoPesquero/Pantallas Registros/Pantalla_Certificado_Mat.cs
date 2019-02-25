@@ -111,6 +111,17 @@ namespace OrdenamientoPesquero
                 if (exp.Rows[0]["FACTMOTOR"].ToString() != "") { FactMotor.ForeColor = Color.Green; } else { FactMotor.ForeColor = Color.Red; }
                 if (exp.Rows[0]["FACTEMBARCACION"].ToString() != "") { FactEmb.ForeColor = Color.Green; } else { FactEmb.ForeColor = Color.Red; }
                 if (exp.Rows[0]["PAPELETACHIPEO"].ToString() != "") { PapChip.ForeColor = Color.Green; } else { PapChip.ForeColor = Color.Red; }
+                if (exp.Rows[0]["FOTOEMB"].ToString() != "") { FotoEmb.ForeColor = Color.Green; } else { FotoEmb.ForeColor = Color.Red; }
+            }
+            else
+            {
+                CertMatr.ForeColor = Color.Red;
+                CertSeg.ForeColor = Color.Red;
+                FactArtes.ForeColor = Color.Red;
+                FactMotor.ForeColor = Color.Red;
+                FactEmb.ForeColor = Color.Red;
+                PapChip.ForeColor = Color.Red;
+                FotoEmb.ForeColor = Color.Red;
             }
         }
 

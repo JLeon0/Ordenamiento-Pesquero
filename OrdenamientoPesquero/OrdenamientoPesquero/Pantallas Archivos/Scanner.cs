@@ -15,13 +15,17 @@ public class Scanner
         if (activado)
         {
             dlg = new WIA.CommonDialog();
-            oDevice = dlg.ShowSelectDevice(WiaDeviceType.ScannerDeviceType, true, false);
+            try
+            { oDevice = dlg.ShowSelectDevice(WiaDeviceType.ScannerDeviceType, true, false); }
+            catch (Exception)
+            { MessageBox.Show("Error al intentar conexion con el escaner. \nRevise si está conectado y encendido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
     }
     public string Scann(int x)
     {
+
         ImageFile imageFile = dlg.ShowAcquireImage(oDevice.Type, WiaImageIntent.GrayscaleIntent, WiaImageBias.MaximizeQuality,
-            "{B96B3CAF-0728-11D3-9D7B-0000F81EF32E}", false, true, false);
+        "{B96B3CAF-0728-11D3-9D7B-0000F81EF32E}", false, true, false);
         WIA.Vector vector = imageFile.FileData;
         System.Drawing.Image i = System.Drawing.Image.FromStream(new System.IO.MemoryStream((byte[])vector.get_BinaryData()));
 
@@ -47,7 +51,7 @@ public class Scanner
         XImage img = XImage.FromFile(fullFilePath);
         xgr.DrawImage(img, 0, 0);
 
-        DialogResult result = MessageBox.Show("Desea anexar otra página?", "¿?", MessageBoxButtons.YesNoCancel);
+        DialogResult result = MessageBox.Show("Desea anexar otra página?", "¿?", MessageBoxButtons.YesNo);
         if (result == DialogResult.Yes)
         {
             varias = true;
@@ -57,6 +61,7 @@ public class Scanner
 
         doc.Save(fullFilePath2);
         doc.Close();
+
 
         return fullFilePath2;
     }

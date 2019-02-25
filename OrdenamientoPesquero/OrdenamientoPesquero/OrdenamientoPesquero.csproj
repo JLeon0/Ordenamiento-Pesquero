@@ -762,6 +762,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gbcs4x4.ico" />
+    <None Include="Resources\Expediente.png" />
     <None Include="Resources\show.png" />
     <None Include="Resources\pangas.jpg" />
     <None Include="Resources\SEPADA.jpg" />
