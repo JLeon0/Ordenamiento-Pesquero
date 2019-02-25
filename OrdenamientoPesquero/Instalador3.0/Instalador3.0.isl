@@ -1893,6 +1893,7 @@
 		<row><td>capadatos.dll.config</td><td>ISX_DEFAULTCOMPONENT</td><td>CAPADA~1.CON|CapaDatos.dll.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\CapaDatos.dll.config</td><td>1</td><td/></row>
 		<row><td>capadatos.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>CAPADA~1.PDB|CapaDatos.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\CapaDatos.pdb</td><td>1</td><td/></row>
 		<row><td>credencial.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>CREDEN~1.RDL|Credencial.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Credencial.rdlc</td><td>1</td><td/></row>
+		<row><td>embarcacion_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>EMBARC~1.RDL|Embarcacion_Personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Embarcacion_Personal.rdlc</td><td>1</td><td/></row>
 		<row><td>frontal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>FRONTA~1.RDL|Frontal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Frontal.rdlc</td><td>1</td><td/></row>
 		<row><td>lista_embarca.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>LISTA_~1.RDL|Lista_Embarca.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Lista_Embarca.rdlc</td><td>1</td><td/></row>
 		<row><td>logica.dll</td><td>Logica.dll</td><td>Logica.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Logica.dll</td><td>1</td><td/></row>
@@ -2654,7 +2655,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>-1457024277</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>-1322813365</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
@@ -3757,8 +3758,8 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
-		<row><td>ID_STRING1</td><td>1033</td><td>http://www.PARLET.com</td><td>0</td><td/><td>-1457024277</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>-1457024277</td></row>
+		<row><td>ID_STRING1</td><td>1033</td><td>http://www.PARLET.com</td><td>0</td><td/><td>-1322813365</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>-1322813365</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td/><td>0</td><td/><td>-1398364081</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>-1398349617</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>LAUNCH~1.EXE|Launch OrdenamientoPesquero.exe</td><td>0</td><td/><td>-257479893</td></row>

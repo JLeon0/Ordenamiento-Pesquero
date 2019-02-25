@@ -136,6 +136,8 @@
             this.checkBox67 = new System.Windows.Forms.CheckBox();
             this.checkBox68 = new System.Windows.Forms.CheckBox();
             this.checkBox69 = new System.Windows.Forms.CheckBox();
+            this.checkBox70 = new System.Windows.Forms.CheckBox();
+            this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.ColumasPescador.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.FiltrosPescador.SuspendLayout();
@@ -434,7 +436,7 @@
             "Folio",
             "Tipo de pescador",
             "Ocupacion Laboral"});
-            this.OrdenaPescador.Location = new System.Drawing.Point(93, 73);
+            this.OrdenaPescador.Location = new System.Drawing.Point(93, 59);
             this.OrdenaPescador.Name = "OrdenaPescador";
             this.OrdenaPescador.Size = new System.Drawing.Size(139, 21);
             this.OrdenaPescador.TabIndex = 8;
@@ -443,7 +445,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 76);
+            this.label1.Location = new System.Drawing.Point(22, 62);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(66, 13);
             this.label1.TabIndex = 3;
@@ -451,6 +453,8 @@
             // 
             // FiltrosPescador
             // 
+            this.FiltrosPescador.Controls.Add(this.checkBox70);
+            this.FiltrosPescador.Controls.Add(this.comboBox5);
             this.FiltrosPescador.Controls.Add(this.checkBox22);
             this.FiltrosPescador.Controls.Add(this.checkBox21);
             this.FiltrosPescador.Controls.Add(this.checkBox20);
@@ -459,9 +463,9 @@
             this.FiltrosPescador.Controls.Add(this.comboBox3);
             this.FiltrosPescador.Controls.Add(this.comboBox2);
             this.FiltrosPescador.Controls.Add(this.comboBox1);
-            this.FiltrosPescador.Location = new System.Drawing.Point(10, 107);
+            this.FiltrosPescador.Location = new System.Drawing.Point(10, 78);
             this.FiltrosPescador.Name = "FiltrosPescador";
-            this.FiltrosPescador.Size = new System.Drawing.Size(286, 138);
+            this.FiltrosPescador.Size = new System.Drawing.Size(286, 167);
             this.FiltrosPescador.TabIndex = 2;
             this.FiltrosPescador.TabStop = false;
             this.FiltrosPescador.Text = "Filtros";
@@ -516,7 +520,7 @@
             "Extra"});
             this.comboBox4.Location = new System.Drawing.Point(123, 100);
             this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(129, 21);
+            this.comboBox4.Size = new System.Drawing.Size(157, 21);
             this.comboBox4.TabIndex = 3;
             this.comboBox4.Text = "Socio";
             // 
@@ -530,7 +534,7 @@
             "Sin actividad"});
             this.comboBox3.Location = new System.Drawing.Point(123, 73);
             this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(129, 21);
+            this.comboBox3.Size = new System.Drawing.Size(157, 21);
             this.comboBox3.TabIndex = 2;
             this.comboBox3.Text = "Capitan";
             // 
@@ -545,7 +549,7 @@
             "Loreto"});
             this.comboBox2.Location = new System.Drawing.Point(123, 46);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(129, 21);
+            this.comboBox2.Size = new System.Drawing.Size(157, 21);
             this.comboBox2.TabIndex = 1;
             this.comboBox2.Text = "La Paz";
             // 
@@ -558,7 +562,7 @@
             "NO"});
             this.comboBox1.Location = new System.Drawing.Point(123, 19);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(129, 21);
+            this.comboBox1.Size = new System.Drawing.Size(157, 21);
             this.comboBox1.TabIndex = 0;
             this.comboBox1.Text = "ACTIVO";
             // 
@@ -1505,6 +1509,24 @@
             this.checkBox69.Text = "Nombre";
             this.checkBox69.UseVisualStyleBackColor = true;
             // 
+            // checkBox70
+            // 
+            this.checkBox70.AutoSize = true;
+            this.checkBox70.Location = new System.Drawing.Point(7, 127);
+            this.checkBox70.Name = "checkBox70";
+            this.checkBox70.Size = new System.Drawing.Size(47, 17);
+            this.checkBox70.TabIndex = 9;
+            this.checkBox70.Text = "U.E.";
+            this.checkBox70.UseVisualStyleBackColor = true;
+            // 
+            // comboBox5
+            // 
+            this.comboBox5.FormattingEnabled = true;
+            this.comboBox5.Location = new System.Drawing.Point(123, 127);
+            this.comboBox5.Name = "comboBox5";
+            this.comboBox5.Size = new System.Drawing.Size(157, 21);
+            this.comboBox5.TabIndex = 8;
+            // 
             // Personalizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1660,5 +1682,7 @@
         private System.Windows.Forms.CheckBox checkBox30;
         private System.Windows.Forms.CheckBox checkBox23;
         private System.Windows.Forms.CheckBox checkBox7;
+        private System.Windows.Forms.CheckBox checkBox70;
+        private System.Windows.Forms.ComboBox comboBox5;
     }
 }

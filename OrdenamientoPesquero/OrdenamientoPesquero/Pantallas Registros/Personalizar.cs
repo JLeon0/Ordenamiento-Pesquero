@@ -33,6 +33,9 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             comboBox14.DataSource = dt;
             comboBox14.ValueMember = "Nombre";
             comboBox14.DisplayMember = "Nombre";
+            comboBox5.DataSource = dt;
+            comboBox5.ValueMember = "Nombre";
+            comboBox5.DisplayMember = "Nombre";
             comboBox13.DataSource = proc.ObtenerPesquerias();
             comboBox13.ValueMember="PESQUERIA";
             comboBox13.DisplayMember = "PESQUERIA";
@@ -69,14 +72,28 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     }
                     else
                     {
-                        consulta += " AND " + a.Text.Replace(" ", "_").ToLower() + " = ";
+                        if (a.Text == "U.E.")
+                        {
+                            consulta += " AND RNPTITULAR = ";
+                        }
+                        else
+                        {
+                            consulta += " AND " + a.Text.Replace(" ", "_").ToLower() + " = ";
+                        }
                     }
                     int m = 0;
                     foreach (ComboBox cb in FiltrosPescador.Controls.OfType<ComboBox>())
                     {
                         if (m == r)
                         {
-                            consulta += "'" + cb.Text + "'";
+                            if (a.Text=="U.E.")
+                            {
+                                consulta += "'" + dt.Rows[comboBox14.SelectedIndex]["RNPA"] + "'";
+                            }
+                            else
+                            {
+                                consulta += "'" + cb.Text + "'";
+                            }
                             break;
                         }
                         m++;
