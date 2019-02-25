@@ -783,7 +783,7 @@
             // 
             this.Unid.AutoSize = true;
             this.Unid.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Unid.Location = new System.Drawing.Point(364, 88);
+            this.Unid.Location = new System.Drawing.Point(361, 88);
             this.Unid.Name = "Unid";
             this.Unid.Size = new System.Drawing.Size(70, 19);
             this.Unid.TabIndex = 119;
