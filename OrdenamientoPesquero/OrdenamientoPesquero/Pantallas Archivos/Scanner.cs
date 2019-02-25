@@ -27,8 +27,9 @@ public class Scanner
 
         string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         string folder = path + "/PDF/";
-        string fullFilePath = folder + x + "-.pdf";
-        string fullFilePath2 = folder + x + "-2.pdf";
+        string seg = DateTime.Now.ToString("hhmmss");
+        string fullFilePath = folder + seg + "-.pdf";
+        string fullFilePath2 = folder + seg + "-2.pdf";
 
         if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
 

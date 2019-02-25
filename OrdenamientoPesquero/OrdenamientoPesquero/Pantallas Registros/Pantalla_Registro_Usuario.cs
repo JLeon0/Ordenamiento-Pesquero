@@ -406,8 +406,8 @@ namespace OrdenamientoPesquero
                 ObtenerImagen();
                 if (ListaNombres.SelectedIndex != -1)
                 {
-                    //NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), RNPA);
-                    dt = proc.Obtener_todas_unidades(RNPA);
+                    NOMBRES = proc.BuscarNombre(ListaNombres.Text, RNPA);
+                    dt = proc.Obtener_todas_unidades(NOMBRES.Rows[0][2].ToString());
                     Unid.Text = dt.Rows[0]["NOMBRE"].ToString();
                 }
 
