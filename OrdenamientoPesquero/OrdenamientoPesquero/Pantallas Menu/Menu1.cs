@@ -15,7 +15,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 {
     public partial class Menu1 : Form
     {
-        Conexion c;
+        public Conexion c;
         public Menu1()
         {
             InitializeComponent();

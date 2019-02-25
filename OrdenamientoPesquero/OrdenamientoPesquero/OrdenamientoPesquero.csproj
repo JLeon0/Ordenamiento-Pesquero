@@ -117,6 +117,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>comondu.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Consulta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Consulta.xsd</DependentUpon>
+    </Compile>
     <Compile Include="EmbarcacionesSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -377,15 +382,19 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Anexo3.rdlc" />
     <EmbeddedResource Include="Reportes\Credencial.rdlc" />
+    <EmbeddedResource Include="Reportes\Embarcacion_Personal.rdlc" />
     <EmbeddedResource Include="Reportes\Lista_Embarca.rdlc" />
     <EmbeddedResource Include="Reportes\Permisos.rdlc" />
     <EmbeddedResource Include="Reportes\PermisosVencidos.rdlc" />
+    <EmbeddedResource Include="Reportes\Permiso_Personal.rdlc" />
     <EmbeddedResource Include="Reportes\Pescadores.rdlc" />
+    <EmbeddedResource Include="Reportes\Pescador_Personal.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
     <EmbeddedResource Include="Reportes\reportepescadores.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteXPermicionario.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteXUnidad.rdlc" />
     <EmbeddedResource Include="Reportes\Resumen_permisos.rdlc" />
+    <EmbeddedResource Include="Reportes\Unidad_Personal.rdlc" />
     <EmbeddedResource Include="Reportes\xMunicipio_seguro.rdlc" />
     <EmbeddedResource Include="Reportes\xMunicipio.rdlc" />
     <None Include="comondu.xsc">
@@ -398,6 +407,17 @@
     </None>
     <None Include="comondu.xss">
       <DependentUpon>comondu.xsd</DependentUpon>
+    </None>
+    <None Include="Consulta.xsc">
+      <DependentUpon>Consulta.xsd</DependentUpon>
+    </None>
+    <None Include="Consulta.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Consulta.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Consulta.xss">
+      <DependentUpon>Consulta.xsd</DependentUpon>
     </None>
     <None Include="EmbarcacionesSet.xsc">
       <DependentUpon>EmbarcacionesSet.xsd</DependentUpon>

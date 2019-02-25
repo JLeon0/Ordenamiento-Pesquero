@@ -551,7 +551,12 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                         para3[6] = new ReportParameter("nemb", embarcacionesSet.EmbarcacionesxUnidad.Count.ToString());
                         reportViewer1.LocalReport.SetParameters(para3);
                         this.reportViewer1.RefreshReport();
-                        File.WriteAllBytes(@"C:\FICHAS\"+muni+@"\" + nombre+".pdf", reportViewer1.LocalReport.Render("PDF"));
+                        nombre= nombre.Replace("\"","");
+                        if (!Directory.Exists(@"C:\FICHAS\" + muni + @"\" + nombre + @"\"))
+                        {
+                            DirectoryInfo di = Directory.CreateDirectory(@"C:\FICHAS\" + muni + @"\" + nombre + @"\");
+                        }
+                            File.WriteAllBytes(@"C:\FICHAS\"+muni+@"\" + nombre+@"\Ficha Informativa.pdf", reportViewer1.LocalReport.Render("PDF"));
                     }
                     this.Close();
                     break;

@@ -64,7 +64,8 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 
         private void button8_Click(object sender, EventArgs e)
         {
-
+            Personalizar p = new Personalizar();
+            p.Show(this);
         }
 
         private void button7_Click(object sender, EventArgs e)

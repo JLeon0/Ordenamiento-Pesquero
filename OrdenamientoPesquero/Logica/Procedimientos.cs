@@ -12,7 +12,7 @@ namespace Logica
     public class Procedimientos
     {
         public string bdd = "OrdPesquero";
-        Conexion c;
+        public Conexion c;
         public Procedimientos()
         {
             c = new Conexion(bdd);
@@ -195,6 +195,10 @@ namespace Logica
         }
         #endregion
 
+        public DataTable ObtenerTablaConsulta(string consulta)
+        {
+            return c.getDatosTablaConsulta(consulta);
+        }
 
         #region Obtener
         public DataTable ObtenerMunicipios()

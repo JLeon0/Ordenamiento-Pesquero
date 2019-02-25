@@ -40,8 +40,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button7 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.button10 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button10 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -120,7 +120,7 @@
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Location = new System.Drawing.Point(268, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 202);
+            this.groupBox1.Size = new System.Drawing.Size(200, 210);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Generales";
@@ -144,7 +144,7 @@
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Location = new System.Drawing.Point(37, 27);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 202);
+            this.groupBox2.Size = new System.Drawing.Size(200, 210);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Por Unidad";
@@ -166,21 +166,10 @@
             this.groupBox3.Controls.Add(this.button10);
             this.groupBox3.Location = new System.Drawing.Point(498, 27);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(171, 202);
+            this.groupBox3.Size = new System.Drawing.Size(171, 210);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Por Municipio";
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.Silver;
-            this.button10.Location = new System.Drawing.Point(29, 63);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(124, 37);
-            this.button10.TabIndex = 0;
-            this.button10.Text = "U.E. por Municipio";
-            this.button10.UseVisualStyleBackColor = false;
-            this.button10.Click += new System.EventHandler(this.button10_Click);
             // 
             // comboBox1
             // 
@@ -197,14 +186,27 @@
             this.comboBox1.TabIndex = 1;
             this.comboBox1.Text = "Loreto";
             // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.Silver;
+            this.button10.Location = new System.Drawing.Point(29, 63);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(124, 37);
+            this.button10.TabIndex = 0;
+            this.button10.Text = "U.E. por Municipio";
+            this.button10.UseVisualStyleBackColor = false;
+            this.button10.Click += new System.EventHandler(this.button10_Click);
+            // 
             // MenuReportes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(696, 241);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MenuReportes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

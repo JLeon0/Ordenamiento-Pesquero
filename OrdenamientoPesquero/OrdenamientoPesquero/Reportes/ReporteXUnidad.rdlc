@@ -1721,6 +1721,9 @@
         <Height>1.34816cm</Height>
         <Width>18.7154cm</Width>
         <ZIndex>2</ZIndex>
+        <Visibility>
+          <Hidden>=IIF(IsNothing(First(Fields!NPERMISO.Value, "DataSet2")),true,false)</Hidden>
+        </Visibility>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2173,6 +2176,9 @@
         <Height>1.40108cm</Height>
         <Width>18.7154cm</Width>
         <ZIndex>4</ZIndex>
+        <Visibility>
+          <Hidden>=IIF(IsNothing(First(Fields!NPERMISO.Value, "DataSet11")),true,false)</Hidden>
+        </Visibility>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2592,6 +2598,9 @@
         <Height>1.42131cm</Height>
         <Width>18.7154cm</Width>
         <ZIndex>5</ZIndex>
+        <Visibility>
+          <Hidden>=IIF(IsNothing(First(Fields!NPERMISO.Value, "DataSet4")),true,false)</Hidden>
+        </Visibility>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2615,10 +2624,13 @@
         </Paragraphs>
         <rd:DefaultName>Textbox42</rd:DefaultName>
         <Top>9.70216cm</Top>
-        <Left>0.50214cm</Left>
+        <Left>0.47926cm</Left>
         <Height>0.6cm</Height>
         <Width>3.82292cm</Width>
         <ZIndex>6</ZIndex>
+        <Visibility>
+          <Hidden>=IIF(IsNothing(First(Fields!NPERMISO.Value, "DataSet11")),true,false)</Hidden>
+        </Visibility>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2649,6 +2661,9 @@
         <Height>0.6cm</Height>
         <Width>3.82292cm</Width>
         <ZIndex>7</ZIndex>
+        <Visibility>
+          <Hidden>=IIF(IsNothing(First(Fields!NPERMISO.Value, "DataSet4")),true,false)</Hidden>
+        </Visibility>
         <Style>
           <Border>
             <Style>None</Style>
@@ -2678,6 +2693,9 @@
             <rd:DefaultName>Textbox42</rd:DefaultName>
             <Height>0.6cm</Height>
             <Width>18.6783cm</Width>
+            <Visibility>
+              <Hidden>=IIF(IsNothing(First(Fields!NPERMISO.Value, "DataSet2")),true,false)</Hidden>
+            </Visibility>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -3881,7 +3899,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Chipeados:</Value>
+                    <Value>No Chipeados:</Value>
                     <Style>
                       <FontSize>7.5pt</FontSize>
                     </Style>
