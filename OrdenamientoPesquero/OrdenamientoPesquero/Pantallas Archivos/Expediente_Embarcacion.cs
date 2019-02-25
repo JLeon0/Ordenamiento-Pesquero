@@ -34,13 +34,14 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
         private void CargarExpediente()
         {
             DataTable exp = proc.ObtenerExpedienteEmbarcacion(MATRICULA);
-            dgvArchivos.RowCount = 6;
+            dgvArchivos.RowCount = 7;
             dgvArchivos[0, 0].Value = "Certif. Matricula";
             dgvArchivos[0, 1].Value = "Certif. Seguridad";
             dgvArchivos[0, 2].Value = "Factura Artes de Pesca";
             dgvArchivos[0, 3].Value = "Factura Motor";
             dgvArchivos[0, 4].Value = "Factura Embarcacion";
             dgvArchivos[0, 5].Value = "Papeleta de Chipeo";
+            dgvArchivos[0, 6].Value = "Foto Embarcacion";
             if (exp.Rows.Count > 0)
             {
                 if (exp.Rows[0]["CERTMATRICULA"].ToString() != "") { dgvArchivos[1, 0].Value = true; dgvArchivos[1, 0].Style.BackColor = Color.Green; }
@@ -49,6 +50,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 if (exp.Rows[0]["FACTMOTOR"].ToString() != "") { dgvArchivos[1, 3].Value = true; dgvArchivos[1, 3].Style.BackColor = Color.Green; }
                 if (exp.Rows[0]["FACTEMBARCACION"].ToString() != "") { dgvArchivos[1, 4].Value = true; dgvArchivos[1, 4].Style.BackColor = Color.Green; }
                 if (exp.Rows[0]["PAPELETACHIPEO"].ToString() != "") { dgvArchivos[1, 5].Value = true; dgvArchivos[1, 5].Style.BackColor = Color.Green; }
+                if (exp.Rows[0]["FOTOEMB"].ToString() != "") { dgvArchivos[1, 6].Value = true; dgvArchivos[1, 6].Style.BackColor = Color.Green; }
             }
         }
         private void SubirPDF_Click(object sender, EventArgs e)
@@ -59,13 +61,17 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 if (result == DialogResult.Yes)
                 {
                     this.Cursor = Cursors.WaitCursor;
-                    scan = new Scanner(true);
-                    openFileDialog1.FileName = scan.Scann(0);
-                    Stream myStream = openFileDialog1.OpenFile();
-                    MemoryStream pdf = new MemoryStream();
-                    myStream.CopyTo(pdf);
-                    GuardarEnBD(pdf);
-                    CargarExpediente();
+                    try
+                    {
+                        scan = new Scanner(true);
+                        openFileDialog1.FileName = scan.Scann(0);
+                        Stream myStream = openFileDialog1.OpenFile();
+                        MemoryStream pdf = new MemoryStream();
+                        myStream.CopyTo(pdf);
+                        GuardarEnBD(pdf);
+                        CargarExpediente();
+                    }
+                    catch (Exception) { }
                     this.Cursor = Cursors.Default;
                 }
                 else if (result == DialogResult.No)
@@ -150,21 +156,23 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             }
         }
 
-        private void GuardarEnBD(MemoryStream pdf)        {
-
+        private void GuardarEnBD(MemoryStream pdf)
+        {
             int exito = 0;
             if (dgvArchivos.SelectedCells[0].RowIndex == 0)
-                exito = proc.InsertarPDFEmbarcacion(MATRICULA, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0], new byte[0]);
+                exito = proc.InsertarPDFEmbarcacion(MATRICULA, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], new byte[0]);
             if (dgvArchivos.SelectedCells[0].RowIndex == 1)
-                exito = proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0]);
+                exito = proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0], new byte[0]);
             if (dgvArchivos.SelectedCells[0].RowIndex == 2)
-                exito = proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
+                exito = proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0]);
             if (dgvArchivos.SelectedCells[0].RowIndex == 3)
-                exito = proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
+                exito = proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
             if (dgvArchivos.SelectedCells[0].RowIndex == 4)
-                exito = proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
+                exito = proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
             if (dgvArchivos.SelectedCells[0].RowIndex == 5)
-                exito = proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
+                exito = proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
+            if (dgvArchivos.SelectedCells[0].RowIndex == 6)
+                exito = proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
             val.Exito(exito);
         }
     }

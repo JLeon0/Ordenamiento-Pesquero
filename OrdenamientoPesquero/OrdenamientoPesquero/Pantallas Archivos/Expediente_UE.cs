@@ -113,14 +113,15 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             {
                 if (fila["NOMBREEMBARCACION"].ToString() == "NO APLICA") { embarcaciones.Rows.Remove(fila); break; }
             }
-            int certmat = 0, certsegu = 0, factartes = 0, factmotor = 0, factembarca = 0, papelchipeo = 0;
-            dgvEmbarcacion.RowCount = 6;
+            int certmat = 0, certsegu = 0, factartes = 0, factmotor = 0, factembarca = 0, papelchipeo = 0, fotoemb = 0 ;
+            dgvEmbarcacion.RowCount = 7;
             dgvEmbarcacion[0, 0].Value = "Certif. Matricula";
             dgvEmbarcacion[0, 1].Value = "Certif. Seguridad";
             dgvEmbarcacion[0, 2].Value = "Factura Artes de Pesca";
             dgvEmbarcacion[0, 3].Value = "Factura Motor";
             dgvEmbarcacion[0, 4].Value = "Factura Embarcacion";
             dgvEmbarcacion[0, 5].Value = "Papeleta de Chipeo";
+            dgvEmbarcacion[0, 6].Value = "Foto Embarcacion";
 
             foreach (DataRow fila in expediente.Rows)
             {
@@ -130,6 +131,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 if (fila["FACTMOTOR"].ToString() != "") { factmotor++; }
                 if (fila["FACTEMBARCACION"].ToString() != "") { factembarca++; }
                 if (fila["PAPELETACHIPEO"].ToString() != "") { papelchipeo++; }
+                if (fila["FOTOEMB"].ToString() != "") { fotoemb++; }
             }
             dgvEmbarcacion[2, 0].Value = certmat + "/" + embarcaciones.Rows.Count;
             if (certmat == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 0].Value = true; dgvEmbarcacion[1, 0].Style.BackColor = Color.Green; }
@@ -143,6 +145,8 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             if (factembarca == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 4].Value = true; dgvEmbarcacion[1, 4].Style.BackColor = Color.Green; }
             dgvEmbarcacion[2, 5].Value = papelchipeo + "/" + embarcaciones.Rows.Count;
             if (papelchipeo == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 5].Value = true; dgvEmbarcacion[1, 5].Style.BackColor = Color.Green; }
+            dgvEmbarcacion[2, 6].Value = fotoemb + "/" + embarcaciones.Rows.Count;
+            if (fotoemb == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 6].Value = true; dgvEmbarcacion[1, 6].Style.BackColor = Color.Green; }
             dgvEmbarcacion.ClearSelection();
         }
 

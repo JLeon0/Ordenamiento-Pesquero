@@ -85,13 +85,9 @@
             this.label6 = new System.Windows.Forms.Label();
             this.ResponsableChip = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.AbrirExpediente = new System.Windows.Forms.PictureBox();
             this.CerrarPanel = new System.Windows.Forms.PictureBox();
             this.ActualizarMATRICULA = new System.Windows.Forms.PictureBox();
-            this.EliminarUnidad = new System.Windows.Forms.PictureBox();
-            this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
-            this.RegistrarUnidad = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.ListaMatriculas = new System.Windows.Forms.ListBox();
             this.label13 = new System.Windows.Forms.Label();
             this.PanelMATRICULA = new System.Windows.Forms.Panel();
@@ -105,8 +101,11 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.gbBotones = new System.Windows.Forms.GroupBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.RegistrarUnidad = new System.Windows.Forms.PictureBox();
+            this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
+            this.EliminarUnidad = new System.Windows.Forms.PictureBox();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
-            this.AbrirExpediente = new System.Windows.Forms.Button();
             this.CertMatr = new System.Windows.Forms.Label();
             this.CertSeg = new System.Windows.Forms.Label();
             this.FactArtes = new System.Windows.Forms.Label();
@@ -114,25 +113,29 @@
             this.FactEmb = new System.Windows.Forms.Label();
             this.PapChip = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.FotoEmb = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.gbCertificado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelMATRICULA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
             this.gbVerificacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AbrirExpediente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarMATRICULA)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.PanelMATRICULA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.gbBotones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
             this.gbBusqueda.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // label78
@@ -452,7 +455,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(179, 73);
+            this.label4.Location = new System.Drawing.Point(237, 73);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 14);
             this.label4.TabIndex = 153;
@@ -462,7 +465,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(96, 74);
+            this.label3.Location = new System.Drawing.Point(154, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 14);
             this.label3.TabIndex = 154;
@@ -472,7 +475,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(22, 74);
+            this.label2.Location = new System.Drawing.Point(80, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 14);
             this.label2.TabIndex = 155;
@@ -737,6 +740,18 @@
             this.ResponsableChip.Size = new System.Drawing.Size(313, 22);
             this.ResponsableChip.TabIndex = 21;
             // 
+            // AbrirExpediente
+            // 
+            this.AbrirExpediente.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Expediente;
+            this.AbrirExpediente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AbrirExpediente.Location = new System.Drawing.Point(6, 21);
+            this.AbrirExpediente.Name = "AbrirExpediente";
+            this.AbrirExpediente.Size = new System.Drawing.Size(48, 50);
+            this.AbrirExpediente.TabIndex = 192;
+            this.AbrirExpediente.TabStop = false;
+            this.toolTip1.SetToolTip(this.AbrirExpediente, "Abrir Expediente");
+            this.AbrirExpediente.Click += new System.EventHandler(this.AbrirExpediente_Click);
+            // 
             // CerrarPanel
             // 
             this.CerrarPanel.BackColor = System.Drawing.Color.Transparent;
@@ -765,65 +780,6 @@
             this.ActualizarMATRICULA.TabStop = false;
             this.toolTip1.SetToolTip(this.ActualizarMATRICULA, "Actualizar Matricula");
             this.ActualizarMATRICULA.Click += new System.EventHandler(this.ActualizarMATRICULA_Click);
-            // 
-            // EliminarUnidad
-            // 
-            this.EliminarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Eliminar;
-            this.EliminarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EliminarUnidad.Location = new System.Drawing.Point(177, 21);
-            this.EliminarUnidad.Name = "EliminarUnidad";
-            this.EliminarUnidad.Size = new System.Drawing.Size(50, 50);
-            this.EliminarUnidad.TabIndex = 152;
-            this.EliminarUnidad.TabStop = false;
-            this.EliminarUnidad.Click += new System.EventHandler(this.EliminarUnidad_Click);
-            // 
-            // ActualizarUnidad
-            // 
-            this.ActualizarUnidad.BackColor = System.Drawing.Color.Transparent;
-            this.ActualizarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
-            this.ActualizarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ActualizarUnidad.Location = new System.Drawing.Point(97, 21);
-            this.ActualizarUnidad.Name = "ActualizarUnidad";
-            this.ActualizarUnidad.Size = new System.Drawing.Size(50, 50);
-            this.ActualizarUnidad.TabIndex = 151;
-            this.ActualizarUnidad.TabStop = false;
-            this.ActualizarUnidad.Click += new System.EventHandler(this.ActualizarUnidad_Click);
-            // 
-            // RegistrarUnidad
-            // 
-            this.RegistrarUnidad.BackColor = System.Drawing.Color.Transparent;
-            this.RegistrarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
-            this.RegistrarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RegistrarUnidad.Location = new System.Drawing.Point(16, 21);
-            this.RegistrarUnidad.Name = "RegistrarUnidad";
-            this.RegistrarUnidad.Size = new System.Drawing.Size(50, 50);
-            this.RegistrarUnidad.TabIndex = 150;
-            this.RegistrarUnidad.TabStop = false;
-            this.RegistrarUnidad.Click += new System.EventHandler(this.RegistrarUnidad_Click);
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(621, 13);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(200, 60);
-            this.pictureBox3.TabIndex = 168;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(186, 13);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 60);
-            this.pictureBox2.TabIndex = 167;
-            this.pictureBox2.TabStop = false;
             // 
             // ListaMatriculas
             // 
@@ -972,18 +928,68 @@
             // 
             // gbBotones
             // 
+            this.gbBotones.Controls.Add(this.label14);
+            this.gbBotones.Controls.Add(this.AbrirExpediente);
             this.gbBotones.Controls.Add(this.RegistrarUnidad);
             this.gbBotones.Controls.Add(this.ActualizarUnidad);
             this.gbBotones.Controls.Add(this.EliminarUnidad);
             this.gbBotones.Controls.Add(this.label2);
             this.gbBotones.Controls.Add(this.label3);
             this.gbBotones.Controls.Add(this.label4);
-            this.gbBotones.Location = new System.Drawing.Point(586, 516);
+            this.gbBotones.Location = new System.Drawing.Point(527, 516);
             this.gbBotones.Name = "gbBotones";
-            this.gbBotones.Size = new System.Drawing.Size(240, 99);
+            this.gbBotones.Size = new System.Drawing.Size(299, 99);
             this.gbBotones.TabIndex = 184;
             this.gbBotones.TabStop = false;
             this.gbBotones.Text = "Botones";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(3, 74);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(60, 14);
+            this.label14.TabIndex = 193;
+            this.label14.Text = "Expediente";
+            // 
+            // RegistrarUnidad
+            // 
+            this.RegistrarUnidad.BackColor = System.Drawing.Color.Transparent;
+            this.RegistrarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
+            this.RegistrarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RegistrarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RegistrarUnidad.Location = new System.Drawing.Point(74, 21);
+            this.RegistrarUnidad.Name = "RegistrarUnidad";
+            this.RegistrarUnidad.Size = new System.Drawing.Size(50, 50);
+            this.RegistrarUnidad.TabIndex = 150;
+            this.RegistrarUnidad.TabStop = false;
+            this.RegistrarUnidad.Click += new System.EventHandler(this.RegistrarUnidad_Click);
+            // 
+            // ActualizarUnidad
+            // 
+            this.ActualizarUnidad.BackColor = System.Drawing.Color.Transparent;
+            this.ActualizarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
+            this.ActualizarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ActualizarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ActualizarUnidad.Location = new System.Drawing.Point(155, 21);
+            this.ActualizarUnidad.Name = "ActualizarUnidad";
+            this.ActualizarUnidad.Size = new System.Drawing.Size(50, 50);
+            this.ActualizarUnidad.TabIndex = 151;
+            this.ActualizarUnidad.TabStop = false;
+            this.ActualizarUnidad.Click += new System.EventHandler(this.ActualizarUnidad_Click);
+            // 
+            // EliminarUnidad
+            // 
+            this.EliminarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Eliminar;
+            this.EliminarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EliminarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EliminarUnidad.Location = new System.Drawing.Point(235, 21);
+            this.EliminarUnidad.Name = "EliminarUnidad";
+            this.EliminarUnidad.Size = new System.Drawing.Size(50, 50);
+            this.EliminarUnidad.TabIndex = 152;
+            this.EliminarUnidad.TabStop = false;
+            this.EliminarUnidad.Click += new System.EventHandler(this.EliminarUnidad_Click);
             // 
             // gbBusqueda
             // 
@@ -995,16 +1001,6 @@
             this.gbBusqueda.TabIndex = 185;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
-            // 
-            // AbrirExpediente
-            // 
-            this.AbrirExpediente.Location = new System.Drawing.Point(475, 537);
-            this.AbrirExpediente.Name = "AbrirExpediente";
-            this.AbrirExpediente.Size = new System.Drawing.Size(98, 50);
-            this.AbrirExpediente.TabIndex = 186;
-            this.AbrirExpediente.Text = "EXPEDIENTE";
-            this.AbrirExpediente.UseVisualStyleBackColor = true;
-            this.AbrirExpediente.Click += new System.EventHandler(this.AbrirExpediente_Click);
             // 
             // CertMatr
             // 
@@ -1066,7 +1062,7 @@
             this.PapChip.AutoSize = true;
             this.PapChip.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PapChip.ForeColor = System.Drawing.Color.Black;
-            this.PapChip.Location = new System.Drawing.Point(5, 143);
+            this.PapChip.Location = new System.Drawing.Point(5, 139);
             this.PapChip.Name = "PapChip";
             this.PapChip.Size = new System.Drawing.Size(121, 16);
             this.PapChip.TabIndex = 190;
@@ -1074,6 +1070,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.FotoEmb);
             this.groupBox1.Controls.Add(this.CertMatr);
             this.groupBox1.Controls.Add(this.FactMotor);
             this.groupBox1.Controls.Add(this.CertSeg);
@@ -1083,10 +1080,46 @@
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(849, 95);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(169, 168);
+            this.groupBox1.Size = new System.Drawing.Size(169, 186);
             this.groupBox1.TabIndex = 191;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Resumen Expediente";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(621, 13);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(200, 60);
+            this.pictureBox3.TabIndex = 168;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(186, 13);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 60);
+            this.pictureBox2.TabIndex = 167;
+            this.pictureBox2.TabStop = false;
+            // 
+            // FotoEmb
+            // 
+            this.FotoEmb.AutoSize = true;
+            this.FotoEmb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FotoEmb.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FotoEmb.ForeColor = System.Drawing.Color.Black;
+            this.FotoEmb.Location = new System.Drawing.Point(6, 161);
+            this.FotoEmb.Name = "FotoEmb";
+            this.FotoEmb.Size = new System.Drawing.Size(114, 16);
+            this.FotoEmb.TabIndex = 191;
+            this.FotoEmb.Text = "Foto Embarcacion";
             // 
             // Pantalla_Certificado_Mat
             // 
@@ -1097,7 +1130,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1030, 619);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.AbrirExpediente);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.gbBotones);
             this.Controls.Add(this.PanelMATRICULA);
@@ -1120,13 +1152,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).EndInit();
             this.gbVerificacion.ResumeLayout(false);
             this.gbVerificacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AbrirExpediente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarMATRICULA)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.PanelMATRICULA.ResumeLayout(false);
             this.PanelMATRICULA.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -1134,10 +1162,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.gbBotones.ResumeLayout(false);
             this.gbBotones.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).EndInit();
             this.gbBusqueda.ResumeLayout(false);
             this.gbBusqueda.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1220,7 +1253,6 @@
         private System.Windows.Forms.GroupBox gbBusqueda;
         private System.Windows.Forms.PictureBox ActivarPanelMATRICULA;
         private System.Windows.Forms.TextBox MatriculaCertMat;
-        private System.Windows.Forms.Button AbrirExpediente;
         private System.Windows.Forms.Label CertMatr;
         private System.Windows.Forms.Label CertSeg;
         private System.Windows.Forms.Label FactArtes;
@@ -1228,5 +1260,8 @@
         private System.Windows.Forms.Label FactEmb;
         private System.Windows.Forms.Label PapChip;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.PictureBox AbrirExpediente;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label FotoEmb;
     }
 }

@@ -156,6 +156,7 @@
             // 
             this.AbrirPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.show;
             this.AbrirPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AbrirPDF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AbrirPDF.Location = new System.Drawing.Point(322, 306);
             this.AbrirPDF.Name = "AbrirPDF";
             this.AbrirPDF.Size = new System.Drawing.Size(50, 50);
@@ -168,6 +169,7 @@
             // 
             this.SubirPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.SubirPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.SubirPDF.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SubirPDF.Location = new System.Drawing.Point(117, 306);
             this.SubirPDF.Name = "SubirPDF";
             this.SubirPDF.Size = new System.Drawing.Size(50, 50);

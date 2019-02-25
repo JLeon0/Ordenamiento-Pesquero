@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Nombre = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
@@ -123,7 +123,7 @@
             this.dgvArchivos.ReadOnly = true;
             this.dgvArchivos.RowHeadersVisible = false;
             this.dgvArchivos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvArchivos.Size = new System.Drawing.Size(232, 172);
+            this.dgvArchivos.Size = new System.Drawing.Size(232, 197);
             this.dgvArchivos.TabIndex = 196;
             // 
             // Expediente
@@ -137,10 +137,10 @@
             // 
             // Check
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle4.NullValue = false;
-            this.Check.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.NullValue = false;
+            this.Check.DefaultCellStyle = dataGridViewCellStyle1;
             this.Check.Frozen = true;
             this.Check.HeaderText = "Check";
             this.Check.Name = "Check";
@@ -156,7 +156,8 @@
             // 
             this.AbrirPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.show;
             this.AbrirPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AbrirPDF.Location = new System.Drawing.Point(310, 325);
+            this.AbrirPDF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AbrirPDF.Location = new System.Drawing.Point(310, 364);
             this.AbrirPDF.Name = "AbrirPDF";
             this.AbrirPDF.Size = new System.Drawing.Size(50, 50);
             this.AbrirPDF.TabIndex = 213;
@@ -168,7 +169,8 @@
             // 
             this.SubirPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.SubirPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.SubirPDF.Location = new System.Drawing.Point(128, 325);
+            this.SubirPDF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SubirPDF.Location = new System.Drawing.Point(128, 364);
             this.SubirPDF.Name = "SubirPDF";
             this.SubirPDF.Size = new System.Drawing.Size(50, 50);
             this.SubirPDF.TabIndex = 212;
@@ -179,7 +181,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(295, 378);
+            this.label3.Location = new System.Drawing.Point(295, 417);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 16);
             this.label3.TabIndex = 219;
@@ -188,7 +190,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(114, 378);
+            this.label2.Location = new System.Drawing.Point(114, 417);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(83, 16);
             this.label2.TabIndex = 218;
@@ -199,7 +201,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(538, 406);
+            this.ClientSize = new System.Drawing.Size(538, 446);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.AbrirPDF);
