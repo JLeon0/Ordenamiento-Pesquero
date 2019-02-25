@@ -988,6 +988,7 @@
             this.SubirPDF.Size = new System.Drawing.Size(40, 40);
             this.SubirPDF.TabIndex = 221;
             this.SubirPDF.TabStop = false;
+            this.SubirPDF.Click += new System.EventHandler(this.SubirPDF_Click);
             // 
             // dgvArchivos
             // 
