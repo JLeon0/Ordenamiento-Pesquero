@@ -113,9 +113,9 @@
             this.FactEmb = new System.Windows.Forms.Label();
             this.PapChip = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.FotoEmb = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.FotoEmb = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.gbCertificado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelMATRICULA)).BeginInit();
@@ -1005,66 +1005,66 @@
             // CertMatr
             // 
             this.CertMatr.AutoSize = true;
-            this.CertMatr.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CertMatr.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CertMatr.ForeColor = System.Drawing.Color.Black;
             this.CertMatr.Location = new System.Drawing.Point(5, 18);
             this.CertMatr.Name = "CertMatr";
-            this.CertMatr.Size = new System.Drawing.Size(144, 16);
+            this.CertMatr.Size = new System.Drawing.Size(135, 15);
             this.CertMatr.TabIndex = 187;
             this.CertMatr.Text = "Certificado de Matricula";
             // 
             // CertSeg
             // 
             this.CertSeg.AutoSize = true;
-            this.CertSeg.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CertSeg.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CertSeg.ForeColor = System.Drawing.Color.Black;
             this.CertSeg.Location = new System.Drawing.Point(5, 43);
             this.CertSeg.Name = "CertSeg";
-            this.CertSeg.Size = new System.Drawing.Size(149, 16);
+            this.CertSeg.Size = new System.Drawing.Size(143, 15);
             this.CertSeg.TabIndex = 187;
             this.CertSeg.Text = "Certificado de Seguridad";
             // 
             // FactArtes
             // 
             this.FactArtes.AutoSize = true;
-            this.FactArtes.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FactArtes.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FactArtes.ForeColor = System.Drawing.Color.Black;
             this.FactArtes.Location = new System.Drawing.Point(5, 67);
             this.FactArtes.Name = "FactArtes";
-            this.FactArtes.Size = new System.Drawing.Size(163, 16);
+            this.FactArtes.Size = new System.Drawing.Size(150, 15);
             this.FactArtes.TabIndex = 187;
             this.FactArtes.Text = "Factura de Artes de Pesca";
             // 
             // FactMotor
             // 
             this.FactMotor.AutoSize = true;
-            this.FactMotor.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FactMotor.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FactMotor.ForeColor = System.Drawing.Color.Black;
             this.FactMotor.Location = new System.Drawing.Point(5, 93);
             this.FactMotor.Name = "FactMotor";
-            this.FactMotor.Size = new System.Drawing.Size(110, 16);
+            this.FactMotor.Size = new System.Drawing.Size(101, 15);
             this.FactMotor.TabIndex = 188;
             this.FactMotor.Text = "Factura del Motor";
             // 
             // FactEmb
             // 
             this.FactEmb.AutoSize = true;
-            this.FactEmb.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FactEmb.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FactEmb.ForeColor = System.Drawing.Color.Black;
             this.FactEmb.Location = new System.Drawing.Point(5, 116);
             this.FactEmb.Name = "FactEmb";
-            this.FactEmb.Size = new System.Drawing.Size(150, 16);
+            this.FactEmb.Size = new System.Drawing.Size(141, 15);
             this.FactEmb.TabIndex = 189;
             this.FactEmb.Text = "Factura de Embarcación";
             // 
             // PapChip
             // 
             this.PapChip.AutoSize = true;
-            this.PapChip.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PapChip.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PapChip.ForeColor = System.Drawing.Color.Black;
             this.PapChip.Location = new System.Drawing.Point(5, 139);
             this.PapChip.Name = "PapChip";
-            this.PapChip.Size = new System.Drawing.Size(121, 16);
+            this.PapChip.Size = new System.Drawing.Size(116, 15);
             this.PapChip.TabIndex = 190;
             this.PapChip.Text = "Papeleta de Chipeo";
             // 
@@ -1084,6 +1084,18 @@
             this.groupBox1.TabIndex = 191;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Resumen Expediente";
+            // 
+            // FotoEmb
+            // 
+            this.FotoEmb.AutoSize = true;
+            this.FotoEmb.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FotoEmb.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FotoEmb.ForeColor = System.Drawing.Color.Black;
+            this.FotoEmb.Location = new System.Drawing.Point(6, 161);
+            this.FotoEmb.Name = "FotoEmb";
+            this.FotoEmb.Size = new System.Drawing.Size(107, 15);
+            this.FotoEmb.TabIndex = 191;
+            this.FotoEmb.Text = "Foto Embarcacion";
             // 
             // pictureBox3
             // 
@@ -1108,18 +1120,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(50, 60);
             this.pictureBox2.TabIndex = 167;
             this.pictureBox2.TabStop = false;
-            // 
-            // FotoEmb
-            // 
-            this.FotoEmb.AutoSize = true;
-            this.FotoEmb.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FotoEmb.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FotoEmb.ForeColor = System.Drawing.Color.Black;
-            this.FotoEmb.Location = new System.Drawing.Point(6, 161);
-            this.FotoEmb.Name = "FotoEmb";
-            this.FotoEmb.Size = new System.Drawing.Size(114, 16);
-            this.FotoEmb.TabIndex = 191;
-            this.FotoEmb.Text = "Foto Embarcacion";
             // 
             // Pantalla_Certificado_Mat
             // 

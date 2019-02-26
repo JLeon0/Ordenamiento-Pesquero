@@ -680,6 +680,65 @@ namespace OrdenamientoPesquero
             PanelCURP.Visible = false;
             PanelCURP.Enabled = false;
         }
+        private void AbrirExpediente_Click(object sender, EventArgs e)
+        {
+            if (CURPPesc.Text != "")
+            {
+                Pantallas_Archivos.Expediente_Pescador expesc = new Pantallas_Archivos.Expediente_Pescador(CURPPesc.Text, NombrePesc.Text + " " + ApePatPescador.Text + " " + ApeMatPescador.Text);
+                expesc.ShowDialog();
+                CargarResumenExpedientes();
+            }
+        }
+
+        private void Seguro_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (Seguro.SelectedIndex == 3)
+            {
+                DialogResult result = MessageBox.Show("Ha seleccionado la opción de OCCISO. ¿Desea REMOVER el registro del Pescador por fallecimiento?", "Pescador OCCISO", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (result == DialogResult.Yes)
+                {
+                    if (CURPPesc.Text != "")
+                    {
+                        Botones.Enabled = false;
+                        gbBusqueda.Enabled = false;
+                        gbDatosGenerales.Enabled = false;
+                        gbInformacion.Enabled = false;
+                        gbRelacion.Enabled = false;
+                        PanelOcciso.Visible = true;
+                        PanelOcciso.Enabled = true;
+                    }
+                }
+            }
+        }
+
+        private void RegistrarOcciso_Click(object sender, EventArgs e)
+        {
+            if (proc.RegistrarOcciso(CURPPesc.Text,FechaFalle.Value.ToShortDateString(),Beneficiario.Text,Parentesco.Text) >= 1)
+            {
+                MessageBox.Show("Occiso Registrado","EXITO",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+            }
+            else { MessageBox.Show("Error al Registrar Occuso","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error); }
+            CargarPescadores();
+            CargarNoPescadores();
+        }
+
+        private void CerrarPanelOcciso_Click(object sender, EventArgs e)
+        {
+            Botones.Enabled = true;
+            gbBusqueda.Enabled = true;
+            gbDatosGenerales.Enabled = true;
+            gbInformacion.Enabled = true;
+            gbRelacion.Enabled = true;
+            PanelOcciso.Visible = false;
+            PanelOcciso.Enabled = false;
+        }
+
+        private void FechaNacPesc_ValueChanged(object sender, EventArgs e)
+        {
+            //TimeSpan tS = new TimeSpan();
+            lblEdad.Text = (DateTime.Now.Year - (FechaNacPesc.Value.Year)).ToString() + " Años";
+            //lblEdad.Text = ((tS.Days) / 365).ToString() + " Años";
+        }
 
         private void ActualizarCURP_Click(object sender, EventArgs e)
         {
@@ -1150,23 +1209,6 @@ namespace OrdenamientoPesquero
         }
 
         private delegate void SendMessageCallback(object payload);
-
-        private void AbrirExpediente_Click(object sender, EventArgs e)
-        {
-            if (CURPPesc.Text != "")
-            {
-                Pantallas_Archivos.Expediente_Pescador expesc = new Pantallas_Archivos.Expediente_Pescador(CURPPesc.Text, NombrePesc.Text + " " + ApePatPescador.Text + " " + ApeMatPescador.Text);
-                expesc.ShowDialog();
-                CargarResumenExpedientes();
-            }
-        }
-        
-        private void FechaNacPesc_ValueChanged(object sender, EventArgs e)
-        {
-            //TimeSpan tS = new TimeSpan();
-            lblEdad.Text = (DateTime.Now.Year - (FechaNacPesc.Value.Year)).ToString() + " Años";
-            //lblEdad.Text = ((tS.Days) / 365).ToString() + " Años";
-        }
 
         private void SendMessage(object payload)
         {

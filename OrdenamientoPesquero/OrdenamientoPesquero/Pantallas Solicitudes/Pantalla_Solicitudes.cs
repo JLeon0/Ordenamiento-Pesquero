@@ -17,6 +17,8 @@ namespace OrdenamientoPesquero
         Procedimientos proc = new Procedimientos();
         Solicitud soli; DataTable solicitudes;
         bool Ap = false;
+        int mE, mF, mP;
+
         public Pantalla_Solicitudes(string nombre, string curp, bool ap)
         {
             InitializeComponent();
@@ -36,6 +38,7 @@ namespace OrdenamientoPesquero
                 txt.Text = "Apoyos";
             }
         }
+
 
         private void Registrar_Click(object sender, EventArgs e)
         {
@@ -108,18 +111,18 @@ namespace OrdenamientoPesquero
 
         private void monto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsNumber(e.KeyChar) && !Char.IsControl(e.KeyChar))
+            if (!Char.IsNumber(e.KeyChar) && !Char.IsControl(e.KeyChar) && e.KeyChar != '-')
             {
                 e.Handled = true;
             }
         }
 
-        int mE, mF, mP;
+
 
         private void Entregar_Click(object sender, EventArgs e)
         {
             int exito = proc.Entregar_Solicitud(folio.Text);
-            if (exito == 1) { MessageBox.Show("EXITO"); } else { MessageBox.Show("HUBO UN ERROR"); }
+            if (exito == 1) { MessageBox.Show("Se ha aprovado la solicitud con exito","Apoyo registrado.",MessageBoxButtons.OK,MessageBoxIcon.Asterisk); } else { MessageBox.Show("HUBO UN ERROR"); }
             CargarSolicitudes();
             LimpiarPantalla();
         }

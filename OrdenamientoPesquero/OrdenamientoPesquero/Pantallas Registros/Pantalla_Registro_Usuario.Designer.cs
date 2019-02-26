@@ -125,6 +125,7 @@
             this.RegistrarPescador = new System.Windows.Forms.PictureBox();
             this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
             this.EliminarUnidad = new System.Windows.Forms.PictureBox();
+            this.AbrirExpediente = new System.Windows.Forms.PictureBox();
             this.gbInformacion = new System.Windows.Forms.GroupBox();
             this.AComp = new System.Windows.Forms.Label();
             this.AIne = new System.Windows.Forms.Label();
@@ -145,6 +146,7 @@
             this.Solicitud = new System.Windows.Forms.Button();
             this.Apoyo = new System.Windows.Forms.Button();
             this.Botones = new System.Windows.Forms.GroupBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.Ver = new System.Windows.Forms.PictureBox();
             this.PanelCURP = new System.Windows.Forms.Panel();
@@ -160,8 +162,19 @@
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.AbrirExpediente = new System.Windows.Forms.PictureBox();
+            this.PanelOcciso = new System.Windows.Forms.Panel();
+            this.label16 = new System.Windows.Forms.Label();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.CerrarPanelOcciso = new System.Windows.Forms.PictureBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.RegistrarOcciso = new System.Windows.Forms.PictureBox();
+            this.Beneficiario = new System.Windows.Forms.TextBox();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.FechaFalle = new System.Windows.Forms.DateTimePicker();
+            this.Parentesco = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.gbDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
@@ -187,6 +200,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarPescador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AbrirExpediente)).BeginInit();
             this.gbInformacion.SuspendLayout();
             this.Botones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ver)).BeginInit();
@@ -197,7 +211,11 @@
             this.gbBusqueda.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AbrirExpediente)).BeginInit();
+            this.PanelOcciso.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelOcciso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegistrarOcciso)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatosGenerales
@@ -424,12 +442,13 @@
             this.Seguro.Items.AddRange(new object[] {
             "ACTIVO",
             "BAJA",
-            "OCCISO",
-            "NO"});
+            "NO",
+            "OCCISO"});
             this.Seguro.Location = new System.Drawing.Point(643, 290);
             this.Seguro.Name = "Seguro";
             this.Seguro.Size = new System.Drawing.Size(122, 24);
             this.Seguro.TabIndex = 19;
+            this.Seguro.SelectedIndexChanged += new System.EventHandler(this.Seguro_SelectedIndexChanged);
             // 
             // label8
             // 
@@ -1263,6 +1282,7 @@
             // 
             this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox1.Location = new System.Drawing.Point(1049, 19);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
@@ -1276,6 +1296,7 @@
             this.RegistrarPescador.BackColor = System.Drawing.Color.Transparent;
             this.RegistrarPescador.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.RegistrarPescador.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RegistrarPescador.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RegistrarPescador.Location = new System.Drawing.Point(587, 19);
             this.RegistrarPescador.Name = "RegistrarPescador";
             this.RegistrarPescador.Size = new System.Drawing.Size(50, 50);
@@ -1289,6 +1310,7 @@
             this.ActualizarUnidad.BackColor = System.Drawing.Color.Transparent;
             this.ActualizarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
             this.ActualizarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ActualizarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ActualizarUnidad.Location = new System.Drawing.Point(662, 19);
             this.ActualizarUnidad.Name = "ActualizarUnidad";
             this.ActualizarUnidad.Size = new System.Drawing.Size(50, 50);
@@ -1301,6 +1323,7 @@
             // 
             this.EliminarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Eliminar;
             this.EliminarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EliminarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EliminarUnidad.Location = new System.Drawing.Point(756, 19);
             this.EliminarUnidad.Name = "EliminarUnidad";
             this.EliminarUnidad.Size = new System.Drawing.Size(50, 50);
@@ -1308,6 +1331,19 @@
             this.EliminarUnidad.TabStop = false;
             this.toolTip1.SetToolTip(this.EliminarUnidad, "Quitar de la Unidad");
             this.EliminarUnidad.Click += new System.EventHandler(this.EliminarUnidad_Click);
+            // 
+            // AbrirExpediente
+            // 
+            this.AbrirExpediente.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Expediente;
+            this.AbrirExpediente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AbrirExpediente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AbrirExpediente.Location = new System.Drawing.Point(519, 19);
+            this.AbrirExpediente.Name = "AbrirExpediente";
+            this.AbrirExpediente.Size = new System.Drawing.Size(48, 50);
+            this.AbrirExpediente.TabIndex = 194;
+            this.AbrirExpediente.TabStop = false;
+            this.toolTip1.SetToolTip(this.AbrirExpediente, "Abrir Expediente");
+            this.AbrirExpediente.Click += new System.EventHandler(this.AbrirExpediente_Click);
             // 
             // gbInformacion
             // 
@@ -1323,7 +1359,7 @@
             this.gbInformacion.Controls.Add(this.Unid);
             this.gbInformacion.Location = new System.Drawing.Point(1116, 81);
             this.gbInformacion.Name = "gbInformacion";
-            this.gbInformacion.Size = new System.Drawing.Size(195, 424);
+            this.gbInformacion.Size = new System.Drawing.Size(195, 393);
             this.gbInformacion.TabIndex = 154;
             this.gbInformacion.TabStop = false;
             this.gbInformacion.Text = "INFORMACIÓN";
@@ -1332,10 +1368,11 @@
             // 
             this.AComp.AutoSize = true;
             this.AComp.BackColor = System.Drawing.Color.White;
+            this.AComp.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AComp.ForeColor = System.Drawing.Color.Black;
             this.AComp.Location = new System.Drawing.Point(6, 247);
             this.AComp.Name = "AComp";
-            this.AComp.Size = new System.Drawing.Size(130, 13);
+            this.AComp.Size = new System.Drawing.Size(155, 15);
             this.AComp.TabIndex = 129;
             this.AComp.Text = "Comprobante de Domicilio";
             // 
@@ -1343,10 +1380,11 @@
             // 
             this.AIne.AutoSize = true;
             this.AIne.BackColor = System.Drawing.Color.White;
+            this.AIne.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AIne.ForeColor = System.Drawing.Color.Black;
             this.AIne.Location = new System.Drawing.Point(6, 227);
             this.AIne.Name = "AIne";
-            this.AIne.Size = new System.Drawing.Size(123, 13);
+            this.AIne.Size = new System.Drawing.Size(141, 15);
             this.AIne.TabIndex = 128;
             this.AIne.Text = "INE (Idenfitiación Oficial)";
             // 
@@ -1354,10 +1392,11 @@
             // 
             this.ACurp.AutoSize = true;
             this.ACurp.BackColor = System.Drawing.Color.White;
+            this.ACurp.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ACurp.ForeColor = System.Drawing.Color.Black;
             this.ACurp.Location = new System.Drawing.Point(6, 206);
             this.ACurp.Name = "ACurp";
-            this.ACurp.Size = new System.Drawing.Size(37, 13);
+            this.ACurp.Size = new System.Drawing.Size(42, 15);
             this.ACurp.TabIndex = 127;
             this.ACurp.Text = "CURP";
             // 
@@ -1365,10 +1404,11 @@
             // 
             this.ActaNac.AutoSize = true;
             this.ActaNac.BackColor = System.Drawing.Color.White;
+            this.ActaNac.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ActaNac.ForeColor = System.Drawing.Color.Black;
             this.ActaNac.Location = new System.Drawing.Point(6, 185);
             this.ActaNac.Name = "ActaNac";
-            this.ActaNac.Size = new System.Drawing.Size(100, 13);
+            this.ActaNac.Size = new System.Drawing.Size(113, 15);
             this.ActaNac.TabIndex = 126;
             this.ActaNac.Text = "Acta de Nacimiento";
             // 
@@ -1376,11 +1416,11 @@
             // 
             this.apoyos.ActiveLinkColor = System.Drawing.Color.Blue;
             this.apoyos.AutoSize = true;
-            this.apoyos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.apoyos.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.apoyos.LinkColor = System.Drawing.Color.Blue;
-            this.apoyos.Location = new System.Drawing.Point(137, 133);
+            this.apoyos.Location = new System.Drawing.Point(147, 133);
             this.apoyos.Name = "apoyos";
-            this.apoyos.Size = new System.Drawing.Size(15, 16);
+            this.apoyos.Size = new System.Drawing.Size(14, 15);
             this.apoyos.TabIndex = 125;
             this.apoyos.TabStop = true;
             this.apoyos.Text = "0";
@@ -1389,11 +1429,11 @@
             // 
             this.solicitudes.ActiveLinkColor = System.Drawing.Color.Blue;
             this.solicitudes.AutoSize = true;
-            this.solicitudes.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.solicitudes.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.solicitudes.LinkColor = System.Drawing.Color.Blue;
-            this.solicitudes.Location = new System.Drawing.Point(137, 57);
+            this.solicitudes.Location = new System.Drawing.Point(147, 57);
             this.solicitudes.Name = "solicitudes";
-            this.solicitudes.Size = new System.Drawing.Size(15, 16);
+            this.solicitudes.Size = new System.Drawing.Size(14, 15);
             this.solicitudes.TabIndex = 125;
             this.solicitudes.TabStop = true;
             this.solicitudes.Text = "0";
@@ -1401,27 +1441,30 @@
             // label11
             // 
             this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(6, 133);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(92, 13);
+            this.label11.Size = new System.Drawing.Size(106, 15);
             this.label11.TabIndex = 124;
             this.label11.Text = "Apoyos Recibidos";
             // 
             // label10
             // 
             this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(6, 57);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(113, 13);
+            this.label10.Size = new System.Drawing.Size(134, 15);
             this.label10.TabIndex = 123;
             this.label10.Text = "Solicitudes Ingresadas";
             // 
             // label9
             // 
             this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(6, 91);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(67, 13);
+            this.label9.Size = new System.Drawing.Size(77, 15);
             this.label9.TabIndex = 122;
             this.label9.Text = "Altas y Bajas";
             // 
@@ -1492,6 +1535,7 @@
             // 
             // Solicitud
             // 
+            this.Solicitud.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Solicitud.Location = new System.Drawing.Point(3, 15);
             this.Solicitud.Name = "Solicitud";
             this.Solicitud.Size = new System.Drawing.Size(87, 61);
@@ -1503,6 +1547,7 @@
             // 
             // Apoyo
             // 
+            this.Apoyo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Apoyo.Location = new System.Drawing.Point(113, 15);
             this.Apoyo.Name = "Apoyo";
             this.Apoyo.Size = new System.Drawing.Size(87, 61);
@@ -1535,6 +1580,16 @@
             this.Botones.TabStop = false;
             this.Botones.Text = " ";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(516, 72);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(60, 14);
+            this.label15.TabIndex = 195;
+            this.label15.Text = "Expediente";
+            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -1549,6 +1604,7 @@
             // 
             this.Ver.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.show;
             this.Ver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Ver.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ver.Location = new System.Drawing.Point(845, 19);
             this.Ver.Name = "Ver";
             this.Ver.Size = new System.Drawing.Size(50, 50);
@@ -1720,26 +1776,170 @@
             this.pictureBox2.TabIndex = 155;
             this.pictureBox2.TabStop = false;
             // 
-            // label15
+            // PanelOcciso
             // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(516, 72);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(60, 14);
-            this.label15.TabIndex = 195;
-            this.label15.Text = "Expediente";
+            this.PanelOcciso.BackColor = System.Drawing.Color.LightGray;
+            this.PanelOcciso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelOcciso.Controls.Add(this.Parentesco);
+            this.PanelOcciso.Controls.Add(this.label18);
+            this.PanelOcciso.Controls.Add(this.FechaFalle);
+            this.PanelOcciso.Controls.Add(this.label16);
+            this.PanelOcciso.Controls.Add(this.pictureBox13);
+            this.PanelOcciso.Controls.Add(this.pictureBox14);
+            this.PanelOcciso.Controls.Add(this.CerrarPanelOcciso);
+            this.PanelOcciso.Controls.Add(this.label17);
+            this.PanelOcciso.Controls.Add(this.RegistrarOcciso);
+            this.PanelOcciso.Controls.Add(this.Beneficiario);
+            this.PanelOcciso.Controls.Add(this.label19);
+            this.PanelOcciso.Controls.Add(this.label20);
+            this.PanelOcciso.ForeColor = System.Drawing.Color.Black;
+            this.PanelOcciso.Location = new System.Drawing.Point(391, 266);
+            this.PanelOcciso.Name = "PanelOcciso";
+            this.PanelOcciso.Size = new System.Drawing.Size(477, 212);
+            this.PanelOcciso.TabIndex = 188;
+            this.PanelOcciso.Visible = false;
             // 
-            // AbrirExpediente
+            // label16
             // 
-            this.AbrirExpediente.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Expediente;
-            this.AbrirExpediente.Location = new System.Drawing.Point(519, 19);
-            this.AbrirExpediente.Name = "AbrirExpediente";
-            this.AbrirExpediente.Size = new System.Drawing.Size(48, 50);
-            this.AbrirExpediente.TabIndex = 194;
-            this.AbrirExpediente.TabStop = false;
-            this.toolTip1.SetToolTip(this.AbrirExpediente, "Abrir Expediente");
-            this.AbrirExpediente.Click += new System.EventHandler(this.AbrirExpediente_Click);
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label16.AutoSize = true;
+            this.label16.BackColor = System.Drawing.Color.Transparent;
+            this.label16.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label16.Location = new System.Drawing.Point(62, 13);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(263, 22);
+            this.label16.TabIndex = 186;
+            this.label16.Text = "Datos para registro de Occiso";
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox13.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
+            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox13.Location = new System.Drawing.Point(19, 3);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox13.TabIndex = 137;
+            this.pictureBox13.TabStop = false;
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox14.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox14.Location = new System.Drawing.Point(326, 1);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(120, 40);
+            this.pictureBox14.TabIndex = 136;
+            this.pictureBox14.TabStop = false;
+            // 
+            // CerrarPanelOcciso
+            // 
+            this.CerrarPanelOcciso.BackColor = System.Drawing.Color.Transparent;
+            this.CerrarPanelOcciso.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
+            this.CerrarPanelOcciso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CerrarPanelOcciso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CerrarPanelOcciso.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.CerrarPanelOcciso.Location = new System.Drawing.Point(451, 1);
+            this.CerrarPanelOcciso.Name = "CerrarPanelOcciso";
+            this.CerrarPanelOcciso.Size = new System.Drawing.Size(21, 21);
+            this.CerrarPanelOcciso.TabIndex = 135;
+            this.CerrarPanelOcciso.TabStop = false;
+            this.toolTip1.SetToolTip(this.CerrarPanelOcciso, "Cerrar");
+            this.CerrarPanelOcciso.Click += new System.EventHandler(this.CerrarPanelOcciso_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.ForeColor = System.Drawing.Color.Black;
+            this.label17.Location = new System.Drawing.Point(409, 195);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(51, 14);
+            this.label17.TabIndex = 134;
+            this.label17.Text = "Registrar";
+            // 
+            // RegistrarOcciso
+            // 
+            this.RegistrarOcciso.BackColor = System.Drawing.Color.Transparent;
+            this.RegistrarOcciso.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
+            this.RegistrarOcciso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RegistrarOcciso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RegistrarOcciso.Location = new System.Drawing.Point(409, 141);
+            this.RegistrarOcciso.Name = "RegistrarOcciso";
+            this.RegistrarOcciso.Size = new System.Drawing.Size(50, 50);
+            this.RegistrarOcciso.TabIndex = 133;
+            this.RegistrarOcciso.TabStop = false;
+            this.toolTip1.SetToolTip(this.RegistrarOcciso, "Registrar Occiso");
+            this.RegistrarOcciso.Click += new System.EventHandler(this.RegistrarOcciso_Click);
+            // 
+            // Beneficiario
+            // 
+            this.Beneficiario.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Beneficiario.Location = new System.Drawing.Point(43, 129);
+            this.Beneficiario.MaxLength = 20;
+            this.Beneficiario.Name = "Beneficiario";
+            this.Beneficiario.Size = new System.Drawing.Size(360, 25);
+            this.Beneficiario.TabIndex = 131;
+            this.toolTip1.SetToolTip(this.Beneficiario, "Nombre del Beneficiario");
+            // 
+            // label19
+            // 
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(40, 110);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(163, 17);
+            this.label19.TabIndex = 130;
+            this.label19.Text = "Nombre del Beneficiario";
+            // 
+            // label20
+            // 
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(40, 63);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(159, 17);
+            this.label20.TabIndex = 128;
+            this.label20.Text = "Fecha de Fallecimiento";
+            // 
+            // FechaFalle
+            // 
+            this.FechaFalle.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaFalle.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaFalle.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaFalle.Location = new System.Drawing.Point(43, 79);
+            this.FechaFalle.Name = "FechaFalle";
+            this.FechaFalle.Size = new System.Drawing.Size(115, 22);
+            this.FechaFalle.TabIndex = 188;
+            // 
+            // Parentesco
+            // 
+            this.Parentesco.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Parentesco.Location = new System.Drawing.Point(43, 178);
+            this.Parentesco.MaxLength = 20;
+            this.Parentesco.Name = "Parentesco";
+            this.Parentesco.Size = new System.Drawing.Size(360, 25);
+            this.Parentesco.TabIndex = 190;
+            this.toolTip1.SetToolTip(this.Parentesco, "Parentesco del Beneficiario con el Pescador");
+            // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(40, 159);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(83, 17);
+            this.label18.TabIndex = 189;
+            this.label18.Text = "Parentesco";
             // 
             // Pantalla_Registro_Usuario
             // 
@@ -1749,6 +1949,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1489, 749);
+            this.Controls.Add(this.PanelOcciso);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.PanelCURP);
             this.Controls.Add(this.Botones);
@@ -1795,6 +1996,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarPescador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AbrirExpediente)).EndInit();
             this.gbInformacion.ResumeLayout(false);
             this.gbInformacion.PerformLayout();
             this.Botones.ResumeLayout(false);
@@ -1809,7 +2011,12 @@
             this.gbBusqueda.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AbrirExpediente)).EndInit();
+            this.PanelOcciso.ResumeLayout(false);
+            this.PanelOcciso.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelOcciso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegistrarOcciso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1948,5 +2155,18 @@
         private System.Windows.Forms.RadioButton OcupBuzo;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.PictureBox AbrirExpediente;
+        private System.Windows.Forms.Panel PanelOcciso;
+        private System.Windows.Forms.TextBox Parentesco;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.DateTimePicker FechaFalle;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.PictureBox pictureBox13;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox CerrarPanelOcciso;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.PictureBox RegistrarOcciso;
+        private System.Windows.Forms.TextBox Beneficiario;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Solicitudes));
             this.NombrePesc = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.folio = new System.Windows.Forms.TextBox();
@@ -102,6 +103,7 @@
             // folio
             // 
             this.folio.Location = new System.Drawing.Point(295, 125);
+            this.folio.MaxLength = 11;
             this.folio.Name = "folio";
             this.folio.Size = new System.Drawing.Size(102, 22);
             this.folio.TabIndex = 1;
@@ -187,6 +189,7 @@
             // 
             this.responsable.FormattingEnabled = true;
             this.responsable.Items.AddRange(new object[] {
+            "Hernan Rafael Flores Cota",
             "Dacia Meza Villavicencio",
             "Rosa Maria Castro Lozano",
             "Cristina Gonzalez Rubio SanVicente",
@@ -312,6 +315,7 @@
             // 
             this.Entregar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Entregar;
             this.Entregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Entregar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Entregar.Location = new System.Drawing.Point(224, 362);
             this.Entregar.Name = "Entregar";
             this.Entregar.Size = new System.Drawing.Size(50, 50);
@@ -559,6 +563,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NombrePesc);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Pantalla_Solicitudes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
