@@ -278,6 +278,36 @@
                           </Border>
                         </Style>
                       </Rectangle>
+                      <Textbox Name="Textbox18">
+                        <CanGrow>true</CanGrow>
+                        <KeepTogether>true</KeepTogether>
+                        <Paragraphs>
+                          <Paragraph>
+                            <TextRuns>
+                              <TextRun>
+                                <Value>=Today()</Value>
+                                <Style />
+                              </TextRun>
+                            </TextRuns>
+                            <Style />
+                          </Paragraph>
+                        </Paragraphs>
+                        <rd:DefaultName>Textbox18</rd:DefaultName>
+                        <Top>0.54413cm</Top>
+                        <Left>16.03366cm</Left>
+                        <Height>0.52012cm</Height>
+                        <Width>2.38942cm</Width>
+                        <ZIndex>2</ZIndex>
+                        <Style>
+                          <Border>
+                            <Style>None</Style>
+                          </Border>
+                          <PaddingLeft>2pt</PaddingLeft>
+                          <PaddingRight>2pt</PaddingRight>
+                          <PaddingTop>2pt</PaddingTop>
+                          <PaddingBottom>2pt</PaddingBottom>
+                        </Style>
+                      </Textbox>
                     </ReportItems>
                     <KeepTogether>true</KeepTogether>
                     <Top>0.72346cm</Top>
@@ -4110,7 +4140,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Subsecretaria de Pesca y Acuacultura</Value>
+                  <Value>Secretaria de PescaAcuacultura y Desarrollo Agropecuario</Value>
                   <Style>
                     <FontSize>9pt</FontSize>
                     <FontWeight>Normal</FontWeight>
@@ -4124,7 +4154,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>Direccion de Ordenamiento Pesquero</Value>
+                  <Value>Subsecretaria de Pesca y Acuacultura / Direccion de Ordenamiento Pesquero</Value>
                   <Style>
                     <FontSize>9pt</FontSize>
                     <FontWeight>Normal</FontWeight>

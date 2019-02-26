@@ -593,23 +593,30 @@ namespace OrdenamientoPesquero
         #region RespaldosBD
         private void generarToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult result = folderBrowserDialog1.ShowDialog();
-            if (result == DialogResult.OK) // Test result.
-            {
-                this.Cursor = Cursors.WaitCursor;
-                //proc.cambiarbd("OrdPesquero2");
-                //proc.limpiar();
-                //proc.PasarUnidad2(cbRNPA.Text);
-                //proc.PasarEmbarcaciones2(cbRNPA.Text);
-                //proc.PasarPescadores2(cbRNPA.Text);
-                //proc.PasarPermisos2(cbRNPA.Text);
-                //proc.PasarEquipoPesca2(cbRNPA.Text);
-                //proc.PasarEmbarcaPermis2(cbRNPA.Text);
-                //proc.PasarDirectiva2(cbRNPA.Text);
-                proc.Generar(folderBrowserDialog1.SelectedPath, cbRNPA.Text);
-                //proc.cambiarbd("OrdPesquero");
-                this.Cursor = Cursors.Default;
-            }
+            gbBotones.Enabled = false;
+            gbBusqueda.Enabled = false;
+            gbOrgPes.Enabled = false;
+            Resumen.Enabled = false;
+            panel1.Visible = true;
+            panel1.Enabled = true;
+            //panel1.BringToFront();
+            //DialogResult result = folderBrowserDialog1.ShowDialog();
+            //if (result == DialogResult.OK) // Test result.
+            //{
+            //    this.Cursor = Cursors.WaitCursor;
+            //    //proc.cambiarbd("OrdPesquero2");
+            //    //proc.limpiar();
+            //    //proc.PasarUnidad2(cbRNPA.Text);
+            //    //proc.PasarEmbarcaciones2(cbRNPA.Text);
+            //    //proc.PasarPescadores2(cbRNPA.Text);
+            //    //proc.PasarPermisos2(cbRNPA.Text);
+            //    //proc.PasarEquipoPesca2(cbRNPA.Text);
+            //    //proc.PasarEmbarcaPermis2(cbRNPA.Text);
+            //    //proc.PasarDirectiva2(cbRNPA.Text);
+            //    proc.Generar(folderBrowserDialog1.SelectedPath, cbRNPA.Text);
+            //    //proc.cambiarbd("OrdPesquero");
+            //    this.Cursor = Cursors.Default;
+            //}
         }
 
         private void cargarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -622,13 +629,16 @@ namespace OrdenamientoPesquero
             //{
             if (cambiosToolStripMenuItem.Checked)
             {
-                proc.PasarUnidad();
-                proc.PasarEmbarcaciones();
-                proc.PasarPescadores();
-                proc.PasarPermisos();
-                proc.PasarEquipoPesca();
-                proc.PasarEmbarcaPermis();
-                proc.PasarDirectiva();
+                proc.PasarUnidad("","");
+                proc.PasarEmbarcaciones("", "");
+                proc.PasarPescadores("", "");
+                proc.PasarPermisos("","");
+                proc.PasarEquipoPesca("", "");
+                proc.PasarEmbarcaPermis("", "");
+                proc.PasarDirectiva("", "");
+                proc.PasarArchivosPescador("", "");
+                proc.PasarArchivosEmbarca("", "");
+                proc.PasarArchivosUnidad("", "");
                 this.OnLoad(e);
             }
             else
@@ -883,6 +893,66 @@ namespace OrdenamientoPesquero
             else
             {
                 Pantallas_Menu.MenuReportes mr = new Pantallas_Menu.MenuReportes(cbRNPA.Text, "ReporteXPermicionario.rdlc"); mr.Show(this);
+            }
+        }
+
+        private void radioButton1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (radioButton1.Checked)
+            {
+                comboBox1.Enabled = true;
+            }
+            else
+            {
+                comboBox1.Enabled = false;
+            }
+        }
+
+        private void pictureBox12_Click(object sender, EventArgs e)
+        {
+            gbBotones.Enabled = true;
+            gbBusqueda.Enabled = true;
+            gbOrgPes.Enabled = true;
+            panel1.Visible = false;
+            panel1.Enabled = false;
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+            string municipio = "";
+            string rnp = "";
+            string nombre = "";
+            DialogResult result = folderBrowserDialog1.ShowDialog();
+            if (result == DialogResult.OK) // Test result.
+            {
+                if (radioButton1.Checked)
+                {
+                    municipio = comboBox1.Text;
+                    nombre = municipio;
+                }
+                if (radioButton2.Checked)
+                {
+                    rnp = cbRNPA.Text;
+                    nombre = rnp;
+                }
+                if (radioButton3.Checked)
+                {
+                    nombre = "respaldo";
+                }
+                this.Cursor = Cursors.WaitCursor;
+                proc.borrartablas();
+                proc.PasarUnidad2(municipio, rnp);
+                proc.PasarEmbarcaciones2(municipio, rnp);
+                proc.PasarPescadores2(municipio, rnp);
+                proc.PasarPermisos2(municipio, rnp);
+                proc.PasarEquipoPesca2();
+                proc.PasarEmbarcaPermis2(municipio, rnp);
+                //proc.PasarDirectiva2(municipio, rnp);
+                proc.PasarArchivosPescador2(municipio, rnp);
+                proc.PasarArchivosEmbarca2(municipio, rnp);
+                proc.PasarArchivosUnidad2(municipio, rnp);
+                proc.Generar(folderBrowserDialog1.SelectedPath, nombre);
+                this.Cursor = Cursors.Default;
             }
         }
 

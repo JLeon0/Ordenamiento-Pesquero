@@ -510,84 +510,124 @@ namespace Logica
         }
         #endregion
 
-
-        #region Respaldos
-        public int PasarPescadores()
-        {
-            string[] Parametros = { };
-            return c.EjecutarMaster("PasarPescadores2", Parametros);
-        }
-        public int PasarDirectiva()
-        {
-            string[] Parametros = {  };
-            return c.EjecutarMaster("PasarDirectiva2", Parametros);
-        }
-        public int PasarEmbarcaciones()
-        {
-            string[] Parametros = {  };
-            return c.EjecutarMaster("PasarEmbarcaciones2", Parametros);
-        }
-        public int PasarPermisos()
-        {
-            string[] Parametros = {  };
-            return c.EjecutarMaster("PasarPermisos2", Parametros);
-        }
-        public int PasarUnidad()
-        {
-            string[] Parametros = { };
-            return c.EjecutarMaster("PasarUnidad2", Parametros);
-        }
-        public int PasarEquipoPesca()
-        {
-            string[] Parametros = {  };
-            return c.EjecutarMaster("PasarEquipoPesca2", Parametros);
-        }
-        public int PasarEmbarcaPermis()
-        {
-            string[] Parametros = {  };
-            return c.EjecutarMaster("PasarEmbarcaPermis2", Parametros);
-        }
-        public int PasarPescadores2(string rnpa)
-        {
-            string[] Parametros = { "@rnpa"};
-            return c.EjecutarMaster("PasarPescadores3", Parametros, rnpa);
-        }
-        public int PasarDirectiva2(string rnpa)
-        {
-            string[] Parametros = { "@rnpa" };
-            return c.EjecutarMaster("PasarDirectiva3", Parametros, rnpa);
-        }
-        public int PasarEmbarcaciones2(string rnpa)
-        {
-            string[] Parametros = { "@rnptitular" };
-            return c.EjecutarMaster("PasarEmbarcaciones3", Parametros, rnpa);
-        }
-        public int PasarPermisos2(string rnpa)
-        {
-            string[] Parametros = { "@rnpa" };
-            return c.EjecutarMaster("PasarPermisos3", Parametros, rnpa);
-        }
-        public int PasarUnidad2(string rnpa)
-        {
-            string[] Parametros = {"@rnpa" };
-            return c.EjecutarMaster("PasarUnidad3", Parametros, rnpa);
-        }
-        public int PasarEquipoPesca2(string rnpa)
-        {
-            string[] Parametros = { "@rnpa" };
-            return c.EjecutarMaster("PasarEquipoPesca3", Parametros, rnpa);
-        }
-        public int PasarEmbarcaPermis2(string rnpa)
-        {
-            string[] Parametros = { "@rnpa" };
-            return c.EjecutarMaster("PasarEmbarcaPermis3", Parametros, rnpa);
-        }
         public int CerrarConexion()
         {
             string[] Parametros = { "@bd" };
             return c.EjecutarMaster("cerrarCon", Parametros, "OrdPesquero2");
         }
 
+        #region Respaldos
+        public int PasarPescadores(string muni, string rnpa)
+        {
+            string[] Parametros = {"@MUNI", "@RNPA" };
+            return c.EjecutarMaster("PasarPescadores2", Parametros, muni, rnpa);
+        }
+        public int PasarDirectiva(string muni, string rnpa)
+        {
+            string[] Parametros = { "@MUNI", "@RNPA" };
+            return c.EjecutarMaster("PasarDirectiva2", Parametros, muni, rnpa);
+        }
+        public int PasarEmbarcaciones(string muni, string rnpa)
+        {
+            string[] Parametros = { "@MUNI", "@RNPA" };
+            return c.EjecutarMaster("PasarEmbarcaciones2", Parametros, muni, rnpa);
+        }
+        public int PasarPermisos(string muni, string rnpa)
+        {
+            string[] Parametros = { "@MUNI", "@RNPA" };
+            return c.EjecutarMaster("PasarPermisos2", Parametros, muni, rnpa);
+        }
+        public int PasarUnidad(string muni, string rnpa)
+        {
+            string[] Parametros = { "@MUNI", "@RNPA" };
+            return c.EjecutarMaster("PasarUnidad2", Parametros, muni, rnpa);
+        }
+        public int PasarEquipoPesca(string muni, string rnpa)
+        {
+            string[] Parametros = { "@MUNI", "@RNPA" };
+            return c.EjecutarMaster("PasarEquiposPesca2", Parametros, muni, rnpa);
+        }
+        public int PasarEmbarcaPermis(string muni, string rnpa)
+        {
+            string[] Parametros = { "@MUNI", "@RNPA" };
+            return c.EjecutarMaster("PasarEmbarcaPermis2", Parametros, muni, rnpa);
+        }
+        public int PasarArchivosPescador(string muni, string rnpa)
+        {
+            string[] Parametros = { "@MUNI", "@RNPA" };
+            return c.EjecutarMaster("PasarIMAGENES2", Parametros, muni, rnpa);
+        }
+        public int PasarArchivosUnidad(string muni, string rnpa)
+        {
+            string[] Parametros = { "@MUNI","@RNPA" };
+            return c.EjecutarMaster("PASARARCHIVOSUNIDAD2", Parametros, muni, rnpa);
+        }
+        public int PasarArchivosEmbarca(string muni, string rnpa)
+        {
+            string[] Parametros = { "@MUNI" };
+            return c.EjecutarMaster("PASARARCHIVOSEMBARCA2", Parametros, muni, rnpa);
+        }
+
+
+
+
+
+
+        public int PasarPescadores2(string muni, string rnpa)
+        {
+            string[] Parametros = { "@MUNI", "@RNPA" };
+            return c.EjecutarMaster("PasarPescadores3", Parametros, muni, rnpa);
+        }
+        public int PasarDirectiva2(string muni, string rnpa)
+        {
+            string[] Parametros = { "@MUNI", "@RNPA" };
+            return c.EjecutarMaster("PasarDirectiva3", Parametros, muni, rnpa);
+        }
+        public int PasarEmbarcaciones2(string muni, string rnpa)
+        {
+            string[] Parametros = { "@MUNI", "@RNPA" };
+            return c.EjecutarMaster("PasarEmbarcaciones3", Parametros, muni, rnpa);
+        }
+        public int PasarPermisos2(string muni, string rnpa)
+        {
+            string[] Parametros = { "@MUNI", "@RNPA" };
+            return c.EjecutarMaster("PasarPermisos3", Parametros, muni, rnpa);
+        }
+        public int PasarUnidad2(string muni, string rnpa)
+        {
+            string[] Parametros = { "@MUNI", "@RNPA" };
+            return c.EjecutarMaster("PasarUnidad3", Parametros, muni, rnpa);
+        }
+        public int PasarEquipoPesca2()
+        {
+            string[] Parametros = {};
+            return c.EjecutarMaster("PasarEquiposPesca3", Parametros);
+        }
+        public int PasarEmbarcaPermis2(string muni, string rnpa)
+        {
+            string[] Parametros = { "@MUNI", "@RNPA" };
+            return c.EjecutarMaster("PasarEmbarcaPermis3", Parametros, muni, rnpa);
+        }
+        public int PasarArchivosPescador2(string muni, string rnpa)
+        {
+            string[] Parametros = { "@MUNI", "@RNPA" };
+            return c.EjecutarMaster("PasarIMAGENES3", Parametros, muni, rnpa);
+        }
+        public int PasarArchivosUnidad2(string muni, string rnpa)
+        {
+            string[] Parametros = { "@MUNI", "@RNPA" };
+            return c.EjecutarMaster("PASARARCHIVOSUNIDAD3", Parametros, muni, rnpa);
+        }
+        public int PasarArchivosEmbarca2(string muni, string rnpa)
+        {
+            string[] Parametros = { "@MUNI" };
+            return c.EjecutarMaster("PASARARCHIVOSEMBARCA3", Parametros, muni, rnpa);
+        }
+        public int borrartablas()
+        {
+            string[] Parametros = { };
+            return c.EjecutarMaster("BORRARTABLAS", Parametros);
+        }
         public int limpiar()
         {
             string[] Parametros = { };
