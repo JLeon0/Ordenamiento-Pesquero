@@ -297,7 +297,6 @@ namespace Logica
             return c.getDatosTabla("ObtenerExpedientePescador", Parametros, curp);
         }
 
-
         public DataTable ObtenerImagen(string curp)
         {
             string[] Parametros = { "@curp" };
@@ -312,6 +311,12 @@ namespace Logica
         {
             string[] Parametros = { "@nombre", "@rnpa" };
             return c.getDatosTabla("BuscarPescador", Parametros, nombre, rnpa);
+        }
+
+        public int RegistrarOcciso(string curp, string fechafall, string bene, string paren)
+        {
+            string[] Parametros = { "@curp", "@fechafallecimiento", "@beneficiario","@parentesco" };
+            return c.Ejecutar("RegistrarOcciso", Parametros, curp, fechafall, bene, paren);
         }
         #endregion
 
