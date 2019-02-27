@@ -278,7 +278,8 @@ namespace OrdenamientoPesquero
                 ListaNombres.DataSource = dt;
                 ListaNombres.ValueMember = "CURP";
                 ListaNombres.DisplayMember = "NOMBRE";
-                lblNo.Location = new Point(lblNo.Location.X, 50);
+                lblNo.Location = new Point(lblNo.Location.X, 40);
+                lblP.Location = new Point(lblP.Location.X, 25);
                 ListaNombres.Height += 200;
             }
             else
