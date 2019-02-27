@@ -126,6 +126,10 @@
             this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
             this.EliminarUnidad = new System.Windows.Forms.PictureBox();
             this.AbrirExpediente = new System.Windows.Forms.PictureBox();
+            this.CerrarPanelOcciso = new System.Windows.Forms.PictureBox();
+            this.RegistrarOcciso = new System.Windows.Forms.PictureBox();
+            this.Beneficiario = new System.Windows.Forms.TextBox();
+            this.Parentesco = new System.Windows.Forms.TextBox();
             this.gbInformacion = new System.Windows.Forms.GroupBox();
             this.AComp = new System.Windows.Forms.Label();
             this.AIne = new System.Windows.Forms.Label();
@@ -163,18 +167,14 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PanelOcciso = new System.Windows.Forms.Panel();
+            this.label18 = new System.Windows.Forms.Label();
+            this.FechaFalle = new System.Windows.Forms.DateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.CerrarPanelOcciso = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.RegistrarOcciso = new System.Windows.Forms.PictureBox();
-            this.Beneficiario = new System.Windows.Forms.TextBox();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.FechaFalle = new System.Windows.Forms.DateTimePicker();
-            this.Parentesco = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.gbDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
@@ -201,6 +201,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AbrirExpediente)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelOcciso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegistrarOcciso)).BeginInit();
             this.gbInformacion.SuspendLayout();
             this.Botones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ver)).BeginInit();
@@ -214,8 +216,6 @@
             this.PanelOcciso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelOcciso)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RegistrarOcciso)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatosGenerales
@@ -1345,6 +1345,55 @@
             this.toolTip1.SetToolTip(this.AbrirExpediente, "Abrir Expediente");
             this.AbrirExpediente.Click += new System.EventHandler(this.AbrirExpediente_Click);
             // 
+            // CerrarPanelOcciso
+            // 
+            this.CerrarPanelOcciso.BackColor = System.Drawing.Color.Transparent;
+            this.CerrarPanelOcciso.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
+            this.CerrarPanelOcciso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CerrarPanelOcciso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CerrarPanelOcciso.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.CerrarPanelOcciso.Location = new System.Drawing.Point(451, 1);
+            this.CerrarPanelOcciso.Name = "CerrarPanelOcciso";
+            this.CerrarPanelOcciso.Size = new System.Drawing.Size(21, 21);
+            this.CerrarPanelOcciso.TabIndex = 135;
+            this.CerrarPanelOcciso.TabStop = false;
+            this.toolTip1.SetToolTip(this.CerrarPanelOcciso, "Cerrar");
+            this.CerrarPanelOcciso.Click += new System.EventHandler(this.CerrarPanelOcciso_Click);
+            // 
+            // RegistrarOcciso
+            // 
+            this.RegistrarOcciso.BackColor = System.Drawing.Color.Transparent;
+            this.RegistrarOcciso.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
+            this.RegistrarOcciso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RegistrarOcciso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RegistrarOcciso.Location = new System.Drawing.Point(409, 141);
+            this.RegistrarOcciso.Name = "RegistrarOcciso";
+            this.RegistrarOcciso.Size = new System.Drawing.Size(50, 50);
+            this.RegistrarOcciso.TabIndex = 133;
+            this.RegistrarOcciso.TabStop = false;
+            this.toolTip1.SetToolTip(this.RegistrarOcciso, "Registrar Occiso");
+            this.RegistrarOcciso.Click += new System.EventHandler(this.RegistrarOcciso_Click);
+            // 
+            // Beneficiario
+            // 
+            this.Beneficiario.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Beneficiario.Location = new System.Drawing.Point(43, 129);
+            this.Beneficiario.MaxLength = 20;
+            this.Beneficiario.Name = "Beneficiario";
+            this.Beneficiario.Size = new System.Drawing.Size(360, 25);
+            this.Beneficiario.TabIndex = 131;
+            this.toolTip1.SetToolTip(this.Beneficiario, "Nombre del Beneficiario");
+            // 
+            // Parentesco
+            // 
+            this.Parentesco.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Parentesco.Location = new System.Drawing.Point(43, 178);
+            this.Parentesco.MaxLength = 20;
+            this.Parentesco.Name = "Parentesco";
+            this.Parentesco.Size = new System.Drawing.Size(360, 25);
+            this.Parentesco.TabIndex = 190;
+            this.toolTip1.SetToolTip(this.Parentesco, "Parentesco del Beneficiario con el Pescador");
+            // 
             // gbInformacion
             // 
             this.gbInformacion.Controls.Add(this.AComp);
@@ -1475,7 +1524,7 @@
             // lblP
             // 
             this.lblP.AutoSize = true;
-            this.lblP.Location = new System.Drawing.Point(56, 33);
+            this.lblP.Location = new System.Drawing.Point(56, 30);
             this.lblP.Name = "lblP";
             this.lblP.Size = new System.Drawing.Size(80, 13);
             this.lblP.TabIndex = 158;
@@ -1484,7 +1533,7 @@
             // BuscarNombre
             // 
             this.BuscarNombre.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BuscarNombre.Location = new System.Drawing.Point(7, 59);
+            this.BuscarNombre.Location = new System.Drawing.Point(7, 68);
             this.BuscarNombre.Name = "BuscarNombre";
             this.BuscarNombre.Size = new System.Drawing.Size(185, 20);
             this.BuscarNombre.TabIndex = 160;
@@ -1496,7 +1545,7 @@
             this.ListaNombres.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListaNombres.FormattingEnabled = true;
             this.ListaNombres.ItemHeight = 16;
-            this.ListaNombres.Location = new System.Drawing.Point(7, 85);
+            this.ListaNombres.Location = new System.Drawing.Point(7, 94);
             this.ListaNombres.Name = "ListaNombres";
             this.ListaNombres.Size = new System.Drawing.Size(185, 196);
             this.ListaNombres.TabIndex = 161;
@@ -1507,7 +1556,7 @@
             this.ListaNombres2.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListaNombres2.FormattingEnabled = true;
             this.ListaNombres2.ItemHeight = 16;
-            this.ListaNombres2.Location = new System.Drawing.Point(7, 341);
+            this.ListaNombres2.Location = new System.Drawing.Point(7, 350);
             this.ListaNombres2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ListaNombres2.Name = "ListaNombres2";
             this.ListaNombres2.Size = new System.Drawing.Size(185, 148);
@@ -1517,7 +1566,7 @@
             // BuscarNombre2
             // 
             this.BuscarNombre2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BuscarNombre2.Location = new System.Drawing.Point(7, 312);
+            this.BuscarNombre2.Location = new System.Drawing.Point(7, 321);
             this.BuscarNombre2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BuscarNombre2.Name = "BuscarNombre2";
             this.BuscarNombre2.Size = new System.Drawing.Size(185, 20);
@@ -1527,7 +1576,7 @@
             // lblNo
             // 
             this.lblNo.AutoSize = true;
-            this.lblNo.Location = new System.Drawing.Point(56, 295);
+            this.lblNo.Location = new System.Drawing.Point(56, 304);
             this.lblNo.Name = "lblNo";
             this.lblNo.Size = new System.Drawing.Size(95, 13);
             this.lblNo.TabIndex = 177;
@@ -1745,7 +1794,7 @@
             this.gbBusqueda.Controls.Add(this.ListaNombres);
             this.gbBusqueda.Controls.Add(this.BuscarNombre2);
             this.gbBusqueda.Controls.Add(this.lblNo);
-            this.gbBusqueda.Location = new System.Drawing.Point(12, 102);
+            this.gbBusqueda.Location = new System.Drawing.Point(12, 90);
             this.gbBusqueda.Name = "gbBusqueda";
             this.gbBusqueda.Size = new System.Drawing.Size(198, 523);
             this.gbBusqueda.TabIndex = 188;
@@ -1799,6 +1848,28 @@
             this.PanelOcciso.TabIndex = 188;
             this.PanelOcciso.Visible = false;
             // 
+            // label18
+            // 
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(40, 159);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(83, 17);
+            this.label18.TabIndex = 189;
+            this.label18.Text = "Parentesco";
+            // 
+            // FechaFalle
+            // 
+            this.FechaFalle.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaFalle.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaFalle.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.FechaFalle.Location = new System.Drawing.Point(43, 79);
+            this.FechaFalle.Name = "FechaFalle";
+            this.FechaFalle.Size = new System.Drawing.Size(115, 22);
+            this.FechaFalle.TabIndex = 188;
+            // 
             // label16
             // 
             this.label16.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -1835,21 +1906,6 @@
             this.pictureBox14.TabIndex = 136;
             this.pictureBox14.TabStop = false;
             // 
-            // CerrarPanelOcciso
-            // 
-            this.CerrarPanelOcciso.BackColor = System.Drawing.Color.Transparent;
-            this.CerrarPanelOcciso.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
-            this.CerrarPanelOcciso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CerrarPanelOcciso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CerrarPanelOcciso.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.CerrarPanelOcciso.Location = new System.Drawing.Point(451, 1);
-            this.CerrarPanelOcciso.Name = "CerrarPanelOcciso";
-            this.CerrarPanelOcciso.Size = new System.Drawing.Size(21, 21);
-            this.CerrarPanelOcciso.TabIndex = 135;
-            this.CerrarPanelOcciso.TabStop = false;
-            this.toolTip1.SetToolTip(this.CerrarPanelOcciso, "Cerrar");
-            this.CerrarPanelOcciso.Click += new System.EventHandler(this.CerrarPanelOcciso_Click);
-            // 
             // label17
             // 
             this.label17.AutoSize = true;
@@ -1860,30 +1916,6 @@
             this.label17.Size = new System.Drawing.Size(51, 14);
             this.label17.TabIndex = 134;
             this.label17.Text = "Registrar";
-            // 
-            // RegistrarOcciso
-            // 
-            this.RegistrarOcciso.BackColor = System.Drawing.Color.Transparent;
-            this.RegistrarOcciso.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
-            this.RegistrarOcciso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RegistrarOcciso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegistrarOcciso.Location = new System.Drawing.Point(409, 141);
-            this.RegistrarOcciso.Name = "RegistrarOcciso";
-            this.RegistrarOcciso.Size = new System.Drawing.Size(50, 50);
-            this.RegistrarOcciso.TabIndex = 133;
-            this.RegistrarOcciso.TabStop = false;
-            this.toolTip1.SetToolTip(this.RegistrarOcciso, "Registrar Occiso");
-            this.RegistrarOcciso.Click += new System.EventHandler(this.RegistrarOcciso_Click);
-            // 
-            // Beneficiario
-            // 
-            this.Beneficiario.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Beneficiario.Location = new System.Drawing.Point(43, 129);
-            this.Beneficiario.MaxLength = 20;
-            this.Beneficiario.Name = "Beneficiario";
-            this.Beneficiario.Size = new System.Drawing.Size(360, 25);
-            this.Beneficiario.TabIndex = 131;
-            this.toolTip1.SetToolTip(this.Beneficiario, "Nombre del Beneficiario");
             // 
             // label19
             // 
@@ -1908,38 +1940,6 @@
             this.label20.Size = new System.Drawing.Size(159, 17);
             this.label20.TabIndex = 128;
             this.label20.Text = "Fecha de Fallecimiento";
-            // 
-            // FechaFalle
-            // 
-            this.FechaFalle.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FechaFalle.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FechaFalle.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.FechaFalle.Location = new System.Drawing.Point(43, 79);
-            this.FechaFalle.Name = "FechaFalle";
-            this.FechaFalle.Size = new System.Drawing.Size(115, 22);
-            this.FechaFalle.TabIndex = 188;
-            // 
-            // Parentesco
-            // 
-            this.Parentesco.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Parentesco.Location = new System.Drawing.Point(43, 178);
-            this.Parentesco.MaxLength = 20;
-            this.Parentesco.Name = "Parentesco";
-            this.Parentesco.Size = new System.Drawing.Size(360, 25);
-            this.Parentesco.TabIndex = 190;
-            this.toolTip1.SetToolTip(this.Parentesco, "Parentesco del Beneficiario con el Pescador");
-            // 
-            // label18
-            // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(40, 159);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(83, 17);
-            this.label18.TabIndex = 189;
-            this.label18.Text = "Parentesco";
             // 
             // Pantalla_Registro_Usuario
             // 
@@ -1997,6 +1997,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AbrirExpediente)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelOcciso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegistrarOcciso)).EndInit();
             this.gbInformacion.ResumeLayout(false);
             this.gbInformacion.PerformLayout();
             this.Botones.ResumeLayout(false);
@@ -2015,8 +2017,6 @@
             this.PanelOcciso.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelOcciso)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RegistrarOcciso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
