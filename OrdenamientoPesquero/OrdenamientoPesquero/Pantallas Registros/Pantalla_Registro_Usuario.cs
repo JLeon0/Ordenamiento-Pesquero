@@ -155,7 +155,7 @@ namespace OrdenamientoPesquero
             else
             {
                 string R = "NO APLICA";
-                if (ListaNombres.SelectedIndex > -1) { NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), ""); R = NOMBRES.Rows[0]["RNPTITULAR"].ToString(); }
+                if (ListaNombres.SelectedIndex > -1 && RNPA != "") { NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), ""); R = NOMBRES.Rows[0]["RNPTITULAR"].ToString(); }
                 pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, "NO APLICA", CorreoPesc.Text, LocalidadPesc.Text, o, R, Seguro.Text, fechaVenF, fechaExpF);
                 if (registrar)
                 {
@@ -289,6 +289,7 @@ namespace OrdenamientoPesquero
                 ListaNombres.DisplayMember = "NOMBRE";
                 lblP.Text = "PESCADORES  " + ListaNombres.Items.Count;
             }
+            ListaNombres.ClearSelected();
         }
 
         private void CargarNoPescadores()
@@ -300,6 +301,7 @@ namespace OrdenamientoPesquero
                 ListaNombres2.Items.Add(fila["NOMBRE"].ToString());
             }
             lblNo.Text = "NO ORDENADOS  " + ListaNombres2.Items.Count;
+            ListaNombres2.ClearSelected();
         }
 
         private void CargarMatriculas()
