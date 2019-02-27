@@ -31,6 +31,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         Conexion c;
         private void Vistas_Load(object sender, EventArgs e)
         {
+            // TODO: esta línea de código carga datos en la tabla 'pesTodospes.PESCADOR' Puede moverla o quitarla según sea necesario.
+            this.pESCADORTableAdapter.Fill(this.pesTodospes.PESCADOR);
             // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet12.pesembarca' Puede moverla o quitarla según sea necesario.
             //this.pesembarcaTableAdapter.Fill(this.ordPesqueroDataSet12.pesembarca);
             // TODO: esta línea de código carga datos en la tabla 'seguro.MULEGE_SEGURO' Puede moverla o quitarla según sea necesario.
@@ -559,6 +561,15 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                             File.WriteAllBytes(@"C:\FICHAS\"+muni+@"\" + nombre+@"\Ficha Informativa.pdf", reportViewer1.LocalReport.Render("PDF"));
                     }
                     this.Close();
+                    break;
+                case 13:
+                    this.reportViewer1.ProcessingMode = ProcessingMode.Local;
+                    reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "reportepescadores2.rdlc");
+                    this.pESCADORTableAdapter.Fill(pesTodospes.PESCADOR);
+                    datos.Name = "DataSet1";
+                    datos.Value = pesTodospes.PESCADOR;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos);
+                    this.reportViewer1.RefreshReport();
                     break;
                 default:
                     break;

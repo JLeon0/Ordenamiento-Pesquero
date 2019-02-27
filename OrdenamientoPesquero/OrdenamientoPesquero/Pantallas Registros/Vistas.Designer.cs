@@ -30,6 +30,8 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.obtenerImagenBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.obtenerImagen = new OrdenamientoPesquero.ObtenerImagen();
             this.pesembarcaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ordPesqueroDataSet12 = new OrdenamientoPesquero.OrdPesqueroDataSet12();
             this.mULEGESEGUROBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -95,9 +97,13 @@
             this.obtenerFirmaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ordPesqueroDataSet10 = new OrdenamientoPesquero.OrdPesqueroDataSet10();
             this.obtenerFirmaTableAdapter = new OrdenamientoPesquero.OrdPesqueroDataSet10TableAdapters.ObtenerFirmaTableAdapter();
-            this.obtenerImagen = new OrdenamientoPesquero.ObtenerImagen();
-            this.obtenerImagenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.obtenerImagenTableAdapter = new OrdenamientoPesquero.ObtenerImagenTableAdapters.ObtenerImagenTableAdapter();
+            this.pesTodospes = new OrdenamientoPesquero.PesTodospes();
+            this.pesTodospesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pESCADORBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pESCADORTableAdapter = new OrdenamientoPesquero.PesTodospesTableAdapters.PESCADORTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerImagenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerImagen)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pesembarcaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mULEGESEGUROBindingSource)).BeginInit();
@@ -140,9 +146,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.lOSCABOSSEGUROBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerFirmaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obtenerImagen)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obtenerImagenBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pesTodospes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pesTodospesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pESCADORBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // obtenerImagenBindingSource
+            // 
+            this.obtenerImagenBindingSource.DataMember = "ObtenerImagen";
+            this.obtenerImagenBindingSource.DataSource = this.obtenerImagen;
+            // 
+            // obtenerImagen
+            // 
+            this.obtenerImagen.DataSetName = "ObtenerImagen";
+            this.obtenerImagen.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // pesembarcaBindingSource
             // 
@@ -263,7 +280,7 @@
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.obtenerImagenBindingSource;
+            reportDataSource1.Value = this.pESCADORBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.EnableExternalImages = true;
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "OrdenamientoPesquero.Reportes.Permisos.rdlc";
@@ -455,19 +472,28 @@
             // 
             this.obtenerFirmaTableAdapter.ClearBeforeFill = true;
             // 
-            // obtenerImagen
-            // 
-            this.obtenerImagen.DataSetName = "ObtenerImagen";
-            this.obtenerImagen.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // obtenerImagenBindingSource
-            // 
-            this.obtenerImagenBindingSource.DataMember = "ObtenerImagen";
-            this.obtenerImagenBindingSource.DataSource = this.obtenerImagen;
-            // 
             // obtenerImagenTableAdapter
             // 
             this.obtenerImagenTableAdapter.ClearBeforeFill = true;
+            // 
+            // pesTodospes
+            // 
+            this.pesTodospes.DataSetName = "PesTodospes";
+            this.pesTodospes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pesTodospesBindingSource
+            // 
+            this.pesTodospesBindingSource.DataSource = this.pesTodospes;
+            this.pesTodospesBindingSource.Position = 0;
+            // 
+            // pESCADORBindingSource
+            // 
+            this.pESCADORBindingSource.DataMember = "PESCADOR";
+            this.pESCADORBindingSource.DataSource = this.pesTodospesBindingSource;
+            // 
+            // pESCADORTableAdapter
+            // 
+            this.pESCADORTableAdapter.ClearBeforeFill = true;
             // 
             // Vistas
             // 
@@ -478,6 +504,8 @@
             this.Name = "Vistas";
             this.Text = "Vistas";
             this.Load += new System.EventHandler(this.Vistas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerImagenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerImagen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pesembarcaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mULEGESEGUROBindingSource)).EndInit();
@@ -520,8 +548,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.lOSCABOSSEGUROBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerFirmaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obtenerImagen)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obtenerImagenBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pesTodospes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pesTodospesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pESCADORBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -596,5 +625,9 @@
         private System.Windows.Forms.BindingSource obtenerImagenBindingSource;
         private ObtenerImagen obtenerImagen;
         private ObtenerImagenTableAdapters.ObtenerImagenTableAdapter obtenerImagenTableAdapter;
+        private PesTodospes pesTodospes;
+        private System.Windows.Forms.BindingSource pesTodospesBindingSource;
+        private System.Windows.Forms.BindingSource pESCADORBindingSource;
+        private PesTodospesTableAdapters.PESCADORTableAdapter pESCADORTableAdapter;
     }
 }
