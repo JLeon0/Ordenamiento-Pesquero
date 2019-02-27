@@ -67,18 +67,17 @@
             this.label15 = new System.Windows.Forms.Label();
             this.montoE = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.Eliminar = new System.Windows.Forms.PictureBox();
+            this.label13 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Entregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registrar)).BeginInit();
             this.Apoyo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Eliminar)).BeginInit();
             this.SuspendLayout();
             // 
             // NombrePesc
@@ -225,7 +224,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(986, 416);
+            this.label9.Location = new System.Drawing.Point(911, 415);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 14);
             this.label9.TabIndex = 114;
@@ -235,7 +234,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(912, 416);
+            this.label10.Location = new System.Drawing.Point(843, 416);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(51, 14);
             this.label10.TabIndex = 115;
@@ -329,7 +328,7 @@
             this.Actualizar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
             this.Actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Actualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Actualizar.Location = new System.Drawing.Point(986, 362);
+            this.Actualizar.Location = new System.Drawing.Point(917, 362);
             this.Actualizar.Name = "Actualizar";
             this.Actualizar.Size = new System.Drawing.Size(50, 50);
             this.Actualizar.TabIndex = 113;
@@ -342,7 +341,7 @@
             this.Registrar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.Registrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Registrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Registrar.Location = new System.Drawing.Point(911, 362);
+            this.Registrar.Location = new System.Drawing.Point(842, 362);
             this.Registrar.Name = "Registrar";
             this.Registrar.Size = new System.Drawing.Size(50, 50);
             this.Registrar.TabIndex = 112;
@@ -474,32 +473,6 @@
             this.label14.TabIndex = 173;
             this.label14.Text = "Monto Estatal";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(911, 362);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.TabIndex = 112;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.Registrar_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Location = new System.Drawing.Point(986, 362);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.TabIndex = 113;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.Actualizar_Click);
-            // 
             // pictureBox8
             // 
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
@@ -524,12 +497,36 @@
             this.pictureBox7.TabIndex = 199;
             this.pictureBox7.TabStop = false;
             // 
+            // Eliminar
+            // 
+            this.Eliminar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
+            this.Eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Eliminar.Location = new System.Drawing.Point(986, 362);
+            this.Eliminar.Name = "Eliminar";
+            this.Eliminar.Size = new System.Drawing.Size(50, 50);
+            this.Eliminar.TabIndex = 201;
+            this.Eliminar.TabStop = false;
+            this.Eliminar.Click += new System.EventHandler(this.Eliminar_Click);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Location = new System.Drawing.Point(973, 415);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(83, 14);
+            this.label13.TabIndex = 202;
+            this.label13.Text = "Eliminar registro";
+            // 
             // Pantalla_Solicitudes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1111, 451);
+            this.Controls.Add(this.Eliminar);
+            this.Controls.Add(this.label13);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.Apoyo);
@@ -540,9 +537,7 @@
             this.Controls.Add(this.concepto);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.Entrega);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label10);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Actualizar);
             this.Controls.Add(this.Registrar);
             this.Controls.Add(this.prioridad);
@@ -574,10 +569,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.Registrar)).EndInit();
             this.Apoyo.ResumeLayout(false);
             this.Apoyo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Eliminar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -623,9 +617,9 @@
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox Total;
         private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox Eliminar;
+        private System.Windows.Forms.Label label13;
     }
 }

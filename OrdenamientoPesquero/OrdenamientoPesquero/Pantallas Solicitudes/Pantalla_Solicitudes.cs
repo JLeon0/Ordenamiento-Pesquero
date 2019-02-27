@@ -16,6 +16,7 @@ namespace OrdenamientoPesquero
         string Curp;
         Procedimientos proc = new Procedimientos();
         Solicitud soli; DataTable solicitudes;
+        Validaciones val = new Validaciones();
         bool Ap = false;
         int mE, mF, mP;
 
@@ -118,13 +119,25 @@ namespace OrdenamientoPesquero
         }
 
 
-
         private void Entregar_Click(object sender, EventArgs e)
         {
             int exito = proc.Entregar_Solicitud(folio.Text);
             if (exito == 1) { MessageBox.Show("Se ha aprovado la solicitud con exito","Apoyo registrado.",MessageBoxButtons.OK,MessageBoxIcon.Asterisk); } else { MessageBox.Show("HUBO UN ERROR"); }
             CargarSolicitudes();
             LimpiarPantalla();
+        }
+
+        private void Eliminar_Click(object sender, EventArgs e)
+        {
+            if(folio.Text != "")
+            {
+                DialogResult result = MessageBox.Show("Desea eliminar el registro?", "¿?", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if(result == DialogResult.Yes)
+                {
+                    if (proc.EliminarSoliApo(folio.Text) > 0) { MessageBox.Show("Registro Eliminado con éxito", "Eliminado"); } 
+                    CargarSolicitudes();
+                }
+            }
         }
 
         private void montoE_TextChanged(object sender, EventArgs e)
