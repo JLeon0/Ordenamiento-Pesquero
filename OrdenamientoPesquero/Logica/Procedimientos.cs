@@ -386,6 +386,11 @@ namespace Logica
             string[] Parametros = { "@rnpa" };
             return c.getDatosTabla("ObtenerExpedienteEmbarcacionXUnidad", Parametros, RNPA);
         }
+        
+        public DataTable ObtenerTodasEmbarcaciones()
+        {
+            return c.getDatosTabla("Embarcacion_Personal", new string[] { });
+        }
         #endregion
 
 
