@@ -518,6 +518,12 @@ namespace Logica
             string[] Parametros = { "@curp" };
             return c.getDatosTabla("ObtenerApoyosxCurp", Parametros, curp);
         }
+
+        public int EliminarSoliApo(string folio)
+        {
+            string[] Parametros = { "@folio" };
+            return c.Ejecutar("EliminarSoliApo", Parametros, folio);
+        }
         #endregion
 
         public int CerrarConexion()
