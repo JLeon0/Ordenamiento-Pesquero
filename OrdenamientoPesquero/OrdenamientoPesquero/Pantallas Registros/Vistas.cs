@@ -602,9 +602,9 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 case 14:
                     reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "SolicitudesApoyosXPescador.rdlc");
                     datos.Name = "ApoyosXCurp";
-                    datos.Value = obtenerApoyosxCurpTableAdapter.Fill(solicitudesApoyosXCurp.ObtenerApoyosxCurp,CURP);
+                    datos.Value = obtenerApoyosxCurpTableAdapter.GetData(CURP);
                     datos2.Name = "SolicitudesXCurp";
-                    datos2.Value = obtenerSolicitudesxCurpTableAdapter.Fill(solicitudesApoyosXCurp.ObtenerSolicitudesxCurp, CURP);
+                    datos2.Value = obtenerSolicitudesxCurpTableAdapter.GetData(CURP);
                     this.reportViewer1.LocalReport.DataSources.Add(datos);
                     this.reportViewer1.LocalReport.DataSources.Add(datos2);
                     dt = proc.Obtener_unidades(rnpa);
