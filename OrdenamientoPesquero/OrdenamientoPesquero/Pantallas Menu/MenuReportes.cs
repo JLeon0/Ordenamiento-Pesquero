@@ -70,7 +70,8 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 
         private void button7_Click(object sender, EventArgs e)
         {
-
+            Vistas v = new Vistas(r, "", 13);
+            v.ShowDialog(this);
         }
 
         private void button10_Click(object sender, EventArgs e)

@@ -156,7 +156,6 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(124, 37);
             this.button7.TabIndex = 4;
-            this.button7.Text = "Personalizado";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 

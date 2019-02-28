@@ -472,7 +472,7 @@ namespace OrdenamientoPesquero
                 TotalPermisos.Text = dt.Rows[0]["PERMISOS"].ToString();
                 TotalEsfuerzos.Text = dt.Rows[0]["ESFUERZOS PESQUEROS"].ToString();
                 chipeados.Text = dt.Rows[0]["ESFUERZOS CHIPEADOS"].ToString();
-                int no = Convert.ToInt32(TotalEsfuerzos.Text) - Convert.ToInt32(chipeados.Text);
+                int no =Convert.ToInt32(chipeados.Text);
                 chipeados.Text = no.ToString();
 
                 dt = proc.ResumenPesqueria(cbRNPA.Text);
@@ -913,6 +913,7 @@ namespace OrdenamientoPesquero
             gbBotones.Enabled = true;
             gbBusqueda.Enabled = true;
             gbOrgPes.Enabled = true;
+            Resumen.Enabled = true;
             panel1.Visible = false;
             panel1.Enabled = false;
         }
