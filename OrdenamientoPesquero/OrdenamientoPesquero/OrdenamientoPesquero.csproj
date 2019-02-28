@@ -333,9 +333,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>seguro.xsd</DependentUpon>
     </Compile>
-    <Compile Include="SolicitudesApoyosXCurp.cs">
-      <DependentUpon>SolicitudesApoyosXCurp.xsd</DependentUpon>
-    </Compile>
     <Compile Include="SolicitudesApoyosXCurp.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
