@@ -32,7 +32,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         private void Vistas_Load(object sender, EventArgs e)
         {
             // TODO: esta línea de código carga datos en la tabla 'pesTodospes.PESCADOR' Puede moverla o quitarla según sea necesario.
-            this.pESCADORTableAdapter.Fill(this.pesTodospes.PESCADOR);
+            //this.pESCADORTableAdapter.Fill(this.pesTodospes.PESCADOR);
             // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet12.pesembarca' Puede moverla o quitarla según sea necesario.
             //this.pesembarcaTableAdapter.Fill(this.ordPesqueroDataSet12.pesembarca);
             // TODO: esta línea de código carga datos en la tabla 'seguro.MULEGE_SEGURO' Puede moverla o quitarla según sea necesario.
@@ -71,6 +71,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             ReportDataSource datos3 = new ReportDataSource();
             ReportDataSource datos4 = new ReportDataSource();
             ReportDataSource datos5 = new ReportDataSource();
+            ReportDataSource datos8 = new ReportDataSource();
+            ReportDataSource datos9 = new ReportDataSource();
             if (unidad == "")
             {
                 unidad = rnpa;
@@ -222,6 +224,14 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     datos3.Name = "DataSet5";
                     datos3.Value = ordPesqueroDataSetpescadores1.pescadores;
                     this.reportViewer1.LocalReport.DataSources.Add(datos3);
+
+                    datos8.Name = "DataSet8";
+                    datos8.Value = obtenerSolicitudesxRnpaTableAdapter.Fill(apoyos.ObtenerSolicitudesxRnpa, rnpa);
+                    this.reportViewer1.LocalReport.DataSources.Add(datos8);
+
+                    datos9.Name = "DataSet9";
+                    datos9.Value = obtenerApoyosxRnpaTableAdapter.Fill(apoyos.ObtenerApoyosxRnpa,rnpa);
+                    this.reportViewer1.LocalReport.DataSources.Add(datos9);
 
                     try
                     {
@@ -466,6 +476,14 @@ namespace OrdenamientoPesquero.Pantallas_Registros
 
                             //throw;
                         }
+
+                        datos8.Name = "DataSet8";
+                        datos8.Value = obtenerSolicitudesxRnpaTableAdapter.Fill(apoyos.ObtenerSolicitudesxRnpa, rnpa);
+                        this.reportViewer1.LocalReport.DataSources.Add(datos8);
+
+                        datos9.Name = "DataSet9";
+                        datos9.Value = obtenerApoyosxRnpaTableAdapter.Fill(apoyos.ObtenerApoyosxRnpa, rnpa);
+                        this.reportViewer1.LocalReport.DataSources.Add(datos9);
                         datos.Name = "DataSet2";
                         datos.Value = permisos_lista.vista_perm;
                         this.reportViewer1.LocalReport.DataSources.Add(datos);
