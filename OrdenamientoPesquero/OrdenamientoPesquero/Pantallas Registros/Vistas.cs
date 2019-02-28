@@ -24,6 +24,16 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             unidad = uni;
             tip = tipo;
         }
+        public Vistas(string curp, string NombrePesc, string RNPA,string ordenado, int tipo){
+            InitializeComponent();
+            rnpa = RNPA;
+            CURP = curp;
+            unidad = NombrePesc;
+            Ordenado = ordenado;
+            tip = tipo;
+        }
+        string CURP;
+        string Ordenado;
         string rnpa;
         string unidad;
         int tip;
@@ -587,6 +597,26 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     datos.Name = "DataSet1";
                     datos.Value = pesTodospes.PESCADOR;
                     this.reportViewer1.LocalReport.DataSources.Add(datos);
+                    this.reportViewer1.RefreshReport();
+                    break;
+                case 14:
+                    reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "SolicitudesApoyosXPescador.rdlc");
+                    datos.Name = "ApoyosXCurp";
+                    datos.Value = obtenerApoyosxCurpTableAdapter.Fill(solicitudesApoyosXCurp.ObtenerApoyosxCurp,CURP);
+                    datos2.Name = "SolicitudesXCurp";
+                    datos2.Value = obtenerSolicitudesxCurpTableAdapter.Fill(solicitudesApoyosXCurp.ObtenerSolicitudesxCurp, CURP);
+                    this.reportViewer1.LocalReport.DataSources.Add(datos);
+                    this.reportViewer1.LocalReport.DataSources.Add(datos2);
+                    dt = proc.Obtener_unidades(rnpa);
+                    ReportParameter[] SoliApo = new ReportParameter[8];
+                    SoliApo[0] = new ReportParameter("Unidad", dt.Rows[0]["NOMBRE"].ToString());
+                    SoliApo[2] = new ReportParameter("Municipio", dt.Rows[0]["MUNICIO"].ToString());
+                    SoliApo[3] = new ReportParameter("Localidad", dt.Rows[0]["LOCALIDAD"].ToString());
+                    dt = proc.ObtenerUnaFederacion(rnpa);
+                    SoliApo[1] = new ReportParameter("Fed", dt.Rows[0]["NOMBRE"].ToString());
+                    SoliApo[4] = new ReportParameter("NombrePescador", unidad);
+                    SoliApo[5] = new ReportParameter("Ord", Ordenado);
+                    reportViewer1.LocalReport.SetParameters(SoliApo);
                     this.reportViewer1.RefreshReport();
                     break;
                 default:

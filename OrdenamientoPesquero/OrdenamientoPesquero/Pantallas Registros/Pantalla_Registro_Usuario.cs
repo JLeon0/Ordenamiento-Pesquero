@@ -1240,8 +1240,11 @@ namespace OrdenamientoPesquero
 
         private void VerInforme_Click(object sender, EventArgs e)
         {
-            Vistas vistas = new Vistas(CURPPesc.Text, "", 14);
-            
+            string ord = "SI";
+            if (!si.Checked) { ord = "NO"; }
+            string N = NombrePesc.Text + " " + ApePatPescador.Text + " " + ApeMatPescador.Text;
+            Vistas vistas = new Vistas(CURPPesc.Text,N,RNPA,ord, 14);
+            vistas.ShowDialog();
         }
 
         private delegate void SendMessageCallback(object payload);
