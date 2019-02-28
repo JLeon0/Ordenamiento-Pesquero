@@ -318,6 +318,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>seguro.xsd</DependentUpon>
     </Compile>
+    <Compile Include="SolicitudesApoyosXCurp.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SolicitudesApoyosXCurp.xsd</DependentUpon>
+    </Compile>
     <Compile Include="todos.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -392,6 +397,7 @@
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
     <EmbeddedResource Include="Reportes\reportepescadores.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteXPermicionario.rdlc" />
+    <EmbeddedResource Include="Reportes\SolicitudesApoyosXPescador.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteXUnidad.rdlc" />
     <EmbeddedResource Include="Reportes\Resumen_permisos.rdlc" />
     <EmbeddedResource Include="Reportes\Unidad_Personal.rdlc" />
@@ -637,6 +643,17 @@
     </None>
     <None Include="seguro.xss">
       <DependentUpon>seguro.xsd</DependentUpon>
+    </None>
+    <None Include="SolicitudesApoyosXCurp.xsc">
+      <DependentUpon>SolicitudesApoyosXCurp.xsd</DependentUpon>
+    </None>
+    <None Include="SolicitudesApoyosXCurp.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SolicitudesApoyosXCurp.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SolicitudesApoyosXCurp.xss">
+      <DependentUpon>SolicitudesApoyosXCurp.xsd</DependentUpon>
     </None>
     <None Include="todos.xsc">
       <DependentUpon>todos.xsd</DependentUpon>

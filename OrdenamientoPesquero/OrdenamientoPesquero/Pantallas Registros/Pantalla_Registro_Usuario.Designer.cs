@@ -175,6 +175,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.VerInforme = new System.Windows.Forms.Button();
             this.gbDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
@@ -1608,6 +1609,7 @@
             // 
             // Botones
             // 
+            this.Botones.Controls.Add(this.VerInforme);
             this.Botones.Controls.Add(this.label15);
             this.Botones.Controls.Add(this.AbrirExpediente);
             this.Botones.Controls.Add(this.pictureBox1);
@@ -1941,6 +1943,16 @@
             this.label20.TabIndex = 128;
             this.label20.Text = "Fecha de Fallecimiento";
             // 
+            // VerInforme
+            // 
+            this.VerInforme.Location = new System.Drawing.Point(214, 15);
+            this.VerInforme.Name = "VerInforme";
+            this.VerInforme.Size = new System.Drawing.Size(75, 61);
+            this.VerInforme.TabIndex = 196;
+            this.VerInforme.Text = "Ver Informe";
+            this.VerInforme.UseVisualStyleBackColor = true;
+            this.VerInforme.Click += new System.EventHandler(this.VerInforme_Click);
+            // 
             // Pantalla_Registro_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -2168,5 +2180,6 @@
         private System.Windows.Forms.TextBox Beneficiario;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Button VerInforme;
     }
 }

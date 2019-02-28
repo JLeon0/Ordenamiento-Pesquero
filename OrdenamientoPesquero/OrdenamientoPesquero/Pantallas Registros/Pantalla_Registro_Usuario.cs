@@ -384,14 +384,17 @@ namespace OrdenamientoPesquero
                 }
                 else
                 {
-                    MatriculaPesc.Text = matricula;
-                    for (int i = 0; i < MatriculaPesc.Items.Count; i++)
-                    {
-                        DataRowView row = (DataRowView)MatriculaPesc.Items[i];
-                        if (row[0].ToString() == matricula)
+                    if (ord == 1) { MatriculaRelacion.Text = matricula; }
+                    else { MatriculaPesc.Text = matricula; }
+                    if(matricula != "NO APLICA") {
+                        for (int i = 0; i < MatriculaPesc.Items.Count; i++)
                         {
-                            MatriculaPesc.Text = row[1].ToString();
-                            break;
+                            DataRowView row = (DataRowView)MatriculaPesc.Items[i];
+                            if (row[0].ToString() == matricula)
+                            {
+                                MatriculaPesc.Text = row[1].ToString();
+                                break;
+                            }
                         }
                     }
                 }
@@ -427,8 +430,11 @@ namespace OrdenamientoPesquero
                 if (ListaNombres.SelectedIndex != -1)
                 {
                     NOMBRES = proc.BuscarNombre(ListaNombres.Text, RNPA);
-                    dt = proc.Obtener_todas_unidades(NOMBRES.Rows[0][2].ToString());
-                    Unid.Text = dt.Rows[0]["NOMBRE"].ToString();
+                    if (NOMBRES.Rows[0][2].ToString() != "NO APLICA")
+                    {
+                        dt = proc.Obtener_todas_unidades(NOMBRES.Rows[0][2].ToString());
+                        Unid.Text = dt.Rows[0]["NOMBRE"].ToString();
+                    }
                 }
 
                 this.Cursor = Cursors.Default;
@@ -452,6 +458,7 @@ namespace OrdenamientoPesquero
                 item.Text = "";
             }
             MatriculaPesc.Text = "";
+            MatriculaRelacion.Text = "-----";
             Unid.Text = "";
         }
 
@@ -606,12 +613,14 @@ namespace OrdenamientoPesquero
 
         private void MatriculaPesc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (MatriculaPesc.Text == "NO APLICA")
+            if (MatriculaPesc.Text == "NO APLICA" && RNPA == "")
             {
-                OcupAcua.Checked = true;
-                TipoSocio.Checked = true;
+                MatriculaRelacion.Text = "-----";
             }
-            MatriculaRelacion.Text = MatriculaPesc.SelectedValue.ToString();
+            else
+            {
+                MatriculaRelacion.Text = MatriculaPesc.SelectedValue.ToString();
+            }
         }
 
         private void radioButton9_CheckedChanged(object sender, EventArgs e)
@@ -1226,6 +1235,12 @@ namespace OrdenamientoPesquero
             bmp.UnlockBits(data);
 
             return bmp;
+        }
+
+        private void VerInforme_Click(object sender, EventArgs e)
+        {
+            Vistas vistas = new Vistas(CURPPesc.Text, "", 14);
+            
         }
 
         private delegate void SendMessageCallback(object payload);
