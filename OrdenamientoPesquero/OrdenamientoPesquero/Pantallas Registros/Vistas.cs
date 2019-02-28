@@ -213,7 +213,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 case 6:
                     this.reportViewer1.ProcessingMode = ProcessingMode.Local;
                     reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, unidad);
-                    
+
                     try
                     {
                         this.vista_permTableAdapter.Fill(permisos_lista.vista_perm, rnpa);
@@ -240,7 +240,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     this.reportViewer1.LocalReport.DataSources.Add(datos8);
 
                     datos9.Name = "DataSet9";
-                    datos9.Value = obtenerApoyosxRnpaTableAdapter.Fill(apoyos.ObtenerApoyosxRnpa,rnpa);
+                    datos9.Value = obtenerApoyosxRnpaTableAdapter.Fill(apoyos.ObtenerApoyosxRnpa, rnpa);
                     this.reportViewer1.LocalReport.DataSources.Add(datos9);
 
                     try
@@ -350,7 +350,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
 
                     ReportParameter[] para7 = new ReportParameter[5];
                     int x = 0;
-                    if (ordPesqueroDataSet7.Mulege.Rows.Count.ToString()==null)
+                    if (ordPesqueroDataSet7.Mulege.Rows.Count.ToString() == null)
                     {
                         para7[0] = new ReportParameter("totM", "0");
                     }
@@ -465,7 +465,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     this.pesembarcaTableAdapter.Fill(ordPesqueroDataSet12.pesembarca);
                     datos.Name = "DataSet2";
                     datos.Value = ordPesqueroDataSet12.pesembarca;
-                   this.reportViewer1.LocalReport.DataSources.Add(datos);
+                    this.reportViewer1.LocalReport.DataSources.Add(datos);
                     this.reportViewer1.RefreshReport();
                     break;
                 case 12:
@@ -581,12 +581,12 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                         para3[6] = new ReportParameter("nemb", embarcacionesSet.EmbarcacionesxUnidad.Count.ToString());
                         reportViewer1.LocalReport.SetParameters(para3);
                         this.reportViewer1.RefreshReport();
-                        nombre= nombre.Replace("\"","");
+                        nombre = nombre.Replace("\"", "");
                         if (!Directory.Exists(@"C:\FICHAS\" + muni + @"\" + nombre + @"\"))
                         {
                             DirectoryInfo di = Directory.CreateDirectory(@"C:\FICHAS\" + muni + @"\" + nombre + @"\");
                         }
-                            File.WriteAllBytes(@"C:\FICHAS\"+muni+@"\" + nombre+@"\Ficha Informativa.pdf", reportViewer1.LocalReport.Render("PDF"));
+                        File.WriteAllBytes(@"C:\FICHAS\" + muni + @"\" + nombre + @"\Ficha Informativa.pdf", reportViewer1.LocalReport.Render("PDF"));
                     }
                     this.Close();
                     break;
@@ -601,23 +601,38 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     break;
                 case 14:
                     reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "SolicitudesApoyosXPescador.rdlc");
-                    datos.Name = "ApoyosXCurp";
-                    datos.Value = obtenerApoyosxCurpTableAdapter.GetData(CURP);
-                    datos2.Name = "SolicitudesXCurp";
-                    datos2.Value = obtenerSolicitudesxCurpTableAdapter.GetData(CURP);
-                    this.reportViewer1.LocalReport.DataSources.Add(datos);
-                    this.reportViewer1.LocalReport.DataSources.Add(datos2);
-                    dt = proc.Obtener_unidades(rnpa);
-                    ReportParameter[] SoliApo = new ReportParameter[6];
-                    SoliApo[0] = new ReportParameter("Unidad", dt.Rows[0]["NOMBRE"].ToString());
-                    SoliApo[2] = new ReportParameter("Municipio", dt.Rows[0]["MUNICIO"].ToString());
-                    SoliApo[3] = new ReportParameter("Localidad", dt.Rows[0]["LOCALIDAD"].ToString());
-                    dt = proc.ObtenerUnaFederacion(rnpa);
-                    SoliApo[1] = new ReportParameter("Fed", dt.Rows[0]["NOMBRE"].ToString());
-                    SoliApo[4] = new ReportParameter("NombrePescador", unidad);
-                    SoliApo[5] = new ReportParameter("Ord", Ordenado);
+                    reportViewer1.LocalReport.DataSources.Clear();
+                    datos = new ReportDataSource
+                    {
+                        Name = "ApoyosXCurp",
+                        Value = obtenerApoyosxCurpTableAdapter.GetData(CURP)
+                    };
+                    datos2 = new ReportDataSource
+                    {
+                        Name = "SolicitudesXCurp",
+                        Value = obtenerSolicitudesxCurpTableAdapter.GetData(CURP)
+                    };
+                    reportViewer1.LocalReport.DataSources.Add(datos);
+                    reportViewer1.LocalReport.DataSources.Add(datos2);
+                    ReportParameter[] SoliApo;
+                    if (rnpa!="")
+                    {
+                        SoliApo = new ReportParameter[6];
+                        dt = proc.Obtener_unidades(rnpa);
+                        SoliApo[2] = new ReportParameter("Unidad", dt.Rows[0]["NOMBRE"].ToString());
+                        SoliApo[3] = new ReportParameter("Municipio", dt.Rows[0]["MUNICIO"].ToString());
+                        SoliApo[4] = new ReportParameter("Localidad", dt.Rows[0]["LOCALIDAD"].ToString());
+                        dt = proc.ObtenerUnaFederacion(rnpa);
+                        SoliApo[5] = new ReportParameter("Fed", dt.Rows[0]["NOMBRE"].ToString());
+                    }
+                    else
+                    {
+                        SoliApo = new ReportParameter[2];
+                    }
+                    SoliApo[0] = new ReportParameter("NombrePescador", unidad);
+                    SoliApo[1] = new ReportParameter("Ord", Ordenado);
                     reportViewer1.LocalReport.SetParameters(SoliApo);
-                    this.reportViewer1.RefreshReport();
+                    reportViewer1.RefreshReport();
                     break;
                 default:
                     break;
