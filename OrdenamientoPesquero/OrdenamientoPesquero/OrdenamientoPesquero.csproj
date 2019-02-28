@@ -409,6 +409,7 @@
     <EmbeddedResource Include="Reportes\Permiso_Personal.rdlc" />
     <EmbeddedResource Include="Reportes\Pescadores.rdlc" />
     <EmbeddedResource Include="Reportes\Pescador_Personal.rdlc" />
+    <EmbeddedResource Include="Reportes\Report2.rdlc" />
     <EmbeddedResource Include="Reportes\Report3.rdlc" />
     <EmbeddedResource Include="Reportes\reportepescadores2.rdlc" />
     <EmbeddedResource Include="Reportes\reportepescadores.rdlc" />
