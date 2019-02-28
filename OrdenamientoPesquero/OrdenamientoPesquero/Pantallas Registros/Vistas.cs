@@ -615,7 +615,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     reportViewer1.LocalReport.DataSources.Add(datos);
                     reportViewer1.LocalReport.DataSources.Add(datos2);
                     ReportParameter[] SoliApo;
-                    if (rnpa != "")
+                    if (rnpa!="")
                     {
                         SoliApo = new ReportParameter[6];
                         dt = proc.Obtener_unidades(rnpa);
