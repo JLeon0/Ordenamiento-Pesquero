@@ -236,11 +236,11 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     this.reportViewer1.LocalReport.DataSources.Add(datos3);
 
                     datos8.Name = "DataSet8";
-                    datos8.Value = obtenerSolicitudesxRnpaTableAdapter.Fill(apoyos.ObtenerSolicitudesxRnpa, rnpa);
+                    datos8.Value = obtenerSolicitudesxRnpaTableAdapter.GetData( rnpa);
                     this.reportViewer1.LocalReport.DataSources.Add(datos8);
 
                     datos9.Name = "DataSet9";
-                    datos9.Value = obtenerApoyosxRnpaTableAdapter.Fill(apoyos.ObtenerApoyosxRnpa, rnpa);
+                    datos9.Value = obtenerApoyosxRnpaTableAdapter.GetData( rnpa);
                     this.reportViewer1.LocalReport.DataSources.Add(datos9);
 
                     try
@@ -488,11 +488,11 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                         }
 
                         datos8.Name = "DataSet8";
-                        datos8.Value = obtenerSolicitudesxRnpaTableAdapter.Fill(apoyos.ObtenerSolicitudesxRnpa, rnpa);
+                        datos8.Value = obtenerSolicitudesxRnpaTableAdapter.GetData(rnpa);
                         this.reportViewer1.LocalReport.DataSources.Add(datos8);
 
                         datos9.Name = "DataSet9";
-                        datos9.Value = obtenerApoyosxRnpaTableAdapter.Fill(apoyos.ObtenerApoyosxRnpa, rnpa);
+                        datos9.Value = obtenerApoyosxRnpaTableAdapter.GetData( rnpa);
                         this.reportViewer1.LocalReport.DataSources.Add(datos9);
                         datos.Name = "DataSet2";
                         datos.Value = permisos_lista.vista_perm;

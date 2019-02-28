@@ -403,7 +403,6 @@
                               <Value>=Fields!CONCEPTO.Value</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
-                                <Color>Black</Color>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -1463,7 +1462,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>TOTAL APOYOS</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1644,7 +1643,7 @@
     <Height>18.91232cm</Height>
     <Style />
   </Body>
-  <Width>20.66094cm</Width>
+  <Width>19.3033cm</Width>
   <Page>
     <PageHeader>
       <Height>2.07849cm</Height>
