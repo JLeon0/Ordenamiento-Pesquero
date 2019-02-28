@@ -614,9 +614,9 @@ namespace OrdenamientoPesquero
 
         private void MatriculaPesc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (MatriculaPesc.Text == "NO APLICA" && RNPA == "")
+            if (MatriculaPesc.Text == "NO APLICA" && RNPA == "" )
             {
-                MatriculaRelacion.Text = "-----";
+                //MatriculaRelacion.Text = "-----";
             }
             else
             {
@@ -882,6 +882,16 @@ namespace OrdenamientoPesquero
         {
             Vistas vista = new Vistas(CURPPesc.Text, RNPA, 4);
             vista.ShowDialog();
+        }
+        private void VerInforme_Click(object sender, EventArgs e)
+        {
+            string ord = "SI";
+            if (!si.Checked) { ord = "NO"; }
+            string N = NombrePesc.Text + " " + ApePatPescador.Text + " " + ApeMatPescador.Text;
+            if (MatriculaRelacion.Text != "-----") { RNPA = proc.ObtenerEmbarca(MatriculaRelacion.Text).Rows[0]["RNPTITULAR"].ToString(); }
+            Vistas vistas = new Vistas(CURPPesc.Text, N, RNPA, ord, 14);
+            vistas.ShowDialog();
+            RNPA = "";
         }
 
         private void limpiar_Click(object sender, EventArgs e)
@@ -1236,15 +1246,6 @@ namespace OrdenamientoPesquero
             bmp.UnlockBits(data);
 
             return bmp;
-        }
-
-        private void VerInforme_Click(object sender, EventArgs e)
-        {
-            string ord = "SI";
-            if (!si.Checked) { ord = "NO"; }
-            string N = NombrePesc.Text + " " + ApePatPescador.Text + " " + ApeMatPescador.Text;
-            Vistas vistas = new Vistas(CURPPesc.Text,N,RNPA,ord, 14);
-            vistas.ShowDialog();
         }
 
         private delegate void SendMessageCallback(object payload);
