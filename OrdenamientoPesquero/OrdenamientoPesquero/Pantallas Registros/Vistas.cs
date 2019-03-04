@@ -623,7 +623,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                         SoliApo[3] = new ReportParameter("Municipio", dt.Rows[0]["MUNICIO"].ToString());
                         SoliApo[4] = new ReportParameter("Localidad", dt.Rows[0]["LOCALIDAD"].ToString());
                         dt = proc.ObtenerUnaFederacion(rnpa);
-                        if (dt.Rows[0]["NOMBRE"].ToString() == "")
+                        if (dt.Rows.Count == 0)
                         { SoliApo[5] = new ReportParameter("Fed", ""); }
                         else { SoliApo[5] = new ReportParameter("Fed", dt.Rows[0]["NOMBRE"].ToString()); }
                     }

@@ -2753,7 +2753,7 @@
                         </Paragraphs>
                         <rd:DefaultName>Textbox3</rd:DefaultName>
                         <Height>0.62646cm</Height>
-                        <Width>18.70679cm</Width>
+                        <Width>14.88185cm</Width>
                         <Style>
                           <Border>
                             <Style>None</Style>
@@ -2767,7 +2767,7 @@
                     </ReportItems>
                     <KeepTogether>true</KeepTogether>
                     <Left>0.0086cm</Left>
-                    <Height>0.62646cm</Height>
+                    <Height>1.12784cm</Height>
                     <Width>18.70679cm</Width>
                     <Style>
                       <Border>
@@ -2995,36 +2995,6 @@
                           </Border>
                         </Style>
                       </Rectangle>
-                      <Textbox Name="Textbox18">
-                        <CanGrow>true</CanGrow>
-                        <KeepTogether>true</KeepTogether>
-                        <Paragraphs>
-                          <Paragraph>
-                            <TextRuns>
-                              <TextRun>
-                                <Value>=Today()</Value>
-                                <Style />
-                              </TextRun>
-                            </TextRuns>
-                            <Style />
-                          </Paragraph>
-                        </Paragraphs>
-                        <rd:DefaultName>Textbox18</rd:DefaultName>
-                        <Top>0.57941cm</Top>
-                        <Left>16.21539cm</Left>
-                        <Height>0.52012cm</Height>
-                        <Width>2.38942cm</Width>
-                        <ZIndex>2</ZIndex>
-                        <Style>
-                          <Border>
-                            <Style>None</Style>
-                          </Border>
-                          <PaddingLeft>2pt</PaddingLeft>
-                          <PaddingRight>2pt</PaddingRight>
-                          <PaddingTop>2pt</PaddingTop>
-                          <PaddingBottom>2pt</PaddingBottom>
-                        </Style>
-                      </Textbox>
                     </ReportItems>
                     <KeepTogether>true</KeepTogether>
                     <Top>0.72346cm</Top>
@@ -4012,7 +3982,6 @@
           </Textbox>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>0.30091cm</Top>
         <Left>0.635cm</Left>
         <Height>4.00152cm</Height>
         <Width>18.71539cm</Width>
@@ -4045,10 +4014,9 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox3</rd:DefaultName>
-            <Top>0.00428cm</Top>
             <Left>0.01997cm</Left>
             <Height>0.97042cm</Height>
-            <Width>18.71539cm</Width>
+            <Width>18.53685cm</Width>
             <Style>
               <Border>
                 <Color>White</Color>
@@ -4283,7 +4251,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>NOMBREEMBARCACION1</rd:DefaultName>
@@ -4317,7 +4287,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -4352,7 +4322,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -4387,7 +4357,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -4415,7 +4385,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!MONTO.Value</Value>
+                                  <Value>=IIf(Fields!MONTO.Value="",0,CInt(Fields!MONTO.Value))</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Format>'$'#,0.00;('$'#,0.00)</Format>
@@ -4423,7 +4393,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -4441,6 +4411,7 @@
                             <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -4468,7 +4439,7 @@
             </TablixRowHierarchy>
             <FixedColumnHeaders>true</FixedColumnHeaders>
             <DataSetName>DataSet9</DataSetName>
-            <Top>1.04526cm</Top>
+            <Top>1.14681cm</Top>
             <Left>0.01997cm</Left>
             <Height>0.96129cm</Height>
             <Width>18.53685cm</Width>
@@ -4493,10 +4464,10 @@
             </Style>
           </Tablix>
         </ReportItems>
-        <Top>19.42512cm</Top>
+        <Top>19.32357cm</Top>
         <Left>0.54153cm</Left>
-        <Height>2.21297cm</Height>
-        <Width>18.8152cm</Width>
+        <Height>2.31452cm</Height>
+        <Width>18.55682cm</Width>
         <ZIndex>10</ZIndex>
         <Visibility>
           <Hidden>=IIF(IsNothing(First(Fields!NOMBRE.Value, "DataSet9")),true,false)</Hidden>
@@ -4551,10 +4522,10 @@
                   <Width>1.13816cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.49348cm</Width>
+                  <Width>1.6103cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>5.08252cm</Width>
+                  <Width>4.90866cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>4.39044cm</Width>
@@ -4845,7 +4816,9 @@
                                   </Style>
                                 </TextRun>
                               </TextRuns>
-                              <Style />
+                              <Style>
+                                <TextAlign>Left</TextAlign>
+                              </Style>
                             </Paragraph>
                           </Paragraphs>
                           <rd:DefaultName>NOMBREEMBARCACION1</rd:DefaultName>
@@ -4879,7 +4852,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -4914,7 +4887,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -4949,7 +4922,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -4977,14 +4950,15 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!MONTO.Value</Value>
+                                  <Value>=IIf(Fields!MONTO.Value="",0,CInt(Fields!MONTO.Value))</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
+                                    <Format>'$'#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Right</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -4999,6 +4973,7 @@
                             <PaddingRight>2pt</PaddingRight>
                             <PaddingTop>2pt</PaddingTop>
                             <PaddingBottom>2pt</PaddingBottom>
+                            <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
                           </Style>
                         </Textbox>
                       </CellContents>
@@ -5019,7 +4994,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -5054,7 +5029,7 @@
                                 </TextRun>
                               </TextRuns>
                               <Style>
-                                <TextAlign>Center</TextAlign>
+                                <TextAlign>Left</TextAlign>
                               </Style>
                             </Paragraph>
                           </Paragraphs>
@@ -5103,7 +5078,7 @@
             <Top>1.06648cm</Top>
             <Left>0.05705cm</Left>
             <Height>0.96129cm</Height>
-            <Width>18.61893cm</Width>
+            <Width>18.56189cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -5128,7 +5103,7 @@
         <Top>16.65319cm</Top>
         <Left>0.5615cm</Left>
         <Height>2.21297cm</Height>
-        <Width>18.8152cm</Width>
+        <Width>18.73536cm</Width>
         <ZIndex>11</ZIndex>
         <Visibility>
           <Hidden>=IIF(IsNothing(First(Fields!NOMBRE.Value, "DataSet8")),true,false)</Hidden>
@@ -5142,13 +5117,13 @@
         </Style>
       </Rectangle>
     </ReportItems>
-    <Height>21.63809cm</Height>
+    <Height>22.22017cm</Height>
     <Style />
   </Body>
-  <Width>19.3767cm</Width>
+  <Width>19.35039cm</Width>
   <Page>
     <PageHeader>
-      <Height>2.07849cm</Height>
+      <Height>2.44891cm</Height>
       <PrintOnFirstPage>true</PrintOnFirstPage>
       <PrintOnLastPage>true</PrintOnLastPage>
       <ReportItems>
@@ -5233,6 +5208,38 @@
           <Height>1.40458cm</Height>
           <Width>12.51807cm</Width>
           <ZIndex>2</ZIndex>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+            <PaddingLeft>2pt</PaddingLeft>
+            <PaddingRight>2pt</PaddingRight>
+            <PaddingTop>2pt</PaddingTop>
+            <PaddingBottom>2pt</PaddingBottom>
+          </Style>
+        </Textbox>
+        <Textbox Name="Textbox18">
+          <CanGrow>true</CanGrow>
+          <KeepTogether>true</KeepTogether>
+          <Paragraphs>
+            <Paragraph>
+              <TextRuns>
+                <TextRun>
+                  <Value>=Today()</Value>
+                  <Style>
+                    <Format>D</Format>
+                  </Style>
+                </TextRun>
+              </TextRuns>
+              <Style />
+            </Paragraph>
+          </Paragraphs>
+          <rd:DefaultName>Textbox18</rd:DefaultName>
+          <Top>1.77835cm</Top>
+          <Left>14.65295cm</Left>
+          <Height>0.6cm</Height>
+          <Width>4.59985cm</Width>
+          <ZIndex>3</ZIndex>
           <Style>
             <Border>
               <Style>None</Style>
@@ -5555,7 +5562,7 @@
         </Field>
         <Field Name="FOLIO">
           <DataField>FOLIO</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="FECHA">
           <DataField>FECHA</DataField>
@@ -5631,7 +5638,7 @@
         </Field>
         <Field Name="FOLIO">
           <DataField>FOLIO</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="FECHA">
           <DataField>FECHA</DataField>

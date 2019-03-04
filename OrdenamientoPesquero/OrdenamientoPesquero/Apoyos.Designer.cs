@@ -534,7 +534,7 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ObtenerSolicitudesxRnpaRow AddObtenerSolicitudesxRnpaRow(string NOMBRE, string CURP, int FOLIO, string FECHA, int PRIORIDAD, string CONCEPTO, string ESTATUS, string MONTO, string RESPONSABLE, string DIRECTOR, string OBSERVACIONES, string MONTOE, string MONTOF, string MONTOP, string PROGRAMA) {
+            public ObtenerSolicitudesxRnpaRow AddObtenerSolicitudesxRnpaRow(string NOMBRE, string CURP, string FOLIO, string FECHA, int PRIORIDAD, string CONCEPTO, string ESTATUS, string MONTO, string RESPONSABLE, string DIRECTOR, string OBSERVACIONES, string MONTOE, string MONTOF, string MONTOP, string PROGRAMA) {
                 ObtenerSolicitudesxRnpaRow rowObtenerSolicitudesxRnpaRow = ((ObtenerSolicitudesxRnpaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NOMBRE,
@@ -559,7 +559,7 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ObtenerSolicitudesxRnpaRow FindByFOLIO(int FOLIO) {
+            public ObtenerSolicitudesxRnpaRow FindByFOLIO(string FOLIO) {
                 return ((ObtenerSolicitudesxRnpaRow)(this.Rows.Find(new object[] {
                             FOLIO})));
             }
@@ -605,7 +605,7 @@ namespace OrdenamientoPesquero {
                 base.Columns.Add(this.columnNOMBRE);
                 this.columnCURP = new global::System.Data.DataColumn("CURP", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCURP);
-                this.columnFOLIO = new global::System.Data.DataColumn("FOLIO", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnFOLIO = new global::System.Data.DataColumn("FOLIO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFOLIO);
                 this.columnFECHA = new global::System.Data.DataColumn("FECHA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFECHA);
@@ -637,6 +637,7 @@ namespace OrdenamientoPesquero {
                 this.columnCURP.MaxLength = 20;
                 this.columnFOLIO.AllowDBNull = false;
                 this.columnFOLIO.Unique = true;
+                this.columnFOLIO.MaxLength = 11;
                 this.columnFECHA.MaxLength = 10;
                 this.columnCONCEPTO.MaxLength = 500;
                 this.columnESTATUS.MaxLength = 20;
@@ -1001,7 +1002,7 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ObtenerApoyosxRnpaRow AddObtenerApoyosxRnpaRow(string NOMBRE, string CURP, int FOLIO, string FECHA, int PRIORIDAD, string CONCEPTO, string ESTATUS, string MONTO, string RESPONSABLE, string DIRECTOR, string OBSERVACIONES, string MONTOE, string MONTOF, string MONTOP, string PROGRAMA) {
+            public ObtenerApoyosxRnpaRow AddObtenerApoyosxRnpaRow(string NOMBRE, string CURP, string FOLIO, string FECHA, int PRIORIDAD, string CONCEPTO, string ESTATUS, string MONTO, string RESPONSABLE, string DIRECTOR, string OBSERVACIONES, string MONTOE, string MONTOF, string MONTOP, string PROGRAMA) {
                 ObtenerApoyosxRnpaRow rowObtenerApoyosxRnpaRow = ((ObtenerApoyosxRnpaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NOMBRE,
@@ -1026,7 +1027,7 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public ObtenerApoyosxRnpaRow FindByFOLIO(int FOLIO) {
+            public ObtenerApoyosxRnpaRow FindByFOLIO(string FOLIO) {
                 return ((ObtenerApoyosxRnpaRow)(this.Rows.Find(new object[] {
                             FOLIO})));
             }
@@ -1072,7 +1073,7 @@ namespace OrdenamientoPesquero {
                 base.Columns.Add(this.columnNOMBRE);
                 this.columnCURP = new global::System.Data.DataColumn("CURP", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCURP);
-                this.columnFOLIO = new global::System.Data.DataColumn("FOLIO", typeof(int), null, global::System.Data.MappingType.Element);
+                this.columnFOLIO = new global::System.Data.DataColumn("FOLIO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFOLIO);
                 this.columnFECHA = new global::System.Data.DataColumn("FECHA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFECHA);
@@ -1104,6 +1105,7 @@ namespace OrdenamientoPesquero {
                 this.columnCURP.MaxLength = 20;
                 this.columnFOLIO.AllowDBNull = false;
                 this.columnFOLIO.Unique = true;
+                this.columnFOLIO.MaxLength = 11;
                 this.columnFECHA.MaxLength = 10;
                 this.columnCONCEPTO.MaxLength = 500;
                 this.columnESTATUS.MaxLength = 20;
@@ -1289,9 +1291,9 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int FOLIO {
+            public string FOLIO {
                 get {
-                    return ((int)(this[this.tableObtenerSolicitudesxRnpa.FOLIOColumn]));
+                    return ((string)(this[this.tableObtenerSolicitudesxRnpa.FOLIOColumn]));
                 }
                 set {
                     this[this.tableObtenerSolicitudesxRnpa.FOLIOColumn] = value;
@@ -1714,9 +1716,9 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public int FOLIO {
+            public string FOLIO {
                 get {
-                    return ((int)(this[this.tableObtenerApoyosxRnpa.FOLIOColumn]));
+                    return ((string)(this[this.tableObtenerApoyosxRnpa.FOLIOColumn]));
                 }
                 set {
                     this[this.tableObtenerApoyosxRnpa.FOLIOColumn] = value;
