@@ -508,14 +508,14 @@ namespace Logica
         #region Apoyos
         public int Registrar_Apoyo(Solicitud soli)
         {
-            string[] Parametros = { "@nombre", "@curp", "@folio", "@fecha", "@concepto", "@observaciones", "@montoE", "@montoF", "@montoP", "@programa" };
-            return c.Ejecutar("RegistrarApoyo", Parametros, soli.NOMBRE, soli.CURP, soli.FOLIO, soli.FECHA, soli.CONCEPTO, soli.OBSERVACIONES, soli.MONTOESTATAL, soli.MONTOFEDERAL, soli.MONTOPRODUCTOR, soli.PROGRAMA);
+            string[] Parametros = { "@nombre", "@curp", "@folio", "@fecha", "@concepto", "@observaciones", "@montoE", "@montoF", "@montoP", "@programa", "@montoT" };
+            return c.Ejecutar("RegistrarApoyo", Parametros, soli.NOMBRE, soli.CURP, soli.FOLIO, soli.FECHA, soli.CONCEPTO, soli.OBSERVACIONES, soli.MONTOESTATAL, soli.MONTOFEDERAL, soli.MONTOPRODUCTOR, soli.PROGRAMA, soli.TOTAL);
         }
 
         public int Actualizar_Apoyo(Solicitud soli)
         {
-            string[] Parametros = { "@nombre", "@curp", "@folio", "@fecha", "@concepto", "@observaciones", "@montoE", "@montoF", "@montoP", "@programa" };
-            return c.Ejecutar("ActualizarApoyo", Parametros, soli.NOMBRE, soli.CURP, soli.FOLIO, soli.FECHA, soli.CONCEPTO, soli.OBSERVACIONES, soli.MONTOESTATAL, soli.MONTOFEDERAL, soli.MONTOPRODUCTOR, soli.PROGRAMA);
+            string[] Parametros = { "@nombre", "@curp", "@folio", "@fecha", "@concepto", "@observaciones", "@montoE", "@montoF", "@montoP", "@programa", "@montoT" };
+            return c.Ejecutar("ActualizarApoyo", Parametros, soli.NOMBRE, soli.CURP, soli.FOLIO, soli.FECHA, soli.CONCEPTO, soli.OBSERVACIONES, soli.MONTOESTATAL, soli.MONTOFEDERAL, soli.MONTOPRODUCTOR, soli.PROGRAMA, soli.TOTAL);
 
         }
         public DataTable ObtenerApoyos (string curp)
