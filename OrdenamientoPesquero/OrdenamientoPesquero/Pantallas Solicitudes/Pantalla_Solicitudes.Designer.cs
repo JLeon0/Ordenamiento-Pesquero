@@ -71,6 +71,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.Eliminar = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.FolioMayor = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Entregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registrar)).BeginInit();
@@ -111,7 +112,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(226, 172);
+            this.label2.Location = new System.Drawing.Point(226, 194);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(44, 16);
             this.label2.TabIndex = 1;
@@ -129,7 +130,7 @@
             // fecha
             // 
             this.fecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.fecha.Location = new System.Drawing.Point(295, 167);
+            this.fecha.Location = new System.Drawing.Point(295, 189);
             this.fecha.Name = "fecha";
             this.fecha.Size = new System.Drawing.Size(102, 22);
             this.fecha.TabIndex = 2;
@@ -519,12 +520,24 @@
             this.label13.TabIndex = 202;
             this.label13.Text = "Eliminar registro";
             // 
+            // FolioMayor
+            // 
+            this.FolioMayor.AutoSize = true;
+            this.FolioMayor.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FolioMayor.ForeColor = System.Drawing.Color.DimGray;
+            this.FolioMayor.Location = new System.Drawing.Point(292, 150);
+            this.FolioMayor.Name = "FolioMayor";
+            this.FolioMayor.Size = new System.Drawing.Size(67, 16);
+            this.FolioMayor.TabIndex = 203;
+            this.FolioMayor.Text = "Folio Mayor:";
+            // 
             // Pantalla_Solicitudes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1111, 451);
+            this.Controls.Add(this.FolioMayor);
             this.Controls.Add(this.Eliminar);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.pictureBox8);
@@ -621,5 +634,6 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox Eliminar;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label FolioMayor;
     }
 }
