@@ -371,7 +371,7 @@
             this.Apoyo.Controls.Add(this.label15);
             this.Apoyo.Controls.Add(this.montoE);
             this.Apoyo.Controls.Add(this.label14);
-            this.Apoyo.Location = new System.Drawing.Point(446, 99);
+            this.Apoyo.Location = new System.Drawing.Point(445, 99);
             this.Apoyo.Name = "Apoyo";
             this.Apoyo.Size = new System.Drawing.Size(522, 151);
             this.Apoyo.TabIndex = 172;

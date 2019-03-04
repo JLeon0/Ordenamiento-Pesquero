@@ -23,6 +23,7 @@ namespace Logica
         public string MONTOFEDERAL { get; set; }
         public string MONTOESTATAL { get; set; }
         public string MONTOPRODUCTOR { get; set; }
+        public string TOTAL { get; set; }
         public string PROGRAMA { get; set; }
 
         public Solicitud()
@@ -55,7 +56,7 @@ namespace Logica
             OBSERVACIONES = observaciones;
         }
 
-        public Solicitud(string nombre, string curp, string folio, string fecha, string concepto, string observaciones, string montoF, string montoE, string montoP, string programa)
+        public Solicitud(string nombre, string curp, string folio, string fecha, string concepto, string observaciones, string montoF, string montoE, string montoP, string programa, string total, int apoyo)
         {
             NOMBRE = nombre;
             CURP = curp;
@@ -67,6 +68,7 @@ namespace Logica
             MONTOESTATAL = montoE;
             MONTOPRODUCTOR = montoP;
             PROGRAMA = programa;
+            TOTAL = total;
         }
     }
 }
