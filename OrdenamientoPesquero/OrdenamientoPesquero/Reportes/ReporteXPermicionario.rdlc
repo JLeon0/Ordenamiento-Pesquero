@@ -4454,10 +4454,10 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIf(Fields!MONTO.Value="",0,CInt(Fields!MONTO.Value))</Value>
+                                  <Value>=IIf(Fields!MONTO.Value="",CInt("0"),CInt(Fields!MONTO.Value))</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
-                                    <Format>'$'#,0.00;('$'#,0.00)</Format>
+                                    <Format>'$'#,0.00</Format>
                                   </Style>
                                 </TextRun>
                               </TextRuns>
@@ -4480,6 +4480,7 @@
                             <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -4638,7 +4639,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(IIf(Fields!MONTO.Value="",0,CInt(Fields!MONTO.Value)))</Value>
+                                  <Value>=Sum(CInt(Fields!MONTO.Value))</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Format>'$'#,0.00</Format>
@@ -5205,7 +5206,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=IIf(Fields!MONTO.Value="",0,CInt(Fields!MONTO.Value))</Value>
+                                  <Value>=CInt(Fields!MONTO.Value)</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -5229,7 +5230,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>
