@@ -497,6 +497,11 @@ namespace Logica
             string[] Parametros = { "@folio" };
             return c.Ejecutar("EntregarSolicitud", Parametros, folio);
         }
+
+        public DataTable ObtenerMayor()
+        {
+            return c.getDatosTabla("ObtenerMayorSoliApo", new string[0], new string[0]);
+        }
         #endregion
 
 

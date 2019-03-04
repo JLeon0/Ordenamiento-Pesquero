@@ -90,6 +90,7 @@ namespace OrdenamientoPesquero
             {
                 Lista.Items.Add(fila["FOLIO"].ToString());
             }
+            FolioMayor.Text += proc.ObtenerMayor().Rows[0][0].ToString();
         }
 
         private void Actualizar_Click(object sender, EventArgs e)
