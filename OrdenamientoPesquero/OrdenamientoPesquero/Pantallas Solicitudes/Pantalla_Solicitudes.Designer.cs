@@ -157,13 +157,13 @@
             // 
             this.estatus.FormattingEnabled = true;
             this.estatus.Items.AddRange(new object[] {
-            "Aprobado",
-            "En espera...",
             "Pendiente",
-            "Rechazado"});
-            this.estatus.Location = new System.Drawing.Point(513, 167);
+            "+Con techo presupuestal",
+            "+Sin techo presupuestal",
+            "Negativa"});
+            this.estatus.Location = new System.Drawing.Point(503, 169);
             this.estatus.Name = "estatus";
-            this.estatus.Size = new System.Drawing.Size(121, 24);
+            this.estatus.Size = new System.Drawing.Size(141, 24);
             this.estatus.TabIndex = 4;
             this.estatus.Text = "Pendiente";
             // 
@@ -204,7 +204,7 @@
             // 
             // monto
             // 
-            this.monto.Location = new System.Drawing.Point(513, 210);
+            this.monto.Location = new System.Drawing.Point(503, 210);
             this.monto.MaxLength = 9;
             this.monto.Name = "monto";
             this.monto.Size = new System.Drawing.Size(102, 22);
@@ -248,7 +248,7 @@
             "1",
             "2",
             "3"});
-            this.prioridad.Location = new System.Drawing.Point(511, 125);
+            this.prioridad.Location = new System.Drawing.Point(503, 125);
             this.prioridad.Name = "prioridad";
             this.prioridad.Size = new System.Drawing.Size(45, 24);
             this.prioridad.TabIndex = 3;
@@ -371,7 +371,7 @@
             this.Apoyo.Controls.Add(this.label15);
             this.Apoyo.Controls.Add(this.montoE);
             this.Apoyo.Controls.Add(this.label14);
-            this.Apoyo.Location = new System.Drawing.Point(445, 99);
+            this.Apoyo.Location = new System.Drawing.Point(446, 99);
             this.Apoyo.Name = "Apoyo";
             this.Apoyo.Size = new System.Drawing.Size(522, 151);
             this.Apoyo.TabIndex = 172;
