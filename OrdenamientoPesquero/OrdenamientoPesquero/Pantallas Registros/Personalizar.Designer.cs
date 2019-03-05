@@ -138,6 +138,8 @@
             this.checkBox67 = new System.Windows.Forms.CheckBox();
             this.checkBox68 = new System.Windows.Forms.CheckBox();
             this.checkBox69 = new System.Windows.Forms.CheckBox();
+            this.checkBox71 = new System.Windows.Forms.CheckBox();
+            this.chip = new System.Windows.Forms.MaskedTextBox();
             this.ColumasPescador.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.FiltrosPescador.SuspendLayout();
@@ -1226,11 +1228,13 @@
             // 
             // groupBox4
             // 
+            this.groupBox4.Controls.Add(this.chip);
+            this.groupBox4.Controls.Add(this.checkBox71);
             this.groupBox4.Controls.Add(this.checkBox32);
             this.groupBox4.Controls.Add(this.comboBox14);
             this.groupBox4.Location = new System.Drawing.Point(10, 107);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(286, 57);
+            this.groupBox4.Size = new System.Drawing.Size(286, 88);
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Filtros";
@@ -1280,7 +1284,7 @@
             this.ColumnasEmbarca.Controls.Add(this.checkBox67);
             this.ColumnasEmbarca.Controls.Add(this.checkBox68);
             this.ColumnasEmbarca.Controls.Add(this.checkBox69);
-            this.ColumnasEmbarca.Location = new System.Drawing.Point(10, 170);
+            this.ColumnasEmbarca.Location = new System.Drawing.Point(10, 201);
             this.ColumnasEmbarca.Name = "ColumnasEmbarca";
             this.ColumnasEmbarca.Size = new System.Drawing.Size(286, 273);
             this.ColumnasEmbarca.TabIndex = 1;
@@ -1527,6 +1531,27 @@
             this.checkBox69.Text = "Nombre";
             this.checkBox69.UseVisualStyleBackColor = true;
             // 
+            // checkBox71
+            // 
+            this.checkBox71.AutoSize = true;
+            this.checkBox71.Location = new System.Drawing.Point(6, 56);
+            this.checkBox71.Name = "checkBox71";
+            this.checkBox71.Size = new System.Drawing.Size(51, 17);
+            this.checkBox71.TabIndex = 5;
+            this.checkBox71.Text = "CHIP";
+            this.checkBox71.UseVisualStyleBackColor = true;
+            // 
+            // chip
+            // 
+            this.chip.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chip.Location = new System.Drawing.Point(123, 51);
+            this.chip.Mask = "999*999*999";
+            this.chip.Name = "chip";
+            this.chip.Size = new System.Drawing.Size(157, 22);
+            this.chip.TabIndex = 16;
+            this.chip.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chip.ValidatingType = typeof(int);
+            // 
             // Personalizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1684,5 +1709,7 @@
         private System.Windows.Forms.CheckBox checkBox7;
         private System.Windows.Forms.CheckBox checkBox70;
         private System.Windows.Forms.ComboBox comboBox5;
+        private System.Windows.Forms.CheckBox checkBox71;
+        private System.Windows.Forms.MaskedTextBox chip;
     }
 }

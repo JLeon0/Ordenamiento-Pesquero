@@ -249,7 +249,11 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             string consulta = "select * from EMBARCACIONES where MATRICULA!='NO APLICA'";
             if (checkBox32.Checked)
             {
-                consulta += "AND RNPTITULAR = '" + dt.Rows[comboBox14.SelectedIndex]["RNPA"]+"'";
+                consulta += " AND RNPTITULAR = '" + dt.Rows[comboBox14.SelectedIndex]["RNPA"]+"'";
+            }
+            if (checkBox71.Checked)
+            {
+                consulta += " AND NUMCHIP = '" + chip.Text + "'";
             }
             consulta += " Order by " + OrdenaEmbarca.Text.Replace(" ", "");
             ds.Value = proc.ObtenerTablaConsulta(consulta);
