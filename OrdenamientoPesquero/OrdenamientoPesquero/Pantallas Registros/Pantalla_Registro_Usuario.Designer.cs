@@ -150,6 +150,7 @@
             this.Solicitud = new System.Windows.Forms.Button();
             this.Apoyo = new System.Windows.Forms.Button();
             this.Botones = new System.Windows.Forms.GroupBox();
+            this.VerInforme = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.Ver = new System.Windows.Forms.PictureBox();
@@ -175,7 +176,10 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.VerInforme = new System.Windows.Forms.Button();
+            this.NPoliza = new System.Windows.Forms.TextBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.Vigencia = new System.Windows.Forms.DateTimePicker();
+            this.label22 = new System.Windows.Forms.Label();
             this.gbDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
@@ -1353,7 +1357,7 @@
             this.CerrarPanelOcciso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CerrarPanelOcciso.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CerrarPanelOcciso.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.CerrarPanelOcciso.Location = new System.Drawing.Point(451, 1);
+            this.CerrarPanelOcciso.Location = new System.Drawing.Point(475, 1);
             this.CerrarPanelOcciso.Name = "CerrarPanelOcciso";
             this.CerrarPanelOcciso.Size = new System.Drawing.Size(21, 21);
             this.CerrarPanelOcciso.TabIndex = 135;
@@ -1367,7 +1371,7 @@
             this.RegistrarOcciso.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.RegistrarOcciso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RegistrarOcciso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegistrarOcciso.Location = new System.Drawing.Point(409, 141);
+            this.RegistrarOcciso.Location = new System.Drawing.Point(441, 249);
             this.RegistrarOcciso.Name = "RegistrarOcciso";
             this.RegistrarOcciso.Size = new System.Drawing.Size(50, 50);
             this.RegistrarOcciso.TabIndex = 133;
@@ -1631,6 +1635,16 @@
             this.Botones.TabStop = false;
             this.Botones.Text = " ";
             // 
+            // VerInforme
+            // 
+            this.VerInforme.Location = new System.Drawing.Point(214, 15);
+            this.VerInforme.Name = "VerInforme";
+            this.VerInforme.Size = new System.Drawing.Size(75, 61);
+            this.VerInforme.TabIndex = 196;
+            this.VerInforme.Text = "Ver Informe";
+            this.VerInforme.UseVisualStyleBackColor = true;
+            this.VerInforme.Click += new System.EventHandler(this.VerInforme_Click);
+            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -1831,6 +1845,10 @@
             // 
             this.PanelOcciso.BackColor = System.Drawing.Color.LightGray;
             this.PanelOcciso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelOcciso.Controls.Add(this.Vigencia);
+            this.PanelOcciso.Controls.Add(this.label22);
+            this.PanelOcciso.Controls.Add(this.NPoliza);
+            this.PanelOcciso.Controls.Add(this.label21);
             this.PanelOcciso.Controls.Add(this.Parentesco);
             this.PanelOcciso.Controls.Add(this.label18);
             this.PanelOcciso.Controls.Add(this.FechaFalle);
@@ -1846,7 +1864,7 @@
             this.PanelOcciso.ForeColor = System.Drawing.Color.Black;
             this.PanelOcciso.Location = new System.Drawing.Point(391, 266);
             this.PanelOcciso.Name = "PanelOcciso";
-            this.PanelOcciso.Size = new System.Drawing.Size(477, 212);
+            this.PanelOcciso.Size = new System.Drawing.Size(501, 319);
             this.PanelOcciso.TabIndex = 188;
             this.PanelOcciso.Visible = false;
             // 
@@ -1880,7 +1898,7 @@
             this.label16.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
             this.label16.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label16.Location = new System.Drawing.Point(62, 13);
+            this.label16.Location = new System.Drawing.Point(74, 13);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(263, 22);
             this.label16.TabIndex = 186;
@@ -1902,7 +1920,7 @@
             this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox14.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox14.Location = new System.Drawing.Point(326, 1);
+            this.pictureBox14.Location = new System.Drawing.Point(346, 2);
             this.pictureBox14.Name = "pictureBox14";
             this.pictureBox14.Size = new System.Drawing.Size(120, 40);
             this.pictureBox14.TabIndex = 136;
@@ -1913,7 +1931,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(409, 195);
+            this.label17.Location = new System.Drawing.Point(441, 303);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(51, 14);
             this.label17.TabIndex = 134;
@@ -1939,19 +1957,53 @@
             this.label20.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label20.Location = new System.Drawing.Point(40, 63);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(159, 17);
+            this.label20.Size = new System.Drawing.Size(139, 17);
             this.label20.TabIndex = 128;
-            this.label20.Text = "Fecha de Fallecimiento";
+            this.label20.Text = "Fecha de Defunción";
             // 
-            // VerInforme
+            // NPoliza
             // 
-            this.VerInforme.Location = new System.Drawing.Point(214, 15);
-            this.VerInforme.Name = "VerInforme";
-            this.VerInforme.Size = new System.Drawing.Size(75, 61);
-            this.VerInforme.TabIndex = 196;
-            this.VerInforme.Text = "Ver Informe";
-            this.VerInforme.UseVisualStyleBackColor = true;
-            this.VerInforme.Click += new System.EventHandler(this.VerInforme_Click);
+            this.NPoliza.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NPoliza.Location = new System.Drawing.Point(43, 230);
+            this.NPoliza.MaxLength = 20;
+            this.NPoliza.Name = "NPoliza";
+            this.NPoliza.Size = new System.Drawing.Size(360, 25);
+            this.NPoliza.TabIndex = 192;
+            this.toolTip1.SetToolTip(this.NPoliza, "Parentesco del Beneficiario con el Pescador");
+            // 
+            // label21
+            // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(40, 211);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(68, 17);
+            this.label21.TabIndex = 191;
+            this.label21.Text = "N° Poliza";
+            // 
+            // Vigencia
+            // 
+            this.Vigencia.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Vigencia.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Vigencia.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Vigencia.Location = new System.Drawing.Point(43, 280);
+            this.Vigencia.Name = "Vigencia";
+            this.Vigencia.Size = new System.Drawing.Size(115, 22);
+            this.Vigencia.TabIndex = 194;
+            // 
+            // label22
+            // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(40, 264);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(63, 17);
+            this.label22.TabIndex = 193;
+            this.label22.Text = "Vigencia";
             // 
             // Pantalla_Registro_Usuario
             // 
@@ -2181,5 +2233,9 @@
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Button VerInforme;
+        private System.Windows.Forms.DateTimePicker Vigencia;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.TextBox NPoliza;
+        private System.Windows.Forms.Label label21;
     }
 }

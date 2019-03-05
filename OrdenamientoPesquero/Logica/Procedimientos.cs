@@ -313,10 +313,10 @@ namespace Logica
             return c.getDatosTabla("BuscarPescador", Parametros, nombre, rnpa);
         }
 
-        public int RegistrarOcciso(string curp, string fechafall, string bene, string paren)
+        public int RegistrarOcciso(string curp, string fechafall, string bene, string paren, string npoli, string vigencia)
         {
-            string[] Parametros = { "@curp", "@fechafallecimiento", "@beneficiario","@parentesco" };
-            return c.Ejecutar("RegistrarOcciso", Parametros, curp, fechafall, bene, paren);
+            string[] Parametros = { "@curp", "@fechafallecimiento", "@beneficiario","@parentesco", "@npoliza", "@vigencia" };
+            return c.Ejecutar("RegistrarOcciso", Parametros, curp, fechafall, bene, paren, npoli, vigencia);
         }
         #endregion
 
@@ -528,6 +528,12 @@ namespace Logica
         {
             string[] Parametros = { "@folio" };
             return c.Ejecutar("EliminarSoliApo", Parametros, folio);
+        }
+
+        public int RegresarApoyoSoli(string folio)
+        {
+            string[] Parametros = { "@folio" };
+            return c.Ejecutar("RegresarApoyoSoli", Parametros, folio);
         }
         #endregion
 

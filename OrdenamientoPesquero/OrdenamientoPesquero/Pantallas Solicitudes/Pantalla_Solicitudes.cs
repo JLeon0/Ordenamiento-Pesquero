@@ -34,8 +34,8 @@ namespace OrdenamientoPesquero
             if (Ap)
             {
                 Apoyo.Visible = true;
-                Entrega.Visible = false;
-                Entregar.Visible = false;
+                Entrega.Text = "Regresar";
+                Entregar.BackgroundImage = Properties.Resources.x;
                 txt.Text = "Apoyos";
             }
         }
@@ -122,8 +122,17 @@ namespace OrdenamientoPesquero
 
         private void Entregar_Click(object sender, EventArgs e)
         {
-            int exito = proc.Entregar_Solicitud(folio.Text);
-            if (exito == 1) { MessageBox.Show("Se ha aprovado la solicitud con exito","Apoyo registrado.",MessageBoxButtons.OK,MessageBoxIcon.Asterisk); } else { MessageBox.Show("HUBO UN ERROR"); }
+            if (!Ap)
+            {
+                int exito = proc.Entregar_Solicitud(folio.Text);
+                if (exito == 1) { MessageBox.Show("Se ha aprovado la solicitud con exito", "Apoyo registrado.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); } else { MessageBox.Show("HUBO UN ERROR"); }
+            }
+            else
+            {
+                int exito = proc.RegresarApoyoSoli(folio.Text);
+                if (exito == 1) { MessageBox.Show("Se ha cancelado el apoyo con exito, volvió a ser solicitud", "Apoyo Cancelado.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); } else { MessageBox.Show("HUBO UN ERROR"); }
+
+            }
             CargarSolicitudes();
             LimpiarPantalla();
         }

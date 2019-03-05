@@ -743,7 +743,7 @@ namespace OrdenamientoPesquero
 
         private void RegistrarOcciso_Click(object sender, EventArgs e)
         {
-            if (proc.RegistrarOcciso(CURPPesc.Text,FechaFalle.Value.ToShortDateString(),Beneficiario.Text,Parentesco.Text) >= 1)
+            if (proc.RegistrarOcciso(CURPPesc.Text,FechaFalle.Value.ToShortDateString(),Beneficiario.Text,Parentesco.Text, NPoliza.Text, Vigencia.Value.ToShortDateString()) >= 1)
             {
                 MessageBox.Show("Occiso Registrado","EXITO",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
             }
