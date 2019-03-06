@@ -136,8 +136,7 @@ namespace CapaDatos
             string fileonly = "RESTORE FILELISTONLY FROM DISK = '" + archivo + "'";
             string deleete = "Drop database OrdPesquero2";
             string sBackup = " RESTORE DATABASE OrdPesquero2" +
-                             " FROM DISK = '" + archivo + "'";
-            //                 " WITH REPLACE, STATS=10, MOVE 'OrdPesquero' TO" + @"'C:\Program Files\Microsoft SQL Server\MSSQL12.SQLEXPRESS\MSSQL\DATA\OrdPesquero2.mdf', MOVE 'OrdPesquero_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\OrdPesquero2.ldf'";
+                             " FROM DISK = '" + archivo + "' WITH REPLACE";//, STATS=10, MOVE 'OrdPesquero' TO" + @"'C:\Program Files\Microsoft SQL Server\MSSQL12.SQLEXPRESS\MSSQL\DATA\OrdPesquero2.mdf', MOVE 'OrdPesquero_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\OrdPesquero2.ldf'";
             //string sBackup2 = " RESTORE DATABASE OrdPesquero2" +
             //                 " FROM DISK = '" + archivo + "'" +
             //                 " WITH REPLACE, STATS=10, MOVE 'OrdPesquero' TO" + @"'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\OrdPesquero2.mdf', MOVE 'OrdPesquero_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\OrdPesquero2.ldf'";
@@ -158,7 +157,7 @@ namespace CapaDatos
                     {
                         cmdDrop.ExecuteNonQuery();
                     }
-                    catch (Exception)
+                    catch (Exception c)
                     {
                     }
                     //SqlCommand cmdfile = new SqlCommand(fileonly, cn);
@@ -172,8 +171,8 @@ namespace CapaDatos
                     {
                         try
                         {
-                            //SqlCommand cmdBackUp = new SqlCommand(sBackup, cn);
-                            //cmdBackUp.ExecuteNonQuery();
+                            SqlCommand cmdBackUp = new SqlCommand(sBackup, cn);
+                            cmdBackUp.ExecuteNonQuery();
                         }
                         catch (Exception s)
                         {
@@ -181,10 +180,10 @@ namespace CapaDatos
                         }
                     }
 
-                    //MessageBox.Show("Se ha restaurado la copia de la base de datos.",
-                    //                "Restaurar base de datos",
-                    //                MessageBoxButtons.OK,
-                    //                MessageBoxIcon.Information);
+                    MessageBox.Show("Se ha restaurado la copia de la base de datos.",
+                                    "Restaurar base de datos",
+                                   MessageBoxButtons.OK,
+                                   MessageBoxIcon.Information);
 
                     cn.Close();
                     return true;

@@ -29,7 +29,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.85168cm</Height>
+              <Height>0.50772cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -562,10 +562,18 @@
         </TablixRowHierarchy>
         <FixedColumnHeaders>true</FixedColumnHeaders>
         <DataSetName>SolicitudesXCurp</DataSetName>
+        <SortExpressions>
+          <SortExpression>
+            <Value>=CDate(Fields!FECHA.Value)</Value>
+          </SortExpression>
+        </SortExpressions>
         <Top>4.00834cm</Top>
         <Left>0.47926cm</Left>
-        <Height>1.34816cm</Height>
+        <Height>1.0042cm</Height>
         <Width>18.71539cm</Width>
+        <Visibility>
+          <Hidden>=IIF(IsNothing(First(Fields!CURP.Value, "SolicitudesXCurp")),true,false)</Hidden>
+        </Visibility>
         <Style>
           <Border>
             <Style>None</Style>
@@ -581,7 +589,7 @@
               <TextRun>
                 <Value>Solicitudes</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -882,11 +890,6 @@
                           <Border>
                             <Style>None</Style>
                           </Border>
-                          <BottomBorder>
-                            <Color>Black</Color>
-                            <Style>Solid</Style>
-                            <Width>1pt</Width>
-                          </BottomBorder>
                         </Style>
                       </Rectangle>
                     </ReportItems>
@@ -922,8 +925,8 @@
           </Rectangle>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Top>1.21724cm</Top>
-        <Left>0.51666cm</Left>
+        <Top>1.25251cm</Top>
+        <Left>0.57002cm</Left>
         <Height>1.89354cm</Height>
         <Width>18.78664cm</Width>
         <ZIndex>2</ZIndex>
@@ -989,7 +992,7 @@
           </TablixColumns>
           <TablixRows>
             <TablixRow>
-              <Height>0.85168cm</Height>
+              <Height>0.53418cm</Height>
               <TablixCells>
                 <TablixCell>
                   <CellContents>
@@ -1036,7 +1039,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>FECHA</Value>
+                              <Value>AÑO</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <FontWeight>Bold</FontWeight>
@@ -1220,7 +1223,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!FECHA.Value</Value>
+                              <Value>=Year(Fields!FECHA.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -1532,7 +1535,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -1566,11 +1568,19 @@
         </TablixRowHierarchy>
         <FixedColumnHeaders>true</FixedColumnHeaders>
         <DataSetName>ApoyosXCurp</DataSetName>
+        <SortExpressions>
+          <SortExpression>
+            <Value>=Year(Fields!FECHA.Value)</Value>
+          </SortExpression>
+        </SortExpressions>
         <Top>6.46156cm</Top>
         <Left>0.47925cm</Left>
-        <Height>1.94816cm</Height>
+        <Height>1.63066cm</Height>
         <Width>18.71539cm</Width>
         <ZIndex>4</ZIndex>
+        <Visibility>
+          <Hidden>=IIF(IsNothing(First(Fields!CURP.Value, "ApoyosXCurp")),true,false)</Hidden>
+        </Visibility>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1586,7 +1596,7 @@
               <TextRun>
                 <Value>Apoyos Recibidos</Value>
                 <Style>
-                  <FontSize>14pt</FontSize>
+                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -1621,14 +1631,14 @@
                 <Value>Ordenado:</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
+                  <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
               <TextRun>
                 <Value>=Parameters!Ord.Value</Value>
                 <Style>
                   <FontSize>9pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
+                  <FontWeight>Normal</FontWeight>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -1652,10 +1662,10 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>18.91232cm</Height>
+    <Height>16.58399cm</Height>
     <Style />
   </Body>
-  <Width>19.3033cm</Width>
+  <Width>19.35666cm</Width>
   <Page>
     <PageHeader>
       <Height>2.07849cm</Height>

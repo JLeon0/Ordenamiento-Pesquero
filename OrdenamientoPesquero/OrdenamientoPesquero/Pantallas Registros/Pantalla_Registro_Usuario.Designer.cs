@@ -130,6 +130,7 @@
             this.RegistrarOcciso = new System.Windows.Forms.PictureBox();
             this.Beneficiario = new System.Windows.Forms.TextBox();
             this.Parentesco = new System.Windows.Forms.TextBox();
+            this.NPoliza = new System.Windows.Forms.TextBox();
             this.gbInformacion = new System.Windows.Forms.GroupBox();
             this.AComp = new System.Windows.Forms.Label();
             this.AIne = new System.Windows.Forms.Label();
@@ -168,6 +169,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PanelOcciso = new System.Windows.Forms.Panel();
+            this.Vigencia = new System.Windows.Forms.DateTimePicker();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.FechaFalle = new System.Windows.Forms.DateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
@@ -176,10 +180,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
-            this.NPoliza = new System.Windows.Forms.TextBox();
-            this.label21 = new System.Windows.Forms.Label();
-            this.Vigencia = new System.Windows.Forms.DateTimePicker();
-            this.label22 = new System.Windows.Forms.Label();
             this.gbDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
@@ -1399,6 +1399,16 @@
             this.Parentesco.TabIndex = 190;
             this.toolTip1.SetToolTip(this.Parentesco, "Parentesco del Beneficiario con el Pescador");
             // 
+            // NPoliza
+            // 
+            this.NPoliza.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NPoliza.Location = new System.Drawing.Point(43, 230);
+            this.NPoliza.MaxLength = 20;
+            this.NPoliza.Name = "NPoliza";
+            this.NPoliza.Size = new System.Drawing.Size(360, 25);
+            this.NPoliza.TabIndex = 192;
+            this.toolTip1.SetToolTip(this.NPoliza, "Parentesco del Beneficiario con el Pescador");
+            // 
             // gbInformacion
             // 
             this.gbInformacion.Controls.Add(this.AComp);
@@ -1594,7 +1604,7 @@
             this.Solicitud.Name = "Solicitud";
             this.Solicitud.Size = new System.Drawing.Size(87, 61);
             this.Solicitud.TabIndex = 180;
-            this.Solicitud.Text = "REGISTRAR SOLOCITUD";
+            this.Solicitud.Text = "REGISTRAR SOLICITUD";
             this.Solicitud.UseVisualStyleBackColor = true;
             this.Solicitud.Visible = false;
             this.Solicitud.Click += new System.EventHandler(this.Solicitud_Click);
@@ -1868,6 +1878,40 @@
             this.PanelOcciso.TabIndex = 188;
             this.PanelOcciso.Visible = false;
             // 
+            // Vigencia
+            // 
+            this.Vigencia.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Vigencia.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Vigencia.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.Vigencia.Location = new System.Drawing.Point(43, 280);
+            this.Vigencia.Name = "Vigencia";
+            this.Vigencia.Size = new System.Drawing.Size(115, 22);
+            this.Vigencia.TabIndex = 194;
+            // 
+            // label22
+            // 
+            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(40, 264);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(63, 17);
+            this.label22.TabIndex = 193;
+            this.label22.Text = "Vigencia";
+            // 
+            // label21
+            // 
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(40, 211);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(68, 17);
+            this.label21.TabIndex = 191;
+            this.label21.Text = "N° Poliza";
+            // 
             // label18
             // 
             this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -1961,50 +2005,6 @@
             this.label20.TabIndex = 128;
             this.label20.Text = "Fecha de Defunción";
             // 
-            // NPoliza
-            // 
-            this.NPoliza.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NPoliza.Location = new System.Drawing.Point(43, 230);
-            this.NPoliza.MaxLength = 20;
-            this.NPoliza.Name = "NPoliza";
-            this.NPoliza.Size = new System.Drawing.Size(360, 25);
-            this.NPoliza.TabIndex = 192;
-            this.toolTip1.SetToolTip(this.NPoliza, "Parentesco del Beneficiario con el Pescador");
-            // 
-            // label21
-            // 
-            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(40, 211);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(68, 17);
-            this.label21.TabIndex = 191;
-            this.label21.Text = "N° Poliza";
-            // 
-            // Vigencia
-            // 
-            this.Vigencia.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vigencia.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Vigencia.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.Vigencia.Location = new System.Drawing.Point(43, 280);
-            this.Vigencia.Name = "Vigencia";
-            this.Vigencia.Size = new System.Drawing.Size(115, 22);
-            this.Vigencia.TabIndex = 194;
-            // 
-            // label22
-            // 
-            this.label22.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.label22.AutoSize = true;
-            this.label22.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(40, 264);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(63, 17);
-            this.label22.TabIndex = 193;
-            this.label22.Text = "Vigencia";
-            // 
             // Pantalla_Registro_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -2012,7 +2012,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1489, 749);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.PanelOcciso);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.PanelCURP);

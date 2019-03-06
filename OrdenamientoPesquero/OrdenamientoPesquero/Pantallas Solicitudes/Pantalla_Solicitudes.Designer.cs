@@ -158,9 +158,10 @@
             this.estatus.FormattingEnabled = true;
             this.estatus.Items.AddRange(new object[] {
             "Pendiente",
-            "+Con techo presupuestal",
-            "+Sin techo presupuestal",
-            "Negativa"});
+            "Positivo con TP",
+            "Positivo sin TP",
+            "Negativa",
+            "Cancelado"});
             this.estatus.Location = new System.Drawing.Point(503, 169);
             this.estatus.Name = "estatus";
             this.estatus.Size = new System.Drawing.Size(141, 24);
@@ -371,7 +372,7 @@
             this.Apoyo.Controls.Add(this.label15);
             this.Apoyo.Controls.Add(this.montoE);
             this.Apoyo.Controls.Add(this.label14);
-            this.Apoyo.Location = new System.Drawing.Point(446, 99);
+            this.Apoyo.Location = new System.Drawing.Point(446, 116);
             this.Apoyo.Name = "Apoyo";
             this.Apoyo.Size = new System.Drawing.Size(522, 151);
             this.Apoyo.TabIndex = 172;

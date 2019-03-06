@@ -4480,7 +4480,6 @@
                             <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -4665,6 +4664,7 @@
                             <rd:FormatSymbolCulture>es-MX</rd:FormatSymbolCulture>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -4695,6 +4695,11 @@
             </TablixRowHierarchy>
             <FixedColumnHeaders>true</FixedColumnHeaders>
             <DataSetName>DataSet9</DataSetName>
+            <SortExpressions>
+              <SortExpression>
+                <Value>=Year(Fields!FECHA.Value)</Value>
+              </SortExpression>
+            </SortExpressions>
             <Top>1.04526cm</Top>
             <Left>0.01997cm</Left>
             <Height>1.56129cm</Height>
@@ -5101,7 +5106,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Fields!FECHA.Value</Value>
+                                  <Value>=Year(Fields!FECHA.Value)</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                   </Style>
@@ -5329,6 +5334,11 @@
             </TablixRowHierarchy>
             <FixedColumnHeaders>true</FixedColumnHeaders>
             <DataSetName>DataSet8</DataSetName>
+            <SortExpressions>
+              <SortExpression>
+                <Value>=Year(Fields!FECHA.Value)</Value>
+              </SortExpression>
+            </SortExpressions>
             <Top>1.06648cm</Top>
             <Left>0.05705cm</Left>
             <Height>0.96129cm</Height>
