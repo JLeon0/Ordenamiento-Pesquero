@@ -71,6 +71,7 @@ namespace OrdenamientoPesquero
                     estatus.Text = filas["ESTATUS"].ToString();
                     monto.Text = filas["MONTO"].ToString();
                     responsable.Text = filas["RESPONSABLE"].ToString();
+                    director.Text = filas["DIRECTOR"].ToString();
                     observaciones.Text = filas["OBSERVACIONES"].ToString();
                     montoE.Text = filas["MONTOE"].ToString();
                     montoF.Text = filas["MONTOF"].ToString();
