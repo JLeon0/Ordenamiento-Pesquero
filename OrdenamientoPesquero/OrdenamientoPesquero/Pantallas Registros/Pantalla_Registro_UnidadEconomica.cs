@@ -472,9 +472,6 @@ namespace OrdenamientoPesquero
                 TotalPermisos.Text = dt.Rows[0]["PERMISOS"].ToString();
                 TotalEsfuerzos.Text = dt.Rows[0]["ESFUERZOS PESQUEROS"].ToString();
                 chipeados.Text = dt.Rows[0]["ESFUERZOS CHIPEADOS"].ToString();
-                int no =Convert.ToInt32(chipeados.Text);
-                chipeados.Text = no.ToString();
-
                 dt = proc.ResumenPesqueria(cbRNPA.Text);
                 if (dt.Rows.Count > 0)
                 {
