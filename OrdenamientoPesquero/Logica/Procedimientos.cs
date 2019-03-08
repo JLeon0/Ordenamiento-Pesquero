@@ -281,6 +281,11 @@ namespace Logica
             string[] Parametros = { "@Curp" };
             return c.getDatosTabla("ObtenerPescador", Parametros, Curp);
         }
+        public DataTable Obtener_Relacion(string RNPA)
+        {
+            string[] Parametros = { "@RNPA" };
+            return c.getDatosTabla("RELACION", Parametros, RNPA);
+        }
         public int InsertarImagen(string CURP, byte[] imagen, byte[] firma, byte[] huella)
         {
             string[] Parametros = { "@curp", "@imagen", "@firma" ,"@huella"};

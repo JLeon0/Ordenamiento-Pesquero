@@ -50,7 +50,7 @@ namespace OrdenamientoPesquero
             CargarPescadores();
             CargarMatriculas();
             CargarMunicipios();
-            limpiarpescador();
+            limpiarpescador(); 
             cargando = false;
             if (NombreUnidad != "NO APLICA")
             {
@@ -376,7 +376,7 @@ namespace OrdenamientoPesquero
                     ord = Convert.ToInt32(filas["ORDENAMIENTO"].ToString());
                     Seguro.Text = filas["SEGURO"].ToString();
                     FolioCred.Text = filas["FOLIO"].ToString();
-                    FechaExpFolio.Text = filas["FECHAEXP_FOLIO"].ToString();
+                    //FechaExpFolio.Text = filas["FECHAEXP_FOLIO"].ToString();
                     FechaVencFolio.Text = filas["FECHAVEN_FOLIO"].ToString();
                 }
                 if (matricula == RNPA)

@@ -179,18 +179,21 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     this.obtenerFirmaTableAdapter.Fill(ordPesqueroDataSet10.ObtenerFirma, rnpa);
                     datos2.Name = "DataSet2";
                     datos2.Value = ordPesqueroDataSet10.ObtenerFirma;
-                    this.obtenerImagenTableAdapter.Fill(obtenerImagen._ObtenerImagen, rnpa);
+                    this.obtenerImagenTableAdapter.Fill(ordPesqueroDataSet10.ObtenerImagen, rnpa);
                     datos.Name = "DataSet1";
-                    datos.Value = obtenerImagen._ObtenerImagen;
-                    ReportParameter[] para1 = new ReportParameter[9];
+                    datos.Value = ordPesqueroDataSet10.ObtenerImagen;
+                    ReportParameter[] para1 = new ReportParameter[12];
                     para1[0] = new ReportParameter("NOMBRE", dt1.Rows[0]["NOMBRE"].ToString() + " " + dt1.Rows[0]["AP_PAT"].ToString() + " " + dt1.Rows[0]["AP_MAT"].ToString());
                     para1[1] = new ReportParameter("CURP", dt1.Rows[0]["CURP"].ToString());
                     para1[2] = new ReportParameter("SANGRE", dt1.Rows[0]["TIPO_SANGRE"].ToString());
                     para1[3] = new ReportParameter("MATRICULA", dt1.Rows[0]["MATRICULA"].ToString());
+                    para1[9] = new ReportParameter("EXPEDICION", dt1.Rows[0]["FECHAEXP_FOLIO"].ToString());
+                    para1[10] = new ReportParameter("VENCE", dt1.Rows[0]["FECHAVEN_FOLIO"].ToString());
+                    para1[6] = new ReportParameter("FOLIO", dt1.Rows[0]["FOLIO"].ToString());
+                    para1[11] = new ReportParameter("OCUPACION", dt1.Rows[0]["OCUPACION_LABORAL"].ToString());
                     dt1 = proc.Obtener_unidades(unidad);
                     para1[4] = new ReportParameter("RNPA", unidad);
                     para1[5] = new ReportParameter("TITULAR", unidad);
-                    para1[6] = new ReportParameter("FOLIO", unidad);
                     para1[7] = new ReportParameter("DIRECCION", unidad);
                     string ruta = Application.StartupPath.ToString();
                     ruta = ruta.Replace("\\", "*");
@@ -634,6 +637,46 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     SoliApo[0] = new ReportParameter("NombrePescador", unidad);
                     SoliApo[1] = new ReportParameter("Ord", Ordenado);
                     reportViewer1.LocalReport.SetParameters(SoliApo);
+                    reportViewer1.RefreshReport();
+                    break;
+                case 15:
+                    reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Credenciales.rdlc");
+                    reportViewer1.LocalReport.DataSources.Clear();
+                    datos.Name = "DataSet1";
+                    dt= proc.Obtener_Relacion(rnpa);
+                    datos.Value = dt;
+                    this.reportViewer1.LocalReport.DataSources.Add(datos);
+                    ReportParameter[] CRED=new ReportParameter[5];
+                    CRED[0] = new ReportParameter("ue", unidad);
+                    dt = proc.ObtenerPresidenteUnidad(rnpa);
+                    if (dt.Rows.Count==0)
+                    {
+                        CRED[2] = new ReportParameter("PRESI", "____________________________________________");
+                    }
+                    else
+                    {
+                        if (dt.Rows[0]["NOMBREPRESIDENTE"].ToString()=="")
+                        {
+                            CRED[2] = new ReportParameter("PRESI", "____________________________________________");
+                        }
+                        else
+                        {
+                            CRED[2] = new ReportParameter("PRESI", dt.Rows[0]["NOMBREPRESIDENTE"].ToString());
+                        }
+                    }
+                    dt = proc.Obtener_unidades(rnpa);
+                    if (dt.Rows[0]["TIPO"].ToString()=="1")
+                    {
+                        CRED[1] = new ReportParameter("tipo", "PERMICIONARIO");
+                    }
+                    else
+                    {
+                        CRED[1] = new ReportParameter("tipo", "UNIDAD ECONOMICA");
+                    }
+                    CRED[4] = new ReportParameter("muni", dt.Rows[0]["MUNICIO"].ToString().ToLowerInvariant());
+                    dt = proc.Obtener_Relacion(rnpa);
+                    CRED[3] = new ReportParameter("num", dt.Rows.Count.ToString());
+                    reportViewer1.LocalReport.SetParameters(CRED);
                     reportViewer1.RefreshReport();
                     break;
                 default:

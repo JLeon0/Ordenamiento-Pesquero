@@ -167,6 +167,7 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label35 = new System.Windows.Forms.Label();
+            this.button6 = new System.Windows.Forms.Button();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelRNPA)).BeginInit();
@@ -1377,7 +1378,7 @@
             this.servidorToolStripMenuItem.CheckOnClick = true;
             this.servidorToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.servidorToolStripMenuItem.Name = "servidorToolStripMenuItem";
-            this.servidorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.servidorToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.servidorToolStripMenuItem.Text = "Servidor";
             this.servidorToolStripMenuItem.Click += new System.EventHandler(this.servidorToolStripMenuItem_Click);
             // 
@@ -1385,7 +1386,7 @@
             // 
             this.cambiosToolStripMenuItem.CheckOnClick = true;
             this.cambiosToolStripMenuItem.Name = "cambiosToolStripMenuItem";
-            this.cambiosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cambiosToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.cambiosToolStripMenuItem.Text = "Cambios";
             this.cambiosToolStripMenuItem.Click += new System.EventHandler(this.cambiosToolStripMenuItem_Click);
             // 
@@ -1629,6 +1630,7 @@
             // 
             // gbBotones
             // 
+            this.gbBotones.Controls.Add(this.button6);
             this.gbBotones.Controls.Add(this.Expediente);
             this.gbBotones.Controls.Add(this.button1);
             this.gbBotones.Controls.Add(this.button2);
@@ -1787,6 +1789,20 @@
             this.label35.Size = new System.Drawing.Size(56, 14);
             this.label35.TabIndex = 134;
             this.label35.Text = "Actualizar";
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.Silver;
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.Black;
+            this.button6.Location = new System.Drawing.Point(465, 19);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(137, 45);
+            this.button6.TabIndex = 158;
+            this.button6.Text = "ENTREGA DE CREDENCIALES";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -1985,5 +2001,6 @@
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Button button6;
     }
 }

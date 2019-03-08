@@ -492,6 +492,7 @@
             // FechaExpFolio
             // 
             this.FechaExpFolio.CalendarFont = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FechaExpFolio.Enabled = false;
             this.FechaExpFolio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FechaExpFolio.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.FechaExpFolio.Location = new System.Drawing.Point(268, 292);
@@ -2013,9 +2014,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1370, 749);
-            this.Controls.Add(this.PanelOcciso);
             this.Controls.Add(this.gbBusqueda);
-            this.Controls.Add(this.PanelCURP);
             this.Controls.Add(this.Botones);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
@@ -2023,6 +2022,8 @@
             this.Controls.Add(this.label24);
             this.Controls.Add(this.gbRelacion);
             this.Controls.Add(this.gbDatosGenerales);
+            this.Controls.Add(this.PanelOcciso);
+            this.Controls.Add(this.PanelCURP);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Pantalla_Registro_Usuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

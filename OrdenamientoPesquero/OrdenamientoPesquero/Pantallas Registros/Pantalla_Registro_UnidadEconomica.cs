@@ -957,6 +957,12 @@ namespace OrdenamientoPesquero
             }
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 15);
+            v.ShowDialog(this);
+        }
+
         private void BorrarCarpeta()
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);

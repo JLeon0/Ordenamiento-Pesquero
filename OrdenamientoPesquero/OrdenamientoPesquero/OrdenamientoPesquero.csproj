@@ -402,6 +402,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Anexo3.rdlc" />
     <EmbeddedResource Include="Reportes\Credencial.rdlc" />
+    <EmbeddedResource Include="Reportes\Credenciales.rdlc" />
     <EmbeddedResource Include="Reportes\Embarcacion_Personal.rdlc" />
     <EmbeddedResource Include="Reportes\Lista_Embarca.rdlc" />
     <EmbeddedResource Include="Reportes\Permisos.rdlc" />

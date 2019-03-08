@@ -246,7 +246,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 para[c] = new ReportParameter(dato[c], column[c].ToString());
             }
             reportViewer1.LocalReport.SetParameters(para);
-            string consulta = "select * from EMBARCACIONES where MATRICULA!='NO APLICA'";
+            string consulta = "select * from EMBARCACIONES where nombreembarcacion!='NO APLICA'";
             if (checkBox32.Checked)
             {
                 consulta += " AND RNPTITULAR = '" + dt.Rows[comboBox14.SelectedIndex]["RNPA"]+"'";
