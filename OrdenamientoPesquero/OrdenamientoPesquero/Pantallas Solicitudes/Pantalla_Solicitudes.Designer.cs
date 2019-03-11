@@ -57,6 +57,8 @@
             this.Registrar = new System.Windows.Forms.PictureBox();
             this.Entrega = new System.Windows.Forms.Label();
             this.Apoyo = new System.Windows.Forms.GroupBox();
+            this.otro = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             this.programa = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.Total = new System.Windows.Forms.TextBox();
@@ -72,8 +74,6 @@
             this.Eliminar = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.FolioMayor = new System.Windows.Forms.Label();
-            this.otro = new System.Windows.Forms.TextBox();
-            this.label18 = new System.Windows.Forms.Label();
             this.solicitud = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.Entregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).BeginInit();
@@ -162,9 +162,10 @@
             this.estatus.FormattingEnabled = true;
             this.estatus.Items.AddRange(new object[] {
             "Pendiente",
-            "+Con techo presupuestal",
-            "+Sin techo presupuestal",
-            "Negativa"});
+            "Positiva conTP",
+            "Positiva sin TP",
+            "Negativa",
+            "Cancelada"});
             this.estatus.Location = new System.Drawing.Point(67, 59);
             this.estatus.Name = "estatus";
             this.estatus.Size = new System.Drawing.Size(141, 24);
@@ -386,6 +387,25 @@
             this.Apoyo.Text = "Apoyo";
             this.Apoyo.Visible = false;
             // 
+            // otro
+            // 
+            this.otro.Location = new System.Drawing.Point(109, 98);
+            this.otro.MaxLength = 9;
+            this.otro.Name = "otro";
+            this.otro.Size = new System.Drawing.Size(68, 22);
+            this.otro.TabIndex = 6;
+            this.otro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.otro.TextChanged += new System.EventHandler(this.montoE_TextChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(2, 101);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(33, 16);
+            this.label18.TabIndex = 176;
+            this.label18.Text = "Otro";
+            // 
             // programa
             // 
             this.programa.Location = new System.Drawing.Point(307, 24);
@@ -537,25 +557,6 @@
             this.FolioMayor.Size = new System.Drawing.Size(67, 16);
             this.FolioMayor.TabIndex = 203;
             this.FolioMayor.Text = "Folio Mayor:";
-            // 
-            // otro
-            // 
-            this.otro.Location = new System.Drawing.Point(109, 98);
-            this.otro.MaxLength = 9;
-            this.otro.Name = "otro";
-            this.otro.Size = new System.Drawing.Size(68, 22);
-            this.otro.TabIndex = 6;
-            this.otro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.otro.TextChanged += new System.EventHandler(this.montoE_TextChanged);
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(2, 101);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(33, 16);
-            this.label18.TabIndex = 176;
-            this.label18.Text = "Otro";
             // 
             // solicitud
             // 
