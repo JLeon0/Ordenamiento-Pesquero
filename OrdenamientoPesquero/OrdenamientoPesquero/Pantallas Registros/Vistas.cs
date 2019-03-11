@@ -83,6 +83,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             ReportDataSource datos5 = new ReportDataSource();
             ReportDataSource datos8 = new ReportDataSource();
             ReportDataSource datos9 = new ReportDataSource();
+            ReportDataSource datos10 = new ReportDataSource();
             if (unidad == "")
             {
                 unidad = rnpa;
@@ -180,7 +181,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     datos2.Name = "DataSet2";
                     datos2.Value = ordPesqueroDataSet10.ObtenerFirma;
                     this.obtenerImagenTableAdapter.Fill(ordPesqueroDataSet10.ObtenerImagen, rnpa);
-                    datos.Name = "DataSet1";
+                    datos.Name = "ima";
                     datos.Value = ordPesqueroDataSet10.ObtenerImagen;
                     ReportParameter[] para1 = new ReportParameter[12];
                     para1[0] = new ReportParameter("NOMBRE", dt1.Rows[0]["NOMBRE"].ToString() + " " + dt1.Rows[0]["AP_PAT"].ToString() + " " + dt1.Rows[0]["AP_MAT"].ToString());
@@ -190,11 +191,11 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     para1[9] = new ReportParameter("EXPEDICION", dt1.Rows[0]["FECHAEXP_FOLIO"].ToString());
                     para1[10] = new ReportParameter("VENCE", dt1.Rows[0]["FECHAVEN_FOLIO"].ToString());
                     para1[6] = new ReportParameter("FOLIO", dt1.Rows[0]["FOLIO"].ToString());
-                    para1[11] = new ReportParameter("OCUPACION", dt1.Rows[0]["OCUPACION_LABORAL"].ToString());
-                    dt1 = proc.Obtener_unidades(unidad);
-                    para1[4] = new ReportParameter("RNPA", unidad);
+                    para1[11] = new ReportParameter("OCUPACION", dt1.Rows[0]["OCUPACION_LABORAL"].ToString().ToUpper());
+                    dt1 = proc.Obtener_unidad(unidad);
+                    para1[4] = new ReportParameter("RNPA", dt1.Rows[0]["RNPA"].ToString());
                     para1[5] = new ReportParameter("TITULAR", unidad);
-                    para1[7] = new ReportParameter("DIRECCION", unidad);
+                    para1[7] = new ReportParameter("DIRECCION", dt1.Rows[0]["CALLEYNUM"].ToString() + ", Col." + dt1.Rows[0]["COLONIA"].ToString());
                     string ruta = Application.StartupPath.ToString();
                     ruta = ruta.Replace("\\", "*");
                     ruta = ruta.Replace("*", "/");
@@ -245,6 +246,10 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     datos9.Name = "DataSet9";
                     datos9.Value = obtenerApoyosxRnpaTableAdapter.GetData( rnpa);
                     this.reportViewer1.LocalReport.DataSources.Add(datos9);
+
+                    datos10.Name = "DataSet10";
+                    datos10.Value = obtenerAtendidasxRnpaTableAdapter.GetData(rnpa);
+                    this.reportViewer1.LocalReport.DataSources.Add(datos10);
 
                     try
                     {
@@ -673,7 +678,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     {
                         CRED[1] = new ReportParameter("tipo", "UNIDAD ECONOMICA");
                     }
-                    CRED[4] = new ReportParameter("muni", dt.Rows[0]["MUNICIO"].ToString().ToLowerInvariant());
+                    CRED[4] = new ReportParameter("muni", dt.Rows[0]["MUNICIO"].ToString().ToUpper());
                     dt = proc.Obtener_Relacion(rnpa);
                     CRED[3] = new ReportParameter("num", dt.Rows.Count.ToString());
                     reportViewer1.LocalReport.SetParameters(CRED);

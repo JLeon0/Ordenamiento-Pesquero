@@ -40,7 +40,7 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>La Paz Baja California Sur, </Value>
+                <Value>La Paz, BCS, </Value>
                 <Style>
                   <FontSize>12pt</FontSize>
                 </Style>
@@ -51,9 +51,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>3.07208cm</Top>
-        <Left>10.53125cm</Left>
+        <Left>12.43625cm</Left>
         <Height>0.6cm</Height>
-        <Width>5.19875cm</Width>
+        <Width>2.60583cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -75,7 +75,7 @@
                 <Value>=Today()</Value>
                 <Style>
                   <FontSize>12pt</FontSize>
-                  <Format>D</Format>
+                  <Format>d' de 'MMMM' de 'yyyy</Format>
                 </Style>
               </TextRun>
             </TextRuns>
@@ -84,9 +84,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
         <Top>3.07208cm</Top>
-        <Left>15.73cm</Left>
+        <Left>15.06854cm</Left>
         <Height>0.6cm</Height>
-        <Width>3.77cm</Width>
+        <Width>4.43146cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>

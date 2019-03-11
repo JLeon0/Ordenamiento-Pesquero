@@ -602,7 +602,7 @@
           </Rectangle>
           <Image Name="Image3">
             <Source>Database</Source>
-            <Value>=First(Fields!IMAGEN.Value, "DataSet1")</Value>
+            <Value>=First(Fields!IMAGEN.Value, "ima")</Value>
             <MIMEType>image/jpeg</MIMEType>
             <Sizing>Fit</Sizing>
             <Top>1.13276cm</Top>
@@ -629,6 +629,7 @@
                     <Style>
                       <FontSize>5pt</FontSize>
                       <FontWeight>Normal</FontWeight>
+                      <Color>White</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -641,6 +642,7 @@
                     <Style>
                       <FontSize>6pt</FontSize>
                       <FontWeight>Bold</FontWeight>
+                      <Color>White</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -666,8 +668,8 @@
         </ReportItems>
         <Top>4.77562cm</Top>
         <Left>5.78349cm</Left>
-        <Height>5.61688cm</Height>
-        <Width>9.88026cm</Width>
+        <Height>5.45813cm</Height>
+        <Width>8.87371cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -928,7 +930,7 @@
         <rd:TableAdapterName>ObtenerFirmaTableAdapter</rd:TableAdapterName>
       </rd:DataSetInfo>
     </DataSet>
-    <DataSet Name="DataSet1">
+    <DataSet Name="ima">
       <Query>
         <DataSourceName>OrdPesqueroDataSet10</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
