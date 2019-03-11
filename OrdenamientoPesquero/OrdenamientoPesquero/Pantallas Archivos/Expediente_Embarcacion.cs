@@ -61,9 +61,9 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 if (result == DialogResult.Yes)
                 {
                     this.Cursor = Cursors.WaitCursor;
-                    try
+                    scan = new Scanner(true);
+                    if (scan.oDevice != null)
                     {
-                        scan = new Scanner(true);
                         openFileDialog1.FileName = scan.Scann(0);
                         Stream myStream = openFileDialog1.OpenFile();
                         MemoryStream pdf = new MemoryStream();
@@ -71,7 +71,6 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                         GuardarEnBD(pdf);
                         CargarExpediente();
                     }
-                    catch (Exception) { }
                     this.Cursor = Cursors.Default;
                 }
                 else if (result == DialogResult.No)
