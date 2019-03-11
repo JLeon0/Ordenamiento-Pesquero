@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using WIA;
 public class Scanner
 {
-    Device oDevice;
+    public Device oDevice;
     WIA.CommonDialog dlg;
     bool varias = false; PdfDocument doc;
     public Scanner(bool activado)

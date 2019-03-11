@@ -454,13 +454,16 @@ namespace OrdenamientoPesquero
                 {
                     this.Cursor = Cursors.WaitCursor;
                     scan = new Scanner(true);
-                    openFileDialog1.FileName = scan.Scann(0);
-                    Stream myStream = openFileDialog1.OpenFile();
-                    MemoryStream pdf = new MemoryStream();
-                    myStream.CopyTo(pdf);
-                    exito = proc.InsertarPDFPermiso(nPer.Text, pdf.GetBuffer());
-                    val.Exito(exito);
-                    CargarExpediente();
+                    if (scan.oDevice != null)
+                    {
+                        openFileDialog1.FileName = scan.Scann(0);
+                        Stream myStream = openFileDialog1.OpenFile();
+                        MemoryStream pdf = new MemoryStream();
+                        myStream.CopyTo(pdf);
+                        exito = proc.InsertarPDFPermiso(nPer.Text, pdf.GetBuffer());
+                        val.Exito(exito);
+                        CargarExpediente();
+                    }
                     this.Cursor = Cursors.Default;
                 }
                 else if (result == DialogResult.No)

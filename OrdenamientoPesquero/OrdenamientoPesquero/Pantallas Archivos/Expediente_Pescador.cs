@@ -35,12 +35,15 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 {
                     this.Cursor = Cursors.WaitCursor;
                     scan = new Scanner(true);
-                    openFileDialog1.FileName = scan.Scann(0);
-                    Stream myStream = openFileDialog1.OpenFile();
-                    MemoryStream pdf = new MemoryStream();
-                    myStream.CopyTo(pdf);
-                    GuardarEnBD(pdf);
-                    CargarExpediente();
+                    if (scan.oDevice != null)
+                    {
+                        openFileDialog1.FileName = scan.Scann(0);
+                        Stream myStream = openFileDialog1.OpenFile();
+                        MemoryStream pdf = new MemoryStream();
+                        myStream.CopyTo(pdf);
+                        GuardarEnBD(pdf);
+                        CargarExpediente();
+                    }
                     this.Cursor = Cursors.Default;
                 }
                 else if (result == DialogResult.No)
