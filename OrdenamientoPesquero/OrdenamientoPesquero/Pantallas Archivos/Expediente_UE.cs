@@ -175,7 +175,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 {
                     this.Cursor = Cursors.WaitCursor;
                     scan = new Scanner(true);
-                    if (scan.oDevice != null)
+                    if (scan.oDevice!=null)
                     {
                         openFileDialog1.FileName = scan.Scann(0);
                         Stream myStream = openFileDialog1.OpenFile();
