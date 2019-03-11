@@ -72,6 +72,9 @@
             this.Eliminar = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.FolioMayor = new System.Windows.Forms.Label();
+            this.otro = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.solicitud = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.Entregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registrar)).BeginInit();
@@ -79,6 +82,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Eliminar)).BeginInit();
+            this.solicitud.SuspendLayout();
             this.SuspendLayout();
             // 
             // NombrePesc
@@ -121,7 +125,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(442, 128);
+            this.label3.Location = new System.Drawing.Point(6, 18);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(59, 16);
             this.label3.TabIndex = 1;
@@ -147,7 +151,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(442, 172);
+            this.label5.Location = new System.Drawing.Point(6, 62);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 16);
             this.label5.TabIndex = 1;
@@ -161,7 +165,7 @@
             "+Con techo presupuestal",
             "+Sin techo presupuestal",
             "Negativa"});
-            this.estatus.Location = new System.Drawing.Point(503, 169);
+            this.estatus.Location = new System.Drawing.Point(67, 59);
             this.estatus.Name = "estatus";
             this.estatus.Size = new System.Drawing.Size(141, 24);
             this.estatus.TabIndex = 4;
@@ -170,7 +174,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(442, 213);
+            this.label6.Location = new System.Drawing.Point(6, 103);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(44, 16);
             this.label6.TabIndex = 1;
@@ -179,7 +183,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(667, 128);
+            this.label7.Location = new System.Drawing.Point(231, 18);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(83, 16);
             this.label7.TabIndex = 1;
@@ -197,14 +201,14 @@
             "Daniel Amador Manriquez",
             "Patricia Serrano",
             "Karla Murillo"});
-            this.responsable.Location = new System.Drawing.Point(763, 125);
+            this.responsable.Location = new System.Drawing.Point(327, 15);
             this.responsable.Name = "responsable";
             this.responsable.Size = new System.Drawing.Size(204, 24);
             this.responsable.TabIndex = 6;
             // 
             // monto
             // 
-            this.monto.Location = new System.Drawing.Point(503, 210);
+            this.monto.Location = new System.Drawing.Point(67, 100);
             this.monto.MaxLength = 9;
             this.monto.Name = "monto";
             this.monto.Size = new System.Drawing.Size(102, 22);
@@ -248,7 +252,7 @@
             "1",
             "2",
             "3"});
-            this.prioridad.Location = new System.Drawing.Point(503, 125);
+            this.prioridad.Location = new System.Drawing.Point(67, 15);
             this.prioridad.Name = "prioridad";
             this.prioridad.Size = new System.Drawing.Size(45, 24);
             this.prioridad.TabIndex = 3;
@@ -292,7 +296,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(667, 174);
+            this.label11.Location = new System.Drawing.Point(231, 64);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 16);
             this.label11.TabIndex = 1;
@@ -306,7 +310,7 @@
             "Enrique Duarte Guluarte",
             "Carlos Gonzalez Gonzalez",
             "Fernando García Romero"});
-            this.director.Location = new System.Drawing.Point(763, 166);
+            this.director.Location = new System.Drawing.Point(327, 56);
             this.director.Name = "director";
             this.director.Size = new System.Drawing.Size(204, 24);
             this.director.TabIndex = 7;
@@ -361,6 +365,8 @@
             // 
             // Apoyo
             // 
+            this.Apoyo.Controls.Add(this.otro);
+            this.Apoyo.Controls.Add(this.label18);
             this.Apoyo.Controls.Add(this.programa);
             this.Apoyo.Controls.Add(this.label17);
             this.Apoyo.Controls.Add(this.Total);
@@ -371,10 +377,11 @@
             this.Apoyo.Controls.Add(this.label15);
             this.Apoyo.Controls.Add(this.montoE);
             this.Apoyo.Controls.Add(this.label14);
-            this.Apoyo.Location = new System.Drawing.Point(446, 99);
+            this.Apoyo.Enabled = false;
+            this.Apoyo.Location = new System.Drawing.Point(452, 99);
             this.Apoyo.Name = "Apoyo";
-            this.Apoyo.Size = new System.Drawing.Size(522, 151);
-            this.Apoyo.TabIndex = 172;
+            this.Apoyo.Size = new System.Drawing.Size(584, 151);
+            this.Apoyo.TabIndex = 3;
             this.Apoyo.TabStop = false;
             this.Apoyo.Text = "Apoyo";
             this.Apoyo.Visible = false;
@@ -384,7 +391,7 @@
             this.programa.Location = new System.Drawing.Point(307, 24);
             this.programa.Name = "programa";
             this.programa.Size = new System.Drawing.Size(198, 22);
-            this.programa.TabIndex = 6;
+            this.programa.TabIndex = 7;
             // 
             // label17
             // 
@@ -397,7 +404,7 @@
             // 
             // Total
             // 
-            this.Total.Location = new System.Drawing.Point(110, 119);
+            this.Total.Location = new System.Drawing.Point(109, 127);
             this.Total.Name = "Total";
             this.Total.ReadOnly = true;
             this.Total.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -407,7 +414,7 @@
             // 
             // montoP
             // 
-            this.montoP.Location = new System.Drawing.Point(110, 80);
+            this.montoP.Location = new System.Drawing.Point(109, 71);
             this.montoP.MaxLength = 9;
             this.montoP.Name = "montoP";
             this.montoP.Size = new System.Drawing.Size(68, 22);
@@ -419,7 +426,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(3, 122);
+            this.label12.Location = new System.Drawing.Point(2, 130);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(75, 16);
             this.label12.TabIndex = 173;
@@ -428,7 +435,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(3, 83);
+            this.label16.Location = new System.Drawing.Point(2, 74);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(104, 16);
             this.label16.TabIndex = 173;
@@ -436,7 +443,7 @@
             // 
             // montoF
             // 
-            this.montoF.Location = new System.Drawing.Point(110, 52);
+            this.montoF.Location = new System.Drawing.Point(109, 43);
             this.montoF.MaxLength = 9;
             this.montoF.Name = "montoF";
             this.montoF.Size = new System.Drawing.Size(68, 22);
@@ -448,7 +455,7 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(4, 55);
+            this.label15.Location = new System.Drawing.Point(3, 46);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(91, 16);
             this.label15.TabIndex = 173;
@@ -456,7 +463,7 @@
             // 
             // montoE
             // 
-            this.montoE.Location = new System.Drawing.Point(110, 24);
+            this.montoE.Location = new System.Drawing.Point(109, 15);
             this.montoE.MaxLength = 9;
             this.montoE.Name = "montoE";
             this.montoE.Size = new System.Drawing.Size(68, 22);
@@ -468,7 +475,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(4, 27);
+            this.label14.Location = new System.Drawing.Point(3, 18);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(89, 16);
             this.label14.TabIndex = 173;
@@ -531,12 +538,51 @@
             this.FolioMayor.TabIndex = 203;
             this.FolioMayor.Text = "Folio Mayor:";
             // 
+            // otro
+            // 
+            this.otro.Location = new System.Drawing.Point(109, 98);
+            this.otro.MaxLength = 9;
+            this.otro.Name = "otro";
+            this.otro.Size = new System.Drawing.Size(68, 22);
+            this.otro.TabIndex = 6;
+            this.otro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.otro.TextChanged += new System.EventHandler(this.montoE_TextChanged);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(2, 101);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(33, 16);
+            this.label18.TabIndex = 176;
+            this.label18.Text = "Otro";
+            // 
+            // solicitud
+            // 
+            this.solicitud.Controls.Add(this.label3);
+            this.solicitud.Controls.Add(this.label5);
+            this.solicitud.Controls.Add(this.label6);
+            this.solicitud.Controls.Add(this.label7);
+            this.solicitud.Controls.Add(this.label11);
+            this.solicitud.Controls.Add(this.monto);
+            this.solicitud.Controls.Add(this.estatus);
+            this.solicitud.Controls.Add(this.responsable);
+            this.solicitud.Controls.Add(this.director);
+            this.solicitud.Controls.Add(this.prioridad);
+            this.solicitud.Location = new System.Drawing.Point(446, 98);
+            this.solicitud.Name = "solicitud";
+            this.solicitud.Size = new System.Drawing.Size(584, 152);
+            this.solicitud.TabIndex = 3;
+            this.solicitud.TabStop = false;
+            this.solicitud.Text = "Solicitudes";
+            // 
             // Pantalla_Solicitudes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1111, 451);
+            this.Controls.Add(this.solicitud);
             this.Controls.Add(this.FolioMayor);
             this.Controls.Add(this.Eliminar);
             this.Controls.Add(this.label13);
@@ -553,21 +599,11 @@
             this.Controls.Add(this.label10);
             this.Controls.Add(this.Actualizar);
             this.Controls.Add(this.Registrar);
-            this.Controls.Add(this.prioridad);
-            this.Controls.Add(this.director);
-            this.Controls.Add(this.responsable);
-            this.Controls.Add(this.estatus);
             this.Controls.Add(this.fecha);
-            this.Controls.Add(this.monto);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.folio);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label11);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.NombrePesc);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -585,6 +621,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Eliminar)).EndInit();
+            this.solicitud.ResumeLayout(false);
+            this.solicitud.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -635,5 +673,8 @@
         private System.Windows.Forms.PictureBox Eliminar;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label FolioMayor;
+        private System.Windows.Forms.TextBox otro;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.GroupBox solicitud;
     }
 }
