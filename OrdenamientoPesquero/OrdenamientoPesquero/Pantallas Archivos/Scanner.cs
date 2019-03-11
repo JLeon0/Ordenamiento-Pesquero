@@ -23,19 +23,9 @@ public class Scanner
     }
     public string Scann(int x)
     {
-        ImageFile imageFile;
-        try
-        {
-            imageFile = dlg.ShowAcquireImage(oDevice.Type, WiaImageIntent.GrayscaleIntent, WiaImageBias.MaximizeQuality,
+        ImageFile imageFile = dlg.ShowAcquireImage(oDevice.Type, WiaImageIntent.GrayscaleIntent, WiaImageBias.MaximizeQuality,
             "{B96B3CAB-0728-11D3-9D7B-0000F81EF32E}", false, false, false);
-        }
-        catch (Exception ms)
-        {
-            MessageBox.Show("Error, vuelva a la pantalla anterior y reintente");
-            return "";
-        }
         WIA.Vector vector = imageFile.FileData;
-        System.Drawing.Image i = System.Drawing.Image.FromStream(new System.IO.MemoryStream((byte[])vector.get_BinaryData()));
 
         string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         string folder = path + "/PDF/";
