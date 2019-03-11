@@ -472,7 +472,7 @@
             this.NombrePresidenteUE.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombrePresidenteUE.ForeColor = System.Drawing.Color.Black;
             this.NombrePresidenteUE.Location = new System.Drawing.Point(452, 190);
-            this.NombrePresidenteUE.MaxLength = 30;
+            this.NombrePresidenteUE.MaxLength = 50;
             this.NombrePresidenteUE.Name = "NombrePresidenteUE";
             this.NombrePresidenteUE.Size = new System.Drawing.Size(373, 22);
             this.NombrePresidenteUE.TabIndex = 13;

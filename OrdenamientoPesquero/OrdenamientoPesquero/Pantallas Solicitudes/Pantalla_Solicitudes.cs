@@ -18,7 +18,7 @@ namespace OrdenamientoPesquero
         Solicitud soli; DataTable solicitudes;
         Validaciones val = new Validaciones();
         bool Ap = false;
-        int mE, mF, mP;
+        int mE, mF, mP, ot;
 
         public Pantalla_Solicitudes(string nombre, string curp, bool ap)
         {
@@ -33,7 +33,10 @@ namespace OrdenamientoPesquero
             CargarSolicitudes();
             if (Ap)
             {
+                solicitud.Enabled = false;
+                solicitud.Visible = false;
                 Apoyo.Visible = true;
+                Apoyo.Enabled = true;
                 Entrega.Text = "Regresar";
                 Entregar.BackgroundImage = Properties.Resources.x;
                 txt.Text = "Apoyos";
@@ -156,8 +159,9 @@ namespace OrdenamientoPesquero
             if (montoE.Text == "") { mE = 0; } else { mE = Convert.ToInt32(montoE.Text); }
             if (montoF.Text == "") { mF = 0; } else { mF = Convert.ToInt32(montoF.Text); }
             if (montoP.Text == "") { mP = 0; } else { mP = Convert.ToInt32(montoP.Text); }
+            if (otro.Text == "") { ot = 0; } else { ot = Convert.ToInt32(otro.Text); }
 
-            Total.Text = (mE + mF + mP).ToString();
+            Total.Text = (mE + mF + mP + ot).ToString();
         }
 
         private void LimpiarPantalla()
@@ -165,6 +169,11 @@ namespace OrdenamientoPesquero
             foreach (TextBox p in this.Controls.OfType<TextBox>())
             {
                 p.Text = "";
+            }
+            foreach (ComboBox p in this.Controls.OfType<ComboBox>())
+            {
+                p.Text = "";
+                if(p.Name == "estatus") { p.Text = "Pendiente"; }
             }
         }
     }
