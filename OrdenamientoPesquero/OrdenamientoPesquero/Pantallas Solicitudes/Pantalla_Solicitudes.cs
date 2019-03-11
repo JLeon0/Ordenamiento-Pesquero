@@ -54,7 +54,7 @@ namespace OrdenamientoPesquero
             }
             else
             {
-                soli = new Solicitud(NombrePesc.Text, Curp, folio.Text, fecha.Text, concepto.Text, observaciones.Text, montoF.Text, montoE.Text, montoP.Text, programa.Text, Total.Text,1);
+                soli = new Solicitud(NombrePesc.Text, Curp, folio.Text, fecha.Text, concepto.Text, observaciones.Text, montoF.Text, montoE.Text, montoP.Text, otro.Text , programa.Text, Total.Text,1);
                 if (proc.Registrar_Apoyo(soli) > 0) { MessageBox.Show("Apoyo ingresado con éxito"); }
                 else { MessageBox.Show("Error al ingresar apoyo"); }
             }
@@ -79,6 +79,7 @@ namespace OrdenamientoPesquero
                     montoE.Text = filas["MONTOE"].ToString();
                     montoF.Text = filas["MONTOF"].ToString();
                     montoP.Text = filas["MONTOP"].ToString();
+                    otro.Text = filas["MONTOO"].ToString();
                     programa.Text = filas["PROGRAMA"].ToString();
                 }
             }
@@ -107,7 +108,7 @@ namespace OrdenamientoPesquero
             }
             else
             {
-                soli = new Solicitud(NombrePesc.Text, Curp, folio.Text, fecha.Text, concepto.Text, observaciones.Text, montoF.Text, montoE.Text, montoP.Text, programa.Text, Total.Text,1);
+                soli = new Solicitud(NombrePesc.Text, Curp, folio.Text, fecha.Text, concepto.Text, observaciones.Text, montoF.Text, montoE.Text, montoP.Text, otro.Text, programa.Text, Total.Text,1);
                 if (proc.Actualizar_Apoyo(soli) > 0) { MessageBox.Show("Apoyo actualizado con éxito"); }
                 else { MessageBox.Show("Error al actualizar apoyo"); }
 
