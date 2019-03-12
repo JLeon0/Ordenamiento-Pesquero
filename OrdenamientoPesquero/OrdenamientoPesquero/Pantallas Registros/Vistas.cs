@@ -192,10 +192,10 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     para1[10] = new ReportParameter("VENCE", dt1.Rows[0]["FECHAVEN_FOLIO"].ToString());
                     para1[6] = new ReportParameter("FOLIO", dt1.Rows[0]["FOLIO"].ToString());
                     para1[11] = new ReportParameter("OCUPACION", dt1.Rows[0]["OCUPACION_LABORAL"].ToString().ToUpper());
+                    para1[7] = new ReportParameter("DIRECCION", dt1.Rows[0]["CALLENUM"].ToString() + ", COL." + dt1.Rows[0]["COLONIA"].ToString());
                     dt1 = proc.Obtener_unidad(unidad);
                     para1[4] = new ReportParameter("RNPA", dt1.Rows[0]["RNPA"].ToString());
                     para1[5] = new ReportParameter("TITULAR", unidad);
-                    para1[7] = new ReportParameter("DIRECCION", dt1.Rows[0]["CALLEYNUM"].ToString() + ", Col." + dt1.Rows[0]["COLONIA"].ToString());
                     string ruta = Application.StartupPath.ToString();
                     ruta = ruta.Replace("\\", "*");
                     ruta = ruta.Replace("*", "/");

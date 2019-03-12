@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Threading;
 
 namespace OrdenamientoPesquero
 {
@@ -16,9 +17,21 @@ namespace OrdenamientoPesquero
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu1());
+            bool instanceCountOne = false;
+
+            using (Mutex mtex = new Mutex(true, "MyRunningApp", out instanceCountOne))
+            {
+                if (instanceCountOne)
+                {
+                    Application.EnableVisualStyles();
+                    Application.SetCompatibleTextRenderingDefault(false);
+                    Application.Run(new Menu1());
+                    mtex.ReleaseMutex();
+                }
+                else
+                {
+                }
+            }
         }
     }
 }
