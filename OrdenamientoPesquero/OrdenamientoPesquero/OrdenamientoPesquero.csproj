@@ -237,6 +237,12 @@
       <DependentUpon>Expediente_UE.cs</DependentUpon>
     </Compile>
     <Compile Include="Pantallas Archivos\Scanner.cs" />
+    <Compile Include="Pantallas Menu\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pantallas Menu\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
     <Compile Include="Pantallas Menu\Menu1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -361,6 +367,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas Archivos\Expediente_UE.resx">
       <DependentUpon>Expediente_UE.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pantallas Menu\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Pantallas Menu\Menu1.resx">
       <DependentUpon>Menu1.cs</DependentUpon>
