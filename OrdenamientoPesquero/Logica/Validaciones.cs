@@ -7,6 +7,7 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using System.Data;
 using Logica;
+using System.Security.Cryptography;
 
 namespace Logica
 {
@@ -61,7 +62,6 @@ namespace Logica
                 return false;
             }
         }
-
         public bool validaralgo(string[,] arre)
         {
             bool estabien = true;
@@ -230,6 +230,14 @@ namespace Logica
             {
                 return true;
             }
+        }
+
+        public string Encriptar(string cadena)
+        {
+            byte[] BtclearBytes = new UnicodeEncoding().GetBytes(cadena);
+            byte[] BthashBytes = ((HashAlgorithm)CryptoConfig.CreateFromName("MD5")).ComputeHash(BtclearBytes);
+            string cadenaEncriptada = BitConverter.ToString(BthashBytes);
+            return cadenaEncriptada;
         }
     }
 }
