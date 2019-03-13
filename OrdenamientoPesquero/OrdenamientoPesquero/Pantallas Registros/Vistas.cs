@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using CapaDatos;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace OrdenamientoPesquero.Pantallas_Registros
 {
@@ -686,6 +687,18 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     break;
                 default:
                     break;
+            }
+        }
+        public void DisableUnwantedExportFormat(ReportViewer ReportViewerID, string strFormatName)
+        {
+            FieldInfo info;
+            foreach (RenderingExtension extension in ReportViewerID.LocalReport.ListRenderingExtensions())
+            {
+                if (extension.Name == strFormatName)
+                {
+                    info = extension.GetType().GetField("m_isVisible", BindingFlags.Instance | BindingFlags.NonPublic);
+                    info.SetValue(extension, false);
+                }
             }
         }
     }

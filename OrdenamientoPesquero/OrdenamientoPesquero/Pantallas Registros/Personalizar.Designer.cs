@@ -115,6 +115,8 @@
             this.OrdenaEmbarca = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.chip = new System.Windows.Forms.MaskedTextBox();
+            this.checkBox71 = new System.Windows.Forms.CheckBox();
             this.checkBox32 = new System.Windows.Forms.CheckBox();
             this.comboBox14 = new System.Windows.Forms.ComboBox();
             this.ColumnasEmbarca = new System.Windows.Forms.GroupBox();
@@ -138,8 +140,6 @@
             this.checkBox67 = new System.Windows.Forms.CheckBox();
             this.checkBox68 = new System.Windows.Forms.CheckBox();
             this.checkBox69 = new System.Windows.Forms.CheckBox();
-            this.checkBox71 = new System.Windows.Forms.CheckBox();
-            this.chip = new System.Windows.Forms.MaskedTextBox();
             this.ColumasPescador.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.FiltrosPescador.SuspendLayout();
@@ -164,9 +164,10 @@
             this.reportViewer1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.reportViewer1.DocumentMapWidth = 1;
             this.reportViewer1.Location = new System.Drawing.Point(328, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(704, 566);
+            this.reportViewer1.Size = new System.Drawing.Size(735, 538);
             this.reportViewer1.TabIndex = 0;
             // 
             // checkBox1
@@ -411,7 +412,7 @@
             this.groupBox1.Controls.Add(this.ColumasPescador);
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(302, 528);
+            this.groupBox1.Size = new System.Drawing.Size(302, 500);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pescador";
@@ -597,7 +598,7 @@
             this.tabControl1.Location = new System.Drawing.Point(4, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(322, 566);
+            this.tabControl1.Size = new System.Drawing.Size(322, 538);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
@@ -607,7 +608,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(314, 540);
+            this.tabPage1.Size = new System.Drawing.Size(314, 512);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Pescador";
             // 
@@ -618,7 +619,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(314, 540);
+            this.tabPage2.Size = new System.Drawing.Size(314, 512);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Unidad Economica";
             // 
@@ -634,7 +635,7 @@
             this.groupBox2.Controls.Add(this.ColumasUnidad);
             this.groupBox2.Location = new System.Drawing.Point(6, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(302, 485);
+            this.groupBox2.Size = new System.Drawing.Size(302, 457);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Unidad Economica";
@@ -879,7 +880,7 @@
             this.tabPage3.Controls.Add(this.groupBox5);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(314, 540);
+            this.tabPage3.Size = new System.Drawing.Size(314, 512);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Permisos";
             // 
@@ -895,7 +896,7 @@
             this.groupBox5.Controls.Add(this.ColumnasPermiso);
             this.groupBox5.Location = new System.Drawing.Point(6, 6);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(302, 485);
+            this.groupBox5.Size = new System.Drawing.Size(302, 457);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Permiso";
@@ -1171,7 +1172,7 @@
             this.tabPage4.Controls.Add(this.groupBox3);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(314, 540);
+            this.tabPage4.Size = new System.Drawing.Size(314, 512);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Embarcaciones";
             // 
@@ -1187,7 +1188,7 @@
             this.groupBox3.Controls.Add(this.ColumnasEmbarca);
             this.groupBox3.Location = new System.Drawing.Point(6, 6);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(302, 528);
+            this.groupBox3.Size = new System.Drawing.Size(302, 500);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Embarcaciones";
@@ -1238,6 +1239,27 @@
             this.groupBox4.TabIndex = 2;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Filtros";
+            // 
+            // chip
+            // 
+            this.chip.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chip.Location = new System.Drawing.Point(123, 51);
+            this.chip.Mask = "999*999*999";
+            this.chip.Name = "chip";
+            this.chip.Size = new System.Drawing.Size(157, 22);
+            this.chip.TabIndex = 16;
+            this.chip.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.chip.ValidatingType = typeof(int);
+            // 
+            // checkBox71
+            // 
+            this.checkBox71.AutoSize = true;
+            this.checkBox71.Location = new System.Drawing.Point(6, 56);
+            this.checkBox71.Name = "checkBox71";
+            this.checkBox71.Size = new System.Drawing.Size(51, 17);
+            this.checkBox71.TabIndex = 5;
+            this.checkBox71.Text = "CHIP";
+            this.checkBox71.UseVisualStyleBackColor = true;
             // 
             // checkBox32
             // 
@@ -1531,32 +1553,11 @@
             this.checkBox69.Text = "Nombre";
             this.checkBox69.UseVisualStyleBackColor = true;
             // 
-            // checkBox71
-            // 
-            this.checkBox71.AutoSize = true;
-            this.checkBox71.Location = new System.Drawing.Point(6, 56);
-            this.checkBox71.Name = "checkBox71";
-            this.checkBox71.Size = new System.Drawing.Size(51, 17);
-            this.checkBox71.TabIndex = 5;
-            this.checkBox71.Text = "CHIP";
-            this.checkBox71.UseVisualStyleBackColor = true;
-            // 
-            // chip
-            // 
-            this.chip.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chip.Location = new System.Drawing.Point(123, 51);
-            this.chip.Mask = "999*999*999";
-            this.chip.Name = "chip";
-            this.chip.Size = new System.Drawing.Size(157, 22);
-            this.chip.TabIndex = 16;
-            this.chip.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.chip.ValidatingType = typeof(int);
-            // 
             // Personalizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1033, 568);
+            this.ClientSize = new System.Drawing.Size(1064, 540);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.reportViewer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;

@@ -668,6 +668,27 @@ namespace Logica
 
         #endregion
 
-
+        #region Programas
+        public int Registrar_Programa(string programa, string usuario)
+        {
+            string[] Parametros = { "@usuario, @programa" };
+            return c.Ejecutar("Registrar_Programa", Parametros, usuario, programa);
+        }
+        public int Actualizar_Programa(string programa, string usuario)
+        {
+            string[] Parametros = { "@usuario, @programa" };
+            return c.Ejecutar("Actualizar_Programa", Parametros, usuario, programa);
+        }
+        public int Eliminar_Programa(string programa, string usuario)
+        {
+            string[] Parametros = { "@programa" };
+            return c.Ejecutar("Actualizar_Programa", Parametros, programa);
+        }
+        public DataTable Obtener_Programa()
+        {
+            string[] Parametros = {  };
+            return c.getDatosTabla("ObtenerSolicitudesxCurp", Parametros);
+        }
+        #endregion
     }
 }
