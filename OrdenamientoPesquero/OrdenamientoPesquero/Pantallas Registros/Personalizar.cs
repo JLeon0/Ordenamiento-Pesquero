@@ -70,16 +70,13 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     {
                         consulta += " AND PESCADOR." + a.Text.Replace(" ", "_").ToLower() + " = ";
                     }
+                    if (a.Text == "U.E.")
+                    {
+                        consulta += " AND RNPTITULAR = ";
+                    }
                     else
                     {
-                        if (a.Text == "U.E.")
-                        {
-                            consulta += " AND RNPTITULAR = ";
-                        }
-                        else
-                        {
-                            consulta += " AND " + a.Text.Replace(" ", "_").ToLower() + " = ";
-                        }
+                        consulta += " AND " + a.Text.Replace(" ", "_").ToLower() + " = ";
                     }
                     int m = 0;
                     foreach (ComboBox cb in FiltrosPescador.Controls.OfType<ComboBox>())
@@ -89,12 +86,13 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                             if (a.Text=="U.E.")
                             {
                                 consulta += "'" + dt.Rows[comboBox14.SelectedIndex]["RNPA"] + "'";
+                                break;
                             }
                             else
                             {
                                 consulta += "'" + cb.Text + "'";
+                                break;
                             }
-                            break;
                         }
                         m++;
                     }
