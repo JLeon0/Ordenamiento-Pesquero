@@ -25,7 +25,7 @@ namespace OrdenamientoPesquero
                 {
                     Application.EnableVisualStyles();
                     Application.SetCompatibleTextRenderingDefault(false);
-                    Application.Run(new Menu1());
+                    Application.Run(new Login());
                     mtex.ReleaseMutex();
                 }
                 else

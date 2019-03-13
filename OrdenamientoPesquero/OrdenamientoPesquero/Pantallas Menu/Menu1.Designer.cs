@@ -60,7 +60,6 @@
             this.Solicitudes.TabIndex = 0;
             this.toolTip1.SetToolTip(this.Solicitudes, "Apoyos Y Solicitudes");
             this.Solicitudes.UseVisualStyleBackColor = false;
-            this.Solicitudes.Visible = false;
             this.Solicitudes.Click += new System.EventHandler(this.Solicitudes_Click);
             // 
             // Ordenamiento
@@ -82,7 +81,6 @@
             this.Ordenamiento.TabIndex = 0;
             this.toolTip1.SetToolTip(this.Ordenamiento, "Ordenamiento Pesquero");
             this.Ordenamiento.UseVisualStyleBackColor = false;
-            this.Ordenamiento.Visible = false;
             this.Ordenamiento.Click += new System.EventHandler(this.Ordenamiento_Click);
             // 
             // CerrarPanel
@@ -170,7 +168,6 @@
             this.Name = "Menu1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu1";
-            this.Activated += new System.EventHandler(this.Menu1_Activated);
             this.Load += new System.EventHandler(this.Menu1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

@@ -668,6 +668,14 @@ namespace Logica
 
         #endregion
 
+        #region Login
+        public DataTable Loggearse(string User, string Pass)
+        {
+            string[] Parametros = { "@user", "@pass" };
+            return c.getDatosTabla("AutenticarLogin", Parametros, User, Pass);
+        }
+        #endregion
+
 
     }
 }

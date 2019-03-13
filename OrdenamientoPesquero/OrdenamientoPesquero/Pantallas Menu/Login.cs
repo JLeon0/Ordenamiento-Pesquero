@@ -8,11 +8,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using CapaDatos;
+using Logica;
 
 namespace OrdenamientoPesquero.Pantallas_Menu
 {
     public partial class Login : Form
     {
+        BackgroundWorker bw = new BackgroundWorker();
+        Conexion c;
+        Procedimientos proc = new Procedimientos();
+        Validaciones val = new Validaciones();
         public Login()
         {
             InitializeComponent();
@@ -28,7 +34,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             if (txtuser.Text == "Usuario")
             {
                 txtuser.Text = "";
-                txtuser.ForeColor = Color.LightGray;
+                txtuser.ForeColor = Color.Black;
             }
         }
 
@@ -37,7 +43,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             if (txtuser.Text == "")
             {
                 txtuser.Text = "Usuario";
-                txtuser.ForeColor = Color.Silver;
+                txtuser.ForeColor = Color.DimGray;
             }
         }
 
@@ -46,7 +52,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             if (txtpass.Text == "Contraseña")
             {
                 txtpass.Text = "";
-                txtpass.ForeColor = Color.LightGray;
+                txtpass.ForeColor = Color.Black;
                 txtpass.UseSystemPasswordChar = true;
             }
         }
@@ -56,7 +62,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             if (txtpass.Text == "")
             {
                 txtpass.Text = "Contraseña";
-                txtpass.ForeColor = Color.Silver;
+                txtpass.ForeColor = Color.DimGray;
                 txtpass.UseSystemPasswordChar = false;
             }
         }
@@ -85,12 +91,54 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            bw.DoWork += (obj, ea) => Task();
+            bw.RunWorkerAsync();
         }
+        private void CargarInstancia()
+        {
+            Microsoft.Win32.RegistryKey baseKey = Microsoft.Win32.RegistryKey.OpenBaseKey(Microsoft.Win32.RegistryHive.LocalMachine, Microsoft.Win32.RegistryView.Registry64);
+            Microsoft.Win32.RegistryKey key = baseKey.OpenSubKey(@"SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL");
+            foreach (string s in key.GetValueNames())
+            {
+                c = new Conexion("OrdPesquero", @".\" + s);
+            }
+            setString(c.CONEXIONPERRONA);
+        }
+        private void Task()
+        {
+            CargarInstancia();
+        }
+        public string setString(string CONEXIONPERRONA)
+        {
+            Properties.Settings.Default.OrdPesqueroConnectionString = CONEXIONPERRONA;
+            Properties.Settings.Default.OrdPesqueroConnectionString1 = CONEXIONPERRONA;
+            Properties.Settings.Default.OrdPesqueroConnectionString2 = CONEXIONPERRONA;
+            Properties.Settings.Default.OrdPesqueroConnectionString3 = CONEXIONPERRONA;
+            Properties.Settings.Default.OrdPesqueroConnectionString4 = CONEXIONPERRONA;
+            // modificamos el guardado
+            Properties.Settings.Default.Save();
 
+            return Properties.Settings.Default.OrdPesqueroConnectionString;
+        }
         private void btnlogin_Click(object sender, EventArgs e)
         {
+            DataTable data = proc.Loggearse(txtuser.Text, val.Encriptar(txtpass.Text));
+            if(data.Rows.Count > 0)
+            {
+                MessageBox.Show("Bienvenido " + data.Rows[0]["NOMBRE"].ToString());
+                Menu1 menu1 = new Menu1();
+                this.Hide();
+                menu1.ShowDialog();
+                this.Show();
+            }
+        }
 
+        private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)13)
+            {
+                btnlogin.PerformClick();
+            }
         }
     }
 }

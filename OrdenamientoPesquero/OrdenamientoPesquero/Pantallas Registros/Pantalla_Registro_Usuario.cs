@@ -296,11 +296,9 @@ namespace OrdenamientoPesquero
         private void CargarNoPescadores()
         {
             NoOrdenados = proc.BuscarNombre("", "NO APLICA");
-            ListaNombres2.Items.Clear();
-            foreach (DataRow fila in NoOrdenados.Rows)
-            {
-                ListaNombres2.Items.Add(fila["NOMBRE"].ToString());
-            }
+            ListaNombres2.DataSource = dt;
+            ListaNombres2.ValueMember = "CURP";
+            ListaNombres2.DisplayMember = "NOMBRE";
             lblNo.Text = "NO ORDENADOS  " + ListaNombres2.Items.Count;
             ListaNombres2.ClearSelected();
         }
@@ -1134,11 +1132,6 @@ namespace OrdenamientoPesquero
             ListaNombres2.DataSource = NoOrdenados;
             ListaNombres2.ValueMember = "CURP";
             ListaNombres2.DisplayMember = "NOMBRE";
-            //ListaNombres2.Items.Clear();
-            //foreach (DataRow fila in NoOrdenados.Rows)
-            //{
-            //    ListaNombres2.Items.Add(fila["NOMBRE"].ToString());
-            //}
         }
         #endregion
 

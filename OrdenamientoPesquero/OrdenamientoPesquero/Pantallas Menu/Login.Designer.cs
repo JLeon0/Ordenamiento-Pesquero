@@ -48,27 +48,29 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(250, 330);
+            this.panel1.Size = new System.Drawing.Size(268, 330);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
             // pictureBox3
             // 
-            this.pictureBox3.Image = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_V_;
-            this.pictureBox3.Location = new System.Drawing.Point(0, 61);
+            this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_V_;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(3, 42);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(247, 203);
+            this.pictureBox3.Size = new System.Drawing.Size(260, 210);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
             // txtuser
             // 
-            this.txtuser.BackColor = System.Drawing.Color.DarkGray;
+            this.txtuser.BackColor = System.Drawing.Color.Silver;
             this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtuser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtuser.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtuser.ForeColor = System.Drawing.Color.DimGray;
             this.txtuser.Location = new System.Drawing.Point(310, 77);
+            this.txtuser.MaxLength = 15;
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(408, 20);
             this.txtuser.TabIndex = 1;
@@ -78,16 +80,18 @@
             // 
             // txtpass
             // 
-            this.txtpass.BackColor = System.Drawing.Color.DarkGray;
+            this.txtpass.BackColor = System.Drawing.Color.Silver;
             this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtpass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtpass.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.txtpass.ForeColor = System.Drawing.Color.DimGray;
             this.txtpass.Location = new System.Drawing.Point(310, 142);
+            this.txtpass.MaxLength = 16;
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(408, 20);
             this.txtpass.TabIndex = 2;
             this.txtpass.Text = "Contraseña";
             this.txtpass.Enter += new System.EventHandler(this.txtpass_Enter);
+            this.txtpass.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtpass_KeyPress);
             this.txtpass.Leave += new System.EventHandler(this.txtpass_Leave);
             // 
             // label1
@@ -95,7 +99,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(503, 0);
+            this.label1.Location = new System.Drawing.Point(407, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 32);
             this.label1.TabIndex = 4;
@@ -104,7 +108,8 @@
             // btnlogin
             // 
             this.btnlogin.BackColor = System.Drawing.Color.DarkGray;
-            this.btnlogin.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(85)))), ((int)(((byte)(159)))), ((int)(((byte)(127)))));
+            this.btnlogin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnlogin.FlatAppearance.BorderColor = System.Drawing.Color.RoyalBlue;
             this.btnlogin.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(20)))), ((int)(((byte)(20)))));
             this.btnlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
