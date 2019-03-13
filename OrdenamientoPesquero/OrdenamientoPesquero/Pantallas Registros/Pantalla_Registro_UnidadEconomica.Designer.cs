@@ -168,6 +168,7 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label35 = new System.Windows.Forms.Label();
+            this.NombreUsuario = new System.Windows.Forms.Label();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelRNPA)).BeginInit();
@@ -1804,6 +1805,17 @@
             this.label35.TabIndex = 134;
             this.label35.Text = "Actualizar";
             // 
+            // NombreUsuario
+            // 
+            this.NombreUsuario.AutoSize = true;
+            this.NombreUsuario.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NombreUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.NombreUsuario.Location = new System.Drawing.Point(1117, 28);
+            this.NombreUsuario.Name = "NombreUsuario";
+            this.NombreUsuario.Size = new System.Drawing.Size(75, 16);
+            this.NombreUsuario.TabIndex = 191;
+            this.NombreUsuario.Text = "Bienvenido ";
+            // 
             // Pantalla_Registro_UnidadEconomica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1811,6 +1823,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1370, 605);
+            this.Controls.Add(this.NombreUsuario);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelRNPA);
             this.Controls.Add(this.gbBusqueda);
@@ -2002,5 +2015,6 @@
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label NombreUsuario;
     }
 }

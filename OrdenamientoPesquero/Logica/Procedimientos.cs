@@ -674,6 +674,11 @@ namespace Logica
             string[] Parametros = { "@user", "@pass" };
             return c.getDatosTabla("AutenticarLogin", Parametros, User, Pass);
         }
+        public int CrearLoggin(string User, string Pass, string Nombre, int Nivel)
+        {
+            string[] Parametros = { "@user", "@pass", "@nombre", "@nivel" };
+            return c.Ejecutar("CrearLogin", Parametros, User, Pass, Nombre, Nivel);
+        }
         #endregion
 
 

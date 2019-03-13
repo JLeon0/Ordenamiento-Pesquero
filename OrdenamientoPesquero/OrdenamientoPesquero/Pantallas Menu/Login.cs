@@ -125,12 +125,30 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             DataTable data = proc.Loggearse(txtuser.Text, val.Encriptar(txtpass.Text));
             if(data.Rows.Count > 0)
             {
-                MessageBox.Show("Bienvenido " + data.Rows[0]["NOMBRE"].ToString());
-                Menu1 menu1 = new Menu1();
-                this.Hide();
-                menu1.ShowDialog();
+                string User = data.Rows[0]["USERS"].ToString();
+                string Nombre = data.Rows[0]["NOMBRE"].ToString();
+                int Nivel = Convert.ToInt32(data.Rows[0]["NIVEL"].ToString());
+                if (Nivel == 0 || Nivel == 1)
+                {
+                    Menu1 menu1 = new Menu1(User, Nombre, Nivel);
+                    this.Hide();
+                    menu1.ShowDialog();
+                }
+                else if(Nivel == 2)
+                {
+
+                }
+                LimpiarDatos();
                 this.Show();
             }
+        }
+        private void LimpiarDatos()
+        {
+            txtuser.Text = "Usuario";
+            txtuser.ForeColor = Color.DimGray;
+            txtpass.Text = "Contraseña";
+            txtpass.ForeColor = Color.DimGray;
+            txtpass.UseSystemPasswordChar = false;
         }
 
         private void txtpass_KeyPress(object sender, KeyPressEventArgs e)
