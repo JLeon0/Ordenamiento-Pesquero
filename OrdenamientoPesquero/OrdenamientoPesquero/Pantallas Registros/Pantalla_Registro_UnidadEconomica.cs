@@ -27,20 +27,26 @@ namespace OrdenamientoPesquero
         DataSet ds = new DataSet();
         DataTable dt = null;
         DataTable RNPA,NOMBRES = null;
+        string Usuario, Nombre;
+        int Nivel;
         string[,] unidad = { { "0", "RFC" }, { "0", "Codigo Postal" }, { "0", "Correo Electronico" }, { "0", "Telefono de la Cooperativa" },{"0","RNPA" } , {"0","Telefono del Presidente" } };
         string[,] pescador = { { "0", "CURP" }, { "0", "RFC" }, { "0", "Codigo postal" }, { "0", "Telefono" } , { "0","Correo Electronico"} };
         string[] Municipios;
-        public Pantalla_Registro_UnidadEconomica()
+        public Pantalla_Registro_UnidadEconomica(string user, string nombre, int nivel)
         {
             InitializeComponent();
-            val.ajustarResolucion(this);
-            this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
-            this.Width = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width);
+            //val.ajustarResolucion(this);
+            //this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
+            //this.Width = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width;
+            Usuario = user;
+            Nombre = nombre;
+            Nivel = nivel;
         }
 
         private void Pantalla_Registro_UnidadEconomica_Load(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor; cargando = false;
+            NombreUsuario.Text += Nombre;
             txtFecha.Text = DateTime.Today.ToString("dd/MM/yyyy");
             CargarRNPA();
             cbRNPA.Focus();

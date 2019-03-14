@@ -75,6 +75,7 @@
             this.label13 = new System.Windows.Forms.Label();
             this.FolioMayor = new System.Windows.Forms.Label();
             this.solicitud = new System.Windows.Forms.GroupBox();
+            this.InicialesPrograma = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Entregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registrar)).BeginInit();
@@ -106,10 +107,10 @@
             // 
             // folio
             // 
-            this.folio.Location = new System.Drawing.Point(295, 125);
+            this.folio.Location = new System.Drawing.Point(330, 126);
             this.folio.MaxLength = 11;
             this.folio.Name = "folio";
-            this.folio.Size = new System.Drawing.Size(102, 22);
+            this.folio.Size = new System.Drawing.Size(86, 22);
             this.folio.TabIndex = 1;
             this.folio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
             // 
@@ -136,7 +137,7 @@
             this.fecha.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.fecha.Location = new System.Drawing.Point(295, 189);
             this.fecha.Name = "fecha";
-            this.fecha.Size = new System.Drawing.Size(102, 22);
+            this.fecha.Size = new System.Drawing.Size(121, 22);
             this.fecha.TabIndex = 2;
             // 
             // label4
@@ -584,12 +585,23 @@
             this.solicitud.TabStop = false;
             this.solicitud.Text = "Solicitudes";
             // 
+            // InicialesPrograma
+            // 
+            this.InicialesPrograma.AutoSize = true;
+            this.InicialesPrograma.Location = new System.Drawing.Point(292, 129);
+            this.InicialesPrograma.Name = "InicialesPrograma";
+            this.InicialesPrograma.Size = new System.Drawing.Size(20, 16);
+            this.InicialesPrograma.TabIndex = 204;
+            this.InicialesPrograma.Text = "---";
+            // 
             // Pantalla_Solicitudes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1111, 451);
+            this.Controls.Add(this.InicialesPrograma);
+            this.Controls.Add(this.solicitud);
             this.Controls.Add(this.FolioMayor);
             this.Controls.Add(this.Eliminar);
             this.Controls.Add(this.label13);
@@ -683,5 +695,6 @@
         private System.Windows.Forms.TextBox otro;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.GroupBox solicitud;
+        private System.Windows.Forms.Label InicialesPrograma;
     }
 }
