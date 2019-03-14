@@ -19,17 +19,17 @@ namespace OrdenamientoPesquero
     public partial class Pantalla_Registro_Usuario : Form
     {
         string[,] pescador = { { "0", "CURP" }, { "0", "RFC" }, { "0", "Codigo postal" }, { "0", "Telefono" }, { "0", "Correo Electronico" } };
-        int exito = 0;
+        int exito = 0, Nivel;
         bool cargando = true;
         Pescador pes;
         Procedimientos proc = new Procedimientos();
         Validaciones val = new Validaciones();
         DataTable dt, NoOrdenados, Embarcaciones;
-        string RNPA = "", NombreUnidad = "";
+        string RNPA = "", NombreUnidad = "", Usuario = "", NombreUsuario = "";
         string[] Municipios;
         byte[] imagenBuffer;
 
-        public Pantalla_Registro_Usuario(string rnpa, string nombre, int tipo)
+        public Pantalla_Registro_Usuario(string rnpa, string nombre, int tipo, string user, string nombreuser, int nivel)
         {
             InitializeComponent();
             this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
@@ -40,11 +40,15 @@ namespace OrdenamientoPesquero
             if (tipo == 1)
             { TipoSocio.Enabled = false; TipoExtra.Enabled = false; }
             else if(tipo== 0) { TipoTitular.Enabled = false; TipoEventual.Enabled = false; }
+            Usuario = user;
+            NombreUsuario = nombreuser;
+            Nivel = nivel;
         }
 
         private void Pantalla_Registro_Usuario_Load(object sender, EventArgs e)
         {
             //val.ajustarResolucion(this);
+            Bienvenido.Text += NombreUsuario;
             BloquearControles();
             CargarNoPescadores();
             CargarPescadores();
@@ -156,7 +160,9 @@ namespace OrdenamientoPesquero
             {
                 string R = "NO APLICA";
                 if (ListaNombres.SelectedIndex > -1 && RNPA != "") { NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), ""); R = NOMBRES.Rows[0]["RNPTITULAR"].ToString(); }
-                pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, "", ocupacion, cuerpo, "NO APLICA", CorreoPesc.Text, LocalidadPesc.Text, o, R, Seguro.Text, fechaVenF, fechaExpF);
+                string matricula = "";
+                if(MatriculaPesc.Text == "NO APLICA") { matricula = "NO APLICA"; } else { matricula = MatriculaRelacion.Text; }
+                pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, "", ocupacion, cuerpo, matricula, CorreoPesc.Text, LocalidadPesc.Text, o, R, Seguro.Text, fechaVenF, fechaExpF);
                 if (registrar)
                 {
                     RegistrarImagen();
@@ -1062,7 +1068,7 @@ namespace OrdenamientoPesquero
             {
                 string Nombre = "";
                 if (Ord == 1) { Nombre = ListaNombres.Text; } else { Nombre = ListaNombres2.Text; }
-                Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes(Nombre, CURPPesc.Text,false);
+                Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes(Nombre, CURPPesc.Text,false,Usuario);
                 pantalla.ShowDialog();
             }
             CargarSolApo();
@@ -1073,7 +1079,7 @@ namespace OrdenamientoPesquero
             {
                 string Nombre = "";
                 if (Ord == 1) { Nombre = ListaNombres.Text; } else { Nombre = ListaNombres2.Text; }
-                Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes(Nombre, CURPPesc.Text, true);
+                Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes(Nombre, CURPPesc.Text, true,Usuario);
                 pantalla.ShowDialog();
             }
             CargarSolApo();

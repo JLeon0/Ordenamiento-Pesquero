@@ -27,7 +27,7 @@ namespace OrdenamientoPesquero
         DataSet ds = new DataSet();
         DataTable dt = null;
         DataTable RNPA,NOMBRES = null;
-        string Usuario, Nombre;
+        string Usuario, NombreUsuario;
         int Nivel;
         string[,] unidad = { { "0", "RFC" }, { "0", "Codigo Postal" }, { "0", "Correo Electronico" }, { "0", "Telefono de la Cooperativa" },{"0","RNPA" } , {"0","Telefono del Presidente" } };
         string[,] pescador = { { "0", "CURP" }, { "0", "RFC" }, { "0", "Codigo postal" }, { "0", "Telefono" } , { "0","Correo Electronico"} };
@@ -39,14 +39,14 @@ namespace OrdenamientoPesquero
             //this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
             //this.Width = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width;
             Usuario = user;
-            Nombre = nombre;
+            NombreUsuario = nombre;
             Nivel = nivel;
         }
 
         private void Pantalla_Registro_UnidadEconomica_Load(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor; cargando = false;
-            NombreUsuario.Text += Nombre;
+            Bienvenido.Text += NombreUsuario;
             txtFecha.Text = DateTime.Today.ToString("dd/MM/yyyy");
             CargarRNPA();
             cbRNPA.Focus();
@@ -713,7 +713,7 @@ namespace OrdenamientoPesquero
             {
                 int tipo = 0;
                 if (Privado.Checked) { tipo = 1; }
-                Pantalla_Registro_Usuario pesc = new Pantalla_Registro_Usuario(cbRNPA.Text, txtNombre.Text, tipo);
+                Pantalla_Registro_Usuario pesc = new Pantalla_Registro_Usuario(cbRNPA.Text, txtNombre.Text, tipo, Usuario,NombreUsuario,Nivel);
                 pesc.ShowDialog();
                 Resumenes(cbRNPA.Text);
                 BorrarCarpeta();
@@ -959,7 +959,7 @@ namespace OrdenamientoPesquero
                 this.Cursor = Cursors.Default;
             }
         }
-
+        
         private void button6_Click(object sender, EventArgs e)
         {
             Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 15);
