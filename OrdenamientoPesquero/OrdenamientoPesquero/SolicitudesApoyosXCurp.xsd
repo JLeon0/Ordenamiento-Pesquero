@@ -2,14 +2,15 @@
 <xs:schema id="SolicitudesApoyosXCurp" targetNamespace="http://tempuri.org/SolicitudesApoyosXCurp.xsd" xmlns:mstns="http://tempuri.org/SolicitudesApoyosXCurp.xsd" xmlns="http://tempuri.org/SolicitudesApoyosXCurp.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
   <xs:annotation>
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
-      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="1" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
           <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OrdPesqueroConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OrdPesqueroConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OrdenamientoPesquero.Properties.Settings.GlobalReference.Default.OrdPesqueroConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="OrdPesqueroConnectionString4" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="OrdPesqueroConnectionString4 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.OrdenamientoPesquero.Properties.Settings.GlobalReference.Default.OrdPesqueroConnectionString4" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerApoyosxCurpTableAdapter" GeneratorDataComponentClassName="ObtenerApoyosxCurpTableAdapter" Name="ObtenerApoyosxCurp" UserDataComponentName="ObtenerApoyosxCurpTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="OrdPesqueroConnectionString (Settings)" DbObjectName="OrdPesquero.dbo.ObtenerApoyosxCurp" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="OrdPesqueroConnectionString4 (Settings)" DbObjectName="OrdPesquero.dbo.ObtenerApoyosxCurp" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ObtenerApoyosxCurp</CommandText>
@@ -37,12 +38,13 @@
               <Mapping SourceColumn="MONTOF" DataSetColumn="MONTOF" />
               <Mapping SourceColumn="MONTOP" DataSetColumn="MONTOP" />
               <Mapping SourceColumn="PROGRAMA" DataSetColumn="PROGRAMA" />
+              <Mapping SourceColumn="MONTOO" DataSetColumn="MONTOO" />
             </Mappings>
             <Sources />
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerSolicitudesxCurpTableAdapter" GeneratorDataComponentClassName="ObtenerSolicitudesxCurpTableAdapter" Name="ObtenerSolicitudesxCurp" UserDataComponentName="ObtenerSolicitudesxCurpTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="OrdPesqueroConnectionString (Settings)" DbObjectName="OrdPesquero.dbo.ObtenerSolicitudesxCurp" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="OrdPesqueroConnectionString4 (Settings)" DbObjectName="OrdPesquero.dbo.ObtenerSolicitudesxCurp" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
                     <CommandText>dbo.ObtenerSolicitudesxCurp</CommandText>
@@ -70,6 +72,41 @@
               <Mapping SourceColumn="MONTOF" DataSetColumn="MONTOF" />
               <Mapping SourceColumn="MONTOP" DataSetColumn="MONTOP" />
               <Mapping SourceColumn="PROGRAMA" DataSetColumn="PROGRAMA" />
+              <Mapping SourceColumn="MONTOO" DataSetColumn="MONTOO" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ObtenerAtendidasxCurpTableAdapter" GeneratorDataComponentClassName="ObtenerAtendidasxCurpTableAdapter" Name="ObtenerAtendidasxCurp" UserDataComponentName="ObtenerAtendidasxCurpTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="OrdPesqueroConnectionString4 (Settings)" DbObjectName="OrdPesquero.dbo.ObtenerAtendidasxCurp" DbObjectType="StoredProcedure" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="StoredProcedure" ModifiedByUser="false">
+                    <CommandText>dbo.ObtenerAtendidasxCurp</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="int" DbType="Int32" Direction="ReturnValue" ParameterName="@RETURN_VALUE" Precision="10" ProviderType="Int" Scale="0" Size="4" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DataTypeServer="varchar" DbType="AnsiString" Direction="Input" ParameterName="@curp" Precision="0" ProviderType="VarChar" Scale="0" Size="20" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="NOMBRE" DataSetColumn="NOMBRE" />
+              <Mapping SourceColumn="CURP" DataSetColumn="CURP" />
+              <Mapping SourceColumn="FOLIO" DataSetColumn="FOLIO" />
+              <Mapping SourceColumn="FECHA" DataSetColumn="FECHA" />
+              <Mapping SourceColumn="PRIORIDAD" DataSetColumn="PRIORIDAD" />
+              <Mapping SourceColumn="CONCEPTO" DataSetColumn="CONCEPTO" />
+              <Mapping SourceColumn="ESTATUS" DataSetColumn="ESTATUS" />
+              <Mapping SourceColumn="MONTO" DataSetColumn="MONTO" />
+              <Mapping SourceColumn="RESPONSABLE" DataSetColumn="RESPONSABLE" />
+              <Mapping SourceColumn="DIRECTOR" DataSetColumn="DIRECTOR" />
+              <Mapping SourceColumn="OBSERVACIONES" DataSetColumn="OBSERVACIONES" />
+              <Mapping SourceColumn="MONTOE" DataSetColumn="MONTOE" />
+              <Mapping SourceColumn="MONTOF" DataSetColumn="MONTOF" />
+              <Mapping SourceColumn="MONTOP" DataSetColumn="MONTOP" />
+              <Mapping SourceColumn="PROGRAMA" DataSetColumn="PROGRAMA" />
+              <Mapping SourceColumn="MONTOO" DataSetColumn="MONTOO" />
             </Mappings>
             <Sources />
           </TableAdapter>
@@ -81,7 +118,7 @@
   <xs:element name="SolicitudesApoyosXCurp" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="SolicitudesApoyosXCurp" msprop:Generator_UserDSName="SolicitudesApoyosXCurp">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ObtenerApoyosxCurp" msprop:Generator_TableClassName="ObtenerApoyosxCurpDataTable" msprop:Generator_TableVarName="tableObtenerApoyosxCurp" msprop:Generator_TablePropName="ObtenerApoyosxCurp" msprop:Generator_RowDeletingName="ObtenerApoyosxCurpRowDeleting" msprop:Generator_RowChangingName="ObtenerApoyosxCurpRowChanging" msprop:Generator_RowEvHandlerName="ObtenerApoyosxCurpRowChangeEventHandler" msprop:Generator_RowDeletedName="ObtenerApoyosxCurpRowDeleted" msprop:Generator_UserTableName="ObtenerApoyosxCurp" msprop:Generator_RowChangedName="ObtenerApoyosxCurpRowChanged" msprop:Generator_RowEvArgName="ObtenerApoyosxCurpRowChangeEvent" msprop:Generator_RowClassName="ObtenerApoyosxCurpRow">
+        <xs:element name="ObtenerApoyosxCurp" msprop:Generator_TableClassName="ObtenerApoyosxCurpDataTable" msprop:Generator_TableVarName="tableObtenerApoyosxCurp" msprop:Generator_RowChangedName="ObtenerApoyosxCurpRowChanged" msprop:Generator_TablePropName="ObtenerApoyosxCurp" msprop:Generator_RowDeletingName="ObtenerApoyosxCurpRowDeleting" msprop:Generator_RowChangingName="ObtenerApoyosxCurpRowChanging" msprop:Generator_RowEvHandlerName="ObtenerApoyosxCurpRowChangeEventHandler" msprop:Generator_RowDeletedName="ObtenerApoyosxCurpRowDeleted" msprop:Generator_RowClassName="ObtenerApoyosxCurpRow" msprop:Generator_UserTableName="ObtenerApoyosxCurp" msprop:Generator_RowEvArgName="ObtenerApoyosxCurpRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_UserColumnName="NOMBRE" minOccurs="0">
@@ -179,14 +216,21 @@
               <xs:element name="PROGRAMA" msprop:Generator_ColumnVarNameInTable="columnPROGRAMA" msprop:Generator_ColumnPropNameInRow="PROGRAMA" msprop:Generator_ColumnPropNameInTable="PROGRAMAColumn" msprop:Generator_UserColumnName="PROGRAMA" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MONTOO" msprop:Generator_ColumnVarNameInTable="columnMONTOO" msprop:Generator_ColumnPropNameInRow="MONTOO" msprop:Generator_ColumnPropNameInTable="MONTOOColumn" msprop:Generator_UserColumnName="MONTOO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="ObtenerSolicitudesxCurp" msprop:Generator_TableClassName="ObtenerSolicitudesxCurpDataTable" msprop:Generator_TableVarName="tableObtenerSolicitudesxCurp" msprop:Generator_TablePropName="ObtenerSolicitudesxCurp" msprop:Generator_RowDeletingName="ObtenerSolicitudesxCurpRowDeleting" msprop:Generator_RowChangingName="ObtenerSolicitudesxCurpRowChanging" msprop:Generator_RowEvHandlerName="ObtenerSolicitudesxCurpRowChangeEventHandler" msprop:Generator_RowDeletedName="ObtenerSolicitudesxCurpRowDeleted" msprop:Generator_UserTableName="ObtenerSolicitudesxCurp" msprop:Generator_RowChangedName="ObtenerSolicitudesxCurpRowChanged" msprop:Generator_RowEvArgName="ObtenerSolicitudesxCurpRowChangeEvent" msprop:Generator_RowClassName="ObtenerSolicitudesxCurpRow">
+        <xs:element name="ObtenerSolicitudesxCurp" msprop:Generator_TableClassName="ObtenerSolicitudesxCurpDataTable" msprop:Generator_TableVarName="tableObtenerSolicitudesxCurp" msprop:Generator_RowChangedName="ObtenerSolicitudesxCurpRowChanged" msprop:Generator_TablePropName="ObtenerSolicitudesxCurp" msprop:Generator_RowDeletingName="ObtenerSolicitudesxCurpRowDeleting" msprop:Generator_RowChangingName="ObtenerSolicitudesxCurpRowChanging" msprop:Generator_RowEvHandlerName="ObtenerSolicitudesxCurpRowChangeEventHandler" msprop:Generator_RowDeletedName="ObtenerSolicitudesxCurpRowDeleted" msprop:Generator_RowClassName="ObtenerSolicitudesxCurpRow" msprop:Generator_UserTableName="ObtenerSolicitudesxCurp" msprop:Generator_RowEvArgName="ObtenerSolicitudesxCurpRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_UserColumnName="NOMBRE" minOccurs="0">
@@ -284,7 +328,126 @@
               <xs:element name="PROGRAMA" msprop:Generator_ColumnVarNameInTable="columnPROGRAMA" msprop:Generator_ColumnPropNameInRow="PROGRAMA" msprop:Generator_ColumnPropNameInTable="PROGRAMAColumn" msprop:Generator_UserColumnName="PROGRAMA" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
-                    <xs:maxLength value="50" />
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MONTOO" msprop:Generator_ColumnVarNameInTable="columnMONTOO" msprop:Generator_ColumnPropNameInRow="MONTOO" msprop:Generator_ColumnPropNameInTable="MONTOOColumn" msprop:Generator_UserColumnName="MONTOO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ObtenerAtendidasxCurp" msprop:Generator_TableClassName="ObtenerAtendidasxCurpDataTable" msprop:Generator_TableVarName="tableObtenerAtendidasxCurp" msprop:Generator_TablePropName="ObtenerAtendidasxCurp" msprop:Generator_RowDeletingName="ObtenerAtendidasxCurpRowDeleting" msprop:Generator_RowChangingName="ObtenerAtendidasxCurpRowChanging" msprop:Generator_RowEvHandlerName="ObtenerAtendidasxCurpRowChangeEventHandler" msprop:Generator_RowDeletedName="ObtenerAtendidasxCurpRowDeleted" msprop:Generator_UserTableName="ObtenerAtendidasxCurp" msprop:Generator_RowChangedName="ObtenerAtendidasxCurpRowChanged" msprop:Generator_RowEvArgName="ObtenerAtendidasxCurpRowChangeEvent" msprop:Generator_RowClassName="ObtenerAtendidasxCurpRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="NOMBRE" msprop:Generator_ColumnVarNameInTable="columnNOMBRE" msprop:Generator_ColumnPropNameInRow="NOMBRE" msprop:Generator_ColumnPropNameInTable="NOMBREColumn" msprop:Generator_UserColumnName="NOMBRE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="CURP" msprop:Generator_ColumnVarNameInTable="columnCURP" msprop:Generator_ColumnPropNameInRow="CURP" msprop:Generator_ColumnPropNameInTable="CURPColumn" msprop:Generator_UserColumnName="CURP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FOLIO" msprop:Generator_ColumnVarNameInTable="columnFOLIO" msprop:Generator_ColumnPropNameInRow="FOLIO" msprop:Generator_ColumnPropNameInTable="FOLIOColumn" msprop:Generator_UserColumnName="FOLIO">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="11" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="FECHA" msprop:Generator_ColumnVarNameInTable="columnFECHA" msprop:Generator_ColumnPropNameInRow="FECHA" msprop:Generator_ColumnPropNameInTable="FECHAColumn" msprop:Generator_UserColumnName="FECHA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PRIORIDAD" msprop:Generator_ColumnVarNameInTable="columnPRIORIDAD" msprop:Generator_ColumnPropNameInRow="PRIORIDAD" msprop:Generator_ColumnPropNameInTable="PRIORIDADColumn" msprop:Generator_UserColumnName="PRIORIDAD" type="xs:int" minOccurs="0" />
+              <xs:element name="CONCEPTO" msprop:Generator_ColumnVarNameInTable="columnCONCEPTO" msprop:Generator_ColumnPropNameInRow="CONCEPTO" msprop:Generator_ColumnPropNameInTable="CONCEPTOColumn" msprop:Generator_UserColumnName="CONCEPTO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ESTATUS" msprop:Generator_ColumnVarNameInTable="columnESTATUS" msprop:Generator_ColumnPropNameInRow="ESTATUS" msprop:Generator_ColumnPropNameInTable="ESTATUSColumn" msprop:Generator_UserColumnName="ESTATUS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MONTO" msprop:Generator_ColumnVarNameInTable="columnMONTO" msprop:Generator_ColumnPropNameInRow="MONTO" msprop:Generator_ColumnPropNameInTable="MONTOColumn" msprop:Generator_UserColumnName="MONTO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="RESPONSABLE" msprop:Generator_ColumnVarNameInTable="columnRESPONSABLE" msprop:Generator_ColumnPropNameInRow="RESPONSABLE" msprop:Generator_ColumnPropNameInTable="RESPONSABLEColumn" msprop:Generator_UserColumnName="RESPONSABLE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DIRECTOR" msprop:Generator_ColumnVarNameInTable="columnDIRECTOR" msprop:Generator_ColumnPropNameInRow="DIRECTOR" msprop:Generator_ColumnPropNameInTable="DIRECTORColumn" msprop:Generator_UserColumnName="DIRECTOR" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="40" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="OBSERVACIONES" msprop:Generator_ColumnVarNameInTable="columnOBSERVACIONES" msprop:Generator_ColumnPropNameInRow="OBSERVACIONES" msprop:Generator_ColumnPropNameInTable="OBSERVACIONESColumn" msprop:Generator_UserColumnName="OBSERVACIONES" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="500" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MONTOE" msprop:Generator_ColumnVarNameInTable="columnMONTOE" msprop:Generator_ColumnPropNameInRow="MONTOE" msprop:Generator_ColumnPropNameInTable="MONTOEColumn" msprop:Generator_UserColumnName="MONTOE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MONTOF" msprop:Generator_ColumnVarNameInTable="columnMONTOF" msprop:Generator_ColumnPropNameInRow="MONTOF" msprop:Generator_ColumnPropNameInTable="MONTOFColumn" msprop:Generator_UserColumnName="MONTOF" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MONTOP" msprop:Generator_ColumnVarNameInTable="columnMONTOP" msprop:Generator_ColumnPropNameInRow="MONTOP" msprop:Generator_ColumnPropNameInTable="MONTOPColumn" msprop:Generator_UserColumnName="MONTOP" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PROGRAMA" msprop:Generator_ColumnVarNameInTable="columnPROGRAMA" msprop:Generator_ColumnPropNameInRow="PROGRAMA" msprop:Generator_ColumnPropNameInTable="PROGRAMAColumn" msprop:Generator_UserColumnName="PROGRAMA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="150" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MONTOO" msprop:Generator_ColumnVarNameInTable="columnMONTOO" msprop:Generator_ColumnPropNameInRow="MONTOO" msprop:Generator_ColumnPropNameInTable="MONTOOColumn" msprop:Generator_UserColumnName="MONTOO" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -299,6 +462,10 @@
     </xs:unique>
     <xs:unique name="ObtenerSolicitudesxCurp_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
       <xs:selector xpath=".//mstns:ObtenerSolicitudesxCurp" />
+      <xs:field xpath="mstns:FOLIO" />
+    </xs:unique>
+    <xs:unique name="ObtenerAtendidasxCurp_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ObtenerAtendidasxCurp" />
       <xs:field xpath="mstns:FOLIO" />
     </xs:unique>
   </xs:element>

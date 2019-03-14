@@ -30,26 +30,26 @@
         {
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.obtenerAtendidasxRnpaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.apoyos = new OrdenamientoPesquero.Apoyos();
             this.obtenerSolicitudesxCurpBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.solicitudesApoyosXCurpBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.solicitudesApoyosXCurp = new OrdenamientoPesquero.SolicitudesApoyosXCurp();
             this.pESCADORBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pesTodospesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pesTodospes = new OrdenamientoPesquero.PesTodospes();
             this.mULEGESEGUROBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.seguroBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.seguro = new OrdenamientoPesquero.seguro();
             this.todosBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.todospesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.todospes = new OrdenamientoPesquero.todospes();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.cOMONDUSEGUROBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lAPAZSEGUROBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lORETOSEGUROBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lOSCABOSSEGUROBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.obtenerApoyosxCurpBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.obtenerAtendidasxRnpaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.apoyos = new OrdenamientoPesquero.Apoyos();
-            this.solicitudesApoyosXCurpBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.solicitudesApoyosXCurp = new OrdenamientoPesquero.SolicitudesApoyosXCurp();
-            this.pesTodospesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pesTodospes = new OrdenamientoPesquero.PesTodospes();
-            this.seguroBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.seguro = new OrdenamientoPesquero.seguro();
-            this.todospesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.todospes = new OrdenamientoPesquero.todospes();
             this.obtenerImagenBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ordPesqueroDataSet10 = new OrdenamientoPesquero.OrdPesqueroDataSet10();
             this.obtenerApoyosxRnpaBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -114,25 +114,27 @@
             this.obtenerSolicitudesxCurpTableAdapter = new OrdenamientoPesquero.SolicitudesApoyosXCurpTableAdapters.ObtenerSolicitudesxCurpTableAdapter();
             this.obtenerImagenTableAdapter = new OrdenamientoPesquero.OrdPesqueroDataSet10TableAdapters.ObtenerImagenTableAdapter();
             this.obtenerAtendidasxRnpaTableAdapter = new OrdenamientoPesquero.ApoyosTableAdapters.ObtenerAtendidasxRnpaTableAdapter();
+            this.obtenerAtendidasxCurpBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.obtenerAtendidasxCurpTableAdapter = new OrdenamientoPesquero.SolicitudesApoyosXCurpTableAdapters.ObtenerAtendidasxCurpTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerAtendidasxRnpaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apoyos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerSolicitudesxCurpBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.solicitudesApoyosXCurpBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.solicitudesApoyosXCurp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pESCADORBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pesTodospesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pesTodospes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.mULEGESEGUROBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seguroBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seguro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.todosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.todospesBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.todospes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOMONDUSEGUROBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lAPAZSEGUROBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lORETOSEGUROBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOSCABOSSEGUROBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerApoyosxCurpBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obtenerAtendidasxRnpaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apoyos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.solicitudesApoyosXCurpBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.solicitudesApoyosXCurp)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pesTodospesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pesTodospes)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seguroBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seguro)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.todospesBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.todospes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerImagenBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerApoyosxRnpaBindingSource)).BeginInit();
@@ -168,33 +170,84 @@
             ((System.ComponentModel.ISupportInitialize)(this.vistaperm2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerFirmaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerSolicitudesxRnpaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerAtendidasxCurpBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // obtenerAtendidasxRnpaBindingSource
+            // 
+            this.obtenerAtendidasxRnpaBindingSource.DataMember = "ObtenerAtendidasxRnpa";
+            this.obtenerAtendidasxRnpaBindingSource.DataSource = this.apoyos;
+            // 
+            // apoyos
+            // 
+            this.apoyos.DataSetName = "Apoyos";
+            this.apoyos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // obtenerSolicitudesxCurpBindingSource
             // 
             this.obtenerSolicitudesxCurpBindingSource.DataMember = "ObtenerSolicitudesxCurp";
             this.obtenerSolicitudesxCurpBindingSource.DataSource = this.solicitudesApoyosXCurpBindingSource;
             // 
+            // solicitudesApoyosXCurpBindingSource
+            // 
+            this.solicitudesApoyosXCurpBindingSource.DataSource = this.solicitudesApoyosXCurp;
+            this.solicitudesApoyosXCurpBindingSource.Position = 0;
+            // 
+            // solicitudesApoyosXCurp
+            // 
+            this.solicitudesApoyosXCurp.DataSetName = "SolicitudesApoyosXCurp";
+            this.solicitudesApoyosXCurp.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // pESCADORBindingSource
             // 
             this.pESCADORBindingSource.DataMember = "PESCADOR";
             this.pESCADORBindingSource.DataSource = this.pesTodospesBindingSource;
+            // 
+            // pesTodospesBindingSource
+            // 
+            this.pesTodospesBindingSource.DataSource = this.pesTodospes;
+            this.pesTodospesBindingSource.Position = 0;
+            // 
+            // pesTodospes
+            // 
+            this.pesTodospes.DataSetName = "PesTodospes";
+            this.pesTodospes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // mULEGESEGUROBindingSource
             // 
             this.mULEGESEGUROBindingSource.DataMember = "MULEGE_SEGURO";
             this.mULEGESEGUROBindingSource.DataSource = this.seguroBindingSource;
             // 
+            // seguroBindingSource
+            // 
+            this.seguroBindingSource.DataSource = this.seguro;
+            this.seguroBindingSource.Position = 0;
+            // 
+            // seguro
+            // 
+            this.seguro.DataSetName = "seguro";
+            this.seguro.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // todosBindingSource
             // 
             this.todosBindingSource.DataMember = "todos";
             this.todosBindingSource.DataSource = this.todospesBindingSource;
             // 
+            // todospesBindingSource
+            // 
+            this.todospesBindingSource.DataSource = this.todospes;
+            this.todospesBindingSource.Position = 0;
+            // 
+            // todospes
+            // 
+            this.todospes.DataSetName = "todospes";
+            this.todospes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.obtenerAtendidasxRnpaBindingSource;
+            reportDataSource1.Value = this.obtenerAtendidasxCurpBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.EnableExternalImages = true;
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "OrdenamientoPesquero.Reportes.Permisos.rdlc";
@@ -227,56 +280,6 @@
             // 
             this.obtenerApoyosxCurpBindingSource.DataMember = "ObtenerApoyosxCurp";
             this.obtenerApoyosxCurpBindingSource.DataSource = this.solicitudesApoyosXCurpBindingSource;
-            // 
-            // obtenerAtendidasxRnpaBindingSource
-            // 
-            this.obtenerAtendidasxRnpaBindingSource.DataMember = "ObtenerAtendidasxRnpa";
-            this.obtenerAtendidasxRnpaBindingSource.DataSource = this.apoyos;
-            // 
-            // apoyos
-            // 
-            this.apoyos.DataSetName = "Apoyos";
-            this.apoyos.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // solicitudesApoyosXCurpBindingSource
-            // 
-            this.solicitudesApoyosXCurpBindingSource.DataSource = this.solicitudesApoyosXCurp;
-            this.solicitudesApoyosXCurpBindingSource.Position = 0;
-            // 
-            // solicitudesApoyosXCurp
-            // 
-            this.solicitudesApoyosXCurp.DataSetName = "SolicitudesApoyosXCurp";
-            this.solicitudesApoyosXCurp.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pesTodospesBindingSource
-            // 
-            this.pesTodospesBindingSource.DataSource = this.pesTodospes;
-            this.pesTodospesBindingSource.Position = 0;
-            // 
-            // pesTodospes
-            // 
-            this.pesTodospes.DataSetName = "PesTodospes";
-            this.pesTodospes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // seguroBindingSource
-            // 
-            this.seguroBindingSource.DataSource = this.seguro;
-            this.seguroBindingSource.Position = 0;
-            // 
-            // seguro
-            // 
-            this.seguro.DataSetName = "seguro";
-            this.seguro.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // todospesBindingSource
-            // 
-            this.todospesBindingSource.DataSource = this.todospes;
-            this.todospesBindingSource.Position = 0;
-            // 
-            // todospes
-            // 
-            this.todospes.DataSetName = "todospes";
-            this.todospes.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // obtenerImagenBindingSource
             // 
@@ -569,6 +572,15 @@
             // 
             this.obtenerAtendidasxRnpaTableAdapter.ClearBeforeFill = true;
             // 
+            // obtenerAtendidasxCurpBindingSource
+            // 
+            this.obtenerAtendidasxCurpBindingSource.DataMember = "ObtenerAtendidasxCurp";
+            this.obtenerAtendidasxCurpBindingSource.DataSource = this.solicitudesApoyosXCurp;
+            // 
+            // obtenerAtendidasxCurpTableAdapter
+            // 
+            this.obtenerAtendidasxCurpTableAdapter.ClearBeforeFill = true;
+            // 
             // Vistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -578,25 +590,25 @@
             this.Name = "Vistas";
             this.Text = "Vistas";
             this.Load += new System.EventHandler(this.Vistas_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerAtendidasxRnpaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.apoyos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerSolicitudesxCurpBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.solicitudesApoyosXCurpBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.solicitudesApoyosXCurp)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pESCADORBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pesTodospesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pesTodospes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.mULEGESEGUROBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seguroBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.seguro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.todosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.todospesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.todospes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cOMONDUSEGUROBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lAPAZSEGUROBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lORETOSEGUROBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOSCABOSSEGUROBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerApoyosxCurpBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.obtenerAtendidasxRnpaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.apoyos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.solicitudesApoyosXCurpBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.solicitudesApoyosXCurp)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pesTodospesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pesTodospes)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seguroBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.seguro)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.todospesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.todospes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerImagenBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ordPesqueroDataSet10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerApoyosxRnpaBindingSource)).EndInit();
@@ -632,6 +644,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.vistaperm2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerFirmaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerSolicitudesxRnpaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.obtenerAtendidasxCurpBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -722,5 +735,7 @@
         private OrdPesqueroDataSet10TableAdapters.ObtenerImagenTableAdapter obtenerImagenTableAdapter;
         private System.Windows.Forms.BindingSource obtenerAtendidasxRnpaBindingSource;
         private ApoyosTableAdapters.ObtenerAtendidasxRnpaTableAdapter obtenerAtendidasxRnpaTableAdapter;
+        private System.Windows.Forms.BindingSource obtenerAtendidasxCurpBindingSource;
+        private SolicitudesApoyosXCurpTableAdapters.ObtenerAtendidasxCurpTableAdapter obtenerAtendidasxCurpTableAdapter;
     }
 }

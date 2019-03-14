@@ -232,6 +232,11 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     datos.Value = permisos_lista.vista_perm;
                     this.reportViewer1.LocalReport.DataSources.Add(datos);
                     this.embarcacionesxUnidadTableAdapter.Fill(embarcacionesSet.EmbarcacionesxUnidad, rnpa);
+
+                    datos10.Name = "DataSet10";
+                    datos10.Value = obtenerAtendidasxRnpaTableAdapter.GetData(rnpa);
+                    this.reportViewer1.LocalReport.DataSources.Add(datos10);
+
                     datos2.Name = "DataSet3";
                     datos2.Value = embarcacionesSet.EmbarcacionesxUnidad;
                     this.reportViewer1.LocalReport.DataSources.Add(datos2);
@@ -503,6 +508,11 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                         datos9.Name = "DataSet9";
                         datos9.Value = obtenerApoyosxRnpaTableAdapter.GetData( rnpa);
                         this.reportViewer1.LocalReport.DataSources.Add(datos9);
+
+                        datos10.Name = "DataSet10";
+                        datos10.Value = obtenerAtendidasxRnpaTableAdapter.GetData(rnpa);
+                        this.reportViewer1.LocalReport.DataSources.Add(datos10);
+
                         datos.Name = "DataSet2";
                         datos.Value = permisos_lista.vista_perm;
                         this.reportViewer1.LocalReport.DataSources.Add(datos);
@@ -611,18 +621,18 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 case 14:
                     reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "SolicitudesApoyosXPescador.rdlc");
                     reportViewer1.LocalReport.DataSources.Clear();
-                    datos = new ReportDataSource
-                    {
-                        Name = "ApoyosXCurp",
-                        Value = obtenerApoyosxCurpTableAdapter.GetData(CURP)
-                    };
-                    datos2 = new ReportDataSource
-                    {
-                        Name = "SolicitudesXCurp",
-                        Value = obtenerSolicitudesxCurpTableAdapter.GetData(CURP)
-                    };
+                    datos.Name = "ApoyosXCurp";
+                    obtenerApoyosxCurpTableAdapter.Fill(solicitudesApoyosXCurp.ObtenerApoyosxCurp, CURP);
+                    datos.Value = solicitudesApoyosXCurp.ObtenerApoyosxCurp;
+                    datos2.Name = "SolicitudesXCurp";
+                    obtenerSolicitudesxCurpTableAdapter.Fill(solicitudesApoyosXCurp.ObtenerSolicitudesxCurp, CURP);
+                    datos2.Value = obtenerSolicitudesxCurpTableAdapter.GetData(CURP);
+                    datos3.Name = "Atendidas";
+                    obtenerAtendidasxCurpTableAdapter.Fill(solicitudesApoyosXCurp.ObtenerAtendidasxCurp, CURP);
+                    datos3.Value = obtenerAtendidasxCurpTableAdapter.GetData(CURP);
                     reportViewer1.LocalReport.DataSources.Add(datos);
                     reportViewer1.LocalReport.DataSources.Add(datos2);
+                    reportViewer1.LocalReport.DataSources.Add(datos3);
                     ReportParameter[] SoliApo;
                     if (rnpa!="")
                     {
