@@ -168,7 +168,7 @@
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label35 = new System.Windows.Forms.Label();
-            this.NombreUsuario = new System.Windows.Forms.Label();
+            this.Bienvenido = new System.Windows.Forms.Label();
             this.gbOrgPes.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelRNPA)).BeginInit();
@@ -1805,16 +1805,16 @@
             this.label35.TabIndex = 134;
             this.label35.Text = "Actualizar";
             // 
-            // NombreUsuario
+            // Bienvenido
             // 
-            this.NombreUsuario.AutoSize = true;
-            this.NombreUsuario.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.NombreUsuario.Location = new System.Drawing.Point(1117, 28);
-            this.NombreUsuario.Name = "NombreUsuario";
-            this.NombreUsuario.Size = new System.Drawing.Size(75, 16);
-            this.NombreUsuario.TabIndex = 191;
-            this.NombreUsuario.Text = "Bienvenido ";
+            this.Bienvenido.AutoSize = true;
+            this.Bienvenido.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bienvenido.ForeColor = System.Drawing.Color.DimGray;
+            this.Bienvenido.Location = new System.Drawing.Point(1117, 28);
+            this.Bienvenido.Name = "Bienvenido";
+            this.Bienvenido.Size = new System.Drawing.Size(75, 16);
+            this.Bienvenido.TabIndex = 191;
+            this.Bienvenido.Text = "Bienvenido ";
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -1822,8 +1822,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1370, 605);
-            this.Controls.Add(this.NombreUsuario);
+            this.ClientSize = new System.Drawing.Size(1387, 622);
+            this.Controls.Add(this.Bienvenido);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelRNPA);
             this.Controls.Add(this.gbBusqueda);
@@ -2015,6 +2015,6 @@
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label NombreUsuario;
+        private System.Windows.Forms.Label Bienvenido;
     }
 }

@@ -669,17 +669,17 @@ namespace Logica
         #endregion
 
         #region Programas
-        public int Registrar_Programa(string programa, string usuario)
+        public int Registrar_Programa(string programa, string director, string usuario,string clave)
         {
-            string[] Parametros = { "@usuario, @programa" };
-            return c.Ejecutar("Registrar_Programa", Parametros, usuario, programa);
+            string[] Parametros = { "@usuario", "@programa", "@director" ,"@clave"};
+            return c.Ejecutar("Registrar_Programa", Parametros, usuario, programa, director, clave);
         }
-        public int Actualizar_Programa(string programa, string usuario)
+        public int Actualizar_Programa(string programa,string director, string usuario, string clave)
         {
-            string[] Parametros = { "@usuario, @programa" };
-            return c.Ejecutar("Actualizar_Programa", Parametros, usuario, programa);
+            string[] Parametros = { "@usuario","@director", "@programa","@clave" };
+            return c.Ejecutar("Actualizar_Programa", Parametros, usuario, director, programa,clave);
         }
-        public int Eliminar_Programa(string programa, string usuario)
+        public int Eliminar_Programa(string programa)
         {
             string[] Parametros = { "@programa" };
             return c.Ejecutar("Actualizar_Programa", Parametros, programa);
@@ -687,11 +687,18 @@ namespace Logica
         public DataTable Obtener_Programa()
         {
             string[] Parametros = {  };
-            return c.getDatosTabla("ObtenerSolicitudesxCurp", Parametros);
+            return c.getDatosTabla("Obtener_Programa", Parametros);
         }
-        #endregion
-        #region Login
-        public DataTable Loggearse(string User, string Pass)
+
+        public DataTable ObtenerClaveXUsuario(string user)
+        {
+            string[] Parametros = { "@user" };
+            return c.getDatosTabla("ObtenerClaveXUsuario", Parametros, user);
+        }
+            #endregion
+
+            #region Login
+            public DataTable AutenticarLogin(string User, string Pass)
         {
             string[] Parametros = { "@user", "@pass" };
             return c.getDatosTabla("AutenticarLogin", Parametros, User, Pass);
@@ -701,8 +708,23 @@ namespace Logica
             string[] Parametros = { "@user", "@pass", "@nombre", "@nivel" };
             return c.Ejecutar("CrearLogin", Parametros, User, Pass, Nombre, Nivel);
         }
-        #endregion
+        public int ActualizarLogin(string User, string Pass, string Nombre, int Nivel)
+        {
+            string[] Parametros = { "@user", "@pass", "@nombre", "@nivel" };
+            return c.Ejecutar("ActualizarLogin", Parametros, User, Pass, Nombre, Nivel);
+        }
+        public int EliminarLogin(string User)
+        {
+            string[] Parametros = { "@user"};
+            return c.Ejecutar("EliminarLogin", Parametros, User);
+        }
+        public DataTable ObtenerLogins()
+        {
+            string[] Parametros = { };
+            return c.getDatosTabla("ObtenerLogins", Parametros);
+        }
+            #endregion
 
 
-    }
+        }
 }

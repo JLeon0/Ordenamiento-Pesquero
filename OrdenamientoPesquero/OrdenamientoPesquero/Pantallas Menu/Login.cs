@@ -122,25 +122,32 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         }
         private void btnlogin_Click(object sender, EventArgs e)
         {
-            DataTable data = proc.Loggearse(txtuser.Text, val.Encriptar(txtpass.Text));
+            DataTable data = proc.AutenticarLogin(txtuser.Text, val.Encriptar(txtpass.Text));
             if(data.Rows.Count > 0)
             {
-                string User = data.Rows[0]["USERS"].ToString();
-                string Nombre = data.Rows[0]["NOMBRE"].ToString();
+                string Usuario = data.Rows[0]["USERS"].ToString();
+                string NombreUsuario = data.Rows[0]["NOMBRE"].ToString();
                 int Nivel = Convert.ToInt32(data.Rows[0]["NIVEL"].ToString());
                 if (Nivel == 0 || Nivel == 1)
                 {
-                    Menu1 menu1 = new Menu1(User, Nombre, Nivel);
+                    Menu1 menu1 = new Menu1(Usuario, NombreUsuario, Nivel);
                     this.Hide();
                     menu1.ShowDialog();
                 }
                 else if(Nivel == 2)
                 {
-
+                    Pantalla_Registro_Usuario usu = new Pantalla_Registro_Usuario("","",2,Usuario,NombreUsuario,Nivel);
+                    usu.ShowDialog();
+                }
+                else if(Nivel == 3)
+                {
+                    Pantalla_Registro_UnidadEconomica ue = new Pantalla_Registro_UnidadEconomica(Usuario, NombreUsuario, Nivel);
+                    ue.ShowDialog();
                 }
                 LimpiarDatos();
                 this.Show();
             }
+            else { MessageBox.Show("Usuario y/o Contraseña Incorrectos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);}
         }
         private void LimpiarDatos()
         {
@@ -149,6 +156,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             txtpass.Text = "Contraseña";
             txtpass.ForeColor = Color.DimGray;
             txtpass.UseSystemPasswordChar = false;
+            txtuser.Focus();
         }
 
         private void txtpass_KeyPress(object sender, KeyPressEventArgs e)

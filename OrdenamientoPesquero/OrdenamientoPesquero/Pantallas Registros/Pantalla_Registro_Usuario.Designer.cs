@@ -180,6 +180,7 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
+            this.Bienvenido = new System.Windows.Forms.Label();
             this.gbDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
@@ -2006,6 +2007,17 @@
             this.label20.TabIndex = 128;
             this.label20.Text = "Fecha de Defunción";
             // 
+            // Bienvenido
+            // 
+            this.Bienvenido.AutoSize = true;
+            this.Bienvenido.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bienvenido.ForeColor = System.Drawing.Color.DimGray;
+            this.Bienvenido.Location = new System.Drawing.Point(1113, 13);
+            this.Bienvenido.Name = "Bienvenido";
+            this.Bienvenido.Size = new System.Drawing.Size(75, 16);
+            this.Bienvenido.TabIndex = 192;
+            this.Bienvenido.Text = "Bienvenido ";
+            // 
             // Pantalla_Registro_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -2014,6 +2026,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.Bienvenido);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.Botones);
             this.Controls.Add(this.pictureBox3);
@@ -2238,5 +2251,6 @@
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox NPoliza;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label Bienvenido;
     }
 }

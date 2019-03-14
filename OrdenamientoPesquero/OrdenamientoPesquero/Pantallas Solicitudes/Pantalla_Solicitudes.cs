@@ -13,17 +13,18 @@ namespace OrdenamientoPesquero
 {
     public partial class Pantalla_Solicitudes : Form
     {
-        string Curp;
+        string Curp, Usuario;
         Procedimientos proc = new Procedimientos();
         Solicitud soli; DataTable solicitudes;
         Validaciones val = new Validaciones();
         bool Ap = false;
         int mE, mF, mP, ot;
 
-        public Pantalla_Solicitudes(string nombre, string curp, bool ap)
+        public Pantalla_Solicitudes(string nombre, string curp, bool ap, string usuario)
         {
             InitializeComponent();
             NombrePesc.Text = nombre;
+            Usuario = usuario;
             Curp = curp;
             Ap = ap;
         }
@@ -31,6 +32,7 @@ namespace OrdenamientoPesquero
         private void Pantalla_Solicitudes_Load(object sender, EventArgs e)
         {
             CargarSolicitudes();
+            CargarClaves();
             if (Ap)
             {
                 solicitud.Enabled = false;
@@ -43,18 +45,44 @@ namespace OrdenamientoPesquero
             }
         }
 
+        void CargarSolicitudes()
+        {
+            if (!Ap)
+            { solicitudes = proc.ObtenerSolicitudes(Curp); }
+            else { solicitudes = proc.ObtenerApoyos(Curp); }
+            Lista.Items.Clear();
+            foreach (DataRow fila in solicitudes.Rows)
+            {
+                Lista.Items.Add(fila["FOLIO"].ToString());
+            }
+            DataTable folio = proc.ObtenerMayor();
+            if (folio.Rows.Count > 0)
+            { FolioMayor.Text += folio.Rows[0][0].ToString(); }
+        }
+        void CargarClaves()
+        {
+            DataTable pro= proc.ObtenerClaveXUsuario(Usuario);
+            ClavePrograma.DataSource = pro;
+            ClavePrograma.DisplayMember = "CLAVE";
+            ClavePrograma.ValueMember = "CLAVE";
+
+            programa.DataSource = pro;
+            programa.DisplayMember = "PROGRAMA";
+            programa.ValueMember = "PROGRAMA";
+
+        }
 
         private void Registrar_Click(object sender, EventArgs e)
         {
             if (!Ap)
             {
-                soli = new Solicitud(NombrePesc.Text, Curp, folio.Text, fecha.Text, prioridad.Text, concepto.Text, estatus.Text, monto.Text, responsable.Text, director.Text, observaciones.Text);
+                soli = new Solicitud(NombrePesc.Text, Curp, folio.Text + "-" + AñoFolio.Value.ToString() + "-" + ClavePrograma.Text, fecha.Text, prioridad.Text, concepto.Text, estatus.Text, monto.Text, responsable.Text, director.Text, observaciones.Text);
                 if (proc.Registrar_Solicitud(soli) > 0) { MessageBox.Show("Solicitud ingresada con éxito"); }
                 else { MessageBox.Show("Error al ingresar solicitud"); }
             }
             else
             {
-                soli = new Solicitud(NombrePesc.Text, Curp, folio.Text, fecha.Text, concepto.Text, observaciones.Text, montoF.Text, montoE.Text, montoP.Text, otro.Text , programa.Text, Total.Text,1);
+                soli = new Solicitud(NombrePesc.Text, Curp, folio.Text + "-" + AñoFolio.Value.ToString() + "-" + ClavePrograma.Text, fecha.Text, concepto.Text, observaciones.Text, montoF.Text, montoE.Text, montoP.Text, otro.Text, programa.Text, Total.Text, 1);
                 if (proc.Registrar_Apoyo(soli) > 0) { MessageBox.Show("Apoyo ingresado con éxito"); }
                 else { MessageBox.Show("Error al ingresar apoyo"); }
             }
@@ -67,7 +95,18 @@ namespace OrdenamientoPesquero
             {
                 if (Lista.Text == filas["FOLIO"].ToString())
                 {
-                    folio.Text = filas["FOLIO"].ToString();
+                    string x = filas["FOLIO"].ToString();
+                    folio.Text = "";
+                    int i = 0;
+                    for (i = 0; x[i] != '-'; i++)
+                    {
+                        folio.Text += x[i];
+                    }
+                    i++;
+                    string temp = x.Substring(i,2);
+                    AñoFolio.Value = Convert.ToInt32(temp);
+                    i  = i + 3;
+                    ClavePrograma.Text = x.Substring(i, x.Length-i);
                     fecha.Text = filas["FECHA"].ToString();
                     prioridad.Text = filas["PRIORIDAD"].ToString();
                     concepto.Text = filas["CONCEPTO"].ToString();
@@ -83,19 +122,6 @@ namespace OrdenamientoPesquero
                     programa.Text = filas["PROGRAMA"].ToString();
                 }
             }
-        }
-
-        void CargarSolicitudes()
-        {
-            if (!Ap)
-            { solicitudes = proc.ObtenerSolicitudes(Curp); }
-            else { solicitudes = proc.ObtenerApoyos(Curp); }
-            Lista.Items.Clear();
-            foreach (DataRow fila in solicitudes.Rows)
-            {
-                Lista.Items.Add(fila["FOLIO"].ToString());
-            }
-            FolioMayor.Text += proc.ObtenerMayor().Rows[0][0].ToString();
         }
 
         private void Actualizar_Click(object sender, EventArgs e)
