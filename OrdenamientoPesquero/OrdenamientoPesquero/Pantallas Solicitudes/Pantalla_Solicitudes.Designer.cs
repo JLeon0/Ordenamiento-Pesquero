@@ -214,6 +214,7 @@
             this.monto.Name = "monto";
             this.monto.Size = new System.Drawing.Size(102, 22);
             this.monto.TabIndex = 5;
+            this.monto.Text = "0";
             this.monto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.monto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
             // 
@@ -366,6 +367,7 @@
             // 
             // Apoyo
             // 
+            this.Apoyo.Controls.Add(this.solicitud);
             this.Apoyo.Controls.Add(this.otro);
             this.Apoyo.Controls.Add(this.label18);
             this.Apoyo.Controls.Add(this.programa);
@@ -394,6 +396,7 @@
             this.otro.Name = "otro";
             this.otro.Size = new System.Drawing.Size(68, 22);
             this.otro.TabIndex = 6;
+            this.otro.Text = "0";
             this.otro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.otro.TextChanged += new System.EventHandler(this.montoE_TextChanged);
             // 
@@ -430,6 +433,7 @@
             this.Total.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Total.Size = new System.Drawing.Size(68, 22);
             this.Total.TabIndex = 174;
+            this.Total.Text = "0";
             this.Total.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
             // 
             // montoP
@@ -439,6 +443,7 @@
             this.montoP.Name = "montoP";
             this.montoP.Size = new System.Drawing.Size(68, 22);
             this.montoP.TabIndex = 5;
+            this.montoP.Text = "0";
             this.montoP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.montoP.TextChanged += new System.EventHandler(this.montoE_TextChanged);
             this.montoP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
@@ -468,6 +473,7 @@
             this.montoF.Name = "montoF";
             this.montoF.Size = new System.Drawing.Size(68, 22);
             this.montoF.TabIndex = 4;
+            this.montoF.Text = "0";
             this.montoF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.montoF.TextChanged += new System.EventHandler(this.montoE_TextChanged);
             this.montoF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
@@ -488,6 +494,7 @@
             this.montoE.Name = "montoE";
             this.montoE.Size = new System.Drawing.Size(68, 22);
             this.montoE.TabIndex = 3;
+            this.montoE.Text = "0";
             this.montoE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.montoE.TextChanged += new System.EventHandler(this.montoE_TextChanged);
             this.montoE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
@@ -570,7 +577,7 @@
             this.solicitud.Controls.Add(this.responsable);
             this.solicitud.Controls.Add(this.director);
             this.solicitud.Controls.Add(this.prioridad);
-            this.solicitud.Location = new System.Drawing.Point(446, 98);
+            this.solicitud.Location = new System.Drawing.Point(0, 0);
             this.solicitud.Name = "solicitud";
             this.solicitud.Size = new System.Drawing.Size(584, 152);
             this.solicitud.TabIndex = 3;
@@ -583,7 +590,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1111, 451);
-            this.Controls.Add(this.solicitud);
             this.Controls.Add(this.FolioMayor);
             this.Controls.Add(this.Eliminar);
             this.Controls.Add(this.label13);

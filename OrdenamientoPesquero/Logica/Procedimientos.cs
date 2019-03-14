@@ -687,7 +687,7 @@ namespace Logica
         public DataTable Obtener_Programa()
         {
             string[] Parametros = {  };
-            return c.getDatosTabla("ObtenerSolicitudesxCurp", Parametros);
+            return c.getDatosTabla("Obtener_Programa", Parametros);
         }
         #endregion
     }
