@@ -606,6 +606,7 @@
             this.ClavePrograma.Name = "ClavePrograma";
             this.ClavePrograma.Size = new System.Drawing.Size(56, 24);
             this.ClavePrograma.TabIndex = 205;
+            this.ClavePrograma.SelectedIndexChanged += new System.EventHandler(this.ClavePrograma_SelectedIndexChanged);
             // 
             // label19
             // 

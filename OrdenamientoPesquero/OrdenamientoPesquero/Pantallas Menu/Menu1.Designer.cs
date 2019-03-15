@@ -31,19 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu1));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.Solicitudes = new System.Windows.Forms.Button();
-            this.Ordenamiento = new System.Windows.Forms.Button();
-            this.CerrarPanel = new System.Windows.Forms.Button();
-            this.RegistrarLoggin = new System.Windows.Forms.PictureBox();
-            this.CerrarPanelUsuario = new System.Windows.Forms.PictureBox();
-            this.CerrarPanelPrograma = new System.Windows.Forms.PictureBox();
-            this.ActualizarLoggin = new System.Windows.Forms.PictureBox();
-            this.EliminarLoggin = new System.Windows.Forms.PictureBox();
-            this.EliminarPrograma = new System.Windows.Forms.PictureBox();
-            this.ActualizarPrograma = new System.Windows.Forms.PictureBox();
-            this.RegistrarPrograma = new System.Windows.Forms.PictureBox();
-            this.limpiar = new System.Windows.Forms.PictureBox();
-            this.limpiar2 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelRegUser = new System.Windows.Forms.Panel();
             this.UsuarioLogin = new System.Windows.Forms.ComboBox();
@@ -59,8 +46,6 @@
             this.PassLogin = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label35 = new System.Windows.Forms.Label();
             this.PanelRegProgram = new System.Windows.Forms.Panel();
             this.ClavePrograma = new System.Windows.Forms.TextBox();
@@ -75,236 +60,49 @@
             this.DirectorPrograma = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.RegPrograma = new System.Windows.Forms.LinkLabel();
             this.RegUsuario = new System.Windows.Forms.LinkLabel();
             this.Bienvenido = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.RegistrarLoggin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelUsuario)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelPrograma)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActualizarLoggin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EliminarLoggin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EliminarPrograma)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActualizarPrograma)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RegistrarPrograma)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.limpiar2)).BeginInit();
+            this.limpiar = new System.Windows.Forms.PictureBox();
+            this.EliminarLoggin = new System.Windows.Forms.PictureBox();
+            this.ActualizarLoggin = new System.Windows.Forms.PictureBox();
+            this.RegistrarLoggin = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.CerrarPanelUsuario = new System.Windows.Forms.PictureBox();
+            this.limpiar2 = new System.Windows.Forms.PictureBox();
+            this.EliminarPrograma = new System.Windows.Forms.PictureBox();
+            this.ActualizarPrograma = new System.Windows.Forms.PictureBox();
+            this.RegistrarPrograma = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.CerrarPanelPrograma = new System.Windows.Forms.PictureBox();
+            this.CerrarPanel = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Solicitudes = new System.Windows.Forms.Button();
+            this.Ordenamiento = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.PanelRegUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NivelUsuarioLogin)).BeginInit();
+            this.PanelRegProgram.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EliminarLoggin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActualizarLoggin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegistrarLoggin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
-            this.PanelRegProgram.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelUsuario)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.limpiar2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EliminarPrograma)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActualizarPrograma)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegistrarPrograma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelPrograma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // Solicitudes
-            // 
-            this.Solicitudes.BackColor = System.Drawing.Color.Transparent;
-            this.Solicitudes.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.pedir;
-            this.Solicitudes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Solicitudes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Solicitudes.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Solicitudes.FlatAppearance.BorderSize = 0;
-            this.Solicitudes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
-            this.Solicitudes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.Solicitudes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Solicitudes.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Solicitudes.Location = new System.Drawing.Point(44, 140);
-            this.Solicitudes.Name = "Solicitudes";
-            this.Solicitudes.Size = new System.Drawing.Size(280, 240);
-            this.Solicitudes.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.Solicitudes, "Apoyos Y Solicitudes");
-            this.Solicitudes.UseVisualStyleBackColor = false;
-            this.Solicitudes.Click += new System.EventHandler(this.Solicitudes_Click);
-            // 
-            // Ordenamiento
-            // 
-            this.Ordenamiento.BackColor = System.Drawing.Color.Transparent;
-            this.Ordenamiento.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_V_;
-            this.Ordenamiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Ordenamiento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Ordenamiento.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Ordenamiento.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Ordenamiento.FlatAppearance.BorderSize = 0;
-            this.Ordenamiento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
-            this.Ordenamiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.Ordenamiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ordenamiento.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ordenamiento.Location = new System.Drawing.Point(557, 140);
-            this.Ordenamiento.Name = "Ordenamiento";
-            this.Ordenamiento.Size = new System.Drawing.Size(317, 240);
-            this.Ordenamiento.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.Ordenamiento, "Ordenamiento Pesquero");
-            this.Ordenamiento.UseVisualStyleBackColor = false;
-            this.Ordenamiento.Click += new System.EventHandler(this.Ordenamiento_Click);
-            // 
-            // CerrarPanel
-            // 
-            this.CerrarPanel.BackColor = System.Drawing.Color.Transparent;
-            this.CerrarPanel.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
-            this.CerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CerrarPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CerrarPanel.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
-            this.CerrarPanel.FlatAppearance.BorderSize = 0;
-            this.CerrarPanel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.CerrarPanel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.CerrarPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CerrarPanel.Location = new System.Drawing.Point(857, 19);
-            this.CerrarPanel.Name = "CerrarPanel";
-            this.CerrarPanel.Size = new System.Drawing.Size(30, 30);
-            this.CerrarPanel.TabIndex = 189;
-            this.toolTip1.SetToolTip(this.CerrarPanel, "Salir");
-            this.CerrarPanel.UseVisualStyleBackColor = false;
-            this.CerrarPanel.Click += new System.EventHandler(this.CerrarPanel_Click);
-            // 
-            // RegistrarLoggin
-            // 
-            this.RegistrarLoggin.BackColor = System.Drawing.Color.Transparent;
-            this.RegistrarLoggin.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
-            this.RegistrarLoggin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RegistrarLoggin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegistrarLoggin.Location = new System.Drawing.Point(351, 246);
-            this.RegistrarLoggin.Name = "RegistrarLoggin";
-            this.RegistrarLoggin.Size = new System.Drawing.Size(50, 50);
-            this.RegistrarLoggin.TabIndex = 187;
-            this.RegistrarLoggin.TabStop = false;
-            this.toolTip1.SetToolTip(this.RegistrarLoggin, "Registrar Usuario");
-            this.RegistrarLoggin.Click += new System.EventHandler(this.RegistrarLoggin_Click);
-            // 
-            // CerrarPanelUsuario
-            // 
-            this.CerrarPanelUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CerrarPanelUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.CerrarPanelUsuario.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
-            this.CerrarPanelUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CerrarPanelUsuario.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.CerrarPanelUsuario.Location = new System.Drawing.Point(498, 3);
-            this.CerrarPanelUsuario.Name = "CerrarPanelUsuario";
-            this.CerrarPanelUsuario.Size = new System.Drawing.Size(21, 21);
-            this.CerrarPanelUsuario.TabIndex = 135;
-            this.CerrarPanelUsuario.TabStop = false;
-            this.toolTip1.SetToolTip(this.CerrarPanelUsuario, "Cerrar");
-            this.CerrarPanelUsuario.Click += new System.EventHandler(this.CerrarPanelUsuario_Click);
-            // 
-            // CerrarPanelPrograma
-            // 
-            this.CerrarPanelPrograma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CerrarPanelPrograma.BackColor = System.Drawing.Color.Transparent;
-            this.CerrarPanelPrograma.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
-            this.CerrarPanelPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CerrarPanelPrograma.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.CerrarPanelPrograma.Location = new System.Drawing.Point(484, 3);
-            this.CerrarPanelPrograma.Name = "CerrarPanelPrograma";
-            this.CerrarPanelPrograma.Size = new System.Drawing.Size(21, 21);
-            this.CerrarPanelPrograma.TabIndex = 135;
-            this.CerrarPanelPrograma.TabStop = false;
-            this.toolTip1.SetToolTip(this.CerrarPanelPrograma, "Cerrar");
-            this.CerrarPanelPrograma.Click += new System.EventHandler(this.CerrarPanelPrograma_Click);
-            // 
-            // ActualizarLoggin
-            // 
-            this.ActualizarLoggin.BackColor = System.Drawing.Color.Transparent;
-            this.ActualizarLoggin.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
-            this.ActualizarLoggin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ActualizarLoggin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ActualizarLoggin.Location = new System.Drawing.Point(409, 246);
-            this.ActualizarLoggin.Name = "ActualizarLoggin";
-            this.ActualizarLoggin.Size = new System.Drawing.Size(50, 50);
-            this.ActualizarLoggin.TabIndex = 199;
-            this.ActualizarLoggin.TabStop = false;
-            this.toolTip1.SetToolTip(this.ActualizarLoggin, "Actualizar Usuario");
-            this.ActualizarLoggin.Click += new System.EventHandler(this.ActualizarLoggin_Click);
-            // 
-            // EliminarLoggin
-            // 
-            this.EliminarLoggin.BackColor = System.Drawing.Color.Transparent;
-            this.EliminarLoggin.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
-            this.EliminarLoggin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EliminarLoggin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EliminarLoggin.Location = new System.Drawing.Point(466, 246);
-            this.EliminarLoggin.Name = "EliminarLoggin";
-            this.EliminarLoggin.Size = new System.Drawing.Size(50, 50);
-            this.EliminarLoggin.TabIndex = 201;
-            this.EliminarLoggin.TabStop = false;
-            this.toolTip1.SetToolTip(this.EliminarLoggin, "Eliminar Usuario");
-            this.EliminarLoggin.Click += new System.EventHandler(this.EliminarLoggin_Click);
-            // 
-            // EliminarPrograma
-            // 
-            this.EliminarPrograma.BackColor = System.Drawing.Color.Transparent;
-            this.EliminarPrograma.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
-            this.EliminarPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EliminarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EliminarPrograma.Location = new System.Drawing.Point(454, 181);
-            this.EliminarPrograma.Name = "EliminarPrograma";
-            this.EliminarPrograma.Size = new System.Drawing.Size(50, 50);
-            this.EliminarPrograma.TabIndex = 207;
-            this.EliminarPrograma.TabStop = false;
-            this.toolTip1.SetToolTip(this.EliminarPrograma, "Eliminar Usuario");
-            this.EliminarPrograma.Click += new System.EventHandler(this.EliminarPrograma_Click);
-            // 
-            // ActualizarPrograma
-            // 
-            this.ActualizarPrograma.BackColor = System.Drawing.Color.Transparent;
-            this.ActualizarPrograma.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
-            this.ActualizarPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ActualizarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ActualizarPrograma.Location = new System.Drawing.Point(397, 181);
-            this.ActualizarPrograma.Name = "ActualizarPrograma";
-            this.ActualizarPrograma.Size = new System.Drawing.Size(50, 50);
-            this.ActualizarPrograma.TabIndex = 205;
-            this.ActualizarPrograma.TabStop = false;
-            this.toolTip1.SetToolTip(this.ActualizarPrograma, "Actualizar Usuario");
-            this.ActualizarPrograma.Click += new System.EventHandler(this.ActualizarPrograma_Click);
-            // 
-            // RegistrarPrograma
-            // 
-            this.RegistrarPrograma.BackColor = System.Drawing.Color.Transparent;
-            this.RegistrarPrograma.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
-            this.RegistrarPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RegistrarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegistrarPrograma.Location = new System.Drawing.Point(339, 181);
-            this.RegistrarPrograma.Name = "RegistrarPrograma";
-            this.RegistrarPrograma.Size = new System.Drawing.Size(50, 50);
-            this.RegistrarPrograma.TabIndex = 203;
-            this.RegistrarPrograma.TabStop = false;
-            this.toolTip1.SetToolTip(this.RegistrarPrograma, "Registrar Usuario");
-            this.RegistrarPrograma.Click += new System.EventHandler(this.RegistrarPrograma_Click);
-            // 
-            // limpiar
-            // 
-            this.limpiar.BackColor = System.Drawing.Color.Transparent;
-            this.limpiar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.limpiar;
-            this.limpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.limpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.limpiar.Location = new System.Drawing.Point(491, 55);
-            this.limpiar.Name = "limpiar";
-            this.limpiar.Size = new System.Drawing.Size(28, 28);
-            this.limpiar.TabIndex = 202;
-            this.limpiar.TabStop = false;
-            this.toolTip1.SetToolTip(this.limpiar, "Limpiar Registro");
-            this.limpiar.Click += new System.EventHandler(this.limpiar_Click);
-            // 
-            // limpiar2
-            // 
-            this.limpiar2.BackColor = System.Drawing.Color.Transparent;
-            this.limpiar2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.limpiar;
-            this.limpiar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.limpiar2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.limpiar2.Location = new System.Drawing.Point(477, 45);
-            this.limpiar2.Name = "limpiar2";
-            this.limpiar2.Size = new System.Drawing.Size(28, 28);
-            this.limpiar2.TabIndex = 210;
-            this.limpiar2.TabStop = false;
-            this.toolTip1.SetToolTip(this.limpiar2, "Limpiar Registro");
-            this.limpiar2.Click += new System.EventHandler(this.limpiar_Click);
             // 
             // panel1
             // 
@@ -352,7 +150,7 @@
             this.PanelRegUser.Controls.Add(this.CerrarPanelUsuario);
             this.PanelRegUser.Controls.Add(this.label35);
             this.PanelRegUser.ForeColor = System.Drawing.Color.Black;
-            this.PanelRegUser.Location = new System.Drawing.Point(205, 102);
+            this.PanelRegUser.Location = new System.Drawing.Point(199, 102);
             this.PanelRegUser.Name = "PanelRegUser";
             this.PanelRegUser.Size = new System.Drawing.Size(524, 319);
             this.PanelRegUser.TabIndex = 193;
@@ -360,6 +158,7 @@
             // 
             // UsuarioLogin
             // 
+            this.UsuarioLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.UsuarioLogin.FormattingEnabled = true;
             this.UsuarioLogin.Location = new System.Drawing.Point(158, 65);
             this.UsuarioLogin.MaxLength = 15;
@@ -427,6 +226,7 @@
             // 
             // NombreUsuarioLogin
             // 
+            this.NombreUsuarioLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.NombreUsuarioLogin.Location = new System.Drawing.Point(158, 185);
             this.NombreUsuarioLogin.MaxLength = 50;
             this.NombreUsuarioLogin.Name = "NombreUsuarioLogin";
@@ -444,6 +244,7 @@
             // 
             // RepetirPassLogin
             // 
+            this.RepetirPassLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.RepetirPassLogin.Location = new System.Drawing.Point(158, 144);
             this.RepetirPassLogin.MaxLength = 16;
             this.RepetirPassLogin.Name = "RepetirPassLogin";
@@ -462,6 +263,7 @@
             // 
             // PassLogin
             // 
+            this.PassLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.PassLogin.Location = new System.Drawing.Point(158, 104);
             this.PassLogin.MaxLength = 16;
             this.PassLogin.Name = "PassLogin";
@@ -491,28 +293,6 @@
             this.label34.Size = new System.Drawing.Size(209, 22);
             this.label34.TabIndex = 186;
             this.label34.Text = "Registrar Nuevo Loggin";
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
-            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Location = new System.Drawing.Point(27, 3);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox9.TabIndex = 137;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox11
-            // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Location = new System.Drawing.Point(369, 3);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(120, 40);
-            this.pictureBox11.TabIndex = 136;
-            this.pictureBox11.TabStop = false;
             // 
             // label35
             // 
@@ -558,6 +338,7 @@
             // ClavePrograma
             // 
             this.ClavePrograma.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.ClavePrograma.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.ClavePrograma.Location = new System.Drawing.Point(158, 187);
             this.ClavePrograma.MaxLength = 3;
             this.ClavePrograma.Name = "ClavePrograma";
@@ -575,6 +356,7 @@
             // 
             // NombrePrograma
             // 
+            this.NombrePrograma.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.NombrePrograma.FormattingEnabled = true;
             this.NombrePrograma.Location = new System.Drawing.Point(157, 63);
             this.NombrePrograma.MaxLength = 100;
@@ -585,6 +367,7 @@
             // 
             // UsuarioPrograma
             // 
+            this.UsuarioPrograma.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.UsuarioPrograma.FormattingEnabled = true;
             this.UsuarioPrograma.Location = new System.Drawing.Point(158, 146);
             this.UsuarioPrograma.MaxLength = 50;
@@ -645,6 +428,7 @@
             // 
             // DirectorPrograma
             // 
+            this.DirectorPrograma.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.DirectorPrograma.Location = new System.Drawing.Point(158, 104);
             this.DirectorPrograma.MaxLength = 70;
             this.DirectorPrograma.Name = "DirectorPrograma";
@@ -673,28 +457,6 @@
             this.label13.Size = new System.Drawing.Size(234, 22);
             this.label13.TabIndex = 186;
             this.label13.Text = "Registrar Nuevo Programa";
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(27, 3);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox3.TabIndex = 137;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(336, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(120, 40);
-            this.pictureBox4.TabIndex = 136;
-            this.pictureBox4.TabStop = false;
             // 
             // RegPrograma
             // 
@@ -731,28 +493,17 @@
             this.Bienvenido.TabIndex = 190;
             this.Bienvenido.Text = "Bienvenido ";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.SEPADA;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(44, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(525, 88);
-            this.pictureBox1.TabIndex = 188;
-            this.pictureBox1.TabStop = false;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(120, 383);
+            this.label1.Location = new System.Drawing.Point(72, 383);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 25);
+            this.label1.Size = new System.Drawing.Size(219, 25);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Solicitudes";
+            this.label1.Text = "Apoyos Y Solicitudes";
             // 
             // label2
             // 
@@ -765,6 +516,264 @@
             this.label2.Size = new System.Drawing.Size(256, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Ordenamiento Pesquero";
+            // 
+            // limpiar
+            // 
+            this.limpiar.BackColor = System.Drawing.Color.Transparent;
+            this.limpiar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.limpiar;
+            this.limpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.limpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.limpiar.Location = new System.Drawing.Point(491, 55);
+            this.limpiar.Name = "limpiar";
+            this.limpiar.Size = new System.Drawing.Size(28, 28);
+            this.limpiar.TabIndex = 202;
+            this.limpiar.TabStop = false;
+            this.toolTip1.SetToolTip(this.limpiar, "Limpiar Registro");
+            this.limpiar.Click += new System.EventHandler(this.limpiar_Click);
+            // 
+            // EliminarLoggin
+            // 
+            this.EliminarLoggin.BackColor = System.Drawing.Color.Transparent;
+            this.EliminarLoggin.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
+            this.EliminarLoggin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EliminarLoggin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EliminarLoggin.Location = new System.Drawing.Point(466, 246);
+            this.EliminarLoggin.Name = "EliminarLoggin";
+            this.EliminarLoggin.Size = new System.Drawing.Size(50, 50);
+            this.EliminarLoggin.TabIndex = 201;
+            this.EliminarLoggin.TabStop = false;
+            this.toolTip1.SetToolTip(this.EliminarLoggin, "Eliminar Usuario");
+            this.EliminarLoggin.Click += new System.EventHandler(this.EliminarLoggin_Click);
+            // 
+            // ActualizarLoggin
+            // 
+            this.ActualizarLoggin.BackColor = System.Drawing.Color.Transparent;
+            this.ActualizarLoggin.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
+            this.ActualizarLoggin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ActualizarLoggin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ActualizarLoggin.Location = new System.Drawing.Point(409, 246);
+            this.ActualizarLoggin.Name = "ActualizarLoggin";
+            this.ActualizarLoggin.Size = new System.Drawing.Size(50, 50);
+            this.ActualizarLoggin.TabIndex = 199;
+            this.ActualizarLoggin.TabStop = false;
+            this.toolTip1.SetToolTip(this.ActualizarLoggin, "Actualizar Usuario");
+            this.ActualizarLoggin.Click += new System.EventHandler(this.ActualizarLoggin_Click);
+            // 
+            // RegistrarLoggin
+            // 
+            this.RegistrarLoggin.BackColor = System.Drawing.Color.Transparent;
+            this.RegistrarLoggin.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
+            this.RegistrarLoggin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RegistrarLoggin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RegistrarLoggin.Location = new System.Drawing.Point(351, 246);
+            this.RegistrarLoggin.Name = "RegistrarLoggin";
+            this.RegistrarLoggin.Size = new System.Drawing.Size(50, 50);
+            this.RegistrarLoggin.TabIndex = 187;
+            this.RegistrarLoggin.TabStop = false;
+            this.toolTip1.SetToolTip(this.RegistrarLoggin, "Registrar Usuario");
+            this.RegistrarLoggin.Click += new System.EventHandler(this.RegistrarLoggin_Click);
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox9.Location = new System.Drawing.Point(27, 3);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox9.TabIndex = 137;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox11.Location = new System.Drawing.Point(369, 3);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(120, 40);
+            this.pictureBox11.TabIndex = 136;
+            this.pictureBox11.TabStop = false;
+            // 
+            // CerrarPanelUsuario
+            // 
+            this.CerrarPanelUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CerrarPanelUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.CerrarPanelUsuario.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
+            this.CerrarPanelUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CerrarPanelUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CerrarPanelUsuario.Location = new System.Drawing.Point(498, 3);
+            this.CerrarPanelUsuario.Name = "CerrarPanelUsuario";
+            this.CerrarPanelUsuario.Size = new System.Drawing.Size(21, 21);
+            this.CerrarPanelUsuario.TabIndex = 135;
+            this.CerrarPanelUsuario.TabStop = false;
+            this.toolTip1.SetToolTip(this.CerrarPanelUsuario, "Cerrar");
+            this.CerrarPanelUsuario.Click += new System.EventHandler(this.CerrarPanelUsuario_Click);
+            // 
+            // limpiar2
+            // 
+            this.limpiar2.BackColor = System.Drawing.Color.Transparent;
+            this.limpiar2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.limpiar;
+            this.limpiar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.limpiar2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.limpiar2.Location = new System.Drawing.Point(477, 45);
+            this.limpiar2.Name = "limpiar2";
+            this.limpiar2.Size = new System.Drawing.Size(28, 28);
+            this.limpiar2.TabIndex = 210;
+            this.limpiar2.TabStop = false;
+            this.toolTip1.SetToolTip(this.limpiar2, "Limpiar Registro");
+            this.limpiar2.Click += new System.EventHandler(this.limpiar_Click);
+            // 
+            // EliminarPrograma
+            // 
+            this.EliminarPrograma.BackColor = System.Drawing.Color.Transparent;
+            this.EliminarPrograma.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
+            this.EliminarPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EliminarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EliminarPrograma.Location = new System.Drawing.Point(454, 181);
+            this.EliminarPrograma.Name = "EliminarPrograma";
+            this.EliminarPrograma.Size = new System.Drawing.Size(50, 50);
+            this.EliminarPrograma.TabIndex = 207;
+            this.EliminarPrograma.TabStop = false;
+            this.toolTip1.SetToolTip(this.EliminarPrograma, "Eliminar Usuario");
+            this.EliminarPrograma.Click += new System.EventHandler(this.EliminarPrograma_Click);
+            // 
+            // ActualizarPrograma
+            // 
+            this.ActualizarPrograma.BackColor = System.Drawing.Color.Transparent;
+            this.ActualizarPrograma.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
+            this.ActualizarPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ActualizarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ActualizarPrograma.Location = new System.Drawing.Point(397, 181);
+            this.ActualizarPrograma.Name = "ActualizarPrograma";
+            this.ActualizarPrograma.Size = new System.Drawing.Size(50, 50);
+            this.ActualizarPrograma.TabIndex = 205;
+            this.ActualizarPrograma.TabStop = false;
+            this.toolTip1.SetToolTip(this.ActualizarPrograma, "Actualizar Usuario");
+            this.ActualizarPrograma.Click += new System.EventHandler(this.ActualizarPrograma_Click);
+            // 
+            // RegistrarPrograma
+            // 
+            this.RegistrarPrograma.BackColor = System.Drawing.Color.Transparent;
+            this.RegistrarPrograma.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
+            this.RegistrarPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RegistrarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RegistrarPrograma.Location = new System.Drawing.Point(339, 181);
+            this.RegistrarPrograma.Name = "RegistrarPrograma";
+            this.RegistrarPrograma.Size = new System.Drawing.Size(50, 50);
+            this.RegistrarPrograma.TabIndex = 203;
+            this.RegistrarPrograma.TabStop = false;
+            this.toolTip1.SetToolTip(this.RegistrarPrograma, "Registrar Usuario");
+            this.RegistrarPrograma.Click += new System.EventHandler(this.RegistrarPrograma_Click);
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(27, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox3.TabIndex = 137;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(336, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(120, 40);
+            this.pictureBox4.TabIndex = 136;
+            this.pictureBox4.TabStop = false;
+            // 
+            // CerrarPanelPrograma
+            // 
+            this.CerrarPanelPrograma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CerrarPanelPrograma.BackColor = System.Drawing.Color.Transparent;
+            this.CerrarPanelPrograma.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
+            this.CerrarPanelPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CerrarPanelPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CerrarPanelPrograma.Location = new System.Drawing.Point(484, 3);
+            this.CerrarPanelPrograma.Name = "CerrarPanelPrograma";
+            this.CerrarPanelPrograma.Size = new System.Drawing.Size(21, 21);
+            this.CerrarPanelPrograma.TabIndex = 135;
+            this.CerrarPanelPrograma.TabStop = false;
+            this.toolTip1.SetToolTip(this.CerrarPanelPrograma, "Cerrar");
+            this.CerrarPanelPrograma.Click += new System.EventHandler(this.CerrarPanelPrograma_Click);
+            // 
+            // CerrarPanel
+            // 
+            this.CerrarPanel.BackColor = System.Drawing.Color.Transparent;
+            this.CerrarPanel.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logout;
+            this.CerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CerrarPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CerrarPanel.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.CerrarPanel.FlatAppearance.BorderSize = 0;
+            this.CerrarPanel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.CerrarPanel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.CerrarPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CerrarPanel.Location = new System.Drawing.Point(857, 19);
+            this.CerrarPanel.Name = "CerrarPanel";
+            this.CerrarPanel.Size = new System.Drawing.Size(30, 30);
+            this.CerrarPanel.TabIndex = 189;
+            this.toolTip1.SetToolTip(this.CerrarPanel, "LogOut");
+            this.CerrarPanel.UseVisualStyleBackColor = false;
+            this.CerrarPanel.Click += new System.EventHandler(this.CerrarPanel_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.SEPADA;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox1.Location = new System.Drawing.Point(44, 8);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(525, 88);
+            this.pictureBox1.TabIndex = 188;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // Solicitudes
+            // 
+            this.Solicitudes.BackColor = System.Drawing.Color.Transparent;
+            this.Solicitudes.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.pedir;
+            this.Solicitudes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Solicitudes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Solicitudes.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Solicitudes.FlatAppearance.BorderSize = 0;
+            this.Solicitudes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.Solicitudes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.Solicitudes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Solicitudes.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Solicitudes.Location = new System.Drawing.Point(44, 140);
+            this.Solicitudes.Name = "Solicitudes";
+            this.Solicitudes.Size = new System.Drawing.Size(280, 240);
+            this.Solicitudes.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.Solicitudes, "Apoyos Y Solicitudes");
+            this.Solicitudes.UseVisualStyleBackColor = false;
+            this.Solicitudes.Click += new System.EventHandler(this.Solicitudes_Click);
+            // 
+            // Ordenamiento
+            // 
+            this.Ordenamiento.BackColor = System.Drawing.Color.Transparent;
+            this.Ordenamiento.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_V_;
+            this.Ordenamiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Ordenamiento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Ordenamiento.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Ordenamiento.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Ordenamiento.FlatAppearance.BorderSize = 0;
+            this.Ordenamiento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.Ordenamiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.Ordenamiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ordenamiento.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ordenamiento.Location = new System.Drawing.Point(557, 140);
+            this.Ordenamiento.Name = "Ordenamiento";
+            this.Ordenamiento.Size = new System.Drawing.Size(317, 240);
+            this.Ordenamiento.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.Ordenamiento, "Ordenamiento Pesquero");
+            this.Ordenamiento.UseVisualStyleBackColor = false;
+            this.Ordenamiento.Click += new System.EventHandler(this.Ordenamiento_Click);
             // 
             // Menu1
             // 
@@ -783,27 +792,27 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu1";
             this.Load += new System.EventHandler(this.Menu1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.RegistrarLoggin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelUsuario)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelPrograma)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActualizarLoggin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EliminarLoggin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.EliminarPrograma)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActualizarPrograma)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.RegistrarPrograma)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.limpiar)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.limpiar2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.PanelRegUser.ResumeLayout(false);
             this.PanelRegUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NivelUsuarioLogin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             this.PanelRegProgram.ResumeLayout(false);
             this.PanelRegProgram.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.limpiar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EliminarLoggin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActualizarLoggin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegistrarLoggin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelUsuario)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.limpiar2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EliminarPrograma)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActualizarPrograma)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.RegistrarPrograma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelPrograma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 

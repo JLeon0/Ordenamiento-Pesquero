@@ -35,7 +35,6 @@
             this.txtpass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnlogin = new System.Windows.Forms.Button();
-            this.linkpass = new System.Windows.Forms.LinkLabel();
             this.btncerrar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -123,19 +122,6 @@
             this.btnlogin.UseVisualStyleBackColor = false;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
-            // linkpass
-            // 
-            this.linkpass.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.linkpass.AutoSize = true;
-            this.linkpass.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkpass.LinkColor = System.Drawing.Color.DarkGray;
-            this.linkpass.Location = new System.Drawing.Point(422, 286);
-            this.linkpass.Name = "linkpass";
-            this.linkpass.Size = new System.Drawing.Size(182, 17);
-            this.linkpass.TabIndex = 0;
-            this.linkpass.TabStop = true;
-            this.linkpass.Text = "¿Ha olvidado contraseña?";
-            // 
             // btncerrar
             // 
             this.btncerrar.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -155,7 +141,6 @@
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(780, 330);
             this.Controls.Add(this.btncerrar);
-            this.Controls.Add(this.linkpass);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtpass);
@@ -187,7 +172,6 @@
         private System.Windows.Forms.TextBox txtpass;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnlogin;
-        private System.Windows.Forms.LinkLabel linkpass;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox btncerrar;
     }
