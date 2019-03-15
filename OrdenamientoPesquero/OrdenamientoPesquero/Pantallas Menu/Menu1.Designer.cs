@@ -782,6 +782,7 @@
             this.Name = "Menu1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu1_FormClosing);
             this.Load += new System.EventHandler(this.Menu1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarLoggin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelUsuario)).EndInit();

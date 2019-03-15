@@ -33,7 +33,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         {
             Pantalla_Registro_UnidadEconomica unidad = new Pantalla_Registro_UnidadEconomica(Usuario,NombreUsuario,Nivel);
             this.Hide();
-            unidad.Show(this);
+            unidad.ShowDialog(this);
         }
 
         private void Menu1_Load(object sender, EventArgs e)
@@ -259,6 +259,11 @@ namespace OrdenamientoPesquero.Pantallas_Menu
                 NombreUsuarioLogin.Text = datalogin.Rows[UsuarioLogin.SelectedIndex]["NOMBRE"].ToString();
                 NivelUsuarioLogin.Value = Convert.ToInt32(datalogin.Rows[UsuarioLogin.SelectedIndex]["NIVEL"].ToString());
             }
+        }
+
+        private void Menu1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Owner.Show();
         }
 
         private void ObtenerLogins()
