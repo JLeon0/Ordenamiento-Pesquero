@@ -959,7 +959,12 @@ namespace OrdenamientoPesquero
                 this.Cursor = Cursors.Default;
             }
         }
-        
+
+        private void Pantalla_Registro_UnidadEconomica_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Owner.Show();
+        }
+
         private void button6_Click(object sender, EventArgs e)
         {
             Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 15);

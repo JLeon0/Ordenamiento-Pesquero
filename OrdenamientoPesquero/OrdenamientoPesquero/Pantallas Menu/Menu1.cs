@@ -25,13 +25,15 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         private void Solicitudes_Click(object sender, EventArgs e)
         {
             Pantalla_Registro_Usuario pantalla = new Pantalla_Registro_Usuario("", "",2,Usuario,NombreUsuario,Nivel);
-            pantalla.ShowDialog();
+            this.Hide();
+            pantalla.Show(this);
         }
 
         private void Ordenamiento_Click(object sender, EventArgs e)
         {
             Pantalla_Registro_UnidadEconomica unidad = new Pantalla_Registro_UnidadEconomica(Usuario,NombreUsuario,Nivel);
-            unidad.ShowDialog();
+            this.Hide();
+            unidad.Show(this);
         }
 
         private void Menu1_Load(object sender, EventArgs e)

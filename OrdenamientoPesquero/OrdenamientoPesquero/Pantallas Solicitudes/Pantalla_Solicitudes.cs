@@ -151,6 +151,10 @@ namespace OrdenamientoPesquero
             }
         }
 
+        private void Pantalla_Solicitudes_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Owner.Show();
+        }
 
         private void Entregar_Click(object sender, EventArgs e)
         {
