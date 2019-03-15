@@ -62,6 +62,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.otro = new System.Windows.Forms.TextBox();
             this.Apoyo = new System.Windows.Forms.GroupBox();
+            this.programa = new System.Windows.Forms.ComboBox();
             this.FolioMayor = new System.Windows.Forms.Label();
             this.prioridad = new System.Windows.Forms.ComboBox();
             this.director = new System.Windows.Forms.ComboBox();
@@ -77,7 +78,6 @@
             this.ClavePrograma = new System.Windows.Forms.ComboBox();
             this.label19 = new System.Windows.Forms.Label();
             this.AñoFolio = new System.Windows.Forms.NumericUpDown();
-            this.programa = new System.Windows.Forms.ComboBox();
             this.label20 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Entregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).BeginInit();
@@ -319,6 +319,7 @@
             this.montoE.Name = "montoE";
             this.montoE.Size = new System.Drawing.Size(68, 22);
             this.montoE.TabIndex = 3;
+            this.montoE.Text = "0";
             this.montoE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.montoE.TextChanged += new System.EventHandler(this.montoE_TextChanged);
             this.montoE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
@@ -339,6 +340,7 @@
             this.montoF.Name = "montoF";
             this.montoF.Size = new System.Drawing.Size(68, 22);
             this.montoF.TabIndex = 4;
+            this.montoF.Text = "0";
             this.montoF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.montoF.TextChanged += new System.EventHandler(this.montoE_TextChanged);
             this.montoF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
@@ -368,6 +370,7 @@
             this.montoP.Name = "montoP";
             this.montoP.Size = new System.Drawing.Size(68, 22);
             this.montoP.TabIndex = 5;
+            this.montoP.Text = "0";
             this.montoP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.montoP.TextChanged += new System.EventHandler(this.montoE_TextChanged);
             this.montoP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
@@ -381,6 +384,7 @@
             this.Total.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.Total.Size = new System.Drawing.Size(68, 22);
             this.Total.TabIndex = 174;
+            this.Total.Text = "0";
             this.Total.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
             // 
             // label17
@@ -408,6 +412,7 @@
             this.otro.Name = "otro";
             this.otro.Size = new System.Drawing.Size(68, 22);
             this.otro.TabIndex = 6;
+            this.otro.Text = "0";
             this.otro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.otro.TextChanged += new System.EventHandler(this.montoE_TextChanged);
             // 
@@ -433,6 +438,23 @@
             this.Apoyo.TabStop = false;
             this.Apoyo.Text = "Apoyo";
             this.Apoyo.Visible = false;
+            // 
+            // programa
+            // 
+            this.programa.FormattingEnabled = true;
+            this.programa.Items.AddRange(new object[] {
+            "Hernan Rafael Flores Cota",
+            "Dacia Meza Villavicencio",
+            "Rosa Maria Castro Lozano",
+            "Cristina Gonzalez Rubio SanVicente",
+            "Claudia Cota Alvarez",
+            "Daniel Amador Manriquez",
+            "Patricia Serrano",
+            "Karla Murillo"});
+            this.programa.Location = new System.Drawing.Point(316, 24);
+            this.programa.Name = "programa";
+            this.programa.Size = new System.Drawing.Size(259, 24);
+            this.programa.TabIndex = 8;
             // 
             // FolioMayor
             // 
@@ -509,6 +531,7 @@
             this.monto.Name = "monto";
             this.monto.Size = new System.Drawing.Size(102, 22);
             this.monto.TabIndex = 5;
+            this.monto.Text = "0";
             this.monto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.monto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
             // 
@@ -615,23 +638,6 @@
             0,
             0});
             // 
-            // programa
-            // 
-            this.programa.FormattingEnabled = true;
-            this.programa.Items.AddRange(new object[] {
-            "Hernan Rafael Flores Cota",
-            "Dacia Meza Villavicencio",
-            "Rosa Maria Castro Lozano",
-            "Cristina Gonzalez Rubio SanVicente",
-            "Claudia Cota Alvarez",
-            "Daniel Amador Manriquez",
-            "Patricia Serrano",
-            "Karla Murillo"});
-            this.programa.Location = new System.Drawing.Point(316, 24);
-            this.programa.Name = "programa";
-            this.programa.Size = new System.Drawing.Size(259, 24);
-            this.programa.TabIndex = 8;
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -681,6 +687,7 @@
             this.Name = "Pantalla_Solicitudes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pantalla_Solicitudes";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Pantalla_Solicitudes_FormClosing);
             this.Load += new System.EventHandler(this.Pantalla_Solicitudes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Entregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).EndInit();
