@@ -106,7 +106,8 @@ namespace OrdenamientoPesquero
                     string temp = x.Substring(i,2);
                     AñoFolio.Value = Convert.ToInt32(temp);
                     i  = i + 3;
-                    ClavePrograma.Text = x.Substring(i, x.Length-i);
+                    if (i < x.Length - i) { ClavePrograma.Text = x.Substring(i, x.Length - i); }
+                    else { ClavePrograma.Text = ""; }
                     fecha.Text = filas["FECHA"].ToString();
                     prioridad.Text = filas["PRIORIDAD"].ToString();
                     concepto.Text = filas["CONCEPTO"].ToString();
