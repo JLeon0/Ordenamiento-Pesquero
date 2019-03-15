@@ -132,20 +132,22 @@ namespace OrdenamientoPesquero.Pantallas_Menu
                 {
                     Menu1 menu1 = new Menu1(Usuario, NombreUsuario, Nivel);
                     this.Hide();
-                    menu1.ShowDialog();
+                    menu1.Show(this);
                 }
                 else if(Nivel == 2)
                 {
                     Pantalla_Registro_Usuario usu = new Pantalla_Registro_Usuario("","",2,Usuario,NombreUsuario,Nivel);
-                    usu.ShowDialog();
+                    this.Hide();
+                    usu.Show(this);
                 }
                 else if(Nivel == 3)
                 {
                     Pantalla_Registro_UnidadEconomica ue = new Pantalla_Registro_UnidadEconomica(Usuario, NombreUsuario, Nivel);
-                    ue.ShowDialog();
+                    this.Hide();
+                    ue.Show(this);
                 }
                 LimpiarDatos();
-                this.Show();
+                //this.Show();
             }
             else { MessageBox.Show("Usuario y/o Contraseña Incorrectos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);}
         }

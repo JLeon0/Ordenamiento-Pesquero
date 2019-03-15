@@ -266,6 +266,11 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             System.Diagnostics.Process.Start("http://sepadabcs.gob.mx/");
         }
 
+        private void Menu1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Owner.Show();
+        }
+
         private void ObtenerLogins()
         {
             datalogin = proc.ObtenerLogins();
