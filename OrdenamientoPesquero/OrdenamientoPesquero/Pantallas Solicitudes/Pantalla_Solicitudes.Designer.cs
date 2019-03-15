@@ -688,7 +688,6 @@
             this.Name = "Pantalla_Solicitudes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pantalla_Solicitudes";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Pantalla_Solicitudes_FormClosing);
             this.Load += new System.EventHandler(this.Pantalla_Solicitudes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Entregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).EndInit();
