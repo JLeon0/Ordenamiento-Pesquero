@@ -2042,6 +2042,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pescadores";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Pantalla_Registro_Usuario_FormClosing);
             this.Load += new System.EventHandler(this.Pantalla_Registro_Usuario_Load);
             this.gbDatosGenerales.ResumeLayout(false);
             this.gbDatosGenerales.PerformLayout();

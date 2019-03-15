@@ -1171,6 +1171,13 @@ namespace OrdenamientoPesquero
 
         private bool reset = false;
         private Thread threadHandle;
+
+        private void Pantalla_Registro_Usuario_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Owner.Show();
+            Owner.Refresh();
+        }
+
         private void CARGAR()
         {        
             Constants.ResultCode result = Constants.ResultCode.DP_DEVICE_FAILURE;
