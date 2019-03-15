@@ -69,6 +69,7 @@ namespace OrdenamientoPesquero
             programa.DataSource = pro;
             programa.DisplayMember = "PROGRAMA";
             programa.ValueMember = "PROGRAMA";
+            programa.Text = "";
 
         }
 
@@ -150,15 +151,12 @@ namespace OrdenamientoPesquero
                 e.Handled = true;
             }
         }
-
+        
         private void ClavePrograma_SelectedIndexChanged(object sender, EventArgs e)
         {
             programa.SelectedIndex = ClavePrograma.SelectedIndex;
         }
-        private void Pantalla_Solicitudes_FormClosing(object sender, FormClosingEventArgs e)
-        {
-           
-        }
+
 
         private void Entregar_Click(object sender, EventArgs e)
         {

@@ -127,20 +127,26 @@ namespace OrdenamientoPesquero
 
         private void RegistrarUnidad_Click(object sender, EventArgs e)
         {
-            exito = AccionesCertificado(true);
-            val.Exito(exito);
-            exito = 0;
-            CertMatXUnidad();
-            MatriculaCertMat.Focus();
+            if (ValidarChip())
+            {
+                exito = AccionesCertificado(true);
+                val.Exito(exito);
+                exito = 0;
+                CertMatXUnidad();
+                MatriculaCertMat.Focus();
+            }
         }
 
         private void ActualizarUnidad_Click(object sender, EventArgs e)
         {
-            exito = AccionesCertificado(false);
-            val.Exito(exito);
-            exito = 0;
-            CertMatXUnidad();
-            MatriculaCertMat.Focus();
+            if (ValidarChip())
+            {
+                exito = AccionesCertificado(false);
+                val.Exito(exito);
+                exito = 0;
+                CertMatXUnidad();
+                MatriculaCertMat.Focus();
+            }
         }
 
         private void EliminarUnidad_Click(object sender, EventArgs e)
@@ -174,6 +180,25 @@ namespace OrdenamientoPesquero
             ListaMatriculas.DataSource = embarcaciones;
             ListaMatriculas.DisplayMember = "NOMBREEMBARCACION";
             ListaMatriculas.ValueMember = "MATRICULA";
+        }
+
+        bool ValidarChip()
+        {
+            DataTable chip = proc.ValidarChip(NChipCertMat.Text, MatriculaCertMat.Text);
+            if (chip.Rows.Count > 0)
+            {
+                string embarcaciones = "";
+                foreach (DataRow row in chip.Rows)
+                {
+                    embarcaciones += row["NOMBREEMBARCACION"].ToString() +"   con Matricula   "+ row["MATRICULA"].ToString() + "\n";
+                }
+                MessageBox.Show("El Numero de Chip está siendo usado por la Embarcación: \n" + embarcaciones,"ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                return true;
+            }
         }
 
         private void limpiar_Click(object sender, EventArgs e)

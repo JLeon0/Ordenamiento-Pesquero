@@ -371,6 +371,12 @@ namespace Logica
             return c.Ejecutar("REGISTRO_PER_EMB", Parametros, emb.Matricula, Permiso);
         }
 
+        public DataTable ValidarChip(string numchip, string matricula)
+        {
+            string[] Parametros = { "@numchip","@matricula" };
+            return c.getDatosTabla("ValidarChip", Parametros, numchip,matricula);
+        }
+
         public DataTable ObtenerCertMatrXUnidad(string RNPA)
         {
             string[] Parametros = { "@RNPA" };
