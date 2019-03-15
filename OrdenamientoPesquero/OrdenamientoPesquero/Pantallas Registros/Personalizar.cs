@@ -22,6 +22,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         }
         Procedimientos proc = new Procedimientos();
         ReportDataSource ds = new ReportDataSource();
+        ReportDataSource ds2 = new ReportDataSource();
+        ReportDataSource ds3 = new ReportDataSource();
         DataTable dt;
 
         private void Personalizar_Load(object sender, EventArgs e)
@@ -227,35 +229,59 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         private void button4_Click(object sender, EventArgs e)
         {
             this.reportViewer1.ProcessingMode = ProcessingMode.Local;
-            reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Embarcacion_Personal.rdlc");
-            bool[] column = new bool[20];
-            string[] dato = new string[20];
-            int i = 0;
-            foreach (CheckBox a in ColumnasEmbarca.Controls)
-            {
-                column[i] = a.Checked;
-                dato[i] = a.Text.Replace(" ", "_");
-                dato[i] = dato[i].ToLower();
-                i++;
-            }
-            ReportParameter[] para = new ReportParameter[20];
-            for (int c = 0; c < 20; c++)
-            {
-                para[c] = new ReportParameter(dato[c], column[c].ToString());
-            }
-            reportViewer1.LocalReport.SetParameters(para);
-            string consulta = "select * from EMBARCACIONES where nombreembarcacion!='NO APLICA'";
-            if (checkBox32.Checked)
-            {
-                consulta += " AND RNPTITULAR = '" + dt.Rows[comboBox14.SelectedIndex]["RNPA"]+"'";
-            }
             if (checkBox71.Checked)
             {
-                consulta += " AND NUMCHIP = '" + chip.Text + "'";
+                reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Embarca.rdlc");
+                dt = proc.Obtener_Capitan(chip.Text);
+                ReportParameter[] para = new ReportParameter[1];
+                if (dt.Rows.Count>0)
+                {
+                    para[0] = new ReportParameter("Capitan", dt.Rows[0][0].ToString());
+                }
+                else
+                {
+                    para[0] = new ReportParameter("Capitan", "");
+                }
+                ds.Name = "marineros";
+                ds.Value = proc.Obtener_Marineros(chip.Text);
+                ds2.Name = "buzos";
+                ds2.Value = proc.Obtener_Buzos(chip.Text);
+                ds3.Name = "DataSet1";
+                string consulta = "select * from EMBARCACIONES where NUMCHIP='"+chip.Text+"'";
+                ds3.Value = proc.ObtenerTablaConsulta(consulta);
+                reportViewer1.LocalReport.DataSources.Add(ds);
+                reportViewer1.LocalReport.DataSources.Add(ds2);
+                reportViewer1.LocalReport.DataSources.Add(ds3);
+                reportViewer1.LocalReport.SetParameters(para);
             }
-            consulta += " Order by " + OrdenaEmbarca.Text.Replace(" ", "");
-            ds.Value = proc.ObtenerTablaConsulta(consulta);
-            this.reportViewer1.LocalReport.DataSources.Add(ds);
+            else
+            {
+                reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Embarcacion_Personal.rdlc");
+                bool[] column = new bool[20];
+                string[] dato = new string[20];
+                int i = 0;
+                foreach (CheckBox a in ColumnasEmbarca.Controls)
+                {
+                    column[i] = a.Checked;
+                    dato[i] = a.Text.Replace(" ", "_");
+                    dato[i] = dato[i].ToLower();
+                    i++;
+                }
+                ReportParameter[] para = new ReportParameter[20];
+                for (int c = 0; c < 20; c++)
+                {
+                    para[c] = new ReportParameter(dato[c], column[c].ToString());
+                }
+                reportViewer1.LocalReport.SetParameters(para);
+                string consulta = "select * from EMBARCACIONES where nombreembarcacion!='NO APLICA'";
+                if (checkBox32.Checked)
+                {
+                    consulta += " AND RNPTITULAR = '" + dt.Rows[comboBox14.SelectedIndex]["RNPA"] + "'";
+                }
+                consulta += " Order by " + OrdenaEmbarca.Text.Replace(" ", "");
+                ds.Value = proc.ObtenerTablaConsulta(consulta);
+                this.reportViewer1.LocalReport.DataSources.Add(ds);
+            }
             this.reportViewer1.RefreshReport();
         }
     }

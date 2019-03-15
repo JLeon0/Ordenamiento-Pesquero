@@ -33,7 +33,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         {
             Pantalla_Registro_UnidadEconomica unidad = new Pantalla_Registro_UnidadEconomica(Usuario,NombreUsuario,Nivel);
             this.Hide();
-            unidad.ShowDialog(this);
+            unidad.Show(this);
         }
 
         private void Menu1_Load(object sender, EventArgs e)
