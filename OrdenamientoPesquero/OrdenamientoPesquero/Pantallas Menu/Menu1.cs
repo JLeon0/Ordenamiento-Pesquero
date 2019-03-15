@@ -33,7 +33,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         {
             Pantalla_Registro_UnidadEconomica unidad = new Pantalla_Registro_UnidadEconomica(Usuario,NombreUsuario,Nivel);
             this.Hide();
-            unidad.ShowDialog(this);
+            unidad.Show(this);
         }
 
         private void Menu1_Load(object sender, EventArgs e)
@@ -259,6 +259,11 @@ namespace OrdenamientoPesquero.Pantallas_Menu
                 NombreUsuarioLogin.Text = datalogin.Rows[UsuarioLogin.SelectedIndex]["NOMBRE"].ToString();
                 NivelUsuarioLogin.Value = Convert.ToInt32(datalogin.Rows[UsuarioLogin.SelectedIndex]["NIVEL"].ToString());
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://sepadabcs.gob.mx/");
         }
 
         private void Menu1_FormClosing(object sender, FormClosingEventArgs e)
