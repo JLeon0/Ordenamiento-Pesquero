@@ -302,7 +302,7 @@ namespace OrdenamientoPesquero
         private void CargarNoPescadores()
         {
             NoOrdenados = proc.BuscarNombre("", "NO APLICA");
-            ListaNombres2.DataSource = dt;
+            ListaNombres2.DataSource = NoOrdenados;
             ListaNombres2.ValueMember = "CURP";
             ListaNombres2.DisplayMember = "NOMBRE";
             lblNo.Text = "NO ORDENADOS  " + ListaNombres2.Items.Count;
