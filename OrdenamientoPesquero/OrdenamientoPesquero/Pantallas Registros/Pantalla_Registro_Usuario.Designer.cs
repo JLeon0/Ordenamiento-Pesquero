@@ -181,6 +181,10 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.Bienvenido = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.MontoOcciso = new System.Windows.Forms.MaskedTextBox();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.gbDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
@@ -286,9 +290,9 @@
             this.gbDatosGenerales.Controls.Add(this.label53);
             this.gbDatosGenerales.Controls.Add(this.NombrePesc);
             this.gbDatosGenerales.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosGenerales.Location = new System.Drawing.Point(216, 89);
+            this.gbDatosGenerales.Location = new System.Drawing.Point(217, 90);
             this.gbDatosGenerales.Name = "gbDatosGenerales";
-            this.gbDatosGenerales.Size = new System.Drawing.Size(894, 385);
+            this.gbDatosGenerales.Size = new System.Drawing.Size(894, 383);
             this.gbDatosGenerales.TabIndex = 7;
             this.gbDatosGenerales.TabStop = false;
             this.gbDatosGenerales.Text = "Datos Generales";
@@ -1373,7 +1377,7 @@
             this.RegistrarOcciso.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.RegistrarOcciso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RegistrarOcciso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegistrarOcciso.Location = new System.Drawing.Point(441, 249);
+            this.RegistrarOcciso.Location = new System.Drawing.Point(445, 297);
             this.RegistrarOcciso.Name = "RegistrarOcciso";
             this.RegistrarOcciso.Size = new System.Drawing.Size(50, 50);
             this.RegistrarOcciso.TabIndex = 133;
@@ -1383,17 +1387,17 @@
             // 
             // Beneficiario
             // 
-            this.Beneficiario.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Beneficiario.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Beneficiario.Location = new System.Drawing.Point(43, 129);
             this.Beneficiario.MaxLength = 20;
             this.Beneficiario.Name = "Beneficiario";
             this.Beneficiario.Size = new System.Drawing.Size(360, 25);
-            this.Beneficiario.TabIndex = 131;
+            this.Beneficiario.TabIndex = 189;
             this.toolTip1.SetToolTip(this.Beneficiario, "Nombre del Beneficiario");
             // 
             // Parentesco
             // 
-            this.Parentesco.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Parentesco.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Parentesco.Location = new System.Drawing.Point(43, 178);
             this.Parentesco.MaxLength = 20;
             this.Parentesco.Name = "Parentesco";
@@ -1403,7 +1407,7 @@
             // 
             // NPoliza
             // 
-            this.NPoliza.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NPoliza.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NPoliza.Location = new System.Drawing.Point(43, 230);
             this.NPoliza.MaxLength = 20;
             this.NPoliza.Name = "NPoliza";
@@ -1705,7 +1709,7 @@
             this.PanelCURP.Controls.Add(this.label28);
             this.PanelCURP.Controls.Add(this.label27);
             this.PanelCURP.ForeColor = System.Drawing.Color.Black;
-            this.PanelCURP.Location = new System.Drawing.Point(395, 266);
+            this.PanelCURP.Location = new System.Drawing.Point(375, 265);
             this.PanelCURP.Name = "PanelCURP";
             this.PanelCURP.Size = new System.Drawing.Size(477, 212);
             this.PanelCURP.TabIndex = 182;
@@ -1857,6 +1861,10 @@
             // 
             this.PanelOcciso.BackColor = System.Drawing.Color.LightGray;
             this.PanelOcciso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelOcciso.Controls.Add(this.label26);
+            this.PanelOcciso.Controls.Add(this.label25);
+            this.PanelOcciso.Controls.Add(this.MontoOcciso);
+            this.PanelOcciso.Controls.Add(this.label23);
             this.PanelOcciso.Controls.Add(this.Vigencia);
             this.PanelOcciso.Controls.Add(this.label22);
             this.PanelOcciso.Controls.Add(this.NPoliza);
@@ -1874,10 +1882,10 @@
             this.PanelOcciso.Controls.Add(this.label19);
             this.PanelOcciso.Controls.Add(this.label20);
             this.PanelOcciso.ForeColor = System.Drawing.Color.Black;
-            this.PanelOcciso.Location = new System.Drawing.Point(391, 266);
+            this.PanelOcciso.Location = new System.Drawing.Point(371, 265);
             this.PanelOcciso.Name = "PanelOcciso";
-            this.PanelOcciso.Size = new System.Drawing.Size(501, 319);
-            this.PanelOcciso.TabIndex = 188;
+            this.PanelOcciso.Size = new System.Drawing.Size(501, 373);
+            this.PanelOcciso.TabIndex = 1;
             this.PanelOcciso.Visible = false;
             // 
             // Vigencia
@@ -1896,7 +1904,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(40, 264);
+            this.label22.Location = new System.Drawing.Point(40, 262);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(63, 17);
             this.label22.TabIndex = 193;
@@ -1977,7 +1985,7 @@
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.ForeColor = System.Drawing.Color.Black;
-            this.label17.Location = new System.Drawing.Point(441, 303);
+            this.label17.Location = new System.Drawing.Point(445, 351);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(51, 14);
             this.label17.TabIndex = 134;
@@ -2017,6 +2025,56 @@
             this.Bienvenido.Size = new System.Drawing.Size(75, 16);
             this.Bienvenido.TabIndex = 192;
             this.Bienvenido.Text = "Bienvenido ";
+            // 
+            // label23
+            // 
+            this.label23.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(40, 315);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(47, 17);
+            this.label23.TabIndex = 196;
+            this.label23.Text = "Monto";
+            // 
+            // MontoOcciso
+            // 
+            this.MontoOcciso.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MontoOcciso.Location = new System.Drawing.Point(56, 333);
+            this.MontoOcciso.Mask = "999999";
+            this.MontoOcciso.Name = "MontoOcciso";
+            this.MontoOcciso.Size = new System.Drawing.Size(60, 25);
+            this.MontoOcciso.TabIndex = 195;
+            this.MontoOcciso.ValidatingType = typeof(int);
+            // 
+            // label25
+            // 
+            this.label25.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label25.AutoSize = true;
+            this.label25.BackColor = System.Drawing.Color.Transparent;
+            this.label25.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label25.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(40, 338);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(16, 17);
+            this.label25.TabIndex = 198;
+            this.label25.Text = "$";
+            // 
+            // label26
+            // 
+            this.label26.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label26.AutoSize = true;
+            this.label26.BackColor = System.Drawing.Color.Transparent;
+            this.label26.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.label26.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label26.Location = new System.Drawing.Point(115, 339);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(28, 17);
+            this.label26.TabIndex = 199;
+            this.label26.Text = ".00";
             // 
             // Pantalla_Registro_Usuario
             // 
@@ -2252,5 +2310,9 @@
         private System.Windows.Forms.TextBox NPoliza;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label Bienvenido;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.MaskedTextBox MontoOcciso;
+        private System.Windows.Forms.Label label23;
     }
 }
