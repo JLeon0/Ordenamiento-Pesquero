@@ -1057,12 +1057,11 @@ namespace OrdenamientoPesquero
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                NOMBRES = proc.BuscarNombre("", RNPA);
-                ListaNombres.Items.Clear();
-                foreach (DataRow fila in NOMBRES.Rows)
-                {
-                    ListaNombres.Items.Add(fila["NOMBRE"].ToString());
-                }
+                string x = BuscarNombre.Text;
+                NOMBRES = proc.BuscarNombre(x, RNPA);
+                ListaNombres.DataSource = NOMBRES;
+                ListaNombres.ValueMember = "CURP";
+                ListaNombres.DisplayMember = "NOMBRE";
             }
         }
 
