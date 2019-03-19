@@ -334,10 +334,10 @@ namespace Logica
             return c.getDatosTabla("BuscarPescador", Parametros, nombre, rnpa);
         }
 
-        public int RegistrarOcciso(string curp, string fechafall, string bene, string paren, string npoli, string vigencia)
+        public int RegistrarOcciso(string curp, string fechafall, string bene, string paren, string npoli, string vigencia, string monto)
         {
-            string[] Parametros = { "@curp", "@fechafallecimiento", "@beneficiario","@parentesco", "@npoliza", "@vigencia" };
-            return c.Ejecutar("RegistrarOcciso", Parametros, curp, fechafall, bene, paren, npoli, vigencia);
+            string[] Parametros = { "@curp", "@fechafallecimiento", "@beneficiario","@parentesco", "@npoliza", "@vigencia", "@monto" };
+            return c.Ejecutar("RegistrarOcciso", Parametros, curp, fechafall, bene, paren, npoli, vigencia, monto);
         }
         #endregion
 

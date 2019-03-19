@@ -701,6 +701,7 @@ namespace OrdenamientoPesquero
                 gbRelacion.Enabled = false;
                 PanelCURP.Visible = true;
                 PanelCURP.Enabled = true;
+                PanelCURP.BringToFront();
             }
         }
 
@@ -713,6 +714,7 @@ namespace OrdenamientoPesquero
             gbRelacion.Enabled = true;
             PanelCURP.Visible = false;
             PanelCURP.Enabled = false;
+            PanelCURP.SendToBack();
         }
         private void AbrirExpediente_Click(object sender, EventArgs e)
         {
@@ -740,6 +742,7 @@ namespace OrdenamientoPesquero
                         gbRelacion.Enabled = false;
                         PanelOcciso.Visible = true;
                         PanelOcciso.Enabled = true;
+                        PanelOcciso.BringToFront();
                     }
                 }
             }
@@ -747,7 +750,7 @@ namespace OrdenamientoPesquero
 
         private void RegistrarOcciso_Click(object sender, EventArgs e)
         {
-            if (proc.RegistrarOcciso(CURPPesc.Text,FechaFalle.Value.ToShortDateString(),Beneficiario.Text,Parentesco.Text, NPoliza.Text, Vigencia.Value.ToShortDateString()) >= 1)
+            if (proc.RegistrarOcciso(CURPPesc.Text,FechaFalle.Value.ToShortDateString(),Beneficiario.Text,Parentesco.Text, NPoliza.Text, Vigencia.Value.ToShortDateString(), MontoOcciso.Text ) >= 1)
             {
                 MessageBox.Show("Occiso Registrado","EXITO",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
             }
@@ -765,6 +768,7 @@ namespace OrdenamientoPesquero
             gbRelacion.Enabled = true;
             PanelOcciso.Visible = false;
             PanelOcciso.Enabled = false;
+            PanelOcciso.SendToBack();
         }
 
         private void FechaNacPesc_ValueChanged(object sender, EventArgs e)
