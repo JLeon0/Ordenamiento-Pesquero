@@ -1185,7 +1185,6 @@ namespace OrdenamientoPesquero
         private void CARGAR()
         {        
             Constants.ResultCode result = Constants.ResultCode.DP_DEVICE_FAILURE;
-
             result = CurrentReader.Open(Constants.CapturePriority.DP_PRIORITY_COOPERATIVE);
 
             if (result != Constants.ResultCode.DP_SUCCESS)

@@ -5815,7 +5815,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Microsoft.VisualBasic.Interaction.IIf(Fields!MONTO.Value = "", CInt("0"), CInt(Fields!MONTO.Value))</Value>
+                                  <Value>=CInt(Fields!MONTOF.Value)+CInt(Fields!MONTOE.Value)+CInt(Fields!MONTOP.Value)+CInt(Fields!MONTOO.Value)</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Format>#,0</Format>
@@ -5998,7 +5998,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>=Sum(CInt(Fields!MONTO.Value))</Value>
+                                  <Value>=Sum(CInt(Fields!MONTOF.Value)+CInt(Fields!MONTOE.Value)+CInt(Fields!MONTOP.Value)+CInt(Fields!MONTOO.Value))</Value>
                                   <Style>
                                     <FontSize>8pt</FontSize>
                                     <Format>#,0;(#,0)</Format>
@@ -6023,6 +6023,7 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
+                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -6595,6 +6596,10 @@
           <DataField>PROGRAMA</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="MONTOO">
+          <DataField>MONTOO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>Apoyos</rd:DataSetName>
@@ -6669,6 +6674,10 @@
         </Field>
         <Field Name="PROGRAMA">
           <DataField>PROGRAMA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="MONTOO">
+          <DataField>MONTOO</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>

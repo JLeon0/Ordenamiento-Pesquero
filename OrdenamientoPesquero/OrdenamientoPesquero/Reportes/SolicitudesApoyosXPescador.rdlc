@@ -755,7 +755,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=IIf(Fields!MONTO.Value="",0,CInt(Fields!MONTO.Value))</Value>
+                              <Value>=CInt(Fields!MONTOF.Value)+CInt(Fields!MONTOE.Value)+CInt(Fields!MONTOP.Value)+CInt(Fields!MONTOO.Value)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <Format>n0</Format>
@@ -780,6 +780,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -936,7 +937,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(IIf(Fields!MONTO.Value="",0,CInt(Fields!MONTO.Value)))</Value>
+                              <Value>=Sum(CInt(Fields!MONTOF.Value)+CInt(Fields!MONTOE.Value)+CInt(Fields!MONTOP.Value)+CInt(Fields!MONTOO.Value))</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                                 <Format>#,0;(#,0)</Format>
@@ -961,7 +962,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -2643,10 +2643,14 @@
           <DataField>PROGRAMA</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="MONTOO">
+          <DataField>MONTOO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>SolicitudesApoyosXCurp</rd:DataSetName>
-        <rd:SchemaPath>D:\Documentos\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\SolicitudesApoyosXCurp.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\SolicitudesApoyosXCurp.xsd</rd:SchemaPath>
         <rd:TableName>ObtenerApoyosxCurp</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
@@ -2719,10 +2723,14 @@
           <DataField>PROGRAMA</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="MONTOO">
+          <DataField>MONTOO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>SolicitudesApoyosXCurp</rd:DataSetName>
-        <rd:SchemaPath>D:\Documentos\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\SolicitudesApoyosXCurp.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\SolicitudesApoyosXCurp.xsd</rd:SchemaPath>
         <rd:TableName>ObtenerSolicitudesxCurp</rd:TableName>
         <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
         <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
