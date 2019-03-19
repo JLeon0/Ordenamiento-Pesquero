@@ -31,7 +31,6 @@ namespace Logica
         public string TRAFICO { get; set; }
         public string NMOTORES { get; set; }
         public string CAPITAN { get; set; }
-        public string MARINERO { get; set; }
 
         public Embarcacion()
         {
@@ -55,7 +54,6 @@ namespace Logica
             NCHIP = "";
             RESPCHIP = "";
             CAPITAN = "";
-            MARINERO = "";
         }
         public Embarcacion(string nombre, string matricula, string hp, string marca, string municipio, string rnpa)
         {
@@ -102,7 +100,7 @@ namespace Logica
 
         public Embarcacion(string nombre, string matricula, string rnpa, string hp, string eslora, string manga, string puntal,
             string arqueobruto, string arqueoneto, string tonelaje, string servicio, string trafico, string Nmotores, string nchip, 
-            string fchip, string rchip, string regnum, string fexp, string capitan, string marinero, string marca)
+            string fchip, string rchip, string regnum, string fexp, string capitan, string marca)
         {
             Nombre = nombre;
             Matricula = matricula;
@@ -123,7 +121,6 @@ namespace Logica
             REGISTRONUM = regnum;
             FECHAEXP = fexp;
             CAPITAN = capitan;
-            MARINERO = marinero;
             MARCA = marca;
         }
     }
