@@ -352,7 +352,7 @@
             this.PanelRegUser.Controls.Add(this.CerrarPanelUsuario);
             this.PanelRegUser.Controls.Add(this.label35);
             this.PanelRegUser.ForeColor = System.Drawing.Color.Black;
-            this.PanelRegUser.Location = new System.Drawing.Point(199, 102);
+            this.PanelRegUser.Location = new System.Drawing.Point(459, 102);
             this.PanelRegUser.Name = "PanelRegUser";
             this.PanelRegUser.Size = new System.Drawing.Size(524, 319);
             this.PanelRegUser.TabIndex = 193;
@@ -598,6 +598,7 @@
             this.UsuarioPrograma.Name = "UsuarioPrograma";
             this.UsuarioPrograma.Size = new System.Drawing.Size(310, 24);
             this.UsuarioPrograma.TabIndex = 208;
+            this.UsuarioPrograma.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UsuarioPrograma_KeyPress);
             // 
             // label14
             // 

@@ -72,7 +72,6 @@
             this.Marca = new System.Windows.Forms.TextBox();
             this.limpiar = new System.Windows.Forms.PictureBox();
             this.gbVerificacion = new System.Windows.Forms.GroupBox();
-            this.Marinero = new System.Windows.Forms.ComboBox();
             this.Capitan = new System.Windows.Forms.ComboBox();
             this.FechaExped = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
@@ -80,7 +79,6 @@
             this.label8 = new System.Windows.Forms.Label();
             this.FechaChip = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.ResponsableChip = new System.Windows.Forms.TextBox();
@@ -475,7 +473,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(80, 74);
+            this.label2.Location = new System.Drawing.Point(78, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 14);
             this.label2.TabIndex = 155;
@@ -601,7 +599,6 @@
             // 
             // gbVerificacion
             // 
-            this.gbVerificacion.Controls.Add(this.Marinero);
             this.gbVerificacion.Controls.Add(this.Capitan);
             this.gbVerificacion.Controls.Add(this.FechaExped);
             this.gbVerificacion.Controls.Add(this.label9);
@@ -609,7 +606,6 @@
             this.gbVerificacion.Controls.Add(this.label8);
             this.gbVerificacion.Controls.Add(this.FechaChip);
             this.gbVerificacion.Controls.Add(this.label7);
-            this.gbVerificacion.Controls.Add(this.label11);
             this.gbVerificacion.Controls.Add(this.label10);
             this.gbVerificacion.Controls.Add(this.label6);
             this.gbVerificacion.Controls.Add(this.ResponsableChip);
@@ -618,19 +614,10 @@
             this.gbVerificacion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbVerificacion.Location = new System.Drawing.Point(186, 319);
             this.gbVerificacion.Name = "gbVerificacion";
-            this.gbVerificacion.Size = new System.Drawing.Size(640, 198);
+            this.gbVerificacion.Size = new System.Drawing.Size(640, 159);
             this.gbVerificacion.TabIndex = 159;
             this.gbVerificacion.TabStop = false;
             this.gbVerificacion.Text = "Verificación / Chipeo";
-            // 
-            // Marinero
-            // 
-            this.Marinero.FormattingEnabled = true;
-            this.Marinero.ItemHeight = 16;
-            this.Marinero.Location = new System.Drawing.Point(100, 118);
-            this.Marinero.Name = "Marinero";
-            this.Marinero.Size = new System.Drawing.Size(313, 24);
-            this.Marinero.TabIndex = 20;
             // 
             // Capitan
             // 
@@ -700,16 +687,6 @@
             this.label7.TabIndex = 162;
             this.label7.Text = "Fecha Chipeado";
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(15, 121);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(58, 16);
-            this.label11.TabIndex = 161;
-            this.label11.Text = "Marinero";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
@@ -724,7 +701,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(15, 157);
+            this.label6.Location = new System.Drawing.Point(15, 126);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 16);
             this.label6.TabIndex = 161;
@@ -733,7 +710,7 @@
             // ResponsableChip
             // 
             this.ResponsableChip.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResponsableChip.Location = new System.Drawing.Point(100, 154);
+            this.ResponsableChip.Location = new System.Drawing.Point(100, 123);
             this.ResponsableChip.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ResponsableChip.MaxLength = 40;
             this.ResponsableChip.Name = "ResponsableChip";
@@ -959,7 +936,7 @@
             this.RegistrarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.RegistrarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RegistrarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegistrarUnidad.Location = new System.Drawing.Point(74, 21);
+            this.RegistrarUnidad.Location = new System.Drawing.Point(79, 21);
             this.RegistrarUnidad.Name = "RegistrarUnidad";
             this.RegistrarUnidad.Size = new System.Drawing.Size(50, 50);
             this.RegistrarUnidad.TabIndex = 150;
@@ -1227,10 +1204,8 @@
         private System.Windows.Forms.MaskedTextBox RegNum;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox Marca;
-        private System.Windows.Forms.ComboBox Marinero;
         private System.Windows.Forms.ComboBox Capitan;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox pictureBox3;
