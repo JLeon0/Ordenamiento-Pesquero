@@ -352,7 +352,7 @@
             this.PanelRegUser.Controls.Add(this.CerrarPanelUsuario);
             this.PanelRegUser.Controls.Add(this.label35);
             this.PanelRegUser.ForeColor = System.Drawing.Color.Black;
-            this.PanelRegUser.Location = new System.Drawing.Point(459, 102);
+            this.PanelRegUser.Location = new System.Drawing.Point(185, 105);
             this.PanelRegUser.Name = "PanelRegUser";
             this.PanelRegUser.Size = new System.Drawing.Size(524, 319);
             this.PanelRegUser.TabIndex = 193;
@@ -583,7 +583,7 @@
             this.NombrePrograma.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.NombrePrograma.FormattingEnabled = true;
             this.NombrePrograma.Location = new System.Drawing.Point(157, 63);
-            this.NombrePrograma.MaxLength = 100;
+            this.NombrePrograma.MaxLength = 150;
             this.NombrePrograma.Name = "NombrePrograma";
             this.NombrePrograma.Size = new System.Drawing.Size(311, 24);
             this.NombrePrograma.TabIndex = 189;

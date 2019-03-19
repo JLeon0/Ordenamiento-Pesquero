@@ -57,7 +57,7 @@ namespace OrdenamientoPesquero
             }
             DataTable folio = proc.ObtenerMayor();
             if (folio.Rows.Count > 0)
-            { FolioMayor.Text += folio.Rows[0][0].ToString(); }
+            { FolioMayor.Text = "Folio Mayor: " + folio.Rows[0][0].ToString(); }
         }
         void CargarClaves()
         {
@@ -162,12 +162,12 @@ namespace OrdenamientoPesquero
         {
             if (!Ap)
             {
-                int exito = proc.Entregar_Solicitud(folio.Text);
+                int exito = proc.Entregar_Solicitud(folio.Text + "-" + AñoFolio.Value.ToString() + "-" + ClavePrograma.Text);
                 if (exito == 1) { MessageBox.Show("Se ha aprovado la solicitud con exito", "Apoyo registrado.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); } else { MessageBox.Show("HUBO UN ERROR"); }
             }
             else
             {
-                int exito = proc.RegresarApoyoSoli(folio.Text);
+                int exito = proc.RegresarApoyoSoli(folio.Text + "-" + AñoFolio.Value.ToString() + "-" + ClavePrograma.Text);
                 if (exito == 1) { MessageBox.Show("Se ha cancelado el apoyo con exito, volvió a ser solicitud", "Apoyo Cancelado.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); } else { MessageBox.Show("HUBO UN ERROR"); }
 
             }
