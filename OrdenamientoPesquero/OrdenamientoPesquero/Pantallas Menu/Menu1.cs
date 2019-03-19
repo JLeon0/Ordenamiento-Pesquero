@@ -271,6 +271,11 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             Owner.Show();
         }
 
+        private void UsuarioPrograma_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
         private void ObtenerLogins()
         {
             datalogin = proc.ObtenerLogins();
