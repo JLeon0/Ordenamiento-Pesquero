@@ -506,7 +506,8 @@
             "Patricia Serrano",
             "Karla Murillo",
             "Gumaro Geraldo Lucero",
-            "Patricia Estrada"});
+            "Patricia Estrada",
+            "Jaime Verdugo De Casso"});
             this.responsable.Location = new System.Drawing.Point(327, 15);
             this.responsable.Name = "responsable";
             this.responsable.Size = new System.Drawing.Size(251, 24);
