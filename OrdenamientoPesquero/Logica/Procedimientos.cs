@@ -237,6 +237,22 @@ namespace Logica
             string[] Parametros = { "@rnpa" };
             return c.getDatosTabla("Obtener", Parametros, RNPA);
         }
+
+        public DataTable Obtener_Capitan(string CHIP)
+        {
+            string[] Parametros = { "@chip" };
+            return c.getDatosTabla("ObtenerCapitan", Parametros, CHIP);
+        }
+        public DataTable Obtener_Marineros(string CHIP)
+        {
+            string[] Parametros = { "@chip" };
+            return c.getDatosTabla("ObtenerMarineros", Parametros, CHIP);
+        }
+        public DataTable Obtener_Buzos(string CHIP)
+        {
+            string[] Parametros = { "@chip" };
+            return c.getDatosTabla("ObtenerBuzos", Parametros, CHIP);
+        }
         #endregion
 
 

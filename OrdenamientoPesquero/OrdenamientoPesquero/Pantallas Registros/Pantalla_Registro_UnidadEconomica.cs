@@ -714,7 +714,8 @@ namespace OrdenamientoPesquero
                 int tipo = 0;
                 if (Privado.Checked) { tipo = 1; }
                 Pantalla_Registro_Usuario pesc = new Pantalla_Registro_Usuario(cbRNPA.Text, txtNombre.Text, tipo, Usuario,NombreUsuario,Nivel);
-                pesc.ShowDialog();
+                this.Hide();
+                pesc.ShowDialog(this);
                 Resumenes(cbRNPA.Text);
                 BorrarCarpeta();
             }
@@ -962,7 +963,13 @@ namespace OrdenamientoPesquero
 
         private void Pantalla_Registro_UnidadEconomica_FormClosing(object sender, FormClosingEventArgs e)
         {
+            
+        }
+
+        private void Pantalla_Registro_UnidadEconomica_FormClosed(object sender, FormClosedEventArgs e)
+        {
             Owner.Show();
+            Owner.Refresh();
         }
 
         private void button6_Click(object sender, EventArgs e)
