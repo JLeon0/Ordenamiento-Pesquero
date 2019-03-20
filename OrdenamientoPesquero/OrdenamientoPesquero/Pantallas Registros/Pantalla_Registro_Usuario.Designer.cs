@@ -1389,7 +1389,7 @@
             // 
             this.Beneficiario.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Beneficiario.Location = new System.Drawing.Point(43, 129);
-            this.Beneficiario.MaxLength = 20;
+            this.Beneficiario.MaxLength = 100;
             this.Beneficiario.Name = "Beneficiario";
             this.Beneficiario.Size = new System.Drawing.Size(360, 25);
             this.Beneficiario.TabIndex = 189;
@@ -1399,7 +1399,7 @@
             // 
             this.Parentesco.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Parentesco.Location = new System.Drawing.Point(43, 178);
-            this.Parentesco.MaxLength = 20;
+            this.Parentesco.MaxLength = 50;
             this.Parentesco.Name = "Parentesco";
             this.Parentesco.Size = new System.Drawing.Size(360, 25);
             this.Parentesco.TabIndex = 190;
@@ -2084,6 +2084,8 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.Controls.Add(this.PanelOcciso);
+            this.Controls.Add(this.PanelCURP);
             this.Controls.Add(this.Bienvenido);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.Botones);
@@ -2093,8 +2095,6 @@
             this.Controls.Add(this.label24);
             this.Controls.Add(this.gbRelacion);
             this.Controls.Add(this.gbDatosGenerales);
-            this.Controls.Add(this.PanelOcciso);
-            this.Controls.Add(this.PanelCURP);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Pantalla_Registro_Usuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
