@@ -531,13 +531,14 @@
             // monto
             // 
             this.monto.Location = new System.Drawing.Point(67, 100);
-            this.monto.MaxLength = 9;
+            this.monto.MaxLength = 15;
             this.monto.Name = "monto";
             this.monto.Size = new System.Drawing.Size(102, 22);
             this.monto.TabIndex = 5;
             this.monto.Text = "0";
             this.monto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.monto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
+            this.monto.Leave += new System.EventHandler(this.monto_Leave);
             // 
             // label11
             // 
