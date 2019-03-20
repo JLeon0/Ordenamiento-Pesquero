@@ -77,7 +77,13 @@ namespace OrdenamientoPesquero
         {
             if (!Ap)
             {
-                soli = new Solicitud(NombrePesc.Text, Curp, folio.Text + "-" + AñoFolio.Value.ToString() + "-" + ClavePrograma.Text, fecha.Text, prioridad.Text, concepto.Text, estatus.Text, monto.Text, responsable.Text, director.Text, observaciones.Text);
+                int i = 0;
+                for (i = 0; i < monto.Text.Length; i++)
+                { if (monto.Text[i].ToString() == ".") { break; } }
+                int x = monto.Text[0].ToString() == "$" ? 1 : 0;
+                i -= x == 0 ? 0 : 1;
+                string montocrack = monto.Text.Substring(x, i).Replace(",", "");
+                soli = new Solicitud(NombrePesc.Text, Curp, folio.Text + "-" + AñoFolio.Value.ToString() + "-" + ClavePrograma.Text, fecha.Text, prioridad.Text, concepto.Text, estatus.Text, montocrack, responsable.Text, director.Text, observaciones.Text);
                 if (proc.Registrar_Solicitud(soli) > 0) { MessageBox.Show("Solicitud ingresada con éxito"); }
                 else { MessageBox.Show("Error al ingresar solicitud"); }
             }
@@ -104,16 +110,16 @@ namespace OrdenamientoPesquero
                         folio.Text += x[i];
                     }
                     i++;
-                    string temp = x.Substring(i,2);
+                    string temp = x.Substring(i, 2);
                     AñoFolio.Value = Convert.ToInt32(temp);
-                    i  = i + 3;
-                    if (i < x.Length - i) { ClavePrograma.Text = x.Substring(i, x.Length - i); }
+                    i = i + 3;
+                    if (i < x.Length - 1) { ClavePrograma.Text = x.Substring(i, x.Length - i); }
                     else { ClavePrograma.Text = ""; }
                     fecha.Text = filas["FECHA"].ToString();
                     prioridad.Text = filas["PRIORIDAD"].ToString();
                     concepto.Text = filas["CONCEPTO"].ToString();
                     estatus.Text = filas["ESTATUS"].ToString();
-                    monto.Text = filas["MONTO"].ToString();
+                    monto.Text = Convert.ToInt32(filas["MONTO"].ToString()).ToString("C");
                     responsable.Text = filas["RESPONSABLE"].ToString();
                     director.Text = filas["DIRECTOR"].ToString();
                     observaciones.Text = filas["OBSERVACIONES"].ToString();
@@ -130,13 +136,19 @@ namespace OrdenamientoPesquero
         {
             if (!Ap)
             {
-                soli = new Solicitud(NombrePesc.Text, Curp, folio.Text, fecha.Text, prioridad.Text, concepto.Text, estatus.Text, monto.Text, responsable.Text, director.Text, observaciones.Text);
+                int i = 0;
+                for (i = 0; i < monto.Text.Length; i++)
+                { if (monto.Text[i].ToString() == ".") { break; } }
+                int x = monto.Text[0].ToString() == "$" ? 1 : 0;
+                i -= x == 0 ? 0 : 1;
+                string montocrack = monto.Text.Substring(x, i).Replace(",", "");
+                soli = new Solicitud(NombrePesc.Text, Curp, folio.Text + "-" + AñoFolio.Value.ToString() + "-" + ClavePrograma.Text, fecha.Text, prioridad.Text, concepto.Text, estatus.Text, montocrack, responsable.Text, director.Text, observaciones.Text);
                 if (proc.Actualizar_Solicitud(soli) > 0) { MessageBox.Show("Solicitud actualizada con éxito"); }
                 else { MessageBox.Show("Error al actualizar solicitud"); }
             }
             else
             {
-                soli = new Solicitud(NombrePesc.Text, Curp, folio.Text, fecha.Text, concepto.Text, observaciones.Text, montoF.Text, montoE.Text, montoP.Text, otro.Text, programa.Text, Total.Text,1);
+                soli = new Solicitud(NombrePesc.Text, Curp, folio.Text + "-" + AñoFolio.Value.ToString() + "-" + ClavePrograma.Text, fecha.Text, concepto.Text, observaciones.Text, montoF.Text, montoE.Text, montoP.Text, otro.Text, programa.Text, Total.Text,1);
                 if (proc.Actualizar_Apoyo(soli) > 0) { MessageBox.Show("Apoyo actualizado con éxito"); }
                 else { MessageBox.Show("Error al actualizar apoyo"); }
 
@@ -164,13 +176,9 @@ namespace OrdenamientoPesquero
             {
                 int i = 0;
                 for (i = 0; i < monto.Text.Length; i++)
-                {
-                    if (monto.Text[i].ToString() == ".") { break; }
-                }
-                int x;
-                if(monto.Text[0].ToString() == "$")
-                { x = 1; i--; }
-                else { x = 0; }
+                { if (monto.Text[i].ToString() == ".") { break; } }
+                int x = monto.Text[0].ToString() == "$" ? 1 : 0;
+                 i -= x == 0 ? 0 : 1 ;
                 string a = monto.Text.Substring(x, i).Replace(",", "");
                 monto.Text = Convert.ToInt32(a).ToString("C");
             }
@@ -200,7 +208,7 @@ namespace OrdenamientoPesquero
                 DialogResult result = MessageBox.Show("Desea eliminar el registro?", "¿?", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
                 if(result == DialogResult.Yes)
                 {
-                    if (proc.EliminarSoliApo(folio.Text) > 0) { MessageBox.Show("Registro Eliminado con éxito", "Eliminado"); } 
+                    if (proc.EliminarSoliApo(folio.Text + "-" + AñoFolio.Value.ToString() + "-" + ClavePrograma.Text) > 0) { MessageBox.Show("Registro Eliminado con éxito", "Eliminado"); } 
                     CargarSolicitudes();
                 }
             }
