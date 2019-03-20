@@ -185,6 +185,8 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.Bienvenido = new System.Windows.Forms.Label();
+            this.uni = new System.Windows.Forms.Label();
+            this.uni2 = new System.Windows.Forms.TextBox();
             this.gbDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
@@ -230,6 +232,8 @@
             // 
             // gbDatosGenerales
             // 
+            this.gbDatosGenerales.Controls.Add(this.uni);
+            this.gbDatosGenerales.Controls.Add(this.uni2);
             this.gbDatosGenerales.Controls.Add(this.lblEdad);
             this.gbDatosGenerales.Controls.Add(this.label14);
             this.gbDatosGenerales.Controls.Add(this.ActivarPanelCURP);
@@ -416,7 +420,7 @@
             this.gbxOrdenado.Controls.Add(this.no);
             this.gbxOrdenado.Controls.Add(this.si);
             this.gbxOrdenado.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxOrdenado.Location = new System.Drawing.Point(787, 273);
+            this.gbxOrdenado.Location = new System.Drawing.Point(803, 255);
             this.gbxOrdenado.Name = "gbxOrdenado";
             this.gbxOrdenado.Size = new System.Drawing.Size(79, 72);
             this.gbxOrdenado.TabIndex = 112;
@@ -2076,6 +2080,34 @@
             this.Bienvenido.TabIndex = 192;
             this.Bienvenido.Text = "Bienvenido ";
             // 
+            // uni
+            // 
+            this.uni.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uni.AutoSize = true;
+            this.uni.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uni.Location = new System.Drawing.Point(602, 321);
+            this.uni.Name = "uni";
+            this.uni.Size = new System.Drawing.Size(48, 16);
+            this.uni.TabIndex = 191;
+            this.uni.Text = "Unidad";
+            this.uni.Visible = false;
+            // 
+            // uni2
+            // 
+            this.uni2.BackColor = System.Drawing.Color.White;
+            this.uni2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.uni2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.uni2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uni2.ForeColor = System.Drawing.Color.Black;
+            this.uni2.Location = new System.Drawing.Point(591, 340);
+            this.uni2.MaxLength = 100;
+            this.uni2.Name = "uni2";
+            this.uni2.Size = new System.Drawing.Size(258, 22);
+            this.uni2.TabIndex = 190;
+            this.uni2.Tag = "";
+            this.uni2.Visible = false;
+            // 
             // Pantalla_Registro_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -2084,8 +2116,6 @@
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.ClientSize = new System.Drawing.Size(1370, 749);
-            this.Controls.Add(this.PanelOcciso);
-            this.Controls.Add(this.PanelCURP);
             this.Controls.Add(this.Bienvenido);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.Botones);
@@ -2095,6 +2125,8 @@
             this.Controls.Add(this.label24);
             this.Controls.Add(this.gbRelacion);
             this.Controls.Add(this.gbDatosGenerales);
+            this.Controls.Add(this.PanelOcciso);
+            this.Controls.Add(this.PanelCURP);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Pantalla_Registro_Usuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -2315,5 +2347,7 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.MaskedTextBox MontoOcciso;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label uni;
+        private System.Windows.Forms.TextBox uni2;
     }
 }

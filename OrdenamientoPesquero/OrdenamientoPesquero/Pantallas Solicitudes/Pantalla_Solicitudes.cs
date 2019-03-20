@@ -167,7 +167,6 @@ namespace OrdenamientoPesquero
                 {
                     if (monto.Text[i].ToString() == ".") { i--;  break; }
                 }
-                if () { }
                 string a = monto.Text.Substring(1, i).Replace(",", "");
                 monto.Text = Convert.ToInt32(a).ToString("C");
             }

@@ -35,7 +35,7 @@ namespace OrdenamientoPesquero
             this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
             RNPA = rnpa;
             if (RNPA == "")
-            { BuscarNombre2.Visible = false; ListaNombres2.Visible = false; }
+            { BuscarNombre2.Visible = false; ListaNombres2.Visible = false; uni.Visible = true; uni2.Visible = true; }
             NombreUnidad = nombre;
             if (tipo == 1)
             { TipoSocio.Enabled = false; TipoExtra.Enabled = false; }
@@ -145,11 +145,13 @@ namespace OrdenamientoPesquero
                         if (registrar)
                         {
                             RegistrarImagen();
+                            proc.reg_uni(pes.CURP, uni2.Text);
                             return proc.Registrar_Pescador(pes);
                         }
                         else
                         {
                             RegistrarImagen();
+                            proc.act_uni(pes.CURP, uni2.Text);
                             return proc.Actualizar_Pescador(pes);
                         }
                     }
@@ -166,11 +168,13 @@ namespace OrdenamientoPesquero
                 if (registrar)
                 {
                     RegistrarImagen();
+                    proc.reg_uni(pes.CURP, uni2.Text);
                     return proc.Registrar_Pescador(pes);
                 }
                 else
                 {
                     RegistrarImagen();
+                    proc.act_uni(pes.CURP, uni2.Text);
                     return proc.Actualizar_Pescador(pes);
                 }
             }
@@ -353,7 +357,12 @@ namespace OrdenamientoPesquero
                 this.Cursor = Cursors.WaitCursor;
                 string c = curp;
                 dt = proc.Obtener_Pescador(c);
+                DataTable dt2 = proc.obt_uni(c);
                 limpiarpescador();
+                if (dt2.Rows.Count != 0)
+                {
+                    uni2.Text = dt2.Rows[0]["UNIDAD"].ToString();
+                }
                 string tipopescador = "", ocupacion = "", cuerpoagua = "", matricula = "";
                 int ord = 0;
                 foreach (DataRow filas in dt.Rows)
