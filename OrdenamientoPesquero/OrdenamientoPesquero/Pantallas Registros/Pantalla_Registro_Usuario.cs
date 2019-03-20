@@ -341,7 +341,7 @@ namespace OrdenamientoPesquero
                 MatriculaPesc.DataSource = Embarcaciones;
                 MatriculaPesc.DisplayMember = "NOMBREEMBARCACION";
                 MatriculaPesc.ValueMember = "MATRICULA";
-                MatriculaPesc.Text = "";
+                MatriculaPesc.Text = "NO APLICA";
                 MatriculaRelacion.Text = "-----";
             }
         }
@@ -462,7 +462,7 @@ namespace OrdenamientoPesquero
             {
                 item.Text = "";
             }
-            MatriculaPesc.Text = "";
+            MatriculaPesc.Text = "NO APLICA";
             MatriculaRelacion.Text = "-----";
             Unid.Text = "";
         }
