@@ -34,8 +34,6 @@ namespace OrdenamientoPesquero
             InitializeComponent();
             this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
             RNPA = rnpa;
-            if (RNPA == "")
-            { BuscarNombre2.Visible = false; ListaNombres2.Visible = false; }
             NombreUnidad = nombre;
             if (tipo == 1)
             { TipoSocio.Enabled = false; TipoExtra.Enabled = false; }
@@ -279,14 +277,20 @@ namespace OrdenamientoPesquero
             if (RNPA == "")
             {
                 dt = proc.BuscarNombre("", "");
+                NoOrdenados = proc.BuscarNombre("", "NO APLICA");
                 lblP.Text = "PESCADORES  " + dt.Rows.Count;
+                lblNo.Text = "NO PESCADORES  " + NoOrdenados.Rows.Count;
                 dt.Merge(NoOrdenados);
-                ListaNombres.DataSource = dt;
+                DataView view = new DataView(dt);
+                view.Sort = "CURP";
+                ListaNombres.DataSource = view;
                 ListaNombres.ValueMember = "CURP";
-                ListaNombres.DisplayMember = "NOMBRE";
-                lblNo.Location = new Point(lblNo.Location.X, 40);
-                lblP.Location = new Point(lblP.Location.X, 25);
-                ListaNombres.Height += 200;
+                ListaNombres.DisplayMember = "CURP";
+
+                ListaNombres2.DataSource = dt;
+                ListaNombres2.ValueMember = "CURP";
+                ListaNombres2.DisplayMember = "NOMBRE";
+                ListaNombres2.ClearSelected();
             }
             else
             {
@@ -301,12 +305,15 @@ namespace OrdenamientoPesquero
 
         private void CargarNoPescadores()
         {
-            NoOrdenados = proc.BuscarNombre("", "NO APLICA");
-            ListaNombres2.DataSource = NoOrdenados;
-            ListaNombres2.ValueMember = "CURP";
-            ListaNombres2.DisplayMember = "NOMBRE";
-            lblNo.Text = "NO ORDENADOS  " + ListaNombres2.Items.Count;
-            ListaNombres2.ClearSelected();
+            if (RNPA != "")
+            {
+                NoOrdenados = proc.BuscarNombre("", "NO APLICA");
+                ListaNombres2.DataSource = NoOrdenados;
+                ListaNombres2.ValueMember = "CURP";
+                ListaNombres2.DisplayMember = "NOMBRE";
+                lblNo.Text = "NO ORDENADOS  " + ListaNombres2.Items.Count;
+                ListaNombres2.ClearSelected();
+            }
         }
 
         private void CargarMatriculas()
@@ -391,7 +398,8 @@ namespace OrdenamientoPesquero
                 {
                     if (ord == 1) { MatriculaRelacion.Text = matricula; }
                     else { MatriculaPesc.Text = matricula; }
-                    if(matricula != "NO APLICA") {
+                    if (matricula != "NO APLICA")
+                    {
                         for (int i = 0; i < MatriculaPesc.Items.Count; i++)
                         {
                             DataRowView row = (DataRowView)MatriculaPesc.Items[i];
@@ -433,14 +441,15 @@ namespace OrdenamientoPesquero
                 CURPPesc.Text = c;
                 ObtenerImagen();
                 if (ListaNombres.SelectedIndex != -1)
+                { NOMBRES = proc.BuscarNombre(ListaNombres.Text, RNPA); }
+                else if (ListaNombres2.SelectedIndex != -1)
+                { NOMBRES = proc.BuscarNombre(ListaNombres2.Text, RNPA); }
+                if (NOMBRES.Rows.Count > 0 && NOMBRES.Rows[0][2].ToString() != "NO APLICA")
                 {
-                    NOMBRES = proc.BuscarNombre(ListaNombres.Text, RNPA);
-                    if (NOMBRES.Rows[0][2].ToString() != "NO APLICA")
-                    {
-                        dt = proc.Obtener_todas_unidades(NOMBRES.Rows[0][2].ToString());
-                        Unid.Text = dt.Rows[0]["NOMBRE"].ToString();
-                    }
+                    dt = proc.Obtener_todas_unidades(NOMBRES.Rows[0][2].ToString());
+                    Unid.Text = dt.Rows[0]["NOMBRE"].ToString();
                 }
+
 
                 this.Cursor = Cursors.Default;
             }
@@ -1043,27 +1052,37 @@ namespace OrdenamientoPesquero
         {
             string x = BuscarNombre.Text;
             NOMBRES = proc.BuscarNombre(x, RNPA);
-            ListaNombres.DataSource = NOMBRES;
-            ListaNombres.ValueMember = "CURP";
-            ListaNombres.DisplayMember = "NOMBRE";
-            //ListaNombres.Items.Clear();
-            //foreach (DataRow fila in NOMBRES.Rows)
-            //{
-            //    ListaNombres.Items.Add(fila["NOMBRE"].ToString());
-            //}
-        }
-
-        private void BuscarNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            if (RNPA == "")
             {
-                string x = BuscarNombre.Text;
-                NOMBRES = proc.BuscarNombre(x, RNPA);
-                ListaNombres.DataSource = NOMBRES;
-                ListaNombres.ValueMember = "CURP";
-                ListaNombres.DisplayMember = "NOMBRE";
+                DataView view = new DataView(NOMBRES);
+                view.Sort = "CURP";
+                ListaNombres.DataSource = view;
+            }
+            else { ListaNombres.DataSource = NOMBRES; }
+            ListaNombres.ValueMember = "CURP";
+            if (RNPA == "") { ListaNombres.DisplayMember = "CURP"; }
+            else { ListaNombres.DisplayMember = "NOMBRE"; }
+        }
+        private void BuscarNombre2_TextChanged(object sender, EventArgs e)
+        {
+            if (RNPA == "")
+            {
+                string x = BuscarNombre2.Text;
+                NoOrdenados = proc.BuscarNombre(x, RNPA);
+                ListaNombres2.DataSource = NoOrdenados;
+                ListaNombres2.ValueMember = "CURP";
+                ListaNombres2.DisplayMember = "NOMBRE";
+            }
+            else
+            {
+                string x = BuscarNombre2.Text;
+                NoOrdenados = proc.BuscarNombre(x, "NO APLICA");
+                ListaNombres2.DataSource = NoOrdenados;
+                ListaNombres2.ValueMember = "CURP";
+                ListaNombres2.DisplayMember = "NOMBRE";
             }
         }
+
 
         private void Solicitud_Click(object sender, EventArgs e)
         {
@@ -1095,8 +1114,6 @@ namespace OrdenamientoPesquero
             {
                 Ord = 1;
                 ListaNombres2.SelectedIndex = -1;
-                //NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), RNPA);
-                //LlenarDatos(NOMBRES.Rows[0]["CURP"].ToString());
                 LlenarDatos(ListaNombres.SelectedValue.ToString());
                 CargarSolApo();
                 CargarResumenExpedientes();
@@ -1130,18 +1147,12 @@ namespace OrdenamientoPesquero
                 Ord = 0;
                 ListaNombres.SelectedIndex = -1;
                 LlenarDatos(NoOrdenados.Rows[ListaNombres2.SelectedIndex]["CURP"].ToString());
+                CargarSolApo();
+                CargarResumenExpedientes();
             }
 
         }
 
-        private void BuscarNombre2_TextChanged(object sender, EventArgs e)
-        {
-            string x = BuscarNombre2.Text;
-            NoOrdenados = proc.BuscarNombre(x, "NO APLICA");
-            ListaNombres2.DataSource = NoOrdenados;
-            ListaNombres2.ValueMember = "CURP";
-            ListaNombres2.DisplayMember = "NOMBRE";
-        }
         #endregion
 
 
