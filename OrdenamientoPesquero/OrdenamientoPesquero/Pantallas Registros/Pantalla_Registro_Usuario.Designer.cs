@@ -1558,33 +1558,32 @@
             // BuscarNombre
             // 
             this.BuscarNombre.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BuscarNombre.Location = new System.Drawing.Point(7, 68);
+            this.BuscarNombre.Location = new System.Drawing.Point(7, 50);
             this.BuscarNombre.Name = "BuscarNombre";
             this.BuscarNombre.Size = new System.Drawing.Size(185, 20);
             this.BuscarNombre.TabIndex = 160;
             this.BuscarNombre.TextChanged += new System.EventHandler(this.BuscarNombre_TextChanged_1);
-            this.BuscarNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BuscarNombre_KeyPress);
             // 
             // ListaNombres
             // 
-            this.ListaNombres.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListaNombres.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListaNombres.FormattingEnabled = true;
-            this.ListaNombres.ItemHeight = 16;
-            this.ListaNombres.Location = new System.Drawing.Point(7, 94);
+            this.ListaNombres.ItemHeight = 15;
+            this.ListaNombres.Location = new System.Drawing.Point(7, 76);
             this.ListaNombres.Name = "ListaNombres";
-            this.ListaNombres.Size = new System.Drawing.Size(185, 196);
+            this.ListaNombres.Size = new System.Drawing.Size(185, 184);
             this.ListaNombres.TabIndex = 161;
             this.ListaNombres.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListaNombres_MouseDoubleClick);
             // 
             // ListaNombres2
             // 
-            this.ListaNombres2.Font = new System.Drawing.Font("Arial Narrow", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ListaNombres2.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListaNombres2.FormattingEnabled = true;
-            this.ListaNombres2.ItemHeight = 16;
+            this.ListaNombres2.ItemHeight = 15;
             this.ListaNombres2.Location = new System.Drawing.Point(7, 350);
             this.ListaNombres2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ListaNombres2.Name = "ListaNombres2";
-            this.ListaNombres2.Size = new System.Drawing.Size(185, 148);
+            this.ListaNombres2.Size = new System.Drawing.Size(185, 139);
             this.ListaNombres2.TabIndex = 179;
             this.ListaNombres2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListaNombres2_MouseDoubleClick);
             // 
