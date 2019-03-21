@@ -168,5 +168,15 @@ namespace OrdenamientoPesquero.Pantallas_Menu
                 btnlogin.PerformClick();
             }
         }
+
+        private void VerPass_MouseHover(object sender, EventArgs e)
+        {
+            txtpass.UseSystemPasswordChar = txtpass.UseSystemPasswordChar == true ? false : true;
+        }
+
+        private void VerPass_MouseLeave(object sender, EventArgs e)
+        {
+            txtpass.UseSystemPasswordChar = txtpass.UseSystemPasswordChar == true ? false : true;
+        }
     }
 }

@@ -840,6 +840,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gbcs4x4.ico" />
+    <None Include="Resources\ver.png" />
     <None Include="Resources\logout.png" />
     <None Include="Resources\Expediente.png" />
     <None Include="Resources\show.png" />

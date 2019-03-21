@@ -48,8 +48,14 @@ namespace OrdenamientoPesquero
         void CargarSolicitudes()
         {
             if (!Ap)
-            { solicitudes = proc.ObtenerSolicitudes(Curp); }
-            else { solicitudes = proc.ObtenerApoyos(Curp); }
+            {
+                solicitudes = proc.ObtenerSolicitudes(Curp);
+                solicitudes.Merge(proc.ObtenerSolicitudesCN(Curp));
+            }
+            else
+            {
+                solicitudes = proc.ObtenerApoyos(Curp);
+            }
             Lista.Items.Clear();
             foreach (DataRow fila in solicitudes.Rows)
             {
