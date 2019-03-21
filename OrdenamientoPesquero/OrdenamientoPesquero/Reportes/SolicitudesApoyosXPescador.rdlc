@@ -11,7 +11,6 @@
               <TextRun>
                 <Value>Solicitudes Activas</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -20,9 +19,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>3.25189cm</Top>
+        <Top>3.33126cm</Top>
         <Left>0.47926cm</Left>
-        <Height>0.68589cm</Height>
+        <Height>0.60652cm</Height>
         <Width>18.71539cm</Width>
         <Visibility>
           <Hidden>=IIF(IsNothing(First(Fields!NOMBRE.Value, "SolicitudesXCurp")),true,false)</Hidden>
@@ -1026,7 +1025,6 @@
               <TextRun>
                 <Value>Apoyos Recibidos</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -1035,9 +1033,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>7.92761cm</Top>
+        <Top>8.03344cm</Top>
         <Left>0.47924cm</Left>
-        <Height>0.68589cm</Height>
+        <Height>0.58006cm</Height>
         <Width>18.71539cm</Width>
         <ZIndex>4</ZIndex>
         <Visibility>
@@ -1103,7 +1101,6 @@
               <TextRun>
                 <Value>Solicitudes Inactivas</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -1112,9 +1109,9 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>5.50667cm</Top>
+        <Top>5.58604cm</Top>
         <Left>0.47925cm</Left>
-        <Height>0.68589cm</Height>
+        <Height>0.60652cm</Height>
         <Width>18.71539cm</Width>
         <ZIndex>6</ZIndex>
         <Visibility>
@@ -2314,7 +2311,7 @@
         </Style>
       </Tablix>
     </ReportItems>
-    <Height>16.58399cm</Height>
+    <Height>14.97003cm</Height>
     <Style />
   </Body>
   <Width>19.44221cm</Width>
