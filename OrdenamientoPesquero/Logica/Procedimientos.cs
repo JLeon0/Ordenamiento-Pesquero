@@ -519,6 +519,12 @@ namespace Logica
             return c.getDatosTabla("ObtenerSolicitudesxCurp", Parametros, curp);
         }
 
+        public DataTable ObtenerSolicitudesCN(string curp)
+        {
+            string[] Parametros = { "@curp" };
+            return c.getDatosTabla("ObtenerAtendidasxCurp", Parametros, curp);
+        }
+
         public int Entregar_Solicitud(string folio)
         {
             string[] Parametros = { "@folio" };

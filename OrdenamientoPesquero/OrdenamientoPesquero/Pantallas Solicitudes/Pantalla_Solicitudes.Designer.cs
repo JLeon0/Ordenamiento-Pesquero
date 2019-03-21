@@ -518,7 +518,7 @@
             this.estatus.FormattingEnabled = true;
             this.estatus.Items.AddRange(new object[] {
             "Pendiente",
-            "Positiva conTP",
+            "Positiva con TP",
             "Positiva sin TP",
             "Negativa",
             "Cancelada"});

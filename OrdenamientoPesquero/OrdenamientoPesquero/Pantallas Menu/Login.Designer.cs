@@ -35,9 +35,11 @@
             this.txtpass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnlogin = new System.Windows.Forms.Button();
+            this.VerPass = new System.Windows.Forms.PictureBox();
             this.btncerrar = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VerPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,10 +124,23 @@
             this.btnlogin.UseVisualStyleBackColor = false;
             this.btnlogin.Click += new System.EventHandler(this.btnlogin_Click);
             // 
+            // VerPass
+            // 
+            this.VerPass.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ver;
+            this.VerPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.VerPass.Location = new System.Drawing.Point(724, 142);
+            this.VerPass.Name = "VerPass";
+            this.VerPass.Size = new System.Drawing.Size(23, 20);
+            this.VerPass.TabIndex = 8;
+            this.VerPass.TabStop = false;
+            this.VerPass.MouseLeave += new System.EventHandler(this.VerPass_MouseLeave);
+            this.VerPass.MouseHover += new System.EventHandler(this.VerPass_MouseHover);
+            // 
             // btncerrar
             // 
+            this.btncerrar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
+            this.btncerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btncerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btncerrar.Image = global::OrdenamientoPesquero.Properties.Resources.Equis;
             this.btncerrar.Location = new System.Drawing.Point(753, 3);
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(23, 19);
@@ -140,6 +155,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(780, 330);
+            this.Controls.Add(this.VerPass);
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.btnlogin);
             this.Controls.Add(this.label1);
@@ -156,6 +172,7 @@
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseDown);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VerPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btncerrar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -174,5 +191,6 @@
         private System.Windows.Forms.Button btnlogin;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox btncerrar;
+        private System.Windows.Forms.PictureBox VerPass;
     }
 }
