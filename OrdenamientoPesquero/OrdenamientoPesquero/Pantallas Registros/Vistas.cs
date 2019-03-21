@@ -661,6 +661,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                         }
                         SoliApo[3] = new ReportParameter("Municipio", dt.Rows[0]["MUNICIPIO"].ToString());
                         SoliApo[4] = new ReportParameter("Localidad", dt.Rows[0]["LOCALIDAD"].ToString());
+                        SoliApo[5] = new ReportParameter("Fed", "");
                     }
                     SoliApo[0] = new ReportParameter("NombrePescador", unidad);
                     SoliApo[1] = new ReportParameter("Ord", Ordenado);
