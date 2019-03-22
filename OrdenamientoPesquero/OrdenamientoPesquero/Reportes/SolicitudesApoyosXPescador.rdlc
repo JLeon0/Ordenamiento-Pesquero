@@ -52,7 +52,7 @@
                           <Paragraph>
                             <TextRuns>
                               <TextRun>
-                                <Value>U.E.:  </Value>
+                                <Value> U.E.:  </Value>
                                 <Style>
                                   <FontSize>9pt</FontSize>
                                   <FontWeight>Bold</FontWeight>
@@ -93,7 +93,7 @@
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>Municipio:</Value>
+                                        <Value> Municipio:</Value>
                                         <Style>
                                           <FontSize>9pt</FontSize>
                                           <FontWeight>Bold</FontWeight>
@@ -271,7 +271,7 @@
                                   <Paragraph>
                                     <TextRuns>
                                       <TextRun>
-                                        <Value>Federación:</Value>
+                                        <Value> Federación:</Value>
                                         <Style>
                                           <FontSize>9pt</FontSize>
                                           <FontWeight>Bold</FontWeight>
@@ -620,7 +620,7 @@
                             <TextRun>
                               <Value>=Fields!FOLIO.Value</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -655,7 +655,7 @@
                             <TextRun>
                               <Value>=Year(Fields!FECHA.Value)</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -690,7 +690,7 @@
                             <TextRun>
                               <Value>=Fields!PROGRAMA.Value</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -725,7 +725,7 @@
                             <TextRun>
                               <Value>=Fields!CONCEPTO.Value</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -760,7 +760,7 @@
                             <TextRun>
                               <Value>=CInt(Fields!MONTOF.Value)+CInt(Fields!MONTOE.Value)+CInt(Fields!MONTOP.Value)+CInt(Fields!MONTOO.Value)</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontSize>7pt</FontSize>
                                 <Format>n0</Format>
                               </Style>
                             </TextRun>
@@ -801,7 +801,7 @@
                             <TextRun>
                               <Value />
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -836,7 +836,7 @@
                             <TextRun>
                               <Value />
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -871,7 +871,7 @@
                             <TextRun>
                               <Value />
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -906,7 +906,7 @@
                             <TextRun>
                               <Value>TOTAL APOYOS</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontSize>7pt</FontSize>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -941,7 +941,7 @@
                             <TextRun>
                               <Value>=Sum(CInt(Fields!MONTOF.Value)+CInt(Fields!MONTOE.Value)+CInt(Fields!MONTOP.Value)+CInt(Fields!MONTOO.Value))</Value>
                               <Style>
-                                <FontSize>8pt</FontSize>
+                                <FontSize>7pt</FontSize>
                                 <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
@@ -1000,6 +1000,7 @@
         <SortExpressions>
           <SortExpression>
             <Value>=Year(Fields!FECHA.Value)</Value>
+            <Direction>Descending</Direction>
           </SortExpression>
         </SortExpressions>
         <Top>8.68406cm</Top>
@@ -1077,7 +1078,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox45</rd:DefaultName>
-        <Top>0.33679cm</Top>
+        <Top>0.03528cm</Top>
         <Left>16.13196cm</Left>
         <Height>0.56424cm</Height>
         <Width>3.06267cm</Width>
@@ -1690,6 +1691,7 @@
         <SortExpressions>
           <SortExpression>
             <Value>=Year(Fields!FECHA.Value)</Value>
+            <Direction>Descending</Direction>
           </SortExpression>
         </SortExpressions>
         <Top>4.05427cm</Top>
@@ -2281,6 +2283,7 @@
         <SortExpressions>
           <SortExpression>
             <Value>=Microsoft.VisualBasic.DateAndTime.Year(Fields!FECHA.Value)</Value>
+            <Direction>Descending</Direction>
           </SortExpression>
         </SortExpressions>
         <Top>6.36895cm</Top>
@@ -2310,6 +2313,39 @@
           </RightBorder>
         </Style>
       </Tablix>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Today()</Value>
+                <Style>
+                  <FontSize>8pt</FontSize>
+                  <Format>d' de 'MMMM' de 'yyyy</Format>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.6348cm</Top>
+        <Left>15.52172cm</Left>
+        <Height>0.6cm</Height>
+        <Width>3.67291cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
     </ReportItems>
     <Height>14.97003cm</Height>
     <Style />

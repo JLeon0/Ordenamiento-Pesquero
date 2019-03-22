@@ -664,6 +664,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                         SoliApo[5] = new ReportParameter("Fed", "");
                     }
                     SoliApo[0] = new ReportParameter("NombrePescador", unidad);
+                    reportViewer1.LocalReport.DisplayName = unidad;
+                    reportViewer1.LocalReport.DisplayName = reportViewer1.LocalReport.DisplayName.Replace("\"", "");
                     SoliApo[1] = new ReportParameter("Ord", Ordenado);
                     reportViewer1.LocalReport.SetParameters(SoliApo);
                     reportViewer1.RefreshReport();
