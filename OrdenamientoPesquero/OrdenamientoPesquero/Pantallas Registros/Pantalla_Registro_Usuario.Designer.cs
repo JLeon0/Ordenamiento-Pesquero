@@ -185,6 +185,8 @@
             this.Bienvenido = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.uni = new System.Windows.Forms.Label();
+            this.uni2 = new System.Windows.Forms.TextBox();
             this.gbDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Credencial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).BeginInit();
@@ -232,6 +234,8 @@
             // gbDatosGenerales
             // 
             this.gbDatosGenerales.Controls.Add(this.Credencial);
+            this.gbDatosGenerales.Controls.Add(this.uni);
+            this.gbDatosGenerales.Controls.Add(this.uni2);
             this.gbDatosGenerales.Controls.Add(this.lblEdad);
             this.gbDatosGenerales.Controls.Add(this.label14);
             this.gbDatosGenerales.Controls.Add(this.ActivarPanelCURP);
@@ -420,7 +424,7 @@
             this.gbxOrdenado.Controls.Add(this.no);
             this.gbxOrdenado.Controls.Add(this.si);
             this.gbxOrdenado.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbxOrdenado.Location = new System.Drawing.Point(787, 273);
+            this.gbxOrdenado.Location = new System.Drawing.Point(803, 255);
             this.gbxOrdenado.Name = "gbxOrdenado";
             this.gbxOrdenado.Size = new System.Drawing.Size(79, 72);
             this.gbxOrdenado.TabIndex = 112;
@@ -1392,6 +1396,13 @@
             // 
             // CerrarPanel
             // 
+            this.Beneficiario.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Beneficiario.Location = new System.Drawing.Point(43, 129);
+            this.Beneficiario.MaxLength = 100;
+            this.Beneficiario.Name = "Beneficiario";
+            this.Beneficiario.Size = new System.Drawing.Size(360, 25);
+            this.Beneficiario.TabIndex = 189;
+            this.toolTip1.SetToolTip(this.Beneficiario, "Nombre del Beneficiario");
             this.CerrarPanel.BackColor = System.Drawing.Color.Transparent;
             this.CerrarPanel.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
             this.CerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -1405,7 +1416,17 @@
             this.toolTip1.SetToolTip(this.CerrarPanel, "Cerrar");
             this.CerrarPanel.Click += new System.EventHandler(this.CerrarPanel_Click);
             // 
-            // ActualizarCURP
+            // Parentesco
+            // 
+            this.Parentesco.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Parentesco.Location = new System.Drawing.Point(43, 178);
+            this.Parentesco.MaxLength = 50;
+            this.Parentesco.Name = "Parentesco";
+            this.Parentesco.Size = new System.Drawing.Size(360, 25);
+            this.Parentesco.TabIndex = 190;
+            this.toolTip1.SetToolTip(this.Parentesco, "Parentesco del Beneficiario con el Pescador");
+            // 
+            // NPoliza
             // 
             this.ActualizarCURP.BackColor = System.Drawing.Color.Transparent;
             this.ActualizarCURP.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
@@ -2079,6 +2100,34 @@
             this.pictureBox2.TabIndex = 155;
             this.pictureBox2.TabStop = false;
             // 
+            // uni
+            // 
+            this.uni.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.uni.AutoSize = true;
+            this.uni.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uni.Location = new System.Drawing.Point(602, 321);
+            this.uni.Name = "uni";
+            this.uni.Size = new System.Drawing.Size(48, 16);
+            this.uni.TabIndex = 191;
+            this.uni.Text = "Unidad";
+            this.uni.Visible = false;
+            // 
+            // uni2
+            // 
+            this.uni2.BackColor = System.Drawing.Color.White;
+            this.uni2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.uni2.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.uni2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.uni2.ForeColor = System.Drawing.Color.Black;
+            this.uni2.Location = new System.Drawing.Point(591, 340);
+            this.uni2.MaxLength = 100;
+            this.uni2.Name = "uni2";
+            this.uni2.Size = new System.Drawing.Size(258, 22);
+            this.uni2.TabIndex = 190;
+            this.uni2.Tag = "";
+            this.uni2.Visible = false;
+            // 
             // Pantalla_Registro_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -2319,5 +2368,7 @@
         private System.Windows.Forms.MaskedTextBox MontoOcciso;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.PictureBox Credencial;
+        private System.Windows.Forms.Label uni;
+        private System.Windows.Forms.TextBox uni2;
     }
 }

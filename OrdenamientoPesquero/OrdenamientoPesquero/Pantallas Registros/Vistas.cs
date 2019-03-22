@@ -634,7 +634,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     reportViewer1.LocalReport.DataSources.Add(datos2);
                     reportViewer1.LocalReport.DataSources.Add(datos3);
                     ReportParameter[] SoliApo;
-                    if (rnpa!="")
+                    if (rnpa!=""&&rnpa!= "NO APLICA")
                     {
                         SoliApo = new ReportParameter[6];
                         dt = proc.Obtener_unidades(rnpa);
@@ -648,9 +648,24 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     }
                     else
                     {
-                        SoliApo = new ReportParameter[2];
+                        SoliApo = new ReportParameter[6];
+                        dt = proc.Obtener_Pescador(CURP);
+                        dt1 = proc.obt_uni(CURP);
+                        if (dt1.Rows.Count!=0)
+                        {
+                            SoliApo[2] = new ReportParameter("Unidad", dt1.Rows[0]["UNIDAD"].ToString());
+                        }
+                        else
+                        {
+                            SoliApo[2] = new ReportParameter("Unidad", "");
+                        }
+                        SoliApo[3] = new ReportParameter("Municipio", dt.Rows[0]["MUNICIPIO"].ToString());
+                        SoliApo[4] = new ReportParameter("Localidad", dt.Rows[0]["LOCALIDAD"].ToString());
+                        SoliApo[5] = new ReportParameter("Fed", "");
                     }
                     SoliApo[0] = new ReportParameter("NombrePescador", unidad);
+                    reportViewer1.LocalReport.DisplayName = unidad;
+                    reportViewer1.LocalReport.DisplayName = reportViewer1.LocalReport.DisplayName.Replace("\"", "");
                     SoliApo[1] = new ReportParameter("Ord", Ordenado);
                     reportViewer1.LocalReport.SetParameters(SoliApo);
                     reportViewer1.RefreshReport();

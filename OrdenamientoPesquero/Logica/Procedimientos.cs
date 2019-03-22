@@ -46,12 +46,12 @@ namespace Logica
             return c.Ejecutar("ActualizarUnidad", Parametros, UE.RNPA, UE.NOMBRE, UE.RFC, UE.CALLE, UE.COLONIA, UE.LOCALIDAD, UE.MUNICIPIO, UE.CP, UE.CORREO, UE.TELEFONO, UE.TIPO);
 
         }
-        public int Eliminar_Unidad(String RNPA)
+        public int Eliminar_Unidad(string RNPA)
         {
             string[] Parametros = { "@rnpa" };
             return c.Ejecutar("Eliminarunidad", Parametros, RNPA);
         }
-        public DataTable RNPAXMunicipio(String Municipio)
+        public DataTable RNPAXMunicipio(string Municipio)
         {
             string[] Parametros = { "@municipio" };
             return c.getDatosTabla("RNPAXMunicipio", Parametros, Municipio);
@@ -751,8 +751,22 @@ namespace Logica
             string[] Parametros = { };
             return c.getDatosTabla("ObtenerLogins", Parametros);
         }
-            #endregion
+        #endregion
 
-
+        public int reg_uni(string curp, string unidad)
+        {
+            string[] Parametros = { "@curp","@unidad" };
+            return c.Ejecutar("reg_uni", Parametros, curp,unidad);
         }
+        public int act_uni(string curp, string unidad)
+        {
+            string[] Parametros = { "@curp", "@unidad" };
+            return c.Ejecutar("act_uni", Parametros, curp, unidad);
+        }
+        public DataTable obt_uni(string curp)
+        {
+            string[] Parametros = { "@curp" };
+            return c.getDatosTabla("obt_uni", Parametros, curp);
+        }
+    }
 }
