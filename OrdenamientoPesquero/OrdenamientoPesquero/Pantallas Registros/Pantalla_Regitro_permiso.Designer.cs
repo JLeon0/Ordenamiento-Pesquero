@@ -69,7 +69,6 @@
             this.Acuicola = new System.Windows.Forms.RadioButton();
             this.Comercial = new System.Windows.Forms.RadioButton();
             this.limpiar = new System.Windows.Forms.PictureBox();
-            this.nPer = new System.Windows.Forms.ComboBox();
             this.finVigenciaPer = new System.Windows.Forms.DateTimePicker();
             this.label38 = new System.Windows.Forms.Label();
             this.diaExpPer = new System.Windows.Forms.DateTimePicker();
@@ -117,6 +116,7 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
+            this.nPer = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposPescaPerm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbarcacionesPerm)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -472,11 +472,11 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.nPer);
             this.groupBox3.Controls.Add(this.Deportiva);
             this.groupBox3.Controls.Add(this.Acuicola);
             this.groupBox3.Controls.Add(this.Comercial);
             this.groupBox3.Controls.Add(this.limpiar);
-            this.groupBox3.Controls.Add(this.nPer);
             this.groupBox3.Controls.Add(this.finVigenciaPer);
             this.groupBox3.Controls.Add(this.label38);
             this.groupBox3.Controls.Add(this.diaExpPer);
@@ -544,17 +544,6 @@
             this.limpiar.TabIndex = 116;
             this.limpiar.TabStop = false;
             this.limpiar.Click += new System.EventHandler(this.limpiar_Click);
-            // 
-            // nPer
-            // 
-            this.nPer.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.nPer.FormattingEnabled = true;
-            this.nPer.Location = new System.Drawing.Point(10, 43);
-            this.nPer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.nPer.Name = "nPer";
-            this.nPer.Size = new System.Drawing.Size(193, 24);
-            this.nPer.TabIndex = 1;
-            this.nPer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nPer_KeyPress);
             // 
             // finVigenciaPer
             // 
@@ -1061,6 +1050,13 @@
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
             // 
+            // nPer
+            // 
+            this.nPer.Location = new System.Drawing.Point(10, 44);
+            this.nPer.Name = "nPer";
+            this.nPer.Size = new System.Drawing.Size(176, 22);
+            this.nPer.TabIndex = 1;
+            // 
             // Pantalla_Regitro_permiso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1183,7 +1179,6 @@
         private System.Windows.Forms.DataGridView dgvEquiposPescaPerm;
         private System.Windows.Forms.DataGridView dgvEmbarcacionesPerm;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox nPer;
         private System.Windows.Forms.DateTimePicker finVigenciaPer;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.DateTimePicker diaExpPer;
@@ -1241,5 +1236,6 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn3;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox gbBusqueda;
+        private System.Windows.Forms.TextBox nPer;
     }
 }

@@ -19,6 +19,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         Image FIRMA, HUELLA;
         Pantalla_Registro_Usuario USUARIO;
         Procedimientos proc = new Procedimientos();
+        private int selected = 0;
         private bool ExisteDispositivo = false;
         private FilterInfoCollection DispositivoDeVideo;
         private VideoCaptureDevice FuenteDeVideo = null;
@@ -41,10 +42,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         public void CargarDispositivos(FilterInfoCollection Dispositivos)
         {
             for (int i = 0; i < Dispositivos.Count; i++)
-            {
-                cbxDispositivos.Items.Add(Dispositivos[0].Name.ToString());
-                cbxDispositivos.Text = cbxDispositivos.Items[0].ToString();
-            }
+            { cbxDispositivos.Items.Add(Dispositivos[0].Name.ToString()); }
+            cbxDispositivos.Text = cbxDispositivos.Items[0].ToString();
         }
 
         public void BuscarDispositivos()
@@ -76,8 +75,17 @@ namespace OrdenamientoPesquero.Pantallas_Registros
 
         public void Video_NuevoFrame(object sender, NewFrameEventArgs eventArgs)
         {
-            Bitmap Imagen = (Bitmap)eventArgs.Frame.Clone();
-            Rectangle rectangle = new Rectangle(200, 0, 300, 350);
+            Bitmap Imagen; Rectangle rectangle;
+            if (selected != 0)
+            {
+                Imagen = (Bitmap)eventArgs.Frame.Clone();
+                rectangle = new Rectangle(200, 0, 300, 350);
+            }
+            else
+            {
+                Imagen = (Bitmap)eventArgs.Frame.Clone();
+                rectangle = new Rectangle(480, 150, 300, 350);
+            }
             Imagen = Imagen.Clone(rectangle, Imagen.PixelFormat);
             EspacioCamara.BackgroundImage = Imagen;
             EspacioCamara.BackgroundImageLayout = ImageLayout.Zoom;
@@ -89,8 +97,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             {
                 if (ExisteDispositivo)
                 {
-
                     FuenteDeVideo = new VideoCaptureDevice(DispositivoDeVideo[cbxDispositivos.SelectedIndex].MonikerString);
+                    selected = cbxDispositivos.SelectedIndex;
                     FuenteDeVideo.NewFrame += new NewFrameEventHandler(Video_NuevoFrame);
                     FuenteDeVideo.Start();
                     Estado.Text = "Ejecutando Dispositivo...";

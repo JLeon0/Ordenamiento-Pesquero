@@ -69,13 +69,6 @@ namespace OrdenamientoPesquero
         private void CargarPermisos()
         {
             permisos = proc.ObtenerNoPermisos(Rnpa);
-            ListaPermisos.Items.Clear();
-            //foreach (DataRow fila in dt.Rows)
-            //{
-            //    ListaPermisos.Items.Add(fila["NPERMISO"].ToString());
-            //}
-
-
             ListaPermisos.DataSource = permisos;
             ListaPermisos.ValueMember = "NPERMISO";
             ListaPermisos.DisplayMember = "PESQUERIA";
@@ -85,11 +78,8 @@ namespace OrdenamientoPesquero
         {
             DataTable pesq = new DataTable();
             pesq = proc.ObtenerPesquerias();
-            PesqueriaPer.Items.Clear();
-            foreach (DataRow fila in pesq.Rows)
-            {
-                PesqueriaPer.Items.Add(fila["PESQUERIA"].ToString());
-            }
+            PesqueriaPer.DataSource = pesq;
+            PesqueriaPer.DisplayMember = "PESQUERIA";
         }
 
 

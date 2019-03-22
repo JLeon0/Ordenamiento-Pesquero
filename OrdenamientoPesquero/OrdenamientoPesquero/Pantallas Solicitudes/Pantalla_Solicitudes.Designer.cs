@@ -607,7 +607,7 @@
             // ClavePrograma
             // 
             this.ClavePrograma.FormattingEnabled = true;
-            this.ClavePrograma.Location = new System.Drawing.Point(384, 127);
+            this.ClavePrograma.Location = new System.Drawing.Point(386, 127);
             this.ClavePrograma.Name = "ClavePrograma";
             this.ClavePrograma.Size = new System.Drawing.Size(56, 24);
             this.ClavePrograma.TabIndex = 205;
@@ -647,7 +647,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(376, 130);
+            this.label20.Location = new System.Drawing.Point(374, 130);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(12, 16);
             this.label20.TabIndex = 208;

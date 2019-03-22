@@ -261,6 +261,7 @@ namespace OrdenamientoPesquero
             else
             { return true; }
         }
+
         #region Cargar
         private void CargarMunicipios()
         {
@@ -370,7 +371,6 @@ namespace OrdenamientoPesquero
                     ApeMatPescador.Text = filas["AP_MAT"].ToString();
                     RFCPesc.Text = filas["RFC"].ToString();
                     EscolaridadPesc.Text = filas["ESCOLARIDAD"].ToString();
-                    LocalidadPesc.Text = "Baja California Sur";
                     TSangrePesc.Text = filas["TIPO_SANGRE"].ToString();
                     LugarNacPesc.Text = filas["LUGAR_NACIMIENTO"].ToString();
                     ColoniaPesc.Text = filas["COLONIA"].ToString();
@@ -387,7 +387,6 @@ namespace OrdenamientoPesquero
                     ord = Convert.ToInt32(filas["ORDENAMIENTO"].ToString());
                     Seguro.Text = filas["SEGURO"].ToString();
                     FolioCred.Text = filas["FOLIO"].ToString();
-                    //FechaExpFolio.Text = filas["FECHAEXP_FOLIO"].ToString();
                     FechaVencFolio.Text = filas["FECHAVEN_FOLIO"].ToString();
                 }
                 if (matricula == RNPA)

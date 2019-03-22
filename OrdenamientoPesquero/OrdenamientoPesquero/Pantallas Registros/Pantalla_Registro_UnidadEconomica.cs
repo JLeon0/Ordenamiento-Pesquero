@@ -112,9 +112,9 @@ namespace OrdenamientoPesquero
                     ue = new Unidad_Economica(cbRNPA.Text, txtNombre.Text, "1", txtCalleNum.Text, txtRFC.Text, txtColonia.Text, txtLocalidad.Text, txtMunicipio.Text, mtbCP.Text, txtCorreo.Text, mtbTelefono.Text);
                     exito = proc.Actualizar_Unidad(ue);
                 }
-                int Folio = ObtenerFolio();
-                if (exito > 0) {
-                    exito = proc.AsignarFederacion(Folio, cbRNPA.Text);
+                if (exito > 0)
+                {
+                    exito = proc.AsignarFederacion(Convert.ToInt32(NomFed.SelectedValue.ToString()), cbRNPA.Text);
                     exito = proc.InsertarPresidenteUnidad(cbRNPA.Text, NombrePresidenteUE.Text, mtbTelefonoPresidente.Text);
                 }
                 val.Exito(exito);
@@ -163,17 +163,21 @@ namespace OrdenamientoPesquero
             {
                 RNPA = proc.Obtener_todas_unidades(BuscarR.Text);
             }
-            ListaRNPA.Items.Clear();
-            foreach (DataRow fila in RNPA.Rows)
-            {
-                ListaRNPA.Items.Add(fila["RNPA"].ToString());
-            }
+            ListaRNPA.DataSource = RNPA;
+            ListaRNPA.DisplayMember = "RNPA";
+            ListaRNPA.ValueMember = "RNPA";
+            //foreach (DataRow fila in RNPA.Rows)
+            //{
+            //    ListaRNPA.Items.Add(fila["RNPA"].ToString());
+            //}
             NOMBRES = proc.Obtener_todos_los_nombres("");
-            ListaNombres.Items.Clear();
-            foreach (DataRow fila in NOMBRES.Rows)
-            {
-                ListaNombres.Items.Add(fila["NOMBRE"].ToString());
-            }
+            ListaNombres.DataSource = NOMBRES;
+            ListaNombres.DisplayMember = "NOMBRE";
+            ListaNombres.ValueMember = "RNPA";
+            //foreach (DataRow fila in NOMBRES.Rows)
+            //{
+            //    ListaNombres.Items.Add(fila["NOMBRE"].ToString());
+            //}
             cbRNPA.Focus();
         }
 
@@ -549,6 +553,7 @@ namespace OrdenamientoPesquero
             dt = proc.Obtener_Federaciones();
             NomFed.DataSource = dt;
             NomFed.DisplayMember = "NOMBRE";
+            NomFed.ValueMember = "FOLIO";
             NomFed.Text = "Seleccione una Federación";
         }
 
@@ -570,9 +575,8 @@ namespace OrdenamientoPesquero
         {
             dt = proc.ObtenerUnaFederacion(cbRNPA.Text);
             if (dt.Rows.Count > 0)
-            {
-                NomFed.Text = dt.Rows[0]["NOMBRE"].ToString();
-            }
+            { NomFed.Text = dt.Rows[0]["NOMBRE"].ToString(); }
+            else { NomFed.Text = ""; }
         }
 
         private void ObtenerPresidente()

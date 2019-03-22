@@ -31,13 +31,13 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Registro_Usuario));
             this.gbDatosGenerales = new System.Windows.Forms.GroupBox();
+            this.Credencial = new System.Windows.Forms.PictureBox();
             this.lblEdad = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.ActivarPanelCURP = new System.Windows.Forms.PictureBox();
             this.CargarFirma = new System.Windows.Forms.PictureBox();
             this.Huella = new System.Windows.Forms.PictureBox();
             this.CURPPesc = new System.Windows.Forms.TextBox();
-            this.Credencial = new System.Windows.Forms.Button();
             this.Firma = new System.Windows.Forms.PictureBox();
             this.CargarHuella = new System.Windows.Forms.PictureBox();
             this.CargarImagen = new System.Windows.Forms.PictureBox();
@@ -119,18 +119,18 @@
             this.Unid = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.CerrarPanel = new System.Windows.Forms.PictureBox();
-            this.ActualizarCURP = new System.Windows.Forms.PictureBox();
+            this.Beneficiario = new System.Windows.Forms.TextBox();
+            this.Parentesco = new System.Windows.Forms.TextBox();
+            this.NPoliza = new System.Windows.Forms.TextBox();
+            this.AbrirExpediente = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.RegistrarPescador = new System.Windows.Forms.PictureBox();
             this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
             this.EliminarUnidad = new System.Windows.Forms.PictureBox();
-            this.AbrirExpediente = new System.Windows.Forms.PictureBox();
             this.CerrarPanelOcciso = new System.Windows.Forms.PictureBox();
             this.RegistrarOcciso = new System.Windows.Forms.PictureBox();
-            this.Beneficiario = new System.Windows.Forms.TextBox();
-            this.Parentesco = new System.Windows.Forms.TextBox();
-            this.NPoliza = new System.Windows.Forms.TextBox();
+            this.CerrarPanel = new System.Windows.Forms.PictureBox();
+            this.ActualizarCURP = new System.Windows.Forms.PictureBox();
             this.gbInformacion = new System.Windows.Forms.GroupBox();
             this.AComp = new System.Windows.Forms.Label();
             this.AIne = new System.Windows.Forms.Label();
@@ -166,8 +166,6 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.PanelOcciso = new System.Windows.Forms.Panel();
             this.label26 = new System.Windows.Forms.Label();
             this.label25 = new System.Windows.Forms.Label();
@@ -185,7 +183,10 @@
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.Bienvenido = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gbDatosGenerales.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Credencial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Huella)).BeginInit();
@@ -204,15 +205,15 @@
             this.CuerpoDeAguaPesc.SuspendLayout();
             this.OcupacionEnEmbarPesc.SuspendLayout();
             this.TipoPesc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActualizarCURP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AbrirExpediente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarPescador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AbrirExpediente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelOcciso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarOcciso)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActualizarCURP)).BeginInit();
             this.gbInformacion.SuspendLayout();
             this.Botones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Ver)).BeginInit();
@@ -221,22 +222,22 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.gbBusqueda.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.PanelOcciso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatosGenerales
             // 
+            this.gbDatosGenerales.Controls.Add(this.Credencial);
             this.gbDatosGenerales.Controls.Add(this.lblEdad);
             this.gbDatosGenerales.Controls.Add(this.label14);
             this.gbDatosGenerales.Controls.Add(this.ActivarPanelCURP);
             this.gbDatosGenerales.Controls.Add(this.CargarFirma);
             this.gbDatosGenerales.Controls.Add(this.Huella);
             this.gbDatosGenerales.Controls.Add(this.CURPPesc);
-            this.gbDatosGenerales.Controls.Add(this.Credencial);
             this.gbDatosGenerales.Controls.Add(this.Firma);
             this.gbDatosGenerales.Controls.Add(this.CargarHuella);
             this.gbDatosGenerales.Controls.Add(this.CargarImagen);
@@ -296,6 +297,19 @@
             this.gbDatosGenerales.TabIndex = 7;
             this.gbDatosGenerales.TabStop = false;
             this.gbDatosGenerales.Text = "Datos Generales";
+            // 
+            // Credencial
+            // 
+            this.Credencial.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.credencial;
+            this.Credencial.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Credencial.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Credencial.Location = new System.Drawing.Point(28, 312);
+            this.Credencial.Name = "Credencial";
+            this.Credencial.Size = new System.Drawing.Size(91, 56);
+            this.Credencial.TabIndex = 190;
+            this.Credencial.TabStop = false;
+            this.toolTip1.SetToolTip(this.Credencial, "Crear Credencial");
+            this.Credencial.Click += new System.EventHandler(this.Credencial_Click);
             // 
             // lblEdad
             // 
@@ -362,16 +376,6 @@
             this.CURPPesc.Size = new System.Drawing.Size(193, 22);
             this.CURPPesc.TabIndex = 5;
             this.CURPPesc.TextChanged += new System.EventHandler(this.CURPPesc_TextChanged);
-            // 
-            // Credencial
-            // 
-            this.Credencial.Location = new System.Drawing.Point(6, 317);
-            this.Credencial.Name = "Credencial";
-            this.Credencial.Size = new System.Drawing.Size(121, 61);
-            this.Credencial.TabIndex = 181;
-            this.Credencial.Text = "CREDENCIAL";
-            this.Credencial.UseVisualStyleBackColor = true;
-            this.Credencial.Click += new System.EventHandler(this.Credencial_Click);
             // 
             // Firma
             // 
@@ -1260,34 +1264,48 @@
             this.label24.TabIndex = 153;
             this.label24.Text = "REGISTRO DE PESCADOR";
             // 
-            // CerrarPanel
+            // Beneficiario
             // 
-            this.CerrarPanel.BackColor = System.Drawing.Color.Transparent;
-            this.CerrarPanel.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
-            this.CerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CerrarPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CerrarPanel.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.CerrarPanel.Location = new System.Drawing.Point(451, 1);
-            this.CerrarPanel.Name = "CerrarPanel";
-            this.CerrarPanel.Size = new System.Drawing.Size(21, 21);
-            this.CerrarPanel.TabIndex = 135;
-            this.CerrarPanel.TabStop = false;
-            this.toolTip1.SetToolTip(this.CerrarPanel, "Cerrar");
-            this.CerrarPanel.Click += new System.EventHandler(this.CerrarPanel_Click);
+            this.Beneficiario.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Beneficiario.Location = new System.Drawing.Point(43, 129);
+            this.Beneficiario.MaxLength = 20;
+            this.Beneficiario.Name = "Beneficiario";
+            this.Beneficiario.Size = new System.Drawing.Size(360, 25);
+            this.Beneficiario.TabIndex = 189;
+            this.toolTip1.SetToolTip(this.Beneficiario, "Nombre del Beneficiario");
             // 
-            // ActualizarCURP
+            // Parentesco
             // 
-            this.ActualizarCURP.BackColor = System.Drawing.Color.Transparent;
-            this.ActualizarCURP.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
-            this.ActualizarCURP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ActualizarCURP.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ActualizarCURP.Location = new System.Drawing.Point(409, 141);
-            this.ActualizarCURP.Name = "ActualizarCURP";
-            this.ActualizarCURP.Size = new System.Drawing.Size(50, 50);
-            this.ActualizarCURP.TabIndex = 133;
-            this.ActualizarCURP.TabStop = false;
-            this.toolTip1.SetToolTip(this.ActualizarCURP, "Actualizar CURP del Pescador");
-            this.ActualizarCURP.Click += new System.EventHandler(this.ActualizarCURP_Click);
+            this.Parentesco.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Parentesco.Location = new System.Drawing.Point(43, 178);
+            this.Parentesco.MaxLength = 20;
+            this.Parentesco.Name = "Parentesco";
+            this.Parentesco.Size = new System.Drawing.Size(360, 25);
+            this.Parentesco.TabIndex = 190;
+            this.toolTip1.SetToolTip(this.Parentesco, "Parentesco del Beneficiario con el Pescador");
+            // 
+            // NPoliza
+            // 
+            this.NPoliza.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NPoliza.Location = new System.Drawing.Point(43, 230);
+            this.NPoliza.MaxLength = 20;
+            this.NPoliza.Name = "NPoliza";
+            this.NPoliza.Size = new System.Drawing.Size(360, 25);
+            this.NPoliza.TabIndex = 192;
+            this.toolTip1.SetToolTip(this.NPoliza, "Parentesco del Beneficiario con el Pescador");
+            // 
+            // AbrirExpediente
+            // 
+            this.AbrirExpediente.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Expediente;
+            this.AbrirExpediente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.AbrirExpediente.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.AbrirExpediente.Location = new System.Drawing.Point(519, 19);
+            this.AbrirExpediente.Name = "AbrirExpediente";
+            this.AbrirExpediente.Size = new System.Drawing.Size(48, 50);
+            this.AbrirExpediente.TabIndex = 194;
+            this.AbrirExpediente.TabStop = false;
+            this.toolTip1.SetToolTip(this.AbrirExpediente, "Abrir Expediente");
+            this.AbrirExpediente.Click += new System.EventHandler(this.AbrirExpediente_Click);
             // 
             // pictureBox1
             // 
@@ -1343,19 +1361,6 @@
             this.toolTip1.SetToolTip(this.EliminarUnidad, "Quitar de la Unidad");
             this.EliminarUnidad.Click += new System.EventHandler(this.EliminarUnidad_Click);
             // 
-            // AbrirExpediente
-            // 
-            this.AbrirExpediente.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Expediente;
-            this.AbrirExpediente.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.AbrirExpediente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AbrirExpediente.Location = new System.Drawing.Point(519, 19);
-            this.AbrirExpediente.Name = "AbrirExpediente";
-            this.AbrirExpediente.Size = new System.Drawing.Size(48, 50);
-            this.AbrirExpediente.TabIndex = 194;
-            this.AbrirExpediente.TabStop = false;
-            this.toolTip1.SetToolTip(this.AbrirExpediente, "Abrir Expediente");
-            this.AbrirExpediente.Click += new System.EventHandler(this.AbrirExpediente_Click);
-            // 
             // CerrarPanelOcciso
             // 
             this.CerrarPanelOcciso.BackColor = System.Drawing.Color.Transparent;
@@ -1385,35 +1390,34 @@
             this.toolTip1.SetToolTip(this.RegistrarOcciso, "Registrar Occiso");
             this.RegistrarOcciso.Click += new System.EventHandler(this.RegistrarOcciso_Click);
             // 
-            // Beneficiario
+            // CerrarPanel
             // 
-            this.Beneficiario.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Beneficiario.Location = new System.Drawing.Point(43, 129);
-            this.Beneficiario.MaxLength = 20;
-            this.Beneficiario.Name = "Beneficiario";
-            this.Beneficiario.Size = new System.Drawing.Size(360, 25);
-            this.Beneficiario.TabIndex = 189;
-            this.toolTip1.SetToolTip(this.Beneficiario, "Nombre del Beneficiario");
+            this.CerrarPanel.BackColor = System.Drawing.Color.Transparent;
+            this.CerrarPanel.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
+            this.CerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CerrarPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CerrarPanel.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.CerrarPanel.Location = new System.Drawing.Point(451, 1);
+            this.CerrarPanel.Name = "CerrarPanel";
+            this.CerrarPanel.Size = new System.Drawing.Size(21, 21);
+            this.CerrarPanel.TabIndex = 135;
+            this.CerrarPanel.TabStop = false;
+            this.toolTip1.SetToolTip(this.CerrarPanel, "Cerrar");
+            this.CerrarPanel.Click += new System.EventHandler(this.CerrarPanel_Click);
             // 
-            // Parentesco
+            // ActualizarCURP
             // 
-            this.Parentesco.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Parentesco.Location = new System.Drawing.Point(43, 178);
-            this.Parentesco.MaxLength = 20;
-            this.Parentesco.Name = "Parentesco";
-            this.Parentesco.Size = new System.Drawing.Size(360, 25);
-            this.Parentesco.TabIndex = 190;
-            this.toolTip1.SetToolTip(this.Parentesco, "Parentesco del Beneficiario con el Pescador");
-            // 
-            // NPoliza
-            // 
-            this.NPoliza.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NPoliza.Location = new System.Drawing.Point(43, 230);
-            this.NPoliza.MaxLength = 20;
-            this.NPoliza.Name = "NPoliza";
-            this.NPoliza.Size = new System.Drawing.Size(360, 25);
-            this.NPoliza.TabIndex = 192;
-            this.toolTip1.SetToolTip(this.NPoliza, "Parentesco del Beneficiario con el Pescador");
+            this.ActualizarCURP.BackColor = System.Drawing.Color.Transparent;
+            this.ActualizarCURP.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
+            this.ActualizarCURP.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ActualizarCURP.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ActualizarCURP.Location = new System.Drawing.Point(409, 141);
+            this.ActualizarCURP.Name = "ActualizarCURP";
+            this.ActualizarCURP.Size = new System.Drawing.Size(50, 50);
+            this.ActualizarCURP.TabIndex = 133;
+            this.ActualizarCURP.TabStop = false;
+            this.toolTip1.SetToolTip(this.ActualizarCURP, "Actualizar CURP del Pescador");
+            this.ActualizarCURP.Click += new System.EventHandler(this.ActualizarCURP_Click);
             // 
             // gbInformacion
             // 
@@ -1832,30 +1836,6 @@
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(881, 13);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(200, 60);
-            this.pictureBox3.TabIndex = 156;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(216, 13);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 60);
-            this.pictureBox2.TabIndex = 155;
-            this.pictureBox2.TabStop = false;
-            // 
             // PanelOcciso
             // 
             this.PanelOcciso.BackColor = System.Drawing.Color.LightGray;
@@ -2075,6 +2055,30 @@
             this.Bienvenido.TabIndex = 192;
             this.Bienvenido.Text = "Bienvenido ";
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox3.Location = new System.Drawing.Point(881, 13);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(200, 60);
+            this.pictureBox3.TabIndex = 156;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox2.Location = new System.Drawing.Point(216, 13);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(50, 60);
+            this.pictureBox2.TabIndex = 155;
+            this.pictureBox2.TabStop = false;
+            // 
             // Pantalla_Registro_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -2103,6 +2107,7 @@
             this.Load += new System.EventHandler(this.Pantalla_Registro_Usuario_Load);
             this.gbDatosGenerales.ResumeLayout(false);
             this.gbDatosGenerales.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Credencial)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CargarFirma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Huella)).EndInit();
@@ -2126,15 +2131,15 @@
             this.OcupacionEnEmbarPesc.PerformLayout();
             this.TipoPesc.ResumeLayout(false);
             this.TipoPesc.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActualizarCURP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AbrirExpediente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarPescador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.AbrirExpediente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelOcciso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarOcciso)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActualizarCURP)).EndInit();
             this.gbInformacion.ResumeLayout(false);
             this.gbInformacion.PerformLayout();
             this.Botones.ResumeLayout(false);
@@ -2147,12 +2152,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.gbBusqueda.ResumeLayout(false);
             this.gbBusqueda.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.PanelOcciso.ResumeLayout(false);
             this.PanelOcciso.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2257,7 +2262,6 @@
         private System.Windows.Forms.Button Apoyo;
         private System.Windows.Forms.GroupBox Botones;
         public System.Windows.Forms.PictureBox Firma;
-        private System.Windows.Forms.Button Credencial;
         private System.Windows.Forms.TextBox CURPPesc;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label12;
@@ -2314,5 +2318,6 @@
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.MaskedTextBox MontoOcciso;
         private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.PictureBox Credencial;
     }
 }
