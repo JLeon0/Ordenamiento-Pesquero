@@ -416,22 +416,18 @@ namespace OrdenamientoPesquero
         private void BuscarR_TextChanged(object sender, EventArgs e)
         {
             RNPA = proc.Obtener_todas_unidades(BuscarR.Text);
-            ListaRNPA.Items.Clear();
-            foreach (DataRow fila in RNPA.Rows)
-            {
-                ListaRNPA.Items.Add(fila["RNPA"].ToString());
-            }
+            ListaRNPA.DataSource = RNPA;
+            ListaRNPA.DisplayMember = "RNPA";
+            ListaRNPA.ValueMember = "RNPA";
         }
 
         private void BuscarN_TextChanged(object sender, EventArgs e)
         {
             string x = BuscarN.Text;
             NOMBRES = proc.Obtener_todos_los_nombres(x);
-            ListaNombres.Items.Clear();
-            foreach (DataRow fila in NOMBRES.Rows)
-            {
-                ListaNombres.Items.Add(fila["NOMBRE"].ToString());
-            }
+            ListaNombres.DataSource = NOMBRES;
+            ListaNombres.DisplayMember = "NOMBRE";
+            ListaNombres.ValueMember = "RNPA";
         }
 
         private void mtbTelefonoPresidente_TextChanged(object sender, EventArgs e)
