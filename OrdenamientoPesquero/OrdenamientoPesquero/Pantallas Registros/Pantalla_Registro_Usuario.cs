@@ -28,6 +28,7 @@ namespace OrdenamientoPesquero
         string RNPA = "", NombreUnidad = "", Usuario = "", NombreUsuario = "";
         string[] Municipios;
         byte[] imagenBuffer;
+        string matricula = "";
 
         public Pantalla_Registro_Usuario(string rnpa, string nombre, int tipo, string user, string nombreuser, int nivel)
         {
@@ -373,7 +374,8 @@ namespace OrdenamientoPesquero
                 {
                     uni2.Text = dt2.Rows[0]["UNIDAD"].ToString();
                 }
-                string tipopescador = "", ocupacion = "", cuerpoagua = "", matricula = "";
+                string tipopescador = "", ocupacion = "", cuerpoagua = "";
+                matricula = "";
                 int ord = 0;
                 foreach (DataRow filas in dt.Rows)
                 {
@@ -879,6 +881,7 @@ namespace OrdenamientoPesquero
                 tipopescador = filas["TIPO_PESCADOR"].ToString();
                 ocupacion = filas["OCUPACION_LABORAL"].ToString();
                 cuerpoagua = filas["CUERPO_DE_AGUA"].ToString();
+                matricula= filas["MATRICULA"].ToString();
                 MatriculaPesc.Text = filas["MATRICULA"].ToString();
                 CorreoPesc.Text = filas["CORREO"].ToString();
             }
@@ -915,7 +918,20 @@ namespace OrdenamientoPesquero
             string ord = "SI";
             if (!si.Checked) { ord = "NO"; }
             string N = NombrePesc.Text + " " + ApePatPescador.Text + " " + ApeMatPescador.Text;
-            if (MatriculaRelacion.Text != "-----") { RNPA = proc.ObtenerEmbarca(MatriculaRelacion.Text).Rows[0]["RNPTITULAR"].ToString(); }
+            if (matricula != "NO APLICA")
+            {
+                DataTable d = proc.ObtenerEmbarca(MatriculaRelacion.Text);
+                if (d.Rows.Count==0)
+                {
+                    d = proc.Obtener_unidades(matricula);
+                    RNPA = matricula;
+                }
+                else
+                {
+                    RNPA = proc.ObtenerEmbarca(MatriculaRelacion.Text).Rows[0]["RNPTITULAR"].ToString();
+                }
+                
+            }
             Vistas vistas = new Vistas(CURPPesc.Text, N, RNPA, ord, 14);
             vistas.ShowDialog();
             RNPA = "";
