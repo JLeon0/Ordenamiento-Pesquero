@@ -17,13 +17,15 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
     {
         Procedimientos proc = new Procedimientos();
         string CURPPesc = "";
+        int NIVEL = 0;
         Scanner scan;
         Validaciones val = new Validaciones();
-        public Expediente_Pescador(string curp, string nombre)
+        public Expediente_Pescador(string curp, string nombre, int nivel)
         {
             InitializeComponent();
             CURPPesc = curp;
             Nombre.Text = nombre;
+            NIVEL = nivel;
         }
 
         private void SubirPDF_Click(object sender, EventArgs e)
@@ -142,6 +144,11 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
         {
             CargarExpediente();
             dgvArchivos.ClearSelection();
+            if (NIVEL == 0 || NIVEL == 4)
+            {
+                SubirPDF.Visible = true;
+                label2.Visible = true;
+            }
         }
 
         private void CargarExpediente()

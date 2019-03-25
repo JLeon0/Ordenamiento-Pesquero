@@ -395,7 +395,7 @@
             // 
             this.NivelUsuarioLogin.Location = new System.Drawing.Point(158, 222);
             this.NivelUsuarioLogin.Maximum = new decimal(new int[] {
-            3,
+            5,
             0,
             0,
             0});

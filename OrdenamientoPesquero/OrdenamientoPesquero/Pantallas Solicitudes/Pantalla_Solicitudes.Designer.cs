@@ -79,6 +79,7 @@
             this.label19 = new System.Windows.Forms.Label();
             this.AñoFolio = new System.Windows.Forms.NumericUpDown();
             this.label20 = new System.Windows.Forms.Label();
+            this.gbBotones = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.Entregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registrar)).BeginInit();
@@ -88,6 +89,7 @@
             this.Apoyo.SuspendLayout();
             this.solicitud.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AñoFolio)).BeginInit();
+            this.gbBotones.SuspendLayout();
             this.SuspendLayout();
             // 
             // NombrePesc
@@ -140,7 +142,7 @@
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(911, 415);
+            this.label9.Location = new System.Drawing.Point(693, 78);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(56, 14);
             this.label9.TabIndex = 114;
@@ -150,7 +152,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(843, 416);
+            this.label10.Location = new System.Drawing.Point(625, 79);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(51, 14);
             this.label10.TabIndex = 115;
@@ -197,7 +199,7 @@
             this.Entregar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Entregar;
             this.Entregar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Entregar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Entregar.Location = new System.Drawing.Point(224, 362);
+            this.Entregar.Location = new System.Drawing.Point(12, 25);
             this.Entregar.Name = "Entregar";
             this.Entregar.Size = new System.Drawing.Size(50, 50);
             this.Entregar.TabIndex = 171;
@@ -210,7 +212,7 @@
             this.Actualizar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
             this.Actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Actualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Actualizar.Location = new System.Drawing.Point(917, 362);
+            this.Actualizar.Location = new System.Drawing.Point(699, 25);
             this.Actualizar.Name = "Actualizar";
             this.Actualizar.Size = new System.Drawing.Size(50, 50);
             this.Actualizar.TabIndex = 113;
@@ -223,7 +225,7 @@
             this.Registrar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.Registrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Registrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Registrar.Location = new System.Drawing.Point(842, 362);
+            this.Registrar.Location = new System.Drawing.Point(624, 25);
             this.Registrar.Name = "Registrar";
             this.Registrar.Size = new System.Drawing.Size(50, 50);
             this.Registrar.TabIndex = 112;
@@ -234,7 +236,7 @@
             // 
             this.Entrega.AutoSize = true;
             this.Entrega.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Entrega.Location = new System.Drawing.Point(223, 415);
+            this.Entrega.Location = new System.Drawing.Point(11, 78);
             this.Entrega.Name = "Entrega";
             this.Entrega.Size = new System.Drawing.Size(48, 14);
             this.Entrega.TabIndex = 115;
@@ -269,7 +271,7 @@
             this.Eliminar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
             this.Eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Eliminar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Eliminar.Location = new System.Drawing.Point(986, 362);
+            this.Eliminar.Location = new System.Drawing.Point(768, 25);
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Size = new System.Drawing.Size(50, 50);
             this.Eliminar.TabIndex = 201;
@@ -280,7 +282,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(973, 415);
+            this.label13.Location = new System.Drawing.Point(755, 78);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(83, 14);
             this.label13.TabIndex = 202;
@@ -653,33 +655,44 @@
             this.label20.TabIndex = 208;
             this.label20.Text = "-";
             // 
+            // gbBotones
+            // 
+            this.gbBotones.Controls.Add(this.label13);
+            this.gbBotones.Controls.Add(this.Registrar);
+            this.gbBotones.Controls.Add(this.Actualizar);
+            this.gbBotones.Controls.Add(this.label10);
+            this.gbBotones.Controls.Add(this.Entrega);
+            this.gbBotones.Controls.Add(this.label9);
+            this.gbBotones.Controls.Add(this.Entregar);
+            this.gbBotones.Controls.Add(this.Eliminar);
+            this.gbBotones.Location = new System.Drawing.Point(224, 362);
+            this.gbBotones.Name = "gbBotones";
+            this.gbBotones.Size = new System.Drawing.Size(841, 100);
+            this.gbBotones.TabIndex = 209;
+            this.gbBotones.TabStop = false;
+            this.gbBotones.Text = "Acciones";
+            this.gbBotones.Visible = false;
+            // 
             // Pantalla_Solicitudes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1111, 451);
+            this.ClientSize = new System.Drawing.Size(1111, 468);
+            this.Controls.Add(this.gbBotones);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.AñoFolio);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.ClavePrograma);
             this.Controls.Add(this.solicitud);
             this.Controls.Add(this.FolioMayor);
-            this.Controls.Add(this.Eliminar);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.Apoyo);
-            this.Controls.Add(this.Entregar);
             this.Controls.Add(this.Lista);
             this.Controls.Add(this.txt);
             this.Controls.Add(this.observaciones);
             this.Controls.Add(this.concepto);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.Entrega);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.Actualizar);
-            this.Controls.Add(this.Registrar);
             this.Controls.Add(this.fecha);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.folio);
@@ -704,6 +717,8 @@
             this.solicitud.ResumeLayout(false);
             this.solicitud.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AñoFolio)).EndInit();
+            this.gbBotones.ResumeLayout(false);
+            this.gbBotones.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -761,5 +776,6 @@
         private System.Windows.Forms.NumericUpDown AñoFolio;
         private System.Windows.Forms.ComboBox programa;
         private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.GroupBox gbBotones;
     }
 }

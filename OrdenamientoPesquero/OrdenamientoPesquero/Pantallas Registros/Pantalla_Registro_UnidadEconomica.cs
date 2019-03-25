@@ -28,7 +28,7 @@ namespace OrdenamientoPesquero
         DataTable dt = null;
         DataTable RNPA,NOMBRES = null;
         string Usuario, NombreUsuario;
-        int Nivel;
+        int NIVEL;
         string[,] unidad = { { "0", "RFC" }, { "0", "Codigo Postal" }, { "0", "Correo Electronico" }, { "0", "Telefono de la Cooperativa" },{"0","RNPA" } , {"0","Telefono del Presidente" } };
         string[,] pescador = { { "0", "CURP" }, { "0", "RFC" }, { "0", "Codigo postal" }, { "0", "Telefono" } , { "0","Correo Electronico"} };
         string[] Municipios;
@@ -40,7 +40,7 @@ namespace OrdenamientoPesquero
             //this.Width = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Width;
             Usuario = user;
             NombreUsuario = nombre;
-            Nivel = nivel;
+            NIVEL = nivel;
         }
 
         private void Pantalla_Registro_UnidadEconomica_Load(object sender, EventArgs e)
@@ -52,6 +52,12 @@ namespace OrdenamientoPesquero
             cbRNPA.Focus();
             CargarMunicipios();
             CargarFederaciones();
+            if(NIVEL == 0 || NIVEL == 4)
+            {
+                ActivarPanelRNPA.Visible = true;
+                gbBotonesUE.Visible = true;
+                menuStrip1.Visible = true;
+            }
             this.Cursor = Cursors.Default;
         }
 
@@ -699,7 +705,7 @@ namespace OrdenamientoPesquero
         {
             if (existe(cbRNPA.Text))
             {
-                Pantalla_Regitro_permiso perm = new Pantalla_Regitro_permiso(cbRNPA.Text, txtMunicipio.Text, txtNombre.Text);
+                Pantalla_Regitro_permiso perm = new Pantalla_Regitro_permiso(cbRNPA.Text, txtMunicipio.Text, txtNombre.Text, NIVEL);
                 perm.ShowDialog();
                 Resumenes(cbRNPA.Text);
                 BorrarCarpeta();
@@ -713,7 +719,7 @@ namespace OrdenamientoPesquero
             {
                 int tipo = 0;
                 if (Privado.Checked) { tipo = 1; }
-                Pantalla_Registro_Usuario pesc = new Pantalla_Registro_Usuario(cbRNPA.Text, txtNombre.Text, tipo, Usuario,NombreUsuario,Nivel);
+                Pantalla_Registro_Usuario pesc = new Pantalla_Registro_Usuario(cbRNPA.Text, txtNombre.Text, tipo, Usuario,NombreUsuario,NIVEL);
                 this.Hide();
                 pesc.ShowDialog(this);
                 Resumenes(cbRNPA.Text);
@@ -726,7 +732,7 @@ namespace OrdenamientoPesquero
         {
             if (existe(cbRNPA.Text))
             {
-                Pantalla_Certificado_Mat certmat = new Pantalla_Certificado_Mat(cbRNPA.Text);
+                Pantalla_Certificado_Mat certmat = new Pantalla_Certificado_Mat(cbRNPA.Text, NIVEL);
                 certmat.ShowDialog();
                 Resumenes(cbRNPA.Text);
                 BorrarCarpeta();
@@ -882,7 +888,7 @@ namespace OrdenamientoPesquero
             {
                 int tipo = 0;
                 if (Privado.Checked) { tipo = 1; }
-                Pantallas_Archivos.Expediente_UE expue = new Pantallas_Archivos.Expediente_UE(cbRNPA.Text, txtNombre.Text, tipo);
+                Pantallas_Archivos.Expediente_UE expue = new Pantallas_Archivos.Expediente_UE(cbRNPA.Text, txtNombre.Text, tipo, NIVEL);
                 expue.ShowDialog();
                 BorrarCarpeta();
             }

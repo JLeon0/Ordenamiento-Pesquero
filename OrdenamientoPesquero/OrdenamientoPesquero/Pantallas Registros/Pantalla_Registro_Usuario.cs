@@ -19,7 +19,7 @@ namespace OrdenamientoPesquero
     public partial class Pantalla_Registro_Usuario : Form
     {
         string[,] pescador = { { "0", "CURP" }, { "0", "RFC" }, { "0", "Codigo postal" }, { "0", "Telefono" }, { "0", "Correo Electronico" } };
-        int exito = 0, Nivel;
+        int exito = 0, NIVEL;
         bool cargando = true;
         Pescador pes;
         Procedimientos proc = new Procedimientos();
@@ -32,7 +32,7 @@ namespace OrdenamientoPesquero
         public Pantalla_Registro_Usuario(string rnpa, string nombre, int tipo, string user, string nombreuser, int nivel)
         {
             InitializeComponent();
-            this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
+            //this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
             RNPA = rnpa;
             if (RNPA == "")
             { uni.Visible = true; uni2.Visible = true; }
@@ -42,12 +42,20 @@ namespace OrdenamientoPesquero
             else if(tipo== 0) { TipoTitular.Enabled = false; TipoEventual.Enabled = false; }
             Usuario = user;
             NombreUsuario = nombreuser;
-            Nivel = nivel;
+            NIVEL = nivel;
         }
 
         private void Pantalla_Registro_Usuario_Load(object sender, EventArgs e)
         {
             //val.ajustarResolucion(this);
+            if (NIVEL == 0 || NIVEL == 4)
+            {
+                gbBotones.Visible = true;
+                limpiar.Visible = true;
+                CargarFirma.Enabled = true;
+                CargarHuella.Enabled = true;
+                CargarImagen.Enabled = true;
+            }
             Bienvenido.Text += NombreUsuario;
             BloquearControles();
             CargarNoPescadores();
@@ -61,6 +69,31 @@ namespace OrdenamientoPesquero
                 Unid.Text = NombreUnidad;
             }
         }
+        private void BloquearControles()
+        {
+            if (RNPA == "")
+            {
+                EliminarUnidad.Visible = false;
+                label4.Visible = false;
+                TipoPesc.Visible = false;
+                OcupacionEnEmbarPesc.Visible = false;
+                CuerpoDeAguaPesc.Visible = false;
+                Solicitud.Visible = true;
+                Apoyo.Visible = true;
+                MatriculaPesc.Enabled = false;
+                Credencial.Visible = false;
+                gbRelacion.Height = gbRelacion.Height - 100;
+                gbOtros.Location = new Point(gbOtros.Location.X, gbOtros.Location.Y - 50);
+                gbBotones.Location = new Point(gbBotones.Location.X, gbBotones.Location.Y - 50);
+                this.Text = "Apoyos y Solicitudes";
+            }
+            else
+            {
+                Solicitud.Visible = false;
+                Apoyo.Visible = false;
+            }
+        }
+
 
         public int AccionesPescador(bool registrar)
         {
@@ -486,25 +519,6 @@ namespace OrdenamientoPesquero
             Unid.Text = "";
         }
 
-        private void BloquearControles()
-        {
-            if (RNPA == "")
-            {
-                EliminarUnidad.Visible = false;
-                label4.Visible = false;
-                TipoPesc.Visible = false;
-                OcupacionEnEmbarPesc.Visible = false;
-                CuerpoDeAguaPesc.Visible = false;
-                Solicitud.Visible = true;
-                Apoyo.Visible = true;
-                MatriculaPesc.Enabled = false;
-                Credencial.Visible = false;
-                gbRelacion.Height = gbRelacion.Height - 100;
-                Botones.Location = new Point(Botones.Location.X, Botones.Location.Y - 50);
-                this.Text = "Apoyos y Solicitudes";
-            }
-        }
-
         private void CargarSolApo()
         {
             dt = proc.ObtenerSolicitudes(CURPPesc.Text);
@@ -714,7 +728,7 @@ namespace OrdenamientoPesquero
             if (CURPPesc.Text != "")
             {
                 CurpMal.Text = CURPPesc.Text;
-                Botones.Enabled = false;
+                gbBotones.Enabled = false;
                 gbBusqueda.Enabled = false;
                 gbDatosGenerales.Enabled = false;
                 gbInformacion.Enabled = false;
@@ -727,7 +741,7 @@ namespace OrdenamientoPesquero
 
         private void CerrarPanel_Click(object sender, EventArgs e)
         {
-            Botones.Enabled = true;
+            gbBotones.Enabled = true;
             gbBusqueda.Enabled = true;
             gbDatosGenerales.Enabled = true;
             gbInformacion.Enabled = true;
@@ -740,7 +754,7 @@ namespace OrdenamientoPesquero
         {
             if (CURPPesc.Text != "")
             {
-                Pantallas_Archivos.Expediente_Pescador expesc = new Pantallas_Archivos.Expediente_Pescador(CURPPesc.Text, NombrePesc.Text + " " + ApePatPescador.Text + " " + ApeMatPescador.Text);
+                Pantallas_Archivos.Expediente_Pescador expesc = new Pantallas_Archivos.Expediente_Pescador(CURPPesc.Text, NombrePesc.Text + " " + ApePatPescador.Text + " " + ApeMatPescador.Text, NIVEL);
                 expesc.ShowDialog();
                 CargarResumenExpedientes();
             }
@@ -755,7 +769,7 @@ namespace OrdenamientoPesquero
                 {
                     if (CURPPesc.Text != "")
                     {
-                        Botones.Enabled = false;
+                        gbBotones.Enabled = false;
                         gbBusqueda.Enabled = false;
                         gbDatosGenerales.Enabled = false;
                         gbInformacion.Enabled = false;
@@ -781,7 +795,7 @@ namespace OrdenamientoPesquero
 
         private void CerrarPanelOcciso_Click(object sender, EventArgs e)
         {
-            Botones.Enabled = true;
+            gbBotones.Enabled = true;
             gbBusqueda.Enabled = true;
             gbDatosGenerales.Enabled = true;
             gbInformacion.Enabled = true;
@@ -1101,7 +1115,7 @@ namespace OrdenamientoPesquero
             {
                 string Nombre = "";
                 if (Ord == 1) { Nombre = ListaNombres.Text; } else { Nombre = ListaNombres2.Text; }
-                Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes(Nombre, CURPPesc.Text,false,Usuario);
+                Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes(Nombre, CURPPesc.Text,false,Usuario, NIVEL);
                 pantalla.ShowDialog();
             }
             CargarSolApo();
@@ -1112,7 +1126,7 @@ namespace OrdenamientoPesquero
             {
                 string Nombre = "";
                 if (Ord == 1) { Nombre = ListaNombres.Text; } else { Nombre = ListaNombres2.Text; }
-                Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes(Nombre, CURPPesc.Text, true,Usuario);
+                Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes(Nombre, CURPPesc.Text, true,Usuario, NIVEL);
                 pantalla.ShowDialog();
             }
             CargarSolApo();

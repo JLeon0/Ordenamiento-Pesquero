@@ -128,19 +128,19 @@ namespace OrdenamientoPesquero.Pantallas_Menu
                 string Usuario = data.Rows[0]["USERS"].ToString();
                 string NombreUsuario = data.Rows[0]["NOMBRE"].ToString();
                 int Nivel = Convert.ToInt32(data.Rows[0]["NIVEL"].ToString());
-                if (Nivel == 0 || Nivel == 1)
+                if (Nivel == 0 || Nivel == 1 || Nivel == 2)
                 {
                     Menu1 menu1 = new Menu1(Usuario, NombreUsuario, Nivel);
                     this.Hide();
                     menu1.Show(this);
                 }
-                else if(Nivel == 2)
+                else if (Nivel == 3)
                 {
-                    Pantalla_Registro_Usuario usu = new Pantalla_Registro_Usuario("","",2,Usuario,NombreUsuario,Nivel);
+                    Pantalla_Registro_Usuario usu = new Pantalla_Registro_Usuario("", "", 2, Usuario, NombreUsuario, Nivel);
                     this.Hide();
                     usu.Show(this);
                 }
-                else if(Nivel == 3)
+                else if(Nivel == 4)
                 {
                     Pantalla_Registro_UnidadEconomica ue = new Pantalla_Registro_UnidadEconomica(Usuario, NombreUsuario, Nivel);
                     this.Hide();

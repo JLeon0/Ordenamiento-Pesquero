@@ -18,15 +18,16 @@ namespace OrdenamientoPesquero
         Solicitud soli; DataTable solicitudes;
         Validaciones val = new Validaciones();
         bool Ap = false;
-        int mE, mF, mP, ot;
+        int mE, mF, mP, ot, NIVEL;
 
-        public Pantalla_Solicitudes(string nombre, string curp, bool ap, string usuario)
+        public Pantalla_Solicitudes(string nombre, string curp, bool ap, string usuario, int nivel)
         {
             InitializeComponent();
             NombrePesc.Text = nombre;
             Usuario = usuario;
             Curp = curp;
             Ap = ap;
+            NIVEL = nivel;
         }
 
         private void Pantalla_Solicitudes_Load(object sender, EventArgs e)
@@ -45,6 +46,10 @@ namespace OrdenamientoPesquero
                 this.Text = "Apoyos";
             }
             else { this.Text = "Solicitudes"; }
+            if(NIVEL == 0 || NIVEL == 3)
+            {
+                gbBotones.Visible = true;
+            }
         }
 
         void CargarSolicitudes()
