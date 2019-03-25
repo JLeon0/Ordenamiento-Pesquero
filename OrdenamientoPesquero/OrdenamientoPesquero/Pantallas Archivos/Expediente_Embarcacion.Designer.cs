@@ -176,6 +176,7 @@
             this.SubirPDF.TabIndex = 212;
             this.SubirPDF.TabStop = false;
             this.toolTip1.SetToolTip(this.SubirPDF, "Subir Archivo");
+            this.SubirPDF.Visible = false;
             this.SubirPDF.Click += new System.EventHandler(this.SubirPDF_Click);
             // 
             // label3
@@ -195,6 +196,7 @@
             this.label2.Size = new System.Drawing.Size(83, 16);
             this.label2.TabIndex = 218;
             this.label2.Text = "Subir Archivo";
+            this.label2.Visible = false;
             // 
             // Expediente_Embarcacion
             // 

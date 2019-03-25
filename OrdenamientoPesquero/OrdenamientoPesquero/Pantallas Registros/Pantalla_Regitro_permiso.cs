@@ -18,7 +18,15 @@ namespace OrdenamientoPesquero
     {
         Validaciones val = new Validaciones();
         Scanner scan;
-        public Pantalla_Regitro_permiso(string rnpa, string muni, string unidad)
+        string uni, Rnpa, Municipio;
+        Permiso perm;
+        Embarcacion Emb;
+        int exito = 0, NIVEL = 0;
+        Procedimientos proc = new Procedimientos();
+        DataSet ds = new DataSet();
+        DataTable dt = null, permisos = null;
+
+        public Pantalla_Regitro_permiso(string rnpa, string muni, string unidad, int nivel)
         {
             InitializeComponent();
             //this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
@@ -26,16 +34,8 @@ namespace OrdenamientoPesquero
             Rnpa = rnpa;
             Municipio = muni;
             uni = unidad;
+            NIVEL = nivel;
         }
-        string uni;
-        string Rnpa;
-        string Municipio;
-        Permiso perm;
-        Embarcacion Emb;
-        int exito = 0;
-        Procedimientos proc = new Procedimientos();
-        DataSet ds = new DataSet();
-        DataTable dt = null, permisos=null;
         private void Pantalla_Regitro_permiso_Load(object sender, EventArgs e)
         {
             CargarPermisos();
@@ -48,6 +48,14 @@ namespace OrdenamientoPesquero
                 else { dt.Rows.RemoveAt(i); i--; }
             }
             CargarPesquerias();
+            if (NIVEL == 0 || NIVEL == 4)
+            {
+                gbDatos.Enabled = true;
+                gbBotones.Visible = true;
+                limpiar.Visible = true;
+                SubirPDF.Visible = true;
+                label35.Visible = true;
+            }
         }
         private void dvgCombo_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -103,7 +111,7 @@ namespace OrdenamientoPesquero
             {
                 item.Text = "";
             }
-            foreach (TextBox item in groupBox3.Controls.OfType<TextBox>())
+            foreach (TextBox item in gbDatos.Controls.OfType<TextBox>())
             {
                 item.Text = "";
             }
@@ -119,7 +127,7 @@ namespace OrdenamientoPesquero
             {
                 item.Text = "";
             }
-            foreach (ComboBox item in groupBox3.Controls.OfType<ComboBox>())
+            foreach (ComboBox item in gbDatos.Controls.OfType<ComboBox>())
             {
                 item.Text = "";
             }

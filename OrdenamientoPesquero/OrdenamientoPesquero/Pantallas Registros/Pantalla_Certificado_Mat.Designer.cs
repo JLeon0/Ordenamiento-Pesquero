@@ -99,10 +99,10 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.gbBotones = new System.Windows.Forms.GroupBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.RegistrarUnidad = new System.Windows.Forms.PictureBox();
             this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
             this.EliminarUnidad = new System.Windows.Forms.PictureBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
             this.CertMatr = new System.Windows.Forms.Label();
             this.CertSeg = new System.Windows.Forms.Label();
@@ -453,7 +453,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(237, 73);
+            this.label4.Location = new System.Drawing.Point(169, 73);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 14);
             this.label4.TabIndex = 153;
@@ -463,7 +463,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(154, 74);
+            this.label3.Location = new System.Drawing.Point(86, 74);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 14);
             this.label3.TabIndex = 154;
@@ -473,7 +473,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(78, 74);
+            this.label2.Location = new System.Drawing.Point(10, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 14);
             this.label2.TabIndex = 155;
@@ -562,6 +562,7 @@
             this.ActivarPanelMATRICULA.TabIndex = 188;
             this.ActivarPanelMATRICULA.TabStop = false;
             this.toolTip1.SetToolTip(this.ActivarPanelMATRICULA, "Cambiar CURP de Pescador");
+            this.ActivarPanelMATRICULA.Visible = false;
             this.ActivarPanelMATRICULA.Click += new System.EventHandler(this.ActivarPanelMATRICULA_Click);
             // 
             // label12
@@ -595,6 +596,7 @@
             this.limpiar.TabIndex = 156;
             this.limpiar.TabStop = false;
             this.toolTip1.SetToolTip(this.limpiar, "Limpiar Formulario");
+            this.limpiar.Visible = false;
             this.limpiar.Click += new System.EventHandler(this.limpiar_Click);
             // 
             // gbVerificacion
@@ -721,7 +723,7 @@
             // 
             this.AbrirExpediente.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Expediente;
             this.AbrirExpediente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AbrirExpediente.Location = new System.Drawing.Point(6, 21);
+            this.AbrirExpediente.Location = new System.Drawing.Point(186, 505);
             this.AbrirExpediente.Name = "AbrirExpediente";
             this.AbrirExpediente.Size = new System.Drawing.Size(48, 50);
             this.AbrirExpediente.TabIndex = 192;
@@ -905,30 +907,19 @@
             // 
             // gbBotones
             // 
-            this.gbBotones.Controls.Add(this.label14);
-            this.gbBotones.Controls.Add(this.AbrirExpediente);
             this.gbBotones.Controls.Add(this.RegistrarUnidad);
             this.gbBotones.Controls.Add(this.ActualizarUnidad);
             this.gbBotones.Controls.Add(this.EliminarUnidad);
             this.gbBotones.Controls.Add(this.label2);
             this.gbBotones.Controls.Add(this.label3);
             this.gbBotones.Controls.Add(this.label4);
-            this.gbBotones.Location = new System.Drawing.Point(527, 516);
+            this.gbBotones.Location = new System.Drawing.Point(597, 484);
             this.gbBotones.Name = "gbBotones";
-            this.gbBotones.Size = new System.Drawing.Size(299, 99);
+            this.gbBotones.Size = new System.Drawing.Size(229, 99);
             this.gbBotones.TabIndex = 184;
             this.gbBotones.TabStop = false;
             this.gbBotones.Text = "Botones";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(3, 74);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(60, 14);
-            this.label14.TabIndex = 193;
-            this.label14.Text = "Expediente";
+            this.gbBotones.Visible = false;
             // 
             // RegistrarUnidad
             // 
@@ -936,7 +927,7 @@
             this.RegistrarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.RegistrarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RegistrarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegistrarUnidad.Location = new System.Drawing.Point(79, 21);
+            this.RegistrarUnidad.Location = new System.Drawing.Point(11, 21);
             this.RegistrarUnidad.Name = "RegistrarUnidad";
             this.RegistrarUnidad.Size = new System.Drawing.Size(50, 50);
             this.RegistrarUnidad.TabIndex = 150;
@@ -949,7 +940,7 @@
             this.ActualizarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
             this.ActualizarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ActualizarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ActualizarUnidad.Location = new System.Drawing.Point(155, 21);
+            this.ActualizarUnidad.Location = new System.Drawing.Point(87, 21);
             this.ActualizarUnidad.Name = "ActualizarUnidad";
             this.ActualizarUnidad.Size = new System.Drawing.Size(50, 50);
             this.ActualizarUnidad.TabIndex = 151;
@@ -961,12 +952,22 @@
             this.EliminarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Eliminar;
             this.EliminarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EliminarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EliminarUnidad.Location = new System.Drawing.Point(235, 21);
+            this.EliminarUnidad.Location = new System.Drawing.Point(167, 21);
             this.EliminarUnidad.Name = "EliminarUnidad";
             this.EliminarUnidad.Size = new System.Drawing.Size(50, 50);
             this.EliminarUnidad.TabIndex = 152;
             this.EliminarUnidad.TabStop = false;
             this.EliminarUnidad.Click += new System.EventHandler(this.EliminarUnidad_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(183, 558);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(60, 14);
+            this.label14.TabIndex = 193;
+            this.label14.Text = "Expediente";
             // 
             // gbBusqueda
             // 
@@ -1105,8 +1106,10 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1030, 619);
+            this.ClientSize = new System.Drawing.Size(1030, 592);
+            this.Controls.Add(this.label14);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.AbrirExpediente);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.gbBotones);
             this.Controls.Add(this.PanelMATRICULA);

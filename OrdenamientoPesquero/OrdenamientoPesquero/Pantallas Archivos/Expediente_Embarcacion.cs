@@ -17,19 +17,26 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
     {
         Procedimientos proc = new Procedimientos();
         string MATRICULA = "";
+        int NIVEL = 0;
         Scanner scan;
         Validaciones val = new Validaciones();
-        public Expediente_Embarcacion(string matricula, string nombre)
+        public Expediente_Embarcacion(string matricula, string nombre, int nivel)
         {
             InitializeComponent();
             MATRICULA = matricula;
             Nombre.Text = nombre;
+            NIVEL = nivel;
         }
 
         private void Expediente_Embarcacion_Load(object sender, EventArgs e)
         {
             CargarExpediente();
             dgvArchivos.ClearSelection();
+            if (NIVEL == 0 || NIVEL == 4)
+            {
+                SubirPDF.Visible = true;
+                label2.Visible = true;
+            }
         }
         private void CargarExpediente()
         {

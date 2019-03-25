@@ -296,6 +296,7 @@
             this.SubirPDF.TabIndex = 210;
             this.SubirPDF.TabStop = false;
             this.toolTip1.SetToolTip(this.SubirPDF, "Subir Archivo");
+            this.SubirPDF.Visible = false;
             this.SubirPDF.Click += new System.EventHandler(this.SubirPDF_Click);
             // 
             // pictureBox8
@@ -339,6 +340,7 @@
             this.label4.Size = new System.Drawing.Size(83, 16);
             this.label4.TabIndex = 218;
             this.label4.Text = "Subir Archivo";
+            this.label4.Visible = false;
             // 
             // dgvPermisos
             // 

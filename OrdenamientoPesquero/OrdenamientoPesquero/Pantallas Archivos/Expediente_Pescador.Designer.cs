@@ -176,6 +176,7 @@
             this.SubirPDF.TabIndex = 214;
             this.SubirPDF.TabStop = false;
             this.toolTip1.SetToolTip(this.SubirPDF, "Subir Archivo");
+            this.SubirPDF.Visible = false;
             this.SubirPDF.Click += new System.EventHandler(this.SubirPDF_Click);
             // 
             // label2
@@ -186,6 +187,7 @@
             this.label2.Size = new System.Drawing.Size(83, 16);
             this.label2.TabIndex = 216;
             this.label2.Text = "Subir Archivo";
+            this.label2.Visible = false;
             // 
             // label3
             // 

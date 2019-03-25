@@ -18,15 +18,16 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
         Procedimientos proc = new Procedimientos();
         Validaciones val = new Validaciones();
         string RNPA = "";
-        int exito = 0, TIPO = 0;
+        int exito = 0, TIPO = 0, NIVEL = 0;
         Scanner scan;
 
-        public Expediente_UE(string rnpa, string nombre,int tipo)
+        public Expediente_UE(string rnpa, string nombre,int tipo, int nivel)
         {
             InitializeComponent();
             RNPA = rnpa;
             Nombre.Text = nombre;
             TIPO = tipo;
+            NIVEL = nivel;
         }
 
         private void Expediente_UE_Load(object sender, EventArgs e)
@@ -36,6 +37,11 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             CargarExpedienteEmbarcacion();
             CargarExpedientePescador();
             CargarExpedientePermisos();
+            if(NIVEL == 0 || NIVEL == 4)
+            {
+                SubirPDF.Visible = true;
+                label4.Visible = true;
+            }
         }
         private void CargarExpedienteUnidad()
         {

@@ -16,13 +16,14 @@ namespace OrdenamientoPesquero
         Procedimientos proc = new Procedimientos();
         DataTable dt;
         string RNPA;
-        int exito = 0;
+        int exito = 0, NIVEL = 0;
         Embarcacion Emb;
         Validaciones val = new Validaciones();
-        public Pantalla_Certificado_Mat(string rnpa)
+        public Pantalla_Certificado_Mat(string rnpa, int nivel)
         {
             InitializeComponent();
             RNPA = rnpa;
+            NIVEL = nivel;
         }
 
         private void Pantalla_Certificado_Mat_Load(object sender, EventArgs e)
@@ -30,6 +31,12 @@ namespace OrdenamientoPesquero
             val.ajustarResolucion(this);
             CargarPescadores();
             CertMatXUnidad();
+            if(NIVEL == 0 || NIVEL == 4)
+            {
+                gbBotones.Visible = true;
+                limpiar.Visible = true;
+                ActivarPanelMATRICULA.Visible = true;
+            }
         }
         void CertMatXUnidad()
         {
@@ -305,7 +312,7 @@ namespace OrdenamientoPesquero
         {
             if (MatriculaCertMat.Text != "")
             {
-                Pantallas_Archivos.Expediente_Embarcacion expem = new Pantallas_Archivos.Expediente_Embarcacion(MatriculaCertMat.Text, NombreEmbCerMat.Text);
+                Pantallas_Archivos.Expediente_Embarcacion expem = new Pantallas_Archivos.Expediente_Embarcacion(MatriculaCertMat.Text, NombreEmbCerMat.Text, NIVEL);
                 expem.ShowDialog();
             }
         }
