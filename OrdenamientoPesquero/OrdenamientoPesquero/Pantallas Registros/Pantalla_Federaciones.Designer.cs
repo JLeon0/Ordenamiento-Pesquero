@@ -44,10 +44,15 @@
             this.Registrar = new System.Windows.Forms.PictureBox();
             this.Telefono = new System.Windows.Forms.MaskedTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label30 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Eliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -120,7 +125,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(278, 272);
+            this.label5.Location = new System.Drawing.Point(416, 291);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(43, 14);
             this.label5.TabIndex = 118;
@@ -131,7 +136,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(199, 272);
+            this.label6.Location = new System.Drawing.Point(337, 291);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(56, 14);
             this.label6.TabIndex = 119;
@@ -142,7 +147,7 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(126, 271);
+            this.label7.Location = new System.Drawing.Point(264, 290);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(51, 14);
             this.label7.TabIndex = 120;
@@ -152,7 +157,7 @@
             // 
             this.Eliminar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Eliminar;
             this.Eliminar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Eliminar.Location = new System.Drawing.Point(271, 218);
+            this.Eliminar.Location = new System.Drawing.Point(409, 237);
             this.Eliminar.Name = "Eliminar";
             this.Eliminar.Size = new System.Drawing.Size(50, 50);
             this.Eliminar.TabIndex = 117;
@@ -164,7 +169,7 @@
             this.Actualizar.BackColor = System.Drawing.Color.Transparent;
             this.Actualizar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
             this.Actualizar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Actualizar.Location = new System.Drawing.Point(199, 218);
+            this.Actualizar.Location = new System.Drawing.Point(337, 237);
             this.Actualizar.Name = "Actualizar";
             this.Actualizar.Size = new System.Drawing.Size(50, 50);
             this.Actualizar.TabIndex = 116;
@@ -176,7 +181,7 @@
             this.Registrar.BackColor = System.Drawing.Color.Transparent;
             this.Registrar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.Registrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Registrar.Location = new System.Drawing.Point(129, 218);
+            this.Registrar.Location = new System.Drawing.Point(267, 237);
             this.Registrar.Name = "Registrar";
             this.Registrar.Size = new System.Drawing.Size(50, 50);
             this.Registrar.TabIndex = 115;
@@ -202,12 +207,51 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // label30
+            // 
+            this.label30.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label30.AutoSize = true;
+            this.label30.BackColor = System.Drawing.Color.Transparent;
+            this.label30.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label30.ForeColor = System.Drawing.Color.Black;
+            this.label30.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label30.Location = new System.Drawing.Point(97, 22);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(188, 22);
+            this.label30.TabIndex = 189;
+            this.label30.Text = "Registrar Federación";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(22, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox4.TabIndex = 188;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox10.Location = new System.Drawing.Point(329, 10);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(120, 40);
+            this.pictureBox10.TabIndex = 187;
+            this.pictureBox10.TabStop = false;
+            // 
             // Pantalla_Federaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(402, 310);
+            this.ClientSize = new System.Drawing.Size(467, 310);
+            this.Controls.Add(this.label30);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Telefono);
             this.Controls.Add(this.label5);
@@ -226,12 +270,14 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Pantalla_Federaciones";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pantalla_Federaciones";
+            this.Text = "Federaciones";
             this.Load += new System.EventHandler(this.Pantalla_Federaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Eliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -254,5 +300,8 @@
         private System.Windows.Forms.PictureBox Registrar;
         private System.Windows.Forms.MaskedTextBox Telefono;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox10;
     }
 }

@@ -1120,7 +1120,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Pantalla_Certificado_Mat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pantalla_Certificado_Mat";
+            this.Text = "Embarcaciones";
             this.Load += new System.EventHandler(this.Pantalla_Certificado_Mat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).EndInit();
             this.gbCertificado.ResumeLayout(false);

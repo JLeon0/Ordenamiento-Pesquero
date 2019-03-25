@@ -501,6 +501,7 @@ namespace OrdenamientoPesquero
                 Credencial.Visible = false;
                 gbRelacion.Height = gbRelacion.Height - 100;
                 Botones.Location = new Point(Botones.Location.X, Botones.Location.Y - 50);
+                this.Text = "Apoyos y Solicitudes";
             }
         }
 
