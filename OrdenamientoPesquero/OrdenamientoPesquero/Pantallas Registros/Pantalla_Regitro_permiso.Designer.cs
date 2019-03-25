@@ -65,6 +65,7 @@
             this.Marcamotor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Potencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.nPer = new System.Windows.Forms.TextBox();
             this.Deportiva = new System.Windows.Forms.RadioButton();
             this.Acuicola = new System.Windows.Forms.RadioButton();
             this.Comercial = new System.Windows.Forms.RadioButton();
@@ -116,7 +117,6 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
-            this.nPer = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposPescaPerm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbarcacionesPerm)).BeginInit();
             this.groupBox3.SuspendLayout();
@@ -499,6 +499,13 @@
             this.groupBox3.TabIndex = 80;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Datos del Permiso";
+            // 
+            // nPer
+            // 
+            this.nPer.Location = new System.Drawing.Point(10, 44);
+            this.nPer.Name = "nPer";
+            this.nPer.Size = new System.Drawing.Size(176, 22);
+            this.nPer.TabIndex = 1;
             // 
             // Deportiva
             // 
@@ -1050,13 +1057,6 @@
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
             // 
-            // nPer
-            // 
-            this.nPer.Location = new System.Drawing.Point(10, 44);
-            this.nPer.Name = "nPer";
-            this.nPer.Size = new System.Drawing.Size(176, 22);
-            this.nPer.TabIndex = 1;
-            // 
             // Pantalla_Regitro_permiso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1120,7 +1120,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Pantalla_Regitro_permiso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Pantalla_Regitro_permiso";
+            this.Text = "Permisos";
             this.Load += new System.EventHandler(this.Pantalla_Regitro_permiso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposPescaPerm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbarcacionesPerm)).EndInit();

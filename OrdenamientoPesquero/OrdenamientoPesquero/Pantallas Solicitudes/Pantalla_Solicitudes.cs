@@ -42,7 +42,9 @@ namespace OrdenamientoPesquero
                 Entrega.Text = "Regresar";
                 Entregar.BackgroundImage = Properties.Resources.x;
                 txt.Text = "Apoyos";
+                this.Text = "Apoyos";
             }
+            else { this.Text = "Solicitudes"; }
         }
 
         void CargarSolicitudes()
