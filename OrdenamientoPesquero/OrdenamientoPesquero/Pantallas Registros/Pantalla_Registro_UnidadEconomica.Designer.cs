@@ -301,7 +301,7 @@
             this.txtRFC.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRFC.ForeColor = System.Drawing.Color.Black;
             this.txtRFC.Location = new System.Drawing.Point(658, 43);
-            this.txtRFC.MaxLength = 12;
+            this.txtRFC.MaxLength = 13;
             this.txtRFC.Name = "txtRFC";
             this.txtRFC.Size = new System.Drawing.Size(147, 22);
             this.txtRFC.TabIndex = 3;
@@ -1488,6 +1488,7 @@
             this.BuscarN.Size = new System.Drawing.Size(165, 20);
             this.BuscarN.TabIndex = 184;
             this.BuscarN.TextChanged += new System.EventHandler(this.BuscarN_TextChanged);
+            this.BuscarN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BuscarN_KeyPress);
             // 
             // label25
             // 

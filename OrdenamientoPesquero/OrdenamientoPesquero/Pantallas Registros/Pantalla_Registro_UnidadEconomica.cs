@@ -399,7 +399,7 @@ namespace OrdenamientoPesquero
         }
         private void txtRFC_TextChanged(object sender, EventArgs e)
         {
-            if (val.validarrfc(txtRFC.Text))
+            if (val.validarrfc(txtRFC.Text) || val.validarrfcPes(txtRFC.Text))
             {
                 pictureBox3.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
                 unidad[0, 0] = "1";
@@ -977,6 +977,17 @@ namespace OrdenamientoPesquero
         {
             Owner.Show();
             Owner.Refresh();
+        }
+
+        private void BuscarN_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                if(ListaNombres.SelectedIndex >= 0)
+                {
+                    ListaNombres_MouseDoubleClick(sender, new MouseEventArgs(MouseButtons.Left,1,0,0,0));
+                }
+            }
         }
 
         private void button6_Click(object sender, EventArgs e)
