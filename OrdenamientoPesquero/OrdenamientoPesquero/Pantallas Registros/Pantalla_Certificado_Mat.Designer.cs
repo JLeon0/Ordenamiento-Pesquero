@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Certificado_Mat));
             this.label78 = new System.Windows.Forms.Label();
             this.label77 = new System.Windows.Forms.Label();
@@ -72,14 +73,12 @@
             this.Marca = new System.Windows.Forms.TextBox();
             this.limpiar = new System.Windows.Forms.PictureBox();
             this.gbVerificacion = new System.Windows.Forms.GroupBox();
-            this.Capitan = new System.Windows.Forms.ComboBox();
             this.FechaExped = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.RegNum = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.FechaChip = new System.Windows.Forms.DateTimePicker();
             this.label7 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.ResponsableChip = new System.Windows.Forms.TextBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -114,6 +113,9 @@
             this.FotoEmb = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.dgvPescadores = new System.Windows.Forms.DataGridView();
+            this.Ocupacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.gbCertificado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelMATRICULA)).BeginInit();
@@ -134,6 +136,7 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPescadores)).BeginInit();
             this.SuspendLayout();
             // 
             // label78
@@ -601,14 +604,13 @@
             // 
             // gbVerificacion
             // 
-            this.gbVerificacion.Controls.Add(this.Capitan);
+            this.gbVerificacion.Controls.Add(this.dgvPescadores);
             this.gbVerificacion.Controls.Add(this.FechaExped);
             this.gbVerificacion.Controls.Add(this.label9);
             this.gbVerificacion.Controls.Add(this.RegNum);
             this.gbVerificacion.Controls.Add(this.label8);
             this.gbVerificacion.Controls.Add(this.FechaChip);
             this.gbVerificacion.Controls.Add(this.label7);
-            this.gbVerificacion.Controls.Add(this.label10);
             this.gbVerificacion.Controls.Add(this.label6);
             this.gbVerificacion.Controls.Add(this.ResponsableChip);
             this.gbVerificacion.Controls.Add(this.label5);
@@ -616,19 +618,10 @@
             this.gbVerificacion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbVerificacion.Location = new System.Drawing.Point(186, 319);
             this.gbVerificacion.Name = "gbVerificacion";
-            this.gbVerificacion.Size = new System.Drawing.Size(640, 159);
+            this.gbVerificacion.Size = new System.Drawing.Size(640, 232);
             this.gbVerificacion.TabIndex = 159;
             this.gbVerificacion.TabStop = false;
             this.gbVerificacion.Text = "Verificación / Chipeo";
-            // 
-            // Capitan
-            // 
-            this.Capitan.FormattingEnabled = true;
-            this.Capitan.ItemHeight = 16;
-            this.Capitan.Location = new System.Drawing.Point(100, 82);
-            this.Capitan.Name = "Capitan";
-            this.Capitan.Size = new System.Drawing.Size(313, 24);
-            this.Capitan.TabIndex = 19;
             // 
             // FechaExped
             // 
@@ -689,21 +682,11 @@
             this.label7.TabIndex = 162;
             this.label7.Text = "Fecha Chipeado";
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(15, 85);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(52, 16);
-            this.label10.TabIndex = 161;
-            this.label10.Text = "Capitán";
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(15, 126);
+            this.label6.Location = new System.Drawing.Point(17, 197);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(83, 16);
             this.label6.TabIndex = 161;
@@ -712,7 +695,7 @@
             // ResponsableChip
             // 
             this.ResponsableChip.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResponsableChip.Location = new System.Drawing.Point(100, 123);
+            this.ResponsableChip.Location = new System.Drawing.Point(102, 194);
             this.ResponsableChip.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ResponsableChip.MaxLength = 40;
             this.ResponsableChip.Name = "ResponsableChip";
@@ -723,7 +706,7 @@
             // 
             this.AbrirExpediente.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Expediente;
             this.AbrirExpediente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AbrirExpediente.Location = new System.Drawing.Point(186, 505);
+            this.AbrirExpediente.Location = new System.Drawing.Point(191, 575);
             this.AbrirExpediente.Name = "AbrirExpediente";
             this.AbrirExpediente.Size = new System.Drawing.Size(48, 50);
             this.AbrirExpediente.TabIndex = 192;
@@ -913,7 +896,7 @@
             this.gbBotones.Controls.Add(this.label2);
             this.gbBotones.Controls.Add(this.label3);
             this.gbBotones.Controls.Add(this.label4);
-            this.gbBotones.Location = new System.Drawing.Point(597, 484);
+            this.gbBotones.Location = new System.Drawing.Point(597, 554);
             this.gbBotones.Name = "gbBotones";
             this.gbBotones.Size = new System.Drawing.Size(229, 99);
             this.gbBotones.TabIndex = 184;
@@ -963,7 +946,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(183, 558);
+            this.label14.Location = new System.Drawing.Point(188, 628);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(60, 14);
             this.label14.TabIndex = 193;
@@ -1099,6 +1082,48 @@
             this.pictureBox2.TabIndex = 167;
             this.pictureBox2.TabStop = false;
             // 
+            // dgvPescadores
+            // 
+            this.dgvPescadores.AllowUserToAddRows = false;
+            this.dgvPescadores.AllowUserToDeleteRows = false;
+            this.dgvPescadores.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPescadores.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvPescadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPescadores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Ocupacion,
+            this.Nombre});
+            this.dgvPescadores.GridColor = System.Drawing.Color.White;
+            this.dgvPescadores.Location = new System.Drawing.Point(20, 89);
+            this.dgvPescadores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvPescadores.Name = "dgvPescadores";
+            this.dgvPescadores.ReadOnly = true;
+            this.dgvPescadores.RowHeadersVisible = false;
+            this.dgvPescadores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvPescadores.Size = new System.Drawing.Size(547, 97);
+            this.dgvPescadores.TabIndex = 221;
+            // 
+            // Ocupacion
+            // 
+            this.Ocupacion.Frozen = true;
+            this.Ocupacion.HeaderText = "Ocupacion";
+            this.Ocupacion.Name = "Ocupacion";
+            this.Ocupacion.ReadOnly = true;
+            this.Ocupacion.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Ocupacion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Ocupacion.Width = 135;
+            // 
+            // Nombre
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.Nombre.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Nombre.Frozen = true;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Nombre.Width = 400;
+            // 
             // Pantalla_Certificado_Mat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1106,7 +1131,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1030, 592);
+            this.ClientSize = new System.Drawing.Size(1030, 664);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.AbrirExpediente);
@@ -1151,6 +1176,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPescadores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1206,10 +1232,8 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.MaskedTextBox RegNum;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox Marca;
-        private System.Windows.Forms.ComboBox Capitan;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
@@ -1241,5 +1265,8 @@
         private System.Windows.Forms.PictureBox AbrirExpediente;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label FotoEmb;
+        private System.Windows.Forms.DataGridView dgvPescadores;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Ocupacion;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
     }
 }

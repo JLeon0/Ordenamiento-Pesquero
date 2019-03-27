@@ -29,7 +29,6 @@ namespace OrdenamientoPesquero
         private void Pantalla_Certificado_Mat_Load(object sender, EventArgs e)
         {
             val.ajustarResolucion(this);
-            CargarPescadores();
             CertMatXUnidad();
             if(NIVEL == 0 || NIVEL == 4)
             {
@@ -57,14 +56,6 @@ namespace OrdenamientoPesquero
             ListaMatriculas.ValueMember = "MATRICULA";
         }
 
-        void CargarPescadores()
-        {
-            dt = proc.BuscarNombre("", RNPA);
-            Capitan.DataSource = dt;
-            Capitan.ValueMember = "CURP";
-            Capitan.DisplayMember = "NOMBRE";
-            Capitan.Text = "";
-        }
         private void pictureBox14_Click(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor;
@@ -92,7 +83,6 @@ namespace OrdenamientoPesquero
                     FechaChip.Text = filas["FECHACHIPEADO"].ToString();
                     RegNum.Text = filas["REGISTRONUM"].ToString();
                     FechaExped.Text = filas["FECHAEXP"].ToString();
-                    Capitan.Text = filas["CAPITAN"].ToString();
                     Marca.Text = filas["MOTORMARCA"].ToString();
                 }
                 i--;
@@ -103,12 +93,12 @@ namespace OrdenamientoPesquero
         {
             if (Registro)
             {
-                Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text.Replace(" ",""), RNPA.Replace(" ", ""), PotenciaMotorCertMat.Text, EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text, ServicioCertMat.Text, TraficoCertMat.Text, NMotoresCertMat.Value.ToString(), NChipCertMat.Text, FechaChip.Value.ToShortDateString(), ResponsableChip.Text, RegNum.Text, FechaExped.Value.ToShortDateString(),Capitan.Text, Marca.Text);
+                Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text.Replace(" ",""), RNPA.Replace(" ", ""), PotenciaMotorCertMat.Text, EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text, ServicioCertMat.Text, TraficoCertMat.Text, NMotoresCertMat.Value.ToString(), NChipCertMat.Text, FechaChip.Value.ToShortDateString(), ResponsableChip.Text, RegNum.Text, FechaExped.Value.ToShortDateString(),"", Marca.Text);
                 return proc.Registrar_Embarcacion(Emb);
             }
             else
             {
-                Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text.Replace(" ", ""), RNPA.Replace(" ", ""), PotenciaMotorCertMat.Text, EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text, ServicioCertMat.Text, TraficoCertMat.Text, NMotoresCertMat.Value.ToString(), NChipCertMat.Text, FechaChip.Value.ToShortDateString(), ResponsableChip.Text, RegNum.Text, FechaExped.Value.ToShortDateString(), Capitan.Text, Marca.Text);
+                Emb = new Embarcacion(NombreEmbCerMat.Text, MatriculaCertMat.Text.Replace(" ", ""), RNPA.Replace(" ", ""), PotenciaMotorCertMat.Text, EsloraCertMat.Text, MangaCertMat.Text, PuntalCertMat.Text, ArqBrutoCertMat.Text, ArqNetoCertMat.Text, PesoMCertMat.Text, ServicioCertMat.Text, TraficoCertMat.Text, NMotoresCertMat.Value.ToString(), NChipCertMat.Text, FechaChip.Value.ToShortDateString(), ResponsableChip.Text, RegNum.Text, FechaExped.Value.ToShortDateString(), "", Marca.Text);
                 return proc.Actualizar_Embarcacion(Emb);
             }
         }
@@ -260,11 +250,38 @@ namespace OrdenamientoPesquero
                     FechaChip.Text = filas["FECHACHIPEADO"].ToString();
                     RegNum.Text = filas["REGISTRONUM"].ToString();
                     FechaExped.Text = filas["FECHAEXP"].ToString();
-                    Capitan.Text = filas["CAPITAN"].ToString();
                     Marca.Text = filas["MOTORMARCA"].ToString();
                 }
                 i--;
             }
+
+            dgvPescadores.Rows.Clear();
+            dt = proc.ChecarCapitan(RNPA, MatriculaCertMat.Text);
+            if (dt.Rows.Count > 0)
+            {
+                string Nombre = dt.Rows[0]["NOMBRE"].ToString() + " " + dt.Rows[0]["AP_PAT"].ToString() + " " + dt.Rows[0]["AP_MAT"].ToString();
+                dgvPescadores.Rows.Add("Capitan", Nombre);
+            }
+            dt = proc.ChecarMarineros(RNPA, MatriculaCertMat.Text);
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow r in dt.Rows)
+                {
+                    string Nombre = r["NOMBRE"].ToString() + " " + r["AP_PAT"].ToString() + " " + r["AP_MAT"].ToString();
+                    dgvPescadores.Rows.Add("Marinero", Nombre);
+                }
+            }
+            dt = proc.ChecarBuzo(RNPA, MatriculaCertMat.Text);
+            if (dt.Rows.Count > 0)
+            {
+                foreach (DataRow r in dt.Rows)
+                {
+                    string Nombre = r["NOMBRE"].ToString() + " " + r["AP_PAT"].ToString() + " " + r["AP_MAT"].ToString();
+                    dgvPescadores.Rows.Add("Buzo", Nombre);
+                }
+            }
+            dgvPescadores.ClearSelection();
+
             CargarExpediente();
             this.Cursor = Cursors.Default;
         }

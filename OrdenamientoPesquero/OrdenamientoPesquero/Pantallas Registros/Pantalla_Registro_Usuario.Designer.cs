@@ -1602,6 +1602,7 @@
             this.BuscarNombre.Size = new System.Drawing.Size(185, 20);
             this.BuscarNombre.TabIndex = 160;
             this.BuscarNombre.TextChanged += new System.EventHandler(this.BuscarNombre_TextChanged_1);
+            this.BuscarNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BuscarNombre_KeyPress);
             // 
             // ListaNombres
             // 
@@ -1635,6 +1636,7 @@
             this.BuscarNombre2.Size = new System.Drawing.Size(185, 20);
             this.BuscarNombre2.TabIndex = 178;
             this.BuscarNombre2.TextChanged += new System.EventHandler(this.BuscarNombre2_TextChanged);
+            this.BuscarNombre2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BuscarNombre2_KeyPress);
             // 
             // lblNo
             // 

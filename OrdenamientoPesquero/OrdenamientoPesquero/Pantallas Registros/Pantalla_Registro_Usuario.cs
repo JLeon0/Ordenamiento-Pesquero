@@ -1249,6 +1249,28 @@ namespace OrdenamientoPesquero
             threadHandle.Start();
         }
 
+        private void BuscarNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                if (ListaNombres.SelectedIndex >= 0)
+                {
+                    ListaNombres_MouseDoubleClick(sender, new MouseEventArgs(MouseButtons.Left, 1, 0, 0, 0));
+                }
+            }
+        }
+
+        private void BuscarNombre2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                if (ListaNombres2.SelectedIndex >= 0)
+                {
+                    ListaNombres2_MouseDoubleClick(sender, new MouseEventArgs(MouseButtons.Left, 1, 0, 0, 0));
+                }
+            }
+        }
+
         private void CaptureThread()
         {
             reset = false;
