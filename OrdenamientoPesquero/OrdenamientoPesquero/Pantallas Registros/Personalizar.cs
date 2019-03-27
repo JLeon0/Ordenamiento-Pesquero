@@ -62,7 +62,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 para[c] = new ReportParameter(dato[c], column[c].ToString());
             }
             reportViewer1.LocalReport.SetParameters(para);
-            string consulta = "Select FOLIO, PESCADOR.NOMBRE + PESCADOR.AP_PAT + PESCADOR.AP_MAT AS 'NOMBRE',PESCADOR.FECHA_NACIMIENTO,SEGURO, CURP, PESCADOR.MUNICIPIO, PESCADOR.LOCALIDAD, TIPO_PESCADOR, OCUPACION_LABORAL, TELEFONO, CORREO, CALLENUM+', Col. '+COLONIA AS 'DIRECCION', ESCOLARIDAD,RFC, ORDENAMIENTO, PESCADOR.MATRICULA, NOMBREEMBARCACION AS EMBARCACION from PESCADOR, EMBARCACIONES WHERE PESCADOR.MATRICULA = EMBARCACIONES.MATRICULA";
+            string consulta = "Select FOLIO, PESCADOR.NOMBRE + ' '+PESCADOR.AP_PAT +' '+ PESCADOR.AP_MAT AS 'NOMBRE',PESCADOR.FECHA_NACIMIENTO,SEGURO, CURP, PESCADOR.MUNICIPIO, PESCADOR.LOCALIDAD, TIPO_PESCADOR, OCUPACION_LABORAL, TELEFONO, CORREO, CALLENUM+', Col. '+COLONIA AS 'DIRECCION', ESCOLARIDAD,RFC, ORDENAMIENTO, PESCADOR.MATRICULA, NOMBREEMBARCACION AS EMBARCACION from PESCADOR, EMBARCACIONES WHERE PESCADOR.MATRICULA = EMBARCACIONES.MATRICULA";
             int r = 0;
             foreach (CheckBox a in FiltrosPescador.Controls.OfType<CheckBox>())
             {
@@ -283,6 +283,61 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 this.reportViewer1.LocalReport.DataSources.Add(ds);
             }
             this.reportViewer1.RefreshReport();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Solicitudes_Personal.rdlc");
+            bool[] column = new bool[16];
+            string[] dato = new string[16];
+            int i = 0;
+            foreach (CheckBox a in ColumnasSolicitudes.Controls)
+            {
+                column[i] = a.Checked;
+                dato[i] = a.Text.Replace(" ", "_");
+                dato[i] = dato[i].ToLower();
+                i++;
+            }
+            ReportParameter[] para = new ReportParameter[16];
+            for (int c = 0; c < 16; c++)
+            {
+                para[c] = new ReportParameter(dato[c], column[c].ToString());
+            }
+            string inac= "AND (ESTATUS = 'Negativa' OR ESTATUS='Cancelada' OR ESTATUS='Positiva sin TP')";
+            string act = "AND (ESTATUS = 'Pendiente'OR ESTATUS='Positiva con TP')";
+            string apo = "AND ESTATUS = 'ENTREGADO'";
+            string consulta = "SELECT * FROM SOLICITUDES WHERE NOMBRE!=''";
+            int r = 0;
+            foreach (CheckBox a in FiltrosUnidad.Controls.OfType<CheckBox>())
+            {
+                if (a.Checked)
+                {
+                    if (a.Text!="Tipo")
+                    {
+                        consulta += " AND " + a.Text.Replace(" ", "_").ToLower() + " = ";
+                    }
+                }
+                    int m = 0;
+                    foreach (ComboBox cb in FiltrosUnidad.Controls.OfType<ComboBox>())
+                    {
+                        if (m == r)
+                        {
+                            if (a.Text == "Tipo")
+                            {
+                                consulta += "'" + cb.SelectedIndex + "'";
+                                break;
+                            }
+                            else
+                            {
+                                consulta += "'" + cb.Text + "'";
+                                break;
+                            }
+                        }
+                        m++;
+                    }
+                }
+                r++;
+            }
         }
     }
 }

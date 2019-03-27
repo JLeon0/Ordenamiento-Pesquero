@@ -428,6 +428,7 @@
     <EmbeddedResource Include="Reportes\SolicitudesApoyosXPescador.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteXUnidad.rdlc" />
     <EmbeddedResource Include="Reportes\Resumen_permisos.rdlc" />
+    <EmbeddedResource Include="Reportes\Solicitudes_personal.rdlc" />
     <EmbeddedResource Include="Reportes\Unidad_Personal.rdlc" />
     <EmbeddedResource Include="Reportes\xMunicipio_seguro.rdlc" />
     <EmbeddedResource Include="Reportes\xMunicipio.rdlc" />
