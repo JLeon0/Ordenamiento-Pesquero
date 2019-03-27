@@ -758,7 +758,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=CInt(Fields!MONTOF.Value)+CInt(Fields!MONTOE.Value)+CInt(Fields!MONTOP.Value)+CInt(Fields!MONTOO.Value)</Value>
+                              <Value>=Replace(Replace(FormatCurrency(CInt(Replace(Fields!MONTOF.Value,".",","))+CInt(Replace(Fields!MONTOE.Value,".",","))+CInt(Replace(Fields!MONTOP.Value,".",","))+CInt(Replace(Fields!MONTOO.Value,".",",")),0),".",","),"€","")</Value>
                               <Style>
                                 <FontSize>7pt</FontSize>
                                 <Format>n0</Format>
@@ -939,7 +939,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Sum(CInt(Fields!MONTOF.Value)+CInt(Fields!MONTOE.Value)+CInt(Fields!MONTOP.Value)+CInt(Fields!MONTOO.Value))</Value>
+                              <Value>=Replace(Replace(FormatCurrency(Sum(CInt(Replace(Fields!MONTOF.Value,".",","))+CInt(Replace(Fields!MONTOE.Value,".",","))+CInt(Replace(Fields!MONTOP.Value,".",","))+CInt(Replace(Fields!MONTOO.Value,".",","))),0),".",","),"€","")</Value>
                               <Style>
                                 <FontSize>7pt</FontSize>
                                 <Format>#,0;(#,0)</Format>
@@ -1564,10 +1564,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=CInt(Fields!MONTO.Value)</Value>
+                              <Value>=Replace(Replace(FormatCurrency(CInt(Replace(Fields!MONTO.Value,".",",")),0),".",","),"€","")</Value>
                               <Style>
                                 <FontSize>7pt</FontSize>
-                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2156,10 +2155,9 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=CInt(Fields!MONTO.Value)</Value>
+                              <Value>=Replace(Replace(FormatCurrency(CInt(Replace(Fields!MONTO.Value,".",",")),0),".",","),"€","")</Value>
                               <Style>
                                 <FontSize>7pt</FontSize>
-                                <Format>#,0;(#,0)</Format>
                               </Style>
                             </TextRun>
                           </TextRuns>
@@ -2181,6 +2179,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
