@@ -990,6 +990,17 @@ namespace OrdenamientoPesquero
             }
         }
 
+        private void BuscarR_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                if (ListaRNPA.SelectedIndex >= 0)
+                {
+                    ListaRNPA_MouseDoubleClick(sender, new MouseEventArgs(MouseButtons.Left, 1, 0, 0, 0));
+                }
+            }
+        }
+
         private void button6_Click(object sender, EventArgs e)
         {
             Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 15);

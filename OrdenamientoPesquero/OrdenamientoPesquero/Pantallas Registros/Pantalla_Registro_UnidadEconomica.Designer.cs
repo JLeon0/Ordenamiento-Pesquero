@@ -1523,6 +1523,7 @@
             this.BuscarR.Size = new System.Drawing.Size(165, 20);
             this.BuscarR.TabIndex = 181;
             this.BuscarR.TextChanged += new System.EventHandler(this.BuscarR_TextChanged);
+            this.BuscarR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BuscarR_KeyPress);
             // 
             // label26
             // 
