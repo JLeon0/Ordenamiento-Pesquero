@@ -721,7 +721,7 @@ namespace OrdenamientoPesquero
                 exito = 0;
                 CargarPescadores();
                 CargarNoPescadores();
-                if (threadHandle.IsAlive) { threadHandle.Abort(); }
+               // if (threadHandle.IsAlive) { threadHandle.Abort(); }
             }
             else { MessageBox.Show("No se puede registrar un pescador sin CURP"); }
         }
