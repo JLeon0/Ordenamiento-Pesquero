@@ -83,6 +83,16 @@ namespace OrdenamientoPesquero.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap APOYOS {
+            get {
+                object obj = ResourceManager.GetObject("APOYOS", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Bien {
             get {
                 object obj = ResourceManager.GetObject("Bien", resourceCulture);
@@ -193,6 +203,16 @@ namespace OrdenamientoPesquero.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap fondo_SISTEMA_ORD {
+            get {
+                object obj = ResourceManager.GetObject("fondo SISTEMA ORD", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap GuardarArchivo {
             get {
                 object obj = ResourceManager.GetObject("GuardarArchivo", resourceCulture);
@@ -286,6 +306,16 @@ namespace OrdenamientoPesquero.Properties {
         internal static System.Drawing.Bitmap lupa1 {
             get {
                 object obj = ResourceManager.GetObject("lupa1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ORDENAM {
+            get {
+                object obj = ResourceManager.GetObject("ORDENAM", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

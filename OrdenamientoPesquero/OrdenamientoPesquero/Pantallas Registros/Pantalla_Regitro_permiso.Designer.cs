@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Regitro_permiso));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -482,9 +482,13 @@
             this.gbDatos.Controls.Add(this.finVigenciaPer);
             this.gbDatos.Controls.Add(this.label38);
             this.gbDatos.Controls.Add(this.diaExpPer);
+            this.gbDatos.Controls.Add(this.numericUpDown1);
             this.gbDatos.Controls.Add(this.dgvEquiposPescaPerm);
+            this.gbDatos.Controls.Add(this.numericUpDown2);
             this.gbDatos.Controls.Add(this.FolioPer);
+            this.gbDatos.Controls.Add(this.ZonaPescaPerm);
             this.gbDatos.Controls.Add(this.dgvEmbarcacionesPerm);
+            this.gbDatos.Controls.Add(this.SitiosDesemPer);
             this.gbDatos.Controls.Add(this.PesqueriaPer);
             this.gbDatos.Controls.Add(this.label27);
             this.gbDatos.Controls.Add(this.LugarExpPer);
@@ -500,7 +504,7 @@
             this.gbDatos.Controls.Add(this.label29);
             this.gbDatos.Enabled = false;
             this.gbDatos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatos.Location = new System.Drawing.Point(234, 110);
+            this.gbDatos.Location = new System.Drawing.Point(234, 121);
             this.gbDatos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbDatos.Name = "gbDatos";
             this.gbDatos.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -739,7 +743,7 @@
             // numericUpDown2
             // 
             this.numericUpDown2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown2.Location = new System.Drawing.Point(436, 341);
+            this.numericUpDown2.Location = new System.Drawing.Point(243, 218);
             this.numericUpDown2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(43, 22);
@@ -749,7 +753,7 @@
             // ZonaPescaPerm
             // 
             this.ZonaPescaPerm.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZonaPescaPerm.Location = new System.Drawing.Point(256, 264);
+            this.ZonaPescaPerm.Location = new System.Drawing.Point(63, 141);
             this.ZonaPescaPerm.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ZonaPescaPerm.Multiline = true;
             this.ZonaPescaPerm.Name = "ZonaPescaPerm";
@@ -759,7 +763,7 @@
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(434, 486);
+            this.numericUpDown1.Location = new System.Drawing.Point(243, 366);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(45, 22);
@@ -769,7 +773,7 @@
             // SitiosDesemPer
             // 
             this.SitiosDesemPer.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SitiosDesemPer.Location = new System.Drawing.Point(349, 312);
+            this.SitiosDesemPer.Location = new System.Drawing.Point(156, 189);
             this.SitiosDesemPer.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.SitiosDesemPer.Name = "SitiosDesemPer";
             this.SitiosDesemPer.Size = new System.Drawing.Size(531, 22);
@@ -1029,10 +1033,10 @@
             // 
             // dataGridViewCheckBoxColumn3
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle1.NullValue = false;
-            this.dataGridViewCheckBoxColumn3.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle3.NullValue = false;
+            this.dataGridViewCheckBoxColumn3.DefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridViewCheckBoxColumn3.Frozen = true;
             this.dataGridViewCheckBoxColumn3.HeaderText = "Check";
             this.dataGridViewCheckBoxColumn3.Name = "dataGridViewCheckBoxColumn3";
@@ -1079,7 +1083,7 @@
             this.gbBotones.Controls.Add(this.label21);
             this.gbBotones.Controls.Add(this.label23);
             this.gbBotones.Controls.Add(this.label20);
-            this.gbBotones.Location = new System.Drawing.Point(725, 638);
+            this.gbBotones.Location = new System.Drawing.Point(773, 643);
             this.gbBotones.Name = "gbBotones";
             this.gbBotones.Size = new System.Drawing.Size(284, 91);
             this.gbBotones.TabIndex = 227;
@@ -1102,10 +1106,6 @@
             this.Controls.Add(this.Unid);
             this.Controls.Add(this.label19);
             this.Controls.Add(this.gbDatos);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.ZonaPescaPerm);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.SitiosDesemPer);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.comboBox4);

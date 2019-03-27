@@ -1648,7 +1648,7 @@
             // Solicitud
             // 
             this.Solicitud.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Solicitud.Location = new System.Drawing.Point(158, 19);
+            this.Solicitud.Location = new System.Drawing.Point(171, 19);
             this.Solicitud.Name = "Solicitud";
             this.Solicitud.Size = new System.Drawing.Size(87, 61);
             this.Solicitud.TabIndex = 180;
