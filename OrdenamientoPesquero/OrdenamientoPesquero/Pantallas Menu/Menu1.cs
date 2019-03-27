@@ -41,8 +41,8 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             Bienvenido.Text += NombreUsuario;
             if (Nivel != 0)
             {
-                this.Height = 460;
-                panel1.Height = 450;
+                RegUsuario.Visible = false;
+                RegPrograma.Visible = false;
             }
             else
             {

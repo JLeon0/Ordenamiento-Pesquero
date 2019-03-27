@@ -841,6 +841,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gbcs4x4.ico" />
+    <None Include="Resources\ORDENAM.jpg" />
+    <None Include="Resources\APOYOS.jpg" />
+    <None Include="Resources\fondo SISTEMA ORD.jpg" />
     <None Include="Resources\credencial.png" />
     <None Include="Resources\ver.png" />
     <None Include="Resources\logout.png" />
@@ -848,7 +851,6 @@
     <None Include="Resources\show.png" />
     <None Include="Resources\pangas.jpg" />
     <None Include="Resources\SEPADA.jpg" />
-    <None Include="Resources\pedir.png" />
     <None Include="Resources\Firma.png" />
     <None Include="Resources\Huella.png" />
     <None Include="Resources\loading.gif" />

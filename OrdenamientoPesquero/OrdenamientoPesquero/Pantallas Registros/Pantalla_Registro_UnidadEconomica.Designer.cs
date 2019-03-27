@@ -205,7 +205,7 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(33, 120);
+            this.label13.Location = new System.Drawing.Point(13, 120);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(67, 16);
             this.label13.TabIndex = 51;
@@ -215,7 +215,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(172, 119);
+            this.label12.Location = new System.Drawing.Point(152, 119);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(67, 16);
             this.label12.TabIndex = 49;
@@ -225,7 +225,7 @@
             // 
             this.mtbCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtbCP.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbCP.Location = new System.Drawing.Point(442, 138);
+            this.mtbCP.Location = new System.Drawing.Point(422, 138);
             this.mtbCP.Mask = "99999";
             this.mtbCP.Name = "mtbCP";
             this.mtbCP.Size = new System.Drawing.Size(57, 22);
@@ -238,7 +238,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(439, 119);
+            this.label11.Location = new System.Drawing.Point(419, 119);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(40, 16);
             this.label11.TabIndex = 46;
@@ -248,7 +248,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(404, 71);
+            this.label10.Location = new System.Drawing.Point(384, 71);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(55, 16);
             this.label10.TabIndex = 45;
@@ -260,7 +260,7 @@
             this.txtColonia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtColonia.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtColonia.ForeColor = System.Drawing.Color.Black;
-            this.txtColonia.Location = new System.Drawing.Point(404, 90);
+            this.txtColonia.Location = new System.Drawing.Point(384, 90);
             this.txtColonia.MaxLength = 50;
             this.txtColonia.Name = "txtColonia";
             this.txtColonia.Size = new System.Drawing.Size(262, 22);
@@ -274,7 +274,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(31, 71);
+            this.label9.Location = new System.Drawing.Point(11, 71);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(65, 16);
             this.label9.TabIndex = 43;
@@ -286,7 +286,7 @@
             this.txtCalleNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCalleNum.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCalleNum.ForeColor = System.Drawing.Color.Black;
-            this.txtCalleNum.Location = new System.Drawing.Point(36, 90);
+            this.txtCalleNum.Location = new System.Drawing.Point(16, 90);
             this.txtCalleNum.MaxLength = 50;
             this.txtCalleNum.Name = "txtCalleNum";
             this.txtCalleNum.Size = new System.Drawing.Size(362, 22);
@@ -300,7 +300,7 @@
             this.txtRFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRFC.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRFC.ForeColor = System.Drawing.Color.Black;
-            this.txtRFC.Location = new System.Drawing.Point(678, 43);
+            this.txtRFC.Location = new System.Drawing.Point(658, 43);
             this.txtRFC.MaxLength = 12;
             this.txtRFC.Name = "txtRFC";
             this.txtRFC.Size = new System.Drawing.Size(147, 22);
@@ -312,7 +312,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(675, 23);
+            this.label8.Location = new System.Drawing.Point(655, 23);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(38, 16);
             this.label8.TabIndex = 40;
@@ -322,7 +322,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(254, 23);
+            this.label7.Location = new System.Drawing.Point(234, 23);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(57, 16);
             this.label7.TabIndex = 39;
@@ -332,7 +332,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(702, 71);
+            this.label5.Location = new System.Drawing.Point(682, 71);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 16);
             this.label5.TabIndex = 36;
@@ -359,7 +359,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(32, 23);
+            this.label4.Location = new System.Drawing.Point(12, 23);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 16);
             this.label4.TabIndex = 32;
@@ -411,9 +411,9 @@
             this.gbOrgPes.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.gbOrgPes.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbOrgPes.ForeColor = System.Drawing.Color.Black;
-            this.gbOrgPes.Location = new System.Drawing.Point(188, 95);
+            this.gbOrgPes.Location = new System.Drawing.Point(208, 95);
             this.gbOrgPes.Name = "gbOrgPes";
-            this.gbOrgPes.Size = new System.Drawing.Size(913, 344);
+            this.gbOrgPes.Size = new System.Drawing.Size(893, 344);
             this.gbOrgPes.TabIndex = 54;
             this.gbOrgPes.TabStop = false;
             this.gbOrgPes.Text = "DATOS GENERALES DE LA ORGANIZACIÓN PESQUERA";
@@ -426,7 +426,7 @@
             this.gbBotonesUE.Controls.Add(this.label6);
             this.gbBotonesUE.Controls.Add(this.label2);
             this.gbBotonesUE.Controls.Add(this.label1);
-            this.gbBotonesUE.Location = new System.Drawing.Point(689, 244);
+            this.gbBotonesUE.Location = new System.Drawing.Point(676, 244);
             this.gbBotonesUE.Name = "gbBotonesUE";
             this.gbBotonesUE.Size = new System.Drawing.Size(217, 100);
             this.gbBotonesUE.TabIndex = 132;
@@ -514,7 +514,7 @@
             this.pictureBox6.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox6.Location = new System.Drawing.Point(555, 241);
+            this.pictureBox6.Location = new System.Drawing.Point(535, 241);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(21, 21);
             this.pictureBox6.TabIndex = 131;
@@ -523,7 +523,7 @@
             // mtbTelefonoPresidente
             // 
             this.mtbTelefonoPresidente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbTelefonoPresidente.Location = new System.Drawing.Point(452, 241);
+            this.mtbTelefonoPresidente.Location = new System.Drawing.Point(432, 241);
             this.mtbTelefonoPresidente.Mask = "000-000-0000";
             this.mtbTelefonoPresidente.Name = "mtbTelefonoPresidente";
             this.mtbTelefonoPresidente.Size = new System.Drawing.Size(97, 22);
@@ -535,7 +535,7 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(449, 220);
+            this.label33.Location = new System.Drawing.Point(429, 220);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(142, 16);
             this.label33.TabIndex = 130;
@@ -547,7 +547,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(449, 171);
+            this.label32.Location = new System.Drawing.Point(429, 171);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(191, 16);
             this.label32.TabIndex = 128;
@@ -559,7 +559,7 @@
             this.NombrePresidenteUE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NombrePresidenteUE.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombrePresidenteUE.ForeColor = System.Drawing.Color.Black;
-            this.NombrePresidenteUE.Location = new System.Drawing.Point(452, 190);
+            this.NombrePresidenteUE.Location = new System.Drawing.Point(432, 190);
             this.NombrePresidenteUE.MaxLength = 50;
             this.NombrePresidenteUE.Name = "NombrePresidenteUE";
             this.NombrePresidenteUE.Size = new System.Drawing.Size(373, 22);
@@ -571,7 +571,7 @@
             // 
             this.ActivarPanelRNPA.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.actualizar;
             this.ActivarPanelRNPA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ActivarPanelRNPA.Location = new System.Drawing.Point(221, 42);
+            this.ActivarPanelRNPA.Location = new System.Drawing.Point(201, 42);
             this.ActivarPanelRNPA.Name = "ActivarPanelRNPA";
             this.ActivarPanelRNPA.Size = new System.Drawing.Size(20, 20);
             this.ActivarPanelRNPA.TabIndex = 126;
@@ -582,7 +582,7 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(257, 42);
+            this.txtNombre.Location = new System.Drawing.Point(237, 42);
             this.txtNombre.MaxLength = 100;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(409, 22);
@@ -590,7 +590,7 @@
             // 
             // cbRNPA
             // 
-            this.cbRNPA.Location = new System.Drawing.Point(35, 42);
+            this.cbRNPA.Location = new System.Drawing.Point(15, 42);
             this.cbRNPA.MaxLength = 10;
             this.cbRNPA.Name = "cbRNPA";
             this.cbRNPA.Size = new System.Drawing.Size(179, 22);
@@ -601,7 +601,7 @@
             // ModFed
             // 
             this.ModFed.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModFed.Location = new System.Drawing.Point(128, 271);
+            this.ModFed.Location = new System.Drawing.Point(108, 271);
             this.ModFed.Name = "ModFed";
             this.ModFed.Size = new System.Drawing.Size(86, 22);
             this.ModFed.TabIndex = 122;
@@ -612,7 +612,7 @@
             // RegFed
             // 
             this.RegFed.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegFed.Location = new System.Drawing.Point(36, 272);
+            this.RegFed.Location = new System.Drawing.Point(16, 272);
             this.RegFed.Name = "RegFed";
             this.RegFed.Size = new System.Drawing.Size(86, 22);
             this.RegFed.TabIndex = 121;
@@ -626,7 +626,7 @@
             this.limpiar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.limpiar;
             this.limpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.limpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.limpiar.Location = new System.Drawing.Point(878, 11);
+            this.limpiar.Location = new System.Drawing.Point(858, 11);
             this.limpiar.Name = "limpiar";
             this.limpiar.Size = new System.Drawing.Size(28, 28);
             this.limpiar.TabIndex = 120;
@@ -638,7 +638,7 @@
             // 
             this.txtLocalidad.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLocalidad.FormattingEnabled = true;
-            this.txtLocalidad.Location = new System.Drawing.Point(174, 138);
+            this.txtLocalidad.Location = new System.Drawing.Point(154, 138);
             this.txtLocalidad.Name = "txtLocalidad";
             this.txtLocalidad.Size = new System.Drawing.Size(262, 24);
             this.txtLocalidad.TabIndex = 8;
@@ -647,7 +647,7 @@
             // 
             this.txtMunicipio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMunicipio.FormattingEnabled = true;
-            this.txtMunicipio.Location = new System.Drawing.Point(36, 138);
+            this.txtMunicipio.Location = new System.Drawing.Point(16, 138);
             this.txtMunicipio.Name = "txtMunicipio";
             this.txtMunicipio.Size = new System.Drawing.Size(119, 24);
             this.txtMunicipio.TabIndex = 7;
@@ -658,7 +658,7 @@
             this.NomFed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NomFed.FormattingEnabled = true;
             this.NomFed.ItemHeight = 16;
-            this.NomFed.Location = new System.Drawing.Point(36, 241);
+            this.NomFed.Location = new System.Drawing.Point(16, 241);
             this.NomFed.Name = "NomFed";
             this.NomFed.Size = new System.Drawing.Size(362, 24);
             this.NomFed.TabIndex = 12;
@@ -669,7 +669,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(33, 221);
+            this.label24.Location = new System.Drawing.Point(13, 221);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(153, 16);
             this.label24.TabIndex = 108;
@@ -681,7 +681,7 @@
             this.pictureBox10.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox10.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox10.Location = new System.Drawing.Point(652, 140);
+            this.pictureBox10.Location = new System.Drawing.Point(632, 140);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(21, 21);
             this.pictureBox10.TabIndex = 104;
@@ -693,7 +693,7 @@
             this.pictureBox4.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox4.Location = new System.Drawing.Point(413, 190);
+            this.pictureBox4.Location = new System.Drawing.Point(393, 190);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(21, 21);
             this.pictureBox4.TabIndex = 104;
@@ -705,7 +705,7 @@
             this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox3.Location = new System.Drawing.Point(831, 42);
+            this.pictureBox3.Location = new System.Drawing.Point(811, 42);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(21, 21);
             this.pictureBox3.TabIndex = 103;
@@ -717,7 +717,7 @@
             this.pictureBox2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox2.Location = new System.Drawing.Point(505, 138);
+            this.pictureBox2.Location = new System.Drawing.Point(485, 138);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(21, 21);
             this.pictureBox2.TabIndex = 102;
@@ -726,7 +726,7 @@
             // mtbTelefono
             // 
             this.mtbTelefono.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbTelefono.Location = new System.Drawing.Point(549, 140);
+            this.mtbTelefono.Location = new System.Drawing.Point(529, 140);
             this.mtbTelefono.Mask = "000-000-0000";
             this.mtbTelefono.Name = "mtbTelefono";
             this.mtbTelefono.Size = new System.Drawing.Size(97, 22);
@@ -740,7 +740,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(33, 171);
+            this.label20.Location = new System.Drawing.Point(13, 171);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(187, 16);
             this.label20.TabIndex = 61;
@@ -752,7 +752,7 @@
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCorreo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.Black;
-            this.txtCorreo.Location = new System.Drawing.Point(36, 190);
+            this.txtCorreo.Location = new System.Drawing.Point(16, 190);
             this.txtCorreo.MaxLength = 30;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(362, 22);
@@ -765,7 +765,7 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(546, 119);
+            this.label21.Location = new System.Drawing.Point(526, 119);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(55, 16);
             this.label21.TabIndex = 62;
@@ -778,7 +778,7 @@
             this.txtFecha.Enabled = false;
             this.txtFecha.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFecha.ForeColor = System.Drawing.Color.Black;
-            this.txtFecha.Location = new System.Drawing.Point(705, 90);
+            this.txtFecha.Location = new System.Drawing.Point(685, 90);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(120, 22);
             this.txtFecha.TabIndex = 6;
@@ -787,7 +787,7 @@
             // 
             this.Privado.AutoSize = true;
             this.Privado.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Privado.Location = new System.Drawing.Point(771, 140);
+            this.Privado.Location = new System.Drawing.Point(751, 140);
             this.Privado.Name = "Privado";
             this.Privado.Size = new System.Drawing.Size(68, 20);
             this.Privado.TabIndex = 3;
@@ -800,7 +800,7 @@
             this.Social.AutoSize = true;
             this.Social.Checked = true;
             this.Social.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Social.Location = new System.Drawing.Point(703, 140);
+            this.Social.Location = new System.Drawing.Point(683, 140);
             this.Social.Name = "Social";
             this.Social.Size = new System.Drawing.Size(62, 20);
             this.Social.TabIndex = 2;

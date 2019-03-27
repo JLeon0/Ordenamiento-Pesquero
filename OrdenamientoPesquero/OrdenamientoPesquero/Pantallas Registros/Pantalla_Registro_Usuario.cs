@@ -721,6 +721,7 @@ namespace OrdenamientoPesquero
                 exito = 0;
                 CargarPescadores();
                 CargarNoPescadores();
+                if (threadHandle.IsAlive) { threadHandle.Abort(); }
             }
             else { MessageBox.Show("No se puede registrar un pescador sin CURP"); }
         }
@@ -1224,15 +1225,9 @@ namespace OrdenamientoPesquero
             catch (Exception) { MessageBox.Show("Hubo un problema con el sensor, retirelo y vuelva a insertarlo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
+
         private bool reset = false;
         private Thread threadHandle;
-
-        private void Pantalla_Registro_Usuario_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            Owner.Show();
-            Owner.Refresh();
-        }
-
         private void CARGAR()
         {        
             Constants.ResultCode result = Constants.ResultCode.DP_DEVICE_FAILURE;
@@ -1249,8 +1244,6 @@ namespace OrdenamientoPesquero
                 return;
             }
             Huella.BackgroundImage = null;
-
-            this.Text = "Capture";
             threadHandle = new Thread(CaptureThread);
             threadHandle.IsBackground = true;
             threadHandle.Start();
@@ -1413,5 +1406,10 @@ namespace OrdenamientoPesquero
         }
 
         #endregion
-    }
+        private void Pantalla_Registro_Usuario_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Owner.Show();
+            Owner.Refresh();
+        }
+}
 }

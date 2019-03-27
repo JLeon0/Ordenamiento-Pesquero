@@ -723,6 +723,7 @@ namespace OrdenamientoPesquero
                 this.Hide();
                 pesc.ShowDialog(this);
                 Resumenes(cbRNPA.Text);
+                ResumenSocios(cbRNPA.Text);
                 BorrarCarpeta();
             }
             else { MessageBox.Show("Debe elegir una unidad economica que esté registrada", "Error"); }

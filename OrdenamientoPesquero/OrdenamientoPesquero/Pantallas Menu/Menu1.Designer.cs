@@ -80,9 +80,6 @@
             this.RegPrograma = new System.Windows.Forms.LinkLabel();
             this.RegUsuario = new System.Windows.Forms.LinkLabel();
             this.Bienvenido = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarLoggin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarLoggin)).BeginInit();
@@ -101,13 +98,12 @@
             this.PanelRegProgram.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // limpiar
             // 
             this.limpiar.BackColor = System.Drawing.Color.Transparent;
-            this.limpiar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.limpiar;
+            this.limpiar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("limpiar.BackgroundImage")));
             this.limpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.limpiar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.limpiar.Location = new System.Drawing.Point(491, 55);
@@ -121,7 +117,7 @@
             // EliminarLoggin
             // 
             this.EliminarLoggin.BackColor = System.Drawing.Color.Transparent;
-            this.EliminarLoggin.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
+            this.EliminarLoggin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EliminarLoggin.BackgroundImage")));
             this.EliminarLoggin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EliminarLoggin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EliminarLoggin.Location = new System.Drawing.Point(466, 246);
@@ -135,7 +131,7 @@
             // ActualizarLoggin
             // 
             this.ActualizarLoggin.BackColor = System.Drawing.Color.Transparent;
-            this.ActualizarLoggin.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
+            this.ActualizarLoggin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ActualizarLoggin.BackgroundImage")));
             this.ActualizarLoggin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ActualizarLoggin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ActualizarLoggin.Location = new System.Drawing.Point(409, 246);
@@ -149,7 +145,7 @@
             // RegistrarLoggin
             // 
             this.RegistrarLoggin.BackColor = System.Drawing.Color.Transparent;
-            this.RegistrarLoggin.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
+            this.RegistrarLoggin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RegistrarLoggin.BackgroundImage")));
             this.RegistrarLoggin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RegistrarLoggin.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RegistrarLoggin.Location = new System.Drawing.Point(351, 246);
@@ -164,7 +160,7 @@
             // 
             this.CerrarPanelUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CerrarPanelUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.CerrarPanelUsuario.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
+            this.CerrarPanelUsuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CerrarPanelUsuario.BackgroundImage")));
             this.CerrarPanelUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CerrarPanelUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CerrarPanelUsuario.Location = new System.Drawing.Point(498, 3);
@@ -178,7 +174,7 @@
             // limpiar2
             // 
             this.limpiar2.BackColor = System.Drawing.Color.Transparent;
-            this.limpiar2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.limpiar;
+            this.limpiar2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("limpiar2.BackgroundImage")));
             this.limpiar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.limpiar2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.limpiar2.Location = new System.Drawing.Point(477, 45);
@@ -192,7 +188,7 @@
             // EliminarPrograma
             // 
             this.EliminarPrograma.BackColor = System.Drawing.Color.Transparent;
-            this.EliminarPrograma.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
+            this.EliminarPrograma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EliminarPrograma.BackgroundImage")));
             this.EliminarPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EliminarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EliminarPrograma.Location = new System.Drawing.Point(454, 181);
@@ -206,7 +202,7 @@
             // ActualizarPrograma
             // 
             this.ActualizarPrograma.BackColor = System.Drawing.Color.Transparent;
-            this.ActualizarPrograma.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
+            this.ActualizarPrograma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ActualizarPrograma.BackgroundImage")));
             this.ActualizarPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ActualizarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ActualizarPrograma.Location = new System.Drawing.Point(397, 181);
@@ -220,7 +216,7 @@
             // RegistrarPrograma
             // 
             this.RegistrarPrograma.BackColor = System.Drawing.Color.Transparent;
-            this.RegistrarPrograma.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
+            this.RegistrarPrograma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RegistrarPrograma.BackgroundImage")));
             this.RegistrarPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RegistrarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RegistrarPrograma.Location = new System.Drawing.Point(339, 181);
@@ -235,7 +231,7 @@
             // 
             this.CerrarPanelPrograma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.CerrarPanelPrograma.BackColor = System.Drawing.Color.Transparent;
-            this.CerrarPanelPrograma.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
+            this.CerrarPanelPrograma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CerrarPanelPrograma.BackgroundImage")));
             this.CerrarPanelPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CerrarPanelPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
             this.CerrarPanelPrograma.Location = new System.Drawing.Point(484, 3);
@@ -249,15 +245,15 @@
             // CerrarPanel
             // 
             this.CerrarPanel.BackColor = System.Drawing.Color.Transparent;
-            this.CerrarPanel.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logout;
+            this.CerrarPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CerrarPanel.BackgroundImage")));
             this.CerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CerrarPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CerrarPanel.FlatAppearance.BorderColor = System.Drawing.Color.WhiteSmoke;
+            this.CerrarPanel.FlatAppearance.BorderColor = System.Drawing.Color.LightSeaGreen;
             this.CerrarPanel.FlatAppearance.BorderSize = 0;
-            this.CerrarPanel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
-            this.CerrarPanel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.CerrarPanel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.CerrarPanel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.CerrarPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CerrarPanel.Location = new System.Drawing.Point(857, 19);
+            this.CerrarPanel.Location = new System.Drawing.Point(1153, 507);
             this.CerrarPanel.Name = "CerrarPanel";
             this.CerrarPanel.Size = new System.Drawing.Size(30, 30);
             this.CerrarPanel.TabIndex = 189;
@@ -268,7 +264,7 @@
             // Solicitudes
             // 
             this.Solicitudes.BackColor = System.Drawing.Color.Transparent;
-            this.Solicitudes.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.pedir;
+            this.Solicitudes.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.APOYOS;
             this.Solicitudes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Solicitudes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Solicitudes.FlatAppearance.BorderColor = System.Drawing.Color.White;
@@ -277,9 +273,9 @@
             this.Solicitudes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.Solicitudes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Solicitudes.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Solicitudes.Location = new System.Drawing.Point(44, 140);
+            this.Solicitudes.Location = new System.Drawing.Point(450, 96);
             this.Solicitudes.Name = "Solicitudes";
-            this.Solicitudes.Size = new System.Drawing.Size(280, 240);
+            this.Solicitudes.Size = new System.Drawing.Size(290, 290);
             this.Solicitudes.TabIndex = 0;
             this.toolTip1.SetToolTip(this.Solicitudes, "Apoyos Y Solicitudes");
             this.Solicitudes.UseVisualStyleBackColor = false;
@@ -288,7 +284,7 @@
             // Ordenamiento
             // 
             this.Ordenamiento.BackColor = System.Drawing.Color.Transparent;
-            this.Ordenamiento.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_V_;
+            this.Ordenamiento.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ORDENAM;
             this.Ordenamiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Ordenamiento.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Ordenamiento.DialogResult = System.Windows.Forms.DialogResult.Cancel;
@@ -298,9 +294,9 @@
             this.Ordenamiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
             this.Ordenamiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Ordenamiento.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ordenamiento.Location = new System.Drawing.Point(557, 140);
+            this.Ordenamiento.Location = new System.Drawing.Point(840, 102);
             this.Ordenamiento.Name = "Ordenamiento";
-            this.Ordenamiento.Size = new System.Drawing.Size(317, 240);
+            this.Ordenamiento.Size = new System.Drawing.Size(290, 290);
             this.Ordenamiento.TabIndex = 0;
             this.toolTip1.SetToolTip(this.Ordenamiento, "Ordenamiento Pesquero");
             this.Ordenamiento.UseVisualStyleBackColor = false;
@@ -309,6 +305,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.fondo_SISTEMA_ORD;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Controls.Add(this.PanelRegUser);
             this.panel1.Controls.Add(this.PanelRegProgram);
@@ -316,19 +313,16 @@
             this.panel1.Controls.Add(this.RegUsuario);
             this.panel1.Controls.Add(this.Bienvenido);
             this.panel1.Controls.Add(this.CerrarPanel);
-            this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.Solicitudes);
             this.panel1.Controls.Add(this.Ordenamiento);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(5, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(890, 540);
+            this.panel1.Size = new System.Drawing.Size(1190, 540);
             this.panel1.TabIndex = 191;
             // 
             // PanelRegUser
             // 
-            this.PanelRegUser.BackColor = System.Drawing.Color.LightGray;
+            this.PanelRegUser.BackColor = System.Drawing.Color.White;
             this.PanelRegUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelRegUser.Controls.Add(this.limpiar);
             this.PanelRegUser.Controls.Add(this.UsuarioLogin);
@@ -352,7 +346,7 @@
             this.PanelRegUser.Controls.Add(this.CerrarPanelUsuario);
             this.PanelRegUser.Controls.Add(this.label35);
             this.PanelRegUser.ForeColor = System.Drawing.Color.Black;
-            this.PanelRegUser.Location = new System.Drawing.Point(185, 105);
+            this.PanelRegUser.Location = new System.Drawing.Point(413, 150);
             this.PanelRegUser.Name = "PanelRegUser";
             this.PanelRegUser.Size = new System.Drawing.Size(524, 319);
             this.PanelRegUser.TabIndex = 193;
@@ -499,7 +493,7 @@
             // pictureBox9
             // 
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox9.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
+            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox9.Location = new System.Drawing.Point(27, 3);
             this.pictureBox9.Name = "pictureBox9";
@@ -510,7 +504,7 @@
             // pictureBox11
             // 
             this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox11.Location = new System.Drawing.Point(369, 3);
             this.pictureBox11.Name = "pictureBox11";
@@ -531,7 +525,7 @@
             // 
             // PanelRegProgram
             // 
-            this.PanelRegProgram.BackColor = System.Drawing.Color.LightGray;
+            this.PanelRegProgram.BackColor = System.Drawing.Color.White;
             this.PanelRegProgram.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelRegProgram.Controls.Add(this.ClavePrograma);
             this.PanelRegProgram.Controls.Add(this.label17);
@@ -553,7 +547,7 @@
             this.PanelRegProgram.Controls.Add(this.pictureBox4);
             this.PanelRegProgram.Controls.Add(this.CerrarPanelPrograma);
             this.PanelRegProgram.ForeColor = System.Drawing.Color.Black;
-            this.PanelRegProgram.Location = new System.Drawing.Point(195, 102);
+            this.PanelRegProgram.Location = new System.Drawing.Point(423, 146);
             this.PanelRegProgram.Name = "PanelRegProgram";
             this.PanelRegProgram.Size = new System.Drawing.Size(510, 253);
             this.PanelRegProgram.TabIndex = 5;
@@ -686,7 +680,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
+            this.pictureBox3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox3.BackgroundImage")));
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Location = new System.Drawing.Point(27, 3);
             this.pictureBox3.Name = "pictureBox3";
@@ -697,7 +691,7 @@
             // pictureBox4
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Location = new System.Drawing.Point(336, 3);
             this.pictureBox4.Name = "pictureBox4";
@@ -730,51 +724,16 @@
             // Bienvenido
             // 
             this.Bienvenido.AutoSize = true;
+            this.Bienvenido.BackColor = System.Drawing.Color.Transparent;
             this.Bienvenido.Dock = System.Windows.Forms.DockStyle.Right;
             this.Bienvenido.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Bienvenido.ForeColor = System.Drawing.Color.DimGray;
+            this.Bienvenido.ForeColor = System.Drawing.Color.White;
             this.Bienvenido.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.Bienvenido.Location = new System.Drawing.Point(815, 0);
+            this.Bienvenido.Location = new System.Drawing.Point(1115, 0);
             this.Bienvenido.Name = "Bienvenido";
             this.Bienvenido.Size = new System.Drawing.Size(75, 16);
             this.Bienvenido.TabIndex = 190;
             this.Bienvenido.Text = "Bienvenido ";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.SEPADA;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Location = new System.Drawing.Point(44, 8);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(525, 88);
-            this.pictureBox1.TabIndex = 188;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(72, 383);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(219, 25);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Apoyos Y Solicitudes";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Maiandra GD", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(598, 383);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(256, 25);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Ordenamiento Pesquero";
             // 
             // Menu1
             // 
@@ -782,7 +741,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(900, 550);
+            this.ClientSize = new System.Drawing.Size(1200, 550);
             this.Controls.Add(this.panel1);
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -815,7 +774,6 @@
             this.PanelRegProgram.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -825,10 +783,7 @@
         private System.Windows.Forms.Button Solicitudes;
         private System.Windows.Forms.Button Ordenamiento;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button CerrarPanel;
         private System.Windows.Forms.Label Bienvenido;
         private System.Windows.Forms.LinkLabel RegPrograma;
