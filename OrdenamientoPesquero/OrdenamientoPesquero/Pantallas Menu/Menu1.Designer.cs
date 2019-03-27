@@ -31,13 +31,23 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu1));
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.limpiar = new System.Windows.Forms.PictureBox();
+            this.EliminarLoggin = new System.Windows.Forms.PictureBox();
+            this.ActualizarLoggin = new System.Windows.Forms.PictureBox();
+            this.RegistrarLoggin = new System.Windows.Forms.PictureBox();
+            this.CerrarPanelUsuario = new System.Windows.Forms.PictureBox();
+            this.limpiar2 = new System.Windows.Forms.PictureBox();
+            this.EliminarPrograma = new System.Windows.Forms.PictureBox();
+            this.ActualizarPrograma = new System.Windows.Forms.PictureBox();
+            this.RegistrarPrograma = new System.Windows.Forms.PictureBox();
+            this.CerrarPanelPrograma = new System.Windows.Forms.PictureBox();
+            this.CerrarPanel = new System.Windows.Forms.Button();
+            this.Solicitudes = new System.Windows.Forms.Button();
+            this.Ordenamiento = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelRegUser = new System.Windows.Forms.Panel();
-            this.limpiar = new System.Windows.Forms.PictureBox();
             this.UsuarioLogin = new System.Windows.Forms.ComboBox();
-            this.EliminarLoggin = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.ActualizarLoggin = new System.Windows.Forms.PictureBox();
             this.label8 = new System.Windows.Forms.Label();
             this.NivelUsuarioLogin = new System.Windows.Forms.NumericUpDown();
             this.label7 = new System.Windows.Forms.Label();
@@ -48,23 +58,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.PassLogin = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.RegistrarLoggin = new System.Windows.Forms.PictureBox();
             this.label34 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
-            this.CerrarPanelUsuario = new System.Windows.Forms.PictureBox();
             this.label35 = new System.Windows.Forms.Label();
             this.PanelRegProgram = new System.Windows.Forms.Panel();
             this.ClavePrograma = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.limpiar2 = new System.Windows.Forms.PictureBox();
             this.NombrePrograma = new System.Windows.Forms.ComboBox();
             this.UsuarioPrograma = new System.Windows.Forms.ComboBox();
-            this.EliminarPrograma = new System.Windows.Forms.PictureBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.ActualizarPrograma = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
-            this.RegistrarPrograma = new System.Windows.Forms.PictureBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -73,32 +77,230 @@
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.CerrarPanelPrograma = new System.Windows.Forms.PictureBox();
             this.RegPrograma = new System.Windows.Forms.LinkLabel();
             this.RegUsuario = new System.Windows.Forms.LinkLabel();
             this.Bienvenido = new System.Windows.Forms.Label();
-            this.CerrarPanel = new System.Windows.Forms.Button();
-            this.Solicitudes = new System.Windows.Forms.Button();
-            this.Ordenamiento = new System.Windows.Forms.Button();
-            this.panel1.SuspendLayout();
-            this.PanelRegUser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarLoggin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarLoggin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NivelUsuarioLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarLoggin)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelUsuario)).BeginInit();
-            this.PanelRegProgram.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarPrograma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarPrograma)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarPrograma)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelPrograma)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.PanelRegUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NivelUsuarioLogin)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            this.PanelRegProgram.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelPrograma)).BeginInit();
             this.SuspendLayout();
+            // 
+            // limpiar
+            // 
+            this.limpiar.BackColor = System.Drawing.Color.Transparent;
+            this.limpiar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("limpiar.BackgroundImage")));
+            this.limpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.limpiar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.limpiar.Location = new System.Drawing.Point(491, 55);
+            this.limpiar.Name = "limpiar";
+            this.limpiar.Size = new System.Drawing.Size(28, 28);
+            this.limpiar.TabIndex = 202;
+            this.limpiar.TabStop = false;
+            this.toolTip1.SetToolTip(this.limpiar, "Limpiar Registro");
+            this.limpiar.Click += new System.EventHandler(this.limpiar_Click);
+            // 
+            // EliminarLoggin
+            // 
+            this.EliminarLoggin.BackColor = System.Drawing.Color.Transparent;
+            this.EliminarLoggin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EliminarLoggin.BackgroundImage")));
+            this.EliminarLoggin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EliminarLoggin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EliminarLoggin.Location = new System.Drawing.Point(466, 246);
+            this.EliminarLoggin.Name = "EliminarLoggin";
+            this.EliminarLoggin.Size = new System.Drawing.Size(50, 50);
+            this.EliminarLoggin.TabIndex = 201;
+            this.EliminarLoggin.TabStop = false;
+            this.toolTip1.SetToolTip(this.EliminarLoggin, "Eliminar Usuario");
+            this.EliminarLoggin.Click += new System.EventHandler(this.EliminarLoggin_Click);
+            // 
+            // ActualizarLoggin
+            // 
+            this.ActualizarLoggin.BackColor = System.Drawing.Color.Transparent;
+            this.ActualizarLoggin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ActualizarLoggin.BackgroundImage")));
+            this.ActualizarLoggin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ActualizarLoggin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ActualizarLoggin.Location = new System.Drawing.Point(409, 246);
+            this.ActualizarLoggin.Name = "ActualizarLoggin";
+            this.ActualizarLoggin.Size = new System.Drawing.Size(50, 50);
+            this.ActualizarLoggin.TabIndex = 199;
+            this.ActualizarLoggin.TabStop = false;
+            this.toolTip1.SetToolTip(this.ActualizarLoggin, "Actualizar Usuario");
+            this.ActualizarLoggin.Click += new System.EventHandler(this.ActualizarLoggin_Click);
+            // 
+            // RegistrarLoggin
+            // 
+            this.RegistrarLoggin.BackColor = System.Drawing.Color.Transparent;
+            this.RegistrarLoggin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RegistrarLoggin.BackgroundImage")));
+            this.RegistrarLoggin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RegistrarLoggin.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RegistrarLoggin.Location = new System.Drawing.Point(351, 246);
+            this.RegistrarLoggin.Name = "RegistrarLoggin";
+            this.RegistrarLoggin.Size = new System.Drawing.Size(50, 50);
+            this.RegistrarLoggin.TabIndex = 187;
+            this.RegistrarLoggin.TabStop = false;
+            this.toolTip1.SetToolTip(this.RegistrarLoggin, "Registrar Usuario");
+            this.RegistrarLoggin.Click += new System.EventHandler(this.RegistrarLoggin_Click);
+            // 
+            // CerrarPanelUsuario
+            // 
+            this.CerrarPanelUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CerrarPanelUsuario.BackColor = System.Drawing.Color.Transparent;
+            this.CerrarPanelUsuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CerrarPanelUsuario.BackgroundImage")));
+            this.CerrarPanelUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CerrarPanelUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CerrarPanelUsuario.Location = new System.Drawing.Point(498, 3);
+            this.CerrarPanelUsuario.Name = "CerrarPanelUsuario";
+            this.CerrarPanelUsuario.Size = new System.Drawing.Size(21, 21);
+            this.CerrarPanelUsuario.TabIndex = 135;
+            this.CerrarPanelUsuario.TabStop = false;
+            this.toolTip1.SetToolTip(this.CerrarPanelUsuario, "Cerrar");
+            this.CerrarPanelUsuario.Click += new System.EventHandler(this.CerrarPanelUsuario_Click);
+            // 
+            // limpiar2
+            // 
+            this.limpiar2.BackColor = System.Drawing.Color.Transparent;
+            this.limpiar2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("limpiar2.BackgroundImage")));
+            this.limpiar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.limpiar2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.limpiar2.Location = new System.Drawing.Point(477, 45);
+            this.limpiar2.Name = "limpiar2";
+            this.limpiar2.Size = new System.Drawing.Size(28, 28);
+            this.limpiar2.TabIndex = 210;
+            this.limpiar2.TabStop = false;
+            this.toolTip1.SetToolTip(this.limpiar2, "Limpiar Registro");
+            this.limpiar2.Click += new System.EventHandler(this.limpiar_Click);
+            // 
+            // EliminarPrograma
+            // 
+            this.EliminarPrograma.BackColor = System.Drawing.Color.Transparent;
+            this.EliminarPrograma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EliminarPrograma.BackgroundImage")));
+            this.EliminarPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EliminarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EliminarPrograma.Location = new System.Drawing.Point(454, 181);
+            this.EliminarPrograma.Name = "EliminarPrograma";
+            this.EliminarPrograma.Size = new System.Drawing.Size(50, 50);
+            this.EliminarPrograma.TabIndex = 207;
+            this.EliminarPrograma.TabStop = false;
+            this.toolTip1.SetToolTip(this.EliminarPrograma, "Eliminar Usuario");
+            this.EliminarPrograma.Click += new System.EventHandler(this.EliminarPrograma_Click);
+            // 
+            // ActualizarPrograma
+            // 
+            this.ActualizarPrograma.BackColor = System.Drawing.Color.Transparent;
+            this.ActualizarPrograma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ActualizarPrograma.BackgroundImage")));
+            this.ActualizarPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ActualizarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ActualizarPrograma.Location = new System.Drawing.Point(397, 181);
+            this.ActualizarPrograma.Name = "ActualizarPrograma";
+            this.ActualizarPrograma.Size = new System.Drawing.Size(50, 50);
+            this.ActualizarPrograma.TabIndex = 205;
+            this.ActualizarPrograma.TabStop = false;
+            this.toolTip1.SetToolTip(this.ActualizarPrograma, "Actualizar Usuario");
+            this.ActualizarPrograma.Click += new System.EventHandler(this.ActualizarPrograma_Click);
+            // 
+            // RegistrarPrograma
+            // 
+            this.RegistrarPrograma.BackColor = System.Drawing.Color.Transparent;
+            this.RegistrarPrograma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RegistrarPrograma.BackgroundImage")));
+            this.RegistrarPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.RegistrarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RegistrarPrograma.Location = new System.Drawing.Point(339, 181);
+            this.RegistrarPrograma.Name = "RegistrarPrograma";
+            this.RegistrarPrograma.Size = new System.Drawing.Size(50, 50);
+            this.RegistrarPrograma.TabIndex = 203;
+            this.RegistrarPrograma.TabStop = false;
+            this.toolTip1.SetToolTip(this.RegistrarPrograma, "Registrar Usuario");
+            this.RegistrarPrograma.Click += new System.EventHandler(this.RegistrarPrograma_Click);
+            // 
+            // CerrarPanelPrograma
+            // 
+            this.CerrarPanelPrograma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CerrarPanelPrograma.BackColor = System.Drawing.Color.Transparent;
+            this.CerrarPanelPrograma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CerrarPanelPrograma.BackgroundImage")));
+            this.CerrarPanelPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CerrarPanelPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CerrarPanelPrograma.Location = new System.Drawing.Point(484, 3);
+            this.CerrarPanelPrograma.Name = "CerrarPanelPrograma";
+            this.CerrarPanelPrograma.Size = new System.Drawing.Size(21, 21);
+            this.CerrarPanelPrograma.TabIndex = 135;
+            this.CerrarPanelPrograma.TabStop = false;
+            this.toolTip1.SetToolTip(this.CerrarPanelPrograma, "Cerrar");
+            this.CerrarPanelPrograma.Click += new System.EventHandler(this.CerrarPanelPrograma_Click);
+            // 
+            // CerrarPanel
+            // 
+            this.CerrarPanel.BackColor = System.Drawing.Color.Transparent;
+            this.CerrarPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CerrarPanel.BackgroundImage")));
+            this.CerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CerrarPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CerrarPanel.FlatAppearance.BorderColor = System.Drawing.Color.LightSeaGreen;
+            this.CerrarPanel.FlatAppearance.BorderSize = 0;
+            this.CerrarPanel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
+            this.CerrarPanel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.CerrarPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CerrarPanel.Location = new System.Drawing.Point(1153, 507);
+            this.CerrarPanel.Name = "CerrarPanel";
+            this.CerrarPanel.Size = new System.Drawing.Size(30, 30);
+            this.CerrarPanel.TabIndex = 189;
+            this.toolTip1.SetToolTip(this.CerrarPanel, "LogOut");
+            this.CerrarPanel.UseVisualStyleBackColor = false;
+            this.CerrarPanel.Click += new System.EventHandler(this.CerrarPanel_Click);
+            // 
+            // Solicitudes
+            // 
+            this.Solicitudes.BackColor = System.Drawing.Color.Transparent;
+            this.Solicitudes.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.APOYOS;
+            this.Solicitudes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Solicitudes.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Solicitudes.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Solicitudes.FlatAppearance.BorderSize = 0;
+            this.Solicitudes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.Solicitudes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.Solicitudes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Solicitudes.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Solicitudes.Location = new System.Drawing.Point(450, 96);
+            this.Solicitudes.Name = "Solicitudes";
+            this.Solicitudes.Size = new System.Drawing.Size(290, 290);
+            this.Solicitudes.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.Solicitudes, "Apoyos Y Solicitudes");
+            this.Solicitudes.UseVisualStyleBackColor = false;
+            this.Solicitudes.Click += new System.EventHandler(this.Solicitudes_Click);
+            // 
+            // Ordenamiento
+            // 
+            this.Ordenamiento.BackColor = System.Drawing.Color.Transparent;
+            this.Ordenamiento.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ORDENAM;
+            this.Ordenamiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Ordenamiento.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Ordenamiento.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.Ordenamiento.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.Ordenamiento.FlatAppearance.BorderSize = 0;
+            this.Ordenamiento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
+            this.Ordenamiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
+            this.Ordenamiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Ordenamiento.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Ordenamiento.Location = new System.Drawing.Point(840, 102);
+            this.Ordenamiento.Name = "Ordenamiento";
+            this.Ordenamiento.Size = new System.Drawing.Size(290, 290);
+            this.Ordenamiento.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.Ordenamiento, "Ordenamiento Pesquero");
+            this.Ordenamiento.UseVisualStyleBackColor = false;
+            this.Ordenamiento.Click += new System.EventHandler(this.Ordenamiento_Click);
             // 
             // panel1
             // 
@@ -150,20 +352,6 @@
             this.PanelRegUser.TabIndex = 193;
             this.PanelRegUser.Visible = false;
             // 
-            // limpiar
-            // 
-            this.limpiar.BackColor = System.Drawing.Color.Transparent;
-            this.limpiar.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("limpiar.BackgroundImage")));
-            this.limpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.limpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.limpiar.Location = new System.Drawing.Point(491, 55);
-            this.limpiar.Name = "limpiar";
-            this.limpiar.Size = new System.Drawing.Size(28, 28);
-            this.limpiar.TabIndex = 202;
-            this.limpiar.TabStop = false;
-            this.toolTip1.SetToolTip(this.limpiar, "Limpiar Registro");
-            this.limpiar.Click += new System.EventHandler(this.limpiar_Click);
-            // 
             // UsuarioLogin
             // 
             this.UsuarioLogin.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -175,20 +363,6 @@
             this.UsuarioLogin.TabIndex = 189;
             this.UsuarioLogin.SelectedIndexChanged += new System.EventHandler(this.UsuarioLogin_SelectedIndexChanged);
             // 
-            // EliminarLoggin
-            // 
-            this.EliminarLoggin.BackColor = System.Drawing.Color.Transparent;
-            this.EliminarLoggin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EliminarLoggin.BackgroundImage")));
-            this.EliminarLoggin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EliminarLoggin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EliminarLoggin.Location = new System.Drawing.Point(466, 246);
-            this.EliminarLoggin.Name = "EliminarLoggin";
-            this.EliminarLoggin.Size = new System.Drawing.Size(50, 50);
-            this.EliminarLoggin.TabIndex = 201;
-            this.EliminarLoggin.TabStop = false;
-            this.toolTip1.SetToolTip(this.EliminarLoggin, "Eliminar Usuario");
-            this.EliminarLoggin.Click += new System.EventHandler(this.EliminarLoggin_Click);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -199,20 +373,6 @@
             this.label9.Size = new System.Drawing.Size(43, 14);
             this.label9.TabIndex = 200;
             this.label9.Text = "Eliminar";
-            // 
-            // ActualizarLoggin
-            // 
-            this.ActualizarLoggin.BackColor = System.Drawing.Color.Transparent;
-            this.ActualizarLoggin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ActualizarLoggin.BackgroundImage")));
-            this.ActualizarLoggin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ActualizarLoggin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ActualizarLoggin.Location = new System.Drawing.Point(409, 246);
-            this.ActualizarLoggin.Name = "ActualizarLoggin";
-            this.ActualizarLoggin.Size = new System.Drawing.Size(50, 50);
-            this.ActualizarLoggin.TabIndex = 199;
-            this.ActualizarLoggin.TabStop = false;
-            this.toolTip1.SetToolTip(this.ActualizarLoggin, "Actualizar Usuario");
-            this.ActualizarLoggin.Click += new System.EventHandler(this.ActualizarLoggin_Click);
             // 
             // label8
             // 
@@ -316,20 +476,6 @@
             this.label3.TabIndex = 189;
             this.label3.Text = "Usuario";
             // 
-            // RegistrarLoggin
-            // 
-            this.RegistrarLoggin.BackColor = System.Drawing.Color.Transparent;
-            this.RegistrarLoggin.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RegistrarLoggin.BackgroundImage")));
-            this.RegistrarLoggin.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RegistrarLoggin.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegistrarLoggin.Location = new System.Drawing.Point(351, 246);
-            this.RegistrarLoggin.Name = "RegistrarLoggin";
-            this.RegistrarLoggin.Size = new System.Drawing.Size(50, 50);
-            this.RegistrarLoggin.TabIndex = 187;
-            this.RegistrarLoggin.TabStop = false;
-            this.toolTip1.SetToolTip(this.RegistrarLoggin, "Registrar Usuario");
-            this.RegistrarLoggin.Click += new System.EventHandler(this.RegistrarLoggin_Click);
-            // 
             // label34
             // 
             this.label34.Anchor = System.Windows.Forms.AnchorStyles.Top;
@@ -365,21 +511,6 @@
             this.pictureBox11.Size = new System.Drawing.Size(120, 40);
             this.pictureBox11.TabIndex = 136;
             this.pictureBox11.TabStop = false;
-            // 
-            // CerrarPanelUsuario
-            // 
-            this.CerrarPanelUsuario.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CerrarPanelUsuario.BackColor = System.Drawing.Color.Transparent;
-            this.CerrarPanelUsuario.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CerrarPanelUsuario.BackgroundImage")));
-            this.CerrarPanelUsuario.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CerrarPanelUsuario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CerrarPanelUsuario.Location = new System.Drawing.Point(498, 3);
-            this.CerrarPanelUsuario.Name = "CerrarPanelUsuario";
-            this.CerrarPanelUsuario.Size = new System.Drawing.Size(21, 21);
-            this.CerrarPanelUsuario.TabIndex = 135;
-            this.CerrarPanelUsuario.TabStop = false;
-            this.toolTip1.SetToolTip(this.CerrarPanelUsuario, "Cerrar");
-            this.CerrarPanelUsuario.Click += new System.EventHandler(this.CerrarPanelUsuario_Click);
             // 
             // label35
             // 
@@ -441,20 +572,6 @@
             this.label17.TabIndex = 211;
             this.label17.Text = "Clave del Programa";
             // 
-            // limpiar2
-            // 
-            this.limpiar2.BackColor = System.Drawing.Color.Transparent;
-            this.limpiar2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("limpiar2.BackgroundImage")));
-            this.limpiar2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.limpiar2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.limpiar2.Location = new System.Drawing.Point(477, 45);
-            this.limpiar2.Name = "limpiar2";
-            this.limpiar2.Size = new System.Drawing.Size(28, 28);
-            this.limpiar2.TabIndex = 210;
-            this.limpiar2.TabStop = false;
-            this.toolTip1.SetToolTip(this.limpiar2, "Limpiar Registro");
-            this.limpiar2.Click += new System.EventHandler(this.limpiar_Click);
-            // 
             // NombrePrograma
             // 
             this.NombrePrograma.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -477,20 +594,6 @@
             this.UsuarioPrograma.TabIndex = 208;
             this.UsuarioPrograma.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UsuarioPrograma_KeyPress);
             // 
-            // EliminarPrograma
-            // 
-            this.EliminarPrograma.BackColor = System.Drawing.Color.Transparent;
-            this.EliminarPrograma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EliminarPrograma.BackgroundImage")));
-            this.EliminarPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EliminarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EliminarPrograma.Location = new System.Drawing.Point(454, 181);
-            this.EliminarPrograma.Name = "EliminarPrograma";
-            this.EliminarPrograma.Size = new System.Drawing.Size(50, 50);
-            this.EliminarPrograma.TabIndex = 207;
-            this.EliminarPrograma.TabStop = false;
-            this.toolTip1.SetToolTip(this.EliminarPrograma, "Eliminar Usuario");
-            this.EliminarPrograma.Click += new System.EventHandler(this.EliminarPrograma_Click);
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -502,20 +605,6 @@
             this.label14.TabIndex = 206;
             this.label14.Text = "Eliminar";
             // 
-            // ActualizarPrograma
-            // 
-            this.ActualizarPrograma.BackColor = System.Drawing.Color.Transparent;
-            this.ActualizarPrograma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ActualizarPrograma.BackgroundImage")));
-            this.ActualizarPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ActualizarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ActualizarPrograma.Location = new System.Drawing.Point(397, 181);
-            this.ActualizarPrograma.Name = "ActualizarPrograma";
-            this.ActualizarPrograma.Size = new System.Drawing.Size(50, 50);
-            this.ActualizarPrograma.TabIndex = 205;
-            this.ActualizarPrograma.TabStop = false;
-            this.toolTip1.SetToolTip(this.ActualizarPrograma, "Actualizar Usuario");
-            this.ActualizarPrograma.Click += new System.EventHandler(this.ActualizarPrograma_Click);
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
@@ -526,20 +615,6 @@
             this.label15.Size = new System.Drawing.Size(56, 14);
             this.label15.TabIndex = 204;
             this.label15.Text = "Actualizar";
-            // 
-            // RegistrarPrograma
-            // 
-            this.RegistrarPrograma.BackColor = System.Drawing.Color.Transparent;
-            this.RegistrarPrograma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RegistrarPrograma.BackgroundImage")));
-            this.RegistrarPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.RegistrarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegistrarPrograma.Location = new System.Drawing.Point(339, 181);
-            this.RegistrarPrograma.Name = "RegistrarPrograma";
-            this.RegistrarPrograma.Size = new System.Drawing.Size(50, 50);
-            this.RegistrarPrograma.TabIndex = 203;
-            this.RegistrarPrograma.TabStop = false;
-            this.toolTip1.SetToolTip(this.RegistrarPrograma, "Registrar Usuario");
-            this.RegistrarPrograma.Click += new System.EventHandler(this.RegistrarPrograma_Click);
             // 
             // label16
             // 
@@ -624,21 +699,6 @@
             this.pictureBox4.TabIndex = 136;
             this.pictureBox4.TabStop = false;
             // 
-            // CerrarPanelPrograma
-            // 
-            this.CerrarPanelPrograma.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.CerrarPanelPrograma.BackColor = System.Drawing.Color.Transparent;
-            this.CerrarPanelPrograma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CerrarPanelPrograma.BackgroundImage")));
-            this.CerrarPanelPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CerrarPanelPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CerrarPanelPrograma.Location = new System.Drawing.Point(484, 3);
-            this.CerrarPanelPrograma.Name = "CerrarPanelPrograma";
-            this.CerrarPanelPrograma.Size = new System.Drawing.Size(21, 21);
-            this.CerrarPanelPrograma.TabIndex = 135;
-            this.CerrarPanelPrograma.TabStop = false;
-            this.toolTip1.SetToolTip(this.CerrarPanelPrograma, "Cerrar");
-            this.CerrarPanelPrograma.Click += new System.EventHandler(this.CerrarPanelPrograma_Click);
-            // 
             // RegPrograma
             // 
             this.RegPrograma.AutoSize = true;
@@ -675,66 +735,6 @@
             this.Bienvenido.TabIndex = 190;
             this.Bienvenido.Text = "Bienvenido ";
             // 
-            // CerrarPanel
-            // 
-            this.CerrarPanel.BackColor = System.Drawing.Color.Transparent;
-            this.CerrarPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CerrarPanel.BackgroundImage")));
-            this.CerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.CerrarPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CerrarPanel.FlatAppearance.BorderColor = System.Drawing.Color.LightSeaGreen;
-            this.CerrarPanel.FlatAppearance.BorderSize = 0;
-            this.CerrarPanel.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.CerrarPanel.FlatAppearance.MouseOverBackColor = System.Drawing.Color.CadetBlue;
-            this.CerrarPanel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CerrarPanel.Location = new System.Drawing.Point(1153, 507);
-            this.CerrarPanel.Name = "CerrarPanel";
-            this.CerrarPanel.Size = new System.Drawing.Size(30, 30);
-            this.CerrarPanel.TabIndex = 189;
-            this.toolTip1.SetToolTip(this.CerrarPanel, "LogOut");
-            this.CerrarPanel.UseVisualStyleBackColor = false;
-            this.CerrarPanel.Click += new System.EventHandler(this.CerrarPanel_Click);
-            // 
-            // Solicitudes
-            // 
-            this.Solicitudes.BackColor = System.Drawing.Color.Transparent;
-            this.Solicitudes.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.APOYOS;
-            this.Solicitudes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Solicitudes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Solicitudes.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Solicitudes.FlatAppearance.BorderSize = 0;
-            this.Solicitudes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
-            this.Solicitudes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.Solicitudes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Solicitudes.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Solicitudes.Location = new System.Drawing.Point(450, 96);
-            this.Solicitudes.Name = "Solicitudes";
-            this.Solicitudes.Size = new System.Drawing.Size(290, 290);
-            this.Solicitudes.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.Solicitudes, "Apoyos Y Solicitudes");
-            this.Solicitudes.UseVisualStyleBackColor = false;
-            this.Solicitudes.Click += new System.EventHandler(this.Solicitudes_Click);
-            // 
-            // Ordenamiento
-            // 
-            this.Ordenamiento.BackColor = System.Drawing.Color.Transparent;
-            this.Ordenamiento.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ORDENAM;
-            this.Ordenamiento.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Ordenamiento.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Ordenamiento.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.Ordenamiento.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.Ordenamiento.FlatAppearance.BorderSize = 0;
-            this.Ordenamiento.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LightGray;
-            this.Ordenamiento.FlatAppearance.MouseOverBackColor = System.Drawing.Color.WhiteSmoke;
-            this.Ordenamiento.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Ordenamiento.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Ordenamiento.Location = new System.Drawing.Point(840, 102);
-            this.Ordenamiento.Name = "Ordenamiento";
-            this.Ordenamiento.Size = new System.Drawing.Size(290, 290);
-            this.Ordenamiento.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.Ordenamiento, "Ordenamiento Pesquero");
-            this.Ordenamiento.UseVisualStyleBackColor = false;
-            this.Ordenamiento.Click += new System.EventHandler(this.Ordenamiento_Click);
-            // 
             // Menu1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -753,27 +753,27 @@
             this.Text = "Menu1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Menu1_FormClosing);
             this.Load += new System.EventHandler(this.Menu1_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
-            this.PanelRegUser.ResumeLayout(false);
-            this.PanelRegUser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarLoggin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarLoggin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.NivelUsuarioLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarLoggin)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelUsuario)).EndInit();
-            this.PanelRegProgram.ResumeLayout(false);
-            this.PanelRegProgram.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarPrograma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarPrograma)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarPrograma)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelPrograma)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.PanelRegUser.ResumeLayout(false);
+            this.PanelRegUser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NivelUsuarioLogin)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            this.PanelRegProgram.ResumeLayout(false);
+            this.PanelRegProgram.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelPrograma)).EndInit();
             this.ResumeLayout(false);
 
         }

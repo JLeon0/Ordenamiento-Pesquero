@@ -39,7 +39,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             comboBox5.ValueMember = "Nombre";
             comboBox5.DisplayMember = "Nombre";
             comboBox13.DataSource = proc.ObtenerPesquerias();
-            comboBox13.ValueMember="PESQUERIA";
+            comboBox13.ValueMember = "PESQUERIA";
             comboBox13.DisplayMember = "PESQUERIA";
         }
         private void button1_Click(object sender, EventArgs e)
@@ -85,7 +85,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     {
                         if (m == r)
                         {
-                            if (a.Text=="U.E.")
+                            if (a.Text == "U.E.")
                             {
                                 consulta += "'" + dt.Rows[comboBox14.SelectedIndex]["RNPA"] + "'";
                                 break;
@@ -146,7 +146,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     {
                         if (m == r)
                         {
-                            if (a.Text=="Tipo")
+                            if (a.Text == "Tipo")
                             {
                                 consulta += "'" + cb.SelectedIndex + "'";
                                 break;
@@ -207,7 +207,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     {
                         if (m == r)
                         {
-                            if (a.Text=="Tipo Permiso")
+                            if (a.Text == "Tipo Permiso")
                             {
                                 consulta += "'" + cb.SelectedIndex.ToString() + "'";
                                 break;
@@ -234,7 +234,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Embarca.rdlc");
                 dt = proc.Obtener_Capitan(chip.Text);
                 ReportParameter[] para = new ReportParameter[1];
-                if (dt.Rows.Count>0)
+                if (dt.Rows.Count > 0)
                 {
                     para[0] = new ReportParameter("Capitan", dt.Rows[0][0].ToString());
                 }
@@ -247,7 +247,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 ds2.Name = "buzos";
                 ds2.Value = proc.Obtener_Buzos(chip.Text);
                 ds3.Name = "DataSet1";
-                string consulta = "select * from EMBARCACIONES where NUMCHIP='"+chip.Text+"'";
+                string consulta = "select * from EMBARCACIONES where NUMCHIP='" + chip.Text + "'";
                 ds3.Value = proc.ObtenerTablaConsulta(consulta);
                 reportViewer1.LocalReport.DataSources.Add(ds);
                 reportViewer1.LocalReport.DataSources.Add(ds2);
@@ -303,7 +303,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             {
                 para[c] = new ReportParameter(dato[c], column[c].ToString());
             }
-            string inac= "AND (ESTATUS = 'Negativa' OR ESTATUS='Cancelada' OR ESTATUS='Positiva sin TP')";
+            string inac = "AND (ESTATUS = 'Negativa' OR ESTATUS='Cancelada' OR ESTATUS='Positiva sin TP')";
             string act = "AND (ESTATUS = 'Pendiente'OR ESTATUS='Positiva con TP')";
             string apo = "AND ESTATUS = 'ENTREGADO'";
             string consulta = "SELECT * FROM SOLICITUDES WHERE NOMBRE!=''";
@@ -312,33 +312,33 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             {
                 if (a.Checked)
                 {
-                    if (a.Text!="Tipo")
+                    if (a.Text != "Tipo")
                     {
                         consulta += " AND " + a.Text.Replace(" ", "_").ToLower() + " = ";
                     }
                 }
-                    int m = 0;
-                    foreach (ComboBox cb in FiltrosUnidad.Controls.OfType<ComboBox>())
+                int m = 0;
+                foreach (ComboBox cb in FiltrosUnidad.Controls.OfType<ComboBox>())
+                {
+                    if (m == r)
                     {
-                        if (m == r)
+                        if (a.Text == "Tipo")
                         {
-                            if (a.Text == "Tipo")
-                            {
-                                consulta += "'" + cb.SelectedIndex + "'";
-                                break;
-                            }
-                            else
-                            {
-                                consulta += "'" + cb.Text + "'";
-                                break;
-                            }
+                            consulta += "'" + cb.SelectedIndex + "'";
+                            break;
                         }
-                        m++;
+                        else
+                        {
+                            consulta += "'" + cb.Text + "'";
+                            break;
+                        }
                     }
+                    m++;
                 }
-                r++;
             }
+            r++;
         }
     }
 }
+
 

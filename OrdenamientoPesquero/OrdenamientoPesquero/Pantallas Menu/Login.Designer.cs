@@ -50,7 +50,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(268, 330);
+            this.panel1.Size = new System.Drawing.Size(315, 330);
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
@@ -58,9 +58,9 @@
             // 
             this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_V_;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(3, 42);
+            this.pictureBox3.Location = new System.Drawing.Point(11, 50);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(260, 210);
+            this.pictureBox3.Size = new System.Drawing.Size(300, 210);
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
@@ -71,7 +71,7 @@
             this.txtuser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtuser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtuser.ForeColor = System.Drawing.Color.DimGray;
-            this.txtuser.Location = new System.Drawing.Point(310, 77);
+            this.txtuser.Location = new System.Drawing.Point(349, 80);
             this.txtuser.MaxLength = 15;
             this.txtuser.Name = "txtuser";
             this.txtuser.Size = new System.Drawing.Size(408, 20);
@@ -86,7 +86,7 @@
             this.txtpass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtpass.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtpass.ForeColor = System.Drawing.Color.DimGray;
-            this.txtpass.Location = new System.Drawing.Point(310, 142);
+            this.txtpass.Location = new System.Drawing.Point(349, 145);
             this.txtpass.MaxLength = 16;
             this.txtpass.Name = "txtpass";
             this.txtpass.Size = new System.Drawing.Size(408, 20);
@@ -101,7 +101,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(450, 9);
+            this.label1.Location = new System.Drawing.Point(489, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(101, 32);
             this.label1.TabIndex = 4;
@@ -116,7 +116,7 @@
             this.btnlogin.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(70)))), ((int)(((byte)(118)))), ((int)(((byte)(126)))));
             this.btnlogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnlogin.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.btnlogin.Location = new System.Drawing.Point(310, 236);
+            this.btnlogin.Location = new System.Drawing.Point(349, 239);
             this.btnlogin.Name = "btnlogin";
             this.btnlogin.Size = new System.Drawing.Size(408, 40);
             this.btnlogin.TabIndex = 3;
@@ -128,7 +128,7 @@
             // 
             this.VerPass.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ver;
             this.VerPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.VerPass.Location = new System.Drawing.Point(724, 142);
+            this.VerPass.Location = new System.Drawing.Point(763, 145);
             this.VerPass.Name = "VerPass";
             this.VerPass.Size = new System.Drawing.Size(23, 20);
             this.VerPass.TabIndex = 8;
@@ -141,7 +141,7 @@
             this.btncerrar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
             this.btncerrar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btncerrar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btncerrar.Location = new System.Drawing.Point(753, 3);
+            this.btncerrar.Location = new System.Drawing.Point(792, 6);
             this.btncerrar.Name = "btncerrar";
             this.btncerrar.Size = new System.Drawing.Size(23, 19);
             this.btncerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -154,7 +154,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGray;
-            this.ClientSize = new System.Drawing.Size(780, 330);
+            this.ClientSize = new System.Drawing.Size(820, 330);
             this.Controls.Add(this.VerPass);
             this.Controls.Add(this.btncerrar);
             this.Controls.Add(this.btnlogin);
@@ -165,7 +165,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
-            this.Opacity = 0.85D;
+            this.Opacity = 0.9D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
