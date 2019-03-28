@@ -101,13 +101,13 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 if (fila["ACOMPDOM"].ToString() != "") { acompdom++; }
             }
             dgvPescadores[2,0].Value = acta + "/" + pescadores.Rows.Count;
-            if (acta == pescadores.Rows.Count) { dgvPescadores[1, 0].Value = true; dgvPescadores[1, 0].Style.BackColor = Color.Green; }
+            if (pescadores.Rows.Count > 0 && acta == pescadores.Rows.Count) { dgvPescadores[1, 0].Value = true; dgvPescadores[1, 0].Style.BackColor = Color.Green; }
             dgvPescadores[2, 1].Value = acurp + "/" + pescadores.Rows.Count;
-            if (acurp == pescadores.Rows.Count) { dgvPescadores[1, 1].Value = true; dgvPescadores[1, 1].Style.BackColor = Color.Green; }
+            if (pescadores.Rows.Count > 0 && acurp == pescadores.Rows.Count) { dgvPescadores[1, 1].Value = true; dgvPescadores[1, 1].Style.BackColor = Color.Green; }
             dgvPescadores[2, 2].Value = aine + "/" + pescadores.Rows.Count;
-            if (aine == pescadores.Rows.Count) { dgvPescadores[1, 2].Value = true; dgvPescadores[1, 2].Style.BackColor = Color.Green; }
+            if (pescadores.Rows.Count > 0 && aine == pescadores.Rows.Count) { dgvPescadores[1, 2].Value = true; dgvPescadores[1, 2].Style.BackColor = Color.Green; }
             dgvPescadores[2, 3].Value = acompdom + "/" + pescadores.Rows.Count;
-            if (acompdom == pescadores.Rows.Count) { dgvPescadores[1, 3].Value = true; dgvPescadores[1, 3].Style.BackColor = Color.Green; }
+            if (pescadores.Rows.Count > 0 && acompdom == pescadores.Rows.Count) { dgvPescadores[1, 3].Value = true; dgvPescadores[1, 3].Style.BackColor = Color.Green; }
             dgvPescadores.ClearSelection();
         }
 
@@ -140,19 +140,19 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 if (fila["FOTOEMB"].ToString() != "") { fotoemb++; }
             }
             dgvEmbarcacion[2, 0].Value = certmat + "/" + embarcaciones.Rows.Count;
-            if (certmat == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 0].Value = true; dgvEmbarcacion[1, 0].Style.BackColor = Color.Green; }
+            if (embarcaciones.Rows.Count > 0 && certmat == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 0].Value = true; dgvEmbarcacion[1, 0].Style.BackColor = Color.Green; }
             dgvEmbarcacion[2, 1].Value = certsegu + "/" + embarcaciones.Rows.Count;
-            if (certsegu == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 1].Value = true; dgvEmbarcacion[1, 1].Style.BackColor = Color.Green; }
+            if (embarcaciones.Rows.Count > 0 && certsegu == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 1].Value = true; dgvEmbarcacion[1, 1].Style.BackColor = Color.Green; }
             dgvEmbarcacion[2, 2].Value = factartes + "/" + embarcaciones.Rows.Count;
-            if (factartes == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 2].Value = true; dgvEmbarcacion[1, 2].Style.BackColor = Color.Green; }
+            if (embarcaciones.Rows.Count > 0 && factartes == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 2].Value = true; dgvEmbarcacion[1, 2].Style.BackColor = Color.Green; }
             dgvEmbarcacion[2, 3].Value = factmotor + "/" + embarcaciones.Rows.Count;
-            if (factmotor == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 3].Value = true; dgvEmbarcacion[1, 3].Style.BackColor = Color.Green; }
+            if (embarcaciones.Rows.Count > 0 && factmotor == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 3].Value = true; dgvEmbarcacion[1, 3].Style.BackColor = Color.Green; }
             dgvEmbarcacion[2, 4].Value = factembarca + "/" + embarcaciones.Rows.Count;
-            if (factembarca == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 4].Value = true; dgvEmbarcacion[1, 4].Style.BackColor = Color.Green; }
+            if (embarcaciones.Rows.Count > 0 && factembarca == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 4].Value = true; dgvEmbarcacion[1, 4].Style.BackColor = Color.Green; }
             dgvEmbarcacion[2, 5].Value = papelchipeo + "/" + embarcaciones.Rows.Count;
-            if (papelchipeo == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 5].Value = true; dgvEmbarcacion[1, 5].Style.BackColor = Color.Green; }
+            if (embarcaciones.Rows.Count > 0 && papelchipeo == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 5].Value = true; dgvEmbarcacion[1, 5].Style.BackColor = Color.Green; }
             dgvEmbarcacion[2, 6].Value = fotoemb + "/" + embarcaciones.Rows.Count;
-            if (fotoemb == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 6].Value = true; dgvEmbarcacion[1, 6].Style.BackColor = Color.Green; }
+            if (embarcaciones.Rows.Count > 0 && fotoemb == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 6].Value = true; dgvEmbarcacion[1, 6].Style.BackColor = Color.Green; }
             dgvEmbarcacion.ClearSelection();
         }
 
@@ -168,7 +168,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 if (fila["APERMISO"].ToString() != "") { aperm++; }
             }
             dgvPermisos[2, 0].Value = aperm + "/" + expediente.Rows.Count;
-            if (aperm == expediente.Rows.Count) { dgvPermisos[1, 0].Value = true; dgvPermisos[1, 0].Style.BackColor = Color.Green; }
+            if (expediente.Rows.Count > 0 && aperm == expediente.Rows.Count) { dgvPermisos[1, 0].Value = true; dgvPermisos[1, 0].Style.BackColor = Color.Green; }
             dgvPermisos.ClearSelection();
         }
 

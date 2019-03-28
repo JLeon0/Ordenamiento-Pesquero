@@ -593,7 +593,6 @@
             this.Imagen.Location = new System.Drawing.Point(11, 21);
             this.Imagen.Name = "Imagen";
             this.Imagen.Size = new System.Drawing.Size(116, 125);
-            this.Imagen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.Imagen.TabIndex = 118;
             this.Imagen.TabStop = false;
             this.toolTip1.SetToolTip(this.Imagen, "Foto del Usuario");
