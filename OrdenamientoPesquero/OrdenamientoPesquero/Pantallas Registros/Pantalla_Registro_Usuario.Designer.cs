@@ -707,7 +707,6 @@
             // 
             this.CorreoPesc.BackColor = System.Drawing.Color.White;
             this.CorreoPesc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CorreoPesc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.CorreoPesc.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CorreoPesc.ForeColor = System.Drawing.Color.Black;
             this.CorreoPesc.Location = new System.Drawing.Point(133, 338);
@@ -2136,7 +2135,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1387, 781);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.gbOtros);
             this.Controls.Add(this.Bienvenido);
             this.Controls.Add(this.gbBusqueda);

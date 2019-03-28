@@ -55,10 +55,13 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             int i = 0;
             foreach (CheckBox a in ColumasPescador.Controls)
             {
-                column[i] = a.Checked;
-                dato[i] = a.Text.Replace(" ", "_");
-                dato[i] = dato[i].ToLower();
-                i++;
+                if (a.Text != "TODOS")
+                {
+                    column[i] = a.Checked;
+                    dato[i] = a.Text.Replace(" ", "_");
+                    dato[i] = dato[i].ToLower();
+                    i++;
+                }
             }
             ReportParameter[] para = new ReportParameter[17];
             for (int c = 0; c < 17; c++)
@@ -124,10 +127,13 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             int i = 0;
             foreach (CheckBox a in ColumasUnidad.Controls)
             {
-                column[i] = a.Checked;
-                dato[i] = a.Text.Replace(" ", "_");
-                dato[i] = dato[i].ToLower();
-                i++;
+                if (a.Text != "TODOS")
+                {
+                    column[i] = a.Checked;
+                    dato[i] = a.Text.Replace(" ", "_");
+                    dato[i] = dato[i].ToLower();
+                    i++;
+                }
             }
             ReportParameter[] para = new ReportParameter[10];
             for (int c = 0; c < 10; c++)
@@ -185,10 +191,13 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             int i = 0;
             foreach (CheckBox a in ColumnasPermiso.Controls)
             {
-                column[i] = a.Checked;
-                dato[i] = a.Text.Replace(" ", "");
-                dato[i] = dato[i].ToLower();
-                i++;
+                if (a.Text != "TODOS")
+                {
+                    column[i] = a.Checked;
+                    dato[i] = a.Text.Replace(" ", "_");
+                    dato[i] = dato[i].ToLower();
+                    i++;
+                }
             }
             ReportParameter[] para = new ReportParameter[13];
             for (int c = 0; c < 13; c++)
@@ -237,10 +246,23 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         private void button4_Click(object sender, EventArgs e)
         {
             this.reportViewer1.ProcessingMode = ProcessingMode.Local;
-            if (checkBox71.Checked)
+            if (checkBox71.Checked|| checkBox75.Checked|| checkBox94.Checked)
             {
                 reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Embarca.rdlc");
-                dt = proc.Obtener_Capitan(chip.Text);
+                string param = "";
+                if (checkBox71.Checked)
+                {
+                    param = chip.Text;
+                }
+                if (checkBox75.Checked)
+                {
+                    param = comboBox6.Text;
+                }
+                if (checkBox94.Checked)
+                {
+                    param = textBox1.Text;
+                }
+                dt = proc.Obtener_Capitan(param);
                 ReportParameter[] para = new ReportParameter[1];
                 if (dt.Rows.Count > 0)
                 {
@@ -251,12 +273,25 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     para[0] = new ReportParameter("Capitan", "");
                 }
                 ds.Name = "marineros";
-                ds.Value = proc.Obtener_Marineros(chip.Text);
+                ds.Value = proc.Obtener_Marineros(param);
                 ds2.Name = "buzos";
-                ds2.Value = proc.Obtener_Buzos(chip.Text);
+                ds2.Value = proc.Obtener_Buzos(param);
                 ds3.Name = "DataSet1";
                 string consulta = "select * from EMBARCACIONES where NUMCHIP='" + chip.Text + "'";
-                ds3.Value = proc.ObtenerTablaConsulta(consulta);
+                string consulta2 = "select * from EMBARCACIONES where nombreembarcacion='" + comboBox6.Text + "'";
+                string consulta3 = "select * from EMBARCACIONES where matricula='" + textBox1.Text + "'";
+                if (checkBox71.Checked)
+                {
+                    ds3.Value = proc.ObtenerTablaConsulta(consulta);
+                }
+                if (checkBox75.Checked)
+                {
+                    ds3.Value = proc.ObtenerTablaConsulta(consulta2);
+                }
+                if (checkBox74.Checked)
+                {
+                    ds3.Value = proc.ObtenerTablaConsulta(consulta3);
+                }
                 reportViewer1.LocalReport.DataSources.Add(ds);
                 reportViewer1.LocalReport.DataSources.Add(ds2);
                 reportViewer1.LocalReport.DataSources.Add(ds3);
@@ -270,10 +305,13 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 int i = 0;
                 foreach (CheckBox a in ColumnasEmbarca.Controls)
                 {
-                    column[i] = a.Checked;
-                    dato[i] = a.Text.Replace(" ", "_");
-                    dato[i] = dato[i].ToLower();
-                    i++;
+                    if (a.Text != "TODOS")
+                    {
+                        column[i] = a.Checked;
+                        dato[i] = a.Text.Replace(" ", "_");
+                        dato[i] = dato[i].ToLower();
+                        i++;
+                    }
                 }
                 ReportParameter[] para = new ReportParameter[20];
                 for (int c = 0; c < 20; c++)
@@ -282,10 +320,42 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 }
                 reportViewer1.LocalReport.SetParameters(para);
                 string consulta = "select * from EMBARCACIONES where nombreembarcacion!='NO APLICA'";
-                if (checkBox32.Checked)
-                {
-                    consulta += " AND RNPTITULAR = '" + dt.Rows[comboBox14.SelectedIndex]["RNPA"] + "'";
-                }
+                //int r = 0;
+                //foreach (CheckBox it in FiltrosEmbarca.Controls.OfType<CheckBox>())
+                //{
+                    //if (it.Checked)
+                    //{
+                        if (checkBox32.Checked)
+                        {
+                            consulta += " AND RNPTITULAR = '" + dt.Rows[comboBox14.SelectedIndex]["RNPA"] + "'";
+                        }
+                        //if (it.Text=="Nombre")
+                        //{
+                        //    consulta += " AND nombreembarcacion =";
+                        //}
+                        //if (it.Text!="Nombre"&&it.Text!="Unidad Economica")
+                        //{
+                        //    consulta += " AND" + it.Text.ToLower();
+                        //}
+                //        int m = 0;
+                //        foreach (ComboBox cb in FiltrosEmbarca.Controls.OfType<ComboBox>())
+                //        {
+                //            if (it.Text=="Unidad Economica")
+                //            {
+                //                break;
+                //            }
+                //            else
+                //            {
+                //                if (r==m)
+                //                {
+                //                    consulta += "'" + cb.Text + "'";
+                //                }
+                //            }
+                //            m++;
+                //        }
+                //        r++;
+                //    }
+                //}
                 consulta += " Order by " + OrdenaEmbarca.Text.Replace(" ", "");
                 ds.Value = proc.ObtenerTablaConsulta(consulta);
                 this.reportViewer1.LocalReport.DataSources.Add(ds);
@@ -301,9 +371,12 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             int i = 0;
             foreach (CheckBox a in ColumnasSolicitudes.Controls)
             {
-                column[i] = a.Checked;
-                dato[i] = a.Text.Replace(" ", "_");
-                i++;
+                if (a.Text!="TODOS")
+                {
+                    column[i] = a.Checked;
+                    dato[i] = a.Text.Replace(" ", "_");
+                    i++;
+                }
             }
             ReportParameter[] para = new ReportParameter[16];
             for (int c = 0; c < 16; c++)
@@ -313,6 +386,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             string inac = "AND (ESTATUS = 'Negativa' OR ESTATUS='Cancelada' OR ESTATUS='Positiva sin TP')";
             string act = "AND (ESTATUS = 'Pendiente'OR ESTATUS='Positiva con TP')";
             string apo = "AND ESTATUS = 'ENTREGADO'";
+            string año = "AND Substring(FECHA,7,4) ='";
             string consulta = "SELECT * FROM SOLICITUDES WHERE NOMBRE!='' ";
             int r = 0;
             reportViewer1.LocalReport.SetParameters(para);
@@ -320,7 +394,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             {
                 if (a.Checked)
                 {
-                    if (a.Text != "Tipo")
+                    if (a.Text != "Tipo"&&a.Text!="Año")
                     {
                         consulta += " AND " + a.Text.Replace(" ", "_").ToLower() + " = ";
                     }
@@ -354,23 +428,112 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                         }
                         else
                         {
-                            if (m == r)
-                            {
-                                consulta += "'" + cb.Text + "'";
-                                break;
-                            }
+                                if (a.Text=="Año")
+                                {
+                                    consulta += año + numericUpDown2.Text+"'";
+                                    break;
+                                }
+                                else
+                                {
+                                    if (m == r)
+                                    {
+                                        consulta += "'" + cb.Text + "'";
+                                        break;
+                                    }
+                                }
                         }
                     }
                     m++;
                 }
             }
+                if (a.Text == "Año" || a.Text == "Prioridad")
+                {
+                    r--;
+                }
                 r++;
             }
             consulta += " Order by " + OrdenSoli.Text.Replace(" ", "");
-            ds.Value = proc.ObtenerTablaConsulta(consulta);
+             ds.Value = proc.ObtenerTablaConsulta(consulta);
             ds.Name = "Solicitudes";
             this.reportViewer1.LocalReport.DataSources.Add(ds);
             this.reportViewer1.RefreshReport();
+        }
+
+        private void checkBox100_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox100.Checked)
+            {
+                foreach (CheckBox item in ColumasUnidad.Controls.OfType<CheckBox>())
+                {
+                    item.Checked = true;
+                }
+            }
+            else
+            {
+                foreach (CheckBox item in ColumasUnidad.Controls.OfType<CheckBox>())
+                {
+                    item.Checked = false;
+                }
+            }
+        }
+
+        private void checkBox99_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox99.Checked)
+            {
+                foreach (CheckBox item in ColumnasPermiso.Controls.OfType<CheckBox>())
+                {
+                    item.Checked = true;
+                }
+            }
+            else
+            {
+                foreach (CheckBox item in ColumnasPermiso.Controls.OfType<CheckBox>())
+                {
+                    item.Checked = false;
+                }
+            }
+        }
+
+        private void checkBox98_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox98.Checked)
+            {
+                foreach (CheckBox item in ColumnasEmbarca.Controls.OfType<CheckBox>())
+                {
+                    item.Checked = true;
+                }
+            }
+            else
+            {
+                foreach (CheckBox item in ColumnasEmbarca.Controls.OfType<CheckBox>())
+                {
+                    item.Checked = false;
+                }
+            }
+        }
+
+        private void checkBox97_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox97.Checked)
+            {
+                foreach (CheckBox item in ColumnasSolicitudes.Controls.OfType<CheckBox>())
+                {
+                    item.Checked = true;
+                }
+            }
+            else
+            {
+                foreach (CheckBox item in ColumnasSolicitudes.Controls.OfType<CheckBox>())
+                {
+                    item.Checked = false;
+                }
+            }
+        }
+
+        private void checkBox101_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

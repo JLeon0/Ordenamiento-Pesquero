@@ -1021,7 +1021,6 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox3</rd:DefaultName>
-                <Left>0cm</Left>
                 <Height>0.6cm</Height>
                 <Width>2.7727cm</Width>
                 <Style>
@@ -1092,7 +1091,7 @@
                 </Paragraphs>
                 <rd:DefaultName>Textbox3</rd:DefaultName>
                 <Height>0.6cm</Height>
-                <Width>3.20026cm</Width>
+                <Width>3.37665cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -1118,9 +1117,9 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox4</rd:DefaultName>
-                <Left>3.20026cm</Left>
+                <Left>3.37665cm</Left>
                 <Height>0.6cm</Height>
-                <Width>1.73271cm</Width>
+                <Width>1.55632cm</Width>
                 <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
@@ -1162,7 +1161,7 @@
                 </Paragraphs>
                 <rd:DefaultName>Textbox3</rd:DefaultName>
                 <Height>0.6cm</Height>
-                <Width>1.96201cm</Width>
+                <Width>2.06784cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -1188,9 +1187,9 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox4</rd:DefaultName>
-                <Left>1.96201cm</Left>
+                <Left>2.06784cm</Left>
                 <Height>0.6cm</Height>
-                <Width>2.13016cm</Width>
+                <Width>2.02433cm</Width>
                 <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
@@ -1232,7 +1231,7 @@
                 </Paragraphs>
                 <rd:DefaultName>Textbox3</rd:DefaultName>
                 <Height>0.6cm</Height>
-                <Width>1.64451cm</Width>
+                <Width>1.78562cm</Width>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -1258,9 +1257,9 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox4</rd:DefaultName>
-                <Left>1.64451cm</Left>
+                <Left>1.78562cm</Left>
                 <Height>0.6cm</Height>
-                <Width>2.53999cm</Width>
+                <Width>2.39888cm</Width>
                 <ZIndex>1</ZIndex>
                 <Style>
                   <Border>
@@ -1285,9 +1284,69 @@
             </Style>
           </Rectangle>
           <Rectangle Name="Rectangle20">
+            <ReportItems>
+              <Textbox Name="Textbox41">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Capitan:</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox3</rd:DefaultName>
+                <Top>0.0142cm</Top>
+                <Height>0.6cm</Height>
+                <Width>1.42417cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox42">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Parameters!Capitan.Value</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox4</rd:DefaultName>
+                <Top>0.0142cm</Top>
+                <Left>1.42417cm</Left>
+                <Height>0.6cm</Height>
+                <Width>17.33638cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+            </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>1.50757cm</Top>
-            <Height>0.6cm</Height>
+            <Height>0.6142cm</Height>
             <Width>18.76055cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
@@ -1920,71 +1979,11 @@
                   <PaddingBottom>2pt</PaddingBottom>
                 </Style>
               </Textbox>
-              <Textbox Name="Textbox42">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>=Parameters!Capitan.Value</Value>
-                        <Style />
-                      </TextRun>
-                    </TextRuns>
-                    <Style />
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox4</rd:DefaultName>
-                <Top>0.5858cm</Top>
-                <Left>1.42417cm</Left>
-                <Height>0.6cm</Height>
-                <Width>17.33638cm</Width>
-                <ZIndex>2</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
-              <Textbox Name="Textbox41">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>Capitan:</Value>
-                        <Style />
-                      </TextRun>
-                    </TextRuns>
-                    <Style />
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox3</rd:DefaultName>
-                <Top>0.6cm</Top>
-                <Left>0cm</Left>
-                <Height>0.6cm</Height>
-                <Width>1.42417cm</Width>
-                <ZIndex>3</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>0.92177cm</Top>
             <Left>0cm</Left>
-            <Height>1.2cm</Height>
+            <Height>0.6cm</Height>
             <Width>18.76055cm</Width>
             <ZIndex>9</ZIndex>
             <Style>
@@ -2010,7 +2009,7 @@
     <Height>25.9cm</Height>
     <Style />
   </Body>
-  <Width>20.09099cm</Width>
+  <Width>22.20257cm</Width>
   <Page>
     <PageHeader>
       <Height>2.36361cm</Height>
