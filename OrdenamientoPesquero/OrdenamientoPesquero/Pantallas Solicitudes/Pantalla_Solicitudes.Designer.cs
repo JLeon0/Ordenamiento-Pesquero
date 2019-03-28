@@ -259,7 +259,7 @@
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(768, 10);
+            this.pictureBox7.Location = new System.Drawing.Point(836, 13);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(200, 60);
@@ -325,6 +325,7 @@
             this.montoE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.montoE.TextChanged += new System.EventHandler(this.montoE_TextChanged);
             this.montoE.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
+            this.montoE.Leave += new System.EventHandler(this.montoE_Leave);
             // 
             // label15
             // 
@@ -346,6 +347,7 @@
             this.montoF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.montoF.TextChanged += new System.EventHandler(this.montoE_TextChanged);
             this.montoF.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
+            this.montoF.Leave += new System.EventHandler(this.montoF_Leave);
             // 
             // label16
             // 
@@ -376,6 +378,7 @@
             this.montoP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.montoP.TextChanged += new System.EventHandler(this.montoE_TextChanged);
             this.montoP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
+            this.montoP.Leave += new System.EventHandler(this.montoP_Leave);
             // 
             // Total
             // 
@@ -417,6 +420,7 @@
             this.otro.Text = "0";
             this.otro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.otro.TextChanged += new System.EventHandler(this.montoE_TextChanged);
+            this.otro.Leave += new System.EventHandler(this.otro_Leave);
             // 
             // Apoyo
             // 

@@ -86,8 +86,10 @@ namespace OrdenamientoPesquero
         {
             DataTable pesq = new DataTable();
             pesq = proc.ObtenerPesquerias();
-            PesqueriaPer.DataSource = pesq;
-            PesqueriaPer.DisplayMember = "PESQUERIA";
+            foreach (DataRow item in pesq.Rows)
+            {
+                PesqueriaPer.Items.Add(item["PESQUERIA"].ToString());
+            }
         }
 
 
@@ -215,44 +217,47 @@ namespace OrdenamientoPesquero
         {
             exito = AccionesPermiso(true);
             bool pesqueriacorrecta = true;
-            if (!PesqueriaPer.Items.Contains(PesqueriaPer.Text))
+            if (exito > 0)
             {
-                pesqueriacorrecta = false;
-                DialogResult result = MessageBox.Show("La pesquería no existe... Desea agregarla como nueva?", "NO EXISTE LA PESQUERÍA", MessageBoxButtons.YesNo);
-                if (result == DialogResult.Yes)
+                if (!PesqueriaPer.Items.Contains(PesqueriaPer.Text))
                 {
-                    proc.RegistrarPesqueria(PesqueriaPer.Text);
-                    pesqueriacorrecta = true;
-                }
-            }
-            if (pesqueriacorrecta)
-            {
-                string a = "";
-                string b = "";
-                string c = "";
-                string d = "";
-                proc.Borrar_equipo(nPer.Text);
-                equiposdepesca();
-                if (exito == 1)
-                {
-                    for (int i = 0; i < dgvEmbarcacionesPerm.RowCount; i++)
+                    pesqueriacorrecta = false;
+                    DialogResult result = MessageBox.Show("La pesquería no existe... Desea agregarla como nueva?", "NO EXISTE LA PESQUERÍA", MessageBoxButtons.YesNo);
+                    if (result == DialogResult.Yes)
                     {
-                        if (dgvEmbarcacionesPerm[0, i].Value != null)
+                        proc.RegistrarPesqueria(PesqueriaPer.Text);
+                        pesqueriacorrecta = true;
+                    }
+                    else { MessageBox.Show("La pesquería no existe y ha decidido no agregarla"); }
+                }
+                if (pesqueriacorrecta)
+                {
+                    string a = "";
+                    string b = "";
+                    string c = "";
+                    string d = "";
+                    proc.Borrar_equipo(nPer.Text);
+                    equiposdepesca();
+                    if (exito == 1)
+                    {
+                        for (int i = 0; i < dgvEmbarcacionesPerm.RowCount; i++)
                         {
-                            a = dgvEmbarcacionesPerm[0, i].Value.ToString();
-                            b = dgvEmbarcacionesPerm[1, i].Value.ToString();
-                            c = dgvEmbarcacionesPerm[3, i].Value.ToString();
-                            d = dgvEmbarcacionesPerm[2, i].Value.ToString();
-                            Emb = new Embarcacion(a, b, c, d, Municipio, Rnpa);
-                            exito += proc.registrar_perm_emb(Emb, nPer.Text);
+                            if (dgvEmbarcacionesPerm[0, i].Value != null)
+                            {
+                                a = dgvEmbarcacionesPerm[0, i].Value.ToString();
+                                b = dgvEmbarcacionesPerm[1, i].Value.ToString();
+                                c = dgvEmbarcacionesPerm[3, i].Value.ToString();
+                                d = dgvEmbarcacionesPerm[2, i].Value.ToString();
+                                Emb = new Embarcacion(a, b, c, d, Municipio, Rnpa);
+                                exito += proc.registrar_perm_emb(Emb, nPer.Text);
+                            }
                         }
                     }
                 }
-                val.Exito(exito);
-                CargarPermisos();
-                CargarPesquerias();
             }
-            else { MessageBox.Show("La pesquería no existe y ha decidido no agregarla"); }
+            val.Exito(exito);
+            CargarPermisos();
+            CargarPesquerias();
         }
 
         private void Actualizar_Click(object sender, EventArgs e)
