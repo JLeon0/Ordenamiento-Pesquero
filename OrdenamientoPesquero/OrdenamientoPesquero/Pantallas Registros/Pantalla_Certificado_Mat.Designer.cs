@@ -73,6 +73,9 @@
             this.Marca = new System.Windows.Forms.TextBox();
             this.limpiar = new System.Windows.Forms.PictureBox();
             this.gbVerificacion = new System.Windows.Forms.GroupBox();
+            this.dgvPescadores = new System.Windows.Forms.DataGridView();
+            this.Ocupacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FechaExped = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.RegNum = new System.Windows.Forms.MaskedTextBox();
@@ -113,14 +116,12 @@
             this.FotoEmb = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.dgvPescadores = new System.Windows.Forms.DataGridView();
-            this.Ocupacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.gbCertificado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelMATRICULA)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
             this.gbVerificacion.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPescadores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AbrirExpediente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarMATRICULA)).BeginInit();
@@ -136,7 +137,6 @@
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPescadores)).BeginInit();
             this.SuspendLayout();
             // 
             // label78
@@ -623,6 +623,48 @@
             this.gbVerificacion.TabStop = false;
             this.gbVerificacion.Text = "Verificación / Chipeo";
             // 
+            // dgvPescadores
+            // 
+            this.dgvPescadores.AllowUserToAddRows = false;
+            this.dgvPescadores.AllowUserToDeleteRows = false;
+            this.dgvPescadores.BackgroundColor = System.Drawing.Color.White;
+            this.dgvPescadores.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvPescadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPescadores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Ocupacion,
+            this.Nombre});
+            this.dgvPescadores.GridColor = System.Drawing.Color.White;
+            this.dgvPescadores.Location = new System.Drawing.Point(20, 89);
+            this.dgvPescadores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvPescadores.Name = "dgvPescadores";
+            this.dgvPescadores.ReadOnly = true;
+            this.dgvPescadores.RowHeadersVisible = false;
+            this.dgvPescadores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dgvPescadores.Size = new System.Drawing.Size(547, 97);
+            this.dgvPescadores.TabIndex = 221;
+            // 
+            // Ocupacion
+            // 
+            this.Ocupacion.Frozen = true;
+            this.Ocupacion.HeaderText = "Ocupacion";
+            this.Ocupacion.Name = "Ocupacion";
+            this.Ocupacion.ReadOnly = true;
+            this.Ocupacion.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Ocupacion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Ocupacion.Width = 135;
+            // 
+            // Nombre
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.Nombre.DefaultCellStyle = dataGridViewCellStyle1;
+            this.Nombre.Frozen = true;
+            this.Nombre.HeaderText = "Nombre";
+            this.Nombre.Name = "Nombre";
+            this.Nombre.ReadOnly = true;
+            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.Nombre.Width = 400;
+            // 
             // FechaExped
             // 
             this.FechaExped.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -990,7 +1032,7 @@
             this.FactArtes.AutoSize = true;
             this.FactArtes.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FactArtes.ForeColor = System.Drawing.Color.Black;
-            this.FactArtes.Location = new System.Drawing.Point(5, 67);
+            this.FactArtes.Location = new System.Drawing.Point(5, 68);
             this.FactArtes.Name = "FactArtes";
             this.FactArtes.Size = new System.Drawing.Size(150, 15);
             this.FactArtes.TabIndex = 187;
@@ -1001,7 +1043,7 @@
             this.FactMotor.AutoSize = true;
             this.FactMotor.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FactMotor.ForeColor = System.Drawing.Color.Black;
-            this.FactMotor.Location = new System.Drawing.Point(5, 93);
+            this.FactMotor.Location = new System.Drawing.Point(5, 92);
             this.FactMotor.Name = "FactMotor";
             this.FactMotor.Size = new System.Drawing.Size(101, 15);
             this.FactMotor.TabIndex = 188;
@@ -1023,7 +1065,7 @@
             this.PapChip.AutoSize = true;
             this.PapChip.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PapChip.ForeColor = System.Drawing.Color.Black;
-            this.PapChip.Location = new System.Drawing.Point(5, 139);
+            this.PapChip.Location = new System.Drawing.Point(5, 140);
             this.PapChip.Name = "PapChip";
             this.PapChip.Size = new System.Drawing.Size(116, 15);
             this.PapChip.TabIndex = 190;
@@ -1082,48 +1124,6 @@
             this.pictureBox2.TabIndex = 167;
             this.pictureBox2.TabStop = false;
             // 
-            // dgvPescadores
-            // 
-            this.dgvPescadores.AllowUserToAddRows = false;
-            this.dgvPescadores.AllowUserToDeleteRows = false;
-            this.dgvPescadores.BackgroundColor = System.Drawing.Color.White;
-            this.dgvPescadores.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dgvPescadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPescadores.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Ocupacion,
-            this.Nombre});
-            this.dgvPescadores.GridColor = System.Drawing.Color.White;
-            this.dgvPescadores.Location = new System.Drawing.Point(20, 89);
-            this.dgvPescadores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dgvPescadores.Name = "dgvPescadores";
-            this.dgvPescadores.ReadOnly = true;
-            this.dgvPescadores.RowHeadersVisible = false;
-            this.dgvPescadores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.dgvPescadores.Size = new System.Drawing.Size(547, 97);
-            this.dgvPescadores.TabIndex = 221;
-            // 
-            // Ocupacion
-            // 
-            this.Ocupacion.Frozen = true;
-            this.Ocupacion.HeaderText = "Ocupacion";
-            this.Ocupacion.Name = "Ocupacion";
-            this.Ocupacion.ReadOnly = true;
-            this.Ocupacion.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Ocupacion.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Ocupacion.Width = 135;
-            // 
-            // Nombre
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.Nombre.DefaultCellStyle = dataGridViewCellStyle1;
-            this.Nombre.Frozen = true;
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.Name = "Nombre";
-            this.Nombre.ReadOnly = true;
-            this.Nombre.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.Nombre.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.Nombre.Width = 400;
-            // 
             // Pantalla_Certificado_Mat
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1157,6 +1157,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).EndInit();
             this.gbVerificacion.ResumeLayout(false);
             this.gbVerificacion.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPescadores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AbrirExpediente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarMATRICULA)).EndInit();
@@ -1176,7 +1177,6 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvPescadores)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

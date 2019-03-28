@@ -18,7 +18,8 @@ namespace OrdenamientoPesquero
         Solicitud soli; DataTable solicitudes;
         Validaciones val = new Validaciones();
         bool Ap = false;
-        int mE, mF, mP, ot, NIVEL;
+        double mE, mF, mP, ot;
+        int NIVEL;
 
         public Pantalla_Solicitudes(string nombre, string curp, bool ap, string usuario, int nivel)
         {
@@ -90,12 +91,8 @@ namespace OrdenamientoPesquero
         {
             if (!Ap)
             {
-                int i = 0;
-                for (i = 0; i < monto.Text.Length; i++)
-                { if (monto.Text[i].ToString() == ".") { break; } }
                 int x = monto.Text[0].ToString() == "$" ? 1 : 0;
-                i -= x == 0 ? 0 : 1;
-                string montocrack = monto.Text.Substring(x, i).Replace(",", "");
+                string montocrack = (Convert.ToDouble(monto.Text.Substring(x, monto.Text.Length - x))).ToString();
                 soli = new Solicitud(NombrePesc.Text, Curp, folio.Text + "-" + AñoFolio.Value.ToString() + "-" + ClavePrograma.Text, fecha.Text, prioridad.Text, concepto.Text, estatus.Text, montocrack, responsable.Text, director.Text, observaciones.Text);
                 if (proc.Registrar_Solicitud(soli) > 0) { MessageBox.Show("Solicitud ingresada con éxito"); }
                 else { MessageBox.Show("Error al ingresar solicitud"); }
@@ -132,14 +129,14 @@ namespace OrdenamientoPesquero
                     prioridad.Text = filas["PRIORIDAD"].ToString();
                     concepto.Text = filas["CONCEPTO"].ToString();
                     estatus.Text = filas["ESTATUS"].ToString();
-                    monto.Text = Convert.ToInt32(filas["MONTO"].ToString()).ToString("C");
+                    monto.Text = "$" + (Convert.ToDouble(filas["MONTO"].ToString().Substring(0, filas["MONTO"].ToString().Length))).ToString("N2");
                     responsable.Text = filas["RESPONSABLE"].ToString();
                     director.Text = filas["DIRECTOR"].ToString();
                     observaciones.Text = filas["OBSERVACIONES"].ToString();
-                    montoE.Text = filas["MONTOE"].ToString();
-                    montoF.Text = filas["MONTOF"].ToString();
-                    montoP.Text = filas["MONTOP"].ToString();
-                    otro.Text = filas["MONTOO"].ToString();
+                    montoE.Text = "$" + (Convert.ToDouble(filas["MONTOE"].ToString().Substring(0, filas["MONTOE"].ToString().Length))).ToString("N2");
+                    montoF.Text = "$" + (Convert.ToDouble(filas["MONTOF"].ToString().Substring(0, filas["MONTOF"].ToString().Length))).ToString("N2");
+                    montoP.Text = "$" + (Convert.ToDouble(filas["MONTOP"].ToString().Substring(0, filas["MONTOP"].ToString().Length))).ToString("N2");
+                    otro.Text = "$" + (Convert.ToDouble(filas["MONTOO"].ToString().Substring(0, filas["MONTOO"].ToString().Length))).ToString("N2");
                     programa.Text = filas["PROGRAMA"].ToString();
                 }
             }
@@ -149,19 +146,25 @@ namespace OrdenamientoPesquero
         {
             if (!Ap)
             {
-                int i = 0;
-                for (i = 0; i < monto.Text.Length; i++)
-                { if (monto.Text[i].ToString() == ".") { break; } }
                 int x = monto.Text[0].ToString() == "$" ? 1 : 0;
-                i -= x == 0 ? 0 : 1;
-                string montocrack = monto.Text.Substring(x, i).Replace(",", "");
+                string montocrack = (Convert.ToDouble(monto.Text.Substring(x, monto.Text.Length - x))).ToString();
                 soli = new Solicitud(NombrePesc.Text, Curp, folio.Text + "-" + AñoFolio.Value.ToString() + "-" + ClavePrograma.Text, fecha.Text, prioridad.Text, concepto.Text, estatus.Text, montocrack, responsable.Text, director.Text, observaciones.Text);
                 if (proc.Actualizar_Solicitud(soli) > 0) { MessageBox.Show("Solicitud actualizada con éxito"); }
                 else { MessageBox.Show("Error al actualizar solicitud"); }
             }
             else
             {
-                soli = new Solicitud(NombrePesc.Text, Curp, folio.Text + "-" + AñoFolio.Value.ToString() + "-" + ClavePrograma.Text, fecha.Text, concepto.Text, observaciones.Text, montoF.Text, montoE.Text, montoP.Text, otro.Text, programa.Text, Total.Text,1);
+                int x = montoE.Text[0].ToString() == "$" ? 1 : 0;
+                string montoEcrack = (Convert.ToDouble(montoE.Text.Substring(x, montoE.Text.Length - x))).ToString();
+                x = montoF.Text[0].ToString() == "$" ? 1 : 0;
+                string montoFcrack = (Convert.ToDouble(montoF.Text.Substring(x, montoF.Text.Length - x))).ToString();
+                x = montoP.Text[0].ToString() == "$" ? 1 : 0;
+                string montoPcrack = (Convert.ToDouble(montoP.Text.Substring(x, montoP.Text.Length - x))).ToString();
+                x = otro.Text[0].ToString() == "$" ? 1 : 0;
+                string otrocrack = (Convert.ToDouble(otro.Text.Substring(x, otro.Text.Length - x))).ToString();
+                x = Total.Text[0].ToString() == "$" ? 1 : 0;
+                string totalcrack = (Convert.ToDouble(Total.Text.Substring(x, Total.Text.Length - x))).ToString();
+                soli = new Solicitud(NombrePesc.Text, Curp, folio.Text + "-" + AñoFolio.Value.ToString() + "-" + ClavePrograma.Text, fecha.Text, concepto.Text, observaciones.Text, montoFcrack, montoEcrack, montoPcrack, otrocrack, programa.Text, totalcrack, 1);
                 if (proc.Actualizar_Apoyo(soli) > 0) { MessageBox.Show("Apoyo actualizado con éxito"); }
                 else { MessageBox.Show("Error al actualizar apoyo"); }
 
@@ -171,7 +174,8 @@ namespace OrdenamientoPesquero
 
         private void monto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!Char.IsNumber(e.KeyChar) && !Char.IsControl(e.KeyChar) && e.KeyChar != '-')
+            if(e.KeyChar == '.') { if (monto.Text.Contains('.')) { e.Handled = true; } }
+            if (!Char.IsNumber(e.KeyChar) && !Char.IsControl(e.KeyChar) && e.KeyChar != '.')
             {
                 e.Handled = true;
             }
@@ -182,19 +186,39 @@ namespace OrdenamientoPesquero
             programa.SelectedIndex = ClavePrograma.SelectedIndex;
         }
 
+        private void montoE_Leave(object sender, EventArgs e)
+        {
+            int x = montoE.Text[0].ToString() == "$" ? 1 : 0;
+            double numero = Convert.ToDouble(montoE.Text.Substring(x, montoE.Text.Length - x));
+            montoE.Text = "$" + numero.ToString("N2");
+        }
+
+        private void montoF_Leave(object sender, EventArgs e)
+        {
+            int x = montoF.Text[0].ToString() == "$" ? 1 : 0;
+            double numero = Convert.ToDouble(montoF.Text.Substring(x, montoF.Text.Length - x));
+            montoF.Text = "$" + numero.ToString("N2");
+        }
+
+        private void montoP_Leave(object sender, EventArgs e)
+        {
+            int x = montoP.Text[0].ToString() == "$" ? 1 : 0;
+            double numero = Convert.ToDouble(montoP.Text.Substring(x, montoP.Text.Length - x));
+            montoP.Text = "$" + numero.ToString("N2");
+        }
+
+        private void otro_Leave(object sender, EventArgs e)
+        {
+            int x = otro.Text[0].ToString() == "$" ? 1 : 0;
+            double numero = Convert.ToDouble(otro.Text.Substring(x, otro.Text.Length - x));
+            otro.Text = "$" + numero.ToString("N2");
+        }
+
         private void monto_Leave(object sender, EventArgs e)
         {
-            try { monto.Text = Convert.ToInt32(monto.Text).ToString("C"); }
-            catch (Exception)
-            {
-                int i = 0;
-                for (i = 0; i < monto.Text.Length; i++)
-                { if (monto.Text[i].ToString() == ".") { break; } }
-                int x = monto.Text[0].ToString() == "$" ? 1 : 0;
-                 i -= x == 0 ? 0 : 1 ;
-                string a = monto.Text.Substring(x, i).Replace(",", "");
-                monto.Text = Convert.ToInt32(a).ToString("C");
-            }
+            int x = monto.Text[0].ToString() == "$" ? 1 : 0;
+            double numero = Convert.ToDouble(monto.Text.Substring(x, monto.Text.Length - x));
+            monto.Text = "$" + numero.ToString("N2");
         }
 
         private void Entregar_Click(object sender, EventArgs e)
@@ -229,12 +253,36 @@ namespace OrdenamientoPesquero
 
         private void montoE_TextChanged(object sender, EventArgs e)
         {
-            if (montoE.Text == "") { mE = 0; } else { mE = Convert.ToInt32(montoE.Text); }
-            if (montoF.Text == "") { mF = 0; } else { mF = Convert.ToInt32(montoF.Text); }
-            if (montoP.Text == "") { mP = 0; } else { mP = Convert.ToInt32(montoP.Text); }
-            if (otro.Text == "") { ot = 0; } else { ot = Convert.ToInt32(otro.Text); }
-
-            Total.Text = (mE + mF + mP + ot).ToString();
+            if (montoE.Text == "") { mE = 0; }
+            else
+            {
+                int x = montoE.Text[0].ToString() == "$" ? 1 : 0;
+                double numero = Convert.ToDouble(montoE.Text.Substring(x, montoE.Text.Length - x));
+                mE = numero;
+            }
+            if (montoF.Text == "") { mF = 0; }
+            else
+            {
+                int x = montoF.Text[0].ToString() == "$" ? 1 : 0;
+                double numero = Convert.ToDouble(montoF.Text.Substring(x, montoF.Text.Length - x));
+                mF = numero;
+            }
+            if (montoP.Text == "") { mP = 0; }
+            else
+            {
+                int x = montoP.Text[0].ToString() == "$" ? 1 : 0;
+                double numero = Convert.ToDouble(montoP.Text.Substring(x, montoP.Text.Length - x));
+                mP = numero;
+            }
+            if (otro.Text == "") { ot = 0; }
+            else
+            {
+                int x = otro.Text[0].ToString() == "$" ? 1 : 0;
+                double numero = Convert.ToDouble(otro.Text.Substring(x, otro.Text.Length - x));
+                ot = numero;
+            }
+            string total = "$" + (mE + mF + mP + ot).ToString("N2");
+            Total.Text = total;
         }
 
         private void LimpiarPantalla()
