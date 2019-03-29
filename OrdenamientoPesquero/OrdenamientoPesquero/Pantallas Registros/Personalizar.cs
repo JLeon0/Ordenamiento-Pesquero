@@ -262,11 +262,12 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 {
                     param = textBox1.Text;
                 }
-                dt = proc.Obtener_Capitan(param);
+                DataTable dt4;
+                dt4 = proc.Obtener_Capitan(param);
                 ReportParameter[] para = new ReportParameter[1];
-                if (dt.Rows.Count > 0)
+                if (dt4.Rows.Count > 0)
                 {
-                    para[0] = new ReportParameter("Capitan", dt.Rows[0][0].ToString());
+                    para[0] = new ReportParameter("Capitan", dt4.Rows[0][0].ToString());
                 }
                 else
                 {
@@ -358,6 +359,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 //}
                 consulta += " Order by " + OrdenaEmbarca.Text.Replace(" ", "");
                 ds.Value = proc.ObtenerTablaConsulta(consulta);
+                //reportViewer1.LocalReport.DataSources.Clear();
                 this.reportViewer1.LocalReport.DataSources.Add(ds);
             }
             this.reportViewer1.RefreshReport();
@@ -533,7 +535,20 @@ namespace OrdenamientoPesquero.Pantallas_Registros
 
         private void checkBox101_CheckedChanged(object sender, EventArgs e)
         {
-
+            if (checkBox101.Checked)
+            {
+                foreach (CheckBox item in ColumnasSolicitudes.Controls.OfType<CheckBox>())
+                {
+                    item.Checked = true;
+                }
+            }
+            else
+            {
+                foreach (CheckBox item in ColumnasSolicitudes.Controls.OfType<CheckBox>())
+                {
+                    item.Checked = false;
+                }
+            }
         }
     }
 }
