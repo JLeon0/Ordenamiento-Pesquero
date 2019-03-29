@@ -89,11 +89,6 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            bw.DoWork += (obj, ea) => Task();
-            bw.RunWorkerAsync();
-        }
         private void CargarInstancia()
         {
             Microsoft.Win32.RegistryKey baseKey = Microsoft.Win32.RegistryKey.OpenBaseKey(Microsoft.Win32.RegistryHive.LocalMachine, Microsoft.Win32.RegistryView.Registry64);
@@ -104,10 +99,11 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             }
             setString(c.CONEXIONPERRONA);
         }
-        private void Task()
-        {
-            CargarInstancia();
-        }
+        //private void Task()
+        //{
+        //    CargarInstancia();
+        //}
+
         public string setString(string CONEXIONPERRONA)
         {
             Properties.Settings.Default.OrdPesqueroConnectionString = CONEXIONPERRONA;
@@ -177,6 +173,36 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         private void VerPass_MouseLeave(object sender, EventArgs e)
         {
             txtpass.UseSystemPasswordChar = txtpass.UseSystemPasswordChar == true ? false : true;
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            CargarInstancia();
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            progressBar1.Value = e.ProgressPercentage;
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            txtpass.Enabled = true;
+            txtuser.Enabled = true;
+            VerPass.Enabled = true;
+            btncerrar.Enabled = true;
+            btnlogin.Enabled = true;
+            progressBar1.Visible = false;
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            txtpass.Enabled = false;
+            txtuser.Enabled = false;
+            VerPass.Enabled = false;
+            btncerrar.Enabled = false;
+            btnlogin.Enabled = false;
+            backgroundWorker1.RunWorkerAsync();
         }
     }
 }
