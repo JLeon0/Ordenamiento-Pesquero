@@ -178,6 +178,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             CargarInstancia();
+            System.Threading.Thread.Sleep(50);
         }
 
         private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
