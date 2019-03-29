@@ -138,7 +138,7 @@ namespace Logica
             string[] Parametros = { "@folio", "@rnpa", "@npermiso", "@pesqueria", "@lugarexpedicion", "@diaexpedicion", "@finvigencia", "@zonapesca", "@sitiosdesembarque", "@tipoperm" };
             return c.Ejecutar("ActualizarPermiso", Parametros, perm.FOLIO, perm.RNPA, perm.NPERMISO, perm.PESQUERIA, perm.LUGAR, perm.DIAEXP, perm.FINVIGENCIA, perm.ZONAPESC, perm.SITIOS, perm.TIPOPERM);
         }
-        public int Eliminar_Permiso(String Numpermiso)
+        public int Eliminar_Permiso(string Numpermiso)
         {
             string[] Parametros = { "@Npermiso" };
             return c.Ejecutar("EliminarPermiso", Parametros, Numpermiso);

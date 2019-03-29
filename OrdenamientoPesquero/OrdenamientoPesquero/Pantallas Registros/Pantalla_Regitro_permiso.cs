@@ -48,6 +48,8 @@ namespace OrdenamientoPesquero
                 else { dt.Rows.RemoveAt(i); i--; }
             }
             CargarPesquerias();
+            dgvArchivos.RowCount = 1;
+            dgvArchivos[0, 0].Value = "Permiso Escaneado";
             if (NIVEL == 0 || NIVEL == 4)
             {
                 gbDatos.Enabled = true;
@@ -301,7 +303,12 @@ namespace OrdenamientoPesquero
             if (Si == DialogResult.Yes)
             {
                 exito = proc.Eliminar_Permiso(nPer.Text);
+                if(exito > 0)
+                {
+                    MessageBox.Show("Permiso Eliminado exitosamente", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
                 limpiarpermiso();
+                CargarPermisos();
             }
         }
 
@@ -439,10 +446,8 @@ namespace OrdenamientoPesquero
         }
         private void CargarExpediente()
         {
-            string per = ListaPermisos.SelectedValue.ToString();
+            string per = ListaPermisos.SelectedValue.ToString(); 
             DataTable exp = proc.ObtenerPermiso(per);
-            dgvArchivos.RowCount = 1;
-            dgvArchivos[0, 0].Value = "Permiso Escaneado";
             if (exp.Rows[0]["APERMISO"].ToString() != "") { dgvArchivos[1, 0].Value = true; dgvArchivos[1, 0].Style.BackColor = Color.Green; }
             else { dgvArchivos[1, 0].Value = false; dgvArchivos[1, 0].Style.BackColor = Color.Red   ; }
 
