@@ -25,6 +25,14 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             unidad = uni;
             tip = tipo;
         }
+        public Vistas(string parametro, string uni, int tipo, byte[] huell)
+        {
+            InitializeComponent();
+            rnpa = parametro;
+            unidad = uni;
+            tip = tipo;
+            huella = huell;
+        }
         public Vistas(string curp, string NombrePesc, string RNPA,string ordenado, int tipo){
             InitializeComponent();
             rnpa = RNPA;
@@ -38,6 +46,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         string rnpa;
         string unidad;
         int tip;
+        byte[] huella;
         Procedimientos proc = new Procedimientos();
         Conexion c;
         private void Vistas_Load(object sender, EventArgs e)
@@ -208,10 +217,10 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     {
                         para1[14] = new ReportParameter("EMBARCA", " ");
                     }
-                    string ruta = Application.StartupPath.ToString();
-                    ruta = ruta.Replace("\\", "*");
-                    ruta = ruta.Replace("*", "/");
-                    para1[8] = new ReportParameter("RutaImagen", ruta + "perfil.jpg");
+                    //string ruta = Application.StartupPath.ToString();
+                    //ruta = ruta.Replace("\\", "*");
+                    //ruta = ruta.Replace("*", "/");
+                    para1[8] = new ReportParameter("RutaImagen",huella.ToString());
                     reportViewer1.LocalReport.SetParameters(para1);
                     this.reportViewer1.LocalReport.DataSources.Add(datos);
                     this.reportViewer1.LocalReport.DataSources.Add(datos2);

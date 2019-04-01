@@ -29,6 +29,7 @@ namespace OrdenamientoPesquero
         string[] Municipios;
         byte[] imagenBuffer;
         string matricula = "";
+        byte[] huell;
 
         public Pantalla_Registro_Usuario(string rnpa, string nombre, int tipo, string user, string nombreuser, int nivel)
         {
@@ -1034,6 +1035,7 @@ namespace OrdenamientoPesquero
                     Huella.BackColor = Color.White;
                     Huella.BackgroundImage = null;
                     imagenBuffer = (byte[])dt.Rows[0]["HUELLA"];
+                    huell = imagenBuffer;
                     ms = new System.IO.MemoryStream(imagenBuffer);
                     Huella.BackgroundImage = (Image.FromStream(ms));
                 }
@@ -1160,7 +1162,7 @@ namespace OrdenamientoPesquero
 
         private void Credencial_Click(object sender, EventArgs e)
         {
-            Vistas v = new Vistas(CURPPesc.Text, NombreUnidad, 4);
+            Vistas v = new Vistas(CURPPesc.Text, NombreUnidad, 4, huell);
             v.Show(this);
         }
 

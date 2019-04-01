@@ -422,8 +422,9 @@
           </Image>
           <Image Name="Image5">
             <Source>Database</Source>
-            <Value>=First(Fields!HUELLA.Value, "DataSet2")</Value>
+            <Value>=Parameters!RutaImagen.Value</Value>
             <MIMEType>image/jpeg</MIMEType>
+            <Sizing>Fit</Sizing>
             <Top>5.14522cm</Top>
             <Left>14.01947cm</Left>
             <Height>6.58413cm</Height>
