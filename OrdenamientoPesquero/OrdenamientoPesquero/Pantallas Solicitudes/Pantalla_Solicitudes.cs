@@ -17,7 +17,7 @@ namespace OrdenamientoPesquero
         Procedimientos proc = new Procedimientos();
         Solicitud soli; DataTable solicitudes;
         Validaciones val = new Validaciones();
-        bool Ap = false;
+        bool Ap = false, ApTemp = false;
         double mE, mF, mP, ot;
         int NIVEL, exito;
 
@@ -79,7 +79,6 @@ namespace OrdenamientoPesquero
                 if (NIVEL == 0)
                 {
                     solicitudes = proc.ObtenerApoyos(Curp, "");
-                    solicitudes.Merge(proc.ObtenerApoyos(Curp, ""));
                 }
                 else
                 {
@@ -153,7 +152,19 @@ namespace OrdenamientoPesquero
             {
                 if (Lista.Text == filas["FOLIO"].ToString())
                 {
+                    if (!Ap)
+                    {
+                        solicitud.Visible = true;
+                        Apoyo.Visible = false;
+                        ApTemp = false;
+                    }
+                    else
+                    {
+                        solicitud.Visible = false;
+                        Apoyo.Visible = true;
+                    }
                     string x = filas["FOLIO"].ToString();
+                    NombrePesc.Text = filas["NOMBRE"].ToString();
                     folio.Text = "";
                     int i = 0;
                     for (i = 0; x[i] != '-'; i++)
@@ -185,7 +196,7 @@ namespace OrdenamientoPesquero
 
         private void Actualizar_Click(object sender, EventArgs e)
         {
-            if (!Ap)
+            if (!Ap && !ApTemp)
             {
                 int x = monto.Text[0].ToString() == "$" ? 1 : 0;
                 string montocrack = (Convert.ToDouble(monto.Text.Substring(x, monto.Text.Length - x))).ToString();
@@ -283,6 +294,11 @@ namespace OrdenamientoPesquero
             otro.Text = "$" + numero.ToString("N2");
         }
 
+        private void limpiar_Click(object sender, EventArgs e)
+        {
+            LimpiarPantalla();
+        }
+
         private void monto_Leave(object sender, EventArgs e)
         {
             double numero;
@@ -302,16 +318,15 @@ namespace OrdenamientoPesquero
             if (!Ap)
             {
                 int exito = proc.Entregar_Solicitud(folio.Text + "-" + AñoFolio.Value.ToString() + "-" + ClavePrograma.Text);
-                if (exito == 1) { MessageBox.Show("Se ha aprovado la solicitud con exito", "Apoyo registrado.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); } else { MessageBox.Show("HUBO UN ERROR"); }
+                if (exito == 1) { MessageBox.Show("Se ha aprovado la solicitud con exito", "Apoyo registrado.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); solicitud.Visible = false; Apoyo.Visible = true; Apoyo.Enabled = true; ApTemp = true; } else { MessageBox.Show("HUBO UN ERROR"); }
             }
             else
             {
                 int exito = proc.RegresarApoyoSoli(folio.Text + "-" + AñoFolio.Value.ToString() + "-" + ClavePrograma.Text);
-                if (exito == 1) { MessageBox.Show("Se ha cancelado el apoyo con exito, volvió a ser solicitud", "Apoyo Cancelado.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk); } else { MessageBox.Show("HUBO UN ERROR"); }
+                if (exito == 1) { MessageBox.Show("Se ha cancelado el apoyo con exito, volvió a ser solicitud", "Apoyo Cancelado.", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);  } else { MessageBox.Show("HUBO UN ERROR"); }
 
             }
             CargarSolicitudes();
-            LimpiarPantalla();
         }
 
         private void Eliminar_Click(object sender, EventArgs e)
