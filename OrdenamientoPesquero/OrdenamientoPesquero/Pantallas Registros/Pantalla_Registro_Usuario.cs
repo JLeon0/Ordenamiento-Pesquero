@@ -654,13 +654,9 @@ namespace OrdenamientoPesquero
 
         private void MatriculaPesc_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (MatriculaPesc.Text == "NO APLICA" && RNPA == "" )
+            if (RNPA != "")
             {
-                //MatriculaRelacion.Text = "-----";
-            }
-            else
-            {
-                MatriculaRelacion.Text = MatriculaPesc.SelectedValue.ToString();
+                MatriculaRelacion.Text = MatriculaPesc.SelectedText.ToString();
             }
         }
 

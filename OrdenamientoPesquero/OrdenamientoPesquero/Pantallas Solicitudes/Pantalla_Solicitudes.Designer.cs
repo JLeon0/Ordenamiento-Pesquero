@@ -319,7 +319,7 @@
             this.montoE.Location = new System.Drawing.Point(109, 15);
             this.montoE.MaxLength = 9;
             this.montoE.Name = "montoE";
-            this.montoE.Size = new System.Drawing.Size(68, 22);
+            this.montoE.Size = new System.Drawing.Size(108, 22);
             this.montoE.TabIndex = 3;
             this.montoE.Text = "0";
             this.montoE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -341,7 +341,7 @@
             this.montoF.Location = new System.Drawing.Point(109, 43);
             this.montoF.MaxLength = 9;
             this.montoF.Name = "montoF";
-            this.montoF.Size = new System.Drawing.Size(68, 22);
+            this.montoF.Size = new System.Drawing.Size(108, 22);
             this.montoF.TabIndex = 4;
             this.montoF.Text = "0";
             this.montoF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -372,7 +372,7 @@
             this.montoP.Location = new System.Drawing.Point(109, 71);
             this.montoP.MaxLength = 9;
             this.montoP.Name = "montoP";
-            this.montoP.Size = new System.Drawing.Size(68, 22);
+            this.montoP.Size = new System.Drawing.Size(108, 22);
             this.montoP.TabIndex = 5;
             this.montoP.Text = "0";
             this.montoP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -387,7 +387,7 @@
             this.Total.Name = "Total";
             this.Total.ReadOnly = true;
             this.Total.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.Total.Size = new System.Drawing.Size(68, 22);
+            this.Total.Size = new System.Drawing.Size(108, 22);
             this.Total.TabIndex = 174;
             this.Total.Text = "0";
             this.Total.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
@@ -415,7 +415,7 @@
             this.otro.Location = new System.Drawing.Point(109, 98);
             this.otro.MaxLength = 9;
             this.otro.Name = "otro";
-            this.otro.Size = new System.Drawing.Size(68, 22);
+            this.otro.Size = new System.Drawing.Size(108, 22);
             this.otro.TabIndex = 6;
             this.otro.Text = "0";
             this.otro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
@@ -603,7 +603,7 @@
             this.solicitud.Controls.Add(this.responsable);
             this.solicitud.Controls.Add(this.director);
             this.solicitud.Controls.Add(this.prioridad);
-            this.solicitud.Location = new System.Drawing.Point(452, 99);
+            this.solicitud.Location = new System.Drawing.Point(448, 99);
             this.solicitud.Name = "solicitud";
             this.solicitud.Size = new System.Drawing.Size(584, 152);
             this.solicitud.TabIndex = 3;
