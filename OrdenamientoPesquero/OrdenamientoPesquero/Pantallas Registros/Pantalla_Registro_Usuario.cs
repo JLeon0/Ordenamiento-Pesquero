@@ -524,10 +524,10 @@ namespace OrdenamientoPesquero
 
         private void CargarSolApo()
         {
-            dt = proc.ObtenerSolicitudes(CURPPesc.Text);
+            dt = proc.ObtenerSolicitudes(CURPPesc.Text,"");
             solicitudes.Text = dt.Rows.Count.ToString();
 
-            dt = proc.ObtenerApoyos(CURPPesc.Text);
+            dt = proc.ObtenerApoyos(CURPPesc.Text,"");
             apoyos.Text = dt.Rows.Count.ToString();
 
         }
