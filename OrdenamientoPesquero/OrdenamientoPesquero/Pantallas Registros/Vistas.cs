@@ -46,7 +46,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         string rnpa;
         string unidad;
         int tip;
-        byte[] huella;
+        Bitmap huella;
         Procedimientos proc = new Procedimientos();
         Conexion c;
         private void Vistas_Load(object sender, EventArgs e)

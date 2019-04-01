@@ -486,6 +486,7 @@
             this.prioridad.Name = "prioridad";
             this.prioridad.Size = new System.Drawing.Size(45, 24);
             this.prioridad.TabIndex = 3;
+            this.prioridad.Text = "3";
             // 
             // director
             // 

@@ -164,6 +164,7 @@ namespace OrdenamientoPesquero
                         Apoyo.Visible = true;
                     }
                     string x = filas["FOLIO"].ToString();
+                    NombrePesc.Text = filas["NOMBRE"].ToString();
                     folio.Text = "";
                     int i = 0;
                     for (i = 0; x[i] != '-'; i++)
