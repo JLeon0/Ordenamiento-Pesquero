@@ -30,8 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.txtuser = new System.Windows.Forms.TextBox();
             this.txtpass = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -56,15 +56,6 @@
             this.panel1.TabIndex = 0;
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             // 
-            // progressBar1
-            // 
-            this.progressBar1.BackColor = System.Drawing.Color.White;
-            this.progressBar1.Location = new System.Drawing.Point(219, 145);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(440, 29);
-            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
-            this.progressBar1.TabIndex = 9;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_V_;
@@ -75,6 +66,15 @@
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.BackColor = System.Drawing.Color.White;
+            this.progressBar1.Location = new System.Drawing.Point(219, 145);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(436, 46);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Continuous;
+            this.progressBar1.TabIndex = 9;
             // 
             // txtuser
             // 
