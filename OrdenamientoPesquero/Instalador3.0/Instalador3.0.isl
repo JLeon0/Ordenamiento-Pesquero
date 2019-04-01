@@ -1917,6 +1917,7 @@
 		<row><td>reportexpermicionario.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|ReporteXPermicionario.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\ReporteXPermicionario.rdlc</td><td>1</td><td/></row>
 		<row><td>reportexunidad.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|ReporteXUnidad.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\ReporteXUnidad.rdlc</td><td>1</td><td/></row>
 		<row><td>resumen_permisos.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>RESUME~1.RDL|Resumen_permisos.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Resumen_permisos.rdlc</td><td>1</td><td/></row>
+		<row><td>solicitudes_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>SOLICI~1.RDL|Solicitudes_personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Solicitudes_personal.rdlc</td><td>1</td><td/></row>
 		<row><td>solicitudesapoyosxpescador.r</td><td>ISX_DEFAULTCOMPONENT</td><td>SOLICI~1.RDL|SolicitudesApoyosXPescador.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\SolicitudesApoyosXPescador.rdlc</td><td>1</td><td/></row>
 		<row><td>unidad_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>UNIDAD~1.RDL|Unidad_Personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Unidad_Personal.rdlc</td><td>1</td><td/></row>
 		<row><td>xmunicipio.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>XMUNIC~1.RDL|xMunicipio.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\xMunicipio.rdlc</td><td>1</td><td/></row>
@@ -3769,6 +3770,7 @@
 		<row><td>ID_STRING4</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>-1398349617</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>LAUNCH~1.EXE|Launch OrdenamientoPesquero.exe</td><td>0</td><td/><td>-257479893</td></row>
 		<row><td>ID_STRING6</td><td>1033</td><td/><td>0</td><td/><td>-1859697173</td></row>
+		<row><td>ID_STRING7</td><td>1033</td><td>Ordenamiento Pesquero</td><td>0</td><td/><td>-643318839</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>-1398349809</td></row>
 	</table>
 
@@ -3882,8 +3884,9 @@
 		<col def="V0">Data</col>
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I2">ISIconIndex</col>
-		<row><td>ARPPRODUCTICON.exe</td><td/><td>E:\0000\icono asi bien perron alv.ico</td><td>0</td></row>
-		<row><td>OrdenamientoPesque_580E2A0FA68A4E5EB5E2405DABCEDD32.exe</td><td/><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.exe</td><td>0</td></row>
+		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;VSSolutionFolder&gt;\OrdenamientoPesquero\gbcs4x4.ico</td><td>0</td></row>
+		<row><td>OrdenamientoPesque_0B3D67475AEA46BD8E529FFF5F06FC4F.exe</td><td/><td>E:\0000\icono asi bien perron alv.ico</td><td>0</td></row>
+		<row><td>OrdenamientoPesque_436F92F4B7F14E439538806580E0A2E9.exe</td><td/><td>E:\0000\icono asi bien perron alv.ico</td><td>0</td></row>
 		<row><td>UNINST_Uninstall_O_BB403B7F5C684981AFBBF807CD1B25F0.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 		<row><td>UNINST_Uninstall_O_FAC2B9217CE34FA7A361F2BD1CBCA606.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 	</table>
@@ -4019,7 +4022,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<row><td>ISTheme</td><td>InstallShield Blue.theme</td></row>
 		<row><td>ISUSLock</td><td>{2779AFC2-EEC8-4721-8965-BF1991445859}</td></row>
 		<row><td>ISUSSignature</td><td>{84A30A5B-CE77-4733-9987-55DCE57AFBB5}</td></row>
-		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday,viewAppFiles,viewUpdateService,viewLearnMore,viewUpgradePaths,viewProject</td></row>
+		<row><td>ISVisitedViews</td><td>viewAssistant,viewISToday,viewAppFiles,viewUpdateService,viewLearnMore,viewUpgradePaths,viewProject,viewShortcuts</td></row>
 		<row><td>Limited</td><td>1</td></row>
 		<row><td>LockPermissionMode</td><td>1</td></row>
 		<row><td>MsiExecCmdLineOptions</td><td/></row>
@@ -4556,7 +4559,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>OrdenamientoPesquero.exe</td><td>ordenamiento_pesquero</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>OrdenamientoPesquero.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>OrdenamientoPesque_580E2A0FA68A4E5EB5E2405DABCEDD32.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>OrdenamientoPesquero.exe</td><td>ordenamiento_pesquero</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>OrdenamientoPesquero.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>OrdenamientoPesque_0B3D67475AEA46BD8E529FFF5F06FC4F.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>OrdenamientoPesquero.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>OrdenamientoPesquero.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>OrdenamientoPesque_436F92F4B7F14E439538806580E0A2E9.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>UNINST_Uninstall_Ordenamiento_Pesquero</td><td>ordenamiento_pesquero</td><td>UNINST|Uninstall Ordenamiento Pesquero</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {E323A380-1547-4DB7-809A-AAF3A993A228}</td><td/><td/><td>UNINST_Uninstall_O_FAC2B9217CE34FA7A361F2BD1CBCA606.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>UNINST_Uninstall_Ordenamiento_Pesquero1</td><td>DesktopFolder</td><td>UNINST|Uninstall Ordenamiento Pesquero</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {E323A380-1547-4DB7-809A-AAF3A993A228}</td><td/><td/><td>UNINST_Uninstall_O_BB403B7F5C684981AFBBF807CD1B25F0.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>
