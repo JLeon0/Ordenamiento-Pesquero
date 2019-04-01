@@ -19,7 +19,7 @@ namespace OrdenamientoPesquero
         Validaciones val = new Validaciones();
         bool Ap = false;
         double mE, mF, mP, ot;
-        int NIVEL;
+        int NIVEL, exito;
 
         public Pantalla_Solicitudes(string nombre, string curp, bool ap, string usuario, int nivel)
         {
@@ -94,14 +94,26 @@ namespace OrdenamientoPesquero
                 int x = monto.Text[0].ToString() == "$" ? 1 : 0;
                 string montocrack = (Convert.ToDouble(monto.Text.Substring(x, monto.Text.Length - x))).ToString();
                 soli = new Solicitud(NombrePesc.Text, Curp, folio.Text + "-" + AñoFolio.Value.ToString() + "-" + ClavePrograma.Text, fecha.Text, prioridad.Text, concepto.Text, estatus.Text, montocrack, responsable.Text, director.Text, observaciones.Text);
-                if (proc.Registrar_Solicitud(soli) > 0) { MessageBox.Show("Solicitud ingresada con éxito"); }
-                else { MessageBox.Show("Error al ingresar solicitud"); }
+                exito = proc.Registrar_Solicitud(soli);
+                if (exito > 0) { MessageBox.Show("Solicitud ingresada con éxito"); }
+                else { MessageBox.Show("Error al ingresar solicitud"); val.Exito(exito); }
             }
             else
             {
-                soli = new Solicitud(NombrePesc.Text, Curp, folio.Text + "-" + AñoFolio.Value.ToString() + "-" + ClavePrograma.Text, fecha.Text, concepto.Text, observaciones.Text, montoF.Text, montoE.Text, montoP.Text, otro.Text, programa.Text, Total.Text, 1);
-                if (proc.Registrar_Apoyo(soli) > 0) { MessageBox.Show("Apoyo ingresado con éxito"); }
-                else { MessageBox.Show("Error al ingresar apoyo"); }
+                int x = montoE.Text[0].ToString() == "$" ? 1 : 0;
+                string montoEcrack = (Convert.ToDouble(montoE.Text.Substring(x, montoE.Text.Length - x))).ToString();
+                x = montoF.Text[0].ToString() == "$" ? 1 : 0;
+                string montoFcrack = (Convert.ToDouble(montoF.Text.Substring(x, montoF.Text.Length - x))).ToString();
+                x = montoP.Text[0].ToString() == "$" ? 1 : 0;
+                string montoPcrack = (Convert.ToDouble(montoP.Text.Substring(x, montoP.Text.Length - x))).ToString();
+                x = otro.Text[0].ToString() == "$" ? 1 : 0;
+                string otrocrack = (Convert.ToDouble(otro.Text.Substring(x, otro.Text.Length - x))).ToString();
+                x = Total.Text[0].ToString() == "$" ? 1 : 0;
+                string totalcrack = (Convert.ToDouble(Total.Text.Substring(x, Total.Text.Length - x))).ToString();
+                soli = new Solicitud(NombrePesc.Text, Curp, folio.Text + "-" + AñoFolio.Value.ToString() + "-" + ClavePrograma.Text, fecha.Text, concepto.Text, observaciones.Text, montoFcrack, montoEcrack, montoPcrack, otrocrack, programa.Text, totalcrack, 1);
+                exito = proc.Registrar_Apoyo(soli);
+                if (exito > 0) { MessageBox.Show("Apoyo ingresado con éxito"); }
+                else { MessageBox.Show("Error al ingresar apoyo"); val.Exito(exito); }
             }
             CargarSolicitudes();
         }

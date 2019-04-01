@@ -222,6 +222,8 @@ namespace CapaDatos
                     catch (Exception ms)
                     {
                         cn.Close();
+                        string[] mens = ms.Message.ToString().Split(' ');
+                        if(mens[0] == "Violation") { return -20; }
                         return 0;
                     }
                 }
