@@ -184,7 +184,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     this.obtenerImagenTableAdapter.Fill(ordPesqueroDataSet10.ObtenerImagen, rnpa);
                     datos.Name = "ima";
                     datos.Value = ordPesqueroDataSet10.ObtenerImagen;
-                    ReportParameter[] para1 = new ReportParameter[12];
+                    ReportParameter[] para1 = new ReportParameter[15];
                     para1[0] = new ReportParameter("NOMBRE", dt1.Rows[0]["NOMBRE"].ToString() + " " + dt1.Rows[0]["AP_PAT"].ToString() + " " + dt1.Rows[0]["AP_MAT"].ToString());
                     para1[1] = new ReportParameter("CURP", dt1.Rows[0]["CURP"].ToString());
                     para1[2] = new ReportParameter("SANGRE", dt1.Rows[0]["TIPO_SANGRE"].ToString());
@@ -193,10 +193,21 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     para1[10] = new ReportParameter("VENCE", dt1.Rows[0]["FECHAVEN_FOLIO"].ToString());
                     para1[6] = new ReportParameter("FOLIO", dt1.Rows[0]["FOLIO"].ToString());
                     para1[11] = new ReportParameter("OCUPACION", dt1.Rows[0]["OCUPACION_LABORAL"].ToString().ToUpper());
+                    para1[12] = new ReportParameter("MUNI", dt1.Rows[0]["MUNICIPIO"].ToString().ToUpper());
+                    para1[13] = new ReportParameter("LOCAL", dt1.Rows[0]["LOCALIDAD"].ToString().ToUpper());
                     para1[7] = new ReportParameter("DIRECCION", dt1.Rows[0]["CALLENUM"].ToString() + ", COL." + dt1.Rows[0]["COLONIA"].ToString());
                     dt1 = proc.Obtener_unidad(unidad);
                     para1[4] = new ReportParameter("RNPA", dt1.Rows[0]["RNPA"].ToString());
                     para1[5] = new ReportParameter("TITULAR", unidad);
+                    dt1 = proc.ObtenerEmbarca(para1[3].Values[0].ToString());
+                    if (dt1.Rows.Count!=0)
+                    {
+                        para1[14] = new ReportParameter("EMBARCA", dt1.Rows[0]["NOMBREEMBARCACION"].ToString().ToUpper());
+                    }
+                    else
+                    {
+                        para1[14] = new ReportParameter("EMBARCA", " ");
+                    }
                     string ruta = Application.StartupPath.ToString();
                     ruta = ruta.Replace("\\", "*");
                     ruta = ruta.Replace("*", "/");
