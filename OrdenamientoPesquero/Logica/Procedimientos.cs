@@ -513,16 +513,16 @@ namespace Logica
             return c.Ejecutar("ActualizarSolicitud", Parametros, soli.NOMBRE, soli.CURP, soli.FOLIO, soli.FECHA, soli.PRIORIDAD, soli.CONCEPTO, soli.ESTATUS, soli.MONTO, soli.RESPONSABLE, soli.DIRECTOR, soli.OBSERVACIONES);
         }
 
-        public DataTable ObtenerSolicitudes(string curp)
+        public DataTable ObtenerSolicitudes(string curp, string clave)
         {
-            string[] Parametros = { "@curp" };
-            return c.getDatosTabla("ObtenerSolicitudesxCurp", Parametros, curp);
+            string[] Parametros = { "@curp", "@clave" };
+            return c.getDatosTabla("ObtenerSolicitudesxCurp", Parametros, curp, clave);
         }
 
-        public DataTable ObtenerSolicitudesCN(string curp)
+        public DataTable ObtenerSolicitudesCN(string curp, string clave)
         {
-            string[] Parametros = { "@curp" };
-            return c.getDatosTabla("ObtenerAtendidasxCurp", Parametros, curp);
+            string[] Parametros = { "@curp", "@clave" };
+            return c.getDatosTabla("ObtenerAtendidasxCurp", Parametros, curp, clave);
         }
 
         public int Entregar_Solicitud(string folio)
@@ -551,10 +551,10 @@ namespace Logica
             return c.Ejecutar("ActualizarApoyo", Parametros, soli.NOMBRE, soli.CURP, soli.FOLIO, soli.FECHA, soli.CONCEPTO, soli.OBSERVACIONES, soli.MONTOESTATAL, soli.MONTOFEDERAL, soli.MONTOPRODUCTOR, soli.PROGRAMA, soli.TOTAL, soli.MONTOOTRO);
 
         }
-        public DataTable ObtenerApoyos (string curp)
+        public DataTable ObtenerApoyos (string curp, string clave)
         {
-            string[] Parametros = { "@curp" };
-            return c.getDatosTabla("ObtenerApoyosxCurp", Parametros, curp);
+            string[] Parametros = { "@curp", "@clave" };
+            return c.getDatosTabla("ObtenerApoyosxCurp", Parametros, curp, clave);
         }
 
         public int EliminarSoliApo(string folio)
