@@ -25,7 +25,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             unidad = uni;
             tip = tipo;
         }
-        public Vistas(string parametro, string uni, int tipo, byte[] huell)
+        public Vistas(string parametro, string uni, int tipo, Bitmap huell)
         {
             InitializeComponent();
             rnpa = parametro;

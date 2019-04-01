@@ -29,7 +29,7 @@ namespace OrdenamientoPesquero
         string[] Municipios;
         byte[] imagenBuffer;
         string matricula = "";
-        byte[] huell;
+        Bitmap huell;
 
         public Pantalla_Registro_Usuario(string rnpa, string nombre, int tipo, string user, string nombreuser, int nivel)
         {
@@ -1035,7 +1035,7 @@ namespace OrdenamientoPesquero
                     Huella.BackColor = Color.White;
                     Huella.BackgroundImage = null;
                     imagenBuffer = (byte[])dt.Rows[0]["HUELLA"];
-                    huell = imagenBuffer;
+                    huell = CreateBitmap(imagenBuffer,Huella.Width, Huella.Height);
                     ms = new System.IO.MemoryStream(imagenBuffer);
                     Huella.BackgroundImage = (Image.FromStream(ms));
                 }
