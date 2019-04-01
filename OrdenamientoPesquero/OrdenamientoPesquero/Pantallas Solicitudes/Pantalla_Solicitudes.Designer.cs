@@ -80,6 +80,7 @@
             this.AñoFolio = new System.Windows.Forms.NumericUpDown();
             this.label20 = new System.Windows.Forms.Label();
             this.gbBotones = new System.Windows.Forms.GroupBox();
+            this.limpiar = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.Entregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registrar)).BeginInit();
@@ -90,6 +91,7 @@
             this.solicitud.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AñoFolio)).BeginInit();
             this.gbBotones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
             this.SuspendLayout();
             // 
             // NombrePesc
@@ -677,12 +679,26 @@
             this.gbBotones.Text = "Acciones";
             this.gbBotones.Visible = false;
             // 
+            // limpiar
+            // 
+            this.limpiar.BackColor = System.Drawing.Color.Transparent;
+            this.limpiar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.limpiar;
+            this.limpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.limpiar.Location = new System.Drawing.Point(1045, 105);
+            this.limpiar.Name = "limpiar";
+            this.limpiar.Size = new System.Drawing.Size(28, 28);
+            this.limpiar.TabIndex = 210;
+            this.limpiar.TabStop = false;
+            this.limpiar.Visible = false;
+            this.limpiar.Click += new System.EventHandler(this.limpiar_Click);
+            // 
             // Pantalla_Solicitudes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1111, 468);
+            this.Controls.Add(this.limpiar);
             this.Controls.Add(this.gbBotones);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.AñoFolio);
@@ -723,6 +739,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.AñoFolio)).EndInit();
             this.gbBotones.ResumeLayout(false);
             this.gbBotones.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.limpiar)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -781,5 +798,6 @@
         private System.Windows.Forms.ComboBox programa;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.GroupBox gbBotones;
+        private System.Windows.Forms.PictureBox limpiar;
     }
 }

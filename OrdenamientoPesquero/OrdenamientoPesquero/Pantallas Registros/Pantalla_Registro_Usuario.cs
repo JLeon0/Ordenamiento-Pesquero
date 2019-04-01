@@ -1269,6 +1269,12 @@ namespace OrdenamientoPesquero
             }
         }
 
+        private void btnEntregar_Click(object sender, EventArgs e)
+        {
+            Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes("", "", false, Usuario, NIVEL);
+            pantalla.ShowDialog();
+        }
+    
         private void CaptureThread()
         {
             reset = false;
