@@ -424,7 +424,6 @@
             <Source>Database</Source>
             <Value>=First(Fields!HUELLA.Value, "DataSet2")</Value>
             <MIMEType>image/jpeg</MIMEType>
-            <Sizing>Clip</Sizing>
             <Top>5.14522cm</Top>
             <Left>14.01947cm</Left>
             <Height>6.58413cm</Height>
