@@ -1038,7 +1038,7 @@ namespace OrdenamientoPesquero
                     huell = CreateBitmap(imagenBuffer,Huella.Width, Huella.Height);
                     ms = new System.IO.MemoryStream(imagenBuffer);
                     Huella.BackgroundImage = (Image.FromStream(ms));
-                    Huella.BackgroundImage.Save(Application.StartupPath.ToString() + @"\huella.jpg");
+                    Huella.Image.Save(Application.StartupPath.ToString() + @"\huella.jpg");
                 }
                 catch (Exception MS) { }
             }
