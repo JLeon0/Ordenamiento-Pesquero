@@ -425,9 +425,9 @@
             <Value>=Parameters!RutaImagen.Value</Value>
             <MIMEType>image/jpeg</MIMEType>
             <Sizing>Fit</Sizing>
-            <Top>5.14522cm</Top>
+            <Top>4.98647cm</Top>
             <Left>14.01947cm</Left>
-            <Height>6.58413cm</Height>
+            <Height>6.74288cm</Height>
             <Width>5.68376cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
