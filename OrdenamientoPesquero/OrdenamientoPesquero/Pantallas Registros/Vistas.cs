@@ -217,10 +217,11 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     {
                         para1[14] = new ReportParameter("EMBARCA", " ");
                     }
-                    //string ruta = Application.StartupPath.ToString();
-                    //ruta = ruta.Replace("\\", "*");
-                    //ruta = ruta.Replace("*", "/");
-                    para1[8] = new ReportParameter("RutaImagen",huella.ToString());
+                    string ruta = Application.StartupPath.ToString()+@"\huella.jpg";
+                    ruta = ruta.Replace("\\", "*");
+                    ruta = ruta.Replace("*", "/");
+                    para1[8] = new ReportParameter("RutaImagen",ruta);
+                    reportViewer1.LocalReport.EnableExternalImages = true;
                     reportViewer1.LocalReport.SetParameters(para1);
                     this.reportViewer1.LocalReport.DataSources.Add(datos);
                     this.reportViewer1.LocalReport.DataSources.Add(datos2);
