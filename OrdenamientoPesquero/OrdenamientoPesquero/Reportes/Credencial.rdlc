@@ -422,7 +422,7 @@
           </Image>
           <Image Name="Image5">
             <Source>External</Source>
-            <Value>=Parameters!RutaImagen.Value</Value>
+            <Value>="File:"&amp;Parameters!RutaImagen.Value</Value>
             <MIMEType>image/jpeg</MIMEType>
             <Sizing>Fit</Sizing>
             <Top>4.98647cm</Top>
