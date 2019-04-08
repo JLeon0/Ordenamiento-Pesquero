@@ -50,8 +50,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         {
             this.reportViewer1.ProcessingMode = ProcessingMode.Local;
             reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Pescador_Personal.rdlc");
-            bool[] column = new bool[17];
-            string[] dato = new string[17];
+            bool[] column = new bool[18];
+            string[] dato = new string[18];
             int i = 0;
             foreach (CheckBox a in ColumasPescador.Controls)
             {
@@ -63,13 +63,13 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     i++;
                 }
             }
-            ReportParameter[] para = new ReportParameter[17];
-            for (int c = 0; c < 17; c++)
+            ReportParameter[] para = new ReportParameter[18];
+            for (int c = 0; c < 18; c++)
             {
                 para[c] = new ReportParameter(dato[c], column[c].ToString());
             }
             reportViewer1.LocalReport.SetParameters(para);
-            string consulta = "Select FOLIO, PESCADOR.NOMBRE + ' '+PESCADOR.AP_PAT +' '+ PESCADOR.AP_MAT AS 'NOMBRE',PESCADOR.FECHA_NACIMIENTO,SEGURO, CURP, PESCADOR.MUNICIPIO, PESCADOR.LOCALIDAD, TIPO_PESCADOR, OCUPACION_LABORAL, TELEFONO, CORREO, CALLENUM+', Col. '+COLONIA AS 'DIRECCION', ESCOLARIDAD,RFC, ORDENAMIENTO, PESCADOR.MATRICULA, NOMBREEMBARCACION AS EMBARCACION from PESCADOR, EMBARCACIONES WHERE PESCADOR.MATRICULA = EMBARCACIONES.MATRICULA";
+            string consulta = "Select FOLIO, PESCADOR.NOMBRE + ' '+PESCADOR.AP_PAT +' '+ PESCADOR.AP_MAT AS 'NOMBRE',PESCADOR.FECHA_NACIMIENTO,SEGURO, CURP, PESCADOR.MUNICIPIO, PESCADOR.LOCALIDAD, TIPO_PESCADOR, OCUPACION_LABORAL, TELEFONO, CORREO, CALLENUM+', Col. '+COLONIA AS 'DIRECCION', ESCOLARIDAD,RFC, ORDENAMIENTO, PESCADOR.MATRICULA, NOMBREEMBARCACION AS EMBARCACION, (SELECT NOMBRE FROM UNIDAD_ECONOMICA WHERE RNPTITULAR=RNPA) As Unidad from PESCADOR, EMBARCACIONES WHERE PESCADOR.MATRICULA = EMBARCACIONES.MATRICULA";
             int r = 0;
             foreach (CheckBox a in FiltrosPescador.Controls.OfType<CheckBox>())
             {

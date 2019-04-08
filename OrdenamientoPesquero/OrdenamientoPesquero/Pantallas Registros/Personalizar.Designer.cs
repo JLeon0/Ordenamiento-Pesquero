@@ -38,6 +38,7 @@
             this.checkBox12 = new System.Windows.Forms.CheckBox();
             this.checkBox11 = new System.Windows.Forms.CheckBox();
             this.ColumasPescador = new System.Windows.Forms.GroupBox();
+            this.checkBox101 = new System.Windows.Forms.CheckBox();
             this.checkBox18 = new System.Windows.Forms.CheckBox();
             this.checkBox17 = new System.Windows.Forms.CheckBox();
             this.checkBox16 = new System.Windows.Forms.CheckBox();
@@ -76,6 +77,7 @@
             this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.comboBox10 = new System.Windows.Forms.ComboBox();
             this.ColumasUnidad = new System.Windows.Forms.GroupBox();
+            this.checkBox100 = new System.Windows.Forms.CheckBox();
             this.checkBox27 = new System.Windows.Forms.CheckBox();
             this.checkBox29 = new System.Windows.Forms.CheckBox();
             this.checkBox34 = new System.Windows.Forms.CheckBox();
@@ -97,6 +99,7 @@
             this.comboBox12 = new System.Windows.Forms.ComboBox();
             this.comboBox13 = new System.Windows.Forms.ComboBox();
             this.ColumnasPermiso = new System.Windows.Forms.GroupBox();
+            this.checkBox99 = new System.Windows.Forms.CheckBox();
             this.checkBox31 = new System.Windows.Forms.CheckBox();
             this.checkBox33 = new System.Windows.Forms.CheckBox();
             this.checkBox43 = new System.Windows.Forms.CheckBox();
@@ -116,11 +119,16 @@
             this.OrdenaEmbarca = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.FiltrosEmbarca = new System.Windows.Forms.GroupBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.checkBox94 = new System.Windows.Forms.CheckBox();
+            this.checkBox75 = new System.Windows.Forms.CheckBox();
+            this.comboBox6 = new System.Windows.Forms.ComboBox();
             this.chip = new System.Windows.Forms.MaskedTextBox();
             this.checkBox71 = new System.Windows.Forms.CheckBox();
             this.checkBox32 = new System.Windows.Forms.CheckBox();
             this.comboBox14 = new System.Windows.Forms.ComboBox();
             this.ColumnasEmbarca = new System.Windows.Forms.GroupBox();
+            this.checkBox98 = new System.Windows.Forms.CheckBox();
             this.checkBox30 = new System.Windows.Forms.CheckBox();
             this.checkBox23 = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
@@ -147,6 +155,10 @@
             this.OrdenSoli = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.FiltrosSolicitudes = new System.Windows.Forms.GroupBox();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.checkBox96 = new System.Windows.Forms.CheckBox();
+            this.checkBox95 = new System.Windows.Forms.CheckBox();
+            this.comboBox17 = new System.Windows.Forms.ComboBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.checkBox78 = new System.Windows.Forms.CheckBox();
             this.comboBox16 = new System.Windows.Forms.ComboBox();
@@ -158,6 +170,7 @@
             this.checkBox73 = new System.Windows.Forms.CheckBox();
             this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.ColumnasSolicitudes = new System.Windows.Forms.GroupBox();
+            this.checkBox97 = new System.Windows.Forms.CheckBox();
             this.checkBox77 = new System.Windows.Forms.CheckBox();
             this.checkBox79 = new System.Windows.Forms.CheckBox();
             this.checkBox80 = new System.Windows.Forms.CheckBox();
@@ -174,19 +187,7 @@
             this.checkBox91 = new System.Windows.Forms.CheckBox();
             this.checkBox92 = new System.Windows.Forms.CheckBox();
             this.checkBox93 = new System.Windows.Forms.CheckBox();
-            this.checkBox75 = new System.Windows.Forms.CheckBox();
-            this.comboBox6 = new System.Windows.Forms.ComboBox();
-            this.checkBox94 = new System.Windows.Forms.CheckBox();
-            this.checkBox95 = new System.Windows.Forms.CheckBox();
-            this.comboBox17 = new System.Windows.Forms.ComboBox();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.checkBox96 = new System.Windows.Forms.CheckBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkBox97 = new System.Windows.Forms.CheckBox();
-            this.checkBox98 = new System.Windows.Forms.CheckBox();
-            this.checkBox99 = new System.Windows.Forms.CheckBox();
-            this.checkBox100 = new System.Windows.Forms.CheckBox();
-            this.checkBox101 = new System.Windows.Forms.CheckBox();
+            this.checkBox102 = new System.Windows.Forms.CheckBox();
             this.ColumasPescador.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.FiltrosPescador.SuspendLayout();
@@ -207,9 +208,9 @@
             this.tabPage5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.FiltrosSolicitudes.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.ColumnasSolicitudes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -309,6 +310,7 @@
             // 
             // ColumasPescador
             // 
+            this.ColumasPescador.Controls.Add(this.checkBox102);
             this.ColumasPescador.Controls.Add(this.checkBox101);
             this.ColumasPescador.Controls.Add(this.checkBox18);
             this.ColumasPescador.Controls.Add(this.checkBox17);
@@ -333,6 +335,19 @@
             this.ColumasPescador.TabIndex = 1;
             this.ColumasPescador.TabStop = false;
             this.ColumasPescador.Text = "Columnas";
+            // 
+            // checkBox101
+            // 
+            this.checkBox101.AutoSize = true;
+            this.checkBox101.Checked = true;
+            this.checkBox101.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox101.Location = new System.Drawing.Point(216, 19);
+            this.checkBox101.Name = "checkBox101";
+            this.checkBox101.Size = new System.Drawing.Size(64, 17);
+            this.checkBox101.TabIndex = 19;
+            this.checkBox101.Text = "TODOS";
+            this.checkBox101.UseVisualStyleBackColor = true;
+            this.checkBox101.CheckedChanged += new System.EventHandler(this.checkBox101_CheckedChanged);
             // 
             // checkBox18
             // 
@@ -810,6 +825,19 @@
             this.ColumasUnidad.TabStop = false;
             this.ColumasUnidad.Text = "Columnas";
             // 
+            // checkBox100
+            // 
+            this.checkBox100.AutoSize = true;
+            this.checkBox100.Checked = true;
+            this.checkBox100.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox100.Location = new System.Drawing.Point(216, 19);
+            this.checkBox100.Name = "checkBox100";
+            this.checkBox100.Size = new System.Drawing.Size(64, 17);
+            this.checkBox100.TabIndex = 22;
+            this.checkBox100.Text = "TODOS";
+            this.checkBox100.UseVisualStyleBackColor = true;
+            this.checkBox100.CheckedChanged += new System.EventHandler(this.checkBox100_CheckedChanged);
+            // 
             // checkBox27
             // 
             this.checkBox27.AutoSize = true;
@@ -1067,6 +1095,19 @@
             this.ColumnasPermiso.TabStop = false;
             this.ColumnasPermiso.Text = "Columnas";
             // 
+            // checkBox99
+            // 
+            this.checkBox99.AutoSize = true;
+            this.checkBox99.Checked = true;
+            this.checkBox99.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox99.Location = new System.Drawing.Point(216, 19);
+            this.checkBox99.Name = "checkBox99";
+            this.checkBox99.Size = new System.Drawing.Size(64, 17);
+            this.checkBox99.TabIndex = 22;
+            this.checkBox99.Text = "TODOS";
+            this.checkBox99.UseVisualStyleBackColor = true;
+            this.checkBox99.CheckedChanged += new System.EventHandler(this.checkBox99_CheckedChanged);
+            // 
             // checkBox31
             // 
             this.checkBox31.AutoSize = true;
@@ -1301,6 +1342,47 @@
             this.FiltrosEmbarca.TabStop = false;
             this.FiltrosEmbarca.Text = "Filtros";
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(123, 103);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(157, 20);
+            this.textBox1.TabIndex = 21;
+            // 
+            // checkBox94
+            // 
+            this.checkBox94.AutoSize = true;
+            this.checkBox94.Location = new System.Drawing.Point(6, 103);
+            this.checkBox94.Name = "checkBox94";
+            this.checkBox94.Size = new System.Drawing.Size(69, 17);
+            this.checkBox94.TabIndex = 20;
+            this.checkBox94.Text = "Matricula";
+            this.checkBox94.UseVisualStyleBackColor = true;
+            // 
+            // checkBox75
+            // 
+            this.checkBox75.AutoSize = true;
+            this.checkBox75.Cursor = System.Windows.Forms.Cursors.Default;
+            this.checkBox75.Location = new System.Drawing.Point(6, 76);
+            this.checkBox75.Name = "checkBox75";
+            this.checkBox75.Size = new System.Drawing.Size(63, 17);
+            this.checkBox75.TabIndex = 18;
+            this.checkBox75.Text = "Nombre";
+            this.checkBox75.UseVisualStyleBackColor = true;
+            // 
+            // comboBox6
+            // 
+            this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox6.FormattingEnabled = true;
+            this.comboBox6.Items.AddRange(new object[] {
+            "ACTIVO",
+            "OCCISO",
+            "NO"});
+            this.comboBox6.Location = new System.Drawing.Point(123, 74);
+            this.comboBox6.Name = "comboBox6";
+            this.comboBox6.Size = new System.Drawing.Size(157, 21);
+            this.comboBox6.TabIndex = 17;
+            // 
             // chip
             // 
             this.chip.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -1374,6 +1456,19 @@
             this.ColumnasEmbarca.TabIndex = 1;
             this.ColumnasEmbarca.TabStop = false;
             this.ColumnasEmbarca.Text = "Columnas";
+            // 
+            // checkBox98
+            // 
+            this.checkBox98.AutoSize = true;
+            this.checkBox98.Checked = true;
+            this.checkBox98.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox98.Location = new System.Drawing.Point(216, 19);
+            this.checkBox98.Name = "checkBox98";
+            this.checkBox98.Size = new System.Drawing.Size(64, 17);
+            this.checkBox98.TabIndex = 21;
+            this.checkBox98.Text = "TODOS";
+            this.checkBox98.UseVisualStyleBackColor = true;
+            this.checkBox98.CheckedChanged += new System.EventHandler(this.checkBox98_CheckedChanged);
             // 
             // checkBox30
             // 
@@ -1704,6 +1799,68 @@
             this.FiltrosSolicitudes.TabStop = false;
             this.FiltrosSolicitudes.Text = "Filtros";
             // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Location = new System.Drawing.Point(98, 182);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            2040,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Minimum = new decimal(new int[] {
+            2014,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(95, 20);
+            this.numericUpDown2.TabIndex = 18;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            2014,
+            0,
+            0,
+            0});
+            // 
+            // checkBox96
+            // 
+            this.checkBox96.AutoSize = true;
+            this.checkBox96.Location = new System.Drawing.Point(6, 185);
+            this.checkBox96.Name = "checkBox96";
+            this.checkBox96.Size = new System.Drawing.Size(45, 17);
+            this.checkBox96.TabIndex = 17;
+            this.checkBox96.Text = "Año";
+            this.checkBox96.UseVisualStyleBackColor = true;
+            // 
+            // checkBox95
+            // 
+            this.checkBox95.AutoSize = true;
+            this.checkBox95.Location = new System.Drawing.Point(6, 159);
+            this.checkBox95.Name = "checkBox95";
+            this.checkBox95.Size = new System.Drawing.Size(88, 17);
+            this.checkBox95.TabIndex = 16;
+            this.checkBox95.Text = "Responsable";
+            this.checkBox95.UseVisualStyleBackColor = true;
+            // 
+            // comboBox17
+            // 
+            this.comboBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox17.FormattingEnabled = true;
+            this.comboBox17.Items.AddRange(new object[] {
+            "Patricia Serrano",
+            "Daniel Amador Manriquez",
+            "Dacia Meza Villavicencio",
+            "Hernan Rafael Flores Cota",
+            "Patricia Estrada",
+            "Gumaro Geraldo Lucero",
+            "Claudia Cota Alvarez",
+            "Karla Murillo",
+            "Cristina Gonzalez Rubio SanVicente",
+            "Rosa Maria Castro Lozano"});
+            this.comboBox17.Location = new System.Drawing.Point(98, 155);
+            this.comboBox17.Name = "comboBox17";
+            this.comboBox17.Size = new System.Drawing.Size(182, 21);
+            this.comboBox17.TabIndex = 15;
+            // 
             // numericUpDown1
             // 
             this.numericUpDown1.Location = new System.Drawing.Point(98, 129);
@@ -1843,6 +2000,19 @@
             this.ColumnasSolicitudes.TabIndex = 1;
             this.ColumnasSolicitudes.TabStop = false;
             this.ColumnasSolicitudes.Text = "Columnas";
+            // 
+            // checkBox97
+            // 
+            this.checkBox97.AutoSize = true;
+            this.checkBox97.Checked = true;
+            this.checkBox97.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox97.Location = new System.Drawing.Point(216, 19);
+            this.checkBox97.Name = "checkBox97";
+            this.checkBox97.Size = new System.Drawing.Size(64, 17);
+            this.checkBox97.TabIndex = 18;
+            this.checkBox97.Text = "TODOS";
+            this.checkBox97.UseVisualStyleBackColor = true;
+            this.checkBox97.CheckedChanged += new System.EventHandler(this.checkBox97_CheckedChanged);
             // 
             // checkBox77
             // 
@@ -2036,173 +2206,17 @@
             this.checkBox93.Text = "Nombre";
             this.checkBox93.UseVisualStyleBackColor = true;
             // 
-            // checkBox75
+            // checkBox102
             // 
-            this.checkBox75.AutoSize = true;
-            this.checkBox75.Cursor = System.Windows.Forms.Cursors.Default;
-            this.checkBox75.Location = new System.Drawing.Point(6, 76);
-            this.checkBox75.Name = "checkBox75";
-            this.checkBox75.Size = new System.Drawing.Size(63, 17);
-            this.checkBox75.TabIndex = 18;
-            this.checkBox75.Text = "Nombre";
-            this.checkBox75.UseVisualStyleBackColor = true;
-            // 
-            // comboBox6
-            // 
-            this.comboBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox6.FormattingEnabled = true;
-            this.comboBox6.Items.AddRange(new object[] {
-            "ACTIVO",
-            "OCCISO",
-            "NO"});
-            this.comboBox6.Location = new System.Drawing.Point(123, 74);
-            this.comboBox6.Name = "comboBox6";
-            this.comboBox6.Size = new System.Drawing.Size(157, 21);
-            this.comboBox6.TabIndex = 17;
-            // 
-            // checkBox94
-            // 
-            this.checkBox94.AutoSize = true;
-            this.checkBox94.Location = new System.Drawing.Point(6, 103);
-            this.checkBox94.Name = "checkBox94";
-            this.checkBox94.Size = new System.Drawing.Size(69, 17);
-            this.checkBox94.TabIndex = 20;
-            this.checkBox94.Text = "Matricula";
-            this.checkBox94.UseVisualStyleBackColor = true;
-            // 
-            // checkBox95
-            // 
-            this.checkBox95.AutoSize = true;
-            this.checkBox95.Location = new System.Drawing.Point(6, 159);
-            this.checkBox95.Name = "checkBox95";
-            this.checkBox95.Size = new System.Drawing.Size(88, 17);
-            this.checkBox95.TabIndex = 16;
-            this.checkBox95.Text = "Responsable";
-            this.checkBox95.UseVisualStyleBackColor = true;
-            // 
-            // comboBox17
-            // 
-            this.comboBox17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox17.FormattingEnabled = true;
-            this.comboBox17.Items.AddRange(new object[] {
-            "Patricia Serrano",
-            "Daniel Amador Manriquez",
-            "Dacia Meza Villavicencio",
-            "Hernan Rafael Flores Cota",
-            "Patricia Estrada",
-            "Gumaro Geraldo Lucero",
-            "Claudia Cota Alvarez",
-            "Karla Murillo",
-            "Cristina Gonzalez Rubio SanVicente",
-            "Rosa Maria Castro Lozano"});
-            this.comboBox17.Location = new System.Drawing.Point(98, 155);
-            this.comboBox17.Name = "comboBox17";
-            this.comboBox17.Size = new System.Drawing.Size(182, 21);
-            this.comboBox17.TabIndex = 15;
-            // 
-            // numericUpDown2
-            // 
-            this.numericUpDown2.Location = new System.Drawing.Point(98, 182);
-            this.numericUpDown2.Maximum = new decimal(new int[] {
-            2040,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Minimum = new decimal(new int[] {
-            2014,
-            0,
-            0,
-            0});
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(95, 20);
-            this.numericUpDown2.TabIndex = 18;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            2014,
-            0,
-            0,
-            0});
-            // 
-            // checkBox96
-            // 
-            this.checkBox96.AutoSize = true;
-            this.checkBox96.Location = new System.Drawing.Point(6, 185);
-            this.checkBox96.Name = "checkBox96";
-            this.checkBox96.Size = new System.Drawing.Size(45, 17);
-            this.checkBox96.TabIndex = 17;
-            this.checkBox96.Text = "Año";
-            this.checkBox96.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(123, 103);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(157, 20);
-            this.textBox1.TabIndex = 21;
-            // 
-            // checkBox97
-            // 
-            this.checkBox97.AutoSize = true;
-            this.checkBox97.Checked = true;
-            this.checkBox97.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox97.Location = new System.Drawing.Point(216, 19);
-            this.checkBox97.Name = "checkBox97";
-            this.checkBox97.Size = new System.Drawing.Size(64, 17);
-            this.checkBox97.TabIndex = 18;
-            this.checkBox97.Text = "TODOS";
-            this.checkBox97.UseVisualStyleBackColor = true;
-            this.checkBox97.CheckedChanged += new System.EventHandler(this.checkBox97_CheckedChanged);
-            // 
-            // checkBox98
-            // 
-            this.checkBox98.AutoSize = true;
-            this.checkBox98.Checked = true;
-            this.checkBox98.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox98.Location = new System.Drawing.Point(216, 19);
-            this.checkBox98.Name = "checkBox98";
-            this.checkBox98.Size = new System.Drawing.Size(64, 17);
-            this.checkBox98.TabIndex = 21;
-            this.checkBox98.Text = "TODOS";
-            this.checkBox98.UseVisualStyleBackColor = true;
-            this.checkBox98.CheckedChanged += new System.EventHandler(this.checkBox98_CheckedChanged);
-            // 
-            // checkBox99
-            // 
-            this.checkBox99.AutoSize = true;
-            this.checkBox99.Checked = true;
-            this.checkBox99.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox99.Location = new System.Drawing.Point(216, 19);
-            this.checkBox99.Name = "checkBox99";
-            this.checkBox99.Size = new System.Drawing.Size(64, 17);
-            this.checkBox99.TabIndex = 22;
-            this.checkBox99.Text = "TODOS";
-            this.checkBox99.UseVisualStyleBackColor = true;
-            this.checkBox99.CheckedChanged += new System.EventHandler(this.checkBox99_CheckedChanged);
-            // 
-            // checkBox100
-            // 
-            this.checkBox100.AutoSize = true;
-            this.checkBox100.Checked = true;
-            this.checkBox100.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox100.Location = new System.Drawing.Point(216, 19);
-            this.checkBox100.Name = "checkBox100";
-            this.checkBox100.Size = new System.Drawing.Size(64, 17);
-            this.checkBox100.TabIndex = 22;
-            this.checkBox100.Text = "TODOS";
-            this.checkBox100.UseVisualStyleBackColor = true;
-            this.checkBox100.CheckedChanged += new System.EventHandler(this.checkBox100_CheckedChanged);
-            // 
-            // checkBox101
-            // 
-            this.checkBox101.AutoSize = true;
-            this.checkBox101.Checked = true;
-            this.checkBox101.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox101.Location = new System.Drawing.Point(216, 19);
-            this.checkBox101.Name = "checkBox101";
-            this.checkBox101.Size = new System.Drawing.Size(64, 17);
-            this.checkBox101.TabIndex = 19;
-            this.checkBox101.Text = "TODOS";
-            this.checkBox101.UseVisualStyleBackColor = true;
-            this.checkBox101.CheckedChanged += new System.EventHandler(this.checkBox101_CheckedChanged);
+            this.checkBox102.AutoSize = true;
+            this.checkBox102.Checked = true;
+            this.checkBox102.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox102.Location = new System.Drawing.Point(134, 218);
+            this.checkBox102.Name = "checkBox102";
+            this.checkBox102.Size = new System.Drawing.Size(60, 17);
+            this.checkBox102.TabIndex = 20;
+            this.checkBox102.Text = "Unidad";
+            this.checkBox102.UseVisualStyleBackColor = true;
             // 
             // Personalizar
             // 
@@ -2251,10 +2265,10 @@
             this.groupBox6.PerformLayout();
             this.FiltrosSolicitudes.ResumeLayout(false);
             this.FiltrosSolicitudes.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ColumnasSolicitudes.ResumeLayout(false);
             this.ColumnasSolicitudes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -2419,5 +2433,6 @@
         private System.Windows.Forms.CheckBox checkBox98;
         private System.Windows.Forms.CheckBox checkBox97;
         private System.Windows.Forms.CheckBox checkBox101;
+        private System.Windows.Forms.CheckBox checkBox102;
     }
 }
