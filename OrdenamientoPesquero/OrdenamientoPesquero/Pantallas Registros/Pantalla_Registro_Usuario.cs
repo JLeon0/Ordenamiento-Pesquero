@@ -1035,12 +1035,12 @@ namespace OrdenamientoPesquero
                     Huella.BackColor = Color.White;
                     Huella.BackgroundImage = null;
                     imagenBuffer = (byte[])dt.Rows[0]["HUELLA"];
-                    //huell = CreateBitmap(imagenBuffer,Huella.Width, Huella.Height);
-                    //ms = new System.IO.MemoryStream(imagenBuffer);
-                    //Huella.BackgroundImage = (Image.FromStream(ms));
-                    //Image image = huell;
-
-                    //result.Save(Application.StartupPath.ToString() + @"\huella.png");
+                    huell = CreateBitmap(imagenBuffer,Huella.Width, Huella.Height);
+                    ms = new System.IO.MemoryStream(imagenBuffer);
+                    Huella.BackgroundImage = (Image.FromStream(ms));
+                    Bitmap result = new Bitmap(Huella.Width, Huella.Height);
+                    Huella.DrawToBitmap(result,new Rectangle(0, 0, Huella.BackgroundImage.Width, Huella.BackgroundImage.Height));
+                    result.Save(Application.StartupPath.ToString() + @"\huella.jpg");
                 }
                 catch (Exception MS) { }
             }
