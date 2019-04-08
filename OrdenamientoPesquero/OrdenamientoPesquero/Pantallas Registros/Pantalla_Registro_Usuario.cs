@@ -323,6 +323,7 @@ namespace OrdenamientoPesquero
                 lblP.Text = "PESCADORES  " + dt.Rows.Count;
                 lblNo.Text = "NO PESCADORES  " + NoOrdenados.Rows.Count;
                 dt.Merge(NoOrdenados);
+                NoOrdenados = dt;
                 DataView view = new DataView(dt);
                 view.Sort = "CURP";
                 ListaNombres.DataSource = view;
