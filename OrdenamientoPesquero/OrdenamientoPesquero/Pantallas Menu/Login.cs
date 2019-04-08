@@ -178,12 +178,6 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             CargarInstancia();
-            System.Threading.Thread.Sleep(50);
-        }
-
-        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            progressBar1.Value = e.ProgressPercentage;
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -193,7 +187,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             VerPass.Enabled = true;
             btncerrar.Enabled = true;
             btnlogin.Enabled = true;
-            progressBar1.Visible = false;
+            Loading.Visible = false;
         }
 
         private void Login_Load(object sender, EventArgs e)
