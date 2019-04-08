@@ -1,15 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using CapaDatos;
 using Logica;
+using System.Drawing.Drawing2D;
 
 namespace OrdenamientoPesquero.Pantallas_Menu
 {
@@ -178,12 +175,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             CargarInstancia();
-            System.Threading.Thread.Sleep(50);
-        }
-
-        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            progressBar1.Value = e.ProgressPercentage;
+            System.Threading.Thread.Sleep(1000);
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -193,7 +185,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             VerPass.Enabled = true;
             btncerrar.Enabled = true;
             btnlogin.Enabled = true;
-            progressBar1.Visible = false;
+            Loading.Visible = false;
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -203,7 +195,15 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             VerPass.Enabled = false;
             btncerrar.Enabled = false;
             btnlogin.Enabled = false;
+            Redondear();
             backgroundWorker1.RunWorkerAsync();
+        }
+
+        void Redondear()
+        {
+            GraphicsPath grPath = new GraphicsPath();
+            grPath.AddEllipse(0, 0, Loading.Width, Loading.Height);
+            Loading.Region = new System.Drawing.Region(grPath);
         }
     }
 }
