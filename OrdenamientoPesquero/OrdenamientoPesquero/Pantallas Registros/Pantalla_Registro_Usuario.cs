@@ -52,6 +52,7 @@ namespace OrdenamientoPesquero
             //val.ajustarResolucion(this);
             if (NIVEL == 0 || NIVEL == 4)
             {
+                ActivarPanelCURP.Visible = true;
                 gbBotones.Visible = true;
                 limpiar.Visible = true;
                 CargarFirma.Enabled = true;
