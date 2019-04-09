@@ -19,6 +19,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         public Login()
         {
             InitializeComponent();
+            backgroundWorker1.RunWorkerAsync();
         }
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -96,11 +97,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             }
             setString(c.CONEXIONPERRONA);
         }
-        //private void Task()
-        //{
-        //    CargarInstancia();
-        //}
-
+ 
         public string setString(string CONEXIONPERRONA)
         {
             Properties.Settings.Default.OrdPesqueroConnectionString = CONEXIONPERRONA;
@@ -175,7 +172,6 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
         {
             CargarInstancia();
-            System.Threading.Thread.Sleep(1000);
         }
 
         private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
@@ -196,13 +192,12 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             btncerrar.Enabled = false;
             btnlogin.Enabled = false;
             Redondear();
-            backgroundWorker1.RunWorkerAsync();
         }
 
         void Redondear()
         {
             GraphicsPath grPath = new GraphicsPath();
-            grPath.AddEllipse(0, 0, Loading.Width, Loading.Height);
+            grPath.AddEllipse(23, 0, 100,100);
             Loading.Region = new System.Drawing.Region(grPath);
         }
     }
