@@ -1065,7 +1065,6 @@
             this.MatriculaPesc.Size = new System.Drawing.Size(198, 24);
             this.MatriculaPesc.TabIndex = 21;
             this.MatriculaPesc.TabStop = false;
-            this.MatriculaPesc.SelectedIndexChanged += new System.EventHandler(this.MatriculaPesc_SelectedIndexChanged);
             this.MatriculaPesc.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MatriculaPesc_KeyPress);
             // 
             // label37
