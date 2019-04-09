@@ -659,7 +659,7 @@ namespace OrdenamientoPesquero
         {
             if (RNPA != "")
             {
-                MatriculaRelacion.Text = MatriculaPesc.SelectedText.ToString();
+                MatriculaRelacion.Text = MatriculaPesc.SelectedValue.ToString();
             }
         }
 
