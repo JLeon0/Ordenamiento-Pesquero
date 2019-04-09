@@ -160,10 +160,10 @@
             // Loading
             // 
             this.Loading.Image = global::OrdenamientoPesquero.Properties.Resources.loading;
-            this.Loading.Location = new System.Drawing.Point(490, 106);
+            this.Loading.Location = new System.Drawing.Point(349, 97);
             this.Loading.Name = "Loading";
-            this.Loading.Size = new System.Drawing.Size(100, 100);
-            this.Loading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.Loading.Size = new System.Drawing.Size(150, 100);
+            this.Loading.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.Loading.TabIndex = 9;
             this.Loading.TabStop = false;
             // 
