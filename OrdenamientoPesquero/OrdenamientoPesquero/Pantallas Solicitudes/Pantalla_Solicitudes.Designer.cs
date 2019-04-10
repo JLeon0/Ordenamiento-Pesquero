@@ -81,6 +81,7 @@
             this.label20 = new System.Windows.Forms.Label();
             this.gbBotones = new System.Windows.Forms.GroupBox();
             this.limpiar = new System.Windows.Forms.PictureBox();
+            this.Bienvenido = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Entregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registrar)).BeginInit();
@@ -98,7 +99,7 @@
             // 
             this.NombrePesc.AutoSize = true;
             this.NombrePesc.Font = new System.Drawing.Font("Arial", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombrePesc.Location = new System.Drawing.Point(380, 27);
+            this.NombrePesc.Location = new System.Drawing.Point(385, 50);
             this.NombrePesc.Name = "NombrePesc";
             this.NombrePesc.Size = new System.Drawing.Size(89, 24);
             this.NombrePesc.TabIndex = 0;
@@ -249,7 +250,7 @@
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(221, 13);
+            this.pictureBox8.Location = new System.Drawing.Point(226, 36);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(50, 60);
@@ -261,7 +262,7 @@
             this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox7.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(836, 13);
+            this.pictureBox7.Location = new System.Drawing.Point(832, 27);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(200, 60);
@@ -692,12 +693,24 @@
             this.limpiar.Visible = false;
             this.limpiar.Click += new System.EventHandler(this.limpiar_Click);
             // 
+            // Bienvenido
+            // 
+            this.Bienvenido.AutoSize = true;
+            this.Bienvenido.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Bienvenido.ForeColor = System.Drawing.Color.DimGray;
+            this.Bienvenido.Location = new System.Drawing.Point(829, 7);
+            this.Bienvenido.Name = "Bienvenido";
+            this.Bienvenido.Size = new System.Drawing.Size(75, 16);
+            this.Bienvenido.TabIndex = 211;
+            this.Bienvenido.Text = "Bienvenido ";
+            // 
             // Pantalla_Solicitudes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1111, 468);
+            this.ClientSize = new System.Drawing.Size(1110, 468);
+            this.Controls.Add(this.Bienvenido);
             this.Controls.Add(this.limpiar);
             this.Controls.Add(this.gbBotones);
             this.Controls.Add(this.label20);
@@ -799,5 +812,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.GroupBox gbBotones;
         private System.Windows.Forms.PictureBox limpiar;
+        private System.Windows.Forms.Label Bienvenido;
     }
 }

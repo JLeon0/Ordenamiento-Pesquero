@@ -46,6 +46,8 @@
             this.Ordenamiento = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.PanelRegUser = new System.Windows.Forms.Panel();
+            this.VerPass2 = new System.Windows.Forms.PictureBox();
+            this.VerPass = new System.Windows.Forms.PictureBox();
             this.UsuarioLogin = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -82,8 +84,6 @@
             this.RegPrograma = new System.Windows.Forms.LinkLabel();
             this.RegUsuario = new System.Windows.Forms.LinkLabel();
             this.Bienvenido = new System.Windows.Forms.Label();
-            this.VerPass = new System.Windows.Forms.PictureBox();
-            this.VerPass2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarLoggin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarLoggin)).BeginInit();
@@ -96,14 +96,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.CerrarPanelPrograma)).BeginInit();
             this.panel1.SuspendLayout();
             this.PanelRegUser.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VerPass2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VerPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NivelUsuarioLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             this.PanelRegProgram.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VerPass)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VerPass2)).BeginInit();
             this.SuspendLayout();
             // 
             // limpiar
@@ -359,6 +359,30 @@
             this.PanelRegUser.Size = new System.Drawing.Size(524, 319);
             this.PanelRegUser.TabIndex = 193;
             this.PanelRegUser.Visible = false;
+            // 
+            // VerPass2
+            // 
+            this.VerPass2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ver;
+            this.VerPass2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.VerPass2.Location = new System.Drawing.Point(469, 144);
+            this.VerPass2.Name = "VerPass2";
+            this.VerPass2.Size = new System.Drawing.Size(20, 20);
+            this.VerPass2.TabIndex = 204;
+            this.VerPass2.TabStop = false;
+            this.VerPass2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.VerPass2_MouseDown);
+            this.VerPass2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VerPass2_MouseUp);
+            // 
+            // VerPass
+            // 
+            this.VerPass.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ver;
+            this.VerPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.VerPass.Location = new System.Drawing.Point(469, 106);
+            this.VerPass.Name = "VerPass";
+            this.VerPass.Size = new System.Drawing.Size(20, 20);
+            this.VerPass.TabIndex = 203;
+            this.VerPass.TabStop = false;
+            this.VerPass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.VerPass_MouseDown);
+            this.VerPass.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VerPass_MouseUp);
             // 
             // UsuarioLogin
             // 
@@ -777,30 +801,6 @@
             this.Bienvenido.TabIndex = 190;
             this.Bienvenido.Text = "Bienvenido ";
             // 
-            // VerPass
-            // 
-            this.VerPass.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ver;
-            this.VerPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.VerPass.Location = new System.Drawing.Point(469, 106);
-            this.VerPass.Name = "VerPass";
-            this.VerPass.Size = new System.Drawing.Size(20, 20);
-            this.VerPass.TabIndex = 203;
-            this.VerPass.TabStop = false;
-            this.VerPass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.VerPass_MouseDown);
-            this.VerPass.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VerPass_MouseUp);
-            // 
-            // VerPass2
-            // 
-            this.VerPass2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ver;
-            this.VerPass2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.VerPass2.Location = new System.Drawing.Point(469, 144);
-            this.VerPass2.Name = "VerPass2";
-            this.VerPass2.Size = new System.Drawing.Size(20, 20);
-            this.VerPass2.TabIndex = 204;
-            this.VerPass2.TabStop = false;
-            this.VerPass2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.VerPass2_MouseDown);
-            this.VerPass2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VerPass2_MouseUp);
-            // 
             // Menu1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -833,6 +833,8 @@
             this.panel1.PerformLayout();
             this.PanelRegUser.ResumeLayout(false);
             this.PanelRegUser.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.VerPass2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VerPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NivelUsuarioLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -840,8 +842,6 @@
             this.PanelRegProgram.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VerPass)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.VerPass2)).EndInit();
             this.ResumeLayout(false);
 
         }

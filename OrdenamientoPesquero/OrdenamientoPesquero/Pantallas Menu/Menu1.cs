@@ -123,28 +123,32 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 
         private void EliminarLoggin_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Desea eliminar el Usuario " + NombreUsuarioLogin.Text, "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            if (dialogResult == DialogResult.Yes)
+            if (UsuarioLogin.Text != "Admin")
             {
-                if (PassLogin.Text != "" && PassLogin.Text == RepetirPassLogin.Text)
+                DialogResult dialogResult = MessageBox.Show("Desea eliminar el Usuario " + NombreUsuarioLogin.Text, "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    if (proc.AutenticarLogin(UsuarioLogin.Text, val.Encriptar(PassLogin.Text)).Rows.Count > 0)
+                    if (PassLogin.Text != "" && PassLogin.Text == RepetirPassLogin.Text)
                     {
-                        if (proc.EliminarLogin(UsuarioLogin.Text) > 0)
+                        if (proc.AutenticarLogin(UsuarioLogin.Text, val.Encriptar(PassLogin.Text)).Rows.Count > 0)
                         {
-                            MessageBox.Show("Datos Eliminados Correctamente", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                            ObtenerLogins();
+                            if (proc.EliminarLogin(UsuarioLogin.Text) > 0)
+                            {
+                                MessageBox.Show("Datos Eliminados Correctamente", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                                ObtenerLogins();
+                                limpiartodo();
+                            }
                         }
+                        else { MessageBox.Show("Usuario y/o Contraseña Incorrectos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                     }
-                    else { MessageBox.Show("Usuario y/o Contraseña Incorrectos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-                }
-                else
-                {
-                    MessageBox.Show("Las contraseñas son incorrectas", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    PassLogin.Focus();
+                    else
+                    {
+                        MessageBox.Show("Las contraseñas son incorrectas", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        PassLogin.Focus();
+                    }
                 }
             }
-            limpiartodo();
+            else { MessageBox.Show("No se puede borrar al Administrador", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         #endregion

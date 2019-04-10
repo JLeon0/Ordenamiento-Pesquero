@@ -13,7 +13,7 @@ namespace OrdenamientoPesquero
 {
     public partial class Pantalla_Solicitudes : Form
     {
-        string Curp, Usuario;
+        string Curp, Usuario, NombreUsuario;
         Procedimientos proc = new Procedimientos();
         Solicitud soli; DataTable solicitudes;
         Validaciones val = new Validaciones();
@@ -21,11 +21,12 @@ namespace OrdenamientoPesquero
         double mE, mF, mP, ot;
         int NIVEL, exito;
 
-        public Pantalla_Solicitudes(string nombre, string curp, bool ap, string usuario, int nivel)
+        public Pantalla_Solicitudes(string nombre, string curp, bool ap, string usuario, int nivel, string nombreuser)
         {
             InitializeComponent();
             NombrePesc.Text = nombre;
             Usuario = usuario;
+            NombreUsuario = nombreuser;
             Curp = curp;
             Ap = ap;
             NIVEL = nivel;
@@ -33,6 +34,7 @@ namespace OrdenamientoPesquero
 
         private void Pantalla_Solicitudes_Load(object sender, EventArgs e)
         {
+            Bienvenido.Text += NombreUsuario;
             CargarClaves();
             CargarSolicitudes();
             if (Ap)
