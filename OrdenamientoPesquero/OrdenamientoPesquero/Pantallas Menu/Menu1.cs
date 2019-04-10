@@ -143,7 +143,8 @@ namespace OrdenamientoPesquero.Pantallas_Menu
                     MessageBox.Show("Las contraseñas son incorrectas", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     PassLogin.Focus();
                 }
-            }ObtenerLogins();
+            }
+            limpiartodo();
         }
 
         #endregion
@@ -300,6 +301,26 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             else if (i == 2 || i == 3) { DirectorPrograma.SelectedIndex = 1; }
             else if (i == 4 || i == 5 || i == 6 || i == 7) { DirectorPrograma.SelectedIndex = 2; }
             else if (i == 8) { DirectorPrograma.SelectedIndex = 3; }
+        }
+
+        private void VerPass_MouseDown(object sender, MouseEventArgs e)
+        {
+            PassLogin.UseSystemPasswordChar = PassLogin.UseSystemPasswordChar == true ? false : true;
+        }
+
+        private void VerPass_MouseUp(object sender, MouseEventArgs e)
+        {
+            PassLogin.UseSystemPasswordChar = PassLogin.UseSystemPasswordChar == true ? false : true;
+        }
+
+        private void VerPass2_MouseDown(object sender, MouseEventArgs e)
+        {
+            RepetirPassLogin.UseSystemPasswordChar = RepetirPassLogin.UseSystemPasswordChar == true ? false : true;
+        }
+
+        private void VerPass2_MouseUp(object sender, MouseEventArgs e)
+        {
+            RepetirPassLogin.UseSystemPasswordChar = RepetirPassLogin.UseSystemPasswordChar == true ? false : true;
         }
 
         private void ObtenerLogins()

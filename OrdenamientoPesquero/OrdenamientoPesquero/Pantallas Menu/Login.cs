@@ -161,12 +161,10 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 
         private void VerPass_MouseHover(object sender, EventArgs e)
         {
-            txtpass.UseSystemPasswordChar = txtpass.UseSystemPasswordChar == true ? false : true;
         }
 
         private void VerPass_MouseLeave(object sender, EventArgs e)
         {
-            txtpass.UseSystemPasswordChar = txtpass.UseSystemPasswordChar == true ? false : true;
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
@@ -199,6 +197,16 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             GraphicsPath grPath = new GraphicsPath();
             grPath.AddEllipse(23, 0, 100,100);
             Loading.Region = new System.Drawing.Region(grPath);
+        }
+
+        private void VerPass_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtpass.UseSystemPasswordChar = txtpass.UseSystemPasswordChar == true ? false : true;
+        }
+
+        private void VerPass_MouseUp(object sender, MouseEventArgs e)
+        {
+            txtpass.UseSystemPasswordChar = txtpass.UseSystemPasswordChar == true ? false : true;
         }
     }
 }

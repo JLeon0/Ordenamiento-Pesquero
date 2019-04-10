@@ -133,11 +133,11 @@
             this.VerPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.VerPass.Location = new System.Drawing.Point(763, 145);
             this.VerPass.Name = "VerPass";
-            this.VerPass.Size = new System.Drawing.Size(23, 20);
+            this.VerPass.Size = new System.Drawing.Size(20, 20);
             this.VerPass.TabIndex = 8;
             this.VerPass.TabStop = false;
-            this.VerPass.MouseLeave += new System.EventHandler(this.VerPass_MouseLeave);
-            this.VerPass.MouseHover += new System.EventHandler(this.VerPass_MouseHover);
+            this.VerPass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.VerPass_MouseDown);
+            this.VerPass.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VerPass_MouseUp);
             // 
             // btncerrar
             // 

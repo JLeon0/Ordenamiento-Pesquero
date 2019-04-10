@@ -490,6 +490,7 @@
             // 
             // director
             // 
+            this.director.Enabled = false;
             this.director.FormattingEnabled = true;
             this.director.Items.AddRange(new object[] {
             "David Navarro Nuñez",

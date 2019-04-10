@@ -63,6 +63,9 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label35 = new System.Windows.Forms.Label();
             this.PanelRegProgram = new System.Windows.Forms.Panel();
+            this.DirectorPrograma = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ResponsablePrograma = new System.Windows.Forms.ComboBox();
             this.ClavePrograma = new System.Windows.Forms.TextBox();
             this.label17 = new System.Windows.Forms.Label();
             this.NombrePrograma = new System.Windows.Forms.ComboBox();
@@ -79,9 +82,8 @@
             this.RegPrograma = new System.Windows.Forms.LinkLabel();
             this.RegUsuario = new System.Windows.Forms.LinkLabel();
             this.Bienvenido = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ResponsablePrograma = new System.Windows.Forms.ComboBox();
-            this.DirectorPrograma = new System.Windows.Forms.ComboBox();
+            this.VerPass = new System.Windows.Forms.PictureBox();
+            this.VerPass2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarLoggin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarLoggin)).BeginInit();
@@ -100,6 +102,8 @@
             this.PanelRegProgram.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VerPass)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VerPass2)).BeginInit();
             this.SuspendLayout();
             // 
             // limpiar
@@ -326,6 +330,8 @@
             // 
             this.PanelRegUser.BackColor = System.Drawing.Color.White;
             this.PanelRegUser.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelRegUser.Controls.Add(this.VerPass2);
+            this.PanelRegUser.Controls.Add(this.VerPass);
             this.PanelRegUser.Controls.Add(this.limpiar);
             this.PanelRegUser.Controls.Add(this.UsuarioLogin);
             this.PanelRegUser.Controls.Add(this.EliminarLoggin);
@@ -557,6 +563,47 @@
             this.PanelRegProgram.TabIndex = 5;
             this.PanelRegProgram.Visible = false;
             // 
+            // DirectorPrograma
+            // 
+            this.DirectorPrograma.FormattingEnabled = true;
+            this.DirectorPrograma.Items.AddRange(new object[] {
+            "David Navarro Nuñez",
+            "Enrique Duarte Guluarte",
+            "Carlos Gonzalez Gonzalez",
+            "Fernando García Romero"});
+            this.DirectorPrograma.Location = new System.Drawing.Point(157, 137);
+            this.DirectorPrograma.Name = "DirectorPrograma";
+            this.DirectorPrograma.Size = new System.Drawing.Size(310, 24);
+            this.DirectorPrograma.TabIndex = 202;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 104);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 16);
+            this.label1.TabIndex = 213;
+            this.label1.Text = "Responsable";
+            // 
+            // ResponsablePrograma
+            // 
+            this.ResponsablePrograma.FormattingEnabled = true;
+            this.ResponsablePrograma.Items.AddRange(new object[] {
+            "Hernan Rafael Flores Cota",
+            "Patricia Serrano",
+            "Claudia Cota Alvarez",
+            "Armando Herrero Pérezrul",
+            "Karla Murillo",
+            "Gumaro Geraldo Lucero",
+            "Patricia Estrada",
+            "Rosa Maria Castro Lozano",
+            "Sonia López López"});
+            this.ResponsablePrograma.Location = new System.Drawing.Point(157, 100);
+            this.ResponsablePrograma.Name = "ResponsablePrograma";
+            this.ResponsablePrograma.Size = new System.Drawing.Size(310, 24);
+            this.ResponsablePrograma.TabIndex = 201;
+            this.ResponsablePrograma.SelectedIndexChanged += new System.EventHandler(this.ResponsablePrograma_SelectedIndexChanged);
+            // 
             // ClavePrograma
             // 
             this.ClavePrograma.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
@@ -730,46 +777,29 @@
             this.Bienvenido.TabIndex = 190;
             this.Bienvenido.Text = "Bienvenido ";
             // 
-            // label1
+            // VerPass
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 104);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 16);
-            this.label1.TabIndex = 213;
-            this.label1.Text = "Responsable";
+            this.VerPass.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ver;
+            this.VerPass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.VerPass.Location = new System.Drawing.Point(469, 106);
+            this.VerPass.Name = "VerPass";
+            this.VerPass.Size = new System.Drawing.Size(20, 20);
+            this.VerPass.TabIndex = 203;
+            this.VerPass.TabStop = false;
+            this.VerPass.MouseDown += new System.Windows.Forms.MouseEventHandler(this.VerPass_MouseDown);
+            this.VerPass.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VerPass_MouseUp);
             // 
-            // ResponsablePrograma
+            // VerPass2
             // 
-            this.ResponsablePrograma.FormattingEnabled = true;
-            this.ResponsablePrograma.Items.AddRange(new object[] {
-            "Hernan Rafael Flores Cota",
-            "Patricia Serrano",
-            "Claudia Cota Alvarez",
-            "Armando Herrero Pérezrul",
-            "Karla Murillo",
-            "Gumaro Geraldo Lucero",
-            "Patricia Estrada",
-            "Rosa Maria Castro Lozano",
-            "Sonia López López"});
-            this.ResponsablePrograma.Location = new System.Drawing.Point(157, 100);
-            this.ResponsablePrograma.Name = "ResponsablePrograma";
-            this.ResponsablePrograma.Size = new System.Drawing.Size(310, 24);
-            this.ResponsablePrograma.TabIndex = 201;
-            this.ResponsablePrograma.SelectedIndexChanged += new System.EventHandler(this.ResponsablePrograma_SelectedIndexChanged);
-            // 
-            // DirectorPrograma
-            // 
-            this.DirectorPrograma.FormattingEnabled = true;
-            this.DirectorPrograma.Items.AddRange(new object[] {
-            "David Navarro Nuñez",
-            "Enrique Duarte Guluarte",
-            "Carlos Gonzalez Gonzalez",
-            "Fernando García Romero"});
-            this.DirectorPrograma.Location = new System.Drawing.Point(157, 137);
-            this.DirectorPrograma.Name = "DirectorPrograma";
-            this.DirectorPrograma.Size = new System.Drawing.Size(310, 24);
-            this.DirectorPrograma.TabIndex = 202;
+            this.VerPass2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ver;
+            this.VerPass2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.VerPass2.Location = new System.Drawing.Point(469, 144);
+            this.VerPass2.Name = "VerPass2";
+            this.VerPass2.Size = new System.Drawing.Size(20, 20);
+            this.VerPass2.TabIndex = 204;
+            this.VerPass2.TabStop = false;
+            this.VerPass2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.VerPass2_MouseDown);
+            this.VerPass2.MouseUp += new System.Windows.Forms.MouseEventHandler(this.VerPass2_MouseUp);
             // 
             // Menu1
             // 
@@ -810,6 +840,8 @@
             this.PanelRegProgram.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VerPass)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.VerPass2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -868,5 +900,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox ResponsablePrograma;
         private System.Windows.Forms.ComboBox DirectorPrograma;
+        private System.Windows.Forms.PictureBox VerPass2;
+        private System.Windows.Forms.PictureBox VerPass;
     }
 }
