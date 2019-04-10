@@ -262,7 +262,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             if (NombrePrograma.SelectedIndex > -1)
             {
                 DirectorPrograma.Text = dataprograma.Rows[NombrePrograma.SelectedIndex]["DIRECTOR"].ToString();
-                //ResponsablePrograma.Text = dataprograma.Rows[NombrePrograma.SelectedIndex]["RESPONSABLE"].ToString();
+                ResponsablePrograma.Text = dataprograma.Rows[NombrePrograma.SelectedIndex]["RESPONSABLE"].ToString();
                 foreach (DataRow item in datalogin.Rows)
                 {
                     if (item[0].ToString() == dataprograma.Rows[NombrePrograma.SelectedIndex]["USUARIO"].ToString())
