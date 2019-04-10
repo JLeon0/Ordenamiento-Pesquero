@@ -294,6 +294,15 @@ namespace OrdenamientoPesquero
             otro.Text = "$" + numero.ToString("N2");
         }
 
+        private void responsable_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int i = responsable.SelectedIndex;
+            if(i == 0 || i == 1) { director.SelectedIndex = 0; }
+            else if(i == 2 || i == 3) { director.SelectedIndex = 1; }
+            else if(i == 4 || i == 5 || i == 6 || i == 7) { director.SelectedIndex = 2; }
+            else if(i == 8) { director.SelectedIndex = 3; }
+        }
+
         private void limpiar_Click(object sender, EventArgs e)
         {
             LimpiarPantalla();

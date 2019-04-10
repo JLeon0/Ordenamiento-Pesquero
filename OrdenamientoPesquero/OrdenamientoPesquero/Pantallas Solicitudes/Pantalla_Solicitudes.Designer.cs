@@ -495,8 +495,7 @@
             "David Navarro Nuñez",
             "Enrique Duarte Guluarte",
             "Carlos Gonzalez Gonzalez",
-            "Fernando García Romero",
-            "Armando Herrero Pérezrul"});
+            "Fernando García Romero"});
             this.director.Location = new System.Drawing.Point(327, 56);
             this.director.Name = "director";
             this.director.Size = new System.Drawing.Size(251, 24);
@@ -507,20 +506,19 @@
             this.responsable.FormattingEnabled = true;
             this.responsable.Items.AddRange(new object[] {
             "Hernan Rafael Flores Cota",
-            "Dacia Meza Villavicencio",
-            "Rosa Maria Castro Lozano",
-            "Cristina Gonzalez Rubio SanVicente",
-            "Claudia Cota Alvarez",
-            "Daniel Amador Manriquez",
             "Patricia Serrano",
+            "Claudia Cota Alvarez",
+            "Armando Herrero Pérezrul",
             "Karla Murillo",
             "Gumaro Geraldo Lucero",
             "Patricia Estrada",
-            "Jaime Verdugo De Casso"});
+            "Rosa Maria Castro Lozano",
+            "Sonia López López"});
             this.responsable.Location = new System.Drawing.Point(327, 15);
             this.responsable.Name = "responsable";
             this.responsable.Size = new System.Drawing.Size(251, 24);
             this.responsable.TabIndex = 6;
+            this.responsable.SelectedIndexChanged += new System.EventHandler(this.responsable_SelectedIndexChanged);
             // 
             // estatus
             // 

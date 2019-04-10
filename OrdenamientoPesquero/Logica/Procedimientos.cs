@@ -697,15 +697,15 @@ namespace Logica
         #endregion
 
         #region Programas
-        public int Registrar_Programa(string programa, string director, string usuario,string clave)
+        public int Registrar_Programa(string programa, string director, string responsable, string usuario, string clave)
         {
-            string[] Parametros = { "@usuario", "@programa", "@director" ,"@clave"};
-            return c.Ejecutar("Registrar_Programa", Parametros, usuario, programa, director, clave);
+            string[] Parametros = { "@usuario", "@programa", "@director","@responsable", "@clave" };
+            return c.Ejecutar("Registrar_Programa", Parametros, usuario, programa, director,responsable, clave);
         }
-        public int Actualizar_Programa(string programa,string director, string usuario, string clave)
+        public int Actualizar_Programa(string programa,string director, string responsable, string usuario, string clave)
         {
-            string[] Parametros = { "@usuario","@director", "@programa","@clave" };
-            return c.Ejecutar("Actualizar_Programa", Parametros, usuario, director, programa,clave);
+            string[] Parametros = { "@usuario","@director", "@programa", "@responsable", "@clave" };
+            return c.Ejecutar("Actualizar_Programa", Parametros, usuario, director, programa,responsable,clave);
         }
         public int Eliminar_Programa(string programa)
         {
@@ -723,7 +723,7 @@ namespace Logica
             string[] Parametros = { "@user" };
             return c.getDatosTabla("ObtenerClaveXUsuario", Parametros, user);
         }
-            #endregion
+        #endregion
 
             #region Login
             public DataTable AutenticarLogin(string User, string Pass)
