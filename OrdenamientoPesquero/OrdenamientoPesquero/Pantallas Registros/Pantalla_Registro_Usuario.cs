@@ -76,6 +76,7 @@ namespace OrdenamientoPesquero
         {
             if (RNPA == "")
             {
+                btnEntregar.Visible = true;
                 EliminarUnidad.Visible = false;
                 label4.Visible = false;
                 TipoPesc.Visible = false;

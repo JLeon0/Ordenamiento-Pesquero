@@ -72,7 +72,6 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.DirectorPrograma = new System.Windows.Forms.TextBox();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -80,6 +79,9 @@
             this.RegPrograma = new System.Windows.Forms.LinkLabel();
             this.RegUsuario = new System.Windows.Forms.LinkLabel();
             this.Bienvenido = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ResponsablePrograma = new System.Windows.Forms.ComboBox();
+            this.DirectorPrograma = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarLoggin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarLoggin)).BeginInit();
@@ -191,7 +193,7 @@
             this.EliminarPrograma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("EliminarPrograma.BackgroundImage")));
             this.EliminarPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EliminarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EliminarPrograma.Location = new System.Drawing.Point(454, 181);
+            this.EliminarPrograma.Location = new System.Drawing.Point(455, 241);
             this.EliminarPrograma.Name = "EliminarPrograma";
             this.EliminarPrograma.Size = new System.Drawing.Size(50, 50);
             this.EliminarPrograma.TabIndex = 207;
@@ -205,7 +207,7 @@
             this.ActualizarPrograma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("ActualizarPrograma.BackgroundImage")));
             this.ActualizarPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ActualizarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ActualizarPrograma.Location = new System.Drawing.Point(397, 181);
+            this.ActualizarPrograma.Location = new System.Drawing.Point(398, 241);
             this.ActualizarPrograma.Name = "ActualizarPrograma";
             this.ActualizarPrograma.Size = new System.Drawing.Size(50, 50);
             this.ActualizarPrograma.TabIndex = 205;
@@ -219,7 +221,7 @@
             this.RegistrarPrograma.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("RegistrarPrograma.BackgroundImage")));
             this.RegistrarPrograma.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RegistrarPrograma.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegistrarPrograma.Location = new System.Drawing.Point(339, 181);
+            this.RegistrarPrograma.Location = new System.Drawing.Point(340, 241);
             this.RegistrarPrograma.Name = "RegistrarPrograma";
             this.RegistrarPrograma.Size = new System.Drawing.Size(50, 50);
             this.RegistrarPrograma.TabIndex = 203;
@@ -346,7 +348,7 @@
             this.PanelRegUser.Controls.Add(this.CerrarPanelUsuario);
             this.PanelRegUser.Controls.Add(this.label35);
             this.PanelRegUser.ForeColor = System.Drawing.Color.Black;
-            this.PanelRegUser.Location = new System.Drawing.Point(413, 150);
+            this.PanelRegUser.Location = new System.Drawing.Point(409, 136);
             this.PanelRegUser.Name = "PanelRegUser";
             this.PanelRegUser.Size = new System.Drawing.Size(524, 319);
             this.PanelRegUser.TabIndex = 193;
@@ -527,6 +529,9 @@
             // 
             this.PanelRegProgram.BackColor = System.Drawing.Color.White;
             this.PanelRegProgram.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelRegProgram.Controls.Add(this.DirectorPrograma);
+            this.PanelRegProgram.Controls.Add(this.label1);
+            this.PanelRegProgram.Controls.Add(this.ResponsablePrograma);
             this.PanelRegProgram.Controls.Add(this.ClavePrograma);
             this.PanelRegProgram.Controls.Add(this.label17);
             this.PanelRegProgram.Controls.Add(this.limpiar2);
@@ -540,7 +545,6 @@
             this.PanelRegProgram.Controls.Add(this.label16);
             this.PanelRegProgram.Controls.Add(this.label10);
             this.PanelRegProgram.Controls.Add(this.label11);
-            this.PanelRegProgram.Controls.Add(this.DirectorPrograma);
             this.PanelRegProgram.Controls.Add(this.label12);
             this.PanelRegProgram.Controls.Add(this.label13);
             this.PanelRegProgram.Controls.Add(this.pictureBox3);
@@ -549,7 +553,7 @@
             this.PanelRegProgram.ForeColor = System.Drawing.Color.Black;
             this.PanelRegProgram.Location = new System.Drawing.Point(423, 146);
             this.PanelRegProgram.Name = "PanelRegProgram";
-            this.PanelRegProgram.Size = new System.Drawing.Size(510, 253);
+            this.PanelRegProgram.Size = new System.Drawing.Size(510, 315);
             this.PanelRegProgram.TabIndex = 5;
             this.PanelRegProgram.Visible = false;
             // 
@@ -557,16 +561,16 @@
             // 
             this.ClavePrograma.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.ClavePrograma.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.ClavePrograma.Location = new System.Drawing.Point(158, 187);
+            this.ClavePrograma.Location = new System.Drawing.Point(157, 218);
             this.ClavePrograma.MaxLength = 3;
             this.ClavePrograma.Name = "ClavePrograma";
             this.ClavePrograma.Size = new System.Drawing.Size(45, 22);
-            this.ClavePrograma.TabIndex = 212;
+            this.ClavePrograma.TabIndex = 204;
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(24, 190);
+            this.label17.Location = new System.Drawing.Point(25, 221);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(120, 16);
             this.label17.TabIndex = 211;
@@ -579,19 +583,19 @@
             this.NombrePrograma.Location = new System.Drawing.Point(157, 63);
             this.NombrePrograma.MaxLength = 150;
             this.NombrePrograma.Name = "NombrePrograma";
-            this.NombrePrograma.Size = new System.Drawing.Size(311, 24);
-            this.NombrePrograma.TabIndex = 189;
+            this.NombrePrograma.Size = new System.Drawing.Size(310, 24);
+            this.NombrePrograma.TabIndex = 200;
             this.NombrePrograma.SelectedIndexChanged += new System.EventHandler(this.NombrePrograma_SelectedIndexChanged);
             // 
             // UsuarioPrograma
             // 
             this.UsuarioPrograma.Cursor = System.Windows.Forms.Cursors.IBeam;
             this.UsuarioPrograma.FormattingEnabled = true;
-            this.UsuarioPrograma.Location = new System.Drawing.Point(158, 146);
+            this.UsuarioPrograma.Location = new System.Drawing.Point(157, 180);
             this.UsuarioPrograma.MaxLength = 50;
             this.UsuarioPrograma.Name = "UsuarioPrograma";
             this.UsuarioPrograma.Size = new System.Drawing.Size(310, 24);
-            this.UsuarioPrograma.TabIndex = 208;
+            this.UsuarioPrograma.TabIndex = 203;
             this.UsuarioPrograma.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UsuarioPrograma_KeyPress);
             // 
             // label14
@@ -599,7 +603,7 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.Black;
-            this.label14.Location = new System.Drawing.Point(458, 234);
+            this.label14.Location = new System.Drawing.Point(459, 294);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(43, 14);
             this.label14.TabIndex = 206;
@@ -610,7 +614,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(396, 234);
+            this.label15.Location = new System.Drawing.Point(397, 294);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(56, 14);
             this.label15.TabIndex = 204;
@@ -621,7 +625,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(338, 234);
+            this.label16.Location = new System.Drawing.Point(339, 294);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(51, 14);
             this.label16.TabIndex = 202;
@@ -630,7 +634,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(24, 149);
+            this.label10.Location = new System.Drawing.Point(25, 180);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(131, 16);
             this.label10.TabIndex = 193;
@@ -639,20 +643,11 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(24, 107);
+            this.label11.Location = new System.Drawing.Point(24, 142);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(53, 16);
             this.label11.TabIndex = 191;
             this.label11.Text = "Director";
-            // 
-            // DirectorPrograma
-            // 
-            this.DirectorPrograma.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.DirectorPrograma.Location = new System.Drawing.Point(158, 104);
-            this.DirectorPrograma.MaxLength = 70;
-            this.DirectorPrograma.Name = "DirectorPrograma";
-            this.DirectorPrograma.Size = new System.Drawing.Size(310, 22);
-            this.DirectorPrograma.TabIndex = 190;
             // 
             // label12
             // 
@@ -735,6 +730,47 @@
             this.Bienvenido.TabIndex = 190;
             this.Bienvenido.Text = "Bienvenido ";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 104);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(83, 16);
+            this.label1.TabIndex = 213;
+            this.label1.Text = "Responsable";
+            // 
+            // ResponsablePrograma
+            // 
+            this.ResponsablePrograma.FormattingEnabled = true;
+            this.ResponsablePrograma.Items.AddRange(new object[] {
+            "Hernan Rafael Flores Cota",
+            "Patricia Serrano",
+            "Claudia Cota Alvarez",
+            "Armando Herrero Pérezrul",
+            "Karla Murillo",
+            "Gumaro Geraldo Lucero",
+            "Patricia Estrada",
+            "Rosa Maria Castro Lozano",
+            "Sonia López López"});
+            this.ResponsablePrograma.Location = new System.Drawing.Point(157, 100);
+            this.ResponsablePrograma.Name = "ResponsablePrograma";
+            this.ResponsablePrograma.Size = new System.Drawing.Size(310, 24);
+            this.ResponsablePrograma.TabIndex = 201;
+            this.ResponsablePrograma.SelectedIndexChanged += new System.EventHandler(this.ResponsablePrograma_SelectedIndexChanged);
+            // 
+            // DirectorPrograma
+            // 
+            this.DirectorPrograma.FormattingEnabled = true;
+            this.DirectorPrograma.Items.AddRange(new object[] {
+            "David Navarro Nuñez",
+            "Enrique Duarte Guluarte",
+            "Carlos Gonzalez Gonzalez",
+            "Fernando García Romero"});
+            this.DirectorPrograma.Location = new System.Drawing.Point(157, 137);
+            this.DirectorPrograma.Name = "DirectorPrograma";
+            this.DirectorPrograma.Size = new System.Drawing.Size(310, 24);
+            this.DirectorPrograma.TabIndex = 202;
+            // 
             // Menu1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -791,7 +827,6 @@
         private System.Windows.Forms.Panel PanelRegProgram;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TextBox DirectorPrograma;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox3;
@@ -830,5 +865,8 @@
         private System.Windows.Forms.PictureBox limpiar2;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox ClavePrograma;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox ResponsablePrograma;
+        private System.Windows.Forms.ComboBox DirectorPrograma;
     }
 }

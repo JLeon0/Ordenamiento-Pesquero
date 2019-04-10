@@ -62,25 +62,28 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         #region CrearLoggin
         private void RegistrarLoggin_Click(object sender, EventArgs e)
         {
-            if (PassLogin.Text == RepetirPassLogin.Text)
+            if (UsuarioLogin.Text != "" && PassLogin.Text != "" && NombreUsuarioLogin.Text != "")
             {
-                if (proc.CrearLoggin(UsuarioLogin.Text, val.Encriptar(PassLogin.Text), NombreUsuarioLogin.Text, Convert.ToInt32(NivelUsuarioLogin.Value)) > 0)
+                if (PassLogin.Text == RepetirPassLogin.Text)
                 {
-                    MessageBox.Show("Usuario Creado con Exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    ObtenerLogins();
-                    limpiartodo();
+                    if (proc.CrearLoggin(UsuarioLogin.Text, val.Encriptar(PassLogin.Text), NombreUsuarioLogin.Text, Convert.ToInt32(NivelUsuarioLogin.Value)) > 0)
+                    {
+                        MessageBox.Show("Usuario Creado con Exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        ObtenerLogins();
+                        limpiartodo();
+                    }
+                    else
+                    {
+                        MessageBox.Show("El Usuario ya Existe", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
                 else
                 {
-                    MessageBox.Show("El Usuario ya Existe", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Las contraseñas son incorrectas", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    PassLogin.Focus();
                 }
             }
-            else
-            {
-                MessageBox.Show( "Las contraseñas son incorrectas", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                PassLogin.Focus();
-            }
-
+            else { MessageBox.Show("Debe llenar todos los campos del usuario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void RegUsuario_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -96,21 +99,26 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 
         private void ActualizarLoggin_Click(object sender, EventArgs e)
         {
-            if (PassLogin.Text == RepetirPassLogin.Text)
+            if (UsuarioLogin.Text != "" && PassLogin.Text != "" && NombreUsuarioLogin.Text != "")
             {
-                if (proc.AutenticarLogin(UsuarioLogin.Text, val.Encriptar(PassLogin.Text)).Rows.Count > 0)
+                if (PassLogin.Text == RepetirPassLogin.Text)
                 {
-                    if (proc.ActualizarLogin(UsuarioLogin.Text, val.Encriptar(PassLogin.Text), NombreUsuarioLogin.Text, Convert.ToInt32(NivelUsuarioLogin.Value)) > 0)
+                    if (proc.AutenticarLogin(UsuarioLogin.Text, val.Encriptar(PassLogin.Text)).Rows.Count > 0)
                     {
-                        MessageBox.Show("Datos Actualizados Correctamente", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        if (proc.ActualizarLogin(UsuarioLogin.Text, val.Encriptar(PassLogin.Text), NombreUsuarioLogin.Text, Convert.ToInt32(NivelUsuarioLogin.Value)) > 0)
+                        {
+                            MessageBox.Show("Datos Actualizados Correctamente", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        }
                     }
+                    else { MessageBox.Show("Usuario y/o Contraseña Incorrectos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 }
-                else { MessageBox.Show("Usuario y/o Contraseña Incorrectos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                else
+                {
+                    MessageBox.Show("Las contraseñas son incorrectas", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    PassLogin.Focus();
+                }
             }
-            else{
-                MessageBox.Show("Las contraseñas son incorrectas", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                PassLogin.Focus();
-            }
+            else { MessageBox.Show("Debe llenar todos los campos del usuario", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void EliminarLoggin_Click(object sender, EventArgs e)
@@ -143,16 +151,20 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         #region CrearPrograma
         private void RegistrarPrograma_Click(object sender, EventArgs e)
         {
-            if(proc.Registrar_Programa(NombrePrograma.Text, DirectorPrograma.Text, UsuarioPrograma.SelectedValue.ToString(),ClavePrograma.Text) > 0)
+            if (NombrePrograma.Text != "" && DirectorPrograma.Text != "" && ResponsablePrograma.Text != "" && UsuarioPrograma.Text != "" && ClavePrograma.Text != "")
             {
-                MessageBox.Show("Programa Creado con Exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                ObtenerProgramas();
-                limpiartodo();
+                if (proc.Registrar_Programa(NombrePrograma.Text, DirectorPrograma.Text, ResponsablePrograma.Text, UsuarioPrograma.SelectedValue.ToString(), ClavePrograma.Text) > 0)
+                {
+                    MessageBox.Show("Programa Creado con Exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    ObtenerProgramas();
+                    limpiartodo();
+                }
+                else
+                {
+                    MessageBox.Show("El Programa ya Existe", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
-            {
-                MessageBox.Show("El Programa ya Existe", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            else { MessageBox.Show("Debe llenar todos los campos del Programa", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         private void EliminarPrograma_Click(object sender, EventArgs e)
@@ -174,18 +186,22 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 
         private void ActualizarPrograma_Click(object sender, EventArgs e)
         {
-            if (proc.Actualizar_Programa(NombrePrograma.Text, DirectorPrograma.Text, UsuarioPrograma.SelectedValue.ToString(), ClavePrograma.Text) > 0)
+            if (NombrePrograma.Text != "" && DirectorPrograma.Text != "" && ResponsablePrograma.Text != "" && UsuarioPrograma.Text != "" && ClavePrograma.Text != "")
             {
-                MessageBox.Show("Programa Actualizado con Exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                ObtenerProgramas();
-                limpiartodo();
+                if (proc.Actualizar_Programa(NombrePrograma.Text, DirectorPrograma.Text, ResponsablePrograma.Text, UsuarioPrograma.SelectedValue.ToString(), ClavePrograma.Text) > 0)
+                {
+                    MessageBox.Show("Programa Actualizado con Exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    ObtenerProgramas();
+                    limpiartodo();
+                }
+                else
+                {
+                    MessageBox.Show("Hubo un problema al Actualizar el Programa", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
-            else
-            {
-                MessageBox.Show("Hubo un problema al Actualizar el Programa", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            else { MessageBox.Show("Debe llenar todos los campos del Programa", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
-        
+
         private void RegPrograma_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             PanelRegProgram.Visible = true;
@@ -241,6 +257,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             if (NombrePrograma.SelectedIndex > -1)
             {
                 DirectorPrograma.Text = dataprograma.Rows[NombrePrograma.SelectedIndex]["DIRECTOR"].ToString();
+                ResponsablePrograma.Text = dataprograma.Rows[NombrePrograma.SelectedIndex]["RESPONSABLE"].ToString();
                 foreach (DataRow item in datalogin.Rows)
                 {
                     if (item[0].ToString() == dataprograma.Rows[NombrePrograma.SelectedIndex]["USUARIO"].ToString())
@@ -276,6 +293,15 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             e.Handled = true;
         }
 
+        private void ResponsablePrograma_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int i = ResponsablePrograma.SelectedIndex;
+            if (i == 0 || i == 1) { DirectorPrograma.SelectedIndex = 0; }
+            else if (i == 2 || i == 3) { DirectorPrograma.SelectedIndex = 1; }
+            else if (i == 4 || i == 5 || i == 6 || i == 7) { DirectorPrograma.SelectedIndex = 2; }
+            else if (i == 8) { DirectorPrograma.SelectedIndex = 3; }
+        }
+
         private void ObtenerLogins()
         {
             datalogin = proc.ObtenerLogins();
@@ -297,6 +323,9 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             NombrePrograma.DisplayMember = "PROGRAMA";
             NombrePrograma.ValueMember = "PROGRAMA";
             NombrePrograma.SelectedIndex = -1;
+            ResponsablePrograma.SelectedIndex = -1;
+            DirectorPrograma.SelectedIndex = -1;
+            UsuarioPrograma.SelectedIndex = -1;
         }
     }
 }

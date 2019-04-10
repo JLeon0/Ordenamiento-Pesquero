@@ -2136,6 +2136,7 @@
             this.btnEntregar.TabIndex = 198;
             this.btnEntregar.Text = "ENTREGAR SOLICITUDES";
             this.btnEntregar.UseVisualStyleBackColor = true;
+            this.btnEntregar.Visible = false;
             this.btnEntregar.Click += new System.EventHandler(this.btnEntregar_Click);
             // 
             // Pantalla_Registro_Usuario
