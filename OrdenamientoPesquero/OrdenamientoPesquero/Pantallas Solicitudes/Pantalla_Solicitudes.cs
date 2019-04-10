@@ -103,7 +103,7 @@ namespace OrdenamientoPesquero
         }
         void CargarClaves()
         {
-            DataTable pro= proc.ObtenerClaveXUsuario(Usuario);
+            DataTable pro= proc.ObtenerClaveXUsuario(Usuario,"");
             ClavePrograma.DataSource = pro;
             ClavePrograma.DisplayMember = "CLAVE";
             ClavePrograma.ValueMember = "CLAVE";
@@ -301,6 +301,11 @@ namespace OrdenamientoPesquero
             else if(i == 2 || i == 3) { director.SelectedIndex = 1; }
             else if(i == 4 || i == 5 || i == 6 || i == 7) { director.SelectedIndex = 2; }
             else if(i == 8) { director.SelectedIndex = 3; }
+
+            DataTable pro = proc.ObtenerClaveXUsuario(Usuario,responsable.Text);
+            ClavePrograma.DataSource = pro;
+            ClavePrograma.DisplayMember = "CLAVE";
+            ClavePrograma.ValueMember = "CLAVE";
         }
 
         private void limpiar_Click(object sender, EventArgs e)
