@@ -156,7 +156,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         #region CrearPrograma
         private void RegistrarPrograma_Click(object sender, EventArgs e)
         {
-            if (NombrePrograma.Text != "" && DirectorPrograma.Text != "" && ResponsablePrograma.Text != "" && UsuarioPrograma.Text != "" && ClavePrograma.Text != "")
+            if (NombrePrograma.Text != "" && DirectorPrograma.Text != "" && ResponsablePrograma.Text != "" && ClavePrograma.Text != "")
             {
                 if (proc.Registrar_Programa(NombrePrograma.Text, DirectorPrograma.Text, ResponsablePrograma.Text, UsuarioPrograma.SelectedValue.ToString(), ClavePrograma.Text) > 0)
                 {
@@ -191,7 +191,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 
         private void ActualizarPrograma_Click(object sender, EventArgs e)
         {
-            if (NombrePrograma.Text != "" && DirectorPrograma.Text != "" && ResponsablePrograma.Text != "" && UsuarioPrograma.Text != "" && ClavePrograma.Text != "")
+            if (NombrePrograma.Text != "" && DirectorPrograma.Text != "" && ResponsablePrograma.Text != "" && ClavePrograma.Text != "")
             {
                 if (proc.Actualizar_Programa(NombrePrograma.Text, DirectorPrograma.Text, ResponsablePrograma.Text, UsuarioPrograma.SelectedValue.ToString(), ClavePrograma.Text) > 0)
                 {

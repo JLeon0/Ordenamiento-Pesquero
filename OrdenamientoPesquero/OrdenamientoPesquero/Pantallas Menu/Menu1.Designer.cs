@@ -354,7 +354,7 @@
             this.PanelRegUser.Controls.Add(this.CerrarPanelUsuario);
             this.PanelRegUser.Controls.Add(this.label35);
             this.PanelRegUser.ForeColor = System.Drawing.Color.Black;
-            this.PanelRegUser.Location = new System.Drawing.Point(409, 136);
+            this.PanelRegUser.Location = new System.Drawing.Point(423, 136);
             this.PanelRegUser.Name = "PanelRegUser";
             this.PanelRegUser.Size = new System.Drawing.Size(524, 319);
             this.PanelRegUser.TabIndex = 193;
@@ -502,11 +502,11 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 67);
+            this.label3.Location = new System.Drawing.Point(33, 68);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 16);
+            this.label3.Size = new System.Drawing.Size(46, 16);
             this.label3.TabIndex = 189;
-            this.label3.Text = "Usuario";
+            this.label3.Text = "Loggin";
             // 
             // label34
             // 
@@ -707,9 +707,9 @@
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(25, 180);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(131, 16);
+            this.label10.Size = new System.Drawing.Size(122, 16);
             this.label10.TabIndex = 193;
-            this.label10.Text = "Usuario Responsable";
+            this.label10.Text = "Persona Encargada";
             // 
             // label11
             // 
