@@ -1136,7 +1136,7 @@ namespace OrdenamientoPesquero
             {
                 string Nombre = "";
                 if (Ord == 1) { Nombre = ListaNombres.Text; } else { Nombre = ListaNombres2.Text; }
-                Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes(Nombre, CURPPesc.Text,false,Usuario, NIVEL);
+                Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes(Nombre, CURPPesc.Text,false,Usuario, NIVEL,NombreUsuario);
                 pantalla.ShowDialog();
             }
             CargarSolApo();
@@ -1147,7 +1147,7 @@ namespace OrdenamientoPesquero
             {
                 string Nombre = "";
                 if (Ord == 1) { Nombre = ListaNombres.Text; } else { Nombre = ListaNombres2.Text; }
-                Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes(Nombre, CURPPesc.Text, true,Usuario, NIVEL);
+                Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes(Nombre, CURPPesc.Text, true,Usuario, NIVEL, NombreUsuario);
                 pantalla.ShowDialog();
             }
             CargarSolApo();
@@ -1277,7 +1277,7 @@ namespace OrdenamientoPesquero
 
         private void btnEntregar_Click(object sender, EventArgs e)
         {
-            Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes("", "", false, Usuario, NIVEL);
+            Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes("", "", false, Usuario, NIVEL, NombreUsuario);
             pantalla.ShowDialog();
         }
     

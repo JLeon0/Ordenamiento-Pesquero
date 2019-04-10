@@ -123,27 +123,32 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 
         private void EliminarLoggin_Click(object sender, EventArgs e)
         {
-            DialogResult dialogResult = MessageBox.Show("Desea eliminar el Usuario " + NombreUsuarioLogin.Text, "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
-            if (dialogResult == DialogResult.Yes)
+            if (UsuarioLogin.Text != "Admin")
             {
-                if (PassLogin.Text != "" && PassLogin.Text == RepetirPassLogin.Text)
+                DialogResult dialogResult = MessageBox.Show("Desea eliminar el Usuario " + NombreUsuarioLogin.Text, "Eliminar", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    if (proc.AutenticarLogin(UsuarioLogin.Text, val.Encriptar(PassLogin.Text)).Rows.Count > 0)
+                    if (PassLogin.Text != "" && PassLogin.Text == RepetirPassLogin.Text)
                     {
-                        if (proc.EliminarLogin(UsuarioLogin.Text) > 0)
+                        if (proc.AutenticarLogin(UsuarioLogin.Text, val.Encriptar(PassLogin.Text)).Rows.Count > 0)
                         {
-                            MessageBox.Show("Datos Eliminados Correctamente", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                            ObtenerLogins();
+                            if (proc.EliminarLogin(UsuarioLogin.Text) > 0)
+                            {
+                                MessageBox.Show("Datos Eliminados Correctamente", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                                ObtenerLogins();
+                                limpiartodo();
+                            }
                         }
+                        else { MessageBox.Show("Usuario y/o Contraseña Incorrectos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                     }
-                    else { MessageBox.Show("Usuario y/o Contraseña Incorrectos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+                    else
+                    {
+                        MessageBox.Show("Las contraseñas son incorrectas", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        PassLogin.Focus();
+                    }
                 }
-                else
-                {
-                    MessageBox.Show("Las contraseñas son incorrectas", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    PassLogin.Focus();
-                }
-            }ObtenerLogins();
+            }
+            else { MessageBox.Show("No se puede borrar al Administrador", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
 
         #endregion
@@ -151,7 +156,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         #region CrearPrograma
         private void RegistrarPrograma_Click(object sender, EventArgs e)
         {
-            if (NombrePrograma.Text != "" && DirectorPrograma.Text != "" && ResponsablePrograma.Text != "" && UsuarioPrograma.Text != "" && ClavePrograma.Text != "")
+            if (NombrePrograma.Text != "" && DirectorPrograma.Text != "" && ResponsablePrograma.Text != "" && ClavePrograma.Text != "")
             {
                 if (proc.Registrar_Programa(NombrePrograma.Text, DirectorPrograma.Text, ResponsablePrograma.Text, UsuarioPrograma.SelectedValue.ToString(), ClavePrograma.Text) > 0)
                 {
@@ -186,7 +191,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 
         private void ActualizarPrograma_Click(object sender, EventArgs e)
         {
-            if (NombrePrograma.Text != "" && DirectorPrograma.Text != "" && ResponsablePrograma.Text != "" && UsuarioPrograma.Text != "" && ClavePrograma.Text != "")
+            if (NombrePrograma.Text != "" && DirectorPrograma.Text != "" && ResponsablePrograma.Text != "" && ClavePrograma.Text != "")
             {
                 if (proc.Actualizar_Programa(NombrePrograma.Text, DirectorPrograma.Text, ResponsablePrograma.Text, UsuarioPrograma.SelectedValue.ToString(), ClavePrograma.Text) > 0)
                 {
@@ -300,6 +305,26 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             else if (i == 2 || i == 3) { DirectorPrograma.SelectedIndex = 1; }
             else if (i == 4 || i == 5 || i == 6 || i == 7) { DirectorPrograma.SelectedIndex = 2; }
             else if (i == 8) { DirectorPrograma.SelectedIndex = 3; }
+        }
+
+        private void VerPass_MouseDown(object sender, MouseEventArgs e)
+        {
+            PassLogin.UseSystemPasswordChar = PassLogin.UseSystemPasswordChar == true ? false : true;
+        }
+
+        private void VerPass_MouseUp(object sender, MouseEventArgs e)
+        {
+            PassLogin.UseSystemPasswordChar = PassLogin.UseSystemPasswordChar == true ? false : true;
+        }
+
+        private void VerPass2_MouseDown(object sender, MouseEventArgs e)
+        {
+            RepetirPassLogin.UseSystemPasswordChar = RepetirPassLogin.UseSystemPasswordChar == true ? false : true;
+        }
+
+        private void VerPass2_MouseUp(object sender, MouseEventArgs e)
+        {
+            RepetirPassLogin.UseSystemPasswordChar = RepetirPassLogin.UseSystemPasswordChar == true ? false : true;
         }
 
         private void ObtenerLogins()
