@@ -508,12 +508,12 @@
             this.responsable.FormattingEnabled = true;
             this.responsable.Items.AddRange(new object[] {
             "Hernan Rafael Flores Cota",
-            "Patricia Serrano",
+            "Patricia Estrada",
             "Claudia Cota Ojeda",
             "Armando Herrero Pérezrul",
             "Karla Murillo",
             "Gumaro Geraldo Lucero",
-            "Patricia Estrada",
+            "Patricia Serrano",
             "Rosa Maria Castro Lozano",
             "Sonia López López"});
             this.responsable.Location = new System.Drawing.Point(327, 15);
