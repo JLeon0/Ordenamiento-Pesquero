@@ -122,6 +122,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>comondu.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Consulta.cs">
+      <DependentUpon>Consulta.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Consulta.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

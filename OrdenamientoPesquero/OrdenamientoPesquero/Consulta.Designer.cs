@@ -455,6 +455,8 @@ namespace OrdenamientoPesquero {
             
             private global::System.Data.DataColumn columnUnidad;
             
+            private global::System.Data.DataColumn columnCredencializados;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Pescadores_EmbarcacionesDataTable() {
@@ -634,6 +636,14 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn CredencializadosColumn {
+                get {
+                    return this.columnCredencializados;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -687,7 +697,8 @@ namespace OrdenamientoPesquero {
                         int ORDENAMIENTO, 
                         string MATRICULA, 
                         string EMBARCACION, 
-                        string Unidad) {
+                        string Unidad, 
+                        string Credencializados) {
                 Pescadores_EmbarcacionesRow rowPescadores_EmbarcacionesRow = ((Pescadores_EmbarcacionesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         FOLIO,
@@ -707,7 +718,8 @@ namespace OrdenamientoPesquero {
                         ORDENAMIENTO,
                         MATRICULA,
                         EMBARCACION,
-                        Unidad};
+                        Unidad,
+                        Credencializados};
                 rowPescadores_EmbarcacionesRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowPescadores_EmbarcacionesRow);
                 return rowPescadores_EmbarcacionesRow;
@@ -755,6 +767,7 @@ namespace OrdenamientoPesquero {
                 this.columnMATRICULA = base.Columns["MATRICULA"];
                 this.columnEMBARCACION = base.Columns["EMBARCACION"];
                 this.columnUnidad = base.Columns["Unidad"];
+                this.columnCredencializados = base.Columns["Credencializados"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -796,6 +809,8 @@ namespace OrdenamientoPesquero {
                 base.Columns.Add(this.columnEMBARCACION);
                 this.columnUnidad = new global::System.Data.DataColumn("Unidad", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnUnidad);
+                this.columnCredencializados = new global::System.Data.DataColumn("Credencializados", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnCredencializados);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnCURP}, true));
                 this.columnFOLIO.MaxLength = 12;
@@ -2446,6 +2461,8 @@ namespace OrdenamientoPesquero {
             
             private global::System.Data.DataColumn columnMONTOO;
             
+            private global::System.Data.DataColumn columnUnidad;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Obt_SolDataTable() {
@@ -2609,6 +2626,14 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn UnidadColumn {
+                get {
+                    return this.columnUnidad;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -2660,7 +2685,8 @@ namespace OrdenamientoPesquero {
                         string MONTOF, 
                         string MONTOP, 
                         string PROGRAMA, 
-                        string MONTOO) {
+                        string MONTOO, 
+                        string Unidad) {
                 Obt_SolRow rowObt_SolRow = ((Obt_SolRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         NOMBRE,
@@ -2678,7 +2704,8 @@ namespace OrdenamientoPesquero {
                         MONTOF,
                         MONTOP,
                         PROGRAMA,
-                        MONTOO};
+                        MONTOO,
+                        Unidad};
                 rowObt_SolRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowObt_SolRow);
                 return rowObt_SolRow;
@@ -2724,6 +2751,7 @@ namespace OrdenamientoPesquero {
                 this.columnMONTOP = base.Columns["MONTOP"];
                 this.columnPROGRAMA = base.Columns["PROGRAMA"];
                 this.columnMONTOO = base.Columns["MONTOO"];
+                this.columnUnidad = base.Columns["Unidad"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -2761,6 +2789,8 @@ namespace OrdenamientoPesquero {
                 base.Columns.Add(this.columnPROGRAMA);
                 this.columnMONTOO = new global::System.Data.DataColumn("MONTOO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMONTOO);
+                this.columnUnidad = new global::System.Data.DataColumn("Unidad", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUnidad);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnFOLIO}, true));
                 this.columnNOMBRE.MaxLength = 100;
@@ -3215,6 +3245,23 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Credencializados {
+                get {
+                    try {
+                        return ((string)(this[this.tablePescadores_Embarcaciones.CredencializadosColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Credencializados\' de la tabla \'Pescadores_Embarcaciones\' " +
+                                "es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tablePescadores_Embarcaciones.CredencializadosColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsFOLIONull() {
                 return this.IsNull(this.tablePescadores_Embarcaciones.FOLIOColumn);
             }
@@ -3403,6 +3450,18 @@ namespace OrdenamientoPesquero {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetUnidadNull() {
                 this[this.tablePescadores_Embarcaciones.UnidadColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsCredencializadosNull() {
+                return this.IsNull(this.tablePescadores_Embarcaciones.CredencializadosColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetCredencializadosNull() {
+                this[this.tablePescadores_Embarcaciones.CredencializadosColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -4982,6 +5041,22 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string Unidad {
+                get {
+                    try {
+                        return ((string)(this[this.tableObt_Sol.UnidadColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'Unidad\' de la tabla \'Obt_Sol\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableObt_Sol.UnidadColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNOMBRENull() {
                 return this.IsNull(this.tableObt_Sol.NOMBREColumn);
             }
@@ -5158,6 +5233,18 @@ namespace OrdenamientoPesquero {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetMONTOONull() {
                 this[this.tableObt_Sol.MONTOOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsUnidadNull() {
+                return this.IsNull(this.tableObt_Sol.UnidadColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetUnidadNull() {
+                this[this.tableObt_Sol.UnidadColumn] = global::System.Convert.DBNull;
             }
         }
         

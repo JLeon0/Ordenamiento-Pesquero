@@ -39,6 +39,9 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             comboBox14.DataSource = dt;
             comboBox14.ValueMember = "Nombre";
             comboBox14.DisplayMember = "Nombre";
+            comboBox11.DataSource = dt;
+            comboBox11.ValueMember = "Nombre";
+            comboBox11.DisplayMember = "Nombre";
             comboBox5.DataSource = dt;
             comboBox5.ValueMember = "Nombre";
             comboBox5.DisplayMember = "Nombre";
@@ -69,7 +72,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 para[c] = new ReportParameter(dato[c], column[c].ToString());
             }
             reportViewer1.LocalReport.SetParameters(para);
-            string consulta = "Select FOLIO, PESCADOR.NOMBRE + ' '+PESCADOR.AP_PAT +' '+ PESCADOR.AP_MAT AS 'NOMBRE',PESCADOR.FECHA_NACIMIENTO,SEGURO, CURP, PESCADOR.MUNICIPIO, PESCADOR.LOCALIDAD, TIPO_PESCADOR, OCUPACION_LABORAL, TELEFONO, CORREO, CALLENUM+', Col. '+COLONIA AS 'DIRECCION', ESCOLARIDAD,RFC, ORDENAMIENTO, PESCADOR.MATRICULA, NOMBREEMBARCACION AS EMBARCACION, (SELECT NOMBRE FROM UNIDAD_ECONOMICA WHERE RNPTITULAR=RNPA) As Unidad from PESCADOR, EMBARCACIONES WHERE PESCADOR.MATRICULA = EMBARCACIONES.MATRICULA";
+            string consulta = "Select FOLIO, PESCADOR.NOMBRE + ' '+PESCADOR.AP_PAT +' '+ PESCADOR.AP_MAT AS 'NOMBRE',PESCADOR.FECHA_NACIMIENTO,SEGURO, CURP, PESCADOR.MUNICIPIO, PESCADOR.LOCALIDAD, TIPO_PESCADOR, OCUPACION_LABORAL, TELEFONO, CORREO, CALLENUM+', Col. '+COLONIA AS 'DIRECCION', ESCOLARIDAD,RFC, ORDENAMIENTO, PESCADOR.MATRICULA, NOMBREEMBARCACION AS EMBARCACION, (SELECT NOMBRE FROM UNIDAD_ECONOMICA WHERE RNPTITULAR=RNPA) As Unidad, (SELECT CASE WHEN CURP IN(SELECT CURP FROM ARCHIVOSPESCADOR WHERE IMAGEN IS NOT NULL AND FIRMA IS NOT NULL AND FIRMA != '')THEN 'Si'ELSE 'No' END) as Credencializado from PESCADOR, EMBARCACIONES WHERE PESCADOR.MATRICULA = EMBARCACIONES.MATRICULA";
             int r = 0;
             foreach (CheckBox a in FiltrosPescador.Controls.OfType<CheckBox>())
             {
@@ -368,8 +371,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         private void button5_Click(object sender, EventArgs e)
         {
             reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Solicitudes_Personal.rdlc");
-            bool[] column = new bool[16];
-            string[] dato = new string[16];
+            bool[] column = new bool[17];
+            string[] dato = new string[17];
             int i = 0;
             foreach (CheckBox a in ColumnasSolicitudes.Controls)
             {
@@ -380,25 +383,25 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     i++;
                 }
             }
-            ReportParameter[] para = new ReportParameter[16];
-            for (int c = 0; c < 16; c++)
+            ReportParameter[] para = new ReportParameter[17];
+            for (int c = 0; c < 17; c++)
             {
                 para[c] = new ReportParameter(dato[c], column[c].ToString());
             }
-            string inac = "AND (ESTATUS = 'Negativa' OR ESTATUS='Cancelada' OR ESTATUS='Positiva sin TP')";
-            string act = "AND (ESTATUS = 'Pendiente'OR ESTATUS='Positiva con TP')";
-            string apo = "AND ESTATUS = 'ENTREGADO'";
-            string año = "AND Substring(FECHA,7,4) ='";
-            string consulta = "SELECT * FROM SOLICITUDES WHERE NOMBRE!='' ";
+            string inac = "AND (b.ESTATUS = 'Negativa' OR b.ESTATUS='Cancelada' OR b.ESTATUS='Positiva sin TP')";
+            string act = "AND (b.ESTATUS = 'Pendiente'OR b.ESTATUS='Positiva con TP')";
+            string apo = "AND b.ESTATUS = 'ENTREGADO'";
+            string año = "AND Substring(b.FECHA,7,4) ='";
+            string consulta = "SELECT b.*, (SELECT NOMBRE FROM UNIDAD_ECONOMICA WHERE RNPA IN (SELECT RNPTITULAR FROM EMBARCACIONES, PESCADOR WHERE EMBARCACIONES.MATRICULA= PESCADOR.MATRICULA And PESCADOR.CURP=b.curp)) AS Unidad FROM SOLICITUDES b WHERE b.NOMBRE!= '' ";
             int r = 0;
             reportViewer1.LocalReport.SetParameters(para);
             foreach (CheckBox a in FiltrosSolicitudes.Controls.OfType<CheckBox>())
             {
                 if (a.Checked)
                 {
-                    if (a.Text != "Tipo"&&a.Text!="Año")
+                    if (a.Text != "Tipo"&&a.Text!="Año"&&a.Text!="Unidad")
                     {
-                        consulta += " AND " + a.Text.Replace(" ", "_").ToLower() + " = ";
+                        consulta += " AND b." + a.Text.Replace(" ", "_").ToLower() + " = ";
                     }
                 int m = 0;
                 foreach (ComboBox cb in FiltrosSolicitudes.Controls.OfType<ComboBox>())
@@ -437,10 +440,18 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                                 }
                                 else
                                 {
-                                    if (m == r)
+                                    if (a.Text=="Unidad")
                                     {
-                                        consulta += "'" + cb.Text + "'";
+                                        consulta += "AND (SELECT NOMBRE FROM UNIDAD_ECONOMICA WHERE RNPA IN (SELECT RNPTITULAR FROM EMBARCACIONES, PESCADOR WHERE EMBARCACIONES.MATRICULA= PESCADOR.MATRICULA And PESCADOR.CURP=b.curp))='" + comboBox11.Text + "'";
                                         break;
+                                    }
+                                    else
+                                    {
+                                        if (m == r)
+                                        {
+                                            consulta += "'" + cb.Text + "'";
+                                            break;
+                                        }
                                     }
                                 }
                         }

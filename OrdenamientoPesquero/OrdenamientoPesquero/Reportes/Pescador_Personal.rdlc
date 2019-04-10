@@ -15,6 +15,9 @@
               <Width>5.75438cm</Width>
             </TablixColumn>
             <TablixColumn>
+              <Width>3.4525cm</Width>
+            </TablixColumn>
+            <TablixColumn>
               <Width>3.29378cm</Width>
             </TablixColumn>
             <TablixColumn>
@@ -145,6 +148,37 @@
                         </Paragraph>
                       </Paragraphs>
                       <rd:DefaultName>Textbox1</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>0.5pt</PaddingLeft>
+                        <PaddingRight>0.5pt</PaddingRight>
+                        <PaddingTop>0.5pt</PaddingTop>
+                        <PaddingBottom>0.5pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
+                    <Textbox Name="Textbox2">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>CREDENCIALIZADO</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Textbox2</rd:DefaultName>
                       <Style>
                         <Border>
                           <Style>Solid</Style>
@@ -725,6 +759,38 @@
                 </TablixCell>
                 <TablixCell>
                   <CellContents>
+                    <Textbox Name="Credencializados">
+                      <CanGrow>true</CanGrow>
+                      <KeepTogether>true</KeepTogether>
+                      <Paragraphs>
+                        <Paragraph>
+                          <TextRuns>
+                            <TextRun>
+                              <Value>=Fields!Credencializados.Value</Value>
+                              <Style>
+                                <FontSize>8pt</FontSize>
+                              </Style>
+                            </TextRun>
+                          </TextRuns>
+                          <Style />
+                        </Paragraph>
+                      </Paragraphs>
+                      <rd:DefaultName>Credencializados</rd:DefaultName>
+                      <Style>
+                        <Border>
+                          <Color>LightGrey</Color>
+                          <Style>Solid</Style>
+                        </Border>
+                        <PaddingLeft>0.5pt</PaddingLeft>
+                        <PaddingRight>0.5pt</PaddingRight>
+                        <PaddingTop>0.5pt</PaddingTop>
+                        <PaddingBottom>0.5pt</PaddingBottom>
+                      </Style>
+                    </Textbox>
+                  </CellContents>
+                </TablixCell>
+                <TablixCell>
+                  <CellContents>
                     <Textbox Name="FECHA_NACIMIENTO1">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
@@ -1224,6 +1290,7 @@
                 <Hidden>=iif(Parameters!unidad.Value="True", false,true)</Hidden>
               </Visibility>
             </TablixMember>
+            <TablixMember />
             <TablixMember>
               <Visibility>
                 <Hidden>=iif(Parameters!fecha_de_nacimiento.Value="True", false,true)</Hidden>
@@ -1315,7 +1382,7 @@
         <Top>0.67117cm</Top>
         <Left>0.3175cm</Left>
         <Height>0.80963cm</Height>
-        <Width>51.97884cm</Width>
+        <Width>55.43134cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1326,7 +1393,7 @@
     <Height>12.81417cm</Height>
     <Style />
   </Body>
-  <Width>52.29634cm</Width>
+  <Width>55.74884cm</Width>
   <Page>
     <PageHeight>21.59cm</PageHeight>
     <PageWidth>50cm</PageWidth>
@@ -1424,6 +1491,10 @@
         </Field>
         <Field Name="Unidad">
           <DataField>Unidad</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Credencializados">
+          <DataField>Credencializados</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
