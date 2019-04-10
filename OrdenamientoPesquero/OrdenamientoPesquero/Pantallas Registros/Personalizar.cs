@@ -25,10 +25,11 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         ReportDataSource ds2 = new ReportDataSource();
         ReportDataSource ds3 = new ReportDataSource();
         DataTable dt;
-
+        DataTable dt3;
+        string[] Municipios;
         private void Personalizar_Load(object sender, EventArgs e)
         {
-
+            dt3 = proc.ObtenerMunicipios();
             this.reportViewer1.RefreshReport();
             ds.Name = "Consulta";
             DataTable dt2 = proc.Obtener_Programa();
@@ -42,12 +43,23 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             comboBox11.DataSource = dt;
             comboBox11.ValueMember = "Nombre";
             comboBox11.DisplayMember = "Nombre";
+            comboBox19.DataSource = dt;
+            comboBox19.ValueMember = "Nombre";
+            comboBox19.DisplayMember = "Nombre";
             comboBox5.DataSource = dt;
             comboBox5.ValueMember = "Nombre";
             comboBox5.DisplayMember = "Nombre";
             comboBox13.DataSource = proc.ObtenerPesquerias();
             comboBox13.ValueMember = "PESQUERIA";
             comboBox13.DisplayMember = "PESQUERIA";
+            if (dt3.Rows.Count != 0)
+            {
+                Municipios = dt3.Rows.OfType<DataRow>().Select(k => k[0].ToString()).ToArray();
+                comboBox22.DataSource = dt3;
+                comboBox22.DisplayMember = "NombreM";
+                comboBox22.ValueMember = "NombreM";
+                comboBox22.Text = "Seleccione un Municipio";
+            }
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -72,7 +84,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 para[c] = new ReportParameter(dato[c], column[c].ToString());
             }
             reportViewer1.LocalReport.SetParameters(para);
-            string consulta = "Select FOLIO, PESCADOR.NOMBRE + ' '+PESCADOR.AP_PAT +' '+ PESCADOR.AP_MAT AS 'NOMBRE',PESCADOR.FECHA_NACIMIENTO,SEGURO, CURP, PESCADOR.MUNICIPIO, PESCADOR.LOCALIDAD, TIPO_PESCADOR, OCUPACION_LABORAL, TELEFONO, CORREO, CALLENUM+', Col. '+COLONIA AS 'DIRECCION', ESCOLARIDAD,RFC, ORDENAMIENTO, PESCADOR.MATRICULA, NOMBREEMBARCACION AS EMBARCACION, (SELECT NOMBRE FROM UNIDAD_ECONOMICA WHERE RNPTITULAR=RNPA) As Unidad, (SELECT CASE WHEN CURP IN(SELECT CURP FROM ARCHIVOSPESCADOR WHERE IMAGEN IS NOT NULL AND FIRMA IS NOT NULL AND FIRMA != '')THEN 'Si'ELSE 'No' END) as Credencializado from PESCADOR, EMBARCACIONES WHERE PESCADOR.MATRICULA = EMBARCACIONES.MATRICULA";
+            string consulta = "Select FOLIO, PESCADOR.NOMBRE + ' '+PESCADOR.AP_PAT +' '+ PESCADOR.AP_MAT AS 'NOMBRE',PESCADOR.FECHA_NACIMIENTO,SEGURO, CURP, PESCADOR.MUNICIPIO, PESCADOR.LOCALIDAD, TIPO_PESCADOR, OCUPACION_LABORAL, TELEFONO, CORREO, CALLENUM+', Col. '+COLONIA AS 'DIRECCION', ESCOLARIDAD,RFC, ORDENAMIENTO, PESCADOR.MATRICULA, NOMBREEMBARCACION AS EMBARCACION, (SELECT NOMBRE FROM UNIDAD_ECONOMICA WHERE RNPTITULAR=RNPA) As Unidad, (SELECT CASE WHEN CURP IN(SELECT CURP FROM ARCHIVOSPESCADOR WHERE IMAGEN IS NOT NULL AND FIRMA IS NOT NULL AND FIRMA != '')THEN 'Si'ELSE 'No' END) as Credencializados from PESCADOR, EMBARCACIONES WHERE PESCADOR.MATRICULA = EMBARCACIONES.MATRICULA";
             int r = 0;
             foreach (CheckBox a in FiltrosPescador.Controls.OfType<CheckBox>())
             {
@@ -560,6 +572,88 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     item.Checked = false;
                 }
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+
+            this.reportViewer1.ProcessingMode = ProcessingMode.Local;
+            reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Cred_Personal.rdlc");
+            bool[] column = new bool[14];
+            string[] dato = new string[14];
+            int i = 0;
+            foreach (CheckBox a in ColumnasCred.Controls)
+            {
+                if (a.Text != "TODOS")
+                {
+                    column[i] = a.Checked;
+                    dato[i] = a.Text.Replace(" ", "_");
+                    dato[i] = dato[i].ToLower();
+                    i++;
+                }
+            }
+            ReportParameter[] para = new ReportParameter[14];
+            for (int c = 0; c < 14; c++)
+            {
+                para[c] = new ReportParameter(dato[c], column[c].ToString());
+            }
+            reportViewer1.LocalReport.SetParameters(para);
+            string consulta = "	   Select FOLIO, PESCADOR.NOMBRE + ' '+PESCADOR.AP_PAT +' '+ PESCADOR.AP_MAT AS 'NOMBRE', CURP, PESCADOR.MUNICIPIO, PESCADOR.LOCALIDAD, TIPO_PESCADOR, OCUPACION_LABORAL, PESCADOR.MATRICULA, NOMBREEMBARCACION AS EMBARCACION, (SELECT NOMBRE FROM UNIDAD_ECONOMICA WHERE RNPTITULAR=RNPA) As Unidad, (SELECT CASE WHEN CURP IN(SELECT CURP FROM ARCHIVOSPESCADOR WHERE ACTANAC IS NOT NULL)THEN 'Si'ELSE 'No' END) AS 'ACTA_DE_NACIMIENTO', (SELECT CASE WHEN CURP IN(SELECT CURP FROM ARCHIVOSPESCADOR WHERE ACURP IS NOT NULL)THEN 'Si'ELSE 'No' END) AS ' DOC._CURP', (SELECT CASE WHEN CURP IN(SELECT CURP FROM ARCHIVOSPESCADOR WHERE AINE IS NOT NULL)THEN 'Si'ELSE 'No' END) AS 'INE', (SELECT CASE WHEN CURP IN(SELECT CURP FROM ARCHIVOSPESCADOR WHERE ACOMPDOM IS NOT NULL)THEN 'Si'ELSE 'No' END) AS 'COMPROBANTE_DE_DOMICILIO' from PESCADOR, EMBARCACIONES WHERE PESCADOR.MATRICULA = EMBARCACIONES.MATRICULA AND (SELECT CASE WHEN CURP IN(SELECT CURP FROM ARCHIVOSPESCADOR WHERE IMAGEN IS NOT NULL AND FIRMA IS NOT NULL AND FIRMA != '')THEN 'Si'ELSE 'No' END)='Si'";
+            int r = 0;
+            foreach (CheckBox a in FiltrosCred.Controls.OfType<CheckBox>())
+            {
+                if (a.Checked)
+                {
+                    if (a.Text == "Municipio")
+                    {
+                        consulta += " AND PESCADOR." + a.Text.Replace(" ", "_").ToLower() + " = ";
+                    }
+                    else
+                    {
+                        if (a.Text == "U.E.")
+                        {
+                            consulta += " AND RNPTITULAR = ";
+                        }
+                        else
+                        {
+                            consulta += " AND " + a.Text.Replace(" ", "_").ToLower() + " = ";
+                        }
+                    }
+
+                    int m = 0;
+                    foreach (ComboBox cb in FiltrosCred.Controls.OfType<ComboBox>())
+                    {
+                        if (m == r)
+                        {
+                            if (a.Text == "U.E.")
+                            {
+                                consulta += "'" + dt.Rows[comboBox14.SelectedIndex]["RNPA"] + "'";
+                                break;
+                            }
+                            else
+                            {
+                                consulta += "'" + cb.Text + "'";
+                                break;
+                            }
+                        }
+                        m++;
+                    }
+                }
+                r++;
+            }
+            consulta += " Order by " + OrdenaPescador.Text.Replace(" ", "_");
+            ds.Value = proc.ObtenerTablaConsulta(consulta);
+            this.reportViewer1.LocalReport.DataSources.Add(ds);
+            this.reportViewer1.RefreshReport();
+        }
+
+        private void comboBox22_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dt4 = proc.ObtenerLocalidades(Municipios[comboBox22.SelectedIndex]);
+            comboBox21.DataSource = dt4;
+            comboBox21.DisplayMember = "NombreL";
+            comboBox21.ValueMember = "NombreL";
+            comboBox21.Text = "";
         }
     }
 }

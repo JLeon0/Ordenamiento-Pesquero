@@ -2,9 +2,11 @@
 {
 }
 
-namespace OrdenamientoPesquero {
-    
-    
-    public partial class Consulta {
+namespace OrdenamientoPesquero
+{
+
+
+    public partial class Consulta
+    {
     }
 }
