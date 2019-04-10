@@ -354,7 +354,7 @@
             this.PanelRegUser.Controls.Add(this.CerrarPanelUsuario);
             this.PanelRegUser.Controls.Add(this.label35);
             this.PanelRegUser.ForeColor = System.Drawing.Color.Black;
-            this.PanelRegUser.Location = new System.Drawing.Point(423, 136);
+            this.PanelRegUser.Location = new System.Drawing.Point(409, 142);
             this.PanelRegUser.Name = "PanelRegUser";
             this.PanelRegUser.Size = new System.Drawing.Size(524, 319);
             this.PanelRegUser.TabIndex = 193;
@@ -615,7 +615,7 @@
             this.ResponsablePrograma.Items.AddRange(new object[] {
             "Hernan Rafael Flores Cota",
             "Patricia Serrano",
-            "Claudia Cota Alvarez",
+            "Claudia Cota Ojeda",
             "Armando Herrero Pérezrul",
             "Karla Murillo",
             "Gumaro Geraldo Lucero",

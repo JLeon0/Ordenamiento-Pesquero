@@ -509,7 +509,7 @@
             this.responsable.Items.AddRange(new object[] {
             "Hernan Rafael Flores Cota",
             "Patricia Serrano",
-            "Claudia Cota Alvarez",
+            "Claudia Cota Ojeda",
             "Armando Herrero Pérezrul",
             "Karla Murillo",
             "Gumaro Geraldo Lucero",
