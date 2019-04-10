@@ -718,10 +718,10 @@ namespace Logica
             return c.getDatosTabla("Obtener_Programa", Parametros);
         }
 
-        public DataTable ObtenerClaveXUsuario(string user)
+        public DataTable ObtenerClaveXUsuario(string user, string responsable)
         {
-            string[] Parametros = { "@user" };
-            return c.getDatosTabla("ObtenerClaveXUsuario", Parametros, user);
+            string[] Parametros = { "@user","@responsable" };
+            return c.getDatosTabla("ObtenerClaveXUsuario", Parametros, user, responsable);
         }
         #endregion
 
