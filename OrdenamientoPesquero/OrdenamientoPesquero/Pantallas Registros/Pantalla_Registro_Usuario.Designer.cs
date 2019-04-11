@@ -125,7 +125,7 @@
             this.Parentesco = new System.Windows.Forms.TextBox();
             this.NPoliza = new System.Windows.Forms.TextBox();
             this.AbrirExpediente = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.EliminarRegistro = new System.Windows.Forms.PictureBox();
             this.RegistrarPescador = new System.Windows.Forms.PictureBox();
             this.ActualizarUnidad = new System.Windows.Forms.PictureBox();
             this.EliminarUnidad = new System.Windows.Forms.PictureBox();
@@ -210,7 +210,7 @@
             this.OcupacionEnEmbarPesc.SuspendLayout();
             this.TipoPesc.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AbrirExpediente)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EliminarRegistro)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarPescador)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
@@ -1345,18 +1345,18 @@
             this.toolTip1.SetToolTip(this.AbrirExpediente, "Abrir Expediente");
             this.AbrirExpediente.Click += new System.EventHandler(this.AbrirExpediente_Click);
             // 
-            // pictureBox1
+            // EliminarRegistro
             // 
-            this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(472, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.TabIndex = 181;
-            this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, "Eliminar Registro");
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            this.EliminarRegistro.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
+            this.EliminarRegistro.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EliminarRegistro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EliminarRegistro.Location = new System.Drawing.Point(472, 16);
+            this.EliminarRegistro.Name = "EliminarRegistro";
+            this.EliminarRegistro.Size = new System.Drawing.Size(50, 50);
+            this.EliminarRegistro.TabIndex = 181;
+            this.EliminarRegistro.TabStop = false;
+            this.toolTip1.SetToolTip(this.EliminarRegistro, "Eliminar Registro");
+            this.EliminarRegistro.Click += new System.EventHandler(this.EliminarRegistro_Click);
             // 
             // RegistrarPescador
             // 
@@ -1672,7 +1672,7 @@
             // 
             // gbBotones
             // 
-            this.gbBotones.Controls.Add(this.pictureBox1);
+            this.gbBotones.Controls.Add(this.EliminarRegistro);
             this.gbBotones.Controls.Add(this.label12);
             this.gbBotones.Controls.Add(this.RegistrarPescador);
             this.gbBotones.Controls.Add(this.ActualizarUnidad);
@@ -2194,7 +2194,7 @@
             this.TipoPesc.ResumeLayout(false);
             this.TipoPesc.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AbrirExpediente)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EliminarRegistro)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarPescador)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).EndInit();
@@ -2327,7 +2327,7 @@
         private System.Windows.Forms.GroupBox gbBotones;
         public System.Windows.Forms.PictureBox Firma;
         private System.Windows.Forms.TextBox CURPPesc;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox EliminarRegistro;
         private System.Windows.Forms.Label label12;
         public System.Windows.Forms.PictureBox Huella;
         private System.Windows.Forms.PictureBox CargarHuella;

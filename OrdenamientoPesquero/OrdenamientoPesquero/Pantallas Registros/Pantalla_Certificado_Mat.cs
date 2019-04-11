@@ -36,6 +36,11 @@ namespace OrdenamientoPesquero
                 limpiar.Visible = true;
                 ActivarPanelMATRICULA.Visible = true;
             }
+            if(NIVEL == 0)
+            {
+                EliminarUnidad.Visible = true;
+                label4.Visible = true;
+            }
         }
         void CertMatXUnidad()
         {

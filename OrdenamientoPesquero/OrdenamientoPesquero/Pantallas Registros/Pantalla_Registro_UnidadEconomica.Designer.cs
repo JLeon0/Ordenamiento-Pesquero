@@ -445,6 +445,7 @@
             this.EliminarUnidad.TabIndex = 107;
             this.EliminarUnidad.TabStop = false;
             this.toolTip1.SetToolTip(this.EliminarUnidad, "Eliminar Unidad Economica");
+            this.EliminarUnidad.Visible = false;
             this.EliminarUnidad.Click += new System.EventHandler(this.EliminarUnidad_Click);
             // 
             // RegistrarUnidad
@@ -507,6 +508,7 @@
             this.label1.Size = new System.Drawing.Size(43, 14);
             this.label1.TabIndex = 112;
             this.label1.Text = "Eliminar";
+            this.label1.Visible = false;
             // 
             // pictureBox6
             // 

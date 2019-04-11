@@ -58,6 +58,11 @@ namespace OrdenamientoPesquero
                 gbBotonesUE.Visible = true;
                 menuStrip1.Visible = true;
             }
+            if (NIVEL == 0)
+            {
+                EliminarUnidad.Visible = true;
+                label1.Visible = true;
+            }
             this.Cursor = Cursors.Default;
         }
 
