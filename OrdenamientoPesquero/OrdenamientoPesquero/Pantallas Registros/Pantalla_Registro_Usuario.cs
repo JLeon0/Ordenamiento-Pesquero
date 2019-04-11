@@ -59,6 +59,11 @@ namespace OrdenamientoPesquero
                 CargarHuella.Enabled = true;
                 CargarImagen.Enabled = true;
             }
+            if (NIVEL == 0)
+            {
+                EliminarRegistro.Visible = true;
+                label12.Visible = true;
+            }
             Bienvenido.Text += NombreUsuario;
             BloquearControles();
             CargarNoPescadores();
@@ -1171,19 +1176,6 @@ namespace OrdenamientoPesquero
             Vistas v = new Vistas(CURPPesc.Text, NombreUnidad, 4, huell);
             v.Show(this);
         }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            DialogResult Si = MessageBox.Show("¿Desea eliminar este Pescador de forma definitiva?", "ADVERTENCIA", MessageBoxButtons.YesNo);
-            if (Si == DialogResult.Yes)
-            {
-                exito = proc.Eliminar_Pescador(CURPPesc.Text, 0);
-                if (exito > 0)
-                { val.Exito(-21); limpiarpescador(); exito = 0; }
-                CargarPescadores();
-                CargarNoPescadores();
-            }
-        }
         
 
         private void ListaNombres2_MouseDoubleClick(object sender, MouseEventArgs e)
@@ -1280,7 +1272,20 @@ namespace OrdenamientoPesquero
             Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes("", "", false, Usuario, NIVEL, NombreUsuario);
             pantalla.ShowDialog();
         }
-    
+
+        private void EliminarRegistro_Click(object sender, EventArgs e)
+        {
+            DialogResult Si = MessageBox.Show("¿Desea eliminar este Pescador de forma definitiva?", "ADVERTENCIA", MessageBoxButtons.YesNo);
+            if (Si == DialogResult.Yes)
+            {
+                exito = proc.Eliminar_Pescador(CURPPesc.Text, 0);
+                if (exito > 0)
+                { val.Exito(-21); limpiarpescador(); exito = 0; }
+                CargarPescadores();
+                CargarNoPescadores();
+            }
+        }
+
         private void CaptureThread()
         {
             reset = false;
