@@ -206,7 +206,7 @@ namespace OrdenamientoPesquero
                 if (ListaNombres.SelectedIndex > -1 && RNPA != "") { NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), ""); R = NOMBRES.Rows[0]["RNPTITULAR"].ToString(); }
                 string matricula = "";
                 if(MatriculaPesc.Text == "NO APLICA") { matricula = "NO APLICA"; } else { matricula = MatriculaRelacion.Text; }
-                pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, "", ocupacion, cuerpo, matricula, CorreoPesc.Text, LocalidadPesc.Text, o, R, Seguro.Text, fechaVenF, fechaExpF);
+                pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, "", "", "", matricula, CorreoPesc.Text, LocalidadPesc.Text, 0, R, Seguro.Text, fechaVenF, fechaExpF);
                 if (registrar)
                 {
                     RegistrarImagen();
