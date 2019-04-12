@@ -201,7 +201,14 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     para1[9] = new ReportParameter("EXPEDICION", dt1.Rows[0]["FECHAEXP_FOLIO"].ToString());
                     para1[10] = new ReportParameter("VENCE", dt1.Rows[0]["FECHAVEN_FOLIO"].ToString());
                     para1[6] = new ReportParameter("FOLIO", dt1.Rows[0]["FOLIO"].ToString());
-                    para1[11] = new ReportParameter("OCUPACION", dt1.Rows[0]["OCUPACION_LABORAL"].ToString().ToUpper());
+                    if (dt1.Rows[0]["OCUPACION_LABORAL"].ToString().ToUpper().ToString()=="SIN ACTIVIDAD")
+                    {
+                        para1[11] = new ReportParameter("OCUPACION", "SIN ACT.");
+                    }
+                    else
+                    {
+                        para1[11] = new ReportParameter("OCUPACION", dt1.Rows[0]["OCUPACION_LABORAL"].ToString().ToUpper());
+                    }
                     para1[12] = new ReportParameter("MUNI", dt1.Rows[0]["MUNICIPIO"].ToString().ToUpper());
                     para1[13] = new ReportParameter("LOCAL", dt1.Rows[0]["LOCALIDAD"].ToString().ToUpper());
                     para1[7] = new ReportParameter("DIRECCION", dt1.Rows[0]["CALLENUM"].ToString() + ", COL." + dt1.Rows[0]["COLONIA"].ToString());

@@ -560,14 +560,14 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         {
             if (checkBox101.Checked)
             {
-                foreach (CheckBox item in ColumnasSolicitudes.Controls.OfType<CheckBox>())
+                foreach (CheckBox item in ColumasPescador.Controls.OfType<CheckBox>())
                 {
                     item.Checked = true;
                 }
             }
             else
             {
-                foreach (CheckBox item in ColumnasSolicitudes.Controls.OfType<CheckBox>())
+                foreach (CheckBox item in ColumasPescador.Controls.OfType<CheckBox>())
                 {
                     item.Checked = false;
                 }
@@ -598,7 +598,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 para[c] = new ReportParameter(dato[c], column[c].ToString());
             }
             reportViewer1.LocalReport.SetParameters(para);
-            string consulta = "	   Select FOLIO, PESCADOR.NOMBRE + ' '+PESCADOR.AP_PAT +' '+ PESCADOR.AP_MAT AS 'NOMBRE', CURP, PESCADOR.MUNICIPIO, PESCADOR.LOCALIDAD, TIPO_PESCADOR, OCUPACION_LABORAL, PESCADOR.MATRICULA, NOMBREEMBARCACION AS EMBARCACION, (SELECT NOMBRE FROM UNIDAD_ECONOMICA WHERE RNPTITULAR=RNPA) As Unidad, (SELECT CASE WHEN CURP IN(SELECT CURP FROM ARCHIVOSPESCADOR WHERE ACTANAC IS NOT NULL)THEN 'Si'ELSE 'No' END) AS 'ACTA_DE_NACIMIENTO', (SELECT CASE WHEN CURP IN(SELECT CURP FROM ARCHIVOSPESCADOR WHERE ACURP IS NOT NULL)THEN 'Si'ELSE 'No' END) AS ' DOC._CURP', (SELECT CASE WHEN CURP IN(SELECT CURP FROM ARCHIVOSPESCADOR WHERE AINE IS NOT NULL)THEN 'Si'ELSE 'No' END) AS 'INE', (SELECT CASE WHEN CURP IN(SELECT CURP FROM ARCHIVOSPESCADOR WHERE ACOMPDOM IS NOT NULL)THEN 'Si'ELSE 'No' END) AS 'COMPROBANTE_DE_DOMICILIO' from PESCADOR, EMBARCACIONES WHERE PESCADOR.MATRICULA = EMBARCACIONES.MATRICULA AND (SELECT CASE WHEN CURP IN(SELECT CURP FROM ARCHIVOSPESCADOR WHERE IMAGEN IS NOT NULL AND FIRMA IS NOT NULL AND FIRMA != '')THEN 'Si'ELSE 'No' END)='Si'";
+            string consulta = "	   Select FOLIO, PESCADOR.NOMBRE + ' '+PESCADOR.AP_PAT +' '+ PESCADOR.AP_MAT AS 'NOMBRE', CURP, PESCADOR.MUNICIPIO, PESCADOR.LOCALIDAD, TIPO_PESCADOR, OCUPACION_LABORAL, PESCADOR.MATRICULA, NOMBREEMBARCACION AS EMBARCACION, (SELECT NOMBRE FROM UNIDAD_ECONOMICA WHERE RNPTITULAR=RNPA) As Unidad, (SELECT CASE WHEN CURP IN(SELECT CURP FROM ARCHIVOSPESCADOR WHERE ACTANAC IS NOT NULL)THEN 'Si'ELSE 'No' END) AS 'ACTA_DE_NACIMIENTO', (SELECT CASE WHEN CURP IN(SELECT CURP FROM ARCHIVOSPESCADOR WHERE ACURP IS NOT NULL)THEN 'Si'ELSE 'No' END) AS 'DCURP', (SELECT CASE WHEN CURP IN(SELECT CURP FROM ARCHIVOSPESCADOR WHERE AINE IS NOT NULL)THEN 'Si'ELSE 'No' END) AS 'INE', (SELECT CASE WHEN CURP IN(SELECT CURP FROM ARCHIVOSPESCADOR WHERE ACOMPDOM IS NOT NULL)THEN 'Si'ELSE 'No' END) AS 'COMPROBANTE_DE_DOMICILIO' from PESCADOR, EMBARCACIONES WHERE PESCADOR.MATRICULA = EMBARCACIONES.MATRICULA AND (SELECT CASE WHEN CURP IN(SELECT CURP FROM ARCHIVOSPESCADOR WHERE IMAGEN IS NOT NULL AND FIRMA IS NOT NULL AND FIRMA != '')THEN 'Si'ELSE 'No' END)='Si'";
             int r = 0;
             foreach (CheckBox a in FiltrosCred.Controls.OfType<CheckBox>())
             {
@@ -654,6 +654,24 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             comboBox21.DisplayMember = "NombreL";
             comboBox21.ValueMember = "NombreL";
             comboBox21.Text = "";
+        }
+
+        private void checkBox111_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox111.Checked)
+            {
+                foreach (CheckBox item in ColumnasCred.Controls.OfType<CheckBox>())
+                {
+                    item.Checked = true;
+                }
+            }
+            else
+            {
+                foreach (CheckBox item in ColumnasCred.Controls.OfType<CheckBox>())
+                {
+                    item.Checked = false;
+                }
+            }
         }
     }
 }
