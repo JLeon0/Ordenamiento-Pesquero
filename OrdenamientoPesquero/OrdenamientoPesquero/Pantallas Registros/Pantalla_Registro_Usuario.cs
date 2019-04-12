@@ -512,6 +512,8 @@ namespace OrdenamientoPesquero
         private void limpiarpescador()
         {
             Imagen.BackgroundImage = OrdenamientoPesquero.Properties.Resources.perfil;
+            Firma.BackgroundImage = null;
+            Huella.BackgroundImage = null;
             no.Checked = true;
             foreach (TextBox item in gbDatosGenerales.Controls.OfType<TextBox>())
             {
@@ -525,6 +527,12 @@ namespace OrdenamientoPesquero
             {
                 item.Text = "";
             }
+            ActaNac.ForeColor = Color.Red;
+            ACurp.ForeColor = Color.Red;
+            AIne.ForeColor = Color.Red;
+            AComp.ForeColor = Color.Red;
+            apoyos.Text = "0";
+            solicitudes.Text = "0";
             MatriculaPesc.Text = "NO APLICA";
             MatriculaRelacion.Text = "-----";
             Unid.Text = "";
