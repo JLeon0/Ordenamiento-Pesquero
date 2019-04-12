@@ -206,7 +206,7 @@ namespace OrdenamientoPesquero
                 if (ListaNombres.SelectedIndex > -1 && RNPA != "") { NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), ""); R = NOMBRES.Rows[0]["RNPTITULAR"].ToString(); }
                 string matricula = "";
                 if(MatriculaPesc.Text == "NO APLICA") { matricula = "NO APLICA"; } else { matricula = MatriculaRelacion.Text; }
-                pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, "", "", "", matricula, CorreoPesc.Text, LocalidadPesc.Text, 0, R, Seguro.Text, fechaVenF, fechaExpF);
+                pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, "", "Sin Actividad", "", matricula, CorreoPesc.Text, LocalidadPesc.Text, 0, R, Seguro.Text, fechaVenF, fechaExpF);
                 if (registrar)
                 {
                     RegistrarImagen();
@@ -331,8 +331,8 @@ namespace OrdenamientoPesquero
                 lblNo.Text = "NO PESCADORES  " + NoOrdenados.Rows.Count;
                 dt.Merge(NoOrdenados);
                 NoOrdenados = dt;
-                DataView view = new DataView(dt);
-                view.Sort = "CURP";
+                DataView view = new DataView(dt)
+                { Sort = "CURP" };
                 ListaNombres.DataSource = view;
                 ListaNombres.ValueMember = "CURP";
                 ListaNombres.DisplayMember = "CURP";
@@ -1105,8 +1105,8 @@ namespace OrdenamientoPesquero
             NOMBRES = proc.BuscarNombre(x, RNPA);
             if (RNPA == "")
             {
-                DataView view = new DataView(NOMBRES);
-                view.Sort = "CURP";
+                DataView view = new DataView(NOMBRES)
+                { Sort = "CURP" };
                 ListaNombres.DataSource = view;
             }
             else { ListaNombres.DataSource = NOMBRES; }
@@ -1240,8 +1240,8 @@ namespace OrdenamientoPesquero
                 return;
             }
             Huella.BackgroundImage = null;
-            threadHandle = new Thread(CaptureThread);
-            threadHandle.IsBackground = true;
+            threadHandle = new Thread(CaptureThread)
+            { IsBackground = true };
             threadHandle.Start();
         }
 
