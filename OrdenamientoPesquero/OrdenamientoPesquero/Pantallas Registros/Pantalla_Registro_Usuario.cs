@@ -188,7 +188,12 @@ namespace OrdenamientoPesquero
                         {
                             RegistrarImagen();
                             proc.reg_uni(pes.CURP, uni2.Text);
-                            return proc.Registrar_Pescador(pes);
+                            if (proc.Registrar_Pescador(pes) > 0)
+                            {
+                                LlenarDatos(pes.CURP);
+                                return 1;
+                            }
+                            else return 0;
                         }
                         else
                         {
@@ -211,7 +216,12 @@ namespace OrdenamientoPesquero
                 {
                     RegistrarImagen();
                     proc.reg_uni(pes.CURP, uni2.Text);
-                    return proc.Registrar_Pescador(pes);
+                    if (proc.Registrar_Pescador(pes) > 0)
+                    {
+                        LlenarDatos(pes.CURP);
+                        return 1;
+                    }
+                    else return 0;
                 }
                 else
                 {
