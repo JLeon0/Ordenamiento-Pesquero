@@ -676,30 +676,31 @@ namespace OrdenamientoPesquero
 
         private void cambiosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Cursor = Cursors.WaitCursor;
-            OpenFileDialog ofd = new OpenFileDialog();
-            DialogResult dr = ofd.ShowDialog();
-            if (dr == DialogResult.OK)
-            {
-                string direccion = ofd.FileName;
-                if (proc.Cargar(direccion))
-                {
-                    servidorToolStripMenuItem.Checked = false;
+            //this.Cursor = Cursors.WaitCursor;
+            //OpenFileDialog ofd = new OpenFileDialog();
+            //DialogResult dr = ofd.ShowDialog();
+            //if (dr == DialogResult.OK)
+            //{
+            //    string direccion = ofd.FileName;
+            //    if (proc.Cargar(direccion))
+            //    {
+            //        servidorToolStripMenuItem.Checked = false;
                     cambiosToolStripMenuItem.Checked = true;
                     proc.bdd = "OrdPesquero2";
                     proc.cambiarbd(proc.bdd);
                     this.OnLoad(e);
-                }
-                else
-                {
-                    cambiosToolStripMenuItem.Checked = false;
-                }
-            }
-            else
-            {
-                cambiosToolStripMenuItem.Checked = false;
-            }
-            this.Cursor = Cursors.Default;
+            cambiarbd(Properties.Settings.Default.OrdPesqueroConnectionString.Replace("OrdPesquero", "OrdPesquero2"));
+            //    }
+            //    else
+            //    {
+            //        cambiosToolStripMenuItem.Checked = false;
+            //    }
+            //}
+            //else
+            //{
+            //    cambiosToolStripMenuItem.Checked = false;
+            //}
+            //this.Cursor = Cursors.Default;
         }
 
         #endregion
@@ -724,7 +725,7 @@ namespace OrdenamientoPesquero
             {
                 int tipo = 0;
                 if (Privado.Checked) { tipo = 1; }
-                Pantalla_Registro_Usuario pesc = new Pantalla_Registro_Usuario(cbRNPA.Text, txtNombre.Text, tipo, Usuario,NombreUsuario,NIVEL);
+                Pantalla_Registro_Usuario pesc = new Pantalla_Registro_Usuario(cbRNPA.Text, txtNombre.Text, tipo, Usuario,NombreUsuario,NIVEL,proc.bdd);
                 this.Hide();
                 pesc.ShowDialog(this);
                 Resumenes(cbRNPA.Text);
@@ -748,7 +749,7 @@ namespace OrdenamientoPesquero
 
         private void TotalPermisos_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 2);
+            Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 2,proc.bdd);
             v.ShowDialog(this);
         }
 
@@ -756,7 +757,7 @@ namespace OrdenamientoPesquero
         {
             if (cbRNPA.Text != "" && cbRNPA.Text != null)
             {
-                Vistas vista = new Vistas(cbRNPA.Text, txtNombre.Text, 1);
+                Vistas vista = new Vistas(cbRNPA.Text, txtNombre.Text, 1,proc.bdd);
                 vista.ShowDialog();
             }
         }
@@ -794,7 +795,7 @@ namespace OrdenamientoPesquero
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 5);
+            Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 5, proc.bdd);
             v.ShowDialog(this);
         }
 
@@ -904,11 +905,11 @@ namespace OrdenamientoPesquero
         {
             if (Social.Checked)
             {
-                Pantallas_Menu.MenuReportes mr = new Pantallas_Menu.MenuReportes(cbRNPA.Text, "ReporteXUnidad.rdlc"); mr.Show(this);
+                Pantallas_Menu.MenuReportes mr = new Pantallas_Menu.MenuReportes(cbRNPA.Text, "ReporteXUnidad.rdlc",proc.bdd); mr.Show(this);
             }
             else
             {
-                Pantallas_Menu.MenuReportes mr = new Pantallas_Menu.MenuReportes(cbRNPA.Text, "ReporteXPermicionario.rdlc"); mr.Show(this);
+                Pantallas_Menu.MenuReportes mr = new Pantallas_Menu.MenuReportes(cbRNPA.Text, "ReporteXPermicionario.rdlc",proc.bdd); mr.Show(this);
             }
         }
 
@@ -1008,7 +1009,7 @@ namespace OrdenamientoPesquero
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 15);
+            Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 15,proc.bdd);
             v.Show(this);
         }
 
@@ -1028,7 +1029,17 @@ namespace OrdenamientoPesquero
                 catch (Exception ms) { }
             }
         }
-        #endregion
 
+        #endregion
+        public void cambiarbd(string CONEXIONPERRONA)
+        {
+            Properties.Settings.Default.OrdPesqueroConnectionString = CONEXIONPERRONA;
+            Properties.Settings.Default.OrdPesqueroConnectionString1 = CONEXIONPERRONA;
+            Properties.Settings.Default.OrdPesqueroConnectionString2 = CONEXIONPERRONA;
+            Properties.Settings.Default.OrdPesqueroConnectionString3 = CONEXIONPERRONA;
+            Properties.Settings.Default.OrdPesqueroConnectionString4 = CONEXIONPERRONA;
+            // modificamos el guardado
+            Properties.Settings.Default.Save();
+        }
     }
 }

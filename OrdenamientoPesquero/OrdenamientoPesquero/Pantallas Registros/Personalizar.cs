@@ -16,9 +16,10 @@ namespace OrdenamientoPesquero.Pantallas_Registros
 {
     public partial class Personalizar : Form
     {
-        public Personalizar()
+        public Personalizar(string bdd)
         {
             InitializeComponent();
+            BD = bdd;
         }
         Procedimientos proc = new Procedimientos();
         ReportDataSource ds = new ReportDataSource();
@@ -27,8 +28,11 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         DataTable dt;
         DataTable dt3;
         string[] Municipios;
+        string BD;
         private void Personalizar_Load(object sender, EventArgs e)
         {
+            proc.bdd = BD;
+            proc.cambiarbd(proc.bdd);
             dt3 = proc.ObtenerMunicipios();
             this.reportViewer1.RefreshReport();
             ds.Name = "Consulta";

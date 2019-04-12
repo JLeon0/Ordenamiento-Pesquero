@@ -357,7 +357,7 @@ namespace OrdenamientoPesquero
 
         private void Ver_Click(object sender, EventArgs e)
         {
-            Vistas v = new Vistas(Rnpa, uni, 2);
+            Vistas v = new Vistas(Rnpa, uni, 2, proc.bdd);
             v.ShowDialog(this);
         }
 

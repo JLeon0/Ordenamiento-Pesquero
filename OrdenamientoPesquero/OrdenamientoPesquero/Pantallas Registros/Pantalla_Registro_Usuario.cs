@@ -25,13 +25,13 @@ namespace OrdenamientoPesquero
         Procedimientos proc = new Procedimientos();
         Validaciones val = new Validaciones();
         DataTable dt, NoOrdenados, Embarcaciones;
-        string RNPA = "", NombreUnidad = "", Usuario = "", NombreUsuario = "";
+        string RNPA = "", NombreUnidad = "", Usuario = "", NombreUsuario = "", BD="";
         string[] Municipios;
         byte[] imagenBuffer;
         string matricula = "";
         Bitmap huell;
 
-        public Pantalla_Registro_Usuario(string rnpa, string nombre, int tipo, string user, string nombreuser, int nivel)
+        public Pantalla_Registro_Usuario(string rnpa, string nombre, int tipo, string user, string nombreuser, int nivel, string bdd)
         {
             InitializeComponent();
             //this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
@@ -45,10 +45,13 @@ namespace OrdenamientoPesquero
             Usuario = user;
             NombreUsuario = nombreuser;
             NIVEL = nivel;
+            BD = bdd;
         }
 
         private void Pantalla_Registro_Usuario_Load(object sender, EventArgs e)
         {
+            proc.bdd = BD;
+            proc.cambiarbd(proc.bdd);
             //val.ajustarResolucion(this);
             if (NIVEL == 0 || NIVEL == 4)
             {
@@ -931,7 +934,7 @@ namespace OrdenamientoPesquero
 
         private void Ver_Click(object sender, EventArgs e)
         {
-            Vistas vista = new Vistas(CURPPesc.Text, RNPA, 4);
+            Vistas vista = new Vistas(CURPPesc.Text, RNPA, 4, BD);
             vista.ShowDialog();
         }
         private void VerInforme_Click(object sender, EventArgs e)
@@ -953,7 +956,7 @@ namespace OrdenamientoPesquero
                 }
                 
             }
-            Vistas vistas = new Vistas(CURPPesc.Text, N, RNPA, ord, 14);
+            Vistas vistas = new Vistas(CURPPesc.Text, N, RNPA, ord, 14, proc.bdd);
             vistas.ShowDialog();
             RNPA = "";
         }
@@ -1173,7 +1176,7 @@ namespace OrdenamientoPesquero
 
         private void Credencial_Click(object sender, EventArgs e)
         {
-            Vistas v = new Vistas(CURPPesc.Text, NombreUnidad, 4, huell);
+            Vistas v = new Vistas(CURPPesc.Text, NombreUnidad, 4, huell, proc.bdd);
             v.Show(this);
         }
         

@@ -13,29 +13,31 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 {
     public partial class MenuReportes : Form
     {
-        public MenuReportes(string rnpa, string tip)
+        public MenuReportes(string rnpa, string tip, string bdd)
         {
             InitializeComponent();
             r = rnpa;
             t = tip;
+            BD = bdd;
         }
+        string BD;
         string r;
         string t;
         private void button1_Click(object sender, EventArgs e)
         {
-            Vistas v = new Vistas("", "", 7);
+            Vistas v = new Vistas("", "", 7, BD);
             v.ShowDialog(this);
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Vistas v = new Vistas(r, t, 6);
+            Vistas v = new Vistas(r, t, 6,BD);
             v.ShowDialog(this);
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            Vistas v = new Vistas(r, "", 8);
+            Vistas v = new Vistas(r, "", 8,BD);
             v.ShowDialog(this);
         }
 
@@ -46,37 +48,37 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Vistas v = new Vistas(r, "", 9);
+            Vistas v = new Vistas(r, "", 9,BD);
             v.ShowDialog(this);
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            Vistas v = new Vistas(r, "", 10);
+            Vistas v = new Vistas(r, "", 10,BD);
             v.ShowDialog(this);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
-            Vistas v = new Vistas(r, "", 11);
+            Vistas v = new Vistas(r, "", 11,BD);
             v.ShowDialog(this);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
-            Personalizar p = new Personalizar();
+            Personalizar p = new Personalizar(BD);
             p.Show(this);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Vistas v = new Vistas(r, "", 13);
+            Vistas v = new Vistas(r, "", 13,BD);
             v.ShowDialog(this);
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
-            Vistas v = new Vistas(comboBox1.Text.ToUpper(), t, 12);
+            Vistas v = new Vistas(comboBox1.Text.ToUpper(), t, 12,BD);
             v.ShowDialog(this);
         }
     }

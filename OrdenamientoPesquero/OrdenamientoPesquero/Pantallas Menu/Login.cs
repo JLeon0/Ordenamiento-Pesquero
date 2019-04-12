@@ -126,7 +126,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
                 }
                 else if (Nivel == 3)
                 {
-                    Pantalla_Registro_Usuario usu = new Pantalla_Registro_Usuario("", "", 2, Usuario, NombreUsuario, Nivel);
+                    Pantalla_Registro_Usuario usu = new Pantalla_Registro_Usuario("", "", 2, Usuario, NombreUsuario, Nivel,"OrdPesquero");
                     this.Hide();
                     usu.Show(this);
                 }

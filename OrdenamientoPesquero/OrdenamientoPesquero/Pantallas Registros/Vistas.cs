@@ -18,39 +18,46 @@ namespace OrdenamientoPesquero.Pantallas_Registros
 {
     public partial class Vistas : Form
     {
-        public Vistas(string parametro, string uni, int tipo)
+        public Vistas(string parametro, string uni, int tipo, string bdd)
         {
             InitializeComponent();
             rnpa = parametro;
             unidad = uni;
             tip = tipo;
+            BD = bdd;
         }
-        public Vistas(string parametro, string uni, int tipo, Bitmap huell)
+        public Vistas(string parametro, string uni, int tipo, Bitmap huell, string bdd)
         {
             InitializeComponent();
             rnpa = parametro;
             unidad = uni;
             tip = tipo;
             huella = huell;
+            BD = bdd;
         }
-        public Vistas(string curp, string NombrePesc, string RNPA,string ordenado, int tipo){
+        public Vistas(string curp, string NombrePesc, string RNPA,string ordenado, int tipo, string bdd)
+        {
             InitializeComponent();
             rnpa = RNPA;
             CURP = curp;
             unidad = NombrePesc;
             Ordenado = ordenado;
             tip = tipo;
+            BD = bdd;
         }
         string CURP;
         string Ordenado;
         string rnpa;
         string unidad;
         int tip;
+        string BD="";
         Bitmap huella;
         Procedimientos proc = new Procedimientos();
         Conexion c;
         private void Vistas_Load(object sender, EventArgs e)
         {
+            proc.bdd = BD;
+            proc.cambiarbd(proc.bdd);
             // TODO: esta línea de código carga datos en la tabla 'pesTodospes.PESCADOR' Puede moverla o quitarla según sea necesario.
             //this.pESCADORTableAdapter.Fill(this.pesTodospes.PESCADOR);
             // TODO: esta línea de código carga datos en la tabla 'ordPesqueroDataSet12.pesembarca' Puede moverla o quitarla según sea necesario.
