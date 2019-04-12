@@ -532,7 +532,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!NOMBRE.Value</Value>
+                              <Value>=StrConv(Fields!NOMBRE.Value,VbStrConv.ProperCase)</Value>
                               <Style>
                                 <FontSize>8pt</FontSize>
                               </Style>
@@ -553,6 +553,7 @@
                         <PaddingBottom>0.5pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
