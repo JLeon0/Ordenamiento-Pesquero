@@ -48,7 +48,7 @@ namespace OrdenamientoPesquero
                 txt.Text = "Apoyos";
                 this.Text = "Apoyos";
             }
-            else { this.Text = "Solicitudes"; }
+            else { this.Text = "Solicitudes"; responsable.SelectedIndex = 0; }
             if(NIVEL == 0 || NIVEL == 3)
             {
                 gbBotones.Visible = true;
@@ -403,6 +403,7 @@ namespace OrdenamientoPesquero
                 p.Text = "";
                 if(p.Name == "estatus") { p.Text = "Pendiente"; }
             }
+            responsable.SelectedIndex = 0;
         }
     }
 }
