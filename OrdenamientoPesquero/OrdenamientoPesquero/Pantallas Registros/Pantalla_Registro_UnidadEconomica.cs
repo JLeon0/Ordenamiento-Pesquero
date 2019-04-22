@@ -671,6 +671,7 @@ namespace OrdenamientoPesquero
             proc.bdd = "OrdPesquero";
             proc.cambiarbd(proc.bdd);
             this.OnLoad(e);
+            cambiarbd(Properties.Settings.Default.OrdPesqueroConnectionString.Replace("OrdPesquero2", "OrdPesquero"));
             this.Cursor = Cursors.Default;
         }
 
@@ -686,10 +687,11 @@ namespace OrdenamientoPesquero
             //    {
             //        servidorToolStripMenuItem.Checked = false;
                     cambiosToolStripMenuItem.Checked = true;
+            servidorToolStripMenuItem.Checked = true;
                     proc.bdd = "OrdPesquero2";
                     proc.cambiarbd(proc.bdd);
                     this.OnLoad(e);
-            cambiarbd(Properties.Settings.Default.OrdPesqueroConnectionString.Replace("OrdPesquero", "OrdPesquero2"));
+                    cambiarbd(Properties.Settings.Default.OrdPesqueroConnectionString.Replace("OrdPesquero", "OrdPesquero2"));
             //    }
             //    else
             //    {
@@ -966,9 +968,9 @@ namespace OrdenamientoPesquero
                 proc.PasarEquipoPesca2();
                 proc.PasarEmbarcaPermis2(municipio, rnp);
                 //proc.PasarDirectiva2(municipio, rnp);
-                proc.PasarArchivosPescador2(municipio, rnp);
-                proc.PasarArchivosEmbarca2(municipio, rnp);
-                proc.PasarArchivosUnidad2(municipio, rnp);
+                //proc.PasarArchivosPescador2(municipio, rnp);
+                //proc.PasarArchivosEmbarca2(municipio, rnp);
+                //proc.PasarArchivosUnidad2(municipio, rnp);
                 proc.Generar(folderBrowserDialog1.SelectedPath, nombre);
                 this.Cursor = Cursors.Default;
             }

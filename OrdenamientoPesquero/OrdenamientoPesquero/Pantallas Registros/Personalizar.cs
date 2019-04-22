@@ -213,7 +213,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 if (a.Text != "TODOS")
                 {
                     column[i] = a.Checked;
-                    dato[i] = a.Text.Replace(" ", "_");
+                    dato[i] = a.Text.Replace(" ", "");
                     dato[i] = dato[i].ToLower();
                     i++;
                 }
@@ -224,7 +224,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 para[c] = new ReportParameter(dato[c], column[c].ToString());
             }
             reportViewer1.LocalReport.SetParameters(para);
-            string consulta = "Select FOLIO, RNPA, NPERMISO, PESQUERIA, LUGAREXPEDICION, DIAEXPEDICION, FINVIGENCIA, ZONAPESCA, SITIOSDESEMBARQUE, OBSERVACIONES, TIPOPERMISO, ((STUFF(( SELECT ', '+ CANTIDAD +' '+TIPO FROM EQUIPOSPESCA a WHERE b.NPERMISO = a.NUMPERMISO FOR XML PATH('')),1 ,1, ''))) AS 'EQUIPOSDEPESCA', ((STUFF((SELECT ', ' + NOMBREEMBARCACION FROM EMBARCACIONES a, EMBARCA_PERMIS c  WHERE b.NPERMISO = c.PERMISO and a.MATRICULA = c.MATRICULA FOR XML PATH('')),1 ,1, ''))) AS 'EMBARCACIONES' from PERMISOS b where rnpa != ''";
+            string consulta = "Select FOLIO, RNPA, NPERMISO, PESQUERIA, LUGARE0XPEDICION, DIAEXPEDICION, FINVIGENCIA, ZONAPESCA, SITIOSDESEMBARQUE, OBSERVACIONES, TIPOPERMISO, ((STUFF(( SELECT ', '+ CANTIDAD +' '+TIPO FROM EQUIPOSPESCA a WHERE b.NPERMISO = a.NUMPERMISO FOR XML PATH('')),1 ,1, ''))) AS 'EQUIPOSDEPESCA', ((STUFF((SELECT ', ' + NOMBREEMBARCACION FROM EMBARCACIONES a, EMBARCA_PERMIS c  WHERE b.NPERMISO = c.PERMISO and a.MATRICULA = c.MATRICULA FOR XML PATH('')),1 ,1, ''))) AS 'EMBARCACIONES' from PERMISOS b where rnpa != ''";
             int r = 0;
             foreach (CheckBox a in FiltrosPermiso.Controls.OfType<CheckBox>())
             {
