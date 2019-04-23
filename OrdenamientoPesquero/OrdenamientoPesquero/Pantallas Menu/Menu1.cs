@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using Logica;
@@ -322,6 +323,21 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             RepetirPassLogin.UseSystemPasswordChar = RepetirPassLogin.UseSystemPasswordChar == true ? false : true;
         }
 
+        private void ActLogo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    File.Delete(Path.Combine(Application.StartupPath, "Logo.png"));
+                    File.Copy(openFileDialog1.FileName, Path.Combine(Application.StartupPath, "Logo.png"));
+                }
+                catch(Exception)
+                {
+                    MessageBox.Show("Hubo un problema al cambiar de imagen...\n Cierre el programa y vuelva a intentarlo.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+        }
         private void ObtenerLogins()
         {
             datalogin = proc.ObtenerLogins();

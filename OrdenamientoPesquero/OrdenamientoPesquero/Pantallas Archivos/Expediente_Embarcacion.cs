@@ -26,6 +26,11 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             MATRICULA = matricula;
             Nombre.Text = nombre;
             NIVEL = nivel;
+            CargarLogos();
+        }
+        private void CargarLogos()
+        {
+            Logo.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "logo.png"));
         }
 
         private void Expediente_Embarcacion_Load(object sender, EventArgs e)
@@ -38,6 +43,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 label2.Visible = true;
             }
         }
+    
         private void CargarExpediente()
         {
             DataTable exp = proc.ObtenerExpedienteEmbarcacion(MATRICULA);

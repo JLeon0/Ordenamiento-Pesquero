@@ -45,7 +45,7 @@
             this.Registrar = new System.Windows.Forms.PictureBox();
             this.Entrega = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.Eliminar = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.folio = new System.Windows.Forms.TextBox();
@@ -86,7 +86,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Eliminar)).BeginInit();
             this.Apoyo.SuspendLayout();
             this.solicitud.SuspendLayout();
@@ -167,7 +167,7 @@
             this.concepto.Multiline = true;
             this.concepto.Name = "concepto";
             this.concepto.Size = new System.Drawing.Size(399, 84);
-            this.concepto.TabIndex = 8;
+            this.concepto.TabIndex = 3;
             // 
             // observaciones
             // 
@@ -257,17 +257,17 @@
             this.pictureBox8.TabIndex = 200;
             this.pictureBox8.TabStop = false;
             // 
-            // pictureBox7
+            // Logo
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(832, 27);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(200, 60);
-            this.pictureBox7.TabIndex = 199;
-            this.pictureBox7.TabStop = false;
+            this.Logo.BackColor = System.Drawing.Color.Transparent;
+            this.Logo.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Logo.Location = new System.Drawing.Point(832, 27);
+            this.Logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(200, 60);
+            this.Logo.TabIndex = 199;
+            this.Logo.TabStop = false;
             // 
             // Eliminar
             // 
@@ -323,7 +323,7 @@
             this.montoE.MaxLength = 9;
             this.montoE.Name = "montoE";
             this.montoE.Size = new System.Drawing.Size(108, 22);
-            this.montoE.TabIndex = 3;
+            this.montoE.TabIndex = 4;
             this.montoE.Text = "0";
             this.montoE.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.montoE.TextChanged += new System.EventHandler(this.montoE_TextChanged);
@@ -345,7 +345,7 @@
             this.montoF.MaxLength = 9;
             this.montoF.Name = "montoF";
             this.montoF.Size = new System.Drawing.Size(108, 22);
-            this.montoF.TabIndex = 4;
+            this.montoF.TabIndex = 5;
             this.montoF.Text = "0";
             this.montoF.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.montoF.TextChanged += new System.EventHandler(this.montoE_TextChanged);
@@ -376,7 +376,7 @@
             this.montoP.MaxLength = 9;
             this.montoP.Name = "montoP";
             this.montoP.Size = new System.Drawing.Size(108, 22);
-            this.montoP.TabIndex = 5;
+            this.montoP.TabIndex = 6;
             this.montoP.Text = "0";
             this.montoP.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.montoP.TextChanged += new System.EventHandler(this.montoE_TextChanged);
@@ -419,7 +419,7 @@
             this.otro.MaxLength = 9;
             this.otro.Name = "otro";
             this.otro.Size = new System.Drawing.Size(108, 22);
-            this.otro.TabIndex = 6;
+            this.otro.TabIndex = 7;
             this.otro.Text = "0";
             this.otro.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.otro.TextChanged += new System.EventHandler(this.montoE_TextChanged);
@@ -486,7 +486,7 @@
             this.prioridad.Location = new System.Drawing.Point(67, 15);
             this.prioridad.Name = "prioridad";
             this.prioridad.Size = new System.Drawing.Size(45, 24);
-            this.prioridad.TabIndex = 3;
+            this.prioridad.TabIndex = 4;
             this.prioridad.Text = "3";
             // 
             // director
@@ -519,7 +519,7 @@
             this.responsable.Location = new System.Drawing.Point(327, 15);
             this.responsable.Name = "responsable";
             this.responsable.Size = new System.Drawing.Size(251, 24);
-            this.responsable.TabIndex = 6;
+            this.responsable.TabIndex = 0;
             this.responsable.SelectedIndexChanged += new System.EventHandler(this.responsable_SelectedIndexChanged);
             // 
             // estatus
@@ -534,7 +534,7 @@
             this.estatus.Location = new System.Drawing.Point(67, 59);
             this.estatus.Name = "estatus";
             this.estatus.Size = new System.Drawing.Size(141, 24);
-            this.estatus.TabIndex = 4;
+            this.estatus.TabIndex = 5;
             this.estatus.Text = "Pendiente";
             // 
             // monto
@@ -543,7 +543,7 @@
             this.monto.MaxLength = 15;
             this.monto.Name = "monto";
             this.monto.Size = new System.Drawing.Size(102, 22);
-            this.monto.TabIndex = 5;
+            this.monto.TabIndex = 6;
             this.monto.Text = "0";
             this.monto.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.monto.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.monto_KeyPress);
@@ -606,7 +606,7 @@
             this.solicitud.Controls.Add(this.responsable);
             this.solicitud.Controls.Add(this.director);
             this.solicitud.Controls.Add(this.prioridad);
-            this.solicitud.Location = new System.Drawing.Point(448, 99);
+            this.solicitud.Location = new System.Drawing.Point(452, 99);
             this.solicitud.Name = "solicitud";
             this.solicitud.Size = new System.Drawing.Size(584, 152);
             this.solicitud.TabIndex = 3;
@@ -720,7 +720,7 @@
             this.Controls.Add(this.solicitud);
             this.Controls.Add(this.FolioMayor);
             this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.Logo);
             this.Controls.Add(this.Apoyo);
             this.Controls.Add(this.Lista);
             this.Controls.Add(this.txt);
@@ -743,7 +743,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Eliminar)).EndInit();
             this.Apoyo.ResumeLayout(false);
             this.Apoyo.PerformLayout();
@@ -776,7 +776,7 @@
         private System.Windows.Forms.PictureBox Entregar;
         private System.Windows.Forms.Label Entrega;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.PictureBox Eliminar;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox folio;

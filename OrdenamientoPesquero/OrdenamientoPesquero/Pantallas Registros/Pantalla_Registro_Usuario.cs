@@ -45,7 +45,13 @@ namespace OrdenamientoPesquero
             Usuario = user;
             NombreUsuario = nombreuser;
             NIVEL = nivel;
+            CargarLogos();+
             BD = bdd;
+        }
+        private void CargarLogos()
+        {
+            Logo.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
+            Logo1.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
         }
 
         private void Pantalla_Registro_Usuario_Load(object sender, EventArgs e)

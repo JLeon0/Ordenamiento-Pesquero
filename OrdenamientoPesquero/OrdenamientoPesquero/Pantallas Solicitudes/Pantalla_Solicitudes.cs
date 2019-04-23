@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,11 @@ namespace OrdenamientoPesquero
             Curp = curp;
             Ap = ap;
             NIVEL = nivel;
+            CargarLogos();
+        }
+        private void CargarLogos()
+        {
+            Logo.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
         }
 
         private void Pantalla_Solicitudes_Load(object sender, EventArgs e)
@@ -49,7 +55,7 @@ namespace OrdenamientoPesquero
                 this.Text = "Apoyos";
             }
             else { this.Text = "Solicitudes"; responsable.SelectedIndex = 0; }
-            if(NIVEL == 0 || NIVEL == 3)
+            if (NIVEL == 0 || NIVEL == 3)
             {
                 gbBotones.Visible = true;
             }
@@ -105,7 +111,7 @@ namespace OrdenamientoPesquero
         }
         void CargarClaves()
         {
-            DataTable pro= proc.ObtenerClaveXUsuario(Usuario,"");
+            DataTable pro = proc.ObtenerClaveXUsuario(Usuario, "");
             ClavePrograma.DataSource = pro;
             ClavePrograma.DisplayMember = "CLAVE";
             ClavePrograma.ValueMember = "CLAVE";
@@ -228,13 +234,13 @@ namespace OrdenamientoPesquero
 
         private void monto_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if(e.KeyChar == '.') { if (monto.Text.Contains('.')) { e.Handled = true; } }
+            if (e.KeyChar == '.') { if (monto.Text.Contains('.')) { e.Handled = true; } }
             if (!Char.IsNumber(e.KeyChar) && !Char.IsControl(e.KeyChar) && e.KeyChar != '.')
             {
                 e.Handled = true;
             }
         }
-        
+
         private void ClavePrograma_SelectedIndexChanged(object sender, EventArgs e)
         {
             programa.SelectedIndex = ClavePrograma.SelectedIndex;
@@ -299,12 +305,12 @@ namespace OrdenamientoPesquero
         private void responsable_SelectedIndexChanged(object sender, EventArgs e)
         {
             int i = responsable.SelectedIndex;
-            if(i == 0 || i == 1) { director.SelectedIndex = 0; }
-            else if(i == 2 || i == 3) { director.SelectedIndex = 1; }
-            else if(i == 4 || i == 5 || i == 6 || i == 7) { director.SelectedIndex = 2; }
-            else if(i == 8) { director.SelectedIndex = 3; }
+            if (i == 0 || i == 1) { director.SelectedIndex = 0; }
+            else if (i == 2 || i == 3) { director.SelectedIndex = 1; }
+            else if (i == 4 || i == 5 || i == 6 || i == 7) { director.SelectedIndex = 2; }
+            else if (i == 8) { director.SelectedIndex = 3; }
 
-            DataTable pro = proc.ObtenerClaveXUsuario(Usuario,responsable.Text);
+            DataTable pro = proc.ObtenerClaveXUsuario(Usuario, responsable.Text);
             ClavePrograma.DataSource = pro;
             ClavePrograma.DisplayMember = "CLAVE";
             ClavePrograma.ValueMember = "CLAVE";

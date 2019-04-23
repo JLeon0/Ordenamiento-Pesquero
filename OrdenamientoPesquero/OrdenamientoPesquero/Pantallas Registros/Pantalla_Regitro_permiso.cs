@@ -35,6 +35,11 @@ namespace OrdenamientoPesquero
             Municipio = muni;
             uni = unidad;
             NIVEL = nivel;
+            CargarLogos();
+        }
+        private void CargarLogos()
+        {
+            Logo.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
         }
         private void Pantalla_Regitro_permiso_Load(object sender, EventArgs e)
         {
