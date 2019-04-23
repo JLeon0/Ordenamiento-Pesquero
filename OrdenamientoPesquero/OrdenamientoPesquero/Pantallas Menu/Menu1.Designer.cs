@@ -62,7 +62,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.Logo2 = new System.Windows.Forms.PictureBox();
             this.label35 = new System.Windows.Forms.Label();
             this.PanelRegProgram = new System.Windows.Forms.Panel();
             this.DirectorPrograma = new System.Windows.Forms.ComboBox();
@@ -80,10 +80,12 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.Logo1 = new System.Windows.Forms.PictureBox();
             this.RegPrograma = new System.Windows.Forms.LinkLabel();
             this.RegUsuario = new System.Windows.Forms.LinkLabel();
             this.Bienvenido = new System.Windows.Forms.Label();
+            this.ActLogo = new System.Windows.Forms.LinkLabel();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarLoggin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarLoggin)).BeginInit();
@@ -100,10 +102,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.VerPass)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NivelUsuarioLogin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo2)).BeginInit();
             this.PanelRegProgram.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo1)).BeginInit();
             this.SuspendLayout();
             // 
             // limpiar
@@ -313,6 +315,7 @@
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.fondo_SISTEMA_ORD;
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel1.Controls.Add(this.ActLogo);
             this.panel1.Controls.Add(this.PanelRegUser);
             this.panel1.Controls.Add(this.PanelRegProgram);
             this.panel1.Controls.Add(this.RegPrograma);
@@ -350,7 +353,7 @@
             this.PanelRegUser.Controls.Add(this.RegistrarLoggin);
             this.PanelRegUser.Controls.Add(this.label34);
             this.PanelRegUser.Controls.Add(this.pictureBox9);
-            this.PanelRegUser.Controls.Add(this.pictureBox11);
+            this.PanelRegUser.Controls.Add(this.Logo2);
             this.PanelRegUser.Controls.Add(this.CerrarPanelUsuario);
             this.PanelRegUser.Controls.Add(this.label35);
             this.PanelRegUser.ForeColor = System.Drawing.Color.Black;
@@ -533,16 +536,16 @@
             this.pictureBox9.TabIndex = 137;
             this.pictureBox9.TabStop = false;
             // 
-            // pictureBox11
+            // Logo2
             // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox11.BackgroundImage")));
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Location = new System.Drawing.Point(369, 3);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(120, 40);
-            this.pictureBox11.TabIndex = 136;
-            this.pictureBox11.TabStop = false;
+            this.Logo2.BackColor = System.Drawing.Color.Transparent;
+            this.Logo2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Logo2.BackgroundImage")));
+            this.Logo2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Logo2.Location = new System.Drawing.Point(369, 3);
+            this.Logo2.Name = "Logo2";
+            this.Logo2.Size = new System.Drawing.Size(120, 40);
+            this.Logo2.TabIndex = 136;
+            this.Logo2.TabStop = false;
             // 
             // label35
             // 
@@ -578,7 +581,7 @@
             this.PanelRegProgram.Controls.Add(this.label12);
             this.PanelRegProgram.Controls.Add(this.label13);
             this.PanelRegProgram.Controls.Add(this.pictureBox3);
-            this.PanelRegProgram.Controls.Add(this.pictureBox4);
+            this.PanelRegProgram.Controls.Add(this.Logo1);
             this.PanelRegProgram.Controls.Add(this.CerrarPanelPrograma);
             this.PanelRegProgram.ForeColor = System.Drawing.Color.Black;
             this.PanelRegProgram.Location = new System.Drawing.Point(423, 146);
@@ -754,21 +757,21 @@
             this.pictureBox3.TabIndex = 137;
             this.pictureBox3.TabStop = false;
             // 
-            // pictureBox4
+            // Logo1
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox4.Location = new System.Drawing.Point(336, 3);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(120, 40);
-            this.pictureBox4.TabIndex = 136;
-            this.pictureBox4.TabStop = false;
+            this.Logo1.BackColor = System.Drawing.Color.Transparent;
+            this.Logo1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Logo1.BackgroundImage")));
+            this.Logo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Logo1.Location = new System.Drawing.Point(336, 3);
+            this.Logo1.Name = "Logo1";
+            this.Logo1.Size = new System.Drawing.Size(120, 40);
+            this.Logo1.TabIndex = 136;
+            this.Logo1.TabStop = false;
             // 
             // RegPrograma
             // 
             this.RegPrograma.AutoSize = true;
-            this.RegPrograma.Location = new System.Drawing.Point(41, 509);
+            this.RegPrograma.Location = new System.Drawing.Point(41, 500);
             this.RegPrograma.Name = "RegPrograma";
             this.RegPrograma.Size = new System.Drawing.Size(157, 16);
             this.RegPrograma.TabIndex = 192;
@@ -779,7 +782,7 @@
             // RegUsuario
             // 
             this.RegUsuario.AutoSize = true;
-            this.RegUsuario.Location = new System.Drawing.Point(41, 479);
+            this.RegUsuario.Location = new System.Drawing.Point(41, 470);
             this.RegUsuario.Name = "RegUsuario";
             this.RegUsuario.Size = new System.Drawing.Size(209, 16);
             this.RegUsuario.TabIndex = 191;
@@ -800,6 +803,21 @@
             this.Bienvenido.Size = new System.Drawing.Size(75, 16);
             this.Bienvenido.TabIndex = 190;
             this.Bienvenido.Text = "Bienvenido ";
+            // 
+            // ActLogo
+            // 
+            this.ActLogo.AutoSize = true;
+            this.ActLogo.Location = new System.Drawing.Point(41, 522);
+            this.ActLogo.Name = "ActLogo";
+            this.ActLogo.Size = new System.Drawing.Size(105, 16);
+            this.ActLogo.TabIndex = 194;
+            this.ActLogo.TabStop = true;
+            this.ActLogo.Text = "Actualizar Logos";
+            this.ActLogo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ActLogo_LinkClicked);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Menu1
             // 
@@ -837,11 +855,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.VerPass)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NivelUsuarioLogin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo2)).EndInit();
             this.PanelRegProgram.ResumeLayout(false);
             this.PanelRegProgram.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -862,7 +880,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox Logo1;
         private System.Windows.Forms.PictureBox CerrarPanelPrograma;
         private System.Windows.Forms.Panel PanelRegUser;
         private System.Windows.Forms.PictureBox ActualizarLoggin;
@@ -879,7 +897,7 @@
         private System.Windows.Forms.PictureBox RegistrarLoggin;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox Logo2;
         private System.Windows.Forms.PictureBox CerrarPanelUsuario;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.ComboBox UsuarioPrograma;
@@ -902,5 +920,7 @@
         private System.Windows.Forms.ComboBox DirectorPrograma;
         private System.Windows.Forms.PictureBox VerPass2;
         private System.Windows.Forms.PictureBox VerPass;
+        private System.Windows.Forms.LinkLabel ActLogo;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

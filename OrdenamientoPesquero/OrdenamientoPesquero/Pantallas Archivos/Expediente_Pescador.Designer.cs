@@ -38,7 +38,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.AbrirPDF = new System.Windows.Forms.PictureBox();
             this.SubirPDF = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -46,7 +46,7 @@
             this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArchivos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AbrirPDF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubirPDF)).BeginInit();
             this.SuspendLayout();
@@ -140,17 +140,17 @@
             this.pictureBox8.TabIndex = 189;
             this.pictureBox8.TabStop = false;
             // 
-            // pictureBox7
+            // Logo
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(333, 17);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(200, 60);
-            this.pictureBox7.TabIndex = 188;
-            this.pictureBox7.TabStop = false;
+            this.Logo.BackColor = System.Drawing.Color.Transparent;
+            this.Logo.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Logo.Location = new System.Drawing.Point(333, 17);
+            this.Logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(200, 60);
+            this.Logo.TabIndex = 188;
+            this.Logo.TabStop = false;
             // 
             // AbrirPDF
             // 
@@ -212,7 +212,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
+            this.Controls.Add(this.Logo);
             this.Controls.Add(this.dgvArchivos);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -222,7 +222,7 @@
             this.Load += new System.EventHandler(this.Expediente_Pescador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArchivos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AbrirPDF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubirPDF)).EndInit();
             this.ResumeLayout(false);
@@ -235,7 +235,7 @@
         private System.Windows.Forms.DataGridView dgvArchivos;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label Nombre;
         private System.Windows.Forms.DataGridViewTextBoxColumn Expediente;

@@ -94,7 +94,7 @@
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label30 = new System.Windows.Forms.Label();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.Logo1 = new System.Windows.Forms.PictureBox();
             this.label29 = new System.Windows.Forms.Label();
             this.MatriculaMal = new System.Windows.Forms.Label();
             this.MatriculaNueva = new System.Windows.Forms.TextBox();
@@ -114,7 +114,7 @@
             this.PapChip = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.FotoEmb = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.gbCertificado.SuspendLayout();
@@ -128,14 +128,14 @@
             this.PanelMATRICULA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo1)).BeginInit();
             this.gbBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
             this.gbBusqueda.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -814,7 +814,7 @@
             this.PanelMATRICULA.Controls.Add(this.pictureBox11);
             this.PanelMATRICULA.Controls.Add(this.label30);
             this.PanelMATRICULA.Controls.Add(this.pictureBox4);
-            this.PanelMATRICULA.Controls.Add(this.pictureBox10);
+            this.PanelMATRICULA.Controls.Add(this.Logo1);
             this.PanelMATRICULA.Controls.Add(this.CerrarPanel);
             this.PanelMATRICULA.Controls.Add(this.label29);
             this.PanelMATRICULA.Controls.Add(this.ActualizarMATRICULA);
@@ -866,16 +866,16 @@
             this.pictureBox4.TabIndex = 137;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox10
+            // Logo1
             // 
-            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox10.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox10.Location = new System.Drawing.Point(326, 1);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(120, 40);
-            this.pictureBox10.TabIndex = 136;
-            this.pictureBox10.TabStop = false;
+            this.Logo1.BackColor = System.Drawing.Color.Transparent;
+            this.Logo1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.Logo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Logo1.Location = new System.Drawing.Point(326, 1);
+            this.Logo1.Name = "Logo1";
+            this.Logo1.Size = new System.Drawing.Size(120, 40);
+            this.Logo1.TabIndex = 136;
+            this.Logo1.TabStop = false;
             // 
             // label29
             // 
@@ -1102,17 +1102,17 @@
             this.FotoEmb.TabIndex = 191;
             this.FotoEmb.Text = "Foto Embarcacion";
             // 
-            // pictureBox3
+            // Logo
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(621, 13);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(200, 60);
-            this.pictureBox3.TabIndex = 168;
-            this.pictureBox3.TabStop = false;
+            this.Logo.BackColor = System.Drawing.Color.Transparent;
+            this.Logo.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Logo.Location = new System.Drawing.Point(621, 13);
+            this.Logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(200, 60);
+            this.Logo.TabIndex = 168;
+            this.Logo.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -1140,7 +1140,7 @@
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.gbBotones);
             this.Controls.Add(this.PanelMATRICULA);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.Logo);
             this.Controls.Add(this.gbVerificacion);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.gbCertificado);
@@ -1167,7 +1167,7 @@
             this.PanelMATRICULA.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo1)).EndInit();
             this.gbBotones.ResumeLayout(false);
             this.gbBotones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarUnidad)).EndInit();
@@ -1177,7 +1177,7 @@
             this.gbBusqueda.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1237,7 +1237,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.TextBox Marca;
         private System.Windows.Forms.ToolTip toolTip1;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ListBox ListaMatriculas;
         private System.Windows.Forms.Label label13;
@@ -1245,7 +1245,7 @@
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox Logo1;
         private System.Windows.Forms.PictureBox CerrarPanel;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.PictureBox ActualizarMATRICULA;

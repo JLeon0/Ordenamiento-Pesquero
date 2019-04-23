@@ -139,7 +139,7 @@
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.ListaNombres = new System.Windows.Forms.ListBox();
             this.BuscarN = new System.Windows.Forms.TextBox();
@@ -150,7 +150,7 @@
             this.PanelRNPA = new System.Windows.Forms.Panel();
             this.label30 = new System.Windows.Forms.Label();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.Logo1 = new System.Windows.Forms.PictureBox();
             this.label29 = new System.Windows.Forms.Label();
             this.RnpaMal = new System.Windows.Forms.Label();
             this.RnpaNuevo = new System.Windows.Forms.TextBox();
@@ -167,7 +167,7 @@
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.label34 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.Logo2 = new System.Windows.Forms.PictureBox();
             this.label35 = new System.Windows.Forms.Label();
             this.Bienvenido = new System.Windows.Forms.Label();
             this.gbOrgPes.SuspendLayout();
@@ -189,16 +189,16 @@
             this.Resumen.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DataResumen)).BeginInit();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.PanelRNPA.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo1)).BeginInit();
             this.gbBotones.SuspendLayout();
             this.gbBusqueda.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo2)).BeginInit();
             this.SuspendLayout();
             // 
             // label13
@@ -1440,17 +1440,17 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // pictureBox1
+            // Logo
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(866, 28);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(200, 60);
-            this.pictureBox1.TabIndex = 154;
-            this.pictureBox1.TabStop = false;
+            this.Logo.BackColor = System.Drawing.Color.Transparent;
+            this.Logo.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Logo.Location = new System.Drawing.Point(866, 28);
+            this.Logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(200, 60);
+            this.Logo.TabIndex = 154;
+            this.Logo.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -1543,7 +1543,7 @@
             this.PanelRNPA.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PanelRNPA.Controls.Add(this.label30);
             this.PanelRNPA.Controls.Add(this.pictureBox8);
-            this.PanelRNPA.Controls.Add(this.pictureBox7);
+            this.PanelRNPA.Controls.Add(this.Logo1);
             this.PanelRNPA.Controls.Add(this.CerrarPanel);
             this.PanelRNPA.Controls.Add(this.label29);
             this.PanelRNPA.Controls.Add(this.ActualizarRNPA);
@@ -1583,16 +1583,16 @@
             this.pictureBox8.TabIndex = 137;
             this.pictureBox8.TabStop = false;
             // 
-            // pictureBox7
+            // Logo1
             // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
-            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox7.Location = new System.Drawing.Point(325, 1);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(120, 40);
-            this.pictureBox7.TabIndex = 136;
-            this.pictureBox7.TabStop = false;
+            this.Logo1.BackColor = System.Drawing.Color.Transparent;
+            this.Logo1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.Logo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Logo1.Location = new System.Drawing.Point(325, 1);
+            this.Logo1.Name = "Logo1";
+            this.Logo1.Size = new System.Drawing.Size(120, 40);
+            this.Logo1.TabIndex = 136;
+            this.Logo1.TabStop = false;
             // 
             // label29
             // 
@@ -1719,7 +1719,7 @@
             this.panel1.Controls.Add(this.pictureBox13);
             this.panel1.Controls.Add(this.label34);
             this.panel1.Controls.Add(this.pictureBox9);
-            this.panel1.Controls.Add(this.pictureBox11);
+            this.panel1.Controls.Add(this.Logo2);
             this.panel1.Controls.Add(this.pictureBox12);
             this.panel1.Controls.Add(this.label35);
             this.panel1.ForeColor = System.Drawing.Color.Black;
@@ -1802,16 +1802,16 @@
             this.pictureBox9.TabIndex = 137;
             this.pictureBox9.TabStop = false;
             // 
-            // pictureBox11
+            // Logo2
             // 
-            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox11.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
-            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox11.Location = new System.Drawing.Point(231, 3);
-            this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(120, 40);
-            this.pictureBox11.TabIndex = 136;
-            this.pictureBox11.TabStop = false;
+            this.Logo2.BackColor = System.Drawing.Color.Transparent;
+            this.Logo2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.Logo2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Logo2.Location = new System.Drawing.Point(231, 3);
+            this.Logo2.Name = "Logo2";
+            this.Logo2.Size = new System.Drawing.Size(120, 40);
+            this.Logo2.TabIndex = 136;
+            this.Logo2.TabStop = false;
             // 
             // label35
             // 
@@ -1847,7 +1847,7 @@
             this.Controls.Add(this.PanelRNPA);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.gbBotones);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Logo);
             this.Controls.Add(this.pictureBox5);
             this.Controls.Add(this.Resumen);
             this.Controls.Add(this.gbOrgPes);
@@ -1888,19 +1888,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.DataResumen)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             this.PanelRNPA.ResumeLayout(false);
             this.PanelRNPA.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo1)).EndInit();
             this.gbBotones.ResumeLayout(false);
             this.gbBusqueda.ResumeLayout(false);
             this.gbBusqueda.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1966,7 +1966,7 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Button ModFed;
         private System.Windows.Forms.Button RegFed;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.LinkLabel SinActividad;
         private System.Windows.Forms.LinkLabel Marineros;
@@ -2004,7 +2004,7 @@
         private System.Windows.Forms.Panel PanelRNPA;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.PictureBox Logo1;
         private System.Windows.Forms.PictureBox CerrarPanel;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.PictureBox ActualizarRNPA;
@@ -2034,7 +2034,7 @@
         private System.Windows.Forms.PictureBox pictureBox13;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.PictureBox pictureBox9;
-        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.PictureBox Logo2;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Button button6;

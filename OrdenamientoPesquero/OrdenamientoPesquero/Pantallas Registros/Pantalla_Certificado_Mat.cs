@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -24,6 +25,12 @@ namespace OrdenamientoPesquero
             InitializeComponent();
             RNPA = rnpa;
             NIVEL = nivel;
+            CargarLogos();
+        }
+        private void CargarLogos()
+        {
+            Logo.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
+            Logo1.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
         }
 
         private void Pantalla_Certificado_Mat_Load(object sender, EventArgs e)

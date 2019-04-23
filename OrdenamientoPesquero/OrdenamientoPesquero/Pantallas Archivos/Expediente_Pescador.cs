@@ -26,6 +26,11 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             CURPPesc = curp;
             Nombre.Text = nombre;
             NIVEL = nivel;
+            CargarLogos();
+        }
+        private void CargarLogos()
+        {
+            Logo.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "logo.png"));
         }
 
         private void SubirPDF_Click(object sender, EventArgs e)

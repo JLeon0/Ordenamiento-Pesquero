@@ -180,12 +180,12 @@
             this.FechaFalle = new System.Windows.Forms.DateTimePicker();
             this.label16 = new System.Windows.Forms.Label();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.Logo1 = new System.Windows.Forms.PictureBox();
             this.label17 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
             this.Bienvenido = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.Logo = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gbOtros = new System.Windows.Forms.GroupBox();
             this.btnEntregar = new System.Windows.Forms.Button();
@@ -228,8 +228,8 @@
             this.gbBusqueda.SuspendLayout();
             this.PanelOcciso.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gbOtros.SuspendLayout();
             this.SuspendLayout();
@@ -1889,7 +1889,7 @@
             this.PanelOcciso.Controls.Add(this.FechaFalle);
             this.PanelOcciso.Controls.Add(this.label16);
             this.PanelOcciso.Controls.Add(this.pictureBox13);
-            this.PanelOcciso.Controls.Add(this.pictureBox14);
+            this.PanelOcciso.Controls.Add(this.Logo1);
             this.PanelOcciso.Controls.Add(this.CerrarPanelOcciso);
             this.PanelOcciso.Controls.Add(this.label17);
             this.PanelOcciso.Controls.Add(this.RegistrarOcciso);
@@ -2034,16 +2034,16 @@
             this.pictureBox13.TabIndex = 137;
             this.pictureBox13.TabStop = false;
             // 
-            // pictureBox14
+            // Logo1
             // 
-            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox14.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
-            this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox14.Location = new System.Drawing.Point(346, 2);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(120, 40);
-            this.pictureBox14.TabIndex = 136;
-            this.pictureBox14.TabStop = false;
+            this.Logo1.BackColor = System.Drawing.Color.Transparent;
+            this.Logo1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.Logo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Logo1.Location = new System.Drawing.Point(346, 2);
+            this.Logo1.Name = "Logo1";
+            this.Logo1.Size = new System.Drawing.Size(120, 40);
+            this.Logo1.TabIndex = 136;
+            this.Logo1.TabStop = false;
             // 
             // label17
             // 
@@ -2091,17 +2091,17 @@
             this.Bienvenido.TabIndex = 192;
             this.Bienvenido.Text = "Bienvenido ";
             // 
-            // pictureBox3
+            // Logo
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(881, 13);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(200, 60);
-            this.pictureBox3.TabIndex = 156;
-            this.pictureBox3.TabStop = false;
+            this.Logo.BackColor = System.Drawing.Color.Transparent;
+            this.Logo.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Logo.Location = new System.Drawing.Point(881, 13);
+            this.Logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.Logo.Name = "Logo";
+            this.Logo.Size = new System.Drawing.Size(200, 60);
+            this.Logo.TabIndex = 156;
+            this.Logo.TabStop = false;
             // 
             // pictureBox2
             // 
@@ -2152,7 +2152,7 @@
             this.Controls.Add(this.Bienvenido);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.gbBotones);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.Logo);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.gbInformacion);
             this.Controls.Add(this.label24);
@@ -2217,8 +2217,8 @@
             this.PanelOcciso.ResumeLayout(false);
             this.PanelOcciso.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.gbOtros.ResumeLayout(false);
             this.gbOtros.PerformLayout();
@@ -2312,7 +2312,7 @@
         private System.Windows.Forms.PictureBox CargarImagen;
         private System.Windows.Forms.RadioButton TipoSocio;
         private System.Windows.Forms.RadioButton TipoTitular;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblP;
         private System.Windows.Forms.TextBox BuscarNombre;
@@ -2365,7 +2365,7 @@
         private System.Windows.Forms.DateTimePicker FechaFalle;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.PictureBox pictureBox13;
-        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.PictureBox Logo1;
         private System.Windows.Forms.PictureBox CerrarPanelOcciso;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.PictureBox RegistrarOcciso;

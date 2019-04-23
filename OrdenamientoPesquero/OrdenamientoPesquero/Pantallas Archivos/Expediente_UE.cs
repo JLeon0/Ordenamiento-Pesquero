@@ -28,6 +28,11 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             Nombre.Text = nombre;
             TIPO = tipo;
             NIVEL = nivel;
+            CargarLogos();
+        }
+        private void CargarLogos()
+        {
+            Logo.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
         }
 
         private void Expediente_UE_Load(object sender, EventArgs e)
