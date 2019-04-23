@@ -45,9 +45,9 @@ namespace OrdenamientoPesquero
         }
         private void CargarLogos()
         {
-            Logo.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
-            Logo1.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
-            Logo2.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
+            //Logo.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
+            //Logo1.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
+            //Logo2.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
         }
 
         private void Pantalla_Registro_UnidadEconomica_Load(object sender, EventArgs e)
@@ -1020,6 +1020,94 @@ namespace OrdenamientoPesquero
         {
             Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 15,proc.bdd);
             v.Show(this);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            string nombre = "XXXXXX";
+            byte[] file;
+            string path = "";
+            if (cbRNPA.Text != "")
+            {
+                DialogResult result = folderBrowserDialog1.ShowDialog();
+                if (result == DialogResult.OK) // Test result.
+                {
+                    DataTable pes;
+                    DataTable pescadores = proc.ObtenerExpedientePescadorXUnidad(cbRNPA.Text);
+                    DataTable embarcaciones = proc.ObtenerExpedienteEmbarcacionXUnidad(cbRNPA.Text);
+                    DataTable unidad = proc.ObtenerExpedienteUnidad(cbRNPA.Text);
+                    if (!Directory.Exists(folderBrowserDialog1.SelectedPath+@"\"+txtNombre.Text+@"\"))
+                    {
+                        DirectoryInfo di = Directory.CreateDirectory(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\");
+                        DirectoryInfo di1 = Directory.CreateDirectory(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\" + "PESCADORES" + @"\");
+                    }
+                    path = folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\";
+                    if (unidad.Rows.Count != 0)
+                    {
+                        if (unidad.Rows[0]["ACTACONS"] != System.DBNull.Value)
+                        {
+                            file = (byte[])unidad.Rows[0]["ACTACONS"];
+                            File.WriteAllBytes(path + "ACTA CONSTTUTIVA.PDF", file);
+                        }
+                        if (unidad.Rows[0]["ACTAASAMBLEA"] != System.DBNull.Value)
+                        {
+                            file = (byte[])unidad.Rows[0]["ACTAASAMBLEA"];
+                            File.WriteAllBytes(path + "ACTA DE ASAMBLEA.PDF", file);
+                        }
+                        if (unidad.Rows[0]["RFCUE"] != System.DBNull.Value)
+                        {
+                            file = (byte[])unidad.Rows[0]["RFCUE"];
+                            File.WriteAllBytes(path + "RFC.PDF", file);
+                        }
+                        if (unidad.Rows[0]["COMPDOM"] != System.DBNull.Value)
+                        {
+                            file = (byte[])unidad.Rows[0]["COMPDOM"];
+                            File.WriteAllBytes(path + "COMPROBANTE DE DOMICILIO.PDF", file);
+                        }
+                        if (unidad.Rows[0]["CEDINSCRUE"] != System.DBNull.Value)
+                        {
+                            file = (byte[])unidad.Rows[0]["CEDINSCRUE"];
+                            File.WriteAllBytes(path + "CEDULA DE INSCRIPCION.PDF", file);
+                        }
+                        if (unidad.Rows[0]["CEDINSCREMBARCA"] != System.DBNull.Value)
+                        {
+                            file = (byte[])unidad.Rows[0]["CEDINSCREMBARCA"];
+                            File.WriteAllBytes(path + "CEDULA DE EMBARCACIONES.PDF", file);
+                        }
+                    }
+
+                    for (int i = 0; i < pescadores.Rows.Count; i++)
+                    {
+                        pes = proc.Obtener_Pescador(pescadores.Rows[i]["CURP"].ToString());
+                        nombre = pes.Rows[0]["NOMBRE"].ToString() + " " + pes.Rows[0]["AP_PAT"].ToString() + " " + pes.Rows[0]["AP_MAT"].ToString();
+                        if (!Directory.Exists(path+ @"\PESCADORES\" + nombre + @"\"))
+                        {
+                            DirectoryInfo di = Directory.CreateDirectory(path+ @"\PESCADORES\" + nombre + @"\");
+                        }
+                        if (pescadores.Rows[i]["ACTANAC"]!=System.DBNull.Value)
+                        {
+                            file = (byte[])pescadores.Rows[i]["ACTANAC"];
+                            File.WriteAllBytes(path + @"\PESCADORES\" + nombre + @"\ACTA DE NACIMIENTO.PDF", file);
+                        }
+                        if (pescadores.Rows[i]["ACURP"] != System.DBNull.Value)
+                        {
+                            file = (byte[])pescadores.Rows[i]["ACURP"];
+                            File.WriteAllBytes(path + @"\PESCADORES\" + nombre + @"\CURP.PDF", file);
+                        }
+                        if (pescadores.Rows[i]["AINE"]!= System.DBNull.Value)
+                        {
+                            file = (byte[])pescadores.Rows[i]["AINE"];
+                            File.WriteAllBytes(path + @"\PESCADORES\" + nombre + @"\INE.PDF", file);
+                        }
+                        if (pescadores.Rows[i]["ACOMPDOM"]!= System.DBNull.Value)
+                        {
+                            file = (byte[])pescadores.Rows[i]["ACOMPDOM"];
+                            File.WriteAllBytes(path + @"PESCADORES\" + nombre + @"\COMPROBANTE DE DOMICILIO.PDF", file);
+                        }
+                    }
+                }
+            }
+
         }
 
         private void BorrarCarpeta()

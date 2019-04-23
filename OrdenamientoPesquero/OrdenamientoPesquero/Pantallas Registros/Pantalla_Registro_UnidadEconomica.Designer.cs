@@ -170,6 +170,7 @@
             this.Logo2 = new System.Windows.Forms.PictureBox();
             this.label35 = new System.Windows.Forms.Label();
             this.Bienvenido = new System.Windows.Forms.Label();
+            this.button7 = new System.Windows.Forms.Button();
             this.gbOrgPes.SuspendLayout();
             this.gbBotonesUE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
@@ -1351,7 +1352,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.caToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 75);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1501, 24);
             this.menuStrip1.TabIndex = 115;
@@ -1650,6 +1651,7 @@
             // 
             // gbBotones
             // 
+            this.gbBotones.Controls.Add(this.button7);
             this.gbBotones.Controls.Add(this.button6);
             this.gbBotones.Controls.Add(this.Expediente);
             this.gbBotones.Controls.Add(this.button1);
@@ -1834,6 +1836,20 @@
             this.Bienvenido.Size = new System.Drawing.Size(75, 16);
             this.Bienvenido.TabIndex = 191;
             this.Bienvenido.Text = "Bienvenido ";
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Silver;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.Black;
+            this.button7.Location = new System.Drawing.Point(465, 82);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(137, 45);
+            this.button7.TabIndex = 159;
+            this.button7.Text = "DOCUMENTOS";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -2040,5 +2056,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label Bienvenido;
         private System.Windows.Forms.GroupBox gbBotonesUE;
+        private System.Windows.Forms.Button button7;
     }
 }
