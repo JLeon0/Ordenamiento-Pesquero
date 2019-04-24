@@ -1032,14 +1032,18 @@ namespace OrdenamientoPesquero
                 DialogResult result = folderBrowserDialog1.ShowDialog();
                 if (result == DialogResult.OK) // Test result.
                 {
-                    DataTable pes;
+                    DataTable nom;
                     DataTable pescadores = proc.ObtenerExpedientePescadorXUnidad(cbRNPA.Text);
                     DataTable embarcaciones = proc.ObtenerExpedienteEmbarcacionXUnidad(cbRNPA.Text);
                     DataTable unidad = proc.ObtenerExpedienteUnidad(cbRNPA.Text);
+                    DataTable permisos;
+
                     if (!Directory.Exists(folderBrowserDialog1.SelectedPath+@"\"+txtNombre.Text+@"\"))
                     {
                         DirectoryInfo di = Directory.CreateDirectory(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\");
                         DirectoryInfo di1 = Directory.CreateDirectory(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\" + "PESCADORES" + @"\");
+                        DirectoryInfo di2 = Directory.CreateDirectory(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\" + "EMBARCACIONES" + @"\");
+                        DirectoryInfo di3 = Directory.CreateDirectory(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\" + "PERMISOS" + @"\");
                     }
                     path = folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\";
                     if (unidad.Rows.Count != 0)
@@ -1078,8 +1082,8 @@ namespace OrdenamientoPesquero
 
                     for (int i = 0; i < pescadores.Rows.Count; i++)
                     {
-                        pes = proc.Obtener_Pescador(pescadores.Rows[i]["CURP"].ToString());
-                        nombre = pes.Rows[0]["NOMBRE"].ToString() + " " + pes.Rows[0]["AP_PAT"].ToString() + " " + pes.Rows[0]["AP_MAT"].ToString();
+                        nom = proc.Obtener_Pescador(pescadores.Rows[i]["CURP"].ToString());
+                        nombre = nom.Rows[0]["NOMBRE"].ToString() + " " + nom.Rows[0]["AP_PAT"].ToString() + " " + nom.Rows[0]["AP_MAT"].ToString();
                         if (!Directory.Exists(path+ @"\PESCADORES\" + nombre + @"\"))
                         {
                             DirectoryInfo di = Directory.CreateDirectory(path+ @"\PESCADORES\" + nombre + @"\");
@@ -1103,6 +1107,59 @@ namespace OrdenamientoPesquero
                         {
                             file = (byte[])pescadores.Rows[i]["ACOMPDOM"];
                             File.WriteAllBytes(path + @"PESCADORES\" + nombre + @"\COMPROBANTE DE DOMICILIO.PDF", file);
+                        }
+                    }
+                    for (int i = 0; i < embarcaciones.Rows.Count; i++)
+                    {
+                        nom = proc.ObtenerEmbarca(embarcaciones.Rows[i]["MATRICULA"].ToString());
+                        nombre = nom.Rows[0]["NOMBREEMBARCACION"].ToString();
+                        if (!Directory.Exists(path + @"\PESCADORES\" + nombre + @"\"))
+                        {
+                            DirectoryInfo di = Directory.CreateDirectory(path + @"\EMBARCACIONES\" + nombre + @"\");
+                        }
+                        permisos = proc.PermisosxEmbarca(embarcaciones.Rows[i]["MATRICULA"].ToString());
+                        for (int C = 0; C < permisos.Rows.Count; C++)
+                        {
+                            if (permisos.Rows[C]["APERMISO"] != System.DBNull.Value)
+                            {
+                                file = (byte[])permisos.Rows[i]["APERMISO"];
+                                File.WriteAllBytes(path + @"PERMISOS\"+ permisos.Rows[C]["PESQUERIA"].ToString()+".pdf", file);
+                            }
+                        }
+                        if (embarcaciones.Rows[i]["CERTMATRICULA"] != System.DBNull.Value)
+                        {
+                            file = (byte[])embarcaciones.Rows[i]["CERTMATRICULA"];
+                            File.WriteAllBytes(path + @"EMBARCACIONES\" + nombre + @"\CERTIFICADO DE MATRICULA.PDF", file);
+                        }
+                        if (embarcaciones.Rows[i]["CERTSEGURIDAD"] != System.DBNull.Value)
+                        {
+                            file = (byte[])embarcaciones.Rows[i]["CERTSEGURIDAD"];
+                            File.WriteAllBytes(path + @"EMBARCACIONES\" + nombre + @"\CERTIFICADO DE SEGURIDAD.PDF", file);
+                        }
+                        if (embarcaciones.Rows[i]["FACTARTESPESCA"] != System.DBNull.Value)
+                        {
+                            file = (byte[])embarcaciones.Rows[i]["FACTARTESPESCA"];
+                            File.WriteAllBytes(path + @"EMBARCACIONES\" + nombre + @"\FACTURA DE ARTES DE PESCA.PDF", file);
+                        }
+                        if (embarcaciones.Rows[i]["FACTMOTOR"] != System.DBNull.Value)
+                        {
+                            file = (byte[])embarcaciones.Rows[i]["FACTMOTOR"];
+                            File.WriteAllBytes(path + @"EMBARCACIONES\" + nombre + @"\FACTURA DE MOTOR.PDF", file);
+                        }
+                        if (embarcaciones.Rows[i]["FACTEMBARCACION"] != System.DBNull.Value)
+                        {
+                            file = (byte[])embarcaciones.Rows[i]["FACTEMBARCACION"];
+                            File.WriteAllBytes(path + @"EMBARCACIONES\" + nombre + @"\FACTURA DE EMBARCACION.PDF", file);
+                        }
+                        if (embarcaciones.Rows[i]["PAPELETACHIPEO"] != System.DBNull.Value)
+                        {
+                            file = (byte[])embarcaciones.Rows[i]["PAPELETACHIPEO"];
+                            File.WriteAllBytes(path + @"EMBARCACIONES\" + nombre + @"\PAPELETA DE CHIPEO.PDF", file);
+                        }
+                        if (embarcaciones.Rows[i]["FOTOEMB"] != System.DBNull.Value)
+                        {
+                            file = (byte[])embarcaciones.Rows[i]["FOTOEMB"];
+                            File.WriteAllBytes(path + @"EMBARCACIONES\" + nombre + @"\FOTO DE EMBARCACION.PDF", file);
                         }
                     }
                 }
