@@ -41,7 +41,6 @@ namespace OrdenamientoPesquero
             Usuario = user;
             NombreUsuario = nombre;
             NIVEL = nivel;
-            CargarLogos();
         }
         private void CargarLogos()
         {
@@ -53,6 +52,7 @@ namespace OrdenamientoPesquero
         private void Pantalla_Registro_UnidadEconomica_Load(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor; cargando = false;
+            CargarLogos();
             Bienvenido.Text += NombreUsuario;
             txtFecha.Text = DateTime.Today.ToString("dd/MM/yyyy");
             CargarRNPA();
@@ -1110,6 +1110,8 @@ namespace OrdenamientoPesquero
                 File.WriteAllBytes(path, (byte[])file);
             }
         }
+
+
         private void BorrarCarpeta()
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);

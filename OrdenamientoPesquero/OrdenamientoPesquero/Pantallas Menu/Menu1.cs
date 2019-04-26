@@ -336,6 +336,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
                         File.Copy(Path.Combine(Application.StartupPath, "Logo.png"), Path.Combine(Application.StartupPath, "Logo2.png"));
                         File.Delete(Path.Combine(Application.StartupPath, "Logo.png"));
                         File.Copy(openFileDialog1.FileName, Path.Combine(Application.StartupPath, "Logo.png"));
+                        MessageBox.Show("Logos cambiados con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
                     catch (Exception)
                     {
@@ -353,6 +354,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
                     File.Delete(Path.Combine(Application.StartupPath, "Logo2.png"));
                     File.Copy(Path.Combine(Application.StartupPath, "Logo3.png"), Path.Combine(Application.StartupPath, "Logo2.png"));
                     File.Delete(Path.Combine(Application.StartupPath, "Logo3.png"));
+                    MessageBox.Show("Logos cambiados con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
                 catch (Exception e)
                 {
