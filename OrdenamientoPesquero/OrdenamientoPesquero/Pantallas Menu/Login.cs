@@ -7,6 +7,7 @@ using System.Runtime.InteropServices;
 using CapaDatos;
 using Logica;
 using System.Drawing.Drawing2D;
+using System.ServiceProcess;
 
 namespace OrdenamientoPesquero.Pantallas_Menu
 {
@@ -20,12 +21,44 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         {
             InitializeComponent();
             backgroundWorker1.RunWorkerAsync();
+            ChecarProceso();
         }
+
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
+        void ChecarProceso()
+        {
+            string myServiceName = "MSSQL$SQLEXPRESS"; //service name of SQL Server Express
+            string status = ""; //service status (For example, Running or Stopped)
+            //display service status: For example, Running, Stopped, or Paused
+            ServiceController mySC = new ServiceController(myServiceName);
+
+            try
+            {
+                status = mySC.Status.ToString();
+            }
+            catch (Exception)
+            {
+            }
+
+            //if service is Stopped or StopPending, you can run it with the following code.
+            if (mySC.Status.Equals(ServiceControllerStatus.Stopped) | mySC.Status.Equals(ServiceControllerStatus.StopPending))
+            {
+                try
+                {
+                    mySC.Start();
+                    mySC.WaitForStatus(ServiceControllerStatus.Running);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al iniciar servicio SQL: \n" + ex.Message);
+                }
+
+            }
+        }
 
         private void txtuser_Enter(object sender, EventArgs e)
         {
@@ -157,14 +190,6 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             {
                 btnlogin.PerformClick();
             }
-        }
-
-        private void VerPass_MouseHover(object sender, EventArgs e)
-        {
-        }
-
-        private void VerPass_MouseLeave(object sender, EventArgs e)
-        {
         }
 
         private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
