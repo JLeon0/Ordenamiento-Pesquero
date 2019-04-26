@@ -32,31 +32,40 @@ namespace OrdenamientoPesquero.Pantallas_Menu
         void ChecarProceso()
         {
             string myServiceName = "MSSQL$SQLEXPRESS"; //service name of SQL Server Express
-            string status = ""; //service status (For example, Running or Stopped)
             //display service status: For example, Running, Stopped, or Paused
             ServiceController mySC = new ServiceController(myServiceName);
 
             try
             {
-                status = mySC.Status.ToString();
+                if (mySC.Status.Equals(ServiceControllerStatus.Stopped) | mySC.Status.Equals(ServiceControllerStatus.StopPending))
+                {
+                    try
+                    {
+                        mySC.Start();
+                        mySC.WaitForStatus(ServiceControllerStatus.Running);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al iniciar servicio SQL: \n" + ex.Message);
+                    }
+                }
             }
             catch (Exception)
             {
-            }
-
-            //if service is Stopped or StopPending, you can run it with the following code.
-            if (mySC.Status.Equals(ServiceControllerStatus.Stopped) | mySC.Status.Equals(ServiceControllerStatus.StopPending))
-            {
-                try
+                myServiceName = "MSSSQLSERVER";
+                mySC = new ServiceController(myServiceName);
+                if (mySC.Status.Equals(ServiceControllerStatus.Stopped) | mySC.Status.Equals(ServiceControllerStatus.StopPending))
                 {
-                    mySC.Start();
-                    mySC.WaitForStatus(ServiceControllerStatus.Running);
+                    try
+                    {
+                        mySC.Start();
+                        mySC.WaitForStatus(ServiceControllerStatus.Running);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al iniciar servicio SQL: \n" + ex.Message);
+                    }
                 }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error al iniciar servicio SQL: \n" + ex.Message);
-                }
-
             }
         }
 
