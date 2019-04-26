@@ -45,9 +45,9 @@ namespace OrdenamientoPesquero
         }
         private void CargarLogos()
         {
-            //Logo.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
-            //Logo1.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
-            //Logo2.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
+            Logo.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
+            Logo1.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
+            Logo2.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
         }
 
         private void Pantalla_Registro_UnidadEconomica_Load(object sender, EventArgs e)

@@ -45,6 +45,7 @@
             this.Solicitudes = new System.Windows.Forms.Button();
             this.Ordenamiento = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ActLogo = new System.Windows.Forms.LinkLabel();
             this.PanelRegUser = new System.Windows.Forms.Panel();
             this.VerPass2 = new System.Windows.Forms.PictureBox();
             this.VerPass = new System.Windows.Forms.PictureBox();
@@ -84,7 +85,6 @@
             this.RegPrograma = new System.Windows.Forms.LinkLabel();
             this.RegUsuario = new System.Windows.Forms.LinkLabel();
             this.Bienvenido = new System.Windows.Forms.Label();
-            this.ActLogo = new System.Windows.Forms.LinkLabel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarLoggin)).BeginInit();
@@ -328,6 +328,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1190, 540);
             this.panel1.TabIndex = 191;
+            // 
+            // ActLogo
+            // 
+            this.ActLogo.AutoSize = true;
+            this.ActLogo.Location = new System.Drawing.Point(41, 516);
+            this.ActLogo.Name = "ActLogo";
+            this.ActLogo.Size = new System.Drawing.Size(105, 16);
+            this.ActLogo.TabIndex = 194;
+            this.ActLogo.TabStop = true;
+            this.ActLogo.Text = "Actualizar Logos";
+            this.ActLogo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ActLogo_LinkClicked);
             // 
             // PanelRegUser
             // 
@@ -771,7 +782,7 @@
             // RegPrograma
             // 
             this.RegPrograma.AutoSize = true;
-            this.RegPrograma.Location = new System.Drawing.Point(41, 500);
+            this.RegPrograma.Location = new System.Drawing.Point(41, 494);
             this.RegPrograma.Name = "RegPrograma";
             this.RegPrograma.Size = new System.Drawing.Size(157, 16);
             this.RegPrograma.TabIndex = 192;
@@ -782,7 +793,7 @@
             // RegUsuario
             // 
             this.RegUsuario.AutoSize = true;
-            this.RegUsuario.Location = new System.Drawing.Point(41, 470);
+            this.RegUsuario.Location = new System.Drawing.Point(41, 464);
             this.RegUsuario.Name = "RegUsuario";
             this.RegUsuario.Size = new System.Drawing.Size(209, 16);
             this.RegUsuario.TabIndex = 191;
@@ -803,17 +814,6 @@
             this.Bienvenido.Size = new System.Drawing.Size(75, 16);
             this.Bienvenido.TabIndex = 190;
             this.Bienvenido.Text = "Bienvenido ";
-            // 
-            // ActLogo
-            // 
-            this.ActLogo.AutoSize = true;
-            this.ActLogo.Location = new System.Drawing.Point(41, 522);
-            this.ActLogo.Name = "ActLogo";
-            this.ActLogo.Size = new System.Drawing.Size(105, 16);
-            this.ActLogo.TabIndex = 194;
-            this.ActLogo.TabStop = true;
-            this.ActLogo.Text = "Actualizar Logos";
-            this.ActLogo.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.ActLogo_LinkClicked);
             // 
             // openFileDialog1
             // 

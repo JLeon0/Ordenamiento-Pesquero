@@ -44,6 +44,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             {
                 RegUsuario.Visible = false;
                 RegPrograma.Visible = false;
+                ActLogo.Visible = false;
             }
             else
             {
@@ -325,14 +326,35 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 
         private void ActLogo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            if (MessageBox.Show("Desea regresar al logo anterior?", "Actualizar Logo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+            {
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    try
+                    {
+                        File.Delete(Path.Combine(Application.StartupPath, "Logo2.png"));
+                        File.Copy(Path.Combine(Application.StartupPath, "Logo.png"), Path.Combine(Application.StartupPath, "Logo2.png"));
+                        File.Delete(Path.Combine(Application.StartupPath, "Logo.png"));
+                        File.Copy(openFileDialog1.FileName, Path.Combine(Application.StartupPath, "Logo.png"));
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Hubo un problema al cambiar de imagen...\n Cierre el programa y vuelva a intentarlo.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+            else
             {
                 try
                 {
+                    File.Copy(Path.Combine(Application.StartupPath, "Logo.png"), Path.Combine(Application.StartupPath, "Logo3.png"));
                     File.Delete(Path.Combine(Application.StartupPath, "Logo.png"));
-                    File.Copy(openFileDialog1.FileName, Path.Combine(Application.StartupPath, "Logo.png"));
+                    File.Copy(Path.Combine(Application.StartupPath, "Logo2.png"), Path.Combine(Application.StartupPath, "Logo.png"));
+                    File.Delete(Path.Combine(Application.StartupPath, "Logo2.png"));
+                    File.Copy(Path.Combine(Application.StartupPath, "Logo3.png"), Path.Combine(Application.StartupPath, "Logo2.png"));
+                    File.Delete(Path.Combine(Application.StartupPath, "Logo3.png"));
                 }
-                catch(Exception)
+                catch (Exception e)
                 {
                     MessageBox.Show("Hubo un problema al cambiar de imagen...\n Cierre el programa y vuelva a intentarlo.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
