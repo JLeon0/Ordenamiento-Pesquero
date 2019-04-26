@@ -1032,84 +1032,84 @@ namespace OrdenamientoPesquero
                 DialogResult result = folderBrowserDialog1.ShowDialog();
                 if (result == DialogResult.OK) // Test result.
                 {
-                    DataTable pes;
+                    DataTable nom;
                     DataTable pescadores = proc.ObtenerExpedientePescadorXUnidad(cbRNPA.Text);
                     DataTable embarcaciones = proc.ObtenerExpedienteEmbarcacionXUnidad(cbRNPA.Text);
                     DataTable unidad = proc.ObtenerExpedienteUnidad(cbRNPA.Text);
+                    DataTable permisos;
+
                     if (!Directory.Exists(folderBrowserDialog1.SelectedPath+@"\"+txtNombre.Text+@"\"))
                     {
                         DirectoryInfo di = Directory.CreateDirectory(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\");
+                    }
+                    if (!Directory.Exists(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\" + "PESCADORES" + @"\"))
+                    {
                         DirectoryInfo di1 = Directory.CreateDirectory(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\" + "PESCADORES" + @"\");
+                    }
+                    if (!Directory.Exists(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\" + "EMBARCACIONES" + @"\"))
+                    {
+                        DirectoryInfo di2 = Directory.CreateDirectory(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\" + "EMBARCACIONES" + @"\");
+                    }
+                    if (!Directory.Exists(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\" + "PERMISOS" + @"\"))
+                    {
+                        DirectoryInfo di3 = Directory.CreateDirectory(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\" + "PERMISOS" + @"\");
                     }
                     path = folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\";
                     if (unidad.Rows.Count != 0)
                     {
-                        if (unidad.Rows[0]["ACTACONS"] != System.DBNull.Value)
-                        {
-                            file = (byte[])unidad.Rows[0]["ACTACONS"];
-                            File.WriteAllBytes(path + "ACTA CONSTTUTIVA.PDF", file);
-                        }
-                        if (unidad.Rows[0]["ACTAASAMBLEA"] != System.DBNull.Value)
-                        {
-                            file = (byte[])unidad.Rows[0]["ACTAASAMBLEA"];
-                            File.WriteAllBytes(path + "ACTA DE ASAMBLEA.PDF", file);
-                        }
-                        if (unidad.Rows[0]["RFCUE"] != System.DBNull.Value)
-                        {
-                            file = (byte[])unidad.Rows[0]["RFCUE"];
-                            File.WriteAllBytes(path + "RFC.PDF", file);
-                        }
-                        if (unidad.Rows[0]["COMPDOM"] != System.DBNull.Value)
-                        {
-                            file = (byte[])unidad.Rows[0]["COMPDOM"];
-                            File.WriteAllBytes(path + "COMPROBANTE DE DOMICILIO.PDF", file);
-                        }
-                        if (unidad.Rows[0]["CEDINSCRUE"] != System.DBNull.Value)
-                        {
-                            file = (byte[])unidad.Rows[0]["CEDINSCRUE"];
-                            File.WriteAllBytes(path + "CEDULA DE INSCRIPCION.PDF", file);
-                        }
-                        if (unidad.Rows[0]["CEDINSCREMBARCA"] != System.DBNull.Value)
-                        {
-                            file = (byte[])unidad.Rows[0]["CEDINSCREMBARCA"];
-                            File.WriteAllBytes(path + "CEDULA DE EMBARCACIONES.PDF", file);
-                        }
+                            CrearArchivo(path + "ACTA CONSTTUTIVA.PDF", unidad.Rows[0]["ACTACONS"]);
+                            CrearArchivo(path + "ACTA DE ASAMBLEA.PDF", unidad.Rows[0]["ACTAASAMBLEA"]);
+                            CrearArchivo(path + "RFC.PDF", unidad.Rows[0]["RFCUE"]);
+                            CrearArchivo(path + "COMPROBANTE DE DOMICILIO.PDF", unidad.Rows[0]["COMPDOM"]);
+                            CrearArchivo(path + "CEDULA DE INSCRIPCION.PDF", unidad.Rows[0]["CEDINSCRUE"]);
+                            CrearArchivo(path + "CEDULA DE EMBARCACIONES.PDF", unidad.Rows[0]["CEDINSCREMBARCA"]);
                     }
 
                     for (int i = 0; i < pescadores.Rows.Count; i++)
                     {
-                        pes = proc.Obtener_Pescador(pescadores.Rows[i]["CURP"].ToString());
-                        nombre = pes.Rows[0]["NOMBRE"].ToString() + " " + pes.Rows[0]["AP_PAT"].ToString() + " " + pes.Rows[0]["AP_MAT"].ToString();
+                        nom = proc.Obtener_Pescador(pescadores.Rows[i]["CURP"].ToString());
+                        nombre = nom.Rows[0]["NOMBRE"].ToString() + " " + nom.Rows[0]["AP_PAT"].ToString() + " " + nom.Rows[0]["AP_MAT"].ToString();
                         if (!Directory.Exists(path+ @"\PESCADORES\" + nombre + @"\"))
                         {
                             DirectoryInfo di = Directory.CreateDirectory(path+ @"\PESCADORES\" + nombre + @"\");
                         }
-                        if (pescadores.Rows[i]["ACTANAC"]!=System.DBNull.Value)
+                            CrearArchivo(path + @"\PESCADORES\" + nombre + @"\ACTA DE NACIMIENTO.PDF", pescadores.Rows[i]["ACTANAC"]);
+                            CrearArchivo(path + @"\PESCADORES\" + nombre + @"\CURP.PDF", pescadores.Rows[i]["ACURP"]);
+                            CrearArchivo(path + @"\PESCADORES\" + nombre + @"\INE.PDF", pescadores.Rows[i]["AINE"]);
+                            CrearArchivo(path + @"PESCADORES\" + nombre + @"\COMPROBANTE DE DOMICILIO.PDF", pescadores.Rows[i]["ACOMPDOM"]);
+                    }
+                    for (int i = 0; i < embarcaciones.Rows.Count; i++)
+                    {
+                        nom = proc.ObtenerEmbarca(embarcaciones.Rows[i]["MATRICULA"].ToString());
+                        nombre = nom.Rows[0]["NOMBREEMBARCACION"].ToString();
+                        if (!Directory.Exists(path + @"\PESCADORES\" + nombre + @"\"))
                         {
-                            file = (byte[])pescadores.Rows[i]["ACTANAC"];
-                            File.WriteAllBytes(path + @"\PESCADORES\" + nombre + @"\ACTA DE NACIMIENTO.PDF", file);
+                            DirectoryInfo di = Directory.CreateDirectory(path + @"\EMBARCACIONES\" + nombre + @"\");
                         }
-                        if (pescadores.Rows[i]["ACURP"] != System.DBNull.Value)
+                        permisos = proc.PermisosxEmbarca(embarcaciones.Rows[i]["MATRICULA"].ToString());
+                        for (int C = 0; C < permisos.Rows.Count; C++)
                         {
-                            file = (byte[])pescadores.Rows[i]["ACURP"];
-                            File.WriteAllBytes(path + @"\PESCADORES\" + nombre + @"\CURP.PDF", file);
+                                CrearArchivo(path + @"PERMISOS\"+ permisos.Rows[C]["PESQUERIA"].ToString()+".pdf", permisos.Rows[i]["APERMISO"]);
                         }
-                        if (pescadores.Rows[i]["AINE"]!= System.DBNull.Value)
-                        {
-                            file = (byte[])pescadores.Rows[i]["AINE"];
-                            File.WriteAllBytes(path + @"\PESCADORES\" + nombre + @"\INE.PDF", file);
-                        }
-                        if (pescadores.Rows[i]["ACOMPDOM"]!= System.DBNull.Value)
-                        {
-                            file = (byte[])pescadores.Rows[i]["ACOMPDOM"];
-                            File.WriteAllBytes(path + @"PESCADORES\" + nombre + @"\COMPROBANTE DE DOMICILIO.PDF", file);
-                        }
+                            CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\CERTIFICADO DE MATRICULA.PDF", embarcaciones.Rows[i]["CERTMATRICULA"]);
+                            CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\CERTIFICADO DE SEGURIDAD.PDF", embarcaciones.Rows[i]["CERTSEGURIDAD"]);
+                            CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\FACTURA DE ARTES DE PESCA.PDF", embarcaciones.Rows[i]["FACTARTESPESCA"]);
+                            CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\FACTURA DE MOTOR.PDF", embarcaciones.Rows[i]["FACTMOTOR"]);
+                            CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\FACTURA DE EMBARCACION.PDF", embarcaciones.Rows[i]["FACTEMBARCACION"]);
+                            CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\PAPELETA DE CHIPEO.PDF", embarcaciones.Rows[i]["PAPELETACHIPEO"]);
+                            CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\FOTO DE EMBARCACION.PDF", embarcaciones.Rows[i]["FOTOEMB"]);
                     }
                 }
             }
 
         }
-
+        private void CrearArchivo(string path, object file)
+        {
+            if (file!=System.DBNull.Value)
+            {
+                File.WriteAllBytes(path, (byte[])file);
+            }
+        }
         private void BorrarCarpeta()
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);

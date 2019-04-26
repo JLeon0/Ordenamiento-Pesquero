@@ -1677,7 +1677,7 @@
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(137, 45);
             this.button7.TabIndex = 159;
-            this.button7.Text = "DOCUMENTOS";
+            this.button7.Text = "GENERAR EXPEDIENTE";
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
