@@ -157,6 +157,7 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.gbBotones = new System.Windows.Forms.GroupBox();
+            this.button7 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.Expediente = new System.Windows.Forms.Button();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
@@ -170,7 +171,6 @@
             this.Logo2 = new System.Windows.Forms.PictureBox();
             this.label35 = new System.Windows.Forms.Label();
             this.Bienvenido = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
             this.gbOrgPes.SuspendLayout();
             this.gbBotonesUE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
@@ -1667,6 +1667,20 @@
             this.gbBotones.TabStop = false;
             this.gbBotones.Text = "Entidades";
             // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.Silver;
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.Black;
+            this.button7.Location = new System.Drawing.Point(465, 82);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(137, 45);
+            this.button7.TabIndex = 159;
+            this.button7.Text = "GENERAR EXPEDIENTE";
+            this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
             // button6
             // 
             this.button6.BackColor = System.Drawing.Color.Silver;
@@ -1836,20 +1850,6 @@
             this.Bienvenido.Size = new System.Drawing.Size(75, 16);
             this.Bienvenido.TabIndex = 191;
             this.Bienvenido.Text = "Bienvenido ";
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Silver;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(465, 82);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(137, 45);
-            this.button7.TabIndex = 159;
-            this.button7.Text = "DOCUMENTOS";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
