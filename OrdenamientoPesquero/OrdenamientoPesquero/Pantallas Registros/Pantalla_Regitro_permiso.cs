@@ -24,7 +24,7 @@ namespace OrdenamientoPesquero
         int exito = 0, NIVEL = 0;
         Procedimientos proc = new Procedimientos();
         DataSet ds = new DataSet();
-        DataTable dt = null, permisos = null;
+        DataTable dt = null, permisos = null, Embarcaciones = null;
 
         public Pantalla_Regitro_permiso(string rnpa, string muni, string unidad, int nivel)
         {
@@ -41,17 +41,22 @@ namespace OrdenamientoPesquero
         {
             Logo.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
         }
-        private void Pantalla_Regitro_permiso_Load(object sender, EventArgs e)
+
+        private void ObtenerEmbarcaciones(bool load)
         {
-            CargarPermisos();
-            Unid.Text = uni;
             dt = proc.ObtenerCertMatrXUnidad(Rnpa);
             for (int i = 0; i < dt.Rows.Count; i++)
             {
                 if (dt.Rows[i]["NOMBREEMBARCACION"].ToString() != "NO APLICA")
-                    Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
+                { if (load) { Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString()); } }
                 else { dt.Rows.RemoveAt(i); i--; }
             }
+        }
+        private void Pantalla_Regitro_permiso_Load(object sender, EventArgs e)
+        {
+            CargarPermisos();
+            Unid.Text = uni;
+            ObtenerEmbarcaciones(true);
             CargarPesquerias();
             dgvArchivos.RowCount = 1;
             dgvArchivos[0, 0].Value = "Permiso Escaneado";
@@ -430,21 +435,19 @@ namespace OrdenamientoPesquero
                     }
                     dt = proc.NumeroEmbarcaciones(per);
                     numericUpDown1.Value = dt.Rows.Count;
-                    dt = proc.EmbarcacionesxPermiso(per);
-                    dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
+                    Embarcaciones = proc.EmbarcacionesxPermiso(per);
+                    dgvEmbarcacionesPerm.RowCount = Embarcaciones.Rows.Count;
                     for (int i = 0; i < dt.Rows.Count; i++)
                     {
-                        dgvEmbarcacionesPerm.RowCount = dt.Rows.Count;
                         // Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
-                        dgvEmbarcacionesPerm[0, i].Value = dt.Rows[i]["NOMBREEMBARCACION"].ToString();
-                        dgvEmbarcacionesPerm[1, i].Value = dt.Rows[i]["MATRICULA"].ToString();
-                        dgvEmbarcacionesPerm[2, i].Value = dt.Rows[i]["MOTORMARCA"].ToString();
-                        dgvEmbarcacionesPerm[3, i].Value = dt.Rows[i]["MOTORHP"].ToString();
-
+                        dgvEmbarcacionesPerm[0, i].Value = Embarcaciones.Rows[i]["NOMBREEMBARCACION"].ToString();
+                        dgvEmbarcacionesPerm[1, i].Value = Embarcaciones.Rows[i]["MATRICULA"].ToString();
+                        dgvEmbarcacionesPerm[2, i].Value = Embarcaciones.Rows[i]["MOTORMARCA"].ToString();
+                        dgvEmbarcacionesPerm[3, i].Value = Embarcaciones.Rows[i]["MOTORHP"].ToString();
                     }
                 }
             }
-            dt = proc.ObtenerCertMatrXUnidad(Rnpa);
+            ObtenerEmbarcaciones(false);
             CargarExpediente();
             dgvArchivos.ClearSelection();
             this.Cursor = Cursors.Default;
