@@ -423,6 +423,46 @@
                               <PaddingBottom>0cm</PaddingBottom>
                             </Style>
                           </Textbox>
+                          <Textbox Name="Textbox59">
+                            <CanGrow>true</CanGrow>
+                            <KeepTogether>true</KeepTogether>
+                            <Paragraphs>
+                              <Paragraph>
+                                <TextRuns>
+                                  <TextRun>
+                                    <Value>Matricula: </Value>
+                                    <Style>
+                                      <FontSize>9pt</FontSize>
+                                      <FontWeight>Normal</FontWeight>
+                                    </Style>
+                                  </TextRun>
+                                  <TextRun>
+                                    <Value>=Parameters!matricula.Value</Value>
+                                    <Style>
+                                      <FontSize>9pt</FontSize>
+                                      <FontWeight>Bold</FontWeight>
+                                    </Style>
+                                  </TextRun>
+                                </TextRuns>
+                                <Style />
+                              </Paragraph>
+                            </Paragraphs>
+                            <rd:DefaultName>Textbox45</rd:DefaultName>
+                            <Top>1.38529cm</Top>
+                            <Left>7.00295cm</Left>
+                            <Height>0.45cm</Height>
+                            <Width>7.02492cm</Width>
+                            <ZIndex>6</ZIndex>
+                            <Style>
+                              <Border>
+                                <Style>None</Style>
+                              </Border>
+                              <PaddingLeft>0cm</PaddingLeft>
+                              <PaddingRight>0cm</PaddingRight>
+                              <PaddingTop>0cm</PaddingTop>
+                              <PaddingBottom>0cm</PaddingBottom>
+                            </Style>
+                          </Textbox>
                         </ReportItems>
                         <KeepTogether>true</KeepTogether>
                         <Top>0.46473cm</Top>
@@ -437,7 +477,6 @@
                       </Rectangle>
                     </ReportItems>
                     <KeepTogether>true</KeepTogether>
-                    <Left>0cm</Left>
                     <Height>2.30002cm</Height>
                     <Width>18.63907cm</Width>
                     <Style>
@@ -2829,6 +2868,10 @@
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>
     <ReportParameter Name="tipo">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="matricula">
       <DataType>String</DataType>
       <Prompt>ReportParameter1</Prompt>
     </ReportParameter>

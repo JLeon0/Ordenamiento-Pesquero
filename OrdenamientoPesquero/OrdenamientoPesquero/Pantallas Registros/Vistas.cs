@@ -671,7 +671,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     ReportParameter[] SoliApo;
                     DataTable d4t = proc.Obtener_Pescador(CURP);
                     DataTable d5t=proc.ObtenerEmbarca(d4t.Rows[0]["MATRICULA"].ToString());
-                    SoliApo = new ReportParameter[10];
+                    SoliApo = new ReportParameter[11];
                     if (d5t.Rows.Count!=0)
                     {
                         SoliApo[6] = new ReportParameter("embarca", d5t.Rows[0]["NOMBREEMBARCACION"].ToString());
@@ -689,6 +689,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                             SoliApo[8] = new ReportParameter("tipo", d4t.Rows[0]["TIPO_PESCADOR"].ToString());
                             SoliApo[9] = new ReportParameter("ocupacion", d4t.Rows[0]["OCUPACION_LABORAL"].ToString());
                         }
+                        SoliApo[10] = new ReportParameter("matricula", d4t.Rows[0]["MATRICULA"].ToString());
                     }
                     if (rnpa!=""&&rnpa!= "NO APLICA")
                     {

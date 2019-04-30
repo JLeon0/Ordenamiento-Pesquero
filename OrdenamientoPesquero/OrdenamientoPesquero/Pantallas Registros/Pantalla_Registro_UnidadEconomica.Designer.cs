@@ -1857,7 +1857,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1404, 673);
+            this.ClientSize = new System.Drawing.Size(1370, 690);
             this.Controls.Add(this.Bienvenido);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelRNPA);

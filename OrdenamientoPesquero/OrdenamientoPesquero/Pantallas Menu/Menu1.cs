@@ -356,7 +356,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
                     File.Delete(Path.Combine(Application.StartupPath, "Logo3.png"));
                     MessageBox.Show("Logos cambiados con exito", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
-                catch (Exception e)
+                catch (Exception)
                 {
                     MessageBox.Show("Hubo un problema al cambiar de imagen...\n Cierre el programa y vuelva a intentarlo.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }

@@ -52,7 +52,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             }
             catch (Exception)
             {
-                myServiceName = "MSSSQLSERVER";
+                myServiceName = "MSSQLSERVER";
                 mySC = new ServiceController(myServiceName);
                 if (mySC.Status.Equals(ServiceControllerStatus.Stopped) | mySC.Status.Equals(ServiceControllerStatus.StopPending))
                 {
