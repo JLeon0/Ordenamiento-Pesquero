@@ -20,7 +20,7 @@ namespace OrdenamientoPesquero
     {
         string[,] pescador = { { "0", "CURP" }, { "0", "RFC" }, { "0", "Codigo postal" }, { "0", "Telefono" }, { "0", "Correo Electronico" } };
         int exito = 0, NIVEL;
-        bool cargando = true;
+        bool cargando = true, img = false, hue = false, firm = false;
         Pescador pes;
         Procedimientos proc = new Procedimientos();
         Validaciones val = new Validaciones();
@@ -509,10 +509,9 @@ namespace OrdenamientoPesquero
                 if (ord == 1) { si.Checked = true; }
                 else { no.Checked = true; }
 
-
-
                 CURPPesc.Text = c;
                 ObtenerImagen();
+
                 if (ListaNombres.SelectedIndex != -1)
                 { NOMBRES = proc.BuscarNombre(ListaNombres.Text, RNPA); }
                 else if (ListaNombres2.SelectedIndex != -1)
@@ -530,7 +529,7 @@ namespace OrdenamientoPesquero
 
         private void limpiarpescador()
         {
-            Imagen.BackgroundImage = OrdenamientoPesquero.Properties.Resources.perfil;
+            Imagen.BackgroundImage = null;
             Firma.BackgroundImage = null;
             Huella.BackgroundImage = null;
             no.Checked = true;
@@ -1045,37 +1044,40 @@ namespace OrdenamientoPesquero
             dt = proc.ObtenerImagen(CURPPesc.Text);
             if (dt.Rows.Count > 0)
             {
-                Imagen.BackColor = Color.White;
-                Imagen.BackgroundImage = null;
                 if (dt.Rows[0]["IMAGEN"].ToString() != "")
                 {
+                    img = true;
                     imagenBuffer = (byte[])dt.Rows[0]["IMAGEN"];
                     System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
                     Imagen.BackgroundImage = (Image.FromStream(ms));
-                    //Imagen.BackgroundImageLayout = ImageLayout.Zoom;
                 }
+                else { img = false; }
             }
             dt = proc.ObtenerFirma(CURPPesc.Text);
             if (dt.Rows.Count > 0)
             {
                 try
                 {
-                    Firma.BackColor = Color.White;
-                    Firma.BackgroundImage = null;
-                    imagenBuffer = (byte[])dt.Rows[0]["FIRMA"];
-                    System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
-                    Firma.BackgroundImage = (Image.FromStream(ms));
-                    Firma.BackgroundImageLayout = ImageLayout.Zoom;
+                    if (dt.Rows[0]["FIRMA"].ToString() != "")
+                    {
+                        firm = true;
+                        imagenBuffer = (byte[])dt.Rows[0]["FIRMA"];
+                        System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
+                        Firma.BackgroundImage = (Image.FromStream(ms));
+                        Firma.BackgroundImageLayout = ImageLayout.Zoom;
+                    }
+                    else { firm = false; }
 
-                    Huella.BackColor = Color.White;
-                    Huella.BackgroundImage = null;
-                    imagenBuffer = (byte[])dt.Rows[0]["HUELLA"];
-                    huell = CreateBitmap(imagenBuffer,Huella.Width, Huella.Height);
-                    ms = new System.IO.MemoryStream(imagenBuffer);
-                    Huella.BackgroundImage = (Image.FromStream(ms));
-                    Bitmap result = new Bitmap(Huella.Width, Huella.Height);
-                    Huella.DrawToBitmap(result,new Rectangle(0, 0, Huella.BackgroundImage.Width, Huella.BackgroundImage.Height));
-                    result.Save(Application.StartupPath.ToString() + @"\huella.jpg");
+                    if (dt.Rows[0]["HUELLA"].ToString() != "")
+                    {
+                        imagenBuffer = (byte[])dt.Rows[0]["HUELLA"];
+                        huell = CreateBitmap(imagenBuffer, Huella.Width, Huella.Height);
+                        System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
+                        Huella.BackgroundImage = (Image.FromStream(ms));
+                        Bitmap result = new Bitmap(Huella.Width, Huella.Height);
+                        Huella.DrawToBitmap(result, new Rectangle(0, 0, Huella.BackgroundImage.Width, Huella.BackgroundImage.Height));
+                        result.Save(Application.StartupPath.ToString() + @"\huella.jpg");
+                    }
                 }
                 catch (Exception MS) { }
             }
@@ -1200,8 +1202,12 @@ namespace OrdenamientoPesquero
 
         private void Credencial_Click(object sender, EventArgs e)
         {
-            Vistas v = new Vistas(CURPPesc.Text, NombreUnidad, 4, huell, proc.bdd);
-            v.Show(this);
+            if (img && firm && hue)
+            {
+                Vistas v = new Vistas(CURPPesc.Text, NombreUnidad, 4, huell, proc.bdd);
+                v.Show(this);
+            }
+            else { MessageBox.Show("Para poder credencilizar debe tener Huella, Firma y Fotografía.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
         
 
@@ -1271,6 +1277,7 @@ namespace OrdenamientoPesquero
             { IsBackground = true };
             threadHandle.Start();
         }
+
 
         private void BuscarNombre_KeyPress(object sender, KeyPressEventArgs e)
         {

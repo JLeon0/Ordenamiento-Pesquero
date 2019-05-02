@@ -588,7 +588,6 @@
             // 
             // Imagen
             // 
-            this.Imagen.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.perfil;
             this.Imagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Imagen.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Imagen.Location = new System.Drawing.Point(11, 21);
