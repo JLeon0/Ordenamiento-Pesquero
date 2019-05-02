@@ -535,7 +535,9 @@ namespace OrdenamientoPesquero
                     {
                         string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                         string folder = path + "/PDF/";
-                        string fullFilePath = folder + nPer.Text + "-APERMISO.pdf";
+                        string text = nPer.Text;
+                        if (text.Contains("/")) { text = text.Replace("/", "-"); }
+                        string fullFilePath = folder + text + "-APERMISO.pdf";
 
 
                         if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
