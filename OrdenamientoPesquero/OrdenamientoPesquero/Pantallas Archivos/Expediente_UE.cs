@@ -278,8 +278,6 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
 
                     if (File.Exists(fullFilePath)) { try { Directory.Delete(fullFilePath); } catch (Exception ms) { } }
 
-
-                 
                     if (archivo != "")
                     {
                         //Stream resFilestream=; //' this will be the source of file to writ
