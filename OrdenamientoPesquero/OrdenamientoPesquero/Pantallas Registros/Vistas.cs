@@ -559,7 +559,6 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                         datos3.Name = "DataSet5";
                         datos3.Value = ordPesqueroDataSetpescadores1.pescadores;
                         this.reportViewer1.LocalReport.DataSources.Add(datos3);
-
                         try
                         {
                             this.vista_perm2TableAdapter.Fill(permisos_lista.vista_perm2, rnpa);
