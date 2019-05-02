@@ -166,13 +166,20 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             DataTable expediente = proc.ObtenerNoPermisos(RNPA);
             dgvPermisos.RowCount = 1;
             dgvPermisos[0, 0].Value = "Permisos Escaneados";
-
+            List<string> folios = new List<string>();
             int aperm = 0;
             foreach (DataRow fila in expediente.Rows)
             {
-                if (fila["APERMISO"].ToString() != "") { aperm++; }
+                if (!folios.Contains(fila["FOLIO"].ToString()))
+                {
+                    folios.Add(fila["FOLIO"].ToString());
+                    if (fila["APERMISO"].ToString() != "")
+                    {
+                        aperm++;
+                    }
+                }
             }
-            dgvPermisos[2, 0].Value = aperm + "/" + expediente.Rows.Count;
+            dgvPermisos[2, 0].Value = aperm + "/" + folios.Count;
             if (expediente.Rows.Count > 0 && aperm == expediente.Rows.Count) { dgvPermisos[1, 0].Value = true; dgvPermisos[1, 0].Style.BackColor = Color.Green; }
             dgvPermisos.ClearSelection();
         }
