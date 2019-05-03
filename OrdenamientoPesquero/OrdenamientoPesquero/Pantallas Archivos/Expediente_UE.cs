@@ -181,10 +181,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                     List<string> add = new List<string>();
                     add.Add(fila["FOLIO"].ToString());
                     if (fila["APERMISO"].ToString() != "")
-                    {
-                        add.Add("Y");
-                        aperm++;
-                    }
+                    { add.Add("Y"); aperm++; }
                     folios.Add(add);
                 }
                 else
