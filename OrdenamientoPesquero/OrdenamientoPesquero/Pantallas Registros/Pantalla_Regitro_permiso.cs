@@ -437,7 +437,7 @@ namespace OrdenamientoPesquero
                     numericUpDown1.Value = dt.Rows.Count;
                     Embarcaciones = proc.EmbarcacionesxPermiso(per);
                     dgvEmbarcacionesPerm.RowCount = Embarcaciones.Rows.Count;
-                    for (int i = 0; i < dt.Rows.Count; i++)
+                    for (int i = 0; i < Embarcaciones.Rows.Count; i++)
                     {
                         // Nombre.Items.Add(dt.Rows[i]["NOMBREEMBARCACION"].ToString());
                         dgvEmbarcacionesPerm[0, i].Value = Embarcaciones.Rows[i]["NOMBREEMBARCACION"].ToString();
