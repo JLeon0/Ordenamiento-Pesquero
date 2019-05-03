@@ -198,7 +198,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 }
             }
             dgvPermisos[2, 0].Value = aperm + "/" + folios.Count;
-            if (expediente.Rows.Count > 0 && aperm == expediente.Rows.Count) { dgvPermisos[1, 0].Value = true; dgvPermisos[1, 0].Style.BackColor = Color.Green; }
+            if (folios.Count > 0 && aperm == folios.Count) { dgvPermisos[1, 0].Value = true; dgvPermisos[1, 0].Style.BackColor = Color.Green; }
             dgvPermisos.ClearSelection();
         }
 
