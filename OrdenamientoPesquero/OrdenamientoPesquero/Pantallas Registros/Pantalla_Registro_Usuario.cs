@@ -1070,6 +1070,7 @@ namespace OrdenamientoPesquero
 
                     if (dt.Rows[0]["HUELLA"].ToString() != "")
                     {
+                        hue = true;
                         imagenBuffer = (byte[])dt.Rows[0]["HUELLA"];
                         huell = CreateBitmap(imagenBuffer, Huella.Width, Huella.Height);
                         System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
