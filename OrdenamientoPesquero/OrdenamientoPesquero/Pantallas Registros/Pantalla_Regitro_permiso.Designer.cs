@@ -1142,6 +1142,7 @@
             this.Name = "Pantalla_Regitro_permiso";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Permisos";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Pantalla_Regitro_permiso_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposPescaPerm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbarcacionesPerm)).EndInit();

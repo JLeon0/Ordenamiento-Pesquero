@@ -1151,6 +1151,7 @@
             this.Name = "Pantalla_Certificado_Mat";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Embarcaciones";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Pantalla_Certificado_Mat_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).EndInit();
             this.gbCertificado.ResumeLayout(false);
