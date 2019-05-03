@@ -53,13 +53,14 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             DataTable expediente = proc.ObtenerExpedienteUnidad(RNPA);
             if (TIPO == 0)
             {
-                dgvUnidad.RowCount = 6;
+                dgvUnidad.RowCount = 7;
                 dgvUnidad[0, 0].Value = "Acta Constitutiva";
                 dgvUnidad[0, 1].Value = "Acta de Asamblea";
                 dgvUnidad[0, 2].Value = "RFC UE";
                 dgvUnidad[0, 3].Value = "Comp Domicilio";
                 dgvUnidad[0, 4].Value = "Cedula Insc UE";
                 dgvUnidad[0, 5].Value = "Cedula Insc Embarcas";
+                dgvUnidad[0, 6].Value = "Otro";
                 if (expediente.Rows.Count > 0)
                 {
                     if (expediente.Rows[0]["ACTACONS"].ToString() != "") { dgvUnidad[1, 0].Value = true; dgvUnidad[1, 0].Style.BackColor = Color.Green; }
@@ -68,21 +69,24 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                     if (expediente.Rows[0]["COMPDOM"].ToString() != "") { dgvUnidad[1, 3].Value = true; dgvUnidad[1, 3].Style.BackColor = Color.Green; }
                     if (expediente.Rows[0]["CEDINSCRUE"].ToString() != "") { dgvUnidad[1, 4].Value = true; dgvUnidad[1, 4].Style.BackColor = Color.Green; }
                     if (expediente.Rows[0]["CEDINSCREMBARCA"].ToString() != "") { dgvUnidad[1, 5].Value = true; dgvUnidad[1, 5].Style.BackColor = Color.Green; }
+                    if (expediente.Rows[0]["OTRO"].ToString() != "") { dgvUnidad[1, 6].Value = true; dgvUnidad[1, 6].Style.BackColor = Color.Green; }
                 }
             }
             else
             {
-                dgvUnidad.RowCount = 4;
+                dgvUnidad.RowCount = 5;
                 dgvUnidad[0, 0].Value = "RFC UE";
                 dgvUnidad[0, 1].Value = "Comp Domicilio";
                 dgvUnidad[0, 2].Value = "Cedula Insc UE";
                 dgvUnidad[0, 3].Value = "Cedula Insc Embarcas";
+                dgvUnidad[0, 4].Value = "Otro";
                 if (expediente.Rows.Count > 0)
                 {
                     if (expediente.Rows[0]["RFCUE"].ToString() != "") { dgvUnidad[1, 0].Value = true; dgvUnidad[1, 0].Style.BackColor = Color.Green; }
                     if (expediente.Rows[0]["COMPDOM"].ToString() != "") { dgvUnidad[1, 1].Value = true; dgvUnidad[1, 1].Style.BackColor = Color.Green; }
                     if (expediente.Rows[0]["CEDINSCRUE"].ToString() != "") { dgvUnidad[1, 2].Value = true; dgvUnidad[1, 2].Style.BackColor = Color.Green; }
                     if (expediente.Rows[0]["CEDINSCREMBARCA"].ToString() != "") { dgvUnidad[1, 3].Value = true; dgvUnidad[1, 3].Style.BackColor = Color.Green; }
+                    if (expediente.Rows[0]["OTRO"].ToString() != "") { dgvUnidad[1, 4].Value = true; dgvUnidad[1, 4].Style.BackColor = Color.Green; }
                 }
             }
         }
@@ -278,6 +282,8 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                             archivo = "CEDINSCRUE";
                         else if (dgvUnidad.SelectedCells[0].RowIndex == 5)
                             archivo = "CEDINSCREMBARCA";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 6)
+                            archivo = "OTRO";
                     }
                     else
                     {
@@ -289,6 +295,8 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                             archivo = "CEDINSCRUE";
                         else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
                             archivo = "CEDINSCREMBARCA";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 4)
+                            archivo = "OTRO";
                     }
                     string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                     string folder = path + "/PDF/";
@@ -316,28 +324,32 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             if (TIPO == 0)
             {
                 if (dgvUnidad.SelectedCells[0].RowIndex == 0)
-                    exito = proc.InsertarPDFUnidad(RNPA, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0], new byte[0]);
+                    exito = proc.InsertarPDFUnidad(RNPA, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], new byte[0]);
                 else if (dgvUnidad.SelectedCells[0].RowIndex == 1)
-                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0]);
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0], new byte[0]);
                 else if (dgvUnidad.SelectedCells[0].RowIndex == 2)
-                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0]);
                 else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
-                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
                 else if (dgvUnidad.SelectedCells[0].RowIndex == 4)
-                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
                 else if (dgvUnidad.SelectedCells[0].RowIndex == 5)
-                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
+                else if (dgvUnidad.SelectedCells[0].RowIndex == 6)
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
             }
             else
             {
                 if (dgvUnidad.SelectedCells[0].RowIndex == 0)
-                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0], new byte[0]);
                 else if (dgvUnidad.SelectedCells[0].RowIndex == 1)
-                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
                 else if (dgvUnidad.SelectedCells[0].RowIndex == 2)
-                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
                 else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
-                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
+                else if (dgvUnidad.SelectedCells[0].RowIndex == 4)
+                    exito = proc.InsertarPDFUnidad(RNPA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
             }
             val.Exito(exito);
         }
