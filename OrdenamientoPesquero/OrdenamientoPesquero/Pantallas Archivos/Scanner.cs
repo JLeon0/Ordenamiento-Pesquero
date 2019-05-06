@@ -26,7 +26,7 @@ public class Scanner
     public string Scann(int x)
     {
         ImageFile imageFile = dlg.ShowAcquireImage(oDevice.Type, WiaImageIntent.GrayscaleIntent, WiaImageBias.MaximizeQuality,
-            "{00000000-0000-0000-0000-000000000000}", false, false, false);
+            "{B96B3CAB-0728-11D3-9D7B-0000F81EF32E}", false, false, false);
         WIA.Vector vector = imageFile.FileData;
 
         string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
