@@ -11,7 +11,7 @@ public class Scanner
     public Device oDevice;
     WIA.CommonDialog dlg;
     bool varias = false;
-    PdfDocument doc;
+    PdfSharp.Pdf.PdfDocument doc;
     public Scanner(bool activado)
     {
         if (activado)
@@ -44,7 +44,7 @@ public class Scanner
         File.WriteAllBytes(fullFilePath, file);
 
 
-        if (!varias) { doc = new PdfDocument(); }
+        if (!varias) { doc = new PdfSharp.Pdf.PdfDocument(); }
         doc.Pages.Add(new PdfPage());
 
         XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[x]);
@@ -62,8 +62,6 @@ public class Scanner
         doc.Save(fullFilePath2);
         doc.Close();
 
-
-
         return fullFilePath2;
     }
 
@@ -72,8 +70,9 @@ public class Scanner
     {
         string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         string folder = path + "/PDF/";
-        string fullFilePath = folder + "TEMPORAL.pdf";
-        string fullFilePath2 = folder + "TEMPORAL2.pdf";
+        string seg = DateTime.Now.ToString("hhmmss");
+        string fullFilePath = folder + "TEMPORAL" + seg + ".pdf";
+        string fullFilePath2 = folder + "TEMPORAL" + seg + "-2.pdf";
 
         if (!Directory.Exists(folder)) { try { Directory.CreateDirectory(folder); } catch (Exception ms) { } }
 
