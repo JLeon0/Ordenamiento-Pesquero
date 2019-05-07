@@ -677,6 +677,78 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 }
             }
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.reportViewer1.ProcessingMode = ProcessingMode.Local;
+            reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Occisos_Personal.rdlc");
+            bool[] column = new bool[18];
+            string[] dato = new string[18];
+            int i = 0;
+            foreach (CheckBox a in ColumasPescador.Controls)
+            {
+                if (a.Text != "TODOS")
+                {
+                    column[i] = a.Checked;
+                    dato[i] = a.Text.Replace(" ", "_");
+                    dato[i] = dato[i].ToLower();
+                    i++;
+                }
+            }
+            ReportParameter[] para = new ReportParameter[18];
+            for (int c = 0; c < 18; c++)
+            {
+                para[c] = new ReportParameter(dato[c], column[c].ToString());
+            }
+            reportViewer1.LocalReport.SetParameters(para);
+            string consulta = "Select FOLIO, OCCISOS.NOMBRE + ' '+OCCISOS.AP_PAT +' '+ OCCISOS.AP_MAT AS 'NOMBRE',OCCISOS.FECHA_NACIMIENTO,SEGURO, CURP, OCCISOS.MUNICIPIO, OCCISOS.LOCALIDAD, TIPO_OCCISOS, OCUPACION_LABORAL, TELEFONO, CORREO, CALLENUM+', Col. '+COLONIA AS 'DIRECCION', ESCOLARIDAD,RFC, ORDENAMIENTO, OCCISOS.MATRICULA, NOMBREEMBARCACION AS EMBARCACION, (SELECT NOMBRE FROM UNIDAD_ECONOMICA WHERE RNPTITULAR=RNPA) As Unidad from OCCISOS, EMBARCACIONES WHERE OCCISOS.MATRICULA = EMBARCACIONES.MATRICULA";
+            int r = 0;
+            foreach (CheckBox a in FiltrosPescador.Controls.OfType<CheckBox>())
+            {
+                if (a.Checked)
+                {
+                    if (a.Text == "Municipio")
+                    {
+                        consulta += " AND PESCADOR." + a.Text.Replace(" ", "_").ToLower() + " = ";
+                    }
+                    else
+                    {
+                        if (a.Text == "U.E.")
+                        {
+                            consulta += " AND RNPTITULAR = ";
+                        }
+                        else
+                        {
+                            consulta += " AND " + a.Text.Replace(" ", "_").ToLower() + " = ";
+                        }
+                    }
+
+                    int m = 0;
+                    foreach (ComboBox cb in FiltrosPescador.Controls.OfType<ComboBox>())
+                    {
+                        if (m == r)
+                        {
+                            if (a.Text == "U.E.")
+                            {
+                                consulta += "'" + dt.Rows[comboBox14.SelectedIndex]["RNPA"] + "'";
+                                break;
+                            }
+                            else
+                            {
+                                consulta += "'" + cb.Text + "'";
+                                break;
+                            }
+                        }
+                        m++;
+                    }
+                }
+                r++;
+            }
+            consulta += " Order by " + OrdenaPescador.Text.Replace(" ", "_");
+            ds.Value = proc.ObtenerTablaConsulta(consulta);
+            this.reportViewer1.LocalReport.DataSources.Add(ds);
+            this.reportViewer1.RefreshReport();
+        }
     }
 }
 
