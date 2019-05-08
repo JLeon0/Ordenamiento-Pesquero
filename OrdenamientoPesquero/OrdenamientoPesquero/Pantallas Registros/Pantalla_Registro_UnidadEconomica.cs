@@ -952,33 +952,37 @@ namespace OrdenamientoPesquero
             DialogResult result = folderBrowserDialog1.ShowDialog();
             if (result == DialogResult.OK) // Test result.
             {
-                if (radioButton1.Checked)
+                this.Cursor = Cursors.AppStarting;
+                if (!radioButton3.Checked)
                 {
-                    municipio = comboBox1.Text;
-                    nombre = municipio;
+                    if (radioButton1.Checked)
+                    {
+                        municipio = comboBox1.Text;
+                        nombre = municipio;
+                    }
+                    if (radioButton2.Checked)
+                    {
+                        rnp = cbRNPA.Text;
+                        nombre = rnp;
+                    }
+                    proc.borrartablas();
+                    proc.PasarUnidad2(municipio, rnp);
+                    proc.PasarEmbarcaciones2(municipio, rnp);
+                    proc.PasarPescadores2(municipio, rnp);
+                    proc.PasarPermisos2(municipio, rnp);
+                    proc.PasarEquipoPesca2();
+                    proc.PasarEmbarcaPermis2(municipio, rnp);
+                    //proc.PasarDirectiva2(municipio, rnp);
+                    //proc.PasarArchivosPescador2(municipio, rnp);
+                    //proc.PasarArchivosEmbarca2(municipio, rnp);
+                    //proc.PasarArchivosUnidad2(municipio, rnp);
+                    proc.Generar(folderBrowserDialog1.SelectedPath, nombre);
                 }
-                if (radioButton2.Checked)
-                {
-                    rnp = cbRNPA.Text;
-                    nombre = rnp;
-                }
-                if (radioButton3.Checked)
+                else
                 {
                     nombre = "respaldo";
+                    proc.Generar2(folderBrowserDialog1.SelectedPath);
                 }
-                this.Cursor = Cursors.WaitCursor;
-                proc.borrartablas();
-                proc.PasarUnidad2(municipio, rnp);
-                proc.PasarEmbarcaciones2(municipio, rnp);
-                proc.PasarPescadores2(municipio, rnp);
-                proc.PasarPermisos2(municipio, rnp);
-                proc.PasarEquipoPesca2();
-                proc.PasarEmbarcaPermis2(municipio, rnp);
-                //proc.PasarDirectiva2(municipio, rnp);
-                //proc.PasarArchivosPescador2(municipio, rnp);
-                //proc.PasarArchivosEmbarca2(municipio, rnp);
-                //proc.PasarArchivosUnidad2(municipio, rnp);
-                proc.Generar(folderBrowserDialog1.SelectedPath, nombre);
                 this.Cursor = Cursors.Default;
             }
         }
