@@ -242,14 +242,16 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
 
                         string n = openFileDialog1.FileName;
                         string x = n[n.Length - 4].ToString() + n[n.Length - 3].ToString() + n[n.Length - 2].ToString() + n[n.Length - 1].ToString();
+
+                        scan = new Scanner(false);
                         if (x != ".pdf")
-                        {
-                            scan = new Scanner(false);
-                            openFileDialog1.FileName = scan.ConvertToPDF(pdf);
-                            myStream = openFileDialog1.OpenFile();
-                            pdf = new MemoryStream();
-                            myStream.CopyTo(pdf);
-                        }
+                        { openFileDialog1.FileName = scan.ConvertToPDF(pdf, n, false); }
+                        else
+                        { openFileDialog1.FileName = scan.ConvertToPDF(pdf, n, true); }
+                        myStream = openFileDialog1.OpenFile();
+                        pdf = new MemoryStream();
+                        myStream.CopyTo(pdf);
+
                         GuardarEnBD(pdf);
                     }
                     CargarExpedienteUnidad();

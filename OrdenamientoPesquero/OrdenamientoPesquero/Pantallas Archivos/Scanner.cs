@@ -66,7 +66,7 @@ public class Scanner
     }
 
 
-    public string ConvertToPDF(MemoryStream pdf)
+    public string ConvertToPDF(MemoryStream pdf, string rutaFicheroPDFOrigenDividir, bool esPDF)
     {
         string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
         string folder = path + "/PDF/";
@@ -83,44 +83,53 @@ public class Scanner
         File.WriteAllBytes(fullFilePath, file);
 
         PdfDocument doc = new PdfDocument();
-        //Separar(rutaFicheroPDFOrigenDividir);
-        doc.Pages.Add(new PdfPage());
-        XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
-        XImage img = XImage.FromFile(fullFilePath);
-        xgr.DrawImage(img, 0, 0);
-        doc.Save(fullFilePath2);
+        if (esPDF)
+        {
+            PdfDocument ficheroPDFOrigenDividir = PdfReader.Open(rutaFicheroPDFOrigenDividir, PdfDocumentOpenMode.Import);
+            for (int paginaPDFActual = 0; paginaPDFActual < ficheroPDFOrigenDividir.PageCount; paginaPDFActual++)
+            {
+                doc.AddPage(ficheroPDFOrigenDividir.Pages[paginaPDFActual]);
+                XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
+                XImage img = XImage.FromFile(fullFilePath);
+                xgr.DrawImage(img, 0, 0);
+                doc.Save(fullFilePath2);
+            }
+        }
+        else
+        {
+            doc.AddPage(new PdfPage());
+            XGraphics xgr = XGraphics.FromPdfPage(doc.Pages[0]);
+            XImage img = XImage.FromFile(fullFilePath);
+            xgr.DrawImage(img, 0, 0);
+            doc.Save(fullFilePath2);
+        }
         doc.Close();
 
         return fullFilePath2;
     }
 
-    //void Separar(string rutaFicheroPDFOrigenDividir)
-    //{
-    //    PdfDocument ficheroPDFOrigenDividir =
-    //                       PdfReader.Open(rutaFicheroPDFOrigenDividir, PdfDocumentOpenMode.Import);
 
-    //    for (int paginaPDFActual = 0;
-    //        paginaPDFActual < ficheroPDFOrigenDividir.PageCount;
-    //        paginaPDFActual++)
-    //    {
+    void Separar(string rutaFicheroPDFOrigenDividir,string folder)
+    {
+        PdfDocument ficheroPDFOrigenDividir = PdfReader.Open(rutaFicheroPDFOrigenDividir, PdfDocumentOpenMode.Import);
 
-    //        // Crear el documento PDF destino de la página extraida
-    //        PdfDocument ficheroPDFPaginaDestino = new PdfDocument();
-    //        /*
-    //         ficheroPDFPaginaDestino.Info.Title =
-    //            String.Format("Página {0} de {1}", paginaPDFActual + 1,
-    //            ficheroPDFOrigenDividir.PageCount);
-    //        */
+        for (int paginaPDFActual = 0;
+            paginaPDFActual < ficheroPDFOrigenDividir.PageCount;
+            paginaPDFActual++)
+        {
 
-    //        // Añadir la página y guardar el fichero PDF creado
-    //        ficheroPDFPaginaDestino.AddPage(ficheroPDFOrigenDividir.Pages[paginaPDFActual]);
-    //        string nombreFicheroPDFDestino = Path.Combine(txtCarpetaDestinoPDF.Text,nombreFicheroDestinoPaginasPDF + " - Página " +Convert.ToString(paginaPDFActual + 1)) + ".pdf";
-    //        ficheroPDFPaginaDestino.Save(nombreFicheroPDFDestino);
-    //        lsFicherosPDFDivididos.Items.Add(nombreFicheroPDFDestino);
-    //        bp.Value = paginaPDFActual + 1;
-    //    }
-    //    lInfoProgreso.Text = "Fichero dividido en páginas correctamente: se han generado " +
-    //        Convert.ToString(ficheroPDFOrigenDividir.PageCount) + " ficheros PDF";
-    //    lInfoProgreso.Refresh();
-    //}
+            // Crear el documento PDF destino de la página extraida
+            PdfDocument ficheroPDFPaginaDestino = new PdfDocument();
+            /*
+             ficheroPDFPaginaDestino.Info.Title =
+                String.Format("Página {0} de {1}", paginaPDFActual + 1,
+                ficheroPDFOrigenDividir.PageCount);
+            */
+
+            // Añadir la página y guardar el fichero PDF creado
+            ficheroPDFPaginaDestino.AddPage(ficheroPDFOrigenDividir.Pages[paginaPDFActual]);
+            string nombreFicheroPDFDestino = Path.Combine(folder, "Pagina" + Convert.ToString(paginaPDFActual + 1)) + ".pdf";
+            ficheroPDFPaginaDestino.Save(nombreFicheroPDFDestino);
+        }
+    }
 }

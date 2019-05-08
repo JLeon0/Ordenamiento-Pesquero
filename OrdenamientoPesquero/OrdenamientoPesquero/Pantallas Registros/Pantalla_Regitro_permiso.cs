@@ -465,58 +465,56 @@ namespace OrdenamientoPesquero
         {
             if (dgvArchivos.CurrentCell.Selected != false)
             {
-                DialogResult result = MessageBox.Show("Desea escanear un nuevo documento?", "¿?", MessageBoxButtons.YesNoCancel);
+                //DialogResult result = MessageBox.Show("Desea escanear un nuevo documento?", "¿?", MessageBoxButtons.YesNoCancel);
+                //if (result == DialogResult.Yes)
+                //{
+                //    this.Cursor = Cursors.WaitCursor;
+                //    scan = new Scanner(true);
+                //    if (scan.oDevice != null)
+                //    {
+                //        openFileDialog1.FileName = scan.Scann(0);
+                //        Stream myStream = openFileDialog1.OpenFile();
+                //        MemoryStream pdf = new MemoryStream();
+                //        myStream.CopyTo(pdf);
+                //        exito = proc.InsertarPDFPermiso(nPer.Text, pdf.GetBuffer());
+                //        val.Exito(exito);
+                //        CargarExpediente();
+                //    }
+                //    this.Cursor = Cursors.Default;
+                //}
+                //else if (result == DialogResult.No)
+                //{
+                DialogResult result = MessageBox.Show("Desea subir un archivo desde su computadora?", "¿?", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     this.Cursor = Cursors.WaitCursor;
-                    scan = new Scanner(true);
-                    if (scan.oDevice != null)
+                    openFileDialog1.InitialDirectory = "C:\\";
+                    openFileDialog1.Filter = "Todos los archivos (*.*)|*.*";
+                    openFileDialog1.FilterIndex = 1;
+                    openFileDialog1.RestoreDirectory = true;
+
+                    if (openFileDialog1.ShowDialog() == DialogResult.OK)
                     {
-                        openFileDialog1.FileName = scan.Scann(0);
                         Stream myStream = openFileDialog1.OpenFile();
+
                         MemoryStream pdf = new MemoryStream();
+                        myStream.CopyTo(pdf);
+
+                        string n = openFileDialog1.FileName;
+                        string x = n[n.Length - 4].ToString() + n[n.Length - 3].ToString() + n[n.Length - 2].ToString() + n[n.Length - 1].ToString();
+                        scan = new Scanner(false);
+                        if (x != ".pdf")
+                        { openFileDialog1.FileName = scan.ConvertToPDF(pdf, n, false); }
+                        else
+                        { openFileDialog1.FileName = scan.ConvertToPDF(pdf, n, true); }
+                        myStream = openFileDialog1.OpenFile();
+                        pdf = new MemoryStream();
                         myStream.CopyTo(pdf);
                         exito = proc.InsertarPDFPermiso(nPer.Text, pdf.GetBuffer());
                         val.Exito(exito);
-                        CargarExpediente();
                     }
+                    CargarExpediente();
                     this.Cursor = Cursors.Default;
-                }
-                else if (result == DialogResult.No)
-                {
-                    result = MessageBox.Show("Desea subir un archivo desde su computadora?", "¿?", MessageBoxButtons.YesNo);
-                    if (result == DialogResult.Yes)
-                    {
-                        this.Cursor = Cursors.WaitCursor;
-                        openFileDialog1.InitialDirectory = "C:\\";
-                        openFileDialog1.Filter = "Todos los archivos (*.*)|*.*";
-                        openFileDialog1.FilterIndex = 1;
-                        openFileDialog1.RestoreDirectory = true;
-
-                        if (openFileDialog1.ShowDialog() == DialogResult.OK)
-                        {
-                            Stream myStream = openFileDialog1.OpenFile();
-
-                            MemoryStream pdf = new MemoryStream();
-                            myStream.CopyTo(pdf);
-
-                            string n = openFileDialog1.FileName;
-                            string x = n[n.Length - 4].ToString() + n[n.Length - 3].ToString() + n[n.Length - 2].ToString() + n[n.Length - 1].ToString();
-                            if (x != ".pdf")
-                            {
-                                scan = new Scanner(false);
-                                openFileDialog1.FileName = scan.ConvertToPDF(pdf);
-                                myStream = openFileDialog1.OpenFile();
-                                pdf = new MemoryStream();
-                                myStream.CopyTo(pdf);
-                            }
-
-                            exito = proc.InsertarPDFPermiso(nPer.Text, pdf.GetBuffer());
-                            val.Exito(exito);
-                        }
-                        CargarExpediente();
-                        this.Cursor = Cursors.Default;
-                    }
                 }
             }
             else { MessageBox.Show("Debe seleccionar la fila correspondiente al archivo que desea subir", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
