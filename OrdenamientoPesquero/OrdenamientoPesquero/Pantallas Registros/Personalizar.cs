@@ -695,8 +695,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     i++;
                 }
             }
-            ReportParameter[] para = new ReportParameter[18];
-            for (int c = 0; c < 18; c++)
+            ReportParameter[] para = new ReportParameter[24];
+            for (int c = 0; c < 24; c++)
             {
                 para[c] = new ReportParameter(dato[c], column[c].ToString());
             }

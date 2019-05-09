@@ -171,6 +171,8 @@
             this.Logo2 = new System.Windows.Forms.PictureBox();
             this.label35 = new System.Windows.Forms.Label();
             this.Bienvenido = new System.Windows.Forms.Label();
+            this.vencidos = new System.Windows.Forms.LinkLabel();
+            this.label36 = new System.Windows.Forms.Label();
             this.gbOrgPes.SuspendLayout();
             this.gbBotonesUE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
@@ -872,6 +874,8 @@
             // Resumen
             // 
             this.Resumen.BackColor = System.Drawing.Color.Transparent;
+            this.Resumen.Controls.Add(this.vencidos);
+            this.Resumen.Controls.Add(this.label36);
             this.Resumen.Controls.Add(this.linkLabel1);
             this.Resumen.Controls.Add(this.Titular);
             this.Resumen.Controls.Add(this.TotalPermisos);
@@ -938,7 +942,7 @@
             this.TotalPermisos.AutoSize = true;
             this.TotalPermisos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalPermisos.LinkColor = System.Drawing.Color.Black;
-            this.TotalPermisos.Location = new System.Drawing.Point(150, 217);
+            this.TotalPermisos.Location = new System.Drawing.Point(150, 237);
             this.TotalPermisos.Name = "TotalPermisos";
             this.TotalPermisos.Size = new System.Drawing.Size(13, 16);
             this.TotalPermisos.TabIndex = 16;
@@ -950,7 +954,7 @@
             // 
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.Location = new System.Drawing.Point(7, 217);
+            this.label59.Location = new System.Drawing.Point(7, 237);
             this.label59.Name = "label59";
             this.label59.Size = new System.Drawing.Size(67, 16);
             this.label59.TabIndex = 15;
@@ -961,7 +965,7 @@
             this.chipeados.AutoSize = true;
             this.chipeados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chipeados.LinkColor = System.Drawing.Color.Black;
-            this.chipeados.Location = new System.Drawing.Point(249, 255);
+            this.chipeados.Location = new System.Drawing.Point(249, 275);
             this.chipeados.Name = "chipeados";
             this.chipeados.Size = new System.Drawing.Size(13, 16);
             this.chipeados.TabIndex = 14;
@@ -973,7 +977,7 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(40, 256);
+            this.label31.Location = new System.Drawing.Point(40, 276);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(205, 16);
             this.label31.TabIndex = 13;
@@ -984,7 +988,7 @@
             this.TotalEsfuerzos.AutoSize = true;
             this.TotalEsfuerzos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalEsfuerzos.LinkColor = System.Drawing.Color.Black;
-            this.TotalEsfuerzos.Location = new System.Drawing.Point(150, 236);
+            this.TotalEsfuerzos.Location = new System.Drawing.Point(150, 256);
             this.TotalEsfuerzos.Name = "TotalEsfuerzos";
             this.TotalEsfuerzos.Size = new System.Drawing.Size(13, 16);
             this.TotalEsfuerzos.TabIndex = 12;
@@ -1141,7 +1145,7 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DataResumen.DefaultCellStyle = dataGridViewCellStyle5;
             this.DataResumen.GridColor = System.Drawing.Color.White;
-            this.DataResumen.Location = new System.Drawing.Point(0, 299);
+            this.DataResumen.Location = new System.Drawing.Point(0, 319);
             this.DataResumen.MinimumSize = new System.Drawing.Size(100, 50);
             this.DataResumen.Name = "DataResumen";
             this.DataResumen.ReadOnly = true;
@@ -1197,7 +1201,7 @@
             // 
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(7, 280);
+            this.label65.Location = new System.Drawing.Point(7, 300);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(77, 16);
             this.label65.TabIndex = 6;
@@ -1207,7 +1211,7 @@
             // 
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(7, 236);
+            this.label63.Location = new System.Drawing.Point(7, 256);
             this.label63.Name = "label63";
             this.label63.Size = new System.Drawing.Size(124, 16);
             this.label63.TabIndex = 4;
@@ -1352,7 +1356,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.caToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 75);
+            this.menuStrip1.Location = new System.Drawing.Point(148, 75);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1501, 24);
             this.menuStrip1.TabIndex = 115;
@@ -1851,6 +1855,29 @@
             this.Bienvenido.TabIndex = 191;
             this.Bienvenido.Text = "Bienvenido ";
             // 
+            // vencidos
+            // 
+            this.vencidos.AutoSize = true;
+            this.vencidos.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vencidos.LinkColor = System.Drawing.Color.Black;
+            this.vencidos.Location = new System.Drawing.Point(162, 217);
+            this.vencidos.Name = "vencidos";
+            this.vencidos.Size = new System.Drawing.Size(11, 14);
+            this.vencidos.TabIndex = 20;
+            this.vencidos.TabStop = true;
+            this.vencidos.Text = "*";
+            this.vencidos.VisitedLinkColor = System.Drawing.Color.Black;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label36.Location = new System.Drawing.Point(35, 217);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(54, 13);
+            this.label36.TabIndex = 19;
+            this.label36.Text = "Vencidos:";
+            // 
             // Pantalla_Registro_UnidadEconomica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -2057,5 +2084,7 @@
         private System.Windows.Forms.Label Bienvenido;
         private System.Windows.Forms.GroupBox gbBotonesUE;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.LinkLabel vencidos;
+        private System.Windows.Forms.Label label36;
     }
 }
