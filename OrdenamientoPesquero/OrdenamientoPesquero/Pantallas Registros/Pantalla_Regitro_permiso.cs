@@ -495,6 +495,7 @@ namespace OrdenamientoPesquero
 
                     if (openFileDialog1.ShowDialog() == DialogResult.OK)
                     {
+                        this.Cursor = Cursors.WaitCursor;
                         Stream myStream = openFileDialog1.OpenFile();
 
                         MemoryStream pdf = new MemoryStream();
@@ -512,6 +513,7 @@ namespace OrdenamientoPesquero
                         myStream.CopyTo(pdf);
                         exito = proc.InsertarPDFPermiso(nPer.Text, pdf.GetBuffer());
                         val.Exito(exito);
+                        this.Cursor = Cursors.Default;
                     }
                     CargarExpediente();
                     this.Cursor = Cursors.Default;

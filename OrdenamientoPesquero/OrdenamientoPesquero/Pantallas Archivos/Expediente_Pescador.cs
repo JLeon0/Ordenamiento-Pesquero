@@ -66,6 +66,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
 
                     if (openFileDialog1.ShowDialog() == DialogResult.OK)
                     {
+                        this.Cursor = Cursors.WaitCursor;
                         Stream myStream = openFileDialog1.OpenFile();
 
                         MemoryStream pdf = new MemoryStream();
@@ -84,6 +85,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                         myStream.CopyTo(pdf);
 
                         GuardarEnBD(pdf);
+                        this.Cursor = Cursors.Default;
                     }
                     CargarExpediente();
                     this.Cursor = Cursors.Default;
