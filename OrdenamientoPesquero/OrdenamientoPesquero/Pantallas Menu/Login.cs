@@ -31,7 +31,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 
         void ChecarProceso()
         {
-            string myServiceName = "MSSQL$SQLEXPRESS"; //service name of SQL Server Express
+            string myServiceName = "MSSQLSERVER"; //service name of SQL Server Express
             //display service status: For example, Running, Stopped, or Paused
             ServiceController mySC = new ServiceController(myServiceName);
 
@@ -50,9 +50,9 @@ namespace OrdenamientoPesquero.Pantallas_Menu
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ms)
             {
-                myServiceName = "MSSQLSERVER";
+                myServiceName = "MSSQL$SQLEXPRESS";
                 mySC = new ServiceController(myServiceName);
                 if (mySC.Status.Equals(ServiceControllerStatus.Stopped) | mySC.Status.Equals(ServiceControllerStatus.StopPending))
                 {
@@ -135,7 +135,9 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             Microsoft.Win32.RegistryKey key = baseKey.OpenSubKey(@"SOFTWARE\Microsoft\Microsoft SQL Server\Instance Names\SQL");
             foreach (string s in key.GetValueNames())
             {
-                c = new Conexion("OrdPesquero", @".\" + s);
+                if (s == "MSSQLSERVER")
+                { c = new Conexion("OrdPesquero", @".\"); }
+                else { c = new Conexion("OrdPesquero", @".\" + s); }
             }
             setString(c.CONEXIONPERRONA);
         }
