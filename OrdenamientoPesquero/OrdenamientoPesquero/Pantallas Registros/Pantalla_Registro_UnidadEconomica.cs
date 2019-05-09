@@ -493,7 +493,9 @@ namespace OrdenamientoPesquero
                     linkLabel1.Visible = false;
                     TotalSocios.Text=dt.Rows[0]["SOCIOS"].ToString();
                 }
-                TotalPermisos.Text = dt.Rows[0]["PERMISOS"].ToString();
+              
+                TotalPermisos.Text = TotalDePermisos(RNPA);
+                //TotalPermisos.Text = dt.Rows[0]["PERMISOS"].ToString();
                 TotalEsfuerzos.Text = dt.Rows[0]["ESFUERZOS PESQUEROS"].ToString();
                 chipeados.Text = dt.Rows[0]["ESFUERZOS CHIPEADOS"].ToString();
                 dt = proc.ResumenPesqueria(cbRNPA.Text);
@@ -533,6 +535,37 @@ namespace OrdenamientoPesquero
                 TotalSocios.Text = "0";
                 TotalEsfuerzos.Text = "0";
             }
+        }
+        string TotalDePermisos(string RNPA)
+        {
+            DataTable expediente = proc.ObtenerNoPermisos(RNPA);
+            List<List<string>> folios = new List<List<string>>();
+            foreach (DataRow fila in expediente.Rows)
+            {
+                bool contains = false;
+                foreach (var item in folios)
+                {
+                    if (item.Contains(fila["FOLIO"].ToString()))
+                    { contains = true; break; }
+                }
+                if (!contains)
+                {
+                    List<string> add = new List<string>();
+                    add.Add(fila["FOLIO"].ToString());
+                    if (fila["APERMISO"].ToString() != "")
+                    { add.Add("Y"); }
+                    folios.Add(add);
+                }
+                else
+                {
+                    foreach (var item in folios)
+                    {
+                        if (item.Contains(fila["FOLIO"].ToString()) && item.Contains("Y")) { break; }
+                        else if (item.Contains(fila["FOLIO"].ToString()) && fila["APERMISO"].ToString() != "") { item.Add("Y"); }
+                    }
+                }
+            }
+            return folios.Count.ToString();
         }
         public void ResumenSocios(string RNPA)
         {
