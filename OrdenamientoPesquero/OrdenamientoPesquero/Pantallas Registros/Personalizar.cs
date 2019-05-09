@@ -685,7 +685,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             bool[] column = new bool[18];
             string[] dato = new string[18];
             int i = 0;
-            foreach (CheckBox a in ColumasPescador.Controls)
+            foreach (CheckBox a in ColumnasOccisos.Controls)
             {
                 if (a.Text != "TODOS")
                 {
@@ -703,7 +703,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             reportViewer1.LocalReport.SetParameters(para);
             string consulta = "Select FOLIO, OCCISOS.NOMBRE + ' '+OCCISOS.AP_PAT +' '+ OCCISOS.AP_MAT AS 'NOMBRE',OCCISOS.FECHA_NACIMIENTO,SEGURO, CURP, OCCISOS.MUNICIPIO, OCCISOS.LOCALIDAD, TIPO_OCCISOS, OCUPACION_LABORAL, TELEFONO, CORREO, CALLENUM+', Col. '+COLONIA AS 'DIRECCION', ESCOLARIDAD,RFC, ORDENAMIENTO, OCCISOS.MATRICULA, NOMBREEMBARCACION AS EMBARCACION, (SELECT NOMBRE FROM UNIDAD_ECONOMICA WHERE RNPTITULAR=RNPA) As Unidad from OCCISOS, EMBARCACIONES WHERE OCCISOS.MATRICULA = EMBARCACIONES.MATRICULA";
             int r = 0;
-            foreach (CheckBox a in FiltrosPescador.Controls.OfType<CheckBox>())
+            foreach (CheckBox a in FiltrosOccisos.Controls.OfType<CheckBox>())
             {
                 if (a.Checked)
                 {
