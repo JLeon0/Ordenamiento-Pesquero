@@ -92,9 +92,8 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 if (result == DialogResult.Yes)
                 {
                     openFileDialog1.InitialDirectory = "C:\\";
-                    openFileDialog1.Filter = "Todos los archivos (*.*)|*.*";
+                    openFileDialog1.Filter = "Todos los archivos (*.png, pdf, jpg, jpeg)| *.pdf; *.png; *.jpg; *.jpeg|PDF|*.pdf|Imagenes|*.png; *.jpg; *.jpeg;";
                     openFileDialog1.FilterIndex = 1;
-                    openFileDialog1.RestoreDirectory = true;
 
                     if (openFileDialog1.ShowDialog() == DialogResult.OK)
                     {
