@@ -1105,6 +1105,7 @@ namespace OrdenamientoPesquero
 
                     for (int i = 0; i < pescadores.Rows.Count; i++)
                     {
+                        
                         nom = proc.Obtener_Pescador(pescadores.Rows[i]["CURP"].ToString());
                         nombre = nom.Rows[0]["NOMBRE"].ToString() + " " + nom.Rows[0]["AP_PAT"].ToString() + " " + nom.Rows[0]["AP_MAT"].ToString();
                         if (!Directory.Exists(path+ @"\PESCADORES\" + nombre + @"\"))
@@ -1127,7 +1128,7 @@ namespace OrdenamientoPesquero
                         permisos = proc.PermisosxEmbarca(embarcaciones.Rows[i]["MATRICULA"].ToString());
                         for (int C = 0; C < permisos.Rows.Count; C++)
                         {
-                                CrearArchivo(path + @"PERMISOS\"+ permisos.Rows[C]["PESQUERIA"].ToString()+".pdf", permisos.Rows[i]["APERMISO"]);
+                                CrearArchivo(path + @"PERMISOS\"+ permisos.Rows[C]["PESQUERIA"].ToString()+".pdf", permisos.Rows[C]["APERMISO"]);
                         }
                             CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\CERTIFICADO DE MATRICULA.PDF", embarcaciones.Rows[i]["CERTMATRICULA"]);
                             CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\CERTIFICADO DE SEGURIDAD.PDF", embarcaciones.Rows[i]["CERTSEGURIDAD"]);
