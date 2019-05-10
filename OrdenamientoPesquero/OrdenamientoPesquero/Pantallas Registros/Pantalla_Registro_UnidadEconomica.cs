@@ -1161,7 +1161,7 @@ namespace OrdenamientoPesquero
                 try
                 {
                     foreach (string fichero in Directory.GetFiles(folder)){
-                        File.Delete(fichero);
+                        try { File.Delete(fichero); } catch (Exception) { }
                     }
                 }
                 catch (Exception ms) { }

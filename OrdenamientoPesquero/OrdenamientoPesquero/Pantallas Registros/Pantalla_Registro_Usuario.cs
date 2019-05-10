@@ -187,6 +187,7 @@ namespace OrdenamientoPesquero
             if (RNPA != "")
             {
                 DataRowView row = (DataRowView)MatriculaPesc.SelectedItem;
+                if (MatriculaPesc.Text == "NO APLICA") { ocupacion = "Sin Actividad"; }
                 pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, row[0].ToString().Replace(" ", ""), CorreoPesc.Text, LocalidadPesc.Text, o, RNPA.Replace(" ", ""), Seguro.Text, fechaVenF, fechaExpF);
                 int ret=0;
                 if (ChecarBuzosXEquipoBuceo(ocupacion,row,ref ret))
@@ -346,8 +347,8 @@ namespace OrdenamientoPesquero
             {
                 dt = proc.BuscarNombre("", "");
                 NoOrdenados = proc.BuscarNombre("", "NO APLICA");
-                lblP.Text = "PESCADORES  " + dt.Rows.Count;
-                lblNo.Text = "NO PESCADORES  " + NoOrdenados.Rows.Count;
+                lblP.Text = "TOTAL PESCADORES  " + dt.Rows.Count;
+                lblNo.Text = "POR ASIGNAR A UNA U.E. " + NoOrdenados.Rows.Count;
                 dt.Merge(NoOrdenados);
                 NoOrdenados = dt;
                 DataView view = new DataView(dt)
@@ -380,7 +381,7 @@ namespace OrdenamientoPesquero
                 ListaNombres2.DataSource = NoOrdenados;
                 ListaNombres2.ValueMember = "CURP";
                 ListaNombres2.DisplayMember = "NOMBRE";
-                lblNo.Text = "NO ORDENADOS  " + ListaNombres2.Items.Count;
+                lblNo.Text = "POR ASIGNAR A UNA U.E. " + ListaNombres2.Items.Count;
                 ListaNombres2.ClearSelected();
             }
         }
@@ -1279,6 +1280,20 @@ namespace OrdenamientoPesquero
             threadHandle.Start();
         }
 
+        private void NombrePesc_Leave(object sender, EventArgs e)
+        {
+            NombrePesc.Text = NombrePesc.Text.Trim();
+        }
+
+        private void ApePatPescador_Leave(object sender, EventArgs e)
+        {
+            ApePatPescador.Text = ApePatPescador.Text.Trim();
+        }
+
+        private void ApeMatPescador_Leave(object sender, EventArgs e)
+        {
+            ApeMatPescador.Text = ApeMatPescador.Text.Trim();
+        }
 
         private void BuscarNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
