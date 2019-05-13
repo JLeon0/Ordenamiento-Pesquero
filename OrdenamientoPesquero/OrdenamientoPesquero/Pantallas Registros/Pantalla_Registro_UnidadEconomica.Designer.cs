@@ -229,7 +229,7 @@
             this.mtbCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtbCP.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbCP.Location = new System.Drawing.Point(563, 170);
-            this.mtbCP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtbCP.Margin = new System.Windows.Forms.Padding(4);
             this.mtbCP.Mask = "99999";
             this.mtbCP.Name = "mtbCP";
             this.mtbCP.Size = new System.Drawing.Size(75, 26);
@@ -267,7 +267,7 @@
             this.txtColonia.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtColonia.ForeColor = System.Drawing.Color.Black;
             this.txtColonia.Location = new System.Drawing.Point(512, 111);
-            this.txtColonia.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtColonia.Margin = new System.Windows.Forms.Padding(4);
             this.txtColonia.MaxLength = 50;
             this.txtColonia.Name = "txtColonia";
             this.txtColonia.Size = new System.Drawing.Size(349, 26);
@@ -295,7 +295,7 @@
             this.txtCalleNum.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCalleNum.ForeColor = System.Drawing.Color.Black;
             this.txtCalleNum.Location = new System.Drawing.Point(21, 111);
-            this.txtCalleNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCalleNum.Margin = new System.Windows.Forms.Padding(4);
             this.txtCalleNum.MaxLength = 50;
             this.txtCalleNum.Name = "txtCalleNum";
             this.txtCalleNum.Size = new System.Drawing.Size(482, 26);
@@ -310,7 +310,7 @@
             this.txtRFC.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRFC.ForeColor = System.Drawing.Color.Black;
             this.txtRFC.Location = new System.Drawing.Point(877, 53);
-            this.txtRFC.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtRFC.Margin = new System.Windows.Forms.Padding(4);
             this.txtRFC.MaxLength = 13;
             this.txtRFC.Name = "txtRFC";
             this.txtRFC.Size = new System.Drawing.Size(195, 26);
@@ -427,9 +427,9 @@
             this.gbOrgPes.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbOrgPes.ForeColor = System.Drawing.Color.Black;
             this.gbOrgPes.Location = new System.Drawing.Point(277, 117);
-            this.gbOrgPes.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbOrgPes.Margin = new System.Windows.Forms.Padding(4);
             this.gbOrgPes.Name = "gbOrgPes";
-            this.gbOrgPes.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbOrgPes.Padding = new System.Windows.Forms.Padding(4);
             this.gbOrgPes.Size = new System.Drawing.Size(1191, 423);
             this.gbOrgPes.TabIndex = 54;
             this.gbOrgPes.TabStop = false;
@@ -444,9 +444,9 @@
             this.gbBotonesUE.Controls.Add(this.label2);
             this.gbBotonesUE.Controls.Add(this.label1);
             this.gbBotonesUE.Location = new System.Drawing.Point(901, 300);
-            this.gbBotonesUE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbBotonesUE.Margin = new System.Windows.Forms.Padding(4);
             this.gbBotonesUE.Name = "gbBotonesUE";
-            this.gbBotonesUE.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbBotonesUE.Padding = new System.Windows.Forms.Padding(4);
             this.gbBotonesUE.Size = new System.Drawing.Size(289, 123);
             this.gbBotonesUE.TabIndex = 132;
             this.gbBotonesUE.TabStop = false;
@@ -459,7 +459,7 @@
             this.EliminarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EliminarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.EliminarUnidad.Location = new System.Drawing.Point(213, 31);
-            this.EliminarUnidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.EliminarUnidad.Margin = new System.Windows.Forms.Padding(4);
             this.EliminarUnidad.Name = "EliminarUnidad";
             this.EliminarUnidad.Size = new System.Drawing.Size(67, 62);
             this.EliminarUnidad.TabIndex = 107;
@@ -475,7 +475,7 @@
             this.RegistrarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RegistrarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RegistrarUnidad.Location = new System.Drawing.Point(24, 31);
-            this.RegistrarUnidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RegistrarUnidad.Margin = new System.Windows.Forms.Padding(4);
             this.RegistrarUnidad.Name = "RegistrarUnidad";
             this.RegistrarUnidad.Size = new System.Drawing.Size(67, 62);
             this.RegistrarUnidad.TabIndex = 105;
@@ -490,7 +490,7 @@
             this.ActualizarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ActualizarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ActualizarUnidad.Location = new System.Drawing.Point(117, 31);
-            this.ActualizarUnidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ActualizarUnidad.Margin = new System.Windows.Forms.Padding(4);
             this.ActualizarUnidad.Name = "ActualizarUnidad";
             this.ActualizarUnidad.Size = new System.Drawing.Size(67, 62);
             this.ActualizarUnidad.TabIndex = 106;
@@ -542,7 +542,7 @@
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
             this.pictureBox6.Location = new System.Drawing.Point(713, 297);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(28, 26);
             this.pictureBox6.TabIndex = 131;
@@ -552,7 +552,7 @@
             // 
             this.mtbTelefonoPresidente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbTelefonoPresidente.Location = new System.Drawing.Point(576, 297);
-            this.mtbTelefonoPresidente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtbTelefonoPresidente.Margin = new System.Windows.Forms.Padding(4);
             this.mtbTelefonoPresidente.Mask = "000-000-0000";
             this.mtbTelefonoPresidente.Name = "mtbTelefonoPresidente";
             this.mtbTelefonoPresidente.Size = new System.Drawing.Size(128, 26);
@@ -591,7 +591,7 @@
             this.NombrePresidenteUE.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombrePresidenteUE.ForeColor = System.Drawing.Color.Black;
             this.NombrePresidenteUE.Location = new System.Drawing.Point(576, 234);
-            this.NombrePresidenteUE.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NombrePresidenteUE.Margin = new System.Windows.Forms.Padding(4);
             this.NombrePresidenteUE.MaxLength = 50;
             this.NombrePresidenteUE.Name = "NombrePresidenteUE";
             this.NombrePresidenteUE.Size = new System.Drawing.Size(497, 26);
@@ -604,7 +604,7 @@
             this.ActivarPanelRNPA.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.actualizar;
             this.ActivarPanelRNPA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ActivarPanelRNPA.Location = new System.Drawing.Point(268, 52);
-            this.ActivarPanelRNPA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ActivarPanelRNPA.Margin = new System.Windows.Forms.Padding(4);
             this.ActivarPanelRNPA.Name = "ActivarPanelRNPA";
             this.ActivarPanelRNPA.Size = new System.Drawing.Size(27, 25);
             this.ActivarPanelRNPA.TabIndex = 126;
@@ -616,7 +616,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(316, 52);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.MaxLength = 100;
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(544, 26);
@@ -625,7 +625,7 @@
             // cbRNPA
             // 
             this.cbRNPA.Location = new System.Drawing.Point(20, 52);
-            this.cbRNPA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.cbRNPA.Margin = new System.Windows.Forms.Padding(4);
             this.cbRNPA.MaxLength = 10;
             this.cbRNPA.Name = "cbRNPA";
             this.cbRNPA.Size = new System.Drawing.Size(237, 26);
@@ -637,7 +637,7 @@
             // 
             this.ModFed.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ModFed.Location = new System.Drawing.Point(144, 334);
-            this.ModFed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ModFed.Margin = new System.Windows.Forms.Padding(4);
             this.ModFed.Name = "ModFed";
             this.ModFed.Size = new System.Drawing.Size(115, 27);
             this.ModFed.TabIndex = 122;
@@ -649,7 +649,7 @@
             // 
             this.RegFed.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegFed.Location = new System.Drawing.Point(21, 335);
-            this.RegFed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RegFed.Margin = new System.Windows.Forms.Padding(4);
             this.RegFed.Name = "RegFed";
             this.RegFed.Size = new System.Drawing.Size(115, 27);
             this.RegFed.TabIndex = 121;
@@ -664,7 +664,7 @@
             this.limpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.limpiar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.limpiar.Location = new System.Drawing.Point(1144, 14);
-            this.limpiar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.limpiar.Margin = new System.Windows.Forms.Padding(4);
             this.limpiar.Name = "limpiar";
             this.limpiar.Size = new System.Drawing.Size(37, 34);
             this.limpiar.TabIndex = 120;
@@ -677,7 +677,7 @@
             this.txtLocalidad.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLocalidad.FormattingEnabled = true;
             this.txtLocalidad.Location = new System.Drawing.Point(205, 170);
-            this.txtLocalidad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtLocalidad.Margin = new System.Windows.Forms.Padding(4);
             this.txtLocalidad.Name = "txtLocalidad";
             this.txtLocalidad.Size = new System.Drawing.Size(348, 26);
             this.txtLocalidad.TabIndex = 8;
@@ -687,7 +687,7 @@
             this.txtMunicipio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMunicipio.FormattingEnabled = true;
             this.txtMunicipio.Location = new System.Drawing.Point(21, 170);
-            this.txtMunicipio.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtMunicipio.Margin = new System.Windows.Forms.Padding(4);
             this.txtMunicipio.Name = "txtMunicipio";
             this.txtMunicipio.Size = new System.Drawing.Size(157, 26);
             this.txtMunicipio.TabIndex = 7;
@@ -699,7 +699,7 @@
             this.NomFed.FormattingEnabled = true;
             this.NomFed.ItemHeight = 18;
             this.NomFed.Location = new System.Drawing.Point(21, 297);
-            this.NomFed.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.NomFed.Margin = new System.Windows.Forms.Padding(4);
             this.NomFed.Name = "NomFed";
             this.NomFed.Size = new System.Drawing.Size(481, 26);
             this.NomFed.TabIndex = 12;
@@ -724,7 +724,7 @@
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox10.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
             this.pictureBox10.Location = new System.Drawing.Point(843, 172);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox10.Name = "pictureBox10";
             this.pictureBox10.Size = new System.Drawing.Size(28, 26);
             this.pictureBox10.TabIndex = 104;
@@ -737,7 +737,7 @@
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
             this.pictureBox4.Location = new System.Drawing.Point(524, 234);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(28, 26);
             this.pictureBox4.TabIndex = 104;
@@ -750,7 +750,7 @@
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
             this.pictureBox3.Location = new System.Drawing.Point(1081, 52);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(28, 26);
             this.pictureBox3.TabIndex = 103;
@@ -763,7 +763,7 @@
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
             this.pictureBox2.Location = new System.Drawing.Point(647, 170);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(28, 26);
             this.pictureBox2.TabIndex = 102;
@@ -773,7 +773,7 @@
             // 
             this.mtbTelefono.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mtbTelefono.Location = new System.Drawing.Point(705, 172);
-            this.mtbTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.mtbTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.mtbTelefono.Mask = "000-000-0000";
             this.mtbTelefono.Name = "mtbTelefono";
             this.mtbTelefono.Size = new System.Drawing.Size(128, 26);
@@ -801,7 +801,7 @@
             this.txtCorreo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.Black;
             this.txtCorreo.Location = new System.Drawing.Point(21, 234);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
             this.txtCorreo.MaxLength = 30;
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(482, 26);
@@ -829,7 +829,7 @@
             this.txtFecha.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFecha.ForeColor = System.Drawing.Color.Black;
             this.txtFecha.Location = new System.Drawing.Point(913, 111);
-            this.txtFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(4);
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Size = new System.Drawing.Size(159, 26);
             this.txtFecha.TabIndex = 6;
@@ -839,7 +839,7 @@
             this.Privado.AutoSize = true;
             this.Privado.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Privado.Location = new System.Drawing.Point(1001, 172);
-            this.Privado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Privado.Margin = new System.Windows.Forms.Padding(4);
             this.Privado.Name = "Privado";
             this.Privado.Size = new System.Drawing.Size(85, 23);
             this.Privado.TabIndex = 3;
@@ -853,7 +853,7 @@
             this.Social.Checked = true;
             this.Social.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Social.Location = new System.Drawing.Point(911, 172);
-            this.Social.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Social.Margin = new System.Windows.Forms.Padding(4);
             this.Social.Name = "Social";
             this.Social.Size = new System.Drawing.Size(75, 23);
             this.Social.TabIndex = 2;
@@ -869,7 +869,7 @@
             this.ActualizarRNPA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ActualizarRNPA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.ActualizarRNPA.Location = new System.Drawing.Point(545, 174);
-            this.ActualizarRNPA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ActualizarRNPA.Margin = new System.Windows.Forms.Padding(4);
             this.ActualizarRNPA.Name = "ActualizarRNPA";
             this.ActualizarRNPA.Size = new System.Drawing.Size(67, 62);
             this.ActualizarRNPA.TabIndex = 133;
@@ -884,7 +884,7 @@
             this.CerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CerrarPanel.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
             this.CerrarPanel.Location = new System.Drawing.Point(601, 1);
-            this.CerrarPanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.CerrarPanel.Margin = new System.Windows.Forms.Padding(4);
             this.CerrarPanel.Name = "CerrarPanel";
             this.CerrarPanel.Size = new System.Drawing.Size(28, 26);
             this.CerrarPanel.TabIndex = 135;
@@ -900,7 +900,7 @@
             this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox12.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
             this.pictureBox12.Location = new System.Drawing.Point(483, 4);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox12.Name = "pictureBox12";
             this.pictureBox12.Size = new System.Drawing.Size(28, 26);
             this.pictureBox12.TabIndex = 135;
@@ -915,7 +915,7 @@
             this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox13.Location = new System.Drawing.Point(220, 214);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox13.Name = "pictureBox13";
             this.pictureBox13.Size = new System.Drawing.Size(67, 62);
             this.pictureBox13.TabIndex = 187;
@@ -957,9 +957,9 @@
             this.Resumen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Resumen.ForeColor = System.Drawing.Color.Black;
             this.Resumen.Location = new System.Drawing.Point(1493, 117);
-            this.Resumen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Resumen.Margin = new System.Windows.Forms.Padding(4);
             this.Resumen.Name = "Resumen";
-            this.Resumen.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Resumen.Padding = new System.Windows.Forms.Padding(4);
             this.Resumen.Size = new System.Drawing.Size(508, 741);
             this.Resumen.TabIndex = 101;
             this.Resumen.TabStop = false;
@@ -1214,7 +1214,7 @@
             this.DataResumen.DefaultCellStyle = dataGridViewCellStyle5;
             this.DataResumen.GridColor = System.Drawing.Color.White;
             this.DataResumen.Location = new System.Drawing.Point(0, 368);
-            this.DataResumen.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.DataResumen.Margin = new System.Windows.Forms.Padding(4);
             this.DataResumen.MinimumSize = new System.Drawing.Size(133, 62);
             this.DataResumen.Name = "DataResumen";
             this.DataResumen.ReadOnly = true;
@@ -1396,7 +1396,7 @@
             this.button1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
             this.button1.Location = new System.Drawing.Point(220, 23);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(183, 55);
             this.button1.TabIndex = 108;
@@ -1411,7 +1411,7 @@
             this.button2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
             this.button2.Location = new System.Drawing.Point(423, 23);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(183, 55);
             this.button2.TabIndex = 108;
@@ -1426,7 +1426,7 @@
             this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
             this.button3.Location = new System.Drawing.Point(21, 23);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(183, 55);
             this.button3.TabIndex = 108;
@@ -1509,7 +1509,7 @@
             this.button4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
             this.button4.Location = new System.Drawing.Point(220, 101);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button4.Margin = new System.Windows.Forms.Padding(4);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(183, 55);
             this.button4.TabIndex = 155;
@@ -1524,7 +1524,7 @@
             this.button5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Black;
             this.button5.Location = new System.Drawing.Point(423, 101);
-            this.button5.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button5.Margin = new System.Windows.Forms.Padding(4);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(183, 55);
             this.button5.TabIndex = 156;
@@ -1603,7 +1603,7 @@
             this.ListaRNPA.FormattingEnabled = true;
             this.ListaRNPA.ItemHeight = 17;
             this.ListaRNPA.Location = new System.Drawing.Point(5, 84);
-            this.ListaRNPA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ListaRNPA.Margin = new System.Windows.Forms.Padding(4);
             this.ListaRNPA.Name = "ListaRNPA";
             this.ListaRNPA.Size = new System.Drawing.Size(219, 225);
             this.ListaRNPA.TabIndex = 182;
@@ -1614,7 +1614,7 @@
             this.BuscarR.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BuscarR.ForeColor = System.Drawing.Color.Black;
             this.BuscarR.Location = new System.Drawing.Point(5, 52);
-            this.BuscarR.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.BuscarR.Margin = new System.Windows.Forms.Padding(4);
             this.BuscarR.MaxLength = 10;
             this.BuscarR.Name = "BuscarR";
             this.BuscarR.Size = new System.Drawing.Size(219, 23);
@@ -1649,7 +1649,7 @@
             this.PanelRNPA.Controls.Add(this.label27);
             this.PanelRNPA.ForeColor = System.Drawing.Color.Black;
             this.PanelRNPA.Location = new System.Drawing.Point(505, 224);
-            this.PanelRNPA.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.PanelRNPA.Margin = new System.Windows.Forms.Padding(4);
             this.PanelRNPA.Name = "PanelRNPA";
             this.PanelRNPA.Size = new System.Drawing.Size(635, 260);
             this.PanelRNPA.TabIndex = 127;
@@ -1676,7 +1676,7 @@
             this.pictureBox8.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox8.Location = new System.Drawing.Point(57, 4);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(53, 49);
             this.pictureBox8.TabIndex = 137;
@@ -1688,7 +1688,7 @@
             this.Logo1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.Logo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Logo1.Location = new System.Drawing.Point(433, 1);
-            this.Logo1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Logo1.Margin = new System.Windows.Forms.Padding(4);
             this.Logo1.Name = "Logo1";
             this.Logo1.Size = new System.Drawing.Size(160, 49);
             this.Logo1.TabIndex = 136;
@@ -1721,7 +1721,7 @@
             // 
             this.RnpaNuevo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RnpaNuevo.Location = new System.Drawing.Point(57, 165);
-            this.RnpaNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.RnpaNuevo.Margin = new System.Windows.Forms.Padding(4);
             this.RnpaNuevo.MaxLength = 10;
             this.RnpaNuevo.Name = "RnpaNuevo";
             this.RnpaNuevo.Size = new System.Drawing.Size(155, 29);
@@ -1765,9 +1765,9 @@
             this.gbBotones.Controls.Add(this.button5);
             this.gbBotones.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbBotones.Location = new System.Drawing.Point(277, 553);
-            this.gbBotones.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbBotones.Margin = new System.Windows.Forms.Padding(4);
             this.gbBotones.Name = "gbBotones";
-            this.gbBotones.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbBotones.Padding = new System.Windows.Forms.Padding(4);
             this.gbBotones.Size = new System.Drawing.Size(1191, 185);
             this.gbBotones.TabIndex = 186;
             this.gbBotones.TabStop = false;
@@ -1780,7 +1780,7 @@
             this.button7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.Black;
             this.button7.Location = new System.Drawing.Point(620, 101);
-            this.button7.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button7.Margin = new System.Windows.Forms.Padding(4);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(183, 55);
             this.button7.TabIndex = 159;
@@ -1795,7 +1795,7 @@
             this.button6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Black;
             this.button6.Location = new System.Drawing.Point(620, 23);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button6.Margin = new System.Windows.Forms.Padding(4);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(183, 55);
             this.button6.TabIndex = 158;
@@ -1810,7 +1810,7 @@
             this.Expediente.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Expediente.ForeColor = System.Drawing.Color.Black;
             this.Expediente.Location = new System.Drawing.Point(21, 101);
-            this.Expediente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Expediente.Margin = new System.Windows.Forms.Padding(4);
             this.Expediente.Name = "Expediente";
             this.Expediente.Size = new System.Drawing.Size(183, 55);
             this.Expediente.TabIndex = 157;
@@ -1827,9 +1827,9 @@
             this.gbBusqueda.Controls.Add(this.ListaNombres);
             this.gbBusqueda.Controls.Add(this.BuscarR);
             this.gbBusqueda.Location = new System.Drawing.Point(16, 143);
-            this.gbBusqueda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbBusqueda.Margin = new System.Windows.Forms.Padding(4);
             this.gbBusqueda.Name = "gbBusqueda";
-            this.gbBusqueda.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.gbBusqueda.Padding = new System.Windows.Forms.Padding(4);
             this.gbBusqueda.Size = new System.Drawing.Size(229, 644);
             this.gbBusqueda.TabIndex = 187;
             this.gbBusqueda.TabStop = false;
@@ -1851,7 +1851,7 @@
             this.panel1.Controls.Add(this.label35);
             this.panel1.ForeColor = System.Drawing.Color.Black;
             this.panel1.Location = new System.Drawing.Point(564, 214);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(517, 285);
             this.panel1.TabIndex = 187;
@@ -1867,7 +1867,7 @@
             "LOS CABOS",
             "LORETO"});
             this.comboBox1.Location = new System.Drawing.Point(241, 78);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(160, 24);
             this.comboBox1.TabIndex = 191;
@@ -1877,7 +1877,7 @@
             // 
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(51, 178);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton3.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(75, 21);
             this.radioButton3.TabIndex = 190;
@@ -1888,7 +1888,7 @@
             // 
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(51, 124);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(167, 21);
             this.radioButton2.TabIndex = 189;
@@ -1900,7 +1900,7 @@
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
             this.radioButton1.Location = new System.Drawing.Point(51, 78);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
             this.radioButton1.Name = "radioButton1";
             this.radioButton1.Size = new System.Drawing.Size(98, 21);
             this.radioButton1.TabIndex = 188;
@@ -1930,7 +1930,7 @@
             this.pictureBox9.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox9.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(53, 49);
             this.pictureBox9.TabIndex = 137;
@@ -1942,7 +1942,7 @@
             this.Logo2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.Logo2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Logo2.Location = new System.Drawing.Point(308, 4);
-            this.Logo2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Logo2.Margin = new System.Windows.Forms.Padding(4);
             this.Logo2.Name = "Logo2";
             this.Logo2.Size = new System.Drawing.Size(160, 49);
             this.Logo2.TabIndex = 136;
@@ -1995,7 +1995,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Pantalla_Registro_UnidadEconomica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ordenamiento Pesquero";
