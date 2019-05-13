@@ -33,6 +33,11 @@ namespace Logica
             //c.con.Close();
             c.Generer_respaldo(dir, rnpa);
         }
+        public void Generar2(string dir)
+        {
+            //c.con.Close();
+            c.Generer_respaldo2(dir);
+        }
 
         #region UnidadEconomica
         public int Registrar_Unidad(Unidad_Economica UE)

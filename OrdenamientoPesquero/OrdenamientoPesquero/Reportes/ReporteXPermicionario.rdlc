@@ -2615,6 +2615,11 @@
             </TablixRowHierarchy>
             <FixedColumnHeaders>true</FixedColumnHeaders>
             <DataSetName>DataSet3</DataSetName>
+            <SortExpressions>
+              <SortExpression>
+                <Value>=Fields!NOMBREEMBARCACION.Value</Value>
+              </SortExpression>
+            </SortExpressions>
             <Top>0.9747cm</Top>
             <Left>0.01137cm</Left>
             <Height>0.96129cm</Height>
@@ -5199,7 +5204,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                     <TablixCell>

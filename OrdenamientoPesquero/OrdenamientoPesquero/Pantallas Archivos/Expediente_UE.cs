@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
-
+using WIA;
 namespace OrdenamientoPesquero.Pantallas_Archivos
 {
     public partial class Expediente_UE : Form
@@ -309,10 +309,9 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
 
                     if (File.Exists(fullFilePath)) { try { Directory.Delete(fullFilePath); } catch (Exception ms) { } }
 
-
-                 
                     if (archivo != "")
                     {
+                        //Stream resFilestream=; //' this will be the source of file to writ
                         byte[] file = (byte[])oDocument.Rows[0][archivo];
                         File.WriteAllBytes(fullFilePath, file);
                         Process.Start(fullFilePath);

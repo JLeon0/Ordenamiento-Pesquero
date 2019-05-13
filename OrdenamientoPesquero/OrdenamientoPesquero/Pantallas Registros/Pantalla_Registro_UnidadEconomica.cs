@@ -579,6 +579,7 @@ namespace OrdenamientoPesquero
                 Asegurados.Text = dt.Rows[0]["ASEGURADOS"].ToString();
                 Acuacultores.Text = dt.Rows[0]["ACUACULTORES"].ToString();
                 Credencializados.Text = dt.Rows[0]["CREDENCIALIZADOS"].ToString();
+                vencidos.Text = dt.Rows[0]["VENCIDOS"].ToString();
             }
             else
             {
@@ -985,33 +986,37 @@ namespace OrdenamientoPesquero
             DialogResult result = folderBrowserDialog1.ShowDialog();
             if (result == DialogResult.OK) // Test result.
             {
-                if (radioButton1.Checked)
+                this.Cursor = Cursors.AppStarting;
+                if (!radioButton3.Checked)
                 {
-                    municipio = comboBox1.Text;
-                    nombre = municipio;
+                    if (radioButton1.Checked)
+                    {
+                        municipio = comboBox1.Text;
+                        nombre = municipio;
+                    }
+                    if (radioButton2.Checked)
+                    {
+                        rnp = cbRNPA.Text;
+                        nombre = rnp;
+                    }
+                    proc.borrartablas();
+                    proc.PasarUnidad2(municipio, rnp);
+                    proc.PasarEmbarcaciones2(municipio, rnp);
+                    proc.PasarPescadores2(municipio, rnp);
+                    proc.PasarPermisos2(municipio, rnp);
+                    proc.PasarEquipoPesca2();
+                    proc.PasarEmbarcaPermis2(municipio, rnp);
+                    //proc.PasarDirectiva2(municipio, rnp);
+                    //proc.PasarArchivosPescador2(municipio, rnp);
+                    //proc.PasarArchivosEmbarca2(municipio, rnp);
+                    //proc.PasarArchivosUnidad2(municipio, rnp);
+                    proc.Generar(folderBrowserDialog1.SelectedPath, nombre);
                 }
-                if (radioButton2.Checked)
-                {
-                    rnp = cbRNPA.Text;
-                    nombre = rnp;
-                }
-                if (radioButton3.Checked)
+                else
                 {
                     nombre = "respaldo";
+                    proc.Generar2(folderBrowserDialog1.SelectedPath);
                 }
-                this.Cursor = Cursors.WaitCursor;
-                proc.borrartablas();
-                proc.PasarUnidad2(municipio, rnp);
-                proc.PasarEmbarcaciones2(municipio, rnp);
-                proc.PasarPescadores2(municipio, rnp);
-                proc.PasarPermisos2(municipio, rnp);
-                proc.PasarEquipoPesca2();
-                proc.PasarEmbarcaPermis2(municipio, rnp);
-                //proc.PasarDirectiva2(municipio, rnp);
-                //proc.PasarArchivosPescador2(municipio, rnp);
-                //proc.PasarArchivosEmbarca2(municipio, rnp);
-                //proc.PasarArchivosUnidad2(municipio, rnp);
-                proc.Generar(folderBrowserDialog1.SelectedPath, nombre);
                 this.Cursor = Cursors.Default;
             }
         }
@@ -1100,6 +1105,7 @@ namespace OrdenamientoPesquero
 
                     for (int i = 0; i < pescadores.Rows.Count; i++)
                     {
+                        
                         nom = proc.Obtener_Pescador(pescadores.Rows[i]["CURP"].ToString());
                         nombre = nom.Rows[0]["NOMBRE"].ToString() + " " + nom.Rows[0]["AP_PAT"].ToString() + " " + nom.Rows[0]["AP_MAT"].ToString();
                         if (!Directory.Exists(path+ @"\PESCADORES\" + nombre + @"\"))
@@ -1122,7 +1128,7 @@ namespace OrdenamientoPesquero
                         permisos = proc.PermisosxEmbarca(embarcaciones.Rows[i]["MATRICULA"].ToString());
                         for (int C = 0; C < permisos.Rows.Count; C++)
                         {
-                                CrearArchivo(path + @"PERMISOS\"+ permisos.Rows[C]["PESQUERIA"].ToString()+".pdf", permisos.Rows[i]["APERMISO"]);
+                                CrearArchivo(path + @"PERMISOS\"+ permisos.Rows[C]["PESQUERIA"].ToString()+".pdf", permisos.Rows[C]["APERMISO"]);
                         }
                             CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\CERTIFICADO DE MATRICULA.PDF", embarcaciones.Rows[i]["CERTMATRICULA"]);
                             CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\CERTIFICADO DE SEGURIDAD.PDF", embarcaciones.Rows[i]["CERTSEGURIDAD"]);
@@ -1134,7 +1140,7 @@ namespace OrdenamientoPesquero
                     }
                 }
             }
-
+            MessageBox.Show("Expediente Generado Correctamente");
         }
         private void CrearArchivo(string path, object file)
         {

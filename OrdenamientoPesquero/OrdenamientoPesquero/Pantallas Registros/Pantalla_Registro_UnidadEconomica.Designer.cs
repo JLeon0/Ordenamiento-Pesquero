@@ -171,6 +171,8 @@
             this.Logo2 = new System.Windows.Forms.PictureBox();
             this.label35 = new System.Windows.Forms.Label();
             this.Bienvenido = new System.Windows.Forms.Label();
+            this.vencidos = new System.Windows.Forms.LinkLabel();
+            this.label36 = new System.Windows.Forms.Label();
             this.gbOrgPes.SuspendLayout();
             this.gbBotonesUE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
@@ -206,10 +208,9 @@
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(17, 148);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(13, 120);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(84, 19);
+            this.label13.Size = new System.Drawing.Size(67, 16);
             this.label13.TabIndex = 51;
             this.label13.Text = "Municipio:";
             // 
@@ -217,10 +218,9 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(203, 146);
-            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Location = new System.Drawing.Point(152, 119);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(84, 19);
+            this.label12.Size = new System.Drawing.Size(67, 16);
             this.label12.TabIndex = 49;
             this.label12.Text = "Localidad:";
             // 
@@ -228,11 +228,10 @@
             // 
             this.mtbCP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.mtbCP.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbCP.Location = new System.Drawing.Point(563, 170);
-            this.mtbCP.Margin = new System.Windows.Forms.Padding(4);
+            this.mtbCP.Location = new System.Drawing.Point(422, 138);
             this.mtbCP.Mask = "99999";
             this.mtbCP.Name = "mtbCP";
-            this.mtbCP.Size = new System.Drawing.Size(75, 26);
+            this.mtbCP.Size = new System.Drawing.Size(57, 22);
             this.mtbCP.TabIndex = 9;
             this.toolTip1.SetToolTip(this.mtbCP, "Ingrese el Codigo Postal de la Organización Pesquera");
             this.mtbCP.ValidatingType = typeof(int);
@@ -242,10 +241,9 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(559, 146);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(419, 119);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(50, 19);
+            this.label11.Size = new System.Drawing.Size(40, 16);
             this.label11.TabIndex = 46;
             this.label11.Text = "C.P. :";
             // 
@@ -253,10 +251,9 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(512, 87);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(384, 71);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(69, 19);
+            this.label10.Size = new System.Drawing.Size(55, 16);
             this.label10.TabIndex = 45;
             this.label10.Text = "Colonia:";
             // 
@@ -266,11 +263,10 @@
             this.txtColonia.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtColonia.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtColonia.ForeColor = System.Drawing.Color.Black;
-            this.txtColonia.Location = new System.Drawing.Point(512, 111);
-            this.txtColonia.Margin = new System.Windows.Forms.Padding(4);
+            this.txtColonia.Location = new System.Drawing.Point(384, 90);
             this.txtColonia.MaxLength = 50;
             this.txtColonia.Name = "txtColonia";
-            this.txtColonia.Size = new System.Drawing.Size(349, 26);
+            this.txtColonia.Size = new System.Drawing.Size(262, 22);
             this.txtColonia.TabIndex = 5;
             this.txtColonia.Tag = "";
             this.toolTip1.SetToolTip(this.txtColonia, "Ingrese la Colonia o campo pesquero de la Organización Pesquera");
@@ -281,10 +277,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(15, 87);
-            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Location = new System.Drawing.Point(11, 71);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(81, 19);
+            this.label9.Size = new System.Drawing.Size(65, 16);
             this.label9.TabIndex = 43;
             this.label9.Text = "Domicilio:";
             // 
@@ -294,11 +289,10 @@
             this.txtCalleNum.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCalleNum.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCalleNum.ForeColor = System.Drawing.Color.Black;
-            this.txtCalleNum.Location = new System.Drawing.Point(21, 111);
-            this.txtCalleNum.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCalleNum.Location = new System.Drawing.Point(16, 90);
             this.txtCalleNum.MaxLength = 50;
             this.txtCalleNum.Name = "txtCalleNum";
-            this.txtCalleNum.Size = new System.Drawing.Size(482, 26);
+            this.txtCalleNum.Size = new System.Drawing.Size(362, 22);
             this.txtCalleNum.TabIndex = 4;
             this.txtCalleNum.Tag = "";
             this.toolTip1.SetToolTip(this.txtCalleNum, "Ingrese la calle y número de la Organización");
@@ -309,11 +303,10 @@
             this.txtRFC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtRFC.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRFC.ForeColor = System.Drawing.Color.Black;
-            this.txtRFC.Location = new System.Drawing.Point(877, 53);
-            this.txtRFC.Margin = new System.Windows.Forms.Padding(4);
+            this.txtRFC.Location = new System.Drawing.Point(658, 43);
             this.txtRFC.MaxLength = 13;
             this.txtRFC.Name = "txtRFC";
-            this.txtRFC.Size = new System.Drawing.Size(195, 26);
+            this.txtRFC.Size = new System.Drawing.Size(147, 22);
             this.txtRFC.TabIndex = 3;
             this.toolTip1.SetToolTip(this.txtRFC, "Ingrese el RFC de la Organización Pesquera");
             this.txtRFC.TextChanged += new System.EventHandler(this.txtRFC_TextChanged);
@@ -322,10 +315,9 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(873, 28);
-            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Location = new System.Drawing.Point(655, 23);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(47, 19);
+            this.label8.Size = new System.Drawing.Size(38, 16);
             this.label8.TabIndex = 40;
             this.label8.Text = "RFC:";
             // 
@@ -333,10 +325,9 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(312, 28);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(234, 23);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(71, 19);
+            this.label7.Size = new System.Drawing.Size(57, 16);
             this.label7.TabIndex = 39;
             this.label7.Text = "Nombre:";
             // 
@@ -344,10 +335,9 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(909, 87);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(682, 71);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(60, 19);
+            this.label5.Size = new System.Drawing.Size(48, 16);
             this.label5.TabIndex = 36;
             this.label5.Text = "Fecha:";
             // 
@@ -360,10 +350,9 @@
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.Location = new System.Drawing.Point(543, 59);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(407, 48);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(350, 29);
+            this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
             this.label3.Text = "ORDENAMIENTO PESQUERO";
             // 
@@ -373,10 +362,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(16, 28);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(12, 23);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 19);
+            this.label4.Size = new System.Drawing.Size(43, 16);
             this.label4.TabIndex = 32;
             this.label4.Text = "RNPA";
             // 
@@ -426,11 +414,9 @@
             this.gbOrgPes.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.gbOrgPes.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbOrgPes.ForeColor = System.Drawing.Color.Black;
-            this.gbOrgPes.Location = new System.Drawing.Point(277, 117);
-            this.gbOrgPes.Margin = new System.Windows.Forms.Padding(4);
+            this.gbOrgPes.Location = new System.Drawing.Point(208, 95);
             this.gbOrgPes.Name = "gbOrgPes";
-            this.gbOrgPes.Padding = new System.Windows.Forms.Padding(4);
-            this.gbOrgPes.Size = new System.Drawing.Size(1191, 423);
+            this.gbOrgPes.Size = new System.Drawing.Size(893, 344);
             this.gbOrgPes.TabIndex = 54;
             this.gbOrgPes.TabStop = false;
             this.gbOrgPes.Text = "DATOS GENERALES DE LA ORGANIZACIÓN PESQUERA";
@@ -443,11 +429,9 @@
             this.gbBotonesUE.Controls.Add(this.label6);
             this.gbBotonesUE.Controls.Add(this.label2);
             this.gbBotonesUE.Controls.Add(this.label1);
-            this.gbBotonesUE.Location = new System.Drawing.Point(901, 300);
-            this.gbBotonesUE.Margin = new System.Windows.Forms.Padding(4);
+            this.gbBotonesUE.Location = new System.Drawing.Point(676, 244);
             this.gbBotonesUE.Name = "gbBotonesUE";
-            this.gbBotonesUE.Padding = new System.Windows.Forms.Padding(4);
-            this.gbBotonesUE.Size = new System.Drawing.Size(289, 123);
+            this.gbBotonesUE.Size = new System.Drawing.Size(217, 100);
             this.gbBotonesUE.TabIndex = 132;
             this.gbBotonesUE.TabStop = false;
             this.gbBotonesUE.Text = "Acciones";
@@ -458,10 +442,9 @@
             this.EliminarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Eliminar;
             this.EliminarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EliminarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EliminarUnidad.Location = new System.Drawing.Point(213, 31);
-            this.EliminarUnidad.Margin = new System.Windows.Forms.Padding(4);
+            this.EliminarUnidad.Location = new System.Drawing.Point(160, 25);
             this.EliminarUnidad.Name = "EliminarUnidad";
-            this.EliminarUnidad.Size = new System.Drawing.Size(67, 62);
+            this.EliminarUnidad.Size = new System.Drawing.Size(50, 50);
             this.EliminarUnidad.TabIndex = 107;
             this.EliminarUnidad.TabStop = false;
             this.toolTip1.SetToolTip(this.EliminarUnidad, "Eliminar Unidad Economica");
@@ -474,10 +457,9 @@
             this.RegistrarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.RegistrarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.RegistrarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RegistrarUnidad.Location = new System.Drawing.Point(24, 31);
-            this.RegistrarUnidad.Margin = new System.Windows.Forms.Padding(4);
+            this.RegistrarUnidad.Location = new System.Drawing.Point(18, 25);
             this.RegistrarUnidad.Name = "RegistrarUnidad";
-            this.RegistrarUnidad.Size = new System.Drawing.Size(67, 62);
+            this.RegistrarUnidad.Size = new System.Drawing.Size(50, 50);
             this.RegistrarUnidad.TabIndex = 105;
             this.RegistrarUnidad.TabStop = false;
             this.toolTip1.SetToolTip(this.RegistrarUnidad, "Guardar Información de la Unidad Econímica");
@@ -489,10 +471,9 @@
             this.ActualizarUnidad.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
             this.ActualizarUnidad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ActualizarUnidad.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ActualizarUnidad.Location = new System.Drawing.Point(117, 31);
-            this.ActualizarUnidad.Margin = new System.Windows.Forms.Padding(4);
+            this.ActualizarUnidad.Location = new System.Drawing.Point(88, 25);
             this.ActualizarUnidad.Name = "ActualizarUnidad";
-            this.ActualizarUnidad.Size = new System.Drawing.Size(67, 62);
+            this.ActualizarUnidad.Size = new System.Drawing.Size(50, 50);
             this.ActualizarUnidad.TabIndex = 106;
             this.ActualizarUnidad.TabStop = false;
             this.toolTip1.SetToolTip(this.ActualizarUnidad, "Actualizar información de la Unidad Económica");
@@ -503,10 +484,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(20, 96);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(15, 78);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(66, 16);
+            this.label6.Size = new System.Drawing.Size(51, 14);
             this.label6.TabIndex = 114;
             this.label6.Text = "Registrar";
             // 
@@ -515,10 +495,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(117, 97);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(88, 79);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 16);
+            this.label2.Size = new System.Drawing.Size(56, 14);
             this.label2.TabIndex = 113;
             this.label2.Text = "Actualizar";
             // 
@@ -527,10 +506,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Black;
-            this.label1.Location = new System.Drawing.Point(223, 97);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(167, 79);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(58, 16);
+            this.label1.Size = new System.Drawing.Size(43, 14);
             this.label1.TabIndex = 112;
             this.label1.Text = "Eliminar";
             this.label1.Visible = false;
@@ -541,21 +519,19 @@
             this.pictureBox6.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox6.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox6.Location = new System.Drawing.Point(713, 297);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Location = new System.Drawing.Point(535, 241);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(28, 26);
+            this.pictureBox6.Size = new System.Drawing.Size(21, 21);
             this.pictureBox6.TabIndex = 131;
             this.pictureBox6.TabStop = false;
             // 
             // mtbTelefonoPresidente
             // 
             this.mtbTelefonoPresidente.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbTelefonoPresidente.Location = new System.Drawing.Point(576, 297);
-            this.mtbTelefonoPresidente.Margin = new System.Windows.Forms.Padding(4);
+            this.mtbTelefonoPresidente.Location = new System.Drawing.Point(432, 241);
             this.mtbTelefonoPresidente.Mask = "000-000-0000";
             this.mtbTelefonoPresidente.Name = "mtbTelefonoPresidente";
-            this.mtbTelefonoPresidente.Size = new System.Drawing.Size(128, 26);
+            this.mtbTelefonoPresidente.Size = new System.Drawing.Size(97, 22);
             this.mtbTelefonoPresidente.TabIndex = 14;
             this.toolTip1.SetToolTip(this.mtbTelefonoPresidente, "Ingrese el Telefono de la Organización");
             this.mtbTelefonoPresidente.TextChanged += new System.EventHandler(this.mtbTelefonoPresidente_TextChanged);
@@ -564,10 +540,9 @@
             // 
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label33.Location = new System.Drawing.Point(572, 271);
-            this.label33.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label33.Location = new System.Drawing.Point(429, 220);
             this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(178, 19);
+            this.label33.Size = new System.Drawing.Size(142, 16);
             this.label33.TabIndex = 130;
             this.label33.Text = "Telefono del Presidente";
             // 
@@ -577,10 +552,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(572, 210);
-            this.label32.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label32.Location = new System.Drawing.Point(429, 171);
             this.label32.Name = "label32";
-            this.label32.Size = new System.Drawing.Size(239, 19);
+            this.label32.Size = new System.Drawing.Size(191, 16);
             this.label32.TabIndex = 128;
             this.label32.Text = "Nombre de Presidente de la UE";
             // 
@@ -590,11 +564,10 @@
             this.NombrePresidenteUE.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.NombrePresidenteUE.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NombrePresidenteUE.ForeColor = System.Drawing.Color.Black;
-            this.NombrePresidenteUE.Location = new System.Drawing.Point(576, 234);
-            this.NombrePresidenteUE.Margin = new System.Windows.Forms.Padding(4);
+            this.NombrePresidenteUE.Location = new System.Drawing.Point(432, 190);
             this.NombrePresidenteUE.MaxLength = 50;
             this.NombrePresidenteUE.Name = "NombrePresidenteUE";
-            this.NombrePresidenteUE.Size = new System.Drawing.Size(497, 26);
+            this.NombrePresidenteUE.Size = new System.Drawing.Size(373, 22);
             this.NombrePresidenteUE.TabIndex = 13;
             this.NombrePresidenteUE.Tag = "";
             this.toolTip1.SetToolTip(this.NombrePresidenteUE, "Ingrese el correo de la Organización");
@@ -603,10 +576,9 @@
             // 
             this.ActivarPanelRNPA.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.actualizar;
             this.ActivarPanelRNPA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ActivarPanelRNPA.Location = new System.Drawing.Point(268, 52);
-            this.ActivarPanelRNPA.Margin = new System.Windows.Forms.Padding(4);
+            this.ActivarPanelRNPA.Location = new System.Drawing.Point(201, 42);
             this.ActivarPanelRNPA.Name = "ActivarPanelRNPA";
-            this.ActivarPanelRNPA.Size = new System.Drawing.Size(27, 25);
+            this.ActivarPanelRNPA.Size = new System.Drawing.Size(20, 20);
             this.ActivarPanelRNPA.TabIndex = 126;
             this.ActivarPanelRNPA.TabStop = false;
             this.toolTip1.SetToolTip(this.ActivarPanelRNPA, "Cambiar RNPA de Unidad");
@@ -615,20 +587,18 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(316, 52);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Location = new System.Drawing.Point(237, 42);
             this.txtNombre.MaxLength = 100;
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(544, 26);
+            this.txtNombre.Size = new System.Drawing.Size(409, 22);
             this.txtNombre.TabIndex = 125;
             // 
             // cbRNPA
             // 
-            this.cbRNPA.Location = new System.Drawing.Point(20, 52);
-            this.cbRNPA.Margin = new System.Windows.Forms.Padding(4);
+            this.cbRNPA.Location = new System.Drawing.Point(15, 42);
             this.cbRNPA.MaxLength = 10;
             this.cbRNPA.Name = "cbRNPA";
-            this.cbRNPA.Size = new System.Drawing.Size(237, 26);
+            this.cbRNPA.Size = new System.Drawing.Size(179, 22);
             this.cbRNPA.TabIndex = 124;
             this.cbRNPA.TextChanged += new System.EventHandler(this.cbRNPA_TextChanged);
             this.cbRNPA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cbRNPA_KeyPress);
@@ -636,10 +606,9 @@
             // ModFed
             // 
             this.ModFed.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ModFed.Location = new System.Drawing.Point(144, 334);
-            this.ModFed.Margin = new System.Windows.Forms.Padding(4);
+            this.ModFed.Location = new System.Drawing.Point(108, 271);
             this.ModFed.Name = "ModFed";
-            this.ModFed.Size = new System.Drawing.Size(115, 27);
+            this.ModFed.Size = new System.Drawing.Size(86, 22);
             this.ModFed.TabIndex = 122;
             this.ModFed.Text = "Modificar Fed";
             this.ModFed.UseVisualStyleBackColor = true;
@@ -648,10 +617,9 @@
             // RegFed
             // 
             this.RegFed.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegFed.Location = new System.Drawing.Point(21, 335);
-            this.RegFed.Margin = new System.Windows.Forms.Padding(4);
+            this.RegFed.Location = new System.Drawing.Point(16, 272);
             this.RegFed.Name = "RegFed";
-            this.RegFed.Size = new System.Drawing.Size(115, 27);
+            this.RegFed.Size = new System.Drawing.Size(86, 22);
             this.RegFed.TabIndex = 121;
             this.RegFed.Text = "Registrar Fed";
             this.RegFed.UseVisualStyleBackColor = true;
@@ -663,10 +631,9 @@
             this.limpiar.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.limpiar;
             this.limpiar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.limpiar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.limpiar.Location = new System.Drawing.Point(1144, 14);
-            this.limpiar.Margin = new System.Windows.Forms.Padding(4);
+            this.limpiar.Location = new System.Drawing.Point(858, 11);
             this.limpiar.Name = "limpiar";
-            this.limpiar.Size = new System.Drawing.Size(37, 34);
+            this.limpiar.Size = new System.Drawing.Size(28, 28);
             this.limpiar.TabIndex = 120;
             this.limpiar.TabStop = false;
             this.toolTip1.SetToolTip(this.limpiar, "Limpiar Registro");
@@ -676,20 +643,18 @@
             // 
             this.txtLocalidad.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtLocalidad.FormattingEnabled = true;
-            this.txtLocalidad.Location = new System.Drawing.Point(205, 170);
-            this.txtLocalidad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLocalidad.Location = new System.Drawing.Point(154, 138);
             this.txtLocalidad.Name = "txtLocalidad";
-            this.txtLocalidad.Size = new System.Drawing.Size(348, 26);
+            this.txtLocalidad.Size = new System.Drawing.Size(262, 24);
             this.txtLocalidad.TabIndex = 8;
             // 
             // txtMunicipio
             // 
             this.txtMunicipio.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMunicipio.FormattingEnabled = true;
-            this.txtMunicipio.Location = new System.Drawing.Point(21, 170);
-            this.txtMunicipio.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMunicipio.Location = new System.Drawing.Point(16, 138);
             this.txtMunicipio.Name = "txtMunicipio";
-            this.txtMunicipio.Size = new System.Drawing.Size(157, 26);
+            this.txtMunicipio.Size = new System.Drawing.Size(119, 24);
             this.txtMunicipio.TabIndex = 7;
             this.txtMunicipio.SelectedIndexChanged += new System.EventHandler(this.txtMunicipio_SelectedIndexChanged);
             // 
@@ -697,11 +662,10 @@
             // 
             this.NomFed.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NomFed.FormattingEnabled = true;
-            this.NomFed.ItemHeight = 18;
-            this.NomFed.Location = new System.Drawing.Point(21, 297);
-            this.NomFed.Margin = new System.Windows.Forms.Padding(4);
+            this.NomFed.ItemHeight = 16;
+            this.NomFed.Location = new System.Drawing.Point(16, 241);
             this.NomFed.Name = "NomFed";
-            this.NomFed.Size = new System.Drawing.Size(481, 26);
+            this.NomFed.Size = new System.Drawing.Size(362, 24);
             this.NomFed.TabIndex = 12;
             // 
             // label24
@@ -710,10 +674,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(17, 272);
-            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Location = new System.Drawing.Point(13, 221);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(194, 19);
+            this.label24.Size = new System.Drawing.Size(153, 16);
             this.label24.TabIndex = 108;
             this.label24.Text = "Nombre de la Federación";
             // 
@@ -723,10 +686,9 @@
             this.pictureBox10.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox10.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox10.Location = new System.Drawing.Point(843, 172);
-            this.pictureBox10.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox10.Location = new System.Drawing.Point(632, 140);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(28, 26);
+            this.pictureBox10.Size = new System.Drawing.Size(21, 21);
             this.pictureBox10.TabIndex = 104;
             this.pictureBox10.TabStop = false;
             // 
@@ -736,10 +698,9 @@
             this.pictureBox4.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox4.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox4.Location = new System.Drawing.Point(524, 234);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Location = new System.Drawing.Point(393, 190);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(28, 26);
+            this.pictureBox4.Size = new System.Drawing.Size(21, 21);
             this.pictureBox4.TabIndex = 104;
             this.pictureBox4.TabStop = false;
             // 
@@ -749,10 +710,9 @@
             this.pictureBox3.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox3.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox3.Location = new System.Drawing.Point(1081, 52);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Location = new System.Drawing.Point(811, 42);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(28, 26);
+            this.pictureBox3.Size = new System.Drawing.Size(21, 21);
             this.pictureBox3.TabIndex = 103;
             this.pictureBox3.TabStop = false;
             // 
@@ -762,21 +722,19 @@
             this.pictureBox2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.x;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox2.Location = new System.Drawing.Point(647, 170);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Location = new System.Drawing.Point(485, 138);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(28, 26);
+            this.pictureBox2.Size = new System.Drawing.Size(21, 21);
             this.pictureBox2.TabIndex = 102;
             this.pictureBox2.TabStop = false;
             // 
             // mtbTelefono
             // 
             this.mtbTelefono.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.mtbTelefono.Location = new System.Drawing.Point(705, 172);
-            this.mtbTelefono.Margin = new System.Windows.Forms.Padding(4);
+            this.mtbTelefono.Location = new System.Drawing.Point(529, 140);
             this.mtbTelefono.Mask = "000-000-0000";
             this.mtbTelefono.Name = "mtbTelefono";
-            this.mtbTelefono.Size = new System.Drawing.Size(128, 26);
+            this.mtbTelefono.Size = new System.Drawing.Size(97, 22);
             this.mtbTelefono.TabIndex = 10;
             this.toolTip1.SetToolTip(this.mtbTelefono, "Ingrese el Telefono de la Organización");
             this.mtbTelefono.TextChanged += new System.EventHandler(this.mtbTelefono_TextChanged);
@@ -787,10 +745,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(17, 210);
-            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Location = new System.Drawing.Point(13, 171);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(241, 19);
+            this.label20.Size = new System.Drawing.Size(187, 16);
             this.label20.TabIndex = 61;
             this.label20.Text = "Dirección de correo electrónico";
             // 
@@ -800,11 +757,10 @@
             this.txtCorreo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtCorreo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCorreo.ForeColor = System.Drawing.Color.Black;
-            this.txtCorreo.Location = new System.Drawing.Point(21, 234);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCorreo.Location = new System.Drawing.Point(16, 190);
             this.txtCorreo.MaxLength = 30;
             this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Size = new System.Drawing.Size(482, 26);
+            this.txtCorreo.Size = new System.Drawing.Size(362, 22);
             this.txtCorreo.TabIndex = 11;
             this.txtCorreo.Tag = "";
             this.toolTip1.SetToolTip(this.txtCorreo, "Ingrese el correo de la Organización");
@@ -814,10 +770,9 @@
             // 
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(701, 146);
-            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Location = new System.Drawing.Point(526, 119);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(69, 19);
+            this.label21.Size = new System.Drawing.Size(55, 16);
             this.label21.TabIndex = 62;
             this.label21.Text = "Telefono";
             // 
@@ -828,20 +783,18 @@
             this.txtFecha.Enabled = false;
             this.txtFecha.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFecha.ForeColor = System.Drawing.Color.Black;
-            this.txtFecha.Location = new System.Drawing.Point(913, 111);
-            this.txtFecha.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFecha.Location = new System.Drawing.Point(685, 90);
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Size = new System.Drawing.Size(159, 26);
+            this.txtFecha.Size = new System.Drawing.Size(120, 22);
             this.txtFecha.TabIndex = 6;
             // 
             // Privado
             // 
             this.Privado.AutoSize = true;
             this.Privado.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Privado.Location = new System.Drawing.Point(1001, 172);
-            this.Privado.Margin = new System.Windows.Forms.Padding(4);
+            this.Privado.Location = new System.Drawing.Point(751, 140);
             this.Privado.Name = "Privado";
-            this.Privado.Size = new System.Drawing.Size(85, 23);
+            this.Privado.Size = new System.Drawing.Size(68, 20);
             this.Privado.TabIndex = 3;
             this.Privado.Text = "Privado";
             this.toolTip1.SetToolTip(this.Privado, "Seleccione si la Unidad Pesquera si NO pertenece a una Federación");
@@ -852,10 +805,9 @@
             this.Social.AutoSize = true;
             this.Social.Checked = true;
             this.Social.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Social.Location = new System.Drawing.Point(911, 172);
-            this.Social.Margin = new System.Windows.Forms.Padding(4);
+            this.Social.Location = new System.Drawing.Point(683, 140);
             this.Social.Name = "Social";
-            this.Social.Size = new System.Drawing.Size(75, 23);
+            this.Social.Size = new System.Drawing.Size(62, 20);
             this.Social.TabIndex = 2;
             this.Social.TabStop = true;
             this.Social.Text = "Social";
@@ -868,10 +820,9 @@
             this.ActualizarRNPA.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
             this.ActualizarRNPA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ActualizarRNPA.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ActualizarRNPA.Location = new System.Drawing.Point(545, 174);
-            this.ActualizarRNPA.Margin = new System.Windows.Forms.Padding(4);
+            this.ActualizarRNPA.Location = new System.Drawing.Point(409, 141);
             this.ActualizarRNPA.Name = "ActualizarRNPA";
-            this.ActualizarRNPA.Size = new System.Drawing.Size(67, 62);
+            this.ActualizarRNPA.Size = new System.Drawing.Size(50, 50);
             this.ActualizarRNPA.TabIndex = 133;
             this.ActualizarRNPA.TabStop = false;
             this.toolTip1.SetToolTip(this.ActualizarRNPA, "Actualizar RNPA de la Unidad Económica");
@@ -883,10 +834,9 @@
             this.CerrarPanel.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
             this.CerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CerrarPanel.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.CerrarPanel.Location = new System.Drawing.Point(601, 1);
-            this.CerrarPanel.Margin = new System.Windows.Forms.Padding(4);
+            this.CerrarPanel.Location = new System.Drawing.Point(451, 1);
             this.CerrarPanel.Name = "CerrarPanel";
-            this.CerrarPanel.Size = new System.Drawing.Size(28, 26);
+            this.CerrarPanel.Size = new System.Drawing.Size(21, 21);
             this.CerrarPanel.TabIndex = 135;
             this.CerrarPanel.TabStop = false;
             this.toolTip1.SetToolTip(this.CerrarPanel, "Cerrar");
@@ -899,10 +849,9 @@
             this.pictureBox12.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
             this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox12.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox12.Location = new System.Drawing.Point(483, 4);
-            this.pictureBox12.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox12.Location = new System.Drawing.Point(362, 3);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(28, 26);
+            this.pictureBox12.Size = new System.Drawing.Size(21, 21);
             this.pictureBox12.TabIndex = 135;
             this.pictureBox12.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox12, "Cerrar");
@@ -914,10 +863,9 @@
             this.pictureBox13.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox13.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox13.Location = new System.Drawing.Point(220, 214);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox13.Location = new System.Drawing.Point(165, 174);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(67, 62);
+            this.pictureBox13.Size = new System.Drawing.Size(50, 50);
             this.pictureBox13.TabIndex = 187;
             this.pictureBox13.TabStop = false;
             this.toolTip1.SetToolTip(this.pictureBox13, "Guardar Información de la Unidad Econímica");
@@ -926,6 +874,8 @@
             // Resumen
             // 
             this.Resumen.BackColor = System.Drawing.Color.Transparent;
+            this.Resumen.Controls.Add(this.vencidos);
+            this.Resumen.Controls.Add(this.label36);
             this.Resumen.Controls.Add(this.linkLabel1);
             this.Resumen.Controls.Add(this.Titular);
             this.Resumen.Controls.Add(this.TotalPermisos);
@@ -956,11 +906,9 @@
             this.Resumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Resumen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Resumen.ForeColor = System.Drawing.Color.Black;
-            this.Resumen.Location = new System.Drawing.Point(1493, 117);
-            this.Resumen.Margin = new System.Windows.Forms.Padding(4);
+            this.Resumen.Location = new System.Drawing.Point(1120, 95);
             this.Resumen.Name = "Resumen";
-            this.Resumen.Padding = new System.Windows.Forms.Padding(4);
-            this.Resumen.Size = new System.Drawing.Size(508, 741);
+            this.Resumen.Size = new System.Drawing.Size(381, 602);
             this.Resumen.TabIndex = 101;
             this.Resumen.TabStop = false;
             // 
@@ -969,10 +917,9 @@
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(199, 60);
-            this.linkLabel1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.linkLabel1.Location = new System.Drawing.Point(149, 49);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(18, 19);
+            this.linkLabel1.Size = new System.Drawing.Size(15, 16);
             this.linkLabel1.TabIndex = 18;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "1";
@@ -983,10 +930,9 @@
             // 
             this.Titular.AutoSize = true;
             this.Titular.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Titular.Location = new System.Drawing.Point(8, 60);
-            this.Titular.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Titular.Location = new System.Drawing.Point(6, 49);
             this.Titular.Name = "Titular";
-            this.Titular.Size = new System.Drawing.Size(57, 19);
+            this.Titular.Size = new System.Drawing.Size(47, 16);
             this.Titular.TabIndex = 17;
             this.Titular.Text = "Titular:";
             this.Titular.Visible = false;
@@ -996,10 +942,9 @@
             this.TotalPermisos.AutoSize = true;
             this.TotalPermisos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalPermisos.LinkColor = System.Drawing.Color.Black;
-            this.TotalPermisos.Location = new System.Drawing.Point(200, 267);
-            this.TotalPermisos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TotalPermisos.Location = new System.Drawing.Point(150, 237);
             this.TotalPermisos.Name = "TotalPermisos";
-            this.TotalPermisos.Size = new System.Drawing.Size(16, 19);
+            this.TotalPermisos.Size = new System.Drawing.Size(13, 16);
             this.TotalPermisos.TabIndex = 16;
             this.TotalPermisos.TabStop = true;
             this.TotalPermisos.Text = "*";
@@ -1009,10 +954,9 @@
             // 
             this.label59.AutoSize = true;
             this.label59.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label59.Location = new System.Drawing.Point(9, 267);
-            this.label59.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label59.Location = new System.Drawing.Point(7, 237);
             this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(82, 19);
+            this.label59.Size = new System.Drawing.Size(67, 16);
             this.label59.TabIndex = 15;
             this.label59.Text = "Permisos:";
             // 
@@ -1021,10 +965,9 @@
             this.chipeados.AutoSize = true;
             this.chipeados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chipeados.LinkColor = System.Drawing.Color.Black;
-            this.chipeados.Location = new System.Drawing.Point(332, 314);
-            this.chipeados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.chipeados.Location = new System.Drawing.Point(249, 275);
             this.chipeados.Name = "chipeados";
-            this.chipeados.Size = new System.Drawing.Size(16, 19);
+            this.chipeados.Size = new System.Drawing.Size(13, 16);
             this.chipeados.TabIndex = 14;
             this.chipeados.TabStop = true;
             this.chipeados.Text = "*";
@@ -1034,10 +977,9 @@
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(53, 315);
-            this.label31.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label31.Location = new System.Drawing.Point(40, 276);
             this.label31.Name = "label31";
-            this.label31.Size = new System.Drawing.Size(256, 19);
+            this.label31.Size = new System.Drawing.Size(205, 16);
             this.label31.TabIndex = 13;
             this.label31.Text = "Esf. Pesq. Nominal NO Chipeado:";
             // 
@@ -1046,10 +988,9 @@
             this.TotalEsfuerzos.AutoSize = true;
             this.TotalEsfuerzos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalEsfuerzos.LinkColor = System.Drawing.Color.Black;
-            this.TotalEsfuerzos.Location = new System.Drawing.Point(200, 290);
-            this.TotalEsfuerzos.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TotalEsfuerzos.Location = new System.Drawing.Point(150, 256);
             this.TotalEsfuerzos.Name = "TotalEsfuerzos";
-            this.TotalEsfuerzos.Size = new System.Drawing.Size(16, 19);
+            this.TotalEsfuerzos.Size = new System.Drawing.Size(13, 16);
             this.TotalEsfuerzos.TabIndex = 12;
             this.TotalEsfuerzos.TabStop = true;
             this.TotalEsfuerzos.Text = "*";
@@ -1060,10 +1001,9 @@
             this.Credencializados.AutoSize = true;
             this.Credencializados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Credencializados.LinkColor = System.Drawing.Color.Black;
-            this.Credencializados.Location = new System.Drawing.Point(179, 242);
-            this.Credencializados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Credencializados.Location = new System.Drawing.Point(134, 197);
             this.Credencializados.Name = "Credencializados";
-            this.Credencializados.Size = new System.Drawing.Size(16, 19);
+            this.Credencializados.Size = new System.Drawing.Size(13, 16);
             this.Credencializados.TabIndex = 11;
             this.Credencializados.TabStop = true;
             this.Credencializados.Text = "*";
@@ -1075,10 +1015,9 @@
             this.SinActividad.AutoSize = true;
             this.SinActividad.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SinActividad.LinkColor = System.Drawing.Color.Black;
-            this.SinActividad.Location = new System.Drawing.Point(216, 149);
-            this.SinActividad.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.SinActividad.Location = new System.Drawing.Point(162, 121);
             this.SinActividad.Name = "SinActividad";
-            this.SinActividad.Size = new System.Drawing.Size(13, 16);
+            this.SinActividad.Size = new System.Drawing.Size(11, 14);
             this.SinActividad.TabIndex = 11;
             this.SinActividad.TabStop = true;
             this.SinActividad.Text = "*";
@@ -1090,10 +1029,9 @@
             this.Asegurados.AutoSize = true;
             this.Asegurados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Asegurados.LinkColor = System.Drawing.Color.Black;
-            this.Asegurados.Location = new System.Drawing.Point(179, 219);
-            this.Asegurados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Asegurados.Location = new System.Drawing.Point(134, 178);
             this.Asegurados.Name = "Asegurados";
-            this.Asegurados.Size = new System.Drawing.Size(16, 19);
+            this.Asegurados.Size = new System.Drawing.Size(13, 16);
             this.Asegurados.TabIndex = 11;
             this.Asegurados.TabStop = true;
             this.Asegurados.Text = "*";
@@ -1105,10 +1043,9 @@
             this.Marineros.AutoSize = true;
             this.Marineros.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Marineros.LinkColor = System.Drawing.Color.Black;
-            this.Marineros.Location = new System.Drawing.Point(216, 128);
-            this.Marineros.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Marineros.Location = new System.Drawing.Point(162, 104);
             this.Marineros.Name = "Marineros";
-            this.Marineros.Size = new System.Drawing.Size(13, 16);
+            this.Marineros.Size = new System.Drawing.Size(11, 14);
             this.Marineros.TabIndex = 11;
             this.Marineros.TabStop = true;
             this.Marineros.Text = "*";
@@ -1120,10 +1057,9 @@
             this.Acuacultores.AutoSize = true;
             this.Acuacultores.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Acuacultores.LinkColor = System.Drawing.Color.Black;
-            this.Acuacultores.Location = new System.Drawing.Point(216, 171);
-            this.Acuacultores.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Acuacultores.Location = new System.Drawing.Point(162, 139);
             this.Acuacultores.Name = "Acuacultores";
-            this.Acuacultores.Size = new System.Drawing.Size(13, 16);
+            this.Acuacultores.Size = new System.Drawing.Size(11, 14);
             this.Acuacultores.TabIndex = 11;
             this.Acuacultores.TabStop = true;
             this.Acuacultores.Text = "*";
@@ -1135,10 +1071,9 @@
             this.Ordenados.AutoSize = true;
             this.Ordenados.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ordenados.LinkColor = System.Drawing.Color.Black;
-            this.Ordenados.Location = new System.Drawing.Point(179, 199);
-            this.Ordenados.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Ordenados.Location = new System.Drawing.Point(134, 162);
             this.Ordenados.Name = "Ordenados";
-            this.Ordenados.Size = new System.Drawing.Size(16, 19);
+            this.Ordenados.Size = new System.Drawing.Size(13, 16);
             this.Ordenados.TabIndex = 11;
             this.Ordenados.TabStop = true;
             this.Ordenados.Text = "*";
@@ -1150,10 +1085,9 @@
             this.Capitanes.AutoSize = true;
             this.Capitanes.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Capitanes.LinkColor = System.Drawing.Color.Black;
-            this.Capitanes.Location = new System.Drawing.Point(216, 107);
-            this.Capitanes.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Capitanes.Location = new System.Drawing.Point(162, 87);
             this.Capitanes.Name = "Capitanes";
-            this.Capitanes.Size = new System.Drawing.Size(13, 16);
+            this.Capitanes.Size = new System.Drawing.Size(11, 14);
             this.Capitanes.TabIndex = 11;
             this.Capitanes.TabStop = true;
             this.Capitanes.Text = "*";
@@ -1165,10 +1099,9 @@
             this.TotalSocios.AutoSize = true;
             this.TotalSocios.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TotalSocios.LinkColor = System.Drawing.Color.Black;
-            this.TotalSocios.Location = new System.Drawing.Point(199, 85);
-            this.TotalSocios.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.TotalSocios.Location = new System.Drawing.Point(149, 69);
             this.TotalSocios.Name = "TotalSocios";
-            this.TotalSocios.Size = new System.Drawing.Size(16, 19);
+            this.TotalSocios.Size = new System.Drawing.Size(13, 16);
             this.TotalSocios.TabIndex = 11;
             this.TotalSocios.TabStop = true;
             this.TotalSocios.Text = "*";
@@ -1179,10 +1112,9 @@
             // 
             this.NombreResumen.AutoSize = true;
             this.NombreResumen.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreResumen.Location = new System.Drawing.Point(8, 27);
-            this.NombreResumen.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.NombreResumen.Location = new System.Drawing.Point(6, 22);
             this.NombreResumen.Name = "NombreResumen";
-            this.NombreResumen.Size = new System.Drawing.Size(103, 29);
+            this.NombreResumen.Size = new System.Drawing.Size(83, 22);
             this.NombreResumen.TabIndex = 9;
             this.NombreResumen.Text = "Nombre";
             // 
@@ -1213,9 +1145,8 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DataResumen.DefaultCellStyle = dataGridViewCellStyle5;
             this.DataResumen.GridColor = System.Drawing.Color.White;
-            this.DataResumen.Location = new System.Drawing.Point(0, 368);
-            this.DataResumen.Margin = new System.Windows.Forms.Padding(4);
-            this.DataResumen.MinimumSize = new System.Drawing.Size(133, 62);
+            this.DataResumen.Location = new System.Drawing.Point(0, 319);
+            this.DataResumen.MinimumSize = new System.Drawing.Size(100, 50);
             this.DataResumen.Name = "DataResumen";
             this.DataResumen.ReadOnly = true;
             this.DataResumen.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -1234,7 +1165,7 @@
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
             this.DataResumen.RowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.DataResumen.Size = new System.Drawing.Size(487, 366);
+            this.DataResumen.Size = new System.Drawing.Size(365, 297);
             this.DataResumen.TabIndex = 8;
             // 
             // Pesquería
@@ -1270,10 +1201,9 @@
             // 
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(9, 345);
-            this.label65.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label65.Location = new System.Drawing.Point(7, 300);
             this.label65.Name = "label65";
-            this.label65.Size = new System.Drawing.Size(97, 19);
+            this.label65.Size = new System.Drawing.Size(77, 16);
             this.label65.TabIndex = 6;
             this.label65.Text = "Pesquerías:";
             // 
@@ -1281,10 +1211,9 @@
             // 
             this.label63.AutoSize = true;
             this.label63.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label63.Location = new System.Drawing.Point(9, 290);
-            this.label63.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label63.Location = new System.Drawing.Point(7, 256);
             this.label63.Name = "label63";
-            this.label63.Size = new System.Drawing.Size(153, 19);
+            this.label63.Size = new System.Drawing.Size(124, 16);
             this.label63.TabIndex = 4;
             this.label63.Text = "Esf. Pesq. Nominal:";
             // 
@@ -1292,10 +1221,9 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(9, 242);
-            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Location = new System.Drawing.Point(7, 197);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(140, 19);
+            this.label19.Size = new System.Drawing.Size(111, 16);
             this.label19.TabIndex = 2;
             this.label19.Text = "Credencializados:";
             // 
@@ -1303,10 +1231,9 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(47, 149);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Location = new System.Drawing.Point(35, 121);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(92, 16);
+            this.label16.Size = new System.Drawing.Size(72, 14);
             this.label16.TabIndex = 2;
             this.label16.Text = "Sin Actividad:";
             // 
@@ -1314,10 +1241,9 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(9, 220);
-            this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label18.Location = new System.Drawing.Point(7, 179);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(101, 19);
+            this.label18.Size = new System.Drawing.Size(81, 16);
             this.label18.TabIndex = 2;
             this.label18.Text = "Asegurados:";
             // 
@@ -1325,10 +1251,9 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(47, 128);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label15.Location = new System.Drawing.Point(35, 104);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(75, 16);
+            this.label15.Size = new System.Drawing.Size(58, 14);
             this.label15.TabIndex = 2;
             this.label15.Text = "Marineros:";
             // 
@@ -1336,10 +1261,9 @@
             // 
             this.label22.AutoSize = true;
             this.label22.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label22.Location = new System.Drawing.Point(47, 171);
-            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Location = new System.Drawing.Point(35, 139);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(94, 16);
+            this.label22.Size = new System.Drawing.Size(75, 14);
             this.label22.TabIndex = 2;
             this.label22.Text = "Acuacultores:";
             // 
@@ -1347,10 +1271,9 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(9, 199);
-            this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label17.Location = new System.Drawing.Point(7, 162);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(94, 19);
+            this.label17.Size = new System.Drawing.Size(75, 16);
             this.label17.TabIndex = 2;
             this.label17.Text = "Ordenados:";
             // 
@@ -1358,10 +1281,9 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(47, 107);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(35, 87);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(76, 16);
+            this.label14.Size = new System.Drawing.Size(58, 14);
             this.label14.TabIndex = 2;
             this.label14.Text = "Capitanes:";
             // 
@@ -1369,10 +1291,9 @@
             // 
             this.label61.AutoSize = true;
             this.label61.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label61.Location = new System.Drawing.Point(9, 85);
-            this.label61.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label61.Location = new System.Drawing.Point(7, 69);
             this.label61.Name = "label61";
-            this.label61.Size = new System.Drawing.Size(64, 19);
+            this.label61.Size = new System.Drawing.Size(52, 16);
             this.label61.TabIndex = 2;
             this.label61.Text = "Socios:";
             // 
@@ -1382,10 +1303,9 @@
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(1511, 98);
-            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Location = new System.Drawing.Point(1133, 80);
             this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(108, 24);
+            this.label23.Size = new System.Drawing.Size(91, 19);
             this.label23.TabIndex = 9;
             this.label23.Text = "RESUMEN";
             // 
@@ -1395,10 +1315,9 @@
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(220, 23);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Location = new System.Drawing.Point(165, 19);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(183, 55);
+            this.button1.Size = new System.Drawing.Size(137, 45);
             this.button1.TabIndex = 108;
             this.button1.Text = "PESCADORES";
             this.button1.UseVisualStyleBackColor = false;
@@ -1410,10 +1329,9 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(423, 23);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
+            this.button2.Location = new System.Drawing.Point(317, 19);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(183, 55);
+            this.button2.Size = new System.Drawing.Size(137, 45);
             this.button2.TabIndex = 108;
             this.button2.Text = "PERMISOS";
             this.button2.UseVisualStyleBackColor = false;
@@ -1425,10 +1343,9 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(21, 23);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
+            this.button3.Location = new System.Drawing.Point(16, 19);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(183, 55);
+            this.button3.Size = new System.Drawing.Size(137, 45);
             this.button3.TabIndex = 108;
             this.button3.Text = "REGISTRO EMBARCACIONES";
             this.button3.UseVisualStyleBackColor = false;
@@ -1436,14 +1353,12 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.caToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 92);
+            this.menuStrip1.Location = new System.Drawing.Point(148, 75);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStrip1.Size = new System.Drawing.Size(2001, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1501, 24);
             this.menuStrip1.TabIndex = 115;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.Visible = false;
@@ -1454,20 +1369,20 @@
             this.generarToolStripMenuItem,
             this.cargarToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(71, 26);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // generarToolStripMenuItem
             // 
             this.generarToolStripMenuItem.Name = "generarToolStripMenuItem";
-            this.generarToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
+            this.generarToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.generarToolStripMenuItem.Text = "Generar";
             this.generarToolStripMenuItem.Click += new System.EventHandler(this.generarToolStripMenuItem_Click);
             // 
             // cargarToolStripMenuItem
             // 
             this.cargarToolStripMenuItem.Name = "cargarToolStripMenuItem";
-            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(136, 26);
+            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
             this.cargarToolStripMenuItem.Text = "Cargar";
             this.cargarToolStripMenuItem.Click += new System.EventHandler(this.cargarToolStripMenuItem_Click);
             // 
@@ -1477,7 +1392,7 @@
             this.servidorToolStripMenuItem,
             this.cambiosToolStripMenuItem});
             this.caToolStripMenuItem.Name = "caToolStripMenuItem";
-            this.caToolStripMenuItem.Size = new System.Drawing.Size(114, 26);
+            this.caToolStripMenuItem.Size = new System.Drawing.Size(91, 20);
             this.caToolStripMenuItem.Text = "Base de datos";
             // 
             // servidorToolStripMenuItem
@@ -1486,7 +1401,7 @@
             this.servidorToolStripMenuItem.CheckOnClick = true;
             this.servidorToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.servidorToolStripMenuItem.Name = "servidorToolStripMenuItem";
-            this.servidorToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
+            this.servidorToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.servidorToolStripMenuItem.Text = "Servidor";
             this.servidorToolStripMenuItem.Click += new System.EventHandler(this.servidorToolStripMenuItem_Click);
             // 
@@ -1494,7 +1409,7 @@
             // 
             this.cambiosToolStripMenuItem.CheckOnClick = true;
             this.cambiosToolStripMenuItem.Name = "cambiosToolStripMenuItem";
-            this.cambiosToolStripMenuItem.Size = new System.Drawing.Size(142, 26);
+            this.cambiosToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.cambiosToolStripMenuItem.Text = "Cambios";
             this.cambiosToolStripMenuItem.Click += new System.EventHandler(this.cambiosToolStripMenuItem_Click);
             // 
@@ -1508,10 +1423,9 @@
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(220, 101);
-            this.button4.Margin = new System.Windows.Forms.Padding(4);
+            this.button4.Location = new System.Drawing.Point(165, 82);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(183, 55);
+            this.button4.Size = new System.Drawing.Size(137, 45);
             this.button4.TabIndex = 155;
             this.button4.Text = "LISTA PESCADORES";
             this.button4.UseVisualStyleBackColor = false;
@@ -1523,10 +1437,9 @@
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(423, 101);
-            this.button5.Margin = new System.Windows.Forms.Padding(4);
+            this.button5.Location = new System.Drawing.Point(317, 82);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(183, 55);
+            this.button5.Size = new System.Drawing.Size(137, 45);
             this.button5.TabIndex = 156;
             this.button5.Text = "REPORTES";
             this.button5.UseVisualStyleBackColor = false;
@@ -1537,10 +1450,10 @@
             this.Logo.BackColor = System.Drawing.Color.Transparent;
             this.Logo.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Logo.Location = new System.Drawing.Point(1155, 34);
-            this.Logo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Logo.Location = new System.Drawing.Point(866, 28);
+            this.Logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Logo.Name = "Logo";
-            this.Logo.Size = new System.Drawing.Size(267, 74);
+            this.Logo.Size = new System.Drawing.Size(200, 60);
             this.Logo.TabIndex = 154;
             this.Logo.TabStop = false;
             // 
@@ -1549,10 +1462,10 @@
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(251, 34);
-            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox5.Location = new System.Drawing.Point(188, 28);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(67, 74);
+            this.pictureBox5.Size = new System.Drawing.Size(50, 60);
             this.pictureBox5.TabIndex = 153;
             this.pictureBox5.TabStop = false;
             // 
@@ -1563,11 +1476,11 @@
             this.ListaNombres.ForeColor = System.Drawing.Color.Black;
             this.ListaNombres.FormattingEnabled = true;
             this.ListaNombres.HorizontalScrollbar = true;
-            this.ListaNombres.ItemHeight = 20;
-            this.ListaNombres.Location = new System.Drawing.Point(5, 409);
-            this.ListaNombres.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ListaNombres.ItemHeight = 16;
+            this.ListaNombres.Location = new System.Drawing.Point(4, 332);
+            this.ListaNombres.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ListaNombres.Name = "ListaNombres";
-            this.ListaNombres.Size = new System.Drawing.Size(219, 204);
+            this.ListaNombres.Size = new System.Drawing.Size(165, 180);
             this.ListaNombres.TabIndex = 185;
             this.ListaNombres.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListaNombres_MouseDoubleClick);
             // 
@@ -1575,11 +1488,11 @@
             // 
             this.BuscarN.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BuscarN.ForeColor = System.Drawing.Color.Black;
-            this.BuscarN.Location = new System.Drawing.Point(5, 373);
-            this.BuscarN.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.BuscarN.Location = new System.Drawing.Point(4, 303);
+            this.BuscarN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BuscarN.MaxLength = 100;
             this.BuscarN.Name = "BuscarN";
-            this.BuscarN.Size = new System.Drawing.Size(219, 23);
+            this.BuscarN.Size = new System.Drawing.Size(165, 20);
             this.BuscarN.TabIndex = 184;
             this.BuscarN.TextChanged += new System.EventHandler(this.BuscarN_TextChanged);
             this.BuscarN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BuscarN_KeyPress);
@@ -1588,10 +1501,9 @@
             // 
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(23, 351);
-            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Location = new System.Drawing.Point(17, 285);
             this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(142, 17);
+            this.label25.Size = new System.Drawing.Size(113, 13);
             this.label25.TabIndex = 183;
             this.label25.Text = "NOMBRE UNIDADES";
             // 
@@ -1601,11 +1513,10 @@
             this.ListaRNPA.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ListaRNPA.ForeColor = System.Drawing.Color.Black;
             this.ListaRNPA.FormattingEnabled = true;
-            this.ListaRNPA.ItemHeight = 17;
-            this.ListaRNPA.Location = new System.Drawing.Point(5, 84);
-            this.ListaRNPA.Margin = new System.Windows.Forms.Padding(4);
+            this.ListaRNPA.ItemHeight = 15;
+            this.ListaRNPA.Location = new System.Drawing.Point(4, 68);
             this.ListaRNPA.Name = "ListaRNPA";
-            this.ListaRNPA.Size = new System.Drawing.Size(219, 225);
+            this.ListaRNPA.Size = new System.Drawing.Size(165, 184);
             this.ListaRNPA.TabIndex = 182;
             this.ListaRNPA.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListaRNPA_MouseDoubleClick);
             // 
@@ -1613,11 +1524,10 @@
             // 
             this.BuscarR.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BuscarR.ForeColor = System.Drawing.Color.Black;
-            this.BuscarR.Location = new System.Drawing.Point(5, 52);
-            this.BuscarR.Margin = new System.Windows.Forms.Padding(4);
+            this.BuscarR.Location = new System.Drawing.Point(4, 42);
             this.BuscarR.MaxLength = 10;
             this.BuscarR.Name = "BuscarR";
-            this.BuscarR.Size = new System.Drawing.Size(219, 23);
+            this.BuscarR.Size = new System.Drawing.Size(165, 20);
             this.BuscarR.TabIndex = 181;
             this.BuscarR.TextChanged += new System.EventHandler(this.BuscarR_TextChanged);
             this.BuscarR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BuscarR_KeyPress);
@@ -1626,10 +1536,9 @@
             // 
             this.label26.AutoSize = true;
             this.label26.ForeColor = System.Drawing.Color.Black;
-            this.label26.Location = new System.Drawing.Point(45, 26);
-            this.label26.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label26.Location = new System.Drawing.Point(34, 21);
             this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(120, 17);
+            this.label26.Size = new System.Drawing.Size(96, 13);
             this.label26.TabIndex = 180;
             this.label26.Text = "RNPA UNIDADES";
             // 
@@ -1648,10 +1557,9 @@
             this.PanelRNPA.Controls.Add(this.label28);
             this.PanelRNPA.Controls.Add(this.label27);
             this.PanelRNPA.ForeColor = System.Drawing.Color.Black;
-            this.PanelRNPA.Location = new System.Drawing.Point(505, 224);
-            this.PanelRNPA.Margin = new System.Windows.Forms.Padding(4);
+            this.PanelRNPA.Location = new System.Drawing.Point(379, 182);
             this.PanelRNPA.Name = "PanelRNPA";
-            this.PanelRNPA.Size = new System.Drawing.Size(635, 260);
+            this.PanelRNPA.Size = new System.Drawing.Size(477, 212);
             this.PanelRNPA.TabIndex = 127;
             this.PanelRNPA.Visible = false;
             // 
@@ -1663,10 +1571,9 @@
             this.label30.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.Black;
             this.label30.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label30.Location = new System.Drawing.Point(116, 17);
-            this.label30.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label30.Location = new System.Drawing.Point(87, 14);
             this.label30.Name = "label30";
-            this.label30.Size = new System.Drawing.Size(304, 27);
+            this.label30.Size = new System.Drawing.Size(238, 22);
             this.label30.TabIndex = 186;
             this.label30.Text = "Actualizar RNPA de Unidad";
             // 
@@ -1675,10 +1582,9 @@
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(57, 4);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Location = new System.Drawing.Point(43, 3);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(53, 49);
+            this.pictureBox8.Size = new System.Drawing.Size(40, 40);
             this.pictureBox8.TabIndex = 137;
             this.pictureBox8.TabStop = false;
             // 
@@ -1687,10 +1593,9 @@
             this.Logo1.BackColor = System.Drawing.Color.Transparent;
             this.Logo1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.Logo1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Logo1.Location = new System.Drawing.Point(433, 1);
-            this.Logo1.Margin = new System.Windows.Forms.Padding(4);
+            this.Logo1.Location = new System.Drawing.Point(325, 1);
             this.Logo1.Name = "Logo1";
-            this.Logo1.Size = new System.Drawing.Size(160, 49);
+            this.Logo1.Size = new System.Drawing.Size(120, 40);
             this.Logo1.TabIndex = 136;
             this.Logo1.TabStop = false;
             // 
@@ -1699,10 +1604,9 @@
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Black;
-            this.label29.Location = new System.Drawing.Point(545, 240);
-            this.label29.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label29.Location = new System.Drawing.Point(409, 195);
             this.label29.Name = "label29";
-            this.label29.Size = new System.Drawing.Size(69, 16);
+            this.label29.Size = new System.Drawing.Size(56, 14);
             this.label29.TabIndex = 134;
             this.label29.Text = "Actualizar";
             // 
@@ -1710,21 +1614,19 @@
             // 
             this.RnpaMal.AutoSize = true;
             this.RnpaMal.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RnpaMal.Location = new System.Drawing.Point(57, 102);
-            this.RnpaMal.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.RnpaMal.Location = new System.Drawing.Point(43, 83);
             this.RnpaMal.Name = "RnpaMal";
-            this.RnpaMal.Size = new System.Drawing.Size(91, 22);
+            this.RnpaMal.Size = new System.Drawing.Size(70, 18);
             this.RnpaMal.TabIndex = 132;
             this.RnpaMal.Text = "RnpaMal";
             // 
             // RnpaNuevo
             // 
             this.RnpaNuevo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RnpaNuevo.Location = new System.Drawing.Point(57, 165);
-            this.RnpaNuevo.Margin = new System.Windows.Forms.Padding(4);
+            this.RnpaNuevo.Location = new System.Drawing.Point(43, 134);
             this.RnpaNuevo.MaxLength = 10;
             this.RnpaNuevo.Name = "RnpaNuevo";
-            this.RnpaNuevo.Size = new System.Drawing.Size(155, 29);
+            this.RnpaNuevo.Size = new System.Drawing.Size(117, 25);
             this.RnpaNuevo.TabIndex = 131;
             // 
             // label28
@@ -1733,10 +1635,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(53, 142);
-            this.label28.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label28.Location = new System.Drawing.Point(40, 115);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(120, 22);
+            this.label28.Size = new System.Drawing.Size(91, 17);
             this.label28.TabIndex = 130;
             this.label28.Text = "RNPA Nuevo";
             // 
@@ -1746,10 +1647,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label27.AutoSize = true;
             this.label27.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label27.Location = new System.Drawing.Point(53, 78);
-            this.label27.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label27.Location = new System.Drawing.Point(40, 63);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(117, 22);
+            this.label27.Size = new System.Drawing.Size(89, 17);
             this.label27.TabIndex = 128;
             this.label27.Text = "RNPA Actual";
             // 
@@ -1764,11 +1664,9 @@
             this.gbBotones.Controls.Add(this.button4);
             this.gbBotones.Controls.Add(this.button5);
             this.gbBotones.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbBotones.Location = new System.Drawing.Point(277, 553);
-            this.gbBotones.Margin = new System.Windows.Forms.Padding(4);
+            this.gbBotones.Location = new System.Drawing.Point(208, 449);
             this.gbBotones.Name = "gbBotones";
-            this.gbBotones.Padding = new System.Windows.Forms.Padding(4);
-            this.gbBotones.Size = new System.Drawing.Size(1191, 185);
+            this.gbBotones.Size = new System.Drawing.Size(893, 150);
             this.gbBotones.TabIndex = 186;
             this.gbBotones.TabStop = false;
             this.gbBotones.Text = "Entidades";
@@ -1779,10 +1677,9 @@
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(620, 101);
-            this.button7.Margin = new System.Windows.Forms.Padding(4);
+            this.button7.Location = new System.Drawing.Point(465, 82);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(183, 55);
+            this.button7.Size = new System.Drawing.Size(137, 45);
             this.button7.TabIndex = 159;
             this.button7.Text = "GENERAR EXPEDIENTE";
             this.button7.UseVisualStyleBackColor = false;
@@ -1794,10 +1691,9 @@
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(620, 23);
-            this.button6.Margin = new System.Windows.Forms.Padding(4);
+            this.button6.Location = new System.Drawing.Point(465, 19);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(183, 55);
+            this.button6.Size = new System.Drawing.Size(137, 45);
             this.button6.TabIndex = 158;
             this.button6.Text = "ENTREGA DE CREDENCIALES";
             this.button6.UseVisualStyleBackColor = false;
@@ -1809,10 +1705,9 @@
             this.Expediente.Cursor = System.Windows.Forms.Cursors.Hand;
             this.Expediente.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Expediente.ForeColor = System.Drawing.Color.Black;
-            this.Expediente.Location = new System.Drawing.Point(21, 101);
-            this.Expediente.Margin = new System.Windows.Forms.Padding(4);
+            this.Expediente.Location = new System.Drawing.Point(16, 82);
             this.Expediente.Name = "Expediente";
-            this.Expediente.Size = new System.Drawing.Size(183, 55);
+            this.Expediente.Size = new System.Drawing.Size(137, 45);
             this.Expediente.TabIndex = 157;
             this.Expediente.Text = "EXPEDIENTE";
             this.Expediente.UseVisualStyleBackColor = false;
@@ -1826,11 +1721,9 @@
             this.gbBusqueda.Controls.Add(this.BuscarN);
             this.gbBusqueda.Controls.Add(this.ListaNombres);
             this.gbBusqueda.Controls.Add(this.BuscarR);
-            this.gbBusqueda.Location = new System.Drawing.Point(16, 143);
-            this.gbBusqueda.Margin = new System.Windows.Forms.Padding(4);
+            this.gbBusqueda.Location = new System.Drawing.Point(12, 116);
             this.gbBusqueda.Name = "gbBusqueda";
-            this.gbBusqueda.Padding = new System.Windows.Forms.Padding(4);
-            this.gbBusqueda.Size = new System.Drawing.Size(229, 644);
+            this.gbBusqueda.Size = new System.Drawing.Size(172, 523);
             this.gbBusqueda.TabIndex = 187;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
@@ -1850,10 +1743,9 @@
             this.panel1.Controls.Add(this.pictureBox12);
             this.panel1.Controls.Add(this.label35);
             this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(564, 214);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(423, 174);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(517, 285);
+            this.panel1.Size = new System.Drawing.Size(388, 232);
             this.panel1.TabIndex = 187;
             this.panel1.Visible = false;
             // 
@@ -1866,20 +1758,18 @@
             "LA PAZ",
             "LOS CABOS",
             "LORETO"});
-            this.comboBox1.Location = new System.Drawing.Point(241, 78);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Location = new System.Drawing.Point(181, 63);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(160, 24);
+            this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 191;
             this.comboBox1.Text = "COMONDU";
             // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(51, 178);
-            this.radioButton3.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButton3.Location = new System.Drawing.Point(38, 145);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(75, 21);
+            this.radioButton3.Size = new System.Drawing.Size(60, 17);
             this.radioButton3.TabIndex = 190;
             this.radioButton3.Text = "TOTAL";
             this.radioButton3.UseVisualStyleBackColor = true;
@@ -1887,10 +1777,9 @@
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(51, 124);
-            this.radioButton2.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButton2.Location = new System.Drawing.Point(38, 101);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(167, 21);
+            this.radioButton2.Size = new System.Drawing.Size(134, 17);
             this.radioButton2.TabIndex = 189;
             this.radioButton2.Text = "UNIDAD ECONOMICA";
             this.radioButton2.UseVisualStyleBackColor = true;
@@ -1899,10 +1788,9 @@
             // 
             this.radioButton1.AutoSize = true;
             this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(51, 78);
-            this.radioButton1.Margin = new System.Windows.Forms.Padding(4);
+            this.radioButton1.Location = new System.Drawing.Point(38, 63);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(98, 21);
+            this.radioButton1.Size = new System.Drawing.Size(81, 17);
             this.radioButton1.TabIndex = 188;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "MUNICIPIO";
@@ -1917,10 +1805,9 @@
             this.label34.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label34.ForeColor = System.Drawing.Color.Black;
             this.label34.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label34.Location = new System.Drawing.Point(65, 20);
-            this.label34.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label34.Location = new System.Drawing.Point(49, 16);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(209, 27);
+            this.label34.Size = new System.Drawing.Size(166, 22);
             this.label34.TabIndex = 186;
             this.label34.Text = "Generar Respaldo";
             // 
@@ -1929,10 +1816,9 @@
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox9.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox9.Location = new System.Drawing.Point(3, 3);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(53, 49);
+            this.pictureBox9.Size = new System.Drawing.Size(40, 40);
             this.pictureBox9.TabIndex = 137;
             this.pictureBox9.TabStop = false;
             // 
@@ -1941,10 +1827,9 @@
             this.Logo2.BackColor = System.Drawing.Color.Transparent;
             this.Logo2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.Logo2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Logo2.Location = new System.Drawing.Point(308, 4);
-            this.Logo2.Margin = new System.Windows.Forms.Padding(4);
+            this.Logo2.Location = new System.Drawing.Point(231, 3);
             this.Logo2.Name = "Logo2";
-            this.Logo2.Size = new System.Drawing.Size(160, 49);
+            this.Logo2.Size = new System.Drawing.Size(120, 40);
             this.Logo2.TabIndex = 136;
             this.Logo2.TabStop = false;
             // 
@@ -1953,10 +1838,9 @@
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label35.ForeColor = System.Drawing.Color.Black;
-            this.label35.Location = new System.Drawing.Point(545, 240);
-            this.label35.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label35.Location = new System.Drawing.Point(409, 195);
             this.label35.Name = "label35";
-            this.label35.Size = new System.Drawing.Size(69, 16);
+            this.label35.Size = new System.Drawing.Size(56, 14);
             this.label35.TabIndex = 134;
             this.label35.Text = "Actualizar";
             // 
@@ -1965,20 +1849,42 @@
             this.Bienvenido.AutoSize = true;
             this.Bienvenido.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bienvenido.ForeColor = System.Drawing.Color.DimGray;
-            this.Bienvenido.Location = new System.Drawing.Point(1489, 34);
-            this.Bienvenido.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Bienvenido.Location = new System.Drawing.Point(1117, 28);
             this.Bienvenido.Name = "Bienvenido";
-            this.Bienvenido.Size = new System.Drawing.Size(95, 20);
+            this.Bienvenido.Size = new System.Drawing.Size(75, 16);
             this.Bienvenido.TabIndex = 191;
             this.Bienvenido.Text = "Bienvenido ";
             // 
+            // vencidos
+            // 
+            this.vencidos.AutoSize = true;
+            this.vencidos.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vencidos.LinkColor = System.Drawing.Color.Black;
+            this.vencidos.Location = new System.Drawing.Point(162, 217);
+            this.vencidos.Name = "vencidos";
+            this.vencidos.Size = new System.Drawing.Size(11, 14);
+            this.vencidos.TabIndex = 20;
+            this.vencidos.TabStop = true;
+            this.vencidos.Text = "*";
+            this.vencidos.VisitedLinkColor = System.Drawing.Color.Black;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label36.Location = new System.Drawing.Point(35, 217);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(54, 13);
+            this.label36.TabIndex = 19;
+            this.label36.Text = "Vencidos:";
+            // 
             // Pantalla_Registro_UnidadEconomica
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1872, 828);
+            this.ClientSize = new System.Drawing.Size(1370, 690);
             this.Controls.Add(this.Bienvenido);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelRNPA);
@@ -1995,7 +1901,6 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Pantalla_Registro_UnidadEconomica";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ordenamiento Pesquero";
@@ -2179,5 +2084,7 @@
         private System.Windows.Forms.Label Bienvenido;
         private System.Windows.Forms.GroupBox gbBotonesUE;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.LinkLabel vencidos;
+        private System.Windows.Forms.Label label36;
     }
 }
