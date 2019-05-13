@@ -121,7 +121,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                     if (File.Exists(fullFilePath)) { try { Directory.Delete(fullFilePath); } catch (Exception ms) { } }
 
 
-                    if (archivo != "")
+                    if (archivo != "" && oDocument.Rows[0][archivo].ToString() != "")
                     {
                         byte[] file = (byte[])oDocument.Rows[0][archivo];
                         File.WriteAllBytes(fullFilePath, file);
