@@ -57,13 +57,13 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             dgvArchivos[0, 6].Value = "Foto Embarcacion";
             if (exp.Rows.Count > 0)
             {
-                if (exp.Rows[0]["CERTMATRICULA"].ToString() != "") { dgvArchivos[1, 0].Value = true; dgvArchivos[1, 0].Style.BackColor = Color.Green; }
-                if (exp.Rows[0]["CERTSEGURIDAD"].ToString() != "") { dgvArchivos[1, 1].Value = true; dgvArchivos[1, 1].Style.BackColor = Color.Green; }
-                if (exp.Rows[0]["FACTARTESPESCA"].ToString() != "") { dgvArchivos[1, 2].Value = true; dgvArchivos[1, 2].Style.BackColor = Color.Green; }
-                if (exp.Rows[0]["FACTMOTOR"].ToString() != "") { dgvArchivos[1, 3].Value = true; dgvArchivos[1, 3].Style.BackColor = Color.Green; }
-                if (exp.Rows[0]["FACTEMBARCACION"].ToString() != "") { dgvArchivos[1, 4].Value = true; dgvArchivos[1, 4].Style.BackColor = Color.Green; }
-                if (exp.Rows[0]["PAPELETACHIPEO"].ToString() != "") { dgvArchivos[1, 5].Value = true; dgvArchivos[1, 5].Style.BackColor = Color.Green; }
-                if (exp.Rows[0]["FOTOEMB"].ToString() != "") { dgvArchivos[1, 6].Value = true; dgvArchivos[1, 6].Style.BackColor = Color.Green; }
+                if (exp.Rows[0]["CERTMATRICULA"].ToString() != "") { dgvArchivos[1, 0].Value = true; dgvArchivos[1, 0].Style.BackColor = Color.Green; } else { dgvArchivos[1, 0].Value = false; dgvArchivos[1, 0].Style.BackColor = Color.Red; }
+                if (exp.Rows[0]["CERTSEGURIDAD"].ToString() != "") { dgvArchivos[1, 1].Value = true; dgvArchivos[1, 1].Style.BackColor = Color.Green; } else { dgvArchivos[1, 1].Value = false; dgvArchivos[1, 1].Style.BackColor = Color.Red; }
+                if (exp.Rows[0]["FACTARTESPESCA"].ToString() != "") { dgvArchivos[1, 2].Value = true; dgvArchivos[1, 2].Style.BackColor = Color.Green; } else { dgvArchivos[1, 2].Value = false; dgvArchivos[1, 2].Style.BackColor = Color.Red; }
+                if (exp.Rows[0]["FACTMOTOR"].ToString() != "") { dgvArchivos[1, 3].Value = true; dgvArchivos[1, 3].Style.BackColor = Color.Green; } else { dgvArchivos[1, 3].Value = false; dgvArchivos[1, 3].Style.BackColor = Color.Red; }
+                if (exp.Rows[0]["FACTEMBARCACION"].ToString() != "") { dgvArchivos[1, 4].Value = true; dgvArchivos[1, 4].Style.BackColor = Color.Green; } else { dgvArchivos[1, 4].Value = false; dgvArchivos[1, 4].Style.BackColor = Color.Red; }
+                if (exp.Rows[0]["PAPELETACHIPEO"].ToString() != "") { dgvArchivos[1, 5].Value = true; dgvArchivos[1, 5].Style.BackColor = Color.Green; } else { dgvArchivos[1, 5].Value = false; dgvArchivos[1, 5].Style.BackColor = Color.Red; }
+                if (exp.Rows[0]["FOTOEMB"].ToString() != "") { dgvArchivos[1, 6].Value = true; dgvArchivos[1, 6].Style.BackColor = Color.Green; } else { dgvArchivos[1, 6].Value = false; dgvArchivos[1, 6].Style.BackColor = Color.Red; }
             }
         }
         private void SubirPDF_Click(object sender, EventArgs e)
@@ -189,6 +189,35 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 exito = proc.InsertarPDFEmbarcacion(MATRICULA, new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
             val.Exito(exito);
         }
+
+        private void EliminarPDF_Click(object sender, EventArgs e)
+        {
+            if (dgvArchivos.CurrentCell.Selected != false)
+            {
+                if (DialogResult.Yes == MessageBox.Show("Desea ELIMINAR el archivo seleccionado?", "ELIMINAR", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation))
+                {
+                    string archivo = "";
+                    if (dgvArchivos.SelectedCells[0].RowIndex == 0)
+                        archivo = "CERTMATRICULA";
+                    else if (dgvArchivos.SelectedCells[0].RowIndex == 1)
+                        archivo = "CERTSEGURIDAD";
+                    else if (dgvArchivos.SelectedCells[0].RowIndex == 2)
+                        archivo = "FACTARTESPESCA";
+                    else if (dgvArchivos.SelectedCells[0].RowIndex == 3)
+                        archivo = "FACTMOTOR";
+                    else if (dgvArchivos.SelectedCells[0].RowIndex == 4)
+                        archivo = "FACTEMBARCACION";
+                    else if (dgvArchivos.SelectedCells[0].RowIndex == 5)
+                        archivo = "PAPELETACHIPEO";
+
+                    if (proc.EliminarPDF("", MATRICULA, "", "", archivo) > 0)
+                    {
+                        MessageBox.Show("Archivo Eliminado con Exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+                    CargarExpediente();
+                }
+            }
+            }
     }
 }
 

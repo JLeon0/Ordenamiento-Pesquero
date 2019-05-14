@@ -317,6 +317,11 @@ namespace Logica
             string[] Parametros = { "@curp", "@actanac","@acurp","@aine","@acompdom" };
             return c.Ejecutar("InsertarPDFPescador", Parametros, CURP, acta,acurp,aine,acomp);
         }
+        public int EliminarPDF(string rnpa,string matricula, string nper, string curp, string archivo)
+        {
+            string[] Parametros = { "@rnpa", "@matricula", "@nper", "@curp", "@archivo" };
+            return c.Ejecutar("EliminarPDF", Parametros, rnpa, matricula, nper, curp, archivo);
+        }
         public DataTable ObtenerExpedientePescador(string curp)
         {
             string[] Parametros = { "@curp" };
