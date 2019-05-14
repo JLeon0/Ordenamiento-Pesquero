@@ -91,6 +91,8 @@
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox13 = new System.Windows.Forms.PictureBox();
             this.Resumen = new System.Windows.Forms.GroupBox();
+            this.vencidos = new System.Windows.Forms.LinkLabel();
+            this.label36 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.Titular = new System.Windows.Forms.Label();
             this.TotalPermisos = new System.Windows.Forms.LinkLabel();
@@ -171,8 +173,6 @@
             this.Logo2 = new System.Windows.Forms.PictureBox();
             this.label35 = new System.Windows.Forms.Label();
             this.Bienvenido = new System.Windows.Forms.Label();
-            this.vencidos = new System.Windows.Forms.LinkLabel();
-            this.label36 = new System.Windows.Forms.Label();
             this.gbOrgPes.SuspendLayout();
             this.gbBotonesUE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
@@ -912,6 +912,29 @@
             this.Resumen.TabIndex = 101;
             this.Resumen.TabStop = false;
             // 
+            // vencidos
+            // 
+            this.vencidos.AutoSize = true;
+            this.vencidos.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.vencidos.LinkColor = System.Drawing.Color.Black;
+            this.vencidos.Location = new System.Drawing.Point(162, 217);
+            this.vencidos.Name = "vencidos";
+            this.vencidos.Size = new System.Drawing.Size(11, 14);
+            this.vencidos.TabIndex = 20;
+            this.vencidos.TabStop = true;
+            this.vencidos.Text = "*";
+            this.vencidos.VisitedLinkColor = System.Drawing.Color.Black;
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.label36.Location = new System.Drawing.Point(35, 217);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(54, 13);
+            this.label36.TabIndex = 19;
+            this.label36.Text = "Vencidos:";
+            // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
@@ -1347,7 +1370,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(137, 45);
             this.button3.TabIndex = 108;
-            this.button3.Text = "REGISTRO EMBARCACIONES";
+            this.button3.Text = "EMBARCACIONES";
             this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -1854,29 +1877,6 @@
             this.Bienvenido.Size = new System.Drawing.Size(75, 16);
             this.Bienvenido.TabIndex = 191;
             this.Bienvenido.Text = "Bienvenido ";
-            // 
-            // vencidos
-            // 
-            this.vencidos.AutoSize = true;
-            this.vencidos.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vencidos.LinkColor = System.Drawing.Color.Black;
-            this.vencidos.Location = new System.Drawing.Point(162, 217);
-            this.vencidos.Name = "vencidos";
-            this.vencidos.Size = new System.Drawing.Size(11, 14);
-            this.vencidos.TabIndex = 20;
-            this.vencidos.TabStop = true;
-            this.vencidos.Text = "*";
-            this.vencidos.VisitedLinkColor = System.Drawing.Color.Black;
-            // 
-            // label36
-            // 
-            this.label36.AutoSize = true;
-            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label36.Location = new System.Drawing.Point(35, 217);
-            this.label36.Name = "label36";
-            this.label36.Size = new System.Drawing.Size(54, 13);
-            this.label36.TabIndex = 19;
-            this.label36.Text = "Vencidos:";
             // 
             // Pantalla_Registro_UnidadEconomica
             // 

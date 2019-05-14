@@ -104,11 +104,11 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 {
                     string archivo = "";
                     if (dgvArchivos.SelectedCells[0].RowIndex == 0)
-                        archivo = "ACTANAC";
+                        archivo = "AINE"; 
                     else if (dgvArchivos.SelectedCells[0].RowIndex == 1)
                         archivo = "ACURP";
-                    else if (dgvArchivos.SelectedCells[0].RowIndex == 2)
-                        archivo = "AINE";
+                    else if(dgvArchivos.SelectedCells[0].RowIndex == 2)
+                        archivo = "ACTANAC";
                     else if (dgvArchivos.SelectedCells[0].RowIndex == 3)
                         archivo = "ACOMPDOM";
 
@@ -137,11 +137,11 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
         {
             int exito = 0;
             if (dgvArchivos.SelectedCells[0].RowIndex == 0)
-                exito = proc.InsertarPDFPescador(CURPPesc, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
+                exito = proc.InsertarPDFPescador(CURPPesc, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
             else if (dgvArchivos.SelectedCells[0].RowIndex == 1)
                 exito = proc.InsertarPDFPescador(CURPPesc, new byte[0], pdf.GetBuffer(), new byte[0], new byte[0]);
             else if (dgvArchivos.SelectedCells[0].RowIndex == 2)
-                exito = proc.InsertarPDFPescador(CURPPesc, new byte[0], new byte[0], pdf.GetBuffer(), new byte[0]);
+                exito = proc.InsertarPDFPescador(CURPPesc, pdf.GetBuffer(), new byte[0], new byte[0], new byte[0]);
             else if (dgvArchivos.SelectedCells[0].RowIndex == 3)
                 exito = proc.InsertarPDFPescador(CURPPesc, new byte[0], new byte[0], new byte[0], pdf.GetBuffer());
 
@@ -163,15 +163,15 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
         {
             DataTable exp = proc.ObtenerExpedientePescador(CURPPesc);
             dgvArchivos.RowCount = 4;
-            dgvArchivos[0, 0].Value = "Acta de Nacimiento";
+            dgvArchivos[0, 0].Value = "INE (Identificación Oficial)";
             dgvArchivos[0, 1].Value = "CURP";
-            dgvArchivos[0, 2].Value = "INE (Identificación Oficial)";
+            dgvArchivos[0, 2].Value = "Acta de Nacimiento";
             dgvArchivos[0, 3].Value = "Comprobante de domicilio";
             if (exp.Rows.Count > 0)
             {
-                if (exp.Rows[0]["ACTANAC"].ToString() != "") { dgvArchivos[1, 0].Value = true; dgvArchivos[1, 0].Style.BackColor = Color.Green; }
+                if (exp.Rows[0]["AINE"].ToString() != "") { dgvArchivos[1, 0].Value = true; dgvArchivos[1, 0].Style.BackColor = Color.Green; }
                 if (exp.Rows[0]["ACURP"].ToString() != "") { dgvArchivos[1, 1].Value = true; dgvArchivos[1, 1].Style.BackColor = Color.Green; }
-                if (exp.Rows[0]["AINE"].ToString() != "") { dgvArchivos[1, 2].Value = true; dgvArchivos[1, 2].Style.BackColor = Color.Green; }
+                if (exp.Rows[0]["ACTANAC"].ToString() != "") { dgvArchivos[1, 2].Value = true; dgvArchivos[1, 2].Style.BackColor = Color.Green; }
                 if (exp.Rows[0]["ACOMPDOM"].ToString() != "") { dgvArchivos[1, 3].Value = true; dgvArchivos[1, 3].Style.BackColor = Color.Green; }
             }
         }
