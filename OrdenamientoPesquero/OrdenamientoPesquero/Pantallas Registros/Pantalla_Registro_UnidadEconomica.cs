@@ -579,7 +579,7 @@ namespace OrdenamientoPesquero
                 Asegurados.Text = dt.Rows[0]["ASEGURADOS"].ToString();
                 Acuacultores.Text = dt.Rows[0]["ACUACULTORES"].ToString();
                 Credencializados.Text = dt.Rows[0]["CREDENCIALIZADOS"].ToString();
-                vencidos.Text = dt.Rows[0]["VENCIDOS"].ToString();
+                //vencidos.Text = dt.Rows[0]["VENCIDOS"].ToString();
             }
             else
             {

@@ -101,6 +101,7 @@ namespace OrdenamientoPesquero
             }
             this.Cursor = Cursors.Default;
         }
+
         public int AccionesCertificado(bool Registro)
         {
             if (Registro)
@@ -163,7 +164,7 @@ namespace OrdenamientoPesquero
 
         private void RegistrarUnidad_Click(object sender, EventArgs e)
         {
-            if (ValidarChip())
+            if (NChipCertMat.Text == "   *   *" || ValidarChip())
             {
                 exito = AccionesCertificado(true);
                 val.Exito(exito);
@@ -191,15 +192,14 @@ namespace OrdenamientoPesquero
             if (Si == DialogResult.Yes)
             {
                 exito = proc.Eliminar_Embarcacion(MatriculaCertMat.Text);
-                val.Exito(exito);
                 if (exito > 0)
-                { CertMatXUnidad(); limpiarcertmat(); exito = 0; }   
+                {
+                    MessageBox.Show("La embarcación ha sido eliminada exitosamente.", "ELIMINADA", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    CertMatXUnidad(); limpiarcertmat(); exito = 0;
+                }
             }
             MatriculaCertMat.Focus();
         }
-
-
-
 
         bool ValidarChip()
         {
@@ -343,6 +343,7 @@ namespace OrdenamientoPesquero
             {
                 Pantallas_Archivos.Expediente_Embarcacion expem = new Pantallas_Archivos.Expediente_Embarcacion(MatriculaCertMat.Text, NombreEmbCerMat.Text, NIVEL);
                 expem.ShowDialog();
+                CargarExpediente();
             }
         }
     }

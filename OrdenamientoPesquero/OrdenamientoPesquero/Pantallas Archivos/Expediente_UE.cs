@@ -63,13 +63,13 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 dgvUnidad[0, 6].Value = "Otro";
                 if (expediente.Rows.Count > 0)
                 {
-                    if (expediente.Rows[0]["ACTACONS"].ToString() != "") { dgvUnidad[1, 0].Value = true; dgvUnidad[1, 0].Style.BackColor = Color.Green; }
-                    if (expediente.Rows[0]["ACTAASAMBLEA"].ToString() != "") { dgvUnidad[1, 1].Value = true; dgvUnidad[1, 1].Style.BackColor = Color.Green; }
-                    if (expediente.Rows[0]["RFCUE"].ToString() != "") { dgvUnidad[1, 2].Value = true; dgvUnidad[1, 2].Style.BackColor = Color.Green; }
-                    if (expediente.Rows[0]["COMPDOM"].ToString() != "") { dgvUnidad[1, 3].Value = true; dgvUnidad[1, 3].Style.BackColor = Color.Green; }
-                    if (expediente.Rows[0]["CEDINSCRUE"].ToString() != "") { dgvUnidad[1, 4].Value = true; dgvUnidad[1, 4].Style.BackColor = Color.Green; }
-                    if (expediente.Rows[0]["CEDINSCREMBARCA"].ToString() != "") { dgvUnidad[1, 5].Value = true; dgvUnidad[1, 5].Style.BackColor = Color.Green; }
-                    if (expediente.Rows[0]["OTRO"].ToString() != "") { dgvUnidad[1, 6].Value = true; dgvUnidad[1, 6].Style.BackColor = Color.Green; }
+                    if (expediente.Rows[0]["ACTACONS"].ToString() != "") { dgvUnidad[1, 0].Value = true; dgvUnidad[1, 0].Style.BackColor = Color.Green; } else { dgvUnidad[1, 0].Value = false; dgvUnidad[1, 0].Style.BackColor = Color.Red; }
+                    if (expediente.Rows[0]["ACTAASAMBLEA"].ToString() != "") { dgvUnidad[1, 1].Value = true; dgvUnidad[1, 1].Style.BackColor = Color.Green; } else { dgvUnidad[1, 1].Value = false; dgvUnidad[1, 1].Style.BackColor = Color.Red; }
+                    if (expediente.Rows[0]["RFCUE"].ToString() != "") { dgvUnidad[1, 2].Value = true; dgvUnidad[1, 2].Style.BackColor = Color.Green; } else { dgvUnidad[1, 2].Value = false; dgvUnidad[1, 2].Style.BackColor = Color.Red; }
+                    if (expediente.Rows[0]["COMPDOM"].ToString() != "") { dgvUnidad[1, 3].Value = true; dgvUnidad[1, 3].Style.BackColor = Color.Green; } else { dgvUnidad[1, 3].Value = false; dgvUnidad[1, 3].Style.BackColor = Color.Red; }
+                    if (expediente.Rows[0]["CEDINSCRUE"].ToString() != "") { dgvUnidad[1, 4].Value = true; dgvUnidad[1, 4].Style.BackColor = Color.Green; } else { dgvUnidad[1, 4].Value = false; dgvUnidad[1, 4].Style.BackColor = Color.Red; }
+                    if (expediente.Rows[0]["CEDINSCREMBARCA"].ToString() != "") { dgvUnidad[1, 5].Value = true; dgvUnidad[1, 5].Style.BackColor = Color.Green; } else { dgvUnidad[1, 5].Value = false; dgvUnidad[1, 5].Style.BackColor = Color.Red; }
+                    if (expediente.Rows[0]["OTRO"].ToString() != "") { dgvUnidad[1, 6].Value = true; dgvUnidad[1, 6].Style.BackColor = Color.Green; } else { dgvUnidad[1, 6].Value = false; dgvUnidad[1, 6].Style.BackColor = Color.Red; }
                 }
             }
             else
@@ -82,11 +82,11 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 dgvUnidad[0, 4].Value = "Otro";
                 if (expediente.Rows.Count > 0)
                 {
-                    if (expediente.Rows[0]["RFCUE"].ToString() != "") { dgvUnidad[1, 0].Value = true; dgvUnidad[1, 0].Style.BackColor = Color.Green; }
-                    if (expediente.Rows[0]["COMPDOM"].ToString() != "") { dgvUnidad[1, 1].Value = true; dgvUnidad[1, 1].Style.BackColor = Color.Green; }
-                    if (expediente.Rows[0]["CEDINSCRUE"].ToString() != "") { dgvUnidad[1, 2].Value = true; dgvUnidad[1, 2].Style.BackColor = Color.Green; }
-                    if (expediente.Rows[0]["CEDINSCREMBARCA"].ToString() != "") { dgvUnidad[1, 3].Value = true; dgvUnidad[1, 3].Style.BackColor = Color.Green; }
-                    if (expediente.Rows[0]["OTRO"].ToString() != "") { dgvUnidad[1, 4].Value = true; dgvUnidad[1, 4].Style.BackColor = Color.Green; }
+                    if (expediente.Rows[0]["RFCUE"].ToString() != "") { dgvUnidad[1, 0].Value = true; dgvUnidad[1, 0].Style.BackColor = Color.Green; } else { dgvUnidad[1, 0].Value = false; dgvUnidad[1, 0].Style.BackColor = Color.Red; }
+                    if (expediente.Rows[0]["COMPDOM"].ToString() != "") { dgvUnidad[1, 1].Value = true; dgvUnidad[1, 1].Style.BackColor = Color.Green; } else { dgvUnidad[1, 1].Value = false; dgvUnidad[1, 1].Style.BackColor = Color.Red; }
+                    if (expediente.Rows[0]["CEDINSCRUE"].ToString() != "") { dgvUnidad[1, 2].Value = true; dgvUnidad[1, 2].Style.BackColor = Color.Green; } else { dgvUnidad[1, 2].Value = false; dgvUnidad[1, 2].Style.BackColor = Color.Red; }
+                    if (expediente.Rows[0]["CEDINSCREMBARCA"].ToString() != "") { dgvUnidad[1, 3].Value = true; dgvUnidad[1, 3].Style.BackColor = Color.Green; } else { dgvUnidad[1, 3].Value = false; dgvUnidad[1, 3].Style.BackColor = Color.Red; }
+                    if (expediente.Rows[0]["OTRO"].ToString() != "") { dgvUnidad[1, 4].Value = true; dgvUnidad[1, 4].Style.BackColor = Color.Green; } else { dgvUnidad[1, 4].Value = false; dgvUnidad[1, 4].Style.BackColor = Color.Red; }
                 }
             }
         }
@@ -260,6 +260,53 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 }
             }
             else { MessageBox.Show("Debe seleccionar la fila correspondiente al archivo que desea subir", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+
+        private void EliminarPDF_Click(object sender, EventArgs e)
+        {
+            if (dgvUnidad.CurrentCell.Selected != false)
+            {
+                if (DialogResult.Yes == MessageBox.Show("Desea ELIMINAR el archivo seleccionado?", "ELIMINAR", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation))
+                {
+                    string archivo = "";
+                    if (TIPO == 0)
+                    {
+                        if (dgvUnidad.SelectedCells[0].RowIndex == 0)
+                            archivo = "ACTACONS";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 1)
+                            archivo = "ACTAASAMBLEA";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 2)
+                            archivo = "RFCUE";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
+                            archivo = "COMPDOM";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 4)
+                            archivo = "CEDINSCRUE";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 5)
+                            archivo = "CEDINSCREMBARCA";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 6)
+                            archivo = "OTRO";
+                    }
+                    else
+                    {
+                        if (dgvUnidad.SelectedCells[0].RowIndex == 0)
+                            archivo = "RFCUE";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 1)
+                            archivo = "COMPDOM";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 2)
+                            archivo = "CEDINSCRUE";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 3)
+                            archivo = "CEDINSCREMBARCA";
+                        else if (dgvUnidad.SelectedCells[0].RowIndex == 4)
+                            archivo = "OTRO";
+
+                        if (proc.EliminarPDF(RNPA, "", "", "", archivo) > 0)
+                        {
+                            MessageBox.Show("Archivo Eliminado con Exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        }
+                        CargarExpedienteUnidad();
+                    }
+                }
+            }
         }
 
         private void AbrirPDF_Click(object sender, EventArgs e)

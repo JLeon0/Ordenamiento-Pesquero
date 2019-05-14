@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dgvArchivos = new System.Windows.Forms.DataGridView();
             this.Expediente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -44,11 +44,14 @@
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.EliminarPDF = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArchivos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AbrirPDF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubirPDF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EliminarPDF)).BeginInit();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -85,10 +88,10 @@
             // 
             // Check
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle1.NullValue = false;
-            this.Check.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle3.NullValue = false;
+            this.Check.DefaultCellStyle = dataGridViewCellStyle3;
             this.Check.Frozen = true;
             this.Check.HeaderText = "Check";
             this.Check.Name = "Check";
@@ -198,12 +201,37 @@
             this.label3.TabIndex = 217;
             this.label3.Text = "Abrir Archivo";
             // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(444, 359);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 16);
+            this.label4.TabIndex = 219;
+            this.label4.Text = "Eliminar Archivo";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // EliminarPDF
+            // 
+            this.EliminarPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
+            this.EliminarPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EliminarPDF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EliminarPDF.Location = new System.Drawing.Point(470, 306);
+            this.EliminarPDF.Name = "EliminarPDF";
+            this.EliminarPDF.Size = new System.Drawing.Size(50, 50);
+            this.EliminarPDF.TabIndex = 218;
+            this.EliminarPDF.TabStop = false;
+            this.toolTip1.SetToolTip(this.EliminarPDF, "Eliminar Archivo");
+            this.EliminarPDF.Click += new System.EventHandler(this.EliminarPDF_Click);
+            // 
             // Expediente_Pescador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(545, 401);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.EliminarPDF);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.AbrirPDF);
@@ -225,6 +253,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.AbrirPDF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubirPDF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.EliminarPDF)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -245,5 +274,7 @@
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.PictureBox EliminarPDF;
     }
 }

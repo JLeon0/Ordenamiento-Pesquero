@@ -169,11 +169,40 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             dgvArchivos[0, 3].Value = "Comprobante de domicilio";
             if (exp.Rows.Count > 0)
             {
-                if (exp.Rows[0]["AINE"].ToString() != "") { dgvArchivos[1, 0].Value = true; dgvArchivos[1, 0].Style.BackColor = Color.Green; }
-                if (exp.Rows[0]["ACURP"].ToString() != "") { dgvArchivos[1, 1].Value = true; dgvArchivos[1, 1].Style.BackColor = Color.Green; }
-                if (exp.Rows[0]["ACTANAC"].ToString() != "") { dgvArchivos[1, 2].Value = true; dgvArchivos[1, 2].Style.BackColor = Color.Green; }
-                if (exp.Rows[0]["ACOMPDOM"].ToString() != "") { dgvArchivos[1, 3].Value = true; dgvArchivos[1, 3].Style.BackColor = Color.Green; }
+                if (exp.Rows[0]["AINE"].ToString() != "") { dgvArchivos[1, 0].Value = true; dgvArchivos[1, 0].Style.BackColor = Color.Green; } else { dgvArchivos[1, 0].Value = false; dgvArchivos[1, 0].Style.BackColor = Color.Red; }
+                if (exp.Rows[0]["ACURP"].ToString() != "") { dgvArchivos[1, 1].Value = true; dgvArchivos[1, 1].Style.BackColor = Color.Green; } else { dgvArchivos[1, 1].Value = false; dgvArchivos[1, 1].Style.BackColor = Color.Red; }
+                if (exp.Rows[0]["ACTANAC"].ToString() != "") { dgvArchivos[1, 2].Value = true; dgvArchivos[1, 2].Style.BackColor = Color.Green; } else { dgvArchivos[1, 2].Value = false; dgvArchivos[1, 2].Style.BackColor = Color.Red; }
+                if (exp.Rows[0]["ACOMPDOM"].ToString() != "") { dgvArchivos[1, 3].Value = true; dgvArchivos[1, 3].Style.BackColor = Color.Green; } else { dgvArchivos[1, 3].Value = false; dgvArchivos[1, 3].Style.BackColor = Color.Red; }
             }
+        }
+
+        private void EliminarPDF_Click(object sender, EventArgs e)
+        {
+            if (dgvArchivos.CurrentCell.Selected != false)
+            {
+                if(DialogResult.Yes == MessageBox.Show("Desea ELIMINAR el archivo seleccionado?", "ELIMINAR", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation))
+                {
+                    string archivo = "";
+                    if (dgvArchivos.SelectedCells[0].RowIndex == 0)
+                        archivo = "AINE";
+                    else if (dgvArchivos.SelectedCells[0].RowIndex == 1)
+                        archivo = "ACURP";
+                    else if (dgvArchivos.SelectedCells[0].RowIndex == 2)
+                        archivo = "ACTANAC";
+                    else if (dgvArchivos.SelectedCells[0].RowIndex == 3)
+                        archivo = "ACOMPDOM";
+                    if (proc.EliminarPDF("", "", "", CURPPesc, archivo) > 0)
+                    {
+                        MessageBox.Show("Archivo Eliminado con Exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+                    CargarExpediente();
+                }
+            }
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -393,6 +393,8 @@ namespace OrdenamientoPesquero
             }
         }
 
+       
+
         private void nPer_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
@@ -457,7 +459,7 @@ namespace OrdenamientoPesquero
             string per = ListaPermisos.SelectedValue.ToString(); 
             DataTable exp = proc.ObtenerPermiso(per);
             if (exp.Rows[0]["APERMISO"].ToString() != "") { dgvArchivos[1, 0].Value = true; dgvArchivos[1, 0].Style.BackColor = Color.Green; }
-            else { dgvArchivos[1, 0].Value = false; dgvArchivos[1, 0].Style.BackColor = Color.Red   ; }
+            else { dgvArchivos[1, 0].Value = false; dgvArchivos[1, 0].Style.BackColor = Color.Red; }
 
         }
 
@@ -555,6 +557,21 @@ namespace OrdenamientoPesquero
             else
             {
                 MessageBox.Show("Debe seleccionar la fila correspondiente al archivo que desea visualizar", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void EliminarPDF_Click(object sender, EventArgs e)
+        {
+            if (dgvArchivos.CurrentCell.Selected != false)
+            {
+                if (DialogResult.Yes == MessageBox.Show("Desea ELIMINAR el archivo seleccionado?", "ELIMINAR", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation))
+                {
+                    if (proc.EliminarPDF("", "", nPer.Text, "", "APERMISO") > 0)
+                    {
+                        MessageBox.Show("Archivo Eliminado con Exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+                    CargarExpediente();
+                }
             }
         }
     }

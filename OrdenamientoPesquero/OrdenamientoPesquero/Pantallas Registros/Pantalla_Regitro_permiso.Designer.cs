@@ -118,6 +118,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
             this.gbBotones = new System.Windows.Forms.GroupBox();
+            this.label36 = new System.Windows.Forms.Label();
+            this.EliminarPDF = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposPescaPerm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbarcacionesPerm)).BeginInit();
             this.gbDatos.SuspendLayout();
@@ -137,6 +139,7 @@
             this.groupBox1.SuspendLayout();
             this.gbBusqueda.SuspendLayout();
             this.gbBotones.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EliminarPDF)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -965,7 +968,7 @@
             // label34
             // 
             this.label34.AutoSize = true;
-            this.label34.Location = new System.Drawing.Point(114, 140);
+            this.label34.Location = new System.Drawing.Point(130, 140);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(80, 16);
             this.label34.TabIndex = 224;
@@ -974,7 +977,7 @@
             // label35
             // 
             this.label35.AutoSize = true;
-            this.label35.Location = new System.Drawing.Point(8, 140);
+            this.label35.Location = new System.Drawing.Point(3, 140);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(83, 16);
             this.label35.TabIndex = 223;
@@ -986,7 +989,7 @@
             this.AbrirPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.show;
             this.AbrirPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AbrirPDF.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AbrirPDF.Location = new System.Drawing.Point(135, 97);
+            this.AbrirPDF.Location = new System.Drawing.Point(151, 97);
             this.AbrirPDF.Name = "AbrirPDF";
             this.AbrirPDF.Size = new System.Drawing.Size(40, 40);
             this.AbrirPDF.TabIndex = 222;
@@ -998,7 +1001,7 @@
             this.SubirPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.SubirPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SubirPDF.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SubirPDF.Location = new System.Drawing.Point(26, 97);
+            this.SubirPDF.Location = new System.Drawing.Point(21, 97);
             this.SubirPDF.Name = "SubirPDF";
             this.SubirPDF.Size = new System.Drawing.Size(40, 40);
             this.SubirPDF.TabIndex = 221;
@@ -1095,6 +1098,27 @@
             this.gbBotones.Text = "Acciones";
             this.gbBotones.Visible = false;
             // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Location = new System.Drawing.Point(1189, 332);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(100, 16);
+            this.label36.TabIndex = 229;
+            this.label36.Text = "Eliminar Archivo";
+            // 
+            // EliminarPDF
+            // 
+            this.EliminarPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
+            this.EliminarPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EliminarPDF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EliminarPDF.Location = new System.Drawing.Point(1214, 289);
+            this.EliminarPDF.Name = "EliminarPDF";
+            this.EliminarPDF.Size = new System.Drawing.Size(40, 40);
+            this.EliminarPDF.TabIndex = 228;
+            this.EliminarPDF.TabStop = false;
+            this.EliminarPDF.Click += new System.EventHandler(this.EliminarPDF_Click);
+            // 
             // Pantalla_Regitro_permiso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1102,10 +1126,12 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1292, 736);
+            this.Controls.Add(this.label36);
             this.Controls.Add(this.gbBotones);
             this.Controls.Add(this.gbBusqueda);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.Logo);
+            this.Controls.Add(this.EliminarPDF);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.Unid);
@@ -1168,6 +1194,7 @@
             this.gbBusqueda.PerformLayout();
             this.gbBotones.ResumeLayout(false);
             this.gbBotones.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.EliminarPDF)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1263,5 +1290,7 @@
         private System.Windows.Forms.GroupBox gbBusqueda;
         private System.Windows.Forms.TextBox nPer;
         private System.Windows.Forms.GroupBox gbBotones;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.PictureBox EliminarPDF;
     }
 }
