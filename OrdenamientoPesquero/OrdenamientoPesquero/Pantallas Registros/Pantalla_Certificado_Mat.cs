@@ -176,7 +176,7 @@ namespace OrdenamientoPesquero
 
         private void ActualizarUnidad_Click(object sender, EventArgs e)
         {
-            if (ValidarChip())
+            if (NChipCertMat.Text == "   *   *" || ValidarChip())
             {
                 exito = AccionesCertificado(false);
                 val.Exito(exito);
