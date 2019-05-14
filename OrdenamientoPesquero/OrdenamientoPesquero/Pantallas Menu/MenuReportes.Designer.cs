@@ -34,11 +34,9 @@
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button8 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button10 = new System.Windows.Forms.Button();
@@ -102,25 +100,14 @@
             this.button5.UseVisualStyleBackColor = false;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Silver;
-            this.button6.Location = new System.Drawing.Point(38, 117);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(124, 37);
-            this.button6.TabIndex = 5;
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.button8);
             this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.button6);
             this.groupBox1.Controls.Add(this.button5);
             this.groupBox1.Location = new System.Drawing.Point(268, 27);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(200, 210);
+            this.groupBox1.Size = new System.Drawing.Size(200, 174);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Generales";
@@ -128,7 +115,7 @@
             // button8
             // 
             this.button8.BackColor = System.Drawing.Color.Silver;
-            this.button8.Location = new System.Drawing.Point(38, 165);
+            this.button8.Location = new System.Drawing.Point(38, 117);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(124, 37);
             this.button8.TabIndex = 6;
@@ -138,26 +125,15 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.button7);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.button3);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Location = new System.Drawing.Point(37, 27);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(200, 210);
+            this.groupBox2.Size = new System.Drawing.Size(200, 174);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Por Unidad";
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Silver;
-            this.button7.Location = new System.Drawing.Point(40, 165);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(124, 37);
-            this.button7.TabIndex = 4;
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // groupBox3
             // 
@@ -165,7 +141,7 @@
             this.groupBox3.Controls.Add(this.button10);
             this.groupBox3.Location = new System.Drawing.Point(498, 27);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(171, 210);
+            this.groupBox3.Size = new System.Drawing.Size(171, 174);
             this.groupBox3.TabIndex = 7;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Por Municipio";
@@ -201,7 +177,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(696, 241);
+            this.ClientSize = new System.Drawing.Size(696, 220);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -225,11 +201,9 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button10;

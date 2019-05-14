@@ -52,6 +52,9 @@
   <PropertyGroup>
     <ApplicationIcon>gbcs4x4.ico</ApplicationIcon>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="AForge.Video, Version=2.1.5.0, Culture=neutral, PublicKeyToken=cbfb6e07d173c401, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -438,6 +441,9 @@
     </None>
     <None Include="Apoyos.xss">
       <DependentUpon>Apoyos.xsd</DependentUpon>
+    </None>
+    <None Include="app.manifest">
+      <SubType>Designer</SubType>
     </None>
     <None Include="comondu.xsc">
       <DependentUpon>comondu.xsd</DependentUpon>
