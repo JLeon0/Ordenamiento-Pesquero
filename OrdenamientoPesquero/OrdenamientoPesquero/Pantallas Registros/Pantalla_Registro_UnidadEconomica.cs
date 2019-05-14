@@ -895,6 +895,7 @@ namespace OrdenamientoPesquero
             gbBotones.Enabled = true;
             gbBusqueda.Enabled = true;
             gbOrgPes.Enabled = true;
+            Resumen.Enabled = false;
             PanelRNPA.Visible = false;
             PanelRNPA.Enabled = false;
             RnpaNuevo.Text = "";
