@@ -3781,6 +3781,7 @@
 	<table name="ISSwidtagProperty">
 		<col key="yes" def="s72">Name</col>
 		<col def="s0">Value</col>
+		<row><td>TagCreatorName</td><td>PARLET</td></row>
 		<row><td>UniqueId</td><td>564F3BE3-988B-4A05-B0A5-5510F3F7684A</td></row>
 	</table>
 
