@@ -1379,7 +1379,7 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.caToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(148, 75);
+            this.menuStrip1.Location = new System.Drawing.Point(148, 99);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1501, 24);
             this.menuStrip1.TabIndex = 115;
