@@ -192,7 +192,7 @@ namespace Logica
             {
                 MessageBox.Show("No se puede registrar más Buzos que Equipos de Buceo registrados", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); /* 1 segundo = 1000 */
             }
-            else if (ok == 20)
+            else if (ok == -20)
             {
                 MessageBox.Show("El Registro ya Existe en la Base de Datos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); /* 1 segundo = 1000 */
             }

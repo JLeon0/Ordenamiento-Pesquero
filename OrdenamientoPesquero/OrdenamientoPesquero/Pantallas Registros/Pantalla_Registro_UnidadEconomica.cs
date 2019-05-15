@@ -96,8 +96,8 @@ namespace OrdenamientoPesquero
                         int Folio = ObtenerFolio();
                         if (exito > 0)
                         {
-                            exito = proc.AsignarFederacion(Folio, cbRNPA.Text);
-                            exito = proc.InsertarPresidenteUnidad(cbRNPA.Text, NombrePresidenteUE.Text, mtbTelefonoPresidente.Text);
+                            proc.AsignarFederacion(Folio, cbRNPA.Text);
+                            proc.InsertarPresidenteUnidad(cbRNPA.Text, NombrePresidenteUE.Text, mtbTelefonoPresidente.Text);
                         }
                         CargarRNPA();
                         val.Exito(exito);

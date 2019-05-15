@@ -198,12 +198,13 @@ namespace OrdenamientoPesquero
                         {
                             RegistrarImagen();
                             proc.reg_uni(pes.CURP, uni2.Text);
-                            if (proc.Registrar_Pescador(pes) > 0)
+                            exito = proc.Registrar_Pescador(pes);
+                            if (exito > 0)
                             {
                                 LlenarDatos(pes.CURP);
                                 return 1;
                             }
-                            else return 0;
+                            else return exito;
                         }
                         else
                         {
@@ -226,12 +227,13 @@ namespace OrdenamientoPesquero
                 {
                     RegistrarImagen();
                     proc.reg_uni(pes.CURP, uni2.Text);
-                    if (proc.Registrar_Pescador(pes) > 0)
+                    exito = proc.Registrar_Pescador(pes);
+                    if (exito > 0)
                     {
                         LlenarDatos(pes.CURP);
                         return 1;
                     }
-                    else return 0;
+                    else return exito;
                 }
                 else
                 {
@@ -1002,6 +1004,7 @@ namespace OrdenamientoPesquero
                 {
                     Pantalla_Fotografia pf = new Pantalla_Fotografia(CURPPesc.Text,Firma.BackgroundImage,Huella.BackgroundImage,this);
                     pf.ShowDialog();
+                    img = true;
                 }
                 else if (result == DialogResult.No)
                 {
@@ -1015,6 +1018,7 @@ namespace OrdenamientoPesquero
                                 Bitmap bmp = new Bitmap(Image.FromFile(openFileDialog1.FileName));
                                 Bitmap bmp2 = new Bitmap(bmp, new Size(135, 182));
                                 Imagen.BackgroundImage = bmp2;
+                                img = true;
                             }
                         }
                         catch (Exception)
@@ -1121,6 +1125,7 @@ namespace OrdenamientoPesquero
                     Bitmap bmp = new Bitmap(Image.FromFile(mdoc + "\\FIRMA\\FIRMA.PNG"));
                     Firma.BackgroundImage = bmp;
                     Firma.BackgroundImageLayout = ImageLayout.Zoom;
+                    firm = true;
                 }
             }
         }
@@ -1252,6 +1257,7 @@ namespace OrdenamientoPesquero
                 }
                 CARGAR();
                 MessageBox.Show("Coloque el dedo sobre el sensor");
+                hue = true;
             }
             catch (Exception) { MessageBox.Show("Hubo un problema con el sensor, retirelo y vuelva a insertarlo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
