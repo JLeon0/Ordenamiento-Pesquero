@@ -999,7 +999,7 @@ namespace OrdenamientoPesquero
         {
             if (CURPPesc.Text != "")
             {
-                DialogResult result = MessageBox.Show("Desea capturar una nueva imagen?", "¿?", MessageBoxButtons.YesNoCancel);
+                DialogResult result = MessageBox.Show("Desea capturar una nueva imagen?", "Imagen Pescador", MessageBoxButtons.YesNoCancel);
                 if (result == DialogResult.Yes)
                 {
                     Pantalla_Fotografia pf = new Pantalla_Fotografia(CURPPesc.Text,Firma.BackgroundImage,Huella.BackgroundImage,this);
@@ -1008,7 +1008,7 @@ namespace OrdenamientoPesquero
                 }
                 else if (result == DialogResult.No)
                 {
-                    result = MessageBox.Show("Desea subir una nueva imagen?", "¿?", MessageBoxButtons.YesNoCancel);
+                    result = MessageBox.Show("Desea subir una nueva imagen?", "Imagen Pescador", MessageBoxButtons.YesNoCancel);
                     if (result == DialogResult.Yes)
                     {
                         try
@@ -1114,11 +1114,11 @@ namespace OrdenamientoPesquero
 
         private void CargarFirma_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Desea capturar la firma del usuario?", "¿?", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Desea capturar la firma del usuario?", "Firma Pescador", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 Process.Start("C:\\Windows\\SigPlus\\DemoOCX.exe");
-                result = MessageBox.Show("Ya ha capturado la firma del usuario?", "¿?", MessageBoxButtons.YesNo);
+                result = MessageBox.Show("Ya ha capturado la firma del usuario?", "Firma Pescador", MessageBoxButtons.YesNo);
                 if (result == DialogResult.Yes)
                 {
                     string mdoc = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
@@ -1256,7 +1256,7 @@ namespace OrdenamientoPesquero
                     Huella.BackColor = Color.LightGreen;
                 }
                 CARGAR();
-                MessageBox.Show("Coloque el dedo sobre el sensor");
+                MessageBox.Show("Coloque el dedo sobre el sensor","Huella Pescador",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
                 hue = true;
             }
             catch (Exception) { MessageBox.Show("Hubo un problema con el sensor, retirelo y vuelva a insertarlo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
