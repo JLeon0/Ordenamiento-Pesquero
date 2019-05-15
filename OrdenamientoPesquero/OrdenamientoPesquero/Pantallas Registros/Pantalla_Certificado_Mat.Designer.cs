@@ -1002,7 +1002,7 @@
             this.gbBusqueda.Controls.Add(this.label13);
             this.gbBusqueda.Location = new System.Drawing.Point(11, 95);
             this.gbBusqueda.Name = "gbBusqueda";
-            this.gbBusqueda.Size = new System.Drawing.Size(168, 285);
+            this.gbBusqueda.Size = new System.Drawing.Size(168, 456);
             this.gbBusqueda.TabIndex = 185;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
