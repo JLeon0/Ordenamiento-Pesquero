@@ -132,7 +132,7 @@ namespace OrdenamientoPesquero
                 soli = new Solicitud(NombrePesc.Text, Curp, folio.Text + "-" + AñoFolio.Value.ToString() + "-" + ClavePrograma.Text, fecha.Text, prioridad.Text, concepto.Text, estatus.Text, montocrack, responsable.Text, director.Text, observaciones.Text);
                 exito = proc.Registrar_Solicitud(soli);
                 if (exito > 0) { MessageBox.Show("Solicitud ingresada con éxito"); }
-                else { MessageBox.Show("Error al ingresar solicitud"); val.Exito(exito); }
+                else { val.Exito(exito); }
             }
             else
             {
