@@ -178,7 +178,7 @@ namespace OrdenamientoPesquero
             int tipoperm = 0;
             if (Acuicola.Checked == true) { tipoperm = 1; }
             else if (Deportiva.Checked == true) { tipoperm = 2; }
-            perm = new Permiso(FolioPer.Text, Rnpa, nPer.Text, PesqueriaPer.Text, LugarExpPer.Text, diaExp, finVig, ZonaPescaPerm.Text, SitiosDesemPer.Text,tipoperm);
+            perm = new Permiso(FolioPer.Text, Rnpa, nPer.Text, PesqueriaPer.Text, LugarExpPer.Text, diaExp, finVig, ZonaPescaPerm.Text, SitiosDesemPer.Text, tipoperm);
             if (registrar)
             { return proc.Registrar_Permiso(perm); }
             else { return proc.Actualizar_Permiso(perm); }

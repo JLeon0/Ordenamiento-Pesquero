@@ -117,7 +117,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.Unid = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
@@ -154,7 +153,6 @@
             this.Apoyo = new System.Windows.Forms.Button();
             this.gbBotones = new System.Windows.Forms.GroupBox();
             this.label12 = new System.Windows.Forms.Label();
-            this.Ver = new System.Windows.Forms.PictureBox();
             this.label15 = new System.Windows.Forms.Label();
             this.VerInforme = new System.Windows.Forms.Button();
             this.PanelCURP = new System.Windows.Forms.Panel();
@@ -220,7 +218,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarCURP)).BeginInit();
             this.gbInformacion.SuspendLayout();
             this.gbBotones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Ver)).BeginInit();
             this.PanelCURP.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -1275,16 +1272,6 @@
             this.label4.TabIndex = 111;
             this.label4.Text = "Quitar de la Unidad";
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(249, 70);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 14);
-            this.label5.TabIndex = 113;
-            this.label5.Text = "Ver Pescadores";
-            // 
             // Unid
             // 
             this.Unid.AutoSize = true;
@@ -1682,8 +1669,6 @@
             this.gbBotones.Controls.Add(this.label2);
             this.gbBotones.Controls.Add(this.label3);
             this.gbBotones.Controls.Add(this.label4);
-            this.gbBotones.Controls.Add(this.Ver);
-            this.gbBotones.Controls.Add(this.label5);
             this.gbBotones.Location = new System.Drawing.Point(788, 665);
             this.gbBotones.Name = "gbBotones";
             this.gbBotones.Size = new System.Drawing.Size(541, 89);
@@ -1701,18 +1686,6 @@
             this.label12.Size = new System.Drawing.Size(83, 14);
             this.label12.TabIndex = 182;
             this.label12.Text = "Eliminar registro";
-            // 
-            // Ver
-            // 
-            this.Ver.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.show;
-            this.Ver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Ver.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Ver.Location = new System.Drawing.Point(268, 16);
-            this.Ver.Name = "Ver";
-            this.Ver.Size = new System.Drawing.Size(50, 50);
-            this.Ver.TabIndex = 112;
-            this.Ver.TabStop = false;
-            this.Ver.Click += new System.EventHandler(this.Ver_Click);
             // 
             // label15
             // 
@@ -2208,7 +2181,6 @@
             this.gbInformacion.PerformLayout();
             this.gbBotones.ResumeLayout(false);
             this.gbBotones.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Ver)).EndInit();
             this.PanelCURP.ResumeLayout(false);
             this.PanelCURP.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
@@ -2284,8 +2256,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.PictureBox Ver;
         private System.Windows.Forms.ComboBox LocalidadPesc;
         private System.Windows.Forms.ComboBox MunicipioPesc;
         private System.Windows.Forms.PictureBox limpiar;
