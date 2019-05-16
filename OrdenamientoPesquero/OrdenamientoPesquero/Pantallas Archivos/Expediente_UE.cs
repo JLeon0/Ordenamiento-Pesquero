@@ -298,13 +298,12 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                             archivo = "CEDINSCREMBARCA";
                         else if (dgvUnidad.SelectedCells[0].RowIndex == 4)
                             archivo = "OTRO";
-
-                        if (proc.EliminarPDF(RNPA, "", "", "", archivo) > 0)
-                        {
-                            MessageBox.Show("Archivo Eliminado con Exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        }
-                        CargarExpedienteUnidad();
                     }
+                    if (proc.EliminarPDF(RNPA, "", "", "", archivo) > 0)
+                    {
+                        MessageBox.Show("Archivo Eliminado con Exito", "Exito", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    }
+                    CargarExpedienteUnidad();
                 }
             }
         }
