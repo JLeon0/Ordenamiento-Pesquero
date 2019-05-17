@@ -103,7 +103,7 @@ namespace OrdenamientoPesquero
                 gbRelacion.Height = gbRelacion.Height - 100;
                 gbOtros.Location = new Point(gbOtros.Location.X, gbOtros.Location.Y - 50);
                 gbBotones.Location = new Point(gbBotones.Location.X, gbBotones.Location.Y - 50);
-                this.Text = "Apoyos y Solicitudes";
+                this.Text = "Solicitudes y Apoyos";
             }
             else
             {

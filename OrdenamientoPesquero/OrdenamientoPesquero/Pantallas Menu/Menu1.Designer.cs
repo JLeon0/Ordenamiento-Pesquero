@@ -532,9 +532,9 @@
             this.label34.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label34.Location = new System.Drawing.Point(125, 13);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(209, 22);
+            this.label34.Size = new System.Drawing.Size(184, 22);
             this.label34.TabIndex = 186;
-            this.label34.Text = "Registrar Nuevo Loggin";
+            this.label34.Text = "Administrar Usuarios";
             // 
             // pictureBox9
             // 
@@ -784,10 +784,10 @@
             this.RegPrograma.AutoSize = true;
             this.RegPrograma.Location = new System.Drawing.Point(41, 494);
             this.RegPrograma.Name = "RegPrograma";
-            this.RegPrograma.Size = new System.Drawing.Size(157, 16);
+            this.RegPrograma.Size = new System.Drawing.Size(306, 16);
             this.RegPrograma.TabIndex = 192;
             this.RegPrograma.TabStop = true;
-            this.RegPrograma.Text = "Registrar nuevo Programa";
+            this.RegPrograma.Text = "Administrar los Programas de Solicitudes y Apoyos";
             this.RegPrograma.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RegPrograma_LinkClicked);
             // 
             // RegUsuario
@@ -795,10 +795,10 @@
             this.RegUsuario.AutoSize = true;
             this.RegUsuario.Location = new System.Drawing.Point(41, 464);
             this.RegUsuario.Name = "RegUsuario";
-            this.RegUsuario.Size = new System.Drawing.Size(209, 16);
+            this.RegUsuario.Size = new System.Drawing.Size(218, 16);
             this.RegUsuario.TabIndex = 191;
             this.RegUsuario.TabStop = true;
-            this.RegUsuario.Text = "Registrar Login para nuevo Usuario";
+            this.RegUsuario.Text = "Administrar las cuentas de Usuarios";
             this.RegUsuario.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.RegUsuario_LinkClicked);
             // 
             // Bienvenido
