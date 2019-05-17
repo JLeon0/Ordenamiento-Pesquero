@@ -96,11 +96,9 @@
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
             this.label24 = new System.Windows.Forms.Label();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.Ver = new System.Windows.Forms.PictureBox();
             this.Eliminar = new System.Windows.Forms.PictureBox();
             this.Actualizar = new System.Windows.Forms.PictureBox();
             this.Registrar = new System.Windows.Forms.PictureBox();
@@ -120,6 +118,19 @@
             this.gbBotones = new System.Windows.Forms.GroupBox();
             this.label36 = new System.Windows.Forms.Label();
             this.EliminarPDF = new System.Windows.Forms.PictureBox();
+            this.PanelPermiso = new System.Windows.Forms.Panel();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.CerrarPanel = new System.Windows.Forms.PictureBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.ActualizarNPERMISO = new System.Windows.Forms.PictureBox();
+            this.NPermisoMal = new System.Windows.Forms.Label();
+            this.NPermisoNuevo = new System.Windows.Forms.TextBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.ActivarPanelPermiso = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposPescaPerm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbarcacionesPerm)).BeginInit();
             this.gbDatos.SuspendLayout();
@@ -128,7 +139,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Ver)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Eliminar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registrar)).BeginInit();
@@ -140,6 +150,13 @@
             this.gbBusqueda.SuspendLayout();
             this.gbBotones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarPDF)).BeginInit();
+            this.PanelPermiso.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActualizarNPERMISO)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelPermiso)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -477,6 +494,7 @@
             // 
             // gbDatos
             // 
+            this.gbDatos.Controls.Add(this.ActivarPanelPermiso);
             this.gbDatos.Controls.Add(this.nPer);
             this.gbDatos.Controls.Add(this.Deportiva);
             this.gbDatos.Controls.Add(this.Acuicola);
@@ -836,16 +854,6 @@
             this.label22.TabIndex = 122;
             this.label22.Text = "Registrar";
             // 
-            // label23
-            // 
-            this.label23.AutoSize = true;
-            this.label23.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(206, 68);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(71, 14);
-            this.label23.TabIndex = 123;
-            this.label23.Text = "Ver Permisos";
-            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -879,19 +887,6 @@
             this.pictureBox2.Size = new System.Drawing.Size(50, 60);
             this.pictureBox2.TabIndex = 150;
             this.pictureBox2.TabStop = false;
-            // 
-            // Ver
-            // 
-            this.Ver.BackColor = System.Drawing.Color.White;
-            this.Ver.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Ver.BackgroundImage")));
-            this.Ver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Ver.Location = new System.Drawing.Point(222, 22);
-            this.Ver.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.Ver.Name = "Ver";
-            this.Ver.Size = new System.Drawing.Size(45, 45);
-            this.Ver.TabIndex = 116;
-            this.Ver.TabStop = false;
-            this.Ver.Click += new System.EventHandler(this.Ver_Click);
             // 
             // Eliminar
             // 
@@ -1075,7 +1070,7 @@
             this.gbBusqueda.Controls.Add(this.ListaPermisos);
             this.gbBusqueda.Location = new System.Drawing.Point(12, 121);
             this.gbBusqueda.Name = "gbBusqueda";
-            this.gbBusqueda.Size = new System.Drawing.Size(200, 277);
+            this.gbBusqueda.Size = new System.Drawing.Size(200, 521);
             this.gbBusqueda.TabIndex = 226;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
@@ -1085,14 +1080,12 @@
             this.gbBotones.Controls.Add(this.Registrar);
             this.gbBotones.Controls.Add(this.Actualizar);
             this.gbBotones.Controls.Add(this.Eliminar);
-            this.gbBotones.Controls.Add(this.Ver);
             this.gbBotones.Controls.Add(this.label22);
             this.gbBotones.Controls.Add(this.label21);
-            this.gbBotones.Controls.Add(this.label23);
             this.gbBotones.Controls.Add(this.label20);
-            this.gbBotones.Location = new System.Drawing.Point(773, 643);
+            this.gbBotones.Location = new System.Drawing.Point(878, 643);
             this.gbBotones.Name = "gbBotones";
-            this.gbBotones.Size = new System.Drawing.Size(284, 91);
+            this.gbBotones.Size = new System.Drawing.Size(179, 91);
             this.gbBotones.TabIndex = 227;
             this.gbBotones.TabStop = false;
             this.gbBotones.Text = "Acciones";
@@ -1119,6 +1112,170 @@
             this.EliminarPDF.TabStop = false;
             this.EliminarPDF.Click += new System.EventHandler(this.EliminarPDF_Click);
             // 
+            // PanelPermiso
+            // 
+            this.PanelPermiso.BackColor = System.Drawing.Color.LightGray;
+            this.PanelPermiso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanelPermiso.Controls.Add(this.pictureBox11);
+            this.PanelPermiso.Controls.Add(this.label37);
+            this.PanelPermiso.Controls.Add(this.pictureBox4);
+            this.PanelPermiso.Controls.Add(this.pictureBox10);
+            this.PanelPermiso.Controls.Add(this.CerrarPanel);
+            this.PanelPermiso.Controls.Add(this.label39);
+            this.PanelPermiso.Controls.Add(this.ActualizarNPERMISO);
+            this.PanelPermiso.Controls.Add(this.NPermisoMal);
+            this.PanelPermiso.Controls.Add(this.NPermisoNuevo);
+            this.PanelPermiso.Controls.Add(this.label40);
+            this.PanelPermiso.Controls.Add(this.label41);
+            this.PanelPermiso.ForeColor = System.Drawing.Color.Black;
+            this.PanelPermiso.Location = new System.Drawing.Point(390, 193);
+            this.PanelPermiso.Name = "PanelPermiso";
+            this.PanelPermiso.Size = new System.Drawing.Size(477, 212);
+            this.PanelPermiso.TabIndex = 183;
+            this.PanelPermiso.Visible = false;
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox11.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.pictureBox11.Location = new System.Drawing.Point(229, 136);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(23, 21);
+            this.pictureBox11.TabIndex = 187;
+            this.pictureBox11.TabStop = false;
+            // 
+            // label37
+            // 
+            this.label37.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label37.AutoSize = true;
+            this.label37.BackColor = System.Drawing.Color.Transparent;
+            this.label37.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.Black;
+            this.label37.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label37.Location = new System.Drawing.Point(93, 16);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(201, 22);
+            this.label37.TabIndex = 186;
+            this.label37.Text = "Actualizar No. Permiso";
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(19, 3);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox4.TabIndex = 137;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox10.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox10.Location = new System.Drawing.Point(326, 1);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(120, 40);
+            this.pictureBox10.TabIndex = 136;
+            this.pictureBox10.TabStop = false;
+            // 
+            // CerrarPanel
+            // 
+            this.CerrarPanel.BackColor = System.Drawing.Color.Transparent;
+            this.CerrarPanel.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
+            this.CerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CerrarPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CerrarPanel.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
+            this.CerrarPanel.Location = new System.Drawing.Point(451, 1);
+            this.CerrarPanel.Name = "CerrarPanel";
+            this.CerrarPanel.Size = new System.Drawing.Size(21, 21);
+            this.CerrarPanel.TabIndex = 135;
+            this.CerrarPanel.TabStop = false;
+            this.CerrarPanel.Click += new System.EventHandler(this.CerrarPanel_Click);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.Black;
+            this.label39.Location = new System.Drawing.Point(409, 195);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(56, 14);
+            this.label39.TabIndex = 134;
+            this.label39.Text = "Actualizar";
+            // 
+            // ActualizarNPERMISO
+            // 
+            this.ActualizarNPERMISO.BackColor = System.Drawing.Color.Transparent;
+            this.ActualizarNPERMISO.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.ActualizarArchivo;
+            this.ActualizarNPERMISO.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ActualizarNPERMISO.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ActualizarNPERMISO.Location = new System.Drawing.Point(409, 141);
+            this.ActualizarNPERMISO.Name = "ActualizarNPERMISO";
+            this.ActualizarNPERMISO.Size = new System.Drawing.Size(50, 50);
+            this.ActualizarNPERMISO.TabIndex = 133;
+            this.ActualizarNPERMISO.TabStop = false;
+            this.ActualizarNPERMISO.Click += new System.EventHandler(this.ActualizarNPERMISO_Click);
+            // 
+            // NPermisoMal
+            // 
+            this.NPermisoMal.AutoSize = true;
+            this.NPermisoMal.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NPermisoMal.Location = new System.Drawing.Point(43, 83);
+            this.NPermisoMal.Name = "NPermisoMal";
+            this.NPermisoMal.Size = new System.Drawing.Size(68, 18);
+            this.NPermisoMal.TabIndex = 132;
+            this.NPermisoMal.Text = "CurpMal";
+            // 
+            // NPermisoNuevo
+            // 
+            this.NPermisoNuevo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.NPermisoNuevo.Location = new System.Drawing.Point(43, 134);
+            this.NPermisoNuevo.MaxLength = 20;
+            this.NPermisoNuevo.Name = "NPermisoNuevo";
+            this.NPermisoNuevo.Size = new System.Drawing.Size(180, 25);
+            this.NPermisoNuevo.TabIndex = 131;
+            // 
+            // label40
+            // 
+            this.label40.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.Location = new System.Drawing.Point(40, 115);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(146, 17);
+            this.label40.TabIndex = 130;
+            this.label40.Text = "No. PERMISO Nuevo";
+            // 
+            // label41
+            // 
+            this.label41.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.Location = new System.Drawing.Point(40, 63);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(144, 17);
+            this.label41.TabIndex = 128;
+            this.label41.Text = "No. PERMISO Actual";
+            // 
+            // ActivarPanelPermiso
+            // 
+            this.ActivarPanelPermiso.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.actualizar;
+            this.ActivarPanelPermiso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ActivarPanelPermiso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ActivarPanelPermiso.Location = new System.Drawing.Point(196, 43);
+            this.ActivarPanelPermiso.Name = "ActivarPanelPermiso";
+            this.ActivarPanelPermiso.Size = new System.Drawing.Size(20, 20);
+            this.ActivarPanelPermiso.TabIndex = 188;
+            this.ActivarPanelPermiso.TabStop = false;
+            this.ActivarPanelPermiso.Visible = false;
+            this.ActivarPanelPermiso.Click += new System.EventHandler(this.ActivarPanelPermiso_Click);
+            // 
             // Pantalla_Regitro_permiso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1126,6 +1283,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1292, 736);
+            this.Controls.Add(this.PanelPermiso);
             this.Controls.Add(this.label36);
             this.Controls.Add(this.gbBotones);
             this.Controls.Add(this.gbBusqueda);
@@ -1180,7 +1338,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Ver)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Eliminar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Actualizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Registrar)).EndInit();
@@ -1195,6 +1352,14 @@
             this.gbBotones.ResumeLayout(false);
             this.gbBotones.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarPDF)).EndInit();
+            this.PanelPermiso.ResumeLayout(false);
+            this.PanelPermiso.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActualizarNPERMISO)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelPermiso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1252,7 +1417,6 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.TextBox SitiosDesemPer;
         private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.PictureBox Ver;
         private System.Windows.Forms.PictureBox Eliminar;
         private System.Windows.Forms.PictureBox Actualizar;
         private System.Windows.Forms.PictureBox Registrar;
@@ -1262,7 +1426,6 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
@@ -1292,5 +1455,18 @@
         private System.Windows.Forms.GroupBox gbBotones;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.PictureBox EliminarPDF;
+        private System.Windows.Forms.Panel PanelPermiso;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox CerrarPanel;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.PictureBox ActualizarNPERMISO;
+        private System.Windows.Forms.Label NPermisoMal;
+        private System.Windows.Forms.TextBox NPermisoNuevo;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.PictureBox ActivarPanelPermiso;
     }
 }

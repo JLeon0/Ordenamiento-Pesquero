@@ -62,6 +62,7 @@ namespace OrdenamientoPesquero
             dgvArchivos[0, 0].Value = "Permiso Escaneado";
             if (NIVEL == 0 || NIVEL == 4)
             {
+                ActivarPanelPermiso.Visible = true;
                 gbDatos.Enabled = true;
                 gbBotones.Visible = true;
                 limpiar.Visible = true;
@@ -400,6 +401,47 @@ namespace OrdenamientoPesquero
             if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
                 pictureBox13_Click_1(sender, e);
+            }
+        }
+
+        private void ActivarPanelPermiso_Click(object sender, EventArgs e)
+        {
+            if (nPer.Text != "")
+            {
+                NPermisoMal.Text = nPer.Text;
+                gbBotones.Enabled = false;
+                gbBusqueda.Enabled = false;
+                PanelPermiso.Visible = true;
+                PanelPermiso.Enabled = true;
+                PanelPermiso.BringToFront();
+            }
+        }
+
+        private void CerrarPanel_Click(object sender, EventArgs e)
+        {
+            gbBotones.Enabled = true;
+            gbBusqueda.Enabled = true;
+            PanelPermiso.Visible = false;
+            PanelPermiso.Enabled = false;
+            PanelPermiso.SendToBack();
+        }
+
+        private void ActualizarNPERMISO_Click(object sender, EventArgs e)
+        {
+            if (NPermisoNuevo.Text != "")
+            {
+                DialogResult res = MessageBox.Show("Usted está por cambiar la Matrícula de la Embarcación.\n Desea continuar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                if (res == DialogResult.Yes)
+                {
+                    exito = proc.ActualizarNPermiso(NPermisoMal.Text, NPermisoNuevo.Text);
+                    if (exito > 0)
+                    {
+                        nPer.Text = NPermisoNuevo.Text;
+                        MessageBox.Show("No. Permiso Actualizado","EXITO",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                    }
+                    else { val.Exito(exito); }
+                    CargarPermisos();
+                }
             }
         }
 
