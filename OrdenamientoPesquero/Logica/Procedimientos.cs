@@ -198,6 +198,11 @@ namespace Logica
             string[] Parametros = { "@npermiso", "@apermiso" };
             return c.Ejecutar("InsertarPDFPermiso", Parametros, nper, aper);
         }
+        public int ActualizarNPermiso (string npermal, string npernuevo)
+        {
+            string[] Parametros = { "@nperviejo", "@npernuevo" };
+            return c.Ejecutar("ActualizarNPERMISO", Parametros, npermal, npernuevo);
+        }
         #endregion
 
         public DataTable ObtenerTablaConsulta(string consulta)

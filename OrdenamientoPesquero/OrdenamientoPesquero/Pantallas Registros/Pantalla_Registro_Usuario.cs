@@ -1233,59 +1233,6 @@ namespace OrdenamientoPesquero
 
         #endregion
 
-
-        #region Lector de Huellas
-        private Reader currentReader;
-        public Reader CurrentReader
-        {
-            get { return currentReader; }
-            set { currentReader = value; }
-        }
-
-        public bool streamingOn;
-
-        private void CargarHuella_Click(object sender, EventArgs e)
-        {
-            ReaderCollection _readers;
-            try
-            {
-                _readers = ReaderCollection.GetReaders();
-                foreach (Reader Reader in _readers)
-                {
-                    CurrentReader = _readers[0];
-                    Huella.BackColor = Color.LightGreen;
-                }
-                CARGAR();
-                MessageBox.Show("Coloque el dedo sobre el sensor","Huella Pescador",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
-                hue = true;
-            }
-            catch (Exception) { MessageBox.Show("Hubo un problema con el sensor, retirelo y vuelva a insertarlo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-        }
-
-
-        private bool reset = false;
-        private Thread threadHandle;
-        private void CARGAR()
-        {        
-            Constants.ResultCode result = Constants.ResultCode.DP_DEVICE_FAILURE;
-            result = CurrentReader.Open(Constants.CapturePriority.DP_PRIORITY_COOPERATIVE);
-
-            if (result != Constants.ResultCode.DP_SUCCESS)
-            {
-                MessageBox.Show("Error:  " + result.ToString());
-                if (CurrentReader != null)
-                {
-                    CurrentReader.Dispose();
-                    CurrentReader = null;
-                }
-                return;
-            }
-            Huella.BackgroundImage = null;
-            threadHandle = new Thread(CaptureThread)
-            { IsBackground = true };
-            threadHandle.Start();
-        }
-
         private void NombrePesc_Leave(object sender, EventArgs e)
         {
             NombrePesc.Text = NombrePesc.Text.Trim();
@@ -1340,6 +1287,58 @@ namespace OrdenamientoPesquero
                 CargarPescadores();
                 CargarNoPescadores();
             }
+        }
+
+        #region Lector de Huellas
+        private Reader currentReader;
+        public Reader CurrentReader
+        {
+            get { return currentReader; }
+            set { currentReader = value; }
+        }
+
+        public bool streamingOn;
+
+        private void CargarHuella_Click(object sender, EventArgs e)
+        {
+            ReaderCollection _readers;
+            try
+            {
+                _readers = ReaderCollection.GetReaders();
+                foreach (Reader Reader in _readers)
+                {
+                    CurrentReader = _readers[0];
+                    Huella.BackColor = Color.LightGreen;
+                }
+                CARGAR();
+                MessageBox.Show("Coloque el dedo sobre el sensor","Huella Pescador",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                hue = true;
+            }
+            catch (Exception) { MessageBox.Show("Hubo un problema con el sensor, retirelo y vuelva a insertarlo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        }
+
+
+        private bool reset = false;
+        private Thread threadHandle;
+        private void CARGAR()
+        {        
+            Constants.ResultCode result = Constants.ResultCode.DP_DEVICE_FAILURE;
+            result = CurrentReader.Open(Constants.CapturePriority.DP_PRIORITY_COOPERATIVE);
+
+            if (result != Constants.ResultCode.DP_SUCCESS)
+            {
+                MessageBox.Show("Error:  " + result.ToString());
+                if (CurrentReader != null)
+                {
+                    CurrentReader.Dispose();
+                    CurrentReader = null;
+                }
+                return;
+            }
+            Huella.BackgroundImage = null;
+            threadHandle = new Thread(CaptureThread)
+            { IsBackground = true };
+            threadHandle.Start();
         }
 
         private void CaptureThread()
