@@ -50,8 +50,8 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             {
                 ObtenerLogins();
                 ObtenerProgramas();
-                limpiartodo();
             }
+            limpiartodo();
         }
 
         private void CerrarPanel_Click(object sender, EventArgs e)
@@ -233,6 +233,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             PanelRegUser.Controls.OfType<TextBox>().ToList().ForEach(item => item.Text = "");
             PanelRegUser.Controls.OfType<ComboBox>().ToList().ForEach(item => item.Text = "");
 
+            UsuarioLogin.Text = "";
             PanelRegProgram.Controls.OfType<TextBox>().ToList().ForEach(item => item.Text = "");
             PanelRegProgram.Controls.OfType<ComboBox>().ToList().ForEach(item => item.Text = "");
         }
