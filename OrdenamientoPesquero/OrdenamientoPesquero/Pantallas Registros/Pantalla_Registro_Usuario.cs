@@ -904,8 +904,12 @@ namespace OrdenamientoPesquero
             }
             val.Exito(exito);
             exito = 0;
+            string c = CURPPesc.Text;
+            limpiarpescador();
+            LlenarDatos(c);
             CargarPescadores();
             CargarNoPescadores();
+            ObtenerImagen();
         }
 
         private void CURPPesc_SelectionChangeCommitted(object sender, EventArgs e)
@@ -1049,7 +1053,7 @@ namespace OrdenamientoPesquero
             dt = proc.ObtenerImagen(CURPPesc.Text);
             if (dt.Rows.Count > 0)
             {
-                if (((byte[])dt.Rows[0]["IMAGEN"]).Length != 0)
+                if (dt.Rows[0]["IMAGEN"].ToString() != "" && ((byte[])dt.Rows[0]["IMAGEN"]).Length != 0)
                 {
                     img = true;
                     imagenBuffer = (byte[])dt.Rows[0]["IMAGEN"];
@@ -1063,11 +1067,10 @@ namespace OrdenamientoPesquero
             {
                 try
                 {
-                    if (((byte[])dt.Rows[0]["FIRMA"]).Length != 0)
+                    if (dt.Rows[0]["FIRMA"].ToString() != "" && ((byte[])dt.Rows[0]["FIRMA"]).Length != 0)
                     {
                         firm = true;
                         imagenBuffer = (byte[])dt.Rows[0]["FIRMA"];
-                        var s = dt.Rows[0]["FIRMA"].ToString();
                         System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
                         Firma.BackgroundImage = (Image.FromStream(ms));
                         Firma.BackgroundImageLayout = ImageLayout.Zoom;
@@ -1078,7 +1081,7 @@ namespace OrdenamientoPesquero
                     {
                         hue = true;
                         imagenBuffer = (byte[])dt.Rows[0]["HUELLA"];
-                        huell = CreateBitmap(imagenBuffer, Huella.Width, Huella.Height);
+                        //huell = CreateBitmap(imagenBuffer, Huella.Width, Huella.Height);
                         System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
                         Huella.BackgroundImage = (Image.FromStream(ms));
                         Bitmap result = new Bitmap(Huella.Width, Huella.Height);
