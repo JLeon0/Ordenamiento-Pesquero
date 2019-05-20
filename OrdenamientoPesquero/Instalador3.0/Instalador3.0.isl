@@ -2632,6 +2632,8 @@
 		<col def="I2">Order</col>
 		<col def="I2">ISSetupLocation</col>
 		<col def="S255">ISReleaseFlags</col>
+		<row><td>_2F65E0DE_D912_41E9_8CEF_3878A5AAE95F_</td><td>Microsoft SQL Server 2014 Express RTM (x86 &amp; x64Wow).prq</td><td/><td/><td/></row>
+		<row><td>_49408703_9B73_45C2_9A28_F4DE8800D760_</td><td>Microsoft .NET Framework 4.0 Full.prq</td><td/><td/><td/></row>
 	</table>
 
 	<table name="ISSetupType">

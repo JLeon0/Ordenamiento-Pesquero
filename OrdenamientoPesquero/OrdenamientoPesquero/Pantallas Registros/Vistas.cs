@@ -142,7 +142,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     para[5] = new ReportParameter("SEXO", dt.Rows[0]["SEXO"].ToString());
                     para[6] = new ReportParameter("SANGRE", dt.Rows[0]["TIPO_SANGRE"].ToString());
                     string n = dt.Rows[0]["FECHA_NACIMIENTO"].ToString();
-                    string na = n[6].ToString() + n[7].ToString();
+                    string na = n[2].ToString() + n[3].ToString();
                     int nac = Convert.ToInt32(na);
                     int actual = DateTime.Today.Year;
                     if ((nac + 2000) > actual)

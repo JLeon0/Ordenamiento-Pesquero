@@ -187,6 +187,8 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gbOtros = new System.Windows.Forms.GroupBox();
             this.btnEntregar = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.gbDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Credencial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).BeginInit();
@@ -229,6 +231,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gbOtros.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatosGenerales
@@ -1661,6 +1664,8 @@
             // 
             // gbBotones
             // 
+            this.gbBotones.Controls.Add(this.label5);
+            this.gbBotones.Controls.Add(this.pictureBox1);
             this.gbBotones.Controls.Add(this.EliminarRegistro);
             this.gbBotones.Controls.Add(this.label12);
             this.gbBotones.Controls.Add(this.RegistrarPescador);
@@ -2114,6 +2119,30 @@
             this.btnEntregar.Visible = false;
             this.btnEntregar.Click += new System.EventHandler(this.btnEntregar_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.show;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Location = new System.Drawing.Point(267, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.TabIndex = 183;
+            this.pictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox1, "Registrar");
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(266, 70);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 14);
+            this.label5.TabIndex = 184;
+            this.label5.Text = "Anexo 3";
+            // 
             // Pantalla_Registro_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -2121,7 +2150,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1387, 781);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.btnEntregar);
             this.Controls.Add(this.gbOtros);
             this.Controls.Add(this.Bienvenido);
@@ -2196,6 +2225,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.gbOtros.ResumeLayout(false);
             this.gbOtros.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2359,5 +2389,7 @@
         private System.Windows.Forms.TextBox uni2;
         private System.Windows.Forms.GroupBox gbOtros;
         private System.Windows.Forms.Button btnEntregar;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label5;
     }
 }

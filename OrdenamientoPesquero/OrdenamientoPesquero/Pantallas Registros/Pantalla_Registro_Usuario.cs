@@ -1180,6 +1180,7 @@ namespace OrdenamientoPesquero
                         Bitmap bmp2 = new Bitmap(bmp, new Size(135, 182));
                         Huella.BackgroundImage = bmp2;
                         Huella.BackgroundImageLayout = ImageLayout.Zoom;
+                        bmp2.Save(Application.StartupPath.ToString() + @"\huella.jpg");
                         hue = true;
                     }
                 }
@@ -1355,6 +1356,12 @@ namespace OrdenamientoPesquero
         {
             get { return currentReader; }
             set { currentReader = value; }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Vistas v = new Vistas(CURPPesc.Text, RNPA, 3, huell, proc.bdd);
+            v.Show(this);
         }
 
         public bool streamingOn;
