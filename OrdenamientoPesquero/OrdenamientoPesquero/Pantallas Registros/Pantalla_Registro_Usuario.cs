@@ -1049,7 +1049,7 @@ namespace OrdenamientoPesquero
             dt = proc.ObtenerImagen(CURPPesc.Text);
             if (dt.Rows.Count > 0)
             {
-                if (dt.Rows[0]["IMAGEN"].ToString() != "")
+                if (((byte[])dt.Rows[0]["IMAGEN"]).Length != 0)
                 {
                     img = true;
                     imagenBuffer = (byte[])dt.Rows[0]["IMAGEN"];
@@ -1063,17 +1063,18 @@ namespace OrdenamientoPesquero
             {
                 try
                 {
-                    if (dt.Rows[0]["FIRMA"].ToString() != "")
+                    if (((byte[])dt.Rows[0]["FIRMA"]).Length != 0)
                     {
                         firm = true;
                         imagenBuffer = (byte[])dt.Rows[0]["FIRMA"];
+                        var s = dt.Rows[0]["FIRMA"].ToString();
                         System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
                         Firma.BackgroundImage = (Image.FromStream(ms));
                         Firma.BackgroundImageLayout = ImageLayout.Zoom;
                     }
                     else { firm = false; }
 
-                    if (dt.Rows[0]["HUELLA"].ToString() != "")
+                    if (((byte[])dt.Rows[0]["HUELLA"]).Length != 0)
                     {
                         hue = true;
                         imagenBuffer = (byte[])dt.Rows[0]["HUELLA"];
@@ -1126,6 +1127,65 @@ namespace OrdenamientoPesquero
                     Firma.BackgroundImage = bmp;
                     Firma.BackgroundImageLayout = ImageLayout.Zoom;
                     firm = true;
+                }
+            }
+            else if (MessageBox.Show("Desea subir una imagen con la firma del usuario?", "Firma Pescador", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                try
+                {
+                    openFileDialog1.Filter = "Imagenes|*.png; *.jpg; *.jpeg;";
+                    if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                    {
+                        Bitmap bmp = new Bitmap(Image.FromFile(openFileDialog1.FileName));
+                        //Bitmap bmp2 = new Bitmap(bmp, new Size(2000, 700));
+                        Firma.BackgroundImage = bmp;
+                        Firma.BackgroundImageLayout = ImageLayout.Zoom;
+                        firm = true;
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
+                }
+            }
+        }
+
+        private void CargarHuella_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Desea iniciar el lector de Huellas para el Pescador?", "Huella Pescador", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                ReaderCollection _readers;
+                try
+                {
+                    _readers = ReaderCollection.GetReaders();
+                    foreach (Reader Reader in _readers)
+                    {
+                        CurrentReader = _readers[0];
+                        Huella.BackColor = Color.LightGreen;
+                    }
+                    CARGAR();
+                    MessageBox.Show("Coloque el dedo sobre el sensor", "Huella Pescador", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                    hue = true;
+                }
+                catch (Exception) { MessageBox.Show("Hubo un problema con el sensor, retirelo y vuelva a insertarlo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+            }
+            else if (MessageBox.Show("Desea subir una imagen con la Huella del Pescador", "Huella Pescador", MessageBoxButtons.YesNo, MessageBoxIcon.Exclamation) == DialogResult.Yes)
+            {
+                try
+                {
+                    openFileDialog1.Filter = "Imagenes|*.png; *.jpg; *.jpeg;";
+                    if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                    {
+                        Bitmap bmp = new Bitmap(Image.FromFile(openFileDialog1.FileName));
+                        Bitmap bmp2 = new Bitmap(bmp, new Size(135, 182));
+                        Huella.BackgroundImage = bmp2;
+                        Huella.BackgroundImageLayout = ImageLayout.Zoom;
+                        hue = true;
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
                 }
             }
         }
@@ -1298,26 +1358,7 @@ namespace OrdenamientoPesquero
         }
 
         public bool streamingOn;
-
-        private void CargarHuella_Click(object sender, EventArgs e)
-        {
-            ReaderCollection _readers;
-            try
-            {
-                _readers = ReaderCollection.GetReaders();
-                foreach (Reader Reader in _readers)
-                {
-                    CurrentReader = _readers[0];
-                    Huella.BackColor = Color.LightGreen;
-                }
-                CARGAR();
-                MessageBox.Show("Coloque el dedo sobre el sensor","Huella Pescador",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
-                hue = true;
-            }
-            catch (Exception) { MessageBox.Show("Hubo un problema con el sensor, retirelo y vuelva a insertarlo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
-        }
-
-
+               
         private bool reset = false;
         private Thread threadHandle;
         private void CARGAR()

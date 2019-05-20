@@ -105,14 +105,11 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             {
                 if (PassLogin.Text == RepetirPassLogin.Text)
                 {
-                    if (proc.AutenticarLogin(UsuarioLogin.Text, val.Encriptar(PassLogin.Text)).Rows.Count > 0)
+
+                    if (proc.ActualizarLogin(UsuarioLogin.Text, val.Encriptar(PassLogin.Text), NombreUsuarioLogin.Text, Convert.ToInt32(NivelUsuarioLogin.Value)) > 0)
                     {
-                        if (proc.ActualizarLogin(UsuarioLogin.Text, val.Encriptar(PassLogin.Text), NombreUsuarioLogin.Text, Convert.ToInt32(NivelUsuarioLogin.Value)) > 0)
-                        {
-                            MessageBox.Show("Datos Actualizados Correctamente", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                        }
+                        MessageBox.Show("Datos Actualizados Correctamente", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     }
-                    else { MessageBox.Show("Usuario y/o Contraseña Incorrectos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
                 }
                 else
                 {
