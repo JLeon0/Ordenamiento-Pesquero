@@ -1458,6 +1458,7 @@
             // 
             this.button5.BackColor = System.Drawing.Color.Silver;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Enabled = false;
             this.button5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Black;
             this.button5.Location = new System.Drawing.Point(317, 82);
