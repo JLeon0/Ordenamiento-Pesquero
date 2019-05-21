@@ -12,7 +12,7 @@
                   <TextRun>
                     <Value xml:space="preserve">  </Value>
                     <Style>
-                      <FontSize>26pt</FontSize>
+                      <FontSize>=IIf(Parameters!NOMBRE.Value.ToString().Length&gt;29, "21pt","26pt")</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <Color>White</Color>
                     </Style>
@@ -20,7 +20,7 @@
                   <TextRun>
                     <Value>=Parameters!NOMBRE.Value</Value>
                     <Style>
-                      <FontSize>26pt</FontSize>
+                      <FontSize>=IIf(Parameters!NOMBRE.Value.ToString().Length&gt;29, "21pt","26pt")</FontSize>
                       <FontWeight>Bold</FontWeight>
                       <Color>White</Color>
                     </Style>
