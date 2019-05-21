@@ -1076,7 +1076,7 @@ namespace OrdenamientoPesquero
                     DataTable pescadores = proc.ObtenerExpedientePescadorXUnidad(cbRNPA.Text);
                     DataTable embarcaciones = proc.ObtenerExpedienteEmbarcacionXUnidad(cbRNPA.Text);
                     DataTable unidad = proc.ObtenerExpedienteUnidad(cbRNPA.Text);
-                    DataTable permisos;
+                    DataTable permisos = proc.ObtenerNoPermisos(cbRNPA.Text);
 
                     if (!Directory.Exists(folderBrowserDialog1.SelectedPath+@"\"+txtNombre.Text+@"\"))
                     {
@@ -1127,11 +1127,6 @@ namespace OrdenamientoPesquero
                         {
                             DirectoryInfo di = Directory.CreateDirectory(path + @"\EMBARCACIONES\" + nombre + @"\");
                         }
-                        permisos = proc.PermisosxEmbarca(embarcaciones.Rows[i]["MATRICULA"].ToString());
-                        for (int C = 0; C < permisos.Rows.Count; C++)
-                        {
-                                CrearArchivo(path + @"PERMISOS\"+ permisos.Rows[C]["PESQUERIA"].ToString()+".pdf", permisos.Rows[C]["APERMISO"]);
-                        }
                             CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\CERTIFICADO DE MATRICULA.PDF", embarcaciones.Rows[i]["CERTMATRICULA"]);
                             CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\CERTIFICADO DE SEGURIDAD.PDF", embarcaciones.Rows[i]["CERTSEGURIDAD"]);
                             CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\FACTURA DE ARTES DE PESCA.PDF", embarcaciones.Rows[i]["FACTARTESPESCA"]);
@@ -1140,6 +1135,10 @@ namespace OrdenamientoPesquero
                             CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\PAPELETA DE CHIPEO.PDF", embarcaciones.Rows[i]["PAPELETACHIPEO"]);
                             CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\FOTO DE EMBARCACION.PDF", embarcaciones.Rows[i]["FOTOEMB"]);
                     }
+                        for (int C = 0; C < permisos.Rows.Count; C++)
+                        {
+                            CrearArchivo(path + @"PERMISOS\" + permisos.Rows[C]["PESQUERIA"].ToString() + ".pdf", permisos.Rows[C]["APERMISO"]);
+                        }
                 }
             }
             MessageBox.Show("Expediente Generado Correctamente");
