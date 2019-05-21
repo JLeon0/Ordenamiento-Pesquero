@@ -324,7 +324,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
 
         private void ActLogo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            if (MessageBox.Show("Desea regresar al logo anterior?", "Actualizar Logo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.No)
+            if (MessageBox.Show("Desea ingresar un nuevo Logo de Gobierno?", "Actualizar Logo", MessageBoxButtons.YesNo, MessageBoxIcon.Information) == DialogResult.Yes)
             {
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
@@ -342,7 +342,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
                     }
                 }
             }
-            else
+            else if(MessageBox.Show("Existe una versión anterior de los Logos, desea regresar al logo anterior?","Regresar Logo",MessageBoxButtons.YesNo,MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 try
                 {
