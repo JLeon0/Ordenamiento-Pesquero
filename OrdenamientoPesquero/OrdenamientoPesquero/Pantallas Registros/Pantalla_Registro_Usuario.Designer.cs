@@ -132,6 +132,7 @@
             this.RegistrarOcciso = new System.Windows.Forms.PictureBox();
             this.CerrarPanel = new System.Windows.Forms.PictureBox();
             this.ActualizarCURP = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.gbInformacion = new System.Windows.Forms.GroupBox();
             this.AComp = new System.Windows.Forms.Label();
             this.AIne = new System.Windows.Forms.Label();
@@ -152,6 +153,7 @@
             this.Solicitud = new System.Windows.Forms.Button();
             this.Apoyo = new System.Windows.Forms.Button();
             this.gbBotones = new System.Windows.Forms.GroupBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.VerInforme = new System.Windows.Forms.Button();
@@ -187,8 +189,6 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gbOtros = new System.Windows.Forms.GroupBox();
             this.btnEntregar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.gbDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Credencial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).BeginInit();
@@ -218,6 +218,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarOcciso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarCURP)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.gbInformacion.SuspendLayout();
             this.gbBotones.SuspendLayout();
             this.PanelCURP.SuspendLayout();
@@ -231,7 +232,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gbOtros.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // gbDatosGenerales
@@ -396,6 +396,7 @@
             // 
             // Huella
             // 
+            this.Huella.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Huella.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Huella.Location = new System.Drawing.Point(11, 210);
             this.Huella.Name = "Huella";
@@ -1449,6 +1450,20 @@
             this.toolTip1.SetToolTip(this.ActualizarCURP, "Actualizar CURP del Pescador");
             this.ActualizarCURP.Click += new System.EventHandler(this.ActualizarCURP_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.show;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Location = new System.Drawing.Point(267, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.TabIndex = 183;
+            this.pictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox1, "Registrar");
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // gbInformacion
             // 
             this.gbInformacion.Controls.Add(this.AComp);
@@ -1681,6 +1696,16 @@
             this.gbBotones.TabStop = false;
             this.gbBotones.Text = " Acciones";
             this.gbBotones.Visible = false;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(266, 70);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 14);
+            this.label5.TabIndex = 184;
+            this.label5.Text = "Anexo 3";
             // 
             // label12
             // 
@@ -2119,30 +2144,6 @@
             this.btnEntregar.Visible = false;
             this.btnEntregar.Click += new System.EventHandler(this.btnEntregar_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.show;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(267, 16);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox1.TabIndex = 183;
-            this.pictureBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.pictureBox1, "Registrar");
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(266, 70);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 14);
-            this.label5.TabIndex = 184;
-            this.label5.Text = "Anexo 3";
-            // 
             // Pantalla_Registro_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -2206,6 +2207,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.RegistrarOcciso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarCURP)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.gbInformacion.ResumeLayout(false);
             this.gbInformacion.PerformLayout();
             this.gbBotones.ResumeLayout(false);
@@ -2225,7 +2227,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.gbOtros.ResumeLayout(false);
             this.gbOtros.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
