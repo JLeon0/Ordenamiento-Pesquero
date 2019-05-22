@@ -339,11 +339,13 @@
 		<col def="S0">ISDotNetInstallerArgsCommit</col>
 		<col def="S0">ISDotNetInstallerArgsUninstall</col>
 		<col def="S0">ISDotNetInstallerArgsRollback</col>
+		<row><td>CapaDatos.dll</td><td>{F1E96D41-57C5-449C-8EE9-8A7D6D9453DC}</td><td>INSTALLDIR</td><td>2</td><td/><td>capadatos.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>DPUruNet.dll</td><td>{164D8D0F-5D00-45F5-BFF6-E18DDE685382}</td><td>INSTALLDIR</td><td>2</td><td/><td>dpurunet.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td>{A5F30949-1D57-4A82-AD91-AD3CF928DFA9}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td>{353EADCF-53D9-495C-B463-2B10E4C42C79}</td><td>INSTALLDIR</td><td>2</td><td/><td/><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>Logica.dll</td><td>{807CBE42-6033-43CD-A36F-D2A2B4315BF9}</td><td>INSTALLDIR</td><td>2</td><td/><td>logica.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>OrdenamientoPesquero.exe</td><td>{E034A667-CCB3-49EA-B9AF-5C740AF9AB5F}</td><td>INSTALLDIR</td><td>2</td><td/><td>ordenamientopesquero.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
-		<row><td>OrdenamientoPesquero.vshost.exe</td><td>{17CB7D00-A202-4930-91B8-A72494A0FC55}</td><td>INSTALLDIR</td><td>2</td><td/><td>ordenamientopesquero.vshost.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>Logica.dll</td><td>{BEADC8B9-B212-40AD-9281-0E1B4302BAE1}</td><td>INSTALLDIR</td><td>2</td><td/><td>logica.dll</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>OrdenamientoPesquero.exe</td><td>{2B97A12B-DFAB-41DB-A6D6-ADD956BA83AE}</td><td>INSTALLDIR</td><td>2</td><td/><td>ordenamientopesquero.exe</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
+		<row><td>OrdenamientoPesquero.vshost.exe</td><td>{095510C3-0362-4B77-A6C5-1D66E1258B33}</td><td>INSTALLDIR</td><td>2</td><td/><td>ordenamientopesquero.vshost.</td><td>17</td><td/><td/><td/><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td><td>/LogFile=</td></row>
 	</table>
 
 	<table name="Condition">
@@ -1052,6 +1054,8 @@
 	<table name="CreateFolder">
 		<col key="yes" def="s72">Directory_</col>
 		<col key="yes" def="s72">Component_</col>
+		<row><td>INSTALLDIR</td><td>CapaDatos.dll</td></row>
+		<row><td>INSTALLDIR</td><td>DPUruNet.dll</td></row>
 		<row><td>INSTALLDIR</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>INSTALLDIR</td><td>IS_ININSTALL_SHORTCUT</td></row>
 		<row><td>INSTALLDIR</td><td>Logica.dll</td></row>
@@ -1870,6 +1874,8 @@
 	<table name="FeatureComponents">
 		<col key="yes" def="s38">Feature_</col>
 		<col key="yes" def="s72">Component_</col>
+		<row><td>AlwaysInstall</td><td>CapaDatos.dll</td></row>
+		<row><td>AlwaysInstall</td><td>DPUruNet.dll</td></row>
 		<row><td>AlwaysInstall</td><td>ISX_DEFAULTCOMPONENT</td></row>
 		<row><td>AlwaysInstall</td><td>IS_ININSTALL_SHORTCUT</td></row>
 		<row><td>AlwaysInstall</td><td>Logica.dll</td></row>
@@ -1889,44 +1895,45 @@
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I4">ISAttributes</col>
 		<col def="S72">ISComponentSubFolder_</col>
-		<row><td>anexo3.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>ANEXO3~1.RDL|Anexo3.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Anexo3.rdlc</td><td>1</td><td/></row>
-		<row><td>capadatos.dll.config</td><td>ISX_DEFAULTCOMPONENT</td><td>CAPADA~1.CON|CapaDatos.dll.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\CapaDatos.dll.config</td><td>1</td><td/></row>
-		<row><td>capadatos.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>CAPADA~1.PDB|CapaDatos.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\CapaDatos.pdb</td><td>1</td><td/></row>
-		<row><td>cred_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>CRED_P~1.RDL|Cred_Personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Cred_Personal.rdlc</td><td>1</td><td/></row>
-		<row><td>credencial.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>CREDEN~1.RDL|Credencial.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Credencial.rdlc</td><td>1</td><td/></row>
-		<row><td>credenciales.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>CREDEN~1.RDL|Credenciales.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Credenciales.rdlc</td><td>1</td><td/></row>
-		<row><td>embarca.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>EMBARC~1.RDL|Embarca.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Embarca.rdlc</td><td>1</td><td/></row>
-		<row><td>embarcacion_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>EMBARC~1.RDL|Embarcacion_Personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Embarcacion_Personal.rdlc</td><td>1</td><td/></row>
-		<row><td>frontal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>FRONTA~1.RDL|Frontal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Frontal.rdlc</td><td>1</td><td/></row>
-		<row><td>lista_embarca.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>LISTA_~1.RDL|Lista_Embarca.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Lista_Embarca.rdlc</td><td>1</td><td/></row>
-		<row><td>logica.dll</td><td>Logica.dll</td><td>Logica.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Logica.dll</td><td>1</td><td/></row>
-		<row><td>logo.png</td><td>ISX_DEFAULTCOMPONENT</td><td>Logo.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Logo.png</td><td>1</td><td/></row>
-		<row><td>logo2.png</td><td>ISX_DEFAULTCOMPONENT</td><td>Logo2.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Logo2.png</td><td>1</td><td/></row>
-		<row><td>occisos_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>OCCISO~1.RDL|Occisos_personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Occisos_personal.rdlc</td><td>1</td><td/></row>
-		<row><td>ordenamientopesquero.exe</td><td>OrdenamientoPesquero.exe</td><td>ORDENA~1.EXE|OrdenamientoPesquero.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.exe</td><td>1</td><td/></row>
-		<row><td>ordenamientopesquero.exe.con</td><td>ISX_DEFAULTCOMPONENT</td><td>ORDENA~1.CON|OrdenamientoPesquero.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.exe.config</td><td>1</td><td/></row>
-		<row><td>ordenamientopesquero.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>ORDENA~1.PDB|OrdenamientoPesquero.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.pdb</td><td>1</td><td/></row>
-		<row><td>ordenamientopesquero.vshost.</td><td>OrdenamientoPesquero.vshost.exe</td><td>ORDENA~1.EXE|OrdenamientoPesquero.vshost.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.vshost.exe</td><td>1</td><td/></row>
-		<row><td>ordenamientopesquero.vshost.1</td><td>ISX_DEFAULTCOMPONENT</td><td>ORDENA~1.CON|OrdenamientoPesquero.vshost.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.vshost.exe.config</td><td>1</td><td/></row>
-		<row><td>ordenamientopesquero.vshost.2</td><td>ISX_DEFAULTCOMPONENT</td><td>ORDENA~1.MAN|OrdenamientoPesquero.vshost.exe.manifest</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.vshost.exe.manifest</td><td>1</td><td/></row>
-		<row><td>permiso_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>PERMIS~1.RDL|Permiso_Personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Permiso_Personal.rdlc</td><td>1</td><td/></row>
-		<row><td>permisos.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>PERMIS~1.RDL|Permisos.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Permisos.rdlc</td><td>1</td><td/></row>
-		<row><td>permisosvencidos.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>PERMIS~1.RDL|PermisosVencidos.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\PermisosVencidos.rdlc</td><td>1</td><td/></row>
-		<row><td>pescador_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>PESCAD~1.RDL|Pescador_Personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Pescador_Personal.rdlc</td><td>1</td><td/></row>
-		<row><td>pescadores.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>PESCAD~1.RDL|Pescadores.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Pescadores.rdlc</td><td>1</td><td/></row>
-		<row><td>report1.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|Report1.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Report1.rdlc</td><td>1</td><td/></row>
-		<row><td>report2.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|Report2.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Report2.rdlc</td><td>1</td><td/></row>
-		<row><td>report3.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|Report3.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Report3.rdlc</td><td>1</td><td/></row>
-		<row><td>reportepescadores.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|reportepescadores.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\reportepescadores.rdlc</td><td>1</td><td/></row>
-		<row><td>reportepescadores2.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|reportepescadores2.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\reportepescadores2.rdlc</td><td>1</td><td/></row>
-		<row><td>reportexpermicionario.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|ReporteXPermicionario.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\ReporteXPermicionario.rdlc</td><td>1</td><td/></row>
-		<row><td>reportexunidad.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|ReporteXUnidad.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\ReporteXUnidad.rdlc</td><td>1</td><td/></row>
-		<row><td>resumen_permisos.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>RESUME~1.RDL|Resumen_permisos.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Resumen_permisos.rdlc</td><td>1</td><td/></row>
-		<row><td>solicitudes_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>SOLICI~1.RDL|Solicitudes_personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Solicitudes_personal.rdlc</td><td>1</td><td/></row>
-		<row><td>solicitudesapoyosxpescador.r</td><td>ISX_DEFAULTCOMPONENT</td><td>SOLICI~1.RDL|SolicitudesApoyosXPescador.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\SolicitudesApoyosXPescador.rdlc</td><td>1</td><td/></row>
-		<row><td>unidad_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>UNIDAD~1.RDL|Unidad_Personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\Unidad_Personal.rdlc</td><td>1</td><td/></row>
-		<row><td>xmunicipio.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>XMUNIC~1.RDL|xMunicipio.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\xMunicipio.rdlc</td><td>1</td><td/></row>
-		<row><td>xmunicipio_seguro.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>XMUNIC~1.RDL|xMunicipio_seguro.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\Users\ERNESTOPADILLA\Desktop\OrdenamientoPesquero\Nueva carpeta\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\Reportes\xMunicipio_seguro.rdlc</td><td>1</td><td/></row>
+		<row><td>anexo3.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>ANEXO3~1.RDL|Anexo3.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Anexo3.rdlc</td><td>1</td><td/></row>
+		<row><td>capadatos.dll</td><td>CapaDatos.dll</td><td>CAPADA~1.DLL|CapaDatos.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\CapaDatos.dll</td><td>1</td><td/></row>
+		<row><td>capadatos.dll.config</td><td>ISX_DEFAULTCOMPONENT</td><td>CAPADA~1.CON|CapaDatos.dll.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\CapaDatos.dll.config</td><td>1</td><td/></row>
+		<row><td>capadatos.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>CAPADA~1.PDB|CapaDatos.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\CapaDatos.pdb</td><td>1</td><td/></row>
+		<row><td>cred_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>CRED_P~1.RDL|Cred_Personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Cred_Personal.rdlc</td><td>1</td><td/></row>
+		<row><td>credencial.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>CREDEN~1.RDL|Credencial.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Credencial.rdlc</td><td>1</td><td/></row>
+		<row><td>credenciales.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>CREDEN~1.RDL|Credenciales.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Credenciales.rdlc</td><td>1</td><td/></row>
+		<row><td>dpurunet.dll</td><td>DPUruNet.dll</td><td>DPUruNet.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\DPUruNet.dll</td><td>1</td><td/></row>
+		<row><td>embarca.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>EMBARC~1.RDL|Embarca.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Embarca.rdlc</td><td>1</td><td/></row>
+		<row><td>embarcacion_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>EMBARC~1.RDL|Embarcacion_Personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Embarcacion_Personal.rdlc</td><td>1</td><td/></row>
+		<row><td>frontal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>FRONTA~1.RDL|Frontal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Frontal.rdlc</td><td>1</td><td/></row>
+		<row><td>lista_embarca.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>LISTA_~1.RDL|Lista_Embarca.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Lista_Embarca.rdlc</td><td>1</td><td/></row>
+		<row><td>logica.dll</td><td>Logica.dll</td><td>Logica.dll</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Logica.dll</td><td>1</td><td/></row>
+		<row><td>logica.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>Logica.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Logica.pdb</td><td>1</td><td/></row>
+		<row><td>logo.png</td><td>ISX_DEFAULTCOMPONENT</td><td>Logo.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Logo.png</td><td>1</td><td/></row>
+		<row><td>logo2.png</td><td>ISX_DEFAULTCOMPONENT</td><td>Logo2.png</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Logo2.png</td><td>1</td><td/></row>
+		<row><td>occisos_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>OCCISO~1.RDL|Occisos_personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Occisos_personal.rdlc</td><td>1</td><td/></row>
+		<row><td>ordenamientopesquero.exe</td><td>OrdenamientoPesquero.exe</td><td>ORDENA~1.EXE|OrdenamientoPesquero.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.exe</td><td>1</td><td/></row>
+		<row><td>ordenamientopesquero.exe.con</td><td>ISX_DEFAULTCOMPONENT</td><td>ORDENA~1.CON|OrdenamientoPesquero.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.exe.config</td><td>1</td><td/></row>
+		<row><td>ordenamientopesquero.pdb</td><td>ISX_DEFAULTCOMPONENT</td><td>ORDENA~1.PDB|OrdenamientoPesquero.pdb</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.pdb</td><td>1</td><td/></row>
+		<row><td>ordenamientopesquero.vshost.</td><td>OrdenamientoPesquero.vshost.exe</td><td>ORDENA~1.EXE|OrdenamientoPesquero.vshost.exe</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.vshost.exe</td><td>1</td><td/></row>
+		<row><td>ordenamientopesquero.vshost.1</td><td>ISX_DEFAULTCOMPONENT</td><td>ORDENA~1.CON|OrdenamientoPesquero.vshost.exe.config</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.vshost.exe.config</td><td>1</td><td/></row>
+		<row><td>permiso_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>PERMIS~1.RDL|Permiso_Personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Permiso_Personal.rdlc</td><td>1</td><td/></row>
+		<row><td>permisos.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>PERMIS~1.RDL|Permisos.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Permisos.rdlc</td><td>1</td><td/></row>
+		<row><td>permisosvencidos.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>PERMIS~1.RDL|PermisosVencidos.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\PermisosVencidos.rdlc</td><td>1</td><td/></row>
+		<row><td>pescador_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>PESCAD~1.RDL|Pescador_Personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Pescador_Personal.rdlc</td><td>1</td><td/></row>
+		<row><td>pescadores.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>PESCAD~1.RDL|Pescadores.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Pescadores.rdlc</td><td>1</td><td/></row>
+		<row><td>report1.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|Report1.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Report1.rdlc</td><td>1</td><td/></row>
+		<row><td>report3.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|Report3.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Report3.rdlc</td><td>1</td><td/></row>
+		<row><td>reportepescadores.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|reportepescadores.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\reportepescadores.rdlc</td><td>1</td><td/></row>
+		<row><td>reportepescadores2.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|reportepescadores2.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\reportepescadores2.rdlc</td><td>1</td><td/></row>
+		<row><td>reportexpermicionario.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|ReporteXPermicionario.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\ReporteXPermicionario.rdlc</td><td>1</td><td/></row>
+		<row><td>reportexunidad.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>REPORT~1.RDL|ReporteXUnidad.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\ReporteXUnidad.rdlc</td><td>1</td><td/></row>
+		<row><td>resumen_permisos.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>RESUME~1.RDL|Resumen_permisos.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Resumen_permisos.rdlc</td><td>1</td><td/></row>
+		<row><td>solicitudes_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>SOLICI~1.RDL|Solicitudes_personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Solicitudes_personal.rdlc</td><td>1</td><td/></row>
+		<row><td>solicitudesapoyosxpescador.r</td><td>ISX_DEFAULTCOMPONENT</td><td>SOLICI~1.RDL|SolicitudesApoyosXPescador.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\SolicitudesApoyosXPescador.rdlc</td><td>1</td><td/></row>
+		<row><td>unidad_personal.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>UNIDAD~1.RDL|Unidad_Personal.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\Unidad_Personal.rdlc</td><td>1</td><td/></row>
+		<row><td>xmunicipio.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>XMUNIC~1.RDL|xMunicipio.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\xMunicipio.rdlc</td><td>1</td><td/></row>
+		<row><td>xmunicipio_seguro.rdlc</td><td>ISX_DEFAULTCOMPONENT</td><td>XMUNIC~1.RDL|xMunicipio_seguro.rdlc</td><td>0</td><td/><td/><td/><td>1</td><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\xMunicipio_seguro.rdlc</td><td>1</td><td/></row>
 	</table>
 
 	<table name="FileSFPCatalog">
@@ -2070,11 +2077,13 @@
 		<col def="S0">FTPLocation</col>
 		<col def="S0">HTTPLocation</col>
 		<col def="S0">Miscellaneous</col>
+		<row><td>CapaDatos.dll</td><td/><td/><td>_D348A796_AAC9_4C56_8346_899CF23DCFAC_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>DPUruNet.dll</td><td/><td/><td>_040BFC6B_EBD1_4ABF_8A9F_054C64277F1A_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>ISX_DEFAULTCOMPONENT</td><td/><td/><td>_9A33AA96_390A_455E_AA18_B7F33BEB4B2E_FILTER</td><td/><td/><td/><td/></row>
 		<row><td>IS_ININSTALL_SHORTCUT</td><td/><td/><td>_7CB12811_8499_4998_A3E4_3486E2641680_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>Logica.dll</td><td/><td/><td>_7118EBA8_405D_4304_B91F_C74509F29714_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>OrdenamientoPesquero.exe</td><td/><td/><td>_567708A2_953B_4706_A6EE_2BD7446A145B_FILTER</td><td/><td/><td/><td/></row>
-		<row><td>OrdenamientoPesquero.vshost.exe</td><td/><td/><td>_C356053B_4FDB_4ADC_8E4A_08AAF82F982B_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>Logica.dll</td><td/><td/><td>_4318AE8D_4582_45DC_996D_48F27979B9F5_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>OrdenamientoPesquero.exe</td><td/><td/><td>_66729481_2071_444D_A92D_E3E3D8118D84_FILTER</td><td/><td/><td/><td/></row>
+		<row><td>OrdenamientoPesquero.vshost.exe</td><td/><td/><td>_9AF08643_894F_4608_9AD6_619AE8EDD535_FILTER</td><td/><td/><td/><td/></row>
 	</table>
 
 	<table name="ISCustomActionReference">
@@ -2667,7 +2676,7 @@
 		<col def="I2">Encoded</col>
 		<col def="S0">Comment</col>
 		<col def="I4">TimeStamp</col>
-		<row><td>COMPANY_NAME</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>-911787700</td></row>
+		<row><td>COMPANY_NAME</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>-1431852375</td></row>
 		<row><td>DN_AlwaysInstall</td><td>1033</td><td>Always Install</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_COLOR</td><td>1033</td><td>The color settings of your system are not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDPROP_EXPRESS_LAUNCH_CONDITION_OS</td><td>1033</td><td>The operating system is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
@@ -3483,6 +3492,8 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>LAUNCH~1.EXE|Launch OrdenamientoPesquero.vshost.exe</td><td>0</td><td/><td>-257460630</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>Ordenamiento Pesquero.exe</td><td>0</td><td/><td>1629946409</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td>Ordenamiento Pesquero</td><td>0</td><td/><td>-911800052</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>1033</td><td>LAUNCH~1.EXE|Launch OrdenamientoPesquero.exe</td><td>0</td><td/><td>-1431891191</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1033</td><td>LAUNCH~1.EXE|Launch OrdenamientoPesquero.vshost.exe</td><td>0</td><td/><td>-1431891191</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1033</td><td>From the list of catalog names below, select the database catalog you would like to target.</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_TEMPLATE</td><td>1033</td><td>[IS_SQLBROWSE_INTRO]</td><td>0</td><td/><td>-1398349809</td></row>
@@ -3771,13 +3782,14 @@
 		<row><td>IDS__TargetReq_DESC_PROCESSOR</td><td>1033</td><td>The processor is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDS__TargetReq_DESC_RAM</td><td>1033</td><td>The amount of RAM is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDS__TargetReq_DESC_RESOLUTION</td><td>1033</td><td>The screen resolution is not adequate for running [ProductName].</td><td>0</td><td/><td>-1398349809</td></row>
-		<row><td>ID_STRING1</td><td>1033</td><td>http://www.PARLET.com</td><td>0</td><td/><td>-911787700</td></row>
-		<row><td>ID_STRING2</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>-911787700</td></row>
+		<row><td>ID_STRING1</td><td>1033</td><td>http://www.PARLET.com</td><td>0</td><td/><td>-1431852375</td></row>
+		<row><td>ID_STRING2</td><td>1033</td><td>PARLET</td><td>0</td><td/><td>-1431852375</td></row>
 		<row><td>ID_STRING3</td><td>1033</td><td/><td>0</td><td/><td>-1398364081</td></row>
 		<row><td>ID_STRING4</td><td>1033</td><td>Launch |Built</td><td>0</td><td/><td>-1398349617</td></row>
 		<row><td>ID_STRING5</td><td>1033</td><td>LAUNCH~1.EXE|Launch OrdenamientoPesquero.exe</td><td>0</td><td/><td>-257479893</td></row>
 		<row><td>ID_STRING6</td><td>1033</td><td/><td>0</td><td/><td>-1859697173</td></row>
 		<row><td>ID_STRING7</td><td>1033</td><td>Ordenamiento Pesquero</td><td>0</td><td/><td>-643318839</td></row>
+		<row><td>ID_STRING8</td><td>1033</td><td>LAUNCH~1.EXE|Launch OrdenamientoPesquero.exe</td><td>0</td><td/><td>-1431851831</td></row>
 		<row><td>IIDS_UITEXT_FeatureUninstalled</td><td>1033</td><td>This feature will remain uninstalled.</td><td>0</td><td/><td>-1398349809</td></row>
 	</table>
 
@@ -3895,6 +3907,9 @@
 		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;VSSolutionFolder&gt;\OrdenamientoPesquero\gbcs4x4.ico</td><td>0</td></row>
 		<row><td>OrdenamientoPesque_1897093BB1CC4F56B93FA3BAA74FD581.exe</td><td/><td>C:\Users\ERNESTOPADILLA\Desktop\bcs.ico</td><td>0</td></row>
 		<row><td>OrdenamientoPesque_354BED72793246D4AC396C2D88950E4A.exe</td><td/><td>C:\Users\ERNESTOPADILLA\Desktop\bcs.ico</td><td>0</td></row>
+		<row><td>OrdenamientoPesque_378B99662FF3408D94BB096D964D97D0.exe</td><td/><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.exe</td><td>0</td></row>
+		<row><td>OrdenamientoPesque_80553043A8394C85A4642DA8FB3FC4B8.exe</td><td/><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.exe</td><td>0</td></row>
+		<row><td>OrdenamientoPesque_B25E82904C124FDE895DBBDFAB6DE489.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
 		<row><td>UNINST_Uninstall_O_BB403B7F5C684981AFBBF807CD1B25F0.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 		<row><td>UNINST_Uninstall_O_FAC2B9217CE34FA7A361F2BD1CBCA606.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 	</table>
@@ -4481,6 +4496,7 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="s72">DirProperty</col>
 		<col def="i2">InstallMode</col>
 		<row><td>OrdenamientoPesquero.exe</td><td>OrdenamientoPesquero.exe</td><td/><td>ordenamiento_pesquero</td><td>2</td></row>
+		<row><td>OrdenamientoPesquero.vshost.exe</td><td>OrdenamientoPesquero.vshost.exe</td><td/><td>ordenamiento_pesquero</td><td>2</td></row>
 		<row><td>UNINST_Uninstall_Ordenamiento_Pesquero</td><td>IS_ININSTALL_SHORTCUT</td><td/><td>ordenamiento_pesquero</td><td>2</td></row>
 	</table>
 
@@ -4567,8 +4583,9 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>OrdenamientoPesquero.exe</td><td>ordenamiento_pesquero</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>OrdenamientoPesquero.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>OrdenamientoPesque_354BED72793246D4AC396C2D88950E4A.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>OrdenamientoPesquero.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME4##</td><td>OrdenamientoPesquero.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>OrdenamientoPesque_1897093BB1CC4F56B93FA3BAA74FD581.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>OrdenamientoPesquero.exe</td><td>ordenamiento_pesquero</td><td>##IDS_SHORTCUT_DISPLAY_NAME5##</td><td>OrdenamientoPesquero.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>OrdenamientoPesque_80553043A8394C85A4642DA8FB3FC4B8.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>OrdenamientoPesquero.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME5##</td><td>OrdenamientoPesquero.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>OrdenamientoPesque_378B99662FF3408D94BB096D964D97D0.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>OrdenamientoPesquero.vshost.exe</td><td>ordenamiento_pesquero</td><td>##IDS_SHORTCUT_DISPLAY_NAME6##</td><td>OrdenamientoPesquero.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>OrdenamientoPesque_B25E82904C124FDE895DBBDFAB6DE489.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>UNINST_Uninstall_Ordenamiento_Pesquero</td><td>ordenamiento_pesquero</td><td>UNINST|Uninstall Ordenamiento Pesquero</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {E323A380-1547-4DB7-809A-AAF3A993A228}</td><td/><td/><td>UNINST_Uninstall_O_FAC2B9217CE34FA7A361F2BD1CBCA606.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>UNINST_Uninstall_Ordenamiento_Pesquero1</td><td>DesktopFolder</td><td>UNINST|Uninstall Ordenamiento Pesquero</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {E323A380-1547-4DB7-809A-AAF3A993A228}</td><td/><td/><td>UNINST_Uninstall_O_BB403B7F5C684981AFBBF807CD1B25F0.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 	</table>

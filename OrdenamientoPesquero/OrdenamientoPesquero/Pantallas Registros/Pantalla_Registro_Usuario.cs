@@ -1062,7 +1062,6 @@ namespace OrdenamientoPesquero
                 }
                 else { img = false; }
             }
-            dt = proc.ObtenerFirma(CURPPesc.Text);
             if (dt.Rows.Count > 0)
             {
                 try
@@ -1081,9 +1080,17 @@ namespace OrdenamientoPesquero
                     {
                         hue = true;
                         imagenBuffer = (byte[])dt.Rows[0]["HUELLA"];
-                        //huell = CreateBitmap(imagenBuffer, Huella.Width, Huella.Height);
+                        huell = CreateBitmap(imagenBuffer, Huella.Width, Huella.Height);
                         System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
                         Huella.BackgroundImage = (Image.FromStream(ms));
+                        if (dt.Rows[0]["lector"].ToString()=="1")
+                        {
+                            Huella.BackgroundImageLayout = ImageLayout.Tile;
+                        }
+                        else
+                        {
+                            Huella.BackgroundImageLayout = ImageLayout.Stretch;
+                        }
                         Bitmap result = new Bitmap(Huella.Width, Huella.Height);
                         Huella.DrawToBitmap(result, new Rectangle(0, 0, Huella.BackgroundImage.Width, Huella.BackgroundImage.Height));
                         result.Save(Application.StartupPath.ToString() + @"\huella.jpg");
