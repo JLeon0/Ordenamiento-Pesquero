@@ -20,15 +20,14 @@ namespace OrdenamientoPesquero
     {
         string[,] pescador = { { "0", "CURP" }, { "0", "RFC" }, { "0", "Codigo postal" }, { "0", "Telefono" }, { "0", "Correo Electronico" } };
         int exito = 0, NIVEL;
-        bool cargando = true, img = false, hue = false, firm = false;
+        bool cargando = true, img = false, hue = false, firm = false, lector = false;
         Pescador pes;
         Procedimientos proc = new Procedimientos();
         Validaciones val = new Validaciones();
         DataTable dt, NoOrdenados, Embarcaciones;
-        string RNPA = "", NombreUnidad = "", Usuario = "", NombreUsuario = "", BD="";
+        string RNPA = "", NombreUnidad = "", Usuario = "", NombreUsuario = "", BD= "", matricula = "";
         string[] Municipios;
         byte[] imagenBuffer;
-        string matricula = "";
         Bitmap huell;
 
         public Pantalla_Registro_Usuario(string rnpa, string nombre, int tipo, string user, string nombreuser, int nivel, string bdd)
@@ -1053,20 +1052,17 @@ namespace OrdenamientoPesquero
             dt = proc.ObtenerImagen(CURPPesc.Text);
             if (dt.Rows.Count > 0)
             {
-                if (dt.Rows[0]["IMAGEN"].ToString() != "" && ((byte[])dt.Rows[0]["IMAGEN"]).Length != 0)
-                {
-                    img = true;
-                    imagenBuffer = (byte[])dt.Rows[0]["IMAGEN"];
-                    System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
-                    Imagen.BackgroundImage = (Image.FromStream(ms));
-                }
-                else { img = false; }
-            }
-            dt = proc.ObtenerFirma(CURPPesc.Text);
-            if (dt.Rows.Count > 0)
-            {
                 try
                 {
+                    if (dt.Rows[0]["IMAGEN"].ToString() != "" && ((byte[])dt.Rows[0]["IMAGEN"]).Length != 0)
+                    {
+                        img = true;
+                        imagenBuffer = (byte[])dt.Rows[0]["IMAGEN"];
+                        System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
+                        Imagen.BackgroundImage = (Image.FromStream(ms));
+                    }
+                    else { img = false; }
+
                     if (dt.Rows[0]["FIRMA"].ToString() != "" && ((byte[])dt.Rows[0]["FIRMA"]).Length != 0)
                     {
                         firm = true;
@@ -1108,7 +1104,7 @@ namespace OrdenamientoPesquero
                 if(Huella.BackgroundImage != null)
                 { Huella.BackgroundImage.Save(huella, System.Drawing.Imaging.ImageFormat.Png); }
 
-                int exito = proc.InsertarImagen(CURPPesc.Text, ms.GetBuffer(), firma.GetBuffer(), huella.GetBuffer());
+                int exito = proc.InsertarImagen(CURPPesc.Text, ms.GetBuffer(), firma.GetBuffer(), huella.GetBuffer(), lector);
                 if (exito > 0)
                 {
                     MessageBox.Show("Imagen, firma y huella Insertadas correctamente");
@@ -1169,6 +1165,7 @@ namespace OrdenamientoPesquero
                     CARGAR();
                     MessageBox.Show("Coloque el dedo sobre el sensor", "Huella Pescador", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                     hue = true;
+                    lector = true;
                 }
                 catch (Exception) { MessageBox.Show("Hubo un problema con el sensor, retirelo y vuelva a insertarlo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
@@ -1185,6 +1182,7 @@ namespace OrdenamientoPesquero
                         Huella.BackgroundImageLayout = ImageLayout.Zoom;
                         bmp2.Save(Application.StartupPath.ToString() + @"\huella.jpg");
                         hue = true;
+                        lector = false;
                     }
                 }
                 catch (Exception)
