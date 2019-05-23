@@ -186,7 +186,6 @@ namespace OrdenamientoPesquero
             if (RNPA != "")
             {
                 DataRowView row = (DataRowView)MatriculaPesc.SelectedItem;
-                if (MatriculaPesc.Text == "NO APLICA") { ocupacion = "Sin Actividad"; }
                 pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, row[0].ToString().Replace(" ", ""), CorreoPesc.Text, LocalidadPesc.Text, o, RNPA.Replace(" ", ""), Seguro.Text, fechaVenF, fechaExpF);
                 int ret=0;
                 if (ChecarBuzosXEquipoBuceo(ocupacion,row,ref ret))
