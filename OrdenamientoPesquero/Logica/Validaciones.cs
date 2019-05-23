@@ -219,7 +219,7 @@ namespace Logica
         }
         public void CloseIt()
         {
-            System.Threading.Thread.Sleep(3000);
+            System.Threading.Thread.Sleep(2000);
             SendKeys.SendWait("{ESC}");
         }
 

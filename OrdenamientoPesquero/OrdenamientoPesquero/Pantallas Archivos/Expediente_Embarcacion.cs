@@ -144,6 +144,8 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                         archivo = "FACTEMBARCACION";
                     else if (dgvArchivos.SelectedCells[0].RowIndex == 5)
                         archivo = "PAPELETACHIPEO";
+                    else if (dgvArchivos.SelectedCells[0].RowIndex == 6)
+                        archivo = "FOTOEMB";
 
                     string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
                     string folder = path + "/PDF/";
@@ -208,6 +210,8 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                         archivo = "FACTEMBARCACION";
                     else if (dgvArchivos.SelectedCells[0].RowIndex == 5)
                         archivo = "PAPELETACHIPEO";
+                    else if (dgvArchivos.SelectedCells[0].RowIndex == 5)
+                        archivo = "FOTOEMB";
 
                     if (proc.EliminarPDF("", MATRICULA, "", "", archivo) > 0)
                     {
