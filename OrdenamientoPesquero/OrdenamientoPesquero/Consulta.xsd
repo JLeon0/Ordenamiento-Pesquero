@@ -542,6 +542,7 @@
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
+              <xs:element name="UNIDAD" msprop:Generator_ColumnVarNameInTable="columnUNIDAD" msprop:Generator_ColumnPropNameInRow="UNIDAD" msprop:Generator_ColumnPropNameInTable="UNIDADColumn" msprop:Generator_UserColumnName="UNIDAD" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -612,6 +613,9 @@
                 </xs:simpleType>
               </xs:element>
               <xs:element name="TIPO" msprop:Generator_ColumnVarNameInTable="columnTIPO" msprop:Generator_ColumnPropNameInRow="TIPO" msprop:Generator_ColumnPropNameInTable="TIPOColumn" msprop:Generator_UserColumnName="TIPO" type="xs:int" minOccurs="0" />
+              <xs:element name="PRESIDENTE" msprop:Generator_ColumnVarNameInTable="columnPRESIDENTE" msprop:Generator_ColumnPropNameInRow="PRESIDENTE" msprop:Generator_ColumnPropNameInTable="PRESIDENTEColumn" msprop:Generator_UserColumnName="PRESIDENTE" type="xs:string" minOccurs="0" />
+              <xs:element name="TELEFONOPRESIDENTE" msprop:Generator_ColumnVarNameInTable="columnTELEFONOPRESIDENTE" msprop:Generator_ColumnPropNameInRow="TELEFONOPRESIDENTE" msprop:Generator_ColumnPropNameInTable="TELEFONOPRESIDENTEColumn" msprop:Generator_UserColumnName="TELEFONOPRESIDENTE" type="xs:string" minOccurs="0" />
+              <xs:element name="FEDERACION" msprop:Generator_ColumnVarNameInTable="columnFEDERACION" msprop:Generator_ColumnPropNameInRow="FEDERACION" msprop:Generator_ColumnPropNameInTable="FEDERACIONColumn" msprop:Generator_UserColumnName="FEDERACION" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

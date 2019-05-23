@@ -1085,6 +1085,8 @@ namespace OrdenamientoPesquero {
             
             private global::System.Data.DataColumn columnMARINERO;
             
+            private global::System.Data.DataColumn columnUNIDAD;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public Embarcacion_PersonalDataTable() {
@@ -1312,6 +1314,14 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn UNIDADColumn {
+                get {
+                    return this.columnUNIDAD;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1371,7 +1381,8 @@ namespace OrdenamientoPesquero {
                         string TRAFICO, 
                         string RESPONSABLECHIP, 
                         string CAPITAN, 
-                        string MARINERO) {
+                        string MARINERO, 
+                        string UNIDAD) {
                 Embarcacion_PersonalRow rowEmbarcacion_PersonalRow = ((Embarcacion_PersonalRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         MATRICULA,
@@ -1397,7 +1408,8 @@ namespace OrdenamientoPesquero {
                         TRAFICO,
                         RESPONSABLECHIP,
                         CAPITAN,
-                        MARINERO};
+                        MARINERO,
+                        UNIDAD};
                 rowEmbarcacion_PersonalRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowEmbarcacion_PersonalRow);
                 return rowEmbarcacion_PersonalRow;
@@ -1451,6 +1463,7 @@ namespace OrdenamientoPesquero {
                 this.columnRESPONSABLECHIP = base.Columns["RESPONSABLECHIP"];
                 this.columnCAPITAN = base.Columns["CAPITAN"];
                 this.columnMARINERO = base.Columns["MARINERO"];
+                this.columnUNIDAD = base.Columns["UNIDAD"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1504,6 +1517,8 @@ namespace OrdenamientoPesquero {
                 base.Columns.Add(this.columnCAPITAN);
                 this.columnMARINERO = new global::System.Data.DataColumn("MARINERO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnMARINERO);
+                this.columnUNIDAD = new global::System.Data.DataColumn("UNIDAD", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnUNIDAD);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnMATRICULA}, true));
                 this.columnMATRICULA.AllowDBNull = false;
@@ -1684,6 +1699,12 @@ namespace OrdenamientoPesquero {
             
             private global::System.Data.DataColumn columnTIPO;
             
+            private global::System.Data.DataColumn columnPRESIDENTE;
+            
+            private global::System.Data.DataColumn columnTELEFONOPRESIDENTE;
+            
+            private global::System.Data.DataColumn columnFEDERACION;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public UNIDAD_PERSONALDataTable() {
@@ -1799,6 +1820,30 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn PRESIDENTEColumn {
+                get {
+                    return this.columnPRESIDENTE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn TELEFONOPRESIDENTEColumn {
+                get {
+                    return this.columnTELEFONOPRESIDENTE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public global::System.Data.DataColumn FEDERACIONColumn {
+                get {
+                    return this.columnFEDERACION;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1834,7 +1879,7 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
-            public UNIDAD_PERSONALRow AddUNIDAD_PERSONALRow(string RNPA, string NOMBRE, string RFC, string MUNICIO, string LOCALIDAD, string DIRECCION, string CODIGO_POSTAL, string CORREO, string TELEFONO, int TIPO) {
+            public UNIDAD_PERSONALRow AddUNIDAD_PERSONALRow(string RNPA, string NOMBRE, string RFC, string MUNICIO, string LOCALIDAD, string DIRECCION, string CODIGO_POSTAL, string CORREO, string TELEFONO, int TIPO, string PRESIDENTE, string TELEFONOPRESIDENTE, string FEDERACION) {
                 UNIDAD_PERSONALRow rowUNIDAD_PERSONALRow = ((UNIDAD_PERSONALRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         RNPA,
@@ -1846,7 +1891,10 @@ namespace OrdenamientoPesquero {
                         CODIGO_POSTAL,
                         CORREO,
                         TELEFONO,
-                        TIPO};
+                        TIPO,
+                        PRESIDENTE,
+                        TELEFONOPRESIDENTE,
+                        FEDERACION};
                 rowUNIDAD_PERSONALRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowUNIDAD_PERSONALRow);
                 return rowUNIDAD_PERSONALRow;
@@ -1886,6 +1934,9 @@ namespace OrdenamientoPesquero {
                 this.columnCORREO = base.Columns["CORREO"];
                 this.columnTELEFONO = base.Columns["TELEFONO"];
                 this.columnTIPO = base.Columns["TIPO"];
+                this.columnPRESIDENTE = base.Columns["PRESIDENTE"];
+                this.columnTELEFONOPRESIDENTE = base.Columns["TELEFONOPRESIDENTE"];
+                this.columnFEDERACION = base.Columns["FEDERACION"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1911,6 +1962,12 @@ namespace OrdenamientoPesquero {
                 base.Columns.Add(this.columnTELEFONO);
                 this.columnTIPO = new global::System.Data.DataColumn("TIPO", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTIPO);
+                this.columnPRESIDENTE = new global::System.Data.DataColumn("PRESIDENTE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnPRESIDENTE);
+                this.columnTELEFONOPRESIDENTE = new global::System.Data.DataColumn("TELEFONOPRESIDENTE", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTELEFONOPRESIDENTE);
+                this.columnFEDERACION = new global::System.Data.DataColumn("FEDERACION", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnFEDERACION);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("Constraint1", new global::System.Data.DataColumn[] {
                                 this.columnRNPA}, true));
                 this.columnRNPA.AllowDBNull = false;
@@ -5206,6 +5263,22 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string UNIDAD {
+                get {
+                    try {
+                        return ((string)(this[this.tableEmbarcacion_Personal.UNIDADColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'UNIDAD\' de la tabla \'Embarcacion_Personal\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableEmbarcacion_Personal.UNIDADColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNOMBREEMBARCACIONNull() {
                 return this.IsNull(this.tableEmbarcacion_Personal.NOMBREEMBARCACIONColumn);
             }
@@ -5479,6 +5552,18 @@ namespace OrdenamientoPesquero {
             public void SetMARINERONull() {
                 this[this.tableEmbarcacion_Personal.MARINEROColumn] = global::System.Convert.DBNull;
             }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsUNIDADNull() {
+                return this.IsNull(this.tableEmbarcacion_Personal.UNIDADColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetUNIDADNull() {
+                this[this.tableEmbarcacion_Personal.UNIDADColumn] = global::System.Convert.DBNull;
+            }
         }
         
         /// <summary>
@@ -5652,6 +5737,55 @@ namespace OrdenamientoPesquero {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string PRESIDENTE {
+                get {
+                    try {
+                        return ((string)(this[this.tableUNIDAD_PERSONAL.PRESIDENTEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PRESIDENTE\' de la tabla \'UNIDAD_PERSONAL\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUNIDAD_PERSONAL.PRESIDENTEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string TELEFONOPRESIDENTE {
+                get {
+                    try {
+                        return ((string)(this[this.tableUNIDAD_PERSONAL.TELEFONOPRESIDENTEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'TELEFONOPRESIDENTE\' de la tabla \'UNIDAD_PERSONAL\' es DBNu" +
+                                "ll.", e);
+                    }
+                }
+                set {
+                    this[this.tableUNIDAD_PERSONAL.TELEFONOPRESIDENTEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public string FEDERACION {
+                get {
+                    try {
+                        return ((string)(this[this.tableUNIDAD_PERSONAL.FEDERACIONColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'FEDERACION\' de la tabla \'UNIDAD_PERSONAL\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tableUNIDAD_PERSONAL.FEDERACIONColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public bool IsNOMBRENull() {
                 return this.IsNull(this.tableUNIDAD_PERSONAL.NOMBREColumn);
             }
@@ -5756,6 +5890,42 @@ namespace OrdenamientoPesquero {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
             public void SetTIPONull() {
                 this[this.tableUNIDAD_PERSONAL.TIPOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsPRESIDENTENull() {
+                return this.IsNull(this.tableUNIDAD_PERSONAL.PRESIDENTEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetPRESIDENTENull() {
+                this[this.tableUNIDAD_PERSONAL.PRESIDENTEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsTELEFONOPRESIDENTENull() {
+                return this.IsNull(this.tableUNIDAD_PERSONAL.TELEFONOPRESIDENTEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetTELEFONOPRESIDENTENull() {
+                this[this.tableUNIDAD_PERSONAL.TELEFONOPRESIDENTEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public bool IsFEDERACIONNull() {
+                return this.IsNull(this.tableUNIDAD_PERSONAL.FEDERACIONColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")]
+            public void SetFEDERACIONNull() {
+                this[this.tableUNIDAD_PERSONAL.FEDERACIONColumn] = global::System.Convert.DBNull;
             }
         }
         

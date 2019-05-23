@@ -1896,8 +1896,8 @@
             this.Controls.Add(this.Resumen);
             this.Controls.Add(this.gbOrgPes);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label23);
+            this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
