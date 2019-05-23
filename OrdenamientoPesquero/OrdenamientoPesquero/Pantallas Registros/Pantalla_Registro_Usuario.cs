@@ -1099,24 +1099,23 @@ namespace OrdenamientoPesquero
 
         private void RegistrarImagen()
         {
+            System.IO.MemoryStream ms = new System.IO.MemoryStream();
             if (Imagen.BackgroundImage != null)
             {
-                System.IO.MemoryStream ms = new System.IO.MemoryStream();
                 Imagen.BackgroundImage.Save(ms, System.Drawing.Imaging.ImageFormat.Png);
+            }
+            System.IO.MemoryStream firma = new MemoryStream();
+            if (Firma.BackgroundImage != null)
+            { Firma.BackgroundImage.Save(firma, System.Drawing.Imaging.ImageFormat.Png); }
 
-                System.IO.MemoryStream firma = new MemoryStream();
-                if (Firma.BackgroundImage != null)
-                { Firma.BackgroundImage.Save(firma, System.Drawing.Imaging.ImageFormat.Png); }
+            System.IO.MemoryStream huella = new MemoryStream();
+            if (Huella.BackgroundImage != null)
+            { Huella.BackgroundImage.Save(huella, System.Drawing.Imaging.ImageFormat.Png); }
 
-                System.IO.MemoryStream huella = new MemoryStream();
-                if(Huella.BackgroundImage != null)
-                { Huella.BackgroundImage.Save(huella, System.Drawing.Imaging.ImageFormat.Png); }
-
-                int exito = proc.InsertarImagen(CURPPesc.Text, ms.GetBuffer(), firma.GetBuffer(), huella.GetBuffer(), lector);
-                if (exito > 0)
-                {
-                    MessageBox.Show("Imagen, firma y huella Insertadas correctamente");
-                }
+            int exito = proc.InsertarImagen(CURPPesc.Text, ms.GetBuffer(), firma.GetBuffer(), huella.GetBuffer(), lector);
+            if (exito > 0)
+            {
+                MessageBox.Show("Imagen, firma y huella Insertadas correctamente");
             }
         }
 

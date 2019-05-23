@@ -203,7 +203,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     ReportParameter[] para1 = new ReportParameter[15];
                     para1[0] = new ReportParameter("NOMBRE", dt1.Rows[0]["NOMBRE"].ToString() + " " + dt1.Rows[0]["AP_PAT"].ToString() + " " + dt1.Rows[0]["AP_MAT"].ToString());
                     para1[1] = new ReportParameter("CURP", dt1.Rows[0]["CURP"].ToString());
-                    para1[2] = new ReportParameter("SANGRE", dt1.Rows[0]["TIPO_SANGRE"].ToString());
+                    para1[2] = new ReportParameter("SANGRE", "..");
                     para1[3] = new ReportParameter("MATRICULA", dt1.Rows[0]["MATRICULA"].ToString());
                     para1[9] = new ReportParameter("EXPEDICION", dt1.Rows[0]["FECHAEXP_FOLIO"].ToString());
                     para1[10] = new ReportParameter("VENCE", dt1.Rows[0]["FECHAVEN_FOLIO"].ToString());
