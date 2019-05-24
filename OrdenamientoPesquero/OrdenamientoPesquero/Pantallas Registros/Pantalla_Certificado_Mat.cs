@@ -326,14 +326,35 @@ namespace OrdenamientoPesquero
                 DialogResult res = MessageBox.Show("Usted está por cambiar la MATRICULA de una Embarcación, en todos sus PERMISOS, PESCADORES.\n Desea continuar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (res == DialogResult.Yes)
                 {
-                    if (proc.Actualizar_MATRICULA(MatriculaMal.Text, MatriculaNueva.Text) >= 1)
+                    if (ValidarMatricula())
                     {
-                        MatriculaCertMat.Text = MatriculaNueva.Text;
-                        MessageBox.Show("MATRICULA Actualizada");
+                        if (proc.Actualizar_MATRICULA(MatriculaMal.Text, MatriculaNueva.Text) >= 1)
+                        {
+                            MatriculaCertMat.Text = MatriculaNueva.Text;
+                            MessageBox.Show("MATRICULA Actualizada");
+                        }
                     }
-                    else { MessageBox.Show("MATRICULA Ya existe"); }
                     CertMatXUnidad();
                 }
+            }
+        }
+
+        private bool ValidarMatricula()
+        {
+            DataTable matri = proc.ValidarMatricula(MatriculaMal.Text, MatriculaNueva.Text);
+            if (matri.Rows.Count > 0)
+            {
+                string embarcaciones = "";
+                foreach (DataRow row in matri.Rows)
+                {
+                    embarcaciones += row["NOMBREEMBARCACION"].ToString() + "   con el RNPA   " + row["RNPTITULAR"].ToString() + "\n";
+                }
+                MessageBox.Show("La Matricula " + MatriculaNueva.Text + " está siendo usado por la Embarcación: \n" + embarcaciones, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
 
