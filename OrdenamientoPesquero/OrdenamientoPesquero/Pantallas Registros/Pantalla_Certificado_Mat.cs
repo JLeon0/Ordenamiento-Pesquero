@@ -188,7 +188,7 @@ namespace OrdenamientoPesquero
 
         private void EliminarUnidad_Click(object sender, EventArgs e)
         {
-            DialogResult Si = MessageBox.Show("¿Desea eliminar esta embarcación?", "ADVERTENCIA", MessageBoxButtons.YesNo);
+            DialogResult Si = MessageBox.Show("¿Desea eliminar esta embarcación?\nAl eliminar la Embarcación, los Pescadores asignados a la misma serán actualizados como NO APLICA.\nLa embarcación será eliminada de los Permisos a los que esté registrada.", "ADVERTENCIA", MessageBoxButtons.YesNo);
             if (Si == DialogResult.Yes)
             {
                 exito = proc.Eliminar_Embarcacion(MatriculaCertMat.Text);
@@ -326,14 +326,35 @@ namespace OrdenamientoPesquero
                 DialogResult res = MessageBox.Show("Usted está por cambiar la MATRICULA de una Embarcación, en todos sus PERMISOS, PESCADORES.\n Desea continuar?", "Alerta", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                 if (res == DialogResult.Yes)
                 {
-                    if (proc.Actualizar_MATRICULA(MatriculaMal.Text, MatriculaNueva.Text) >= 1)
+                    if (ValidarMatricula())
                     {
-                        MatriculaCertMat.Text = MatriculaNueva.Text;
-                        MessageBox.Show("MATRICULA Actualizada");
+                        if (proc.Actualizar_MATRICULA(MatriculaMal.Text, MatriculaNueva.Text) >= 1)
+                        {
+                            MatriculaCertMat.Text = MatriculaNueva.Text;
+                            MessageBox.Show("MATRICULA Actualizada");
+                        }
                     }
-                    else { MessageBox.Show("MATRICULA Ya existe"); }
                     CertMatXUnidad();
                 }
+            }
+        }
+
+        private bool ValidarMatricula()
+        {
+            DataTable matri = proc.ValidarMatricula(MatriculaMal.Text, MatriculaNueva.Text);
+            if (matri.Rows.Count > 0)
+            {
+                string embarcaciones = "";
+                foreach (DataRow row in matri.Rows)
+                {
+                    embarcaciones += row["NOMBREEMBARCACION"].ToString() + "   con el RNPA   " + row["RNPTITULAR"].ToString() + "\n";
+                }
+                MessageBox.Show("La Matricula " + MatriculaNueva.Text + " está siendo usado por la Embarcación: \n" + embarcaciones, "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+            else
+            {
+                return true;
             }
         }
 

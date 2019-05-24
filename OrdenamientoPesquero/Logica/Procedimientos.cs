@@ -393,6 +393,12 @@ namespace Logica
             return c.getDatosTabla("ValidarChip", Parametros, numchip,matricula);
         }
 
+        public DataTable ValidarMatricula(string MatriculaMal, string MatriculaNueva)
+        {
+            string[] Parametros = { "@matriculaMal","@matriculaNueva" };
+            return c.getDatosTabla("ValidarMatricula", Parametros,MatriculaMal, MatriculaNueva);
+        }
+
         public DataTable ObtenerCertMatrXUnidad(string RNPA)
         {
             string[] Parametros = { "@RNPA" };
