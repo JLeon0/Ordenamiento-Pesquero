@@ -188,7 +188,7 @@ namespace OrdenamientoPesquero
 
         private void EliminarUnidad_Click(object sender, EventArgs e)
         {
-            DialogResult Si = MessageBox.Show("¿Desea eliminar esta embarcación?", "ADVERTENCIA", MessageBoxButtons.YesNo);
+            DialogResult Si = MessageBox.Show("¿Desea eliminar esta embarcación?\nAl eliminar la Embarcación, los Pescadores asignados a la misma serán actualizados como NO APLICA.\nLa embarcación será eliminada de los Permisos a los que esté registrada.", "ADVERTENCIA", MessageBoxButtons.YesNo);
             if (Si == DialogResult.Yes)
             {
                 exito = proc.Eliminar_Embarcacion(MatriculaCertMat.Text);
