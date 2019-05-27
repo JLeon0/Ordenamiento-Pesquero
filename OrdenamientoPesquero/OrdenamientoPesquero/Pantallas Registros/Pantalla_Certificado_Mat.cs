@@ -209,7 +209,7 @@ namespace OrdenamientoPesquero
                 string embarcaciones = "";
                 foreach (DataRow row in chip.Rows)
                 {
-                    embarcaciones += row["NOMBREEMBARCACION"].ToString() +"   con Matricula   "+ row["MATRICULA"].ToString() + "\n";
+                    embarcaciones += row["NOMBREEMBARCACION"].ToString() +"    de la Unidad "+ row["RNPTITULAR"].ToString() +"\n";
                 }
                 MessageBox.Show("El Numero de Chip está siendo usado por la Embarcación: \n" + embarcaciones,"ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error);
                 return false;
