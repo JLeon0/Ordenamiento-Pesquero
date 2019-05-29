@@ -141,8 +141,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         {
             this.reportViewer1.ProcessingMode = ProcessingMode.Local;
             reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Unidad_Personal.rdlc");
-            bool[] column = new bool[10];
-            string[] dato = new string[10];
+            bool[] column = new bool[13];
+            string[] dato = new string[13];
             int i = 0;
             foreach (CheckBox a in ColumasUnidad.Controls)
             {
@@ -154,13 +154,13 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     i++;
                 }
             }
-            ReportParameter[] para = new ReportParameter[10];
-            for (int c = 0; c < 10; c++)
+            ReportParameter[] para = new ReportParameter[13];
+            for (int c = 0; c < 13; c++)
             {
                 para[c] = new ReportParameter(dato[c], column[c].ToString());
             }
             reportViewer1.LocalReport.SetParameters(para);
-            string consulta = "SELECT RNPA,NOMBRE,RFC,MUNICIO, LOCALIDAD,CALLEYNUM+', COL. '+COLONIA AS DIRECCION, CODIGO_POSTAL, CORREO, TELEFONO, TIPO FROM UNIDAD_ECONOMICA WHERE NOMBRE!=''";
+            string consulta = "SELECT UNIDAD_ECONOMICA.RNPA,UNIDAD_ECONOMICA.NOMBRE,RFC,MUNICIO, LOCALIDAD,CALLEYNUM+', COL. '+COLONIA AS DIRECCION, CODIGO_POSTAL, UNIDAD_ECONOMICA.CORREO, UNIDAD_ECONOMICA.TELEFONO, (SELECT NOMBREPRESIDENTE FROM PRESIDENTEUNIDAD WHERE PRESIDENTEUNIDAD.RNPA = UNIDAD_ECONOMICA.RNPA) AS 'PRESIDENTE', (SELECT TELEFONOPRESIDENTE FROM PRESIDENTEUNIDAD WHERE PRESIDENTEUNIDAD.RNPA = UNIDAD_ECONOMICA.RNPA) AS 'TELEFONOPRESIDENTE', (SELECT TOP 1 FEDERACIONES.NOMBRE FROM FEDERACIONES_UNIDADES,FEDERACIONES WHERE FEDERACIONES_UNIDADES.FEDERACION = FEDERACIONES.FOLIO AND FEDERACIONES_UNIDADES.RNPA = UNIDAD_ECONOMICA.RNPA) AS 'FEDERACION', TIPO FROM UNIDAD_ECONOMICA WHERE NOMBRE != ''";
             int r = 0;
             foreach (CheckBox a in FiltrosUnidad.Controls.OfType<CheckBox>())
             {
@@ -320,8 +320,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             else
             {
                 reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Embarcacion_Personal.rdlc");
-                bool[] column = new bool[20];
-                string[] dato = new string[20];
+                bool[] column = new bool[21];
+                string[] dato = new string[21];
                 int i = 0;
                 foreach (CheckBox a in ColumnasEmbarca.Controls)
                 {
@@ -333,13 +333,13 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                         i++;
                     }
                 }
-                ReportParameter[] para = new ReportParameter[20];
-                for (int c = 0; c < 20; c++)
+                ReportParameter[] para = new ReportParameter[21];
+                for (int c = 0; c < 21; c++)
                 {
                     para[c] = new ReportParameter(dato[c], column[c].ToString());
                 }
                 reportViewer1.LocalReport.SetParameters(para);
-                string consulta = "select * from EMBARCACIONES where nombreembarcacion!='NO APLICA'";
+                string consulta = "select NOMBRE AS 'UNIDAD',EMBARCACIONES.* from EMBARCACIONES, UNIDAD_ECONOMICA where nombreembarcacion!='NO APLICA' AND RNPA=RNPTITULAR" ;
                 //int r = 0;
                 //foreach (CheckBox it in FiltrosEmbarca.Controls.OfType<CheckBox>())
                 //{

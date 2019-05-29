@@ -1949,6 +1949,7 @@
 	<table name="ISAssistantTag">
 		<col key="yes" def="s72">Tag</col>
 		<col def="S255">Data</col>
+		<row><td>OrdenamientoPesquero.exe</td><td/></row>
 		<row><td>PROJECT_ASSISTANT_DEFAULT_FEATURE</td><td>AlwaysInstall</td></row>
 		<row><td>RegistryPageEnabled</td><td>No</td></row>
 	</table>
@@ -3492,7 +3493,7 @@
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME2</td><td>1033</td><td>LAUNCH~1.EXE|Launch OrdenamientoPesquero.vshost.exe</td><td>0</td><td/><td>-257460630</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME3</td><td>1033</td><td>Ordenamiento Pesquero.exe</td><td>0</td><td/><td>1629946409</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME4</td><td>1033</td><td>Ordenamiento Pesquero</td><td>0</td><td/><td>-911800052</td></row>
-		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>1033</td><td>LAUNCH~1.EXE|Launch OrdenamientoPesquero.exe</td><td>0</td><td/><td>-1431891191</td></row>
+		<row><td>IDS_SHORTCUT_DISPLAY_NAME5</td><td>1033</td><td>Ordenamiento Pesquero</td><td>0</td><td/><td>-1297643832</td></row>
 		<row><td>IDS_SHORTCUT_DISPLAY_NAME6</td><td>1033</td><td>LAUNCH~1.EXE|Launch OrdenamientoPesquero.vshost.exe</td><td>0</td><td/><td>-1431891191</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO</td><td>1033</td><td>From the list of servers below, select the database server you would like to target.</td><td>0</td><td/><td>-1398349809</td></row>
 		<row><td>IDS_SQLBROWSE_INTRO_DB</td><td>1033</td><td>From the list of catalog names below, select the database catalog you would like to target.</td><td>0</td><td/><td>-1398349809</td></row>
@@ -3904,12 +3905,12 @@
 		<col def="V0">Data</col>
 		<col def="S255">ISBuildSourcePath</col>
 		<col def="I2">ISIconIndex</col>
-		<row><td>ARPPRODUCTICON.exe</td><td/><td>&lt;VSSolutionFolder&gt;\OrdenamientoPesquero\gbcs4x4.ico</td><td>0</td></row>
+		<row><td>ARPPRODUCTICON.exe</td><td/><td>C:\Users\ERNESTOPADILLA\Desktop\bcs.ico</td><td>0</td></row>
 		<row><td>OrdenamientoPesque_1897093BB1CC4F56B93FA3BAA74FD581.exe</td><td/><td>C:\Users\ERNESTOPADILLA\Desktop\bcs.ico</td><td>0</td></row>
 		<row><td>OrdenamientoPesque_354BED72793246D4AC396C2D88950E4A.exe</td><td/><td>C:\Users\ERNESTOPADILLA\Desktop\bcs.ico</td><td>0</td></row>
-		<row><td>OrdenamientoPesque_378B99662FF3408D94BB096D964D97D0.exe</td><td/><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.exe</td><td>0</td></row>
-		<row><td>OrdenamientoPesque_80553043A8394C85A4642DA8FB3FC4B8.exe</td><td/><td>C:\OrdenamientoPesquero\OrdenamientoPesquero\OrdenamientoPesquero\bin\Debug\OrdenamientoPesquero.exe</td><td>0</td></row>
 		<row><td>OrdenamientoPesque_B25E82904C124FDE895DBBDFAB6DE489.exe</td><td/><td>&lt;ISProductFolder&gt;\redist\Language Independent\OS Independent\GenericExe.ico</td><td>0</td></row>
+		<row><td>OrdenamientoPesque_E0F283FD2C5A43329B1A5FF47C32C9D0.exe</td><td/><td>C:\Users\ERNESTOPADILLA\Desktop\bcs.ico</td><td>0</td></row>
+		<row><td>OrdenamientoPesque_F152597E5DC749B59A90BDB48D3F4862.exe</td><td/><td>C:\Users\ERNESTOPADILLA\Desktop\bcs.ico</td><td>0</td></row>
 		<row><td>UNINST_Uninstall_O_BB403B7F5C684981AFBBF807CD1B25F0.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 		<row><td>UNINST_Uninstall_O_FAC2B9217CE34FA7A361F2BD1CBCA606.exe</td><td/><td>C:\Program Files (x86)\InstallShield\2015LE\Redist\Language Independent\OS Independent\uninstall.ico</td><td>0</td></row>
 	</table>
@@ -4583,8 +4584,8 @@ UwBpAG4AZwBsAGUASQBtAGEAZwBlAAEARQB4AHAAcgBlAHMAcwA=
 		<col def="S255">ISComments</col>
 		<col def="S255">ISShortcutName</col>
 		<col def="I4">ISAttributes</col>
-		<row><td>OrdenamientoPesquero.exe</td><td>ordenamiento_pesquero</td><td>##IDS_SHORTCUT_DISPLAY_NAME5##</td><td>OrdenamientoPesquero.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>OrdenamientoPesque_80553043A8394C85A4642DA8FB3FC4B8.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
-		<row><td>OrdenamientoPesquero.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME5##</td><td>OrdenamientoPesquero.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>OrdenamientoPesque_378B99662FF3408D94BB096D964D97D0.exe</td><td>1</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>OrdenamientoPesquero.exe</td><td>ordenamiento_pesquero</td><td>##IDS_SHORTCUT_DISPLAY_NAME5##</td><td>OrdenamientoPesquero.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>OrdenamientoPesque_F152597E5DC749B59A90BDB48D3F4862.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
+		<row><td>OrdenamientoPesquero.exe1</td><td>DesktopFolder</td><td>##IDS_SHORTCUT_DISPLAY_NAME5##</td><td>OrdenamientoPesquero.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>OrdenamientoPesque_E0F283FD2C5A43329B1A5FF47C32C9D0.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>OrdenamientoPesquero.vshost.exe</td><td>ordenamiento_pesquero</td><td>##IDS_SHORTCUT_DISPLAY_NAME6##</td><td>OrdenamientoPesquero.vshost.exe</td><td>AlwaysInstall</td><td/><td/><td/><td>OrdenamientoPesque_B25E82904C124FDE895DBBDFAB6DE489.exe</td><td>0</td><td>1</td><td>INSTALLDIR</td><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>UNINST_Uninstall_Ordenamiento_Pesquero</td><td>ordenamiento_pesquero</td><td>UNINST|Uninstall Ordenamiento Pesquero</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {E323A380-1547-4DB7-809A-AAF3A993A228}</td><td/><td/><td>UNINST_Uninstall_O_FAC2B9217CE34FA7A361F2BD1CBCA606.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>
 		<row><td>UNINST_Uninstall_Ordenamiento_Pesquero1</td><td>DesktopFolder</td><td>UNINST|Uninstall Ordenamiento Pesquero</td><td>IS_ININSTALL_SHORTCUT</td><td>[SystemFolder]msiexec.exe</td><td>/x {E323A380-1547-4DB7-809A-AAF3A993A228}</td><td/><td/><td>UNINST_Uninstall_O_BB403B7F5C684981AFBBF807CD1B25F0.exe</td><td>0</td><td>1</td><td/><td/><td/><td/><td/><td/><td/><td/></row>

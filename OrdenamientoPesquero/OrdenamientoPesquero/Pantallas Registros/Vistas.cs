@@ -131,10 +131,11 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     this.reportViewer1.ProcessingMode = ProcessingMode.Local;
                     reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Anexo3.rdlc");
                     DataTable dt = proc.Obtener_Pescador(rnpa);
-                    ReportParameter[] para = new ReportParameter[28];
+                    ReportParameter[] para = new ReportParameter[29];
                     para[0] = new ReportParameter("NombrePescador", dt.Rows[0]["NOMBRE"].ToString());
                     para[26] = new ReportParameter("Appat", dt.Rows[0]["AP_PAT"].ToString());
                     para[27] = new ReportParameter("Apmat", dt.Rows[0]["AP_MAT"].ToString());
+                    para[28] = new ReportParameter("FOLIO", dt.Rows[0]["FOLIO"].ToString());
                     para[1] = new ReportParameter("LugarNacimiento", dt.Rows[0]["LUGAR_NACIMIENTO"].ToString());
                     para[2] = new ReportParameter("FechaNacimiento", dt.Rows[0]["FECHA_NACIMIENTO"].ToString());
                     para[3] = new ReportParameter("CURP", dt.Rows[0]["CURP"].ToString());
@@ -203,7 +204,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     ReportParameter[] para1 = new ReportParameter[15];
                     para1[0] = new ReportParameter("NOMBRE", dt1.Rows[0]["NOMBRE"].ToString() + " " + dt1.Rows[0]["AP_PAT"].ToString() + " " + dt1.Rows[0]["AP_MAT"].ToString());
                     para1[1] = new ReportParameter("CURP", dt1.Rows[0]["CURP"].ToString());
-                    para1[2] = new ReportParameter("SANGRE", dt1.Rows[0]["TIPO_SANGRE"].ToString());
+                    para1[2] = new ReportParameter("SANGRE", "..");
                     para1[3] = new ReportParameter("MATRICULA", dt1.Rows[0]["MATRICULA"].ToString());
                     para1[9] = new ReportParameter("EXPEDICION", dt1.Rows[0]["FECHAEXP_FOLIO"].ToString());
                     para1[10] = new ReportParameter("VENCE", dt1.Rows[0]["FECHAVEN_FOLIO"].ToString());

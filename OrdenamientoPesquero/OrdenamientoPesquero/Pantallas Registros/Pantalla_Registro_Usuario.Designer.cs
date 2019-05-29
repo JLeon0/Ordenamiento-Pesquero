@@ -1456,7 +1456,7 @@
             this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.show;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(267, 16);
+            this.pictureBox1.Location = new System.Drawing.Point(510, 16);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.TabIndex = 183;
@@ -1679,8 +1679,6 @@
             // 
             // gbBotones
             // 
-            this.gbBotones.Controls.Add(this.label5);
-            this.gbBotones.Controls.Add(this.pictureBox1);
             this.gbBotones.Controls.Add(this.EliminarRegistro);
             this.gbBotones.Controls.Add(this.label12);
             this.gbBotones.Controls.Add(this.RegistrarPescador);
@@ -1701,7 +1699,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(266, 70);
+            this.label5.Location = new System.Drawing.Point(509, 70);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(48, 14);
             this.label5.TabIndex = 184;
@@ -2122,7 +2120,9 @@
             // 
             // gbOtros
             // 
+            this.gbOtros.Controls.Add(this.label5);
             this.gbOtros.Controls.Add(this.Solicitud);
+            this.gbOtros.Controls.Add(this.pictureBox1);
             this.gbOtros.Controls.Add(this.label15);
             this.gbOtros.Controls.Add(this.Apoyo);
             this.gbOtros.Controls.Add(this.VerInforme);

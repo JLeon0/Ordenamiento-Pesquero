@@ -1379,12 +1379,11 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.caToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(148, 99);
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1501, 24);
             this.menuStrip1.TabIndex = 115;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.Visible = false;
             // 
             // archivoToolStripMenuItem
             // 
@@ -1896,8 +1895,8 @@
             this.Controls.Add(this.Resumen);
             this.Controls.Add(this.gbOrgPes);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label23);
+            this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
