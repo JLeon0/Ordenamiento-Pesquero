@@ -736,6 +736,7 @@ namespace OrdenamientoPesquero
 
         private void RegistrarUnidad_Click(object sender, EventArgs e)
         {
+            threadHandle.Abort();
             if (CURPPesc.Text != "")
             {
                 if (!val.validaralgo(pescador))
@@ -1116,6 +1117,7 @@ namespace OrdenamientoPesquero
             {
                 MessageBox.Show("Imagen, firma y huella Insertadas correctamente");
             }
+            threadHandle = null;
         }
 
         private void CargarFirma_Click(object sender, EventArgs e)
@@ -1168,10 +1170,12 @@ namespace OrdenamientoPesquero
                         CurrentReader = _readers[0];
                         Huella.BackColor = Color.LightGreen;
                     }
-                    CARGAR();
-                    MessageBox.Show("Coloque el dedo sobre el sensor", "Huella Pescador", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
-                    hue = true;
-                    lector = true;
+                    if (CARGAR())
+                    {
+                        MessageBox.Show("Coloque el dedo sobre el sensor", "Huella Pescador", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        hue = true;
+                        lector = true;
+                    }
                 }
                 catch (Exception) { MessageBox.Show("Hubo un problema con el sensor, retirelo y vuelva a insertarlo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
@@ -1269,6 +1273,7 @@ namespace OrdenamientoPesquero
             {
                 Ord = 1;
                 ListaNombres2.SelectedIndex = -1;
+                threadHandle = null;
                 LlenarDatos(ListaNombres.SelectedValue.ToString());
                 CargarSolApo();
                 CargarResumenExpedientes();
@@ -1292,6 +1297,7 @@ namespace OrdenamientoPesquero
             {
                 Ord = 0;
                 ListaNombres.SelectedIndex = -1;
+                threadHandle = null;
                 LlenarDatos(NoOrdenados.Rows[ListaNombres2.SelectedIndex]["CURP"].ToString());
                 CargarSolApo();
                 CargarResumenExpedientes();
@@ -1375,9 +1381,10 @@ namespace OrdenamientoPesquero
                
         private bool reset = false;
         private Thread threadHandle;
-        private void CARGAR()
-        {        
-            Constants.ResultCode result = Constants.ResultCode.DP_DEVICE_FAILURE;
+        private bool CARGAR()
+        {
+            threadHandle = null;
+            Constants.ResultCode result; //= Constants.ResultCode.DP_DEVICE_FAILURE;
             result = CurrentReader.Open(Constants.CapturePriority.DP_PRIORITY_COOPERATIVE);
 
             if (result != Constants.ResultCode.DP_SUCCESS)
@@ -1388,12 +1395,13 @@ namespace OrdenamientoPesquero
                     CurrentReader.Dispose();
                     CurrentReader = null;
                 }
-                return;
+                return false;
             }
             Huella.BackgroundImage = null;
             threadHandle = new Thread(CaptureThread)
             { IsBackground = true };
             threadHandle.Start();
+            return true;
         }
 
         private void CaptureThread()
@@ -1462,6 +1470,7 @@ namespace OrdenamientoPesquero
                 else
                 {
                     Huella.BackgroundImage = (Bitmap)payload;
+                    Huella.BackgroundImageLayout = ImageLayout.Tile;
                     Huella.Refresh();
                 }
             }
@@ -1542,7 +1551,7 @@ namespace OrdenamientoPesquero
             }
             catch
             {
-                MessageBox.Show("An error has occurred.");
+                //MessageBox.Show("An error has occurred.");
                 if (CurrentReader != null)
                 {
                     CurrentReader.Dispose();
