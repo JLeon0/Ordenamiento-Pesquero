@@ -1172,7 +1172,7 @@ namespace OrdenamientoPesquero
                     }
                     if (CARGAR())
                     {
-                        MessageBox.Show("Coloque el dedo sobre el sensor", "Huella Pescador", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                        val.Exito(-40);
                         hue = true;
                         lector = true;
                     }
