@@ -131,10 +131,11 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     this.reportViewer1.ProcessingMode = ProcessingMode.Local;
                     reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Anexo3.rdlc");
                     DataTable dt = proc.Obtener_Pescador(rnpa);
-                    ReportParameter[] para = new ReportParameter[28];
+                    ReportParameter[] para = new ReportParameter[29];
                     para[0] = new ReportParameter("NombrePescador", dt.Rows[0]["NOMBRE"].ToString());
                     para[26] = new ReportParameter("Appat", dt.Rows[0]["AP_PAT"].ToString());
                     para[27] = new ReportParameter("Apmat", dt.Rows[0]["AP_MAT"].ToString());
+                    para[28] = new ReportParameter("FOLIO", dt.Rows[0]["FOLIO"].ToString());
                     para[1] = new ReportParameter("LugarNacimiento", dt.Rows[0]["LUGAR_NACIMIENTO"].ToString());
                     para[2] = new ReportParameter("FechaNacimiento", dt.Rows[0]["FECHA_NACIMIENTO"].ToString());
                     para[3] = new ReportParameter("CURP", dt.Rows[0]["CURP"].ToString());
