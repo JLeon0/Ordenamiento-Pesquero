@@ -368,7 +368,7 @@
             this.PanelRegUser.Controls.Add(this.CerrarPanelUsuario);
             this.PanelRegUser.Controls.Add(this.label35);
             this.PanelRegUser.ForeColor = System.Drawing.Color.Black;
-            this.PanelRegUser.Location = new System.Drawing.Point(402, 142);
+            this.PanelRegUser.Location = new System.Drawing.Point(423, 150);
             this.PanelRegUser.Name = "PanelRegUser";
             this.PanelRegUser.Size = new System.Drawing.Size(524, 319);
             this.PanelRegUser.TabIndex = 193;
@@ -753,9 +753,9 @@
             this.label13.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label13.Location = new System.Drawing.Point(97, 9);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(234, 22);
+            this.label13.Size = new System.Drawing.Size(203, 22);
             this.label13.TabIndex = 186;
-            this.label13.Text = "Registrar Nuevo Programa";
+            this.label13.Text = "Administrar Programas";
             // 
             // pictureBox3
             // 

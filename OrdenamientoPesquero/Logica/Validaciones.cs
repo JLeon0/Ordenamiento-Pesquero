@@ -211,6 +211,11 @@ namespace Logica
                 (new System.Threading.Thread(CloseIt)).Start();
                 MessageBox.Show("Hubo algún error al registrar una o más Embarcaciones", "ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error); /* 1 segundo = 1000 */
             }
+            else if ( ok == -40)
+            {
+                (new System.Threading.Thread(CloseIt)).Start();
+                MessageBox.Show("Coloque el dedo sobre el sensor", "Huella Pescador", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
             else
             {
                 (new System.Threading.Thread(CloseIt)).Start();
