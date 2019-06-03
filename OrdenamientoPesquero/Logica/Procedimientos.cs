@@ -25,8 +25,13 @@ namespace Logica
         }
         public bool Cargar(string path)
         {
-            CerrarConexion();
+            //CerrarConexion();
             return c.cargar(path);
+        }
+        public bool Cargar2(string path)
+        {
+            CerrarConexion();
+            return c.cargar2(path);
         }
         public void Generar(string dir, string rnpa)
         {

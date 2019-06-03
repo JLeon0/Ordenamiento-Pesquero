@@ -719,32 +719,32 @@ namespace OrdenamientoPesquero
 
         private void cambiosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //this.Cursor = Cursors.WaitCursor;
-            //OpenFileDialog ofd = new OpenFileDialog();
-            //DialogResult dr = ofd.ShowDialog();
-            //if (dr == DialogResult.OK)
-            //{
-            //    string direccion = ofd.FileName;
-            //    if (proc.Cargar(direccion))
-            //    {
-            //        servidorToolStripMenuItem.Checked = false;
+            this.Cursor = Cursors.WaitCursor;
+            OpenFileDialog ofd = new OpenFileDialog();
+            DialogResult dr = ofd.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                string direccion = ofd.FileName;
+                if (proc.Cargar(direccion))
+                {
+                    servidorToolStripMenuItem.Checked = false;
                     cambiosToolStripMenuItem.Checked = true;
-            servidorToolStripMenuItem.Checked = true;
+                    servidorToolStripMenuItem.Checked = true;
                     proc.bdd = "OrdPesquero2";
                     proc.cambiarbd(proc.bdd);
                     this.OnLoad(e);
                     cambiarbd(Properties.Settings.Default.OrdPesqueroConnectionString.Replace("OrdPesquero", "OrdPesquero2"));
-            //    }
-            //    else
-            //    {
-            //        cambiosToolStripMenuItem.Checked = false;
-            //    }
-            //}
-            //else
-            //{
-            //    cambiosToolStripMenuItem.Checked = false;
-            //}
-            //this.Cursor = Cursors.Default;
+                }
+                else
+                {
+                    cambiosToolStripMenuItem.Checked = false;
+                }
+            }
+            else
+            {
+                cambiosToolStripMenuItem.Checked = false;
+            }
+            this.Cursor = Cursors.Default;
         }
 
         #endregion
@@ -979,46 +979,57 @@ namespace OrdenamientoPesquero
             panel1.Visible = false;
             panel1.Enabled = false;
         }
-
-        private void pictureBox13_Click(object sender, EventArgs e)
+        private void generar()
         {
             string municipio = "";
             string rnp = "";
             string nombre = "";
+            if (!radioButton3.Checked)
+            {
+                if (radioButton1.Checked)
+                {
+                    municipio = comboBox1.Text;
+                    nombre = municipio;
+                }
+                if (radioButton2.Checked)
+                {
+                    rnp = cbRNPA.Text;
+                    nombre = rnp;
+                }
+                proc.borrartablas();
+                proc.PasarUnidad2(municipio, rnp);
+                proc.PasarEmbarcaciones2(municipio, rnp);
+                proc.PasarPescadores2(municipio, rnp);
+                proc.PasarPermisos2(municipio, rnp);
+                proc.PasarEquipoPesca2();
+                proc.PasarEmbarcaPermis2(municipio, rnp);
+                //proc.PasarDirectiva2(municipio, rnp);
+                proc.PasarArchivosPescador2(municipio, rnp);
+                //proc.PasarArchivosEmbarca2(municipio, rnp);
+                //proc.PasarArchivosUnidad2(municipio, rnp);
+                proc.Generar(folderBrowserDialog1.SelectedPath, nombre);
+            }
+            else
+            {
+                nombre = "respaldo";
+                proc.Generar2(folderBrowserDialog1.SelectedPath);
+            }
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
+        {
+
             DialogResult result = folderBrowserDialog1.ShowDialog();
             if (result == DialogResult.OK) // Test result.
             {
+                ThreadStart delegado = new ThreadStart(generar);
+                //Creamos la instancia del hilo 
+                Thread hilo = new Thread(delegado);
+                //Iniciamos el hilo 
                 this.Cursor = Cursors.AppStarting;
-                if (!radioButton3.Checked)
-                {
-                    if (radioButton1.Checked)
-                    {
-                        municipio = comboBox1.Text;
-                        nombre = municipio;
-                    }
-                    if (radioButton2.Checked)
-                    {
-                        rnp = cbRNPA.Text;
-                        nombre = rnp;
-                    }
-                    proc.borrartablas();
-                    proc.PasarUnidad2(municipio, rnp);
-                    proc.PasarEmbarcaciones2(municipio, rnp);
-                    proc.PasarPescadores2(municipio, rnp);
-                    proc.PasarPermisos2(municipio, rnp);
-                    proc.PasarEquipoPesca2();
-                    proc.PasarEmbarcaPermis2(municipio, rnp);
-                    //proc.PasarDirectiva2(municipio, rnp);
-                    //proc.PasarArchivosPescador2(municipio, rnp);
-                    //proc.PasarArchivosEmbarca2(municipio, rnp);
-                    //proc.PasarArchivosUnidad2(municipio, rnp);
-                    proc.Generar(folderBrowserDialog1.SelectedPath, nombre);
-                }
-                else
-                {
-                    nombre = "respaldo";
-                    proc.Generar2(folderBrowserDialog1.SelectedPath);
-                }
+
+                hilo.Start();
+                
                 this.Cursor = Cursors.Default;
             }
         }
@@ -1151,7 +1162,19 @@ namespace OrdenamientoPesquero
             }
         }
 
-
+        private void cargarTotalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+            DialogResult dr = ofd.ShowDialog();
+            if (dr == DialogResult.OK)
+            {
+                string direccion = ofd.FileName;
+                if (proc.Cargar2(direccion))
+                {
+                    MessageBox.Show("Base de datos restaurada con exito");
+                }
+            }
+        }
         private void BorrarCarpeta()
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);

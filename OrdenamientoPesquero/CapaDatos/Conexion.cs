@@ -223,6 +223,76 @@ namespace CapaDatos
             // Es mejor abrir la conexión con la base Master
             csb.InitialCatalog = "master";
             csb.IntegratedSecurity = true;
+            csb.ConnectTimeout = 2000000; // el predeterminado es 15
+
+            using (SqlConnection cn = new SqlConnection(csb.ConnectionString))
+            {
+                try
+                {
+                    cn.Open();
+                    SqlCommand cmdDrop = new SqlCommand(deleete, cn);
+                    try
+                    {
+                        cmdDrop.ExecuteNonQuery();
+                    }
+                    catch (Exception c)
+                    {
+                    }
+                    //SqlCommand cmdfile = new SqlCommand(fileonly, cn);
+                    //cmdfile.ExecuteNonQuery();
+                    try
+                    {
+                        SqlCommand cmdBackUp = new SqlCommand(sBackup, cn);
+                        cmdBackUp.CommandTimeout = 2000000;
+                        cmdBackUp.ExecuteNonQuery();
+                    }
+                    catch (Exception ex)
+                    {
+                        try
+                        {
+                            SqlCommand cmdBackUp = new SqlCommand(sBackup, cn);
+                            cmdBackUp.ExecuteNonQuery();
+                        }
+                        catch (Exception s)
+                        {
+
+                        }
+                    }
+
+                    MessageBox.Show("Se ha restaurado la copia de la base de datos.",
+                                    "Restaurar base de datos",
+                                   MessageBoxButtons.OK,
+                                   MessageBoxIcon.Information);
+
+                    cn.Close();
+                    return true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message,
+                                    "Error al restaurar la base de datos",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                    return false;
+                }
+            }
+        }
+        public bool cargar2(string archivo)
+        {
+            //con.ChangeDatabase("master");
+            //con.Close();
+            string fileonly = "RESTORE FILELISTONLY FROM DISK = '" + archivo + "'";
+            string deleete = "Drop database OrdPesquero";
+            string sBackup = " RESTORE DATABASE OrdPesquero" +
+                             " FROM DISK = '" + archivo + "' WITH REPLACE";//, STATS=10, MOVE 'OrdPesquero' TO" + @"'C:\Program Files\Microsoft SQL Server\MSSQL12.SQLEXPRESS\MSSQL\DATA\OrdPesquero2.mdf', MOVE 'OrdPesquero_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\OrdPesquero2.ldf'";
+            //string sBackup2 = " RESTORE DATABASE OrdPesquero2" +
+            //                 " FROM DISK = '" + archivo + "'" +
+            //                 " WITH REPLACE, STATS=10, MOVE 'OrdPesquero' TO" + @"'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\OrdPesquero2.mdf', MOVE 'OrdPesquero_log' TO 'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\DATA\OrdPesquero2.ldf'";
+            SqlConnectionStringBuilder csb = new SqlConnectionStringBuilder();
+            csb.ConnectionString = Properties.Settings.Default.OrdPesqueroConnectionString;
+            // Es mejor abrir la conexión con la base Master
+            csb.InitialCatalog = "master";
+            csb.IntegratedSecurity = true;
             //csb.ConnectTimeout = 480; // el predeterminado es 15
 
             using (SqlConnection cn = new SqlConnection(csb.ConnectionString))
@@ -375,7 +445,7 @@ namespace CapaDatos
             // Es mejor abrir la conexión con la base Master
             csb.InitialCatalog = "master";
             csb.IntegratedSecurity = true;
-            //csb.ConnectTimeout = 480; // el predeterminado es 15
+            csb.ConnectTimeout = 480000; // el predeterminado es 15
 
             using (SqlConnection cn = new SqlConnection(csb.ConnectionString))
             {

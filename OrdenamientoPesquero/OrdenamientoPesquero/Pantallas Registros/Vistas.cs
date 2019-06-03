@@ -238,6 +238,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     para1[8] = new ReportParameter("RutaImagen",ruta);
                     reportViewer1.LocalReport.EnableExternalImages = true;
                     reportViewer1.LocalReport.SetParameters(para1);
+                    reportViewer1.LocalReport.DisplayName = para1[0].Values[0].ToString();
+                    reportViewer1.LocalReport.DisplayName = reportViewer1.LocalReport.DisplayName.Replace("\"", "");
                     this.reportViewer1.LocalReport.DataSources.Add(datos);
                     this.reportViewer1.LocalReport.DataSources.Add(datos2);
                     this.reportViewer1.RefreshReport();

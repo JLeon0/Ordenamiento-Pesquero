@@ -131,6 +131,7 @@
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cargarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cargarTotalToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.caToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.servidorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cambiosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -1389,7 +1390,8 @@
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.generarToolStripMenuItem,
-            this.cargarToolStripMenuItem});
+            this.cargarToolStripMenuItem,
+            this.cargarTotalToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
@@ -1397,16 +1399,23 @@
             // generarToolStripMenuItem
             // 
             this.generarToolStripMenuItem.Name = "generarToolStripMenuItem";
-            this.generarToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
+            this.generarToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.generarToolStripMenuItem.Text = "Generar";
             this.generarToolStripMenuItem.Click += new System.EventHandler(this.generarToolStripMenuItem_Click);
             // 
             // cargarToolStripMenuItem
             // 
             this.cargarToolStripMenuItem.Name = "cargarToolStripMenuItem";
-            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(115, 22);
-            this.cargarToolStripMenuItem.Text = "Cargar";
+            this.cargarToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.cargarToolStripMenuItem.Text = "Cargar Cambios";
             this.cargarToolStripMenuItem.Click += new System.EventHandler(this.cargarToolStripMenuItem_Click);
+            // 
+            // cargarTotalToolStripMenuItem
+            // 
+            this.cargarTotalToolStripMenuItem.Name = "cargarTotalToolStripMenuItem";
+            this.cargarTotalToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.cargarTotalToolStripMenuItem.Text = "Cargar Total";
+            this.cargarTotalToolStripMenuItem.Click += new System.EventHandler(this.cargarTotalToolStripMenuItem_Click);
             // 
             // caToolStripMenuItem
             // 
@@ -1423,7 +1432,7 @@
             this.servidorToolStripMenuItem.CheckOnClick = true;
             this.servidorToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.servidorToolStripMenuItem.Name = "servidorToolStripMenuItem";
-            this.servidorToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.servidorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.servidorToolStripMenuItem.Text = "Servidor";
             this.servidorToolStripMenuItem.Click += new System.EventHandler(this.servidorToolStripMenuItem_Click);
             // 
@@ -1431,7 +1440,7 @@
             // 
             this.cambiosToolStripMenuItem.CheckOnClick = true;
             this.cambiosToolStripMenuItem.Name = "cambiosToolStripMenuItem";
-            this.cambiosToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            this.cambiosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.cambiosToolStripMenuItem.Text = "Cambios";
             this.cambiosToolStripMenuItem.Click += new System.EventHandler(this.cambiosToolStripMenuItem_Click);
             // 
@@ -2086,5 +2095,6 @@
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.LinkLabel vencidos;
         private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.ToolStripMenuItem cargarTotalToolStripMenuItem;
     }
 }
