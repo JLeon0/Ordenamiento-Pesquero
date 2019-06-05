@@ -117,6 +117,9 @@
             this.obtenerImagenTableAdapter = new OrdenamientoPesquero.OrdPesqueroDataSet10TableAdapters.ObtenerImagenTableAdapter();
             this.obtenerAtendidasxRnpaTableAdapter = new OrdenamientoPesquero.ApoyosTableAdapters.ObtenerAtendidasxRnpaTableAdapter();
             this.obtenerAtendidasxCurpTableAdapter = new OrdenamientoPesquero.SolicitudesApoyosXCurpTableAdapters.ObtenerAtendidasxCurpTableAdapter();
+            this.pap = new OrdenamientoPesquero.Pap();
+            this.papeletaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.papeletaTableAdapter = new OrdenamientoPesquero.PapTableAdapters.PapeletaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerAtendidasxCurpBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.solicitudesApoyosXCurp)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerAtendidasxRnpaBindingSource)).BeginInit();
@@ -172,6 +175,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.vistaperm2BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerFirmaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerSolicitudesxRnpaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pap)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.papeletaBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // obtenerAtendidasxCurpBindingSource
@@ -253,7 +258,7 @@
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
             reportDataSource1.Name = "DataSet1";
-            reportDataSource1.Value = this.obtenerAtendidasxCurpBindingSource;
+            reportDataSource1.Value = this.papeletaBindingSource;
             this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
             this.reportViewer1.LocalReport.EnableExternalImages = true;
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "OrdenamientoPesquero.Reportes.Permisos.rdlc";
@@ -582,6 +587,20 @@
             // 
             this.obtenerAtendidasxCurpTableAdapter.ClearBeforeFill = true;
             // 
+            // pap
+            // 
+            this.pap.DataSetName = "Pap";
+            this.pap.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // papeletaBindingSource
+            // 
+            this.papeletaBindingSource.DataMember = "Papeleta";
+            this.papeletaBindingSource.DataSource = this.pap;
+            // 
+            // papeletaTableAdapter
+            // 
+            this.papeletaTableAdapter.ClearBeforeFill = true;
+            // 
             // Vistas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -647,6 +666,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.vistaperm2BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerFirmaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.obtenerSolicitudesxRnpaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pap)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.papeletaBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -739,5 +760,8 @@
         private ApoyosTableAdapters.ObtenerAtendidasxRnpaTableAdapter obtenerAtendidasxRnpaTableAdapter;
         private System.Windows.Forms.BindingSource obtenerAtendidasxCurpBindingSource;
         private SolicitudesApoyosXCurpTableAdapters.ObtenerAtendidasxCurpTableAdapter obtenerAtendidasxCurpTableAdapter;
+        private System.Windows.Forms.BindingSource papeletaBindingSource;
+        private Pap pap;
+        private PapTableAdapters.PapeletaTableAdapter papeletaTableAdapter;
     }
 }

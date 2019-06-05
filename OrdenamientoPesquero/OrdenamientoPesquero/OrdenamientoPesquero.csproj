@@ -306,6 +306,19 @@
     <Compile Include="Pantallas Registros\Vistas.Designer.cs">
       <DependentUpon>Vistas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pap.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Pap.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Papeleta.cs">
+      <DependentUpon>Papeleta.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Papeleta.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Papeleta.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Permisos_lista.cs">
       <DependentUpon>Permisos_lista.xsd</DependentUpon>
     </Compile>
@@ -412,6 +425,7 @@
     <EmbeddedResource Include="Reportes\Embarca.rdlc" />
     <EmbeddedResource Include="Reportes\Embarcacion_Personal.rdlc" />
     <EmbeddedResource Include="Reportes\Lista_Embarca.rdlc" />
+    <EmbeddedResource Include="Reportes\Papeleta.rdlc" />
     <EmbeddedResource Include="Reportes\Permisos.rdlc" />
     <EmbeddedResource Include="Reportes\PermisosVencidos.rdlc" />
     <EmbeddedResource Include="Reportes\Permiso_Personal.rdlc" />
@@ -655,6 +669,28 @@
       <DependentUpon>ordPesqueroDataSetpescadores1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
+    <None Include="Pap.xsc">
+      <DependentUpon>Pap.xsd</DependentUpon>
+    </None>
+    <None Include="Pap.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Pap.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Pap.xss">
+      <DependentUpon>Pap.xsd</DependentUpon>
+    </None>
+    <None Include="Papeleta.xsc">
+      <DependentUpon>Papeleta.xsd</DependentUpon>
+    </None>
+    <None Include="Papeleta.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Papeleta.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Papeleta.xss">
+      <DependentUpon>Papeleta.xsd</DependentUpon>
+    </None>
     <None Include="Permisos_lista.xsc">
       <DependentUpon>Permisos_lista.xsd</DependentUpon>
     </None>

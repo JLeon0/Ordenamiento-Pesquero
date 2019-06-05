@@ -781,6 +781,46 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     reportViewer1.LocalReport.SetParameters(CRED);
                     reportViewer1.RefreshReport();
                     break;
+                case 16:
+                    reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Papeleta.rdlc");
+                    reportViewer1.LocalReport.DataSources.Clear();
+                    DataTable dtp=new DataTable("DS1");
+                    dtp.Columns.Add("Ocupacion");
+                    dtp.Columns.Add("Nombre");
+
+                    dt = proc.ChecarCapitan(rnpa, unidad);
+                    if (dt.Rows.Count > 0)
+                    {
+                        string Nombre = dt.Rows[0]["NOMBRE"].ToString() + " " + dt.Rows[0]["AP_PAT"].ToString() + " " + dt.Rows[0]["AP_MAT"].ToString();
+                        dtp.Rows.Add("Capitan", Nombre);
+                    }
+                    dt = proc.ChecarMarineros(rnpa, unidad);
+                    if (dt.Rows.Count > 0)
+                    {
+                        foreach (DataRow r in dt.Rows)
+                        {
+                            string Nombre = r["NOMBRE"].ToString() + " " + r["AP_PAT"].ToString() + " " + r["AP_MAT"].ToString();
+                            dtp.Rows.Add("Marinero", Nombre);
+                        }
+                    }
+                    dt = proc.ChecarBuzo(rnpa, unidad);
+                    if (dt.Rows.Count > 0)
+                    {
+                        foreach (DataRow r in dt.Rows)
+                        {
+                            string Nombre = r["NOMBRE"].ToString() + " " + r["AP_PAT"].ToString() + " " + r["AP_MAT"].ToString();
+                            dtp.Rows.Add("Buzo", Nombre);
+                        }
+                    }
+                    datos.Name = "DS1";
+                    datos.Value = dtp;
+                    datos2.Name = "DS2";
+                    papeletaTableAdapter.Fill(pap.Papeleta,unidad);
+                    datos2.Value = papeletaTableAdapter.GetData(unidad);
+                    this.reportViewer1.LocalReport.DataSources.Add(datos);
+                    this.reportViewer1.LocalReport.DataSources.Add(datos2);
+                    reportViewer1.RefreshReport();
+                    break;
                 default:
                     break;
             }
