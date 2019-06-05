@@ -25,7 +25,7 @@
         <Width>18.375cm</Width>
         <Style>
           <Border>
-            <Style>None</Style>
+            <Style>Solid</Style>
           </Border>
           <BackgroundColor>DarkGray</BackgroundColor>
           <PaddingLeft>0cm</PaddingLeft>
@@ -168,6 +168,7 @@
                   </Textbox>
                 </ReportItems>
                 <KeepTogether>true</KeepTogether>
+                <Left>0.00002cm</Left>
                 <Height>0.72729cm</Height>
                 <Width>18.375cm</Width>
                 <Style>
@@ -310,6 +311,7 @@
                 </ReportItems>
                 <KeepTogether>true</KeepTogether>
                 <Top>0.72729cm</Top>
+                <Left>0.00002cm</Left>
                 <Height>0.72729cm</Height>
                 <Width>18.375cm</Width>
                 <ZIndex>1</ZIndex>
@@ -388,6 +390,7 @@
                 </ReportItems>
                 <KeepTogether>true</KeepTogether>
                 <Top>1.45458cm</Top>
+                <Left>0.00002cm</Left>
                 <Height>0.72729cm</Height>
                 <Width>18.375cm</Width>
                 <ZIndex>2</ZIndex>
@@ -532,6 +535,7 @@
                 </ReportItems>
                 <KeepTogether>true</KeepTogether>
                 <Top>2.18187cm</Top>
+                <Left>0.00002cm</Left>
                 <Height>0.72729cm</Height>
                 <Width>18.375cm</Width>
                 <ZIndex>3</ZIndex>
@@ -610,120 +614,10 @@
                 </ReportItems>
                 <KeepTogether>true</KeepTogether>
                 <Top>2.90916cm</Top>
+                <Left>0.00002cm</Left>
                 <Height>0.72729cm</Height>
                 <Width>18.375cm</Width>
                 <ZIndex>4</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                </Style>
-              </Rectangle>
-              <Rectangle Name="Rectangle9">
-                <ReportItems>
-                  <Textbox Name="Textbox22">
-                    <CanGrow>true</CanGrow>
-                    <KeepTogether>true</KeepTogether>
-                    <Paragraphs>
-                      <Paragraph>
-                        <TextRuns>
-                          <TextRun>
-                            <Value>RNP EMB:</Value>
-                            <Style>
-                              <FontSize>9pt</FontSize>
-                            </Style>
-                          </TextRun>
-                        </TextRuns>
-                        <Style />
-                      </Paragraph>
-                    </Paragraphs>
-                    <rd:DefaultName>Textbox6</rd:DefaultName>
-                    <Top>0.0882cm</Top>
-                    <Left>13.01751cm</Left>
-                    <Height>0.5509cm</Height>
-                    <Width>2.38535cm</Width>
-                    <Style>
-                      <Border>
-                        <Style>None</Style>
-                      </Border>
-                      <PaddingLeft>2pt</PaddingLeft>
-                      <PaddingRight>2pt</PaddingRight>
-                      <PaddingTop>2pt</PaddingTop>
-                      <PaddingBottom>2pt</PaddingBottom>
-                    </Style>
-                  </Textbox>
-                  <Textbox Name="Textbox23">
-                    <CanGrow>true</CanGrow>
-                    <KeepTogether>true</KeepTogether>
-                    <Paragraphs>
-                      <Paragraph>
-                        <TextRuns>
-                          <TextRun>
-                            <Value>=First(Fields!RNPEMBARCACION.Value, "DS2")</Value>
-                            <Style>
-                              <FontSize>8pt</FontSize>
-                              <Format>D</Format>
-                            </Style>
-                          </TextRun>
-                        </TextRuns>
-                        <Style />
-                      </Paragraph>
-                    </Paragraphs>
-                    <rd:DefaultName>Textbox6</rd:DefaultName>
-                    <Top>0.0882cm</Top>
-                    <Left>15.57925cm</Left>
-                    <Height>0.5509cm</Height>
-                    <Width>2.79576cm</Width>
-                    <ZIndex>1</ZIndex>
-                    <Style>
-                      <Border>
-                        <Style>Solid</Style>
-                        <Width>2pt</Width>
-                      </Border>
-                      <PaddingLeft>2pt</PaddingLeft>
-                      <PaddingRight>2pt</PaddingRight>
-                      <PaddingTop>2pt</PaddingTop>
-                      <PaddingBottom>2pt</PaddingBottom>
-                    </Style>
-                  </Textbox>
-                  <Textbox Name="Textbox24">
-                    <CanGrow>true</CanGrow>
-                    <KeepTogether>true</KeepTogether>
-                    <Paragraphs>
-                      <Paragraph>
-                        <TextRuns>
-                          <TextRun>
-                            <Value>MATRICULA DE EMBARCACION:</Value>
-                            <Style>
-                              <FontSize>9pt</FontSize>
-                            </Style>
-                          </TextRun>
-                        </TextRuns>
-                        <Style />
-                      </Paragraph>
-                    </Paragraphs>
-                    <rd:DefaultName>Textbox6</rd:DefaultName>
-                    <Top>0.81549cm</Top>
-                    <Left>0.00001cm</Left>
-                    <Height>0.5509cm</Height>
-                    <Width>5.10174cm</Width>
-                    <ZIndex>2</ZIndex>
-                    <Style>
-                      <Border>
-                        <Style>None</Style>
-                      </Border>
-                      <PaddingLeft>2pt</PaddingLeft>
-                      <PaddingRight>2pt</PaddingRight>
-                      <PaddingTop>2pt</PaddingTop>
-                      <PaddingBottom>2pt</PaddingBottom>
-                    </Style>
-                  </Textbox>
-                </ReportItems>
-                <KeepTogether>true</KeepTogether>
-                <Top>3.63645cm</Top>
-                <Height>1.36639cm</Height>
-                <Width>18.37501cm</Width>
-                <ZIndex>5</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -897,13 +791,44 @@
                       <PaddingBottom>0cm</PaddingBottom>
                     </Style>
                   </Textbox>
+                  <Textbox Name="Textbox24">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>MATRICULA DE EMBARCACION:</Value>
+                            <Style>
+                              <FontSize>9pt</FontSize>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Textbox6</rd:DefaultName>
+                    <Top>0.0882cm</Top>
+                    <Height>0.5509cm</Height>
+                    <Width>5.10174cm</Width>
+                    <ZIndex>5</ZIndex>
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                      </Border>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
                 </ReportItems>
                 <KeepTogether>true</KeepTogether>
                 <Top>4.36374cm</Top>
-                <Left>0.00001cm</Left>
+                <Left>0.00003cm</Left>
                 <Height>0.72729cm</Height>
                 <Width>18.41469cm</Width>
-                <ZIndex>6</ZIndex>
+                <ZIndex>5</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -949,7 +874,7 @@
                                   <Color>LightGrey</Color>
                                   <Style>Solid</Style>
                                 </Border>
-                                <PaddingLeft>0cm</PaddingLeft>
+                                <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>0cm</PaddingRight>
                                 <PaddingTop>0cm</PaddingTop>
                                 <PaddingBottom>0cm</PaddingBottom>
@@ -982,7 +907,7 @@
                                   <Color>LightGrey</Color>
                                   <Style>Solid</Style>
                                 </Border>
-                                <PaddingLeft>0cm</PaddingLeft>
+                                <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>0cm</PaddingRight>
                                 <PaddingTop>0cm</PaddingTop>
                                 <PaddingBottom>0cm</PaddingBottom>
@@ -1019,7 +944,7 @@
                                   <Color>LightGrey</Color>
                                   <Style>Solid</Style>
                                 </Border>
-                                <PaddingLeft>0cm</PaddingLeft>
+                                <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>0cm</PaddingRight>
                                 <PaddingTop>0cm</PaddingTop>
                                 <PaddingBottom>0cm</PaddingBottom>
@@ -1051,7 +976,7 @@
                                   <Color>LightGrey</Color>
                                   <Style>Solid</Style>
                                 </Border>
-                                <PaddingLeft>0cm</PaddingLeft>
+                                <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>0cm</PaddingRight>
                                 <PaddingTop>0cm</PaddingTop>
                                 <PaddingBottom>0cm</PaddingBottom>
@@ -1081,20 +1006,100 @@
                 </TablixRowHierarchy>
                 <DataSetName>DS1</DataSetName>
                 <Top>5.26742cm</Top>
+                <Left>0.00002cm</Left>
                 <Height>0.8825cm</Height>
                 <Width>18.37499cm</Width>
-                <ZIndex>7</ZIndex>
+                <ZIndex>6</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
                   </Border>
                 </Style>
               </Tablix>
+              <Rectangle Name="Rectangle9">
+                <ReportItems>
+                  <Textbox Name="Textbox22">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>RNP EMB:</Value>
+                            <Style>
+                              <FontSize>9pt</FontSize>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Textbox6</rd:DefaultName>
+                    <Top>0.0882cm</Top>
+                    <Left>13.01751cm</Left>
+                    <Height>0.5509cm</Height>
+                    <Width>2.38535cm</Width>
+                    <Style>
+                      <Border>
+                        <Style>None</Style>
+                      </Border>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                  <Textbox Name="Textbox23">
+                    <CanGrow>true</CanGrow>
+                    <KeepTogether>true</KeepTogether>
+                    <Paragraphs>
+                      <Paragraph>
+                        <TextRuns>
+                          <TextRun>
+                            <Value>=First(Fields!RNPEMBARCACION.Value, "DS2")</Value>
+                            <Style>
+                              <FontSize>8pt</FontSize>
+                              <Format>D</Format>
+                            </Style>
+                          </TextRun>
+                        </TextRuns>
+                        <Style />
+                      </Paragraph>
+                    </Paragraphs>
+                    <rd:DefaultName>Textbox6</rd:DefaultName>
+                    <Top>0.0882cm</Top>
+                    <Left>15.57925cm</Left>
+                    <Height>0.5509cm</Height>
+                    <Width>2.79576cm</Width>
+                    <ZIndex>1</ZIndex>
+                    <Style>
+                      <Border>
+                        <Style>Solid</Style>
+                        <Width>2pt</Width>
+                      </Border>
+                      <PaddingLeft>2pt</PaddingLeft>
+                      <PaddingRight>2pt</PaddingRight>
+                      <PaddingTop>2pt</PaddingTop>
+                      <PaddingBottom>2pt</PaddingBottom>
+                    </Style>
+                  </Textbox>
+                </ReportItems>
+                <KeepTogether>true</KeepTogether>
+                <Top>3.67173cm</Top>
+                <Height>0.6391cm</Height>
+                <Width>18.37501cm</Width>
+                <ZIndex>7</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                </Style>
+              </Rectangle>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>0.46771cm</Top>
             <Height>6.14992cm</Height>
-            <Width>18.4147cm</Width>
+            <Width>18.41472cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1253,9 +1258,9 @@
             </ReportItems>
             <KeepTogether>true</KeepTogether>
             <Top>6.65291cm</Top>
-            <Left>0cm</Left>
+            <Left>0.00002cm</Left>
             <Height>3.32021cm</Height>
-            <Width>18.37499cm</Width>
+            <Width>18.4147cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -1266,9 +1271,9 @@
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Top>2.6162cm</Top>
-        <Left>0.42016cm</Left>
+        <Left>0.42014cm</Left>
         <Height>9.97311cm</Height>
-        <Width>18.4147cm</Width>
+        <Width>18.41472cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -1344,7 +1349,7 @@
     <Height>12.58931cm</Height>
     <Style />
   </Body>
-  <Width>19.60184cm</Width>
+  <Width>21.73205cm</Width>
   <Page>
     <PageHeight>27.94cm</PageHeight>
     <PageWidth>21.59cm</PageWidth>
