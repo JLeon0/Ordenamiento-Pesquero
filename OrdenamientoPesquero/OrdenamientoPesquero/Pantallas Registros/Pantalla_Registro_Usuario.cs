@@ -736,7 +736,10 @@ namespace OrdenamientoPesquero
 
         private void RegistrarUnidad_Click(object sender, EventArgs e)
         {
-            threadHandle.Abort();
+            if (threadHandle!=null)
+            {
+                threadHandle.Abort();
+            }
             if (CURPPesc.Text != "")
             {
                 if (!val.validaralgo(pescador))

@@ -729,7 +729,6 @@ namespace OrdenamientoPesquero
                 {
                     servidorToolStripMenuItem.Checked = false;
                     cambiosToolStripMenuItem.Checked = true;
-                    servidorToolStripMenuItem.Checked = true;
                     proc.bdd = "OrdPesquero2";
                     proc.cambiarbd(proc.bdd);
                     this.OnLoad(e);
