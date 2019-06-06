@@ -66,6 +66,7 @@ namespace OrdenamientoPesquero
             ListaMatriculas.DataSource = embarcaciones;
             ListaMatriculas.DisplayMember = "NOMBREEMBARCACION";
             ListaMatriculas.ValueMember = "MATRICULA";
+            lblEmbarca.Text = "EMBARCACIONES  " + embarcaciones.Rows.Count;
         }
 
         private void pictureBox14_Click(object sender, EventArgs e)

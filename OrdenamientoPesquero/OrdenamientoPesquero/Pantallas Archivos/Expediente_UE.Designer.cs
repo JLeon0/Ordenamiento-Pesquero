@@ -29,13 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Expediente_UE));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.Label();
@@ -56,6 +57,7 @@
             this.AbrirPDF = new System.Windows.Forms.PictureBox();
             this.SubirPDF = new System.Windows.Forms.PictureBox();
             this.EliminarPDF = new System.Windows.Forms.PictureBox();
+            this.CerrarPanel = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -66,15 +68,33 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.Logo2 = new System.Windows.Forms.PictureBox();
+            this.dgvFaltantes = new System.Windows.Forms.DataGridView();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbarcacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPescadores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnidad)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AbrirPDF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubirPDF)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarPDF)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPermisos)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFaltantes)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -125,12 +145,14 @@
             this.dgvEmbarcacion.GridColor = System.Drawing.Color.White;
             this.dgvEmbarcacion.Location = new System.Drawing.Point(70, 438);
             this.dgvEmbarcacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvEmbarcacion.MultiSelect = false;
             this.dgvEmbarcacion.Name = "dgvEmbarcacion";
             this.dgvEmbarcacion.ReadOnly = true;
             this.dgvEmbarcacion.RowHeadersVisible = false;
             this.dgvEmbarcacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvEmbarcacion.Size = new System.Drawing.Size(335, 194);
             this.dgvEmbarcacion.TabIndex = 204;
+            this.dgvEmbarcacion.DoubleClick += new System.EventHandler(this.dgvEmbarcacion_DoubleClick);
             // 
             // Expediente
             // 
@@ -143,10 +165,10 @@
             // 
             // dataGridViewCheckBoxColumn1
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle1.NullValue = false;
-            this.dataGridViewCheckBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle8.NullValue = false;
+            this.dataGridViewCheckBoxColumn1.DefaultCellStyle = dataGridViewCellStyle8;
             this.dataGridViewCheckBoxColumn1.Frozen = true;
             this.dataGridViewCheckBoxColumn1.HeaderText = "Check";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
@@ -156,8 +178,8 @@
             // 
             // Registrados
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Registrados.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Registrados.DefaultCellStyle = dataGridViewCellStyle9;
             this.Registrados.Frozen = true;
             this.Registrados.HeaderText = "Registrados";
             this.Registrados.Name = "Registrados";
@@ -189,12 +211,14 @@
             this.dgvPescadores.GridColor = System.Drawing.Color.White;
             this.dgvPescadores.Location = new System.Drawing.Point(483, 438);
             this.dgvPescadores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvPescadores.MultiSelect = false;
             this.dgvPescadores.Name = "dgvPescadores";
             this.dgvPescadores.ReadOnly = true;
             this.dgvPescadores.RowHeadersVisible = false;
             this.dgvPescadores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvPescadores.Size = new System.Drawing.Size(335, 194);
             this.dgvPescadores.TabIndex = 206;
+            this.dgvPescadores.DoubleClick += new System.EventHandler(this.dgvEmbarcacion_DoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -207,10 +231,10 @@
             // 
             // dataGridViewCheckBoxColumn2
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle3.NullValue = false;
-            this.dataGridViewCheckBoxColumn2.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle10.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle10.NullValue = false;
+            this.dataGridViewCheckBoxColumn2.DefaultCellStyle = dataGridViewCellStyle10;
             this.dataGridViewCheckBoxColumn2.Frozen = true;
             this.dataGridViewCheckBoxColumn2.HeaderText = "Check";
             this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
@@ -220,8 +244,8 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle11;
             this.dataGridViewTextBoxColumn2.Frozen = true;
             this.dataGridViewTextBoxColumn2.HeaderText = "Registrados";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
@@ -260,10 +284,10 @@
             // 
             // dataGridViewCheckBoxColumn3
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle5.NullValue = false;
-            this.dataGridViewCheckBoxColumn3.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle12.NullValue = false;
+            this.dataGridViewCheckBoxColumn3.DefaultCellStyle = dataGridViewCellStyle12;
             this.dataGridViewCheckBoxColumn3.Frozen = true;
             this.dataGridViewCheckBoxColumn3.HeaderText = "Check";
             this.dataGridViewCheckBoxColumn3.Name = "dataGridViewCheckBoxColumn3";
@@ -314,6 +338,21 @@
             this.EliminarPDF.TabStop = false;
             this.toolTip1.SetToolTip(this.EliminarPDF, "Eliminar Archivo");
             this.EliminarPDF.Click += new System.EventHandler(this.EliminarPDF_Click);
+            // 
+            // CerrarPanel
+            // 
+            this.CerrarPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.CerrarPanel.BackColor = System.Drawing.Color.Transparent;
+            this.CerrarPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CerrarPanel.BackgroundImage")));
+            this.CerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.CerrarPanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CerrarPanel.Location = new System.Drawing.Point(418, 3);
+            this.CerrarPanel.Name = "CerrarPanel";
+            this.CerrarPanel.Size = new System.Drawing.Size(21, 21);
+            this.CerrarPanel.TabIndex = 205;
+            this.CerrarPanel.TabStop = false;
+            this.toolTip1.SetToolTip(this.CerrarPanel, "Cerrar");
+            this.CerrarPanel.Click += new System.EventHandler(this.CerrarPanel_Click);
             // 
             // pictureBox8
             // 
@@ -372,12 +411,14 @@
             this.dgvPermisos.GridColor = System.Drawing.Color.White;
             this.dgvPermisos.Location = new System.Drawing.Point(861, 438);
             this.dgvPermisos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvPermisos.MultiSelect = false;
             this.dgvPermisos.Name = "dgvPermisos";
             this.dgvPermisos.ReadOnly = true;
             this.dgvPermisos.RowHeadersVisible = false;
             this.dgvPermisos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvPermisos.Size = new System.Drawing.Size(335, 194);
             this.dgvPermisos.TabIndex = 220;
+            this.dgvPermisos.DoubleClick += new System.EventHandler(this.dgvEmbarcacion_DoubleClick);
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -390,10 +431,10 @@
             // 
             // dataGridViewCheckBoxColumn4
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle6.NullValue = false;
-            this.dataGridViewCheckBoxColumn4.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle13.NullValue = false;
+            this.dataGridViewCheckBoxColumn4.DefaultCellStyle = dataGridViewCellStyle13;
             this.dataGridViewCheckBoxColumn4.Frozen = true;
             this.dataGridViewCheckBoxColumn4.HeaderText = "Check";
             this.dataGridViewCheckBoxColumn4.Name = "dataGridViewCheckBoxColumn4";
@@ -403,8 +444,8 @@
             // 
             // dataGridViewTextBoxColumn5
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle14;
             this.dataGridViewTextBoxColumn5.Frozen = true;
             this.dataGridViewTextBoxColumn5.HeaderText = "Registrados";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
@@ -431,12 +472,168 @@
             this.label6.TabIndex = 223;
             this.label6.Text = "Eliminar Archivo";
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.pictureBox9);
+            this.panel1.Controls.Add(this.Logo2);
+            this.panel1.Controls.Add(this.CerrarPanel);
+            this.panel1.Controls.Add(this.dgvFaltantes);
+            this.panel1.Location = new System.Drawing.Point(398, 193);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(442, 284);
+            this.panel1.TabIndex = 224;
+            this.panel1.Visible = false;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label7.AutoSize = true;
+            this.label7.BackColor = System.Drawing.Color.Transparent;
+            this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.label7.Location = new System.Drawing.Point(149, 12);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(87, 22);
+            this.label7.TabIndex = 208;
+            this.label7.Text = "Faltantes";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
+            this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox9.Location = new System.Drawing.Point(45, 3);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox9.TabIndex = 207;
+            this.pictureBox9.TabStop = false;
+            // 
+            // Logo2
+            // 
+            this.Logo2.BackColor = System.Drawing.Color.Transparent;
+            this.Logo2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Logo2.BackgroundImage")));
+            this.Logo2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.Logo2.Location = new System.Drawing.Point(292, 3);
+            this.Logo2.Name = "Logo2";
+            this.Logo2.Size = new System.Drawing.Size(120, 40);
+            this.Logo2.TabIndex = 206;
+            this.Logo2.TabStop = false;
+            // 
+            // dgvFaltantes
+            // 
+            this.dgvFaltantes.AllowUserToAddRows = false;
+            this.dgvFaltantes.AllowUserToDeleteRows = false;
+            this.dgvFaltantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvFaltantes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
+            this.dgvFaltantes.BackgroundColor = System.Drawing.Color.White;
+            this.dgvFaltantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvFaltantes.ColumnHeadersVisible = false;
+            this.dgvFaltantes.Location = new System.Drawing.Point(45, 68);
+            this.dgvFaltantes.Name = "dgvFaltantes";
+            this.dgvFaltantes.ReadOnly = true;
+            this.dgvFaltantes.RowHeadersVisible = false;
+            this.dgvFaltantes.Size = new System.Drawing.Size(367, 195);
+            this.dgvFaltantes.TabIndex = 204;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.button1);
+            this.groupBox1.Controls.Add(this.label10);
+            this.groupBox1.Controls.Add(this.label9);
+            this.groupBox1.Controls.Add(this.label8);
+            this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.ForeColor = System.Drawing.Color.Black;
+            this.groupBox1.Location = new System.Drawing.Point(398, 639);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(465, 47);
+            this.groupBox1.TabIndex = 225;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Descripción";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.White;
+            this.label8.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(7, 22);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(80, 16);
+            this.label8.TabIndex = 0;
+            this.label8.Text = "Ningún Archivo";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(141, 22);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(120, 16);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "En Proceso de Captura";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Black;
+            this.label10.Location = new System.Drawing.Point(314, 22);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(110, 16);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "Expediente Completo";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Red;
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Red;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(87, 18);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(27, 23);
+            this.button1.TabIndex = 1;
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.Yellow;
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(260, 19);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(27, 23);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Green;
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Location = new System.Drawing.Point(424, 18);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(27, 23);
+            this.button3.TabIndex = 1;
+            this.button3.UseVisualStyleBackColor = false;
+            // 
             // Expediente_UE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1221, 645);
+            this.ClientSize = new System.Drawing.Size(1221, 697);
+            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.EliminarPDF);
             this.Controls.Add(this.label5);
@@ -466,9 +663,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.AbrirPDF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.SubirPDF)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarPDF)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPermisos)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Logo2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvFaltantes)).EndInit();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -506,5 +711,18 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox EliminarPDF;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.DataGridView dgvFaltantes;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox Logo2;
+        private System.Windows.Forms.PictureBox CerrarPanel;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }

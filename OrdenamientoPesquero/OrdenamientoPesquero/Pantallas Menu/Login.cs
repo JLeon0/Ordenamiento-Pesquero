@@ -216,6 +216,7 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             btncerrar.Enabled = true;
             btnlogin.Enabled = true;
             Loading.Visible = false;
+            txtuser.Focus();
         }
 
         private void Login_Load(object sender, EventArgs e)
@@ -225,7 +226,6 @@ namespace OrdenamientoPesquero.Pantallas_Menu
             VerPass.Enabled = false;
             btncerrar.Enabled = false;
             btnlogin.Enabled = false;
-            Redondear();
         }
 
         void Redondear()

@@ -89,7 +89,7 @@
             this.CerrarPanel = new System.Windows.Forms.PictureBox();
             this.ActualizarMATRICULA = new System.Windows.Forms.PictureBox();
             this.ListaMatriculas = new System.Windows.Forms.ListBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.lblEmbarca = new System.Windows.Forms.Label();
             this.PanelMATRICULA = new System.Windows.Forms.Panel();
             this.pictureBox11 = new System.Windows.Forms.PictureBox();
             this.label30 = new System.Windows.Forms.Label();
@@ -798,14 +798,14 @@
             this.ListaMatriculas.TabIndex = 170;
             this.ListaMatriculas.DoubleClick += new System.EventHandler(this.ListaMatriculas_DoubleClick);
             // 
-            // label13
+            // lblEmbarca
             // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(37, 22);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(89, 16);
-            this.label13.TabIndex = 169;
-            this.label13.Text = "MATRICULAS";
+            this.lblEmbarca.AutoSize = true;
+            this.lblEmbarca.Location = new System.Drawing.Point(8, 23);
+            this.lblEmbarca.Name = "lblEmbarca";
+            this.lblEmbarca.Size = new System.Drawing.Size(122, 16);
+            this.lblEmbarca.TabIndex = 169;
+            this.lblEmbarca.Text = "EMBARCACIONES";
             // 
             // PanelMATRICULA
             // 
@@ -999,7 +999,7 @@
             // gbBusqueda
             // 
             this.gbBusqueda.Controls.Add(this.ListaMatriculas);
-            this.gbBusqueda.Controls.Add(this.label13);
+            this.gbBusqueda.Controls.Add(this.lblEmbarca);
             this.gbBusqueda.Location = new System.Drawing.Point(11, 95);
             this.gbBusqueda.Name = "gbBusqueda";
             this.gbBusqueda.Size = new System.Drawing.Size(168, 456);
@@ -1241,7 +1241,7 @@
         private System.Windows.Forms.PictureBox Logo;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ListBox ListaMatriculas;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label lblEmbarca;
         private System.Windows.Forms.Panel PanelMATRICULA;
         private System.Windows.Forms.PictureBox pictureBox11;
         private System.Windows.Forms.Label label30;
