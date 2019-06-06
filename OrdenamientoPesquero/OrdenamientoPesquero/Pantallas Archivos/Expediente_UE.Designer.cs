@@ -101,7 +101,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(479, 412);
+            this.label1.Location = new System.Drawing.Point(477, 447);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 22);
             this.label1.TabIndex = 0;
@@ -135,6 +135,8 @@
             // 
             this.dgvEmbarcacion.AllowUserToAddRows = false;
             this.dgvEmbarcacion.AllowUserToDeleteRows = false;
+            this.dgvEmbarcacion.AllowUserToResizeColumns = false;
+            this.dgvEmbarcacion.AllowUserToResizeRows = false;
             this.dgvEmbarcacion.BackgroundColor = System.Drawing.Color.White;
             this.dgvEmbarcacion.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvEmbarcacion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -143,7 +145,7 @@
             this.dataGridViewCheckBoxColumn1,
             this.Registrados});
             this.dgvEmbarcacion.GridColor = System.Drawing.Color.White;
-            this.dgvEmbarcacion.Location = new System.Drawing.Point(70, 438);
+            this.dgvEmbarcacion.Location = new System.Drawing.Point(68, 473);
             this.dgvEmbarcacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvEmbarcacion.MultiSelect = false;
             this.dgvEmbarcacion.Name = "dgvEmbarcacion";
@@ -152,7 +154,7 @@
             this.dgvEmbarcacion.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvEmbarcacion.Size = new System.Drawing.Size(335, 194);
             this.dgvEmbarcacion.TabIndex = 204;
-            this.dgvEmbarcacion.DoubleClick += new System.EventHandler(this.dgvEmbarcacion_DoubleClick);
+            this.dgvEmbarcacion.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FALTANTES_CellDoubleClick);
             // 
             // Expediente
             // 
@@ -191,7 +193,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(66, 412);
+            this.label2.Location = new System.Drawing.Point(64, 447);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 22);
             this.label2.TabIndex = 205;
@@ -201,6 +203,8 @@
             // 
             this.dgvPescadores.AllowUserToAddRows = false;
             this.dgvPescadores.AllowUserToDeleteRows = false;
+            this.dgvPescadores.AllowUserToResizeColumns = false;
+            this.dgvPescadores.AllowUserToResizeRows = false;
             this.dgvPescadores.BackgroundColor = System.Drawing.Color.White;
             this.dgvPescadores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPescadores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -209,7 +213,7 @@
             this.dataGridViewCheckBoxColumn2,
             this.dataGridViewTextBoxColumn2});
             this.dgvPescadores.GridColor = System.Drawing.Color.White;
-            this.dgvPescadores.Location = new System.Drawing.Point(483, 438);
+            this.dgvPescadores.Location = new System.Drawing.Point(481, 473);
             this.dgvPescadores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvPescadores.MultiSelect = false;
             this.dgvPescadores.Name = "dgvPescadores";
@@ -218,7 +222,7 @@
             this.dgvPescadores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvPescadores.Size = new System.Drawing.Size(335, 194);
             this.dgvPescadores.TabIndex = 206;
-            this.dgvPescadores.DoubleClick += new System.EventHandler(this.dgvEmbarcacion_DoubleClick);
+            this.dgvPescadores.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FALTANTES_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -257,6 +261,8 @@
             // 
             this.dgvUnidad.AllowUserToAddRows = false;
             this.dgvUnidad.AllowUserToDeleteRows = false;
+            this.dgvUnidad.AllowUserToResizeColumns = false;
+            this.dgvUnidad.AllowUserToResizeRows = false;
             this.dgvUnidad.BackgroundColor = System.Drawing.Color.White;
             this.dgvUnidad.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvUnidad.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -304,7 +310,7 @@
             this.AbrirPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.show;
             this.AbrirPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AbrirPDF.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AbrirPDF.Location = new System.Drawing.Point(688, 335);
+            this.AbrirPDF.Location = new System.Drawing.Point(542, 314);
             this.AbrirPDF.Name = "AbrirPDF";
             this.AbrirPDF.Size = new System.Drawing.Size(50, 50);
             this.AbrirPDF.TabIndex = 211;
@@ -317,7 +323,7 @@
             this.SubirPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.SubirPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SubirPDF.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SubirPDF.Location = new System.Drawing.Point(458, 335);
+            this.SubirPDF.Location = new System.Drawing.Point(455, 314);
             this.SubirPDF.Name = "SubirPDF";
             this.SubirPDF.Size = new System.Drawing.Size(50, 50);
             this.SubirPDF.TabIndex = 210;
@@ -331,7 +337,7 @@
             this.EliminarPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
             this.EliminarPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EliminarPDF.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EliminarPDF.Location = new System.Drawing.Point(861, 335);
+            this.EliminarPDF.Location = new System.Drawing.Point(715, 314);
             this.EliminarPDF.Name = "EliminarPDF";
             this.EliminarPDF.Size = new System.Drawing.Size(50, 50);
             this.EliminarPDF.TabIndex = 222;
@@ -346,7 +352,7 @@
             this.CerrarPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("CerrarPanel.BackgroundImage")));
             this.CerrarPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.CerrarPanel.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CerrarPanel.Location = new System.Drawing.Point(418, 3);
+            this.CerrarPanel.Location = new System.Drawing.Point(553, 3);
             this.CerrarPanel.Name = "CerrarPanel";
             this.CerrarPanel.Size = new System.Drawing.Size(21, 21);
             this.CerrarPanel.TabIndex = 205;
@@ -368,6 +374,7 @@
             // 
             // Logo
             // 
+            this.Logo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Logo.BackColor = System.Drawing.Color.Transparent;
             this.Logo.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -381,7 +388,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(677, 388);
+            this.label3.Location = new System.Drawing.Point(531, 367);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 16);
             this.label3.TabIndex = 219;
@@ -390,7 +397,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(446, 388);
+            this.label4.Location = new System.Drawing.Point(443, 367);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 16);
             this.label4.TabIndex = 218;
@@ -401,6 +408,8 @@
             // 
             this.dgvPermisos.AllowUserToAddRows = false;
             this.dgvPermisos.AllowUserToDeleteRows = false;
+            this.dgvPermisos.AllowUserToResizeColumns = false;
+            this.dgvPermisos.AllowUserToResizeRows = false;
             this.dgvPermisos.BackgroundColor = System.Drawing.Color.White;
             this.dgvPermisos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgvPermisos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -409,7 +418,7 @@
             this.dataGridViewCheckBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.dgvPermisos.GridColor = System.Drawing.Color.White;
-            this.dgvPermisos.Location = new System.Drawing.Point(861, 438);
+            this.dgvPermisos.Location = new System.Drawing.Point(859, 473);
             this.dgvPermisos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvPermisos.MultiSelect = false;
             this.dgvPermisos.Name = "dgvPermisos";
@@ -418,7 +427,7 @@
             this.dgvPermisos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvPermisos.Size = new System.Drawing.Size(335, 194);
             this.dgvPermisos.TabIndex = 220;
-            this.dgvPermisos.DoubleClick += new System.EventHandler(this.dgvEmbarcacion_DoubleClick);
+            this.dgvPermisos.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.FALTANTES_CellDoubleClick);
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -457,7 +466,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(857, 412);
+            this.label5.Location = new System.Drawing.Point(855, 447);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 22);
             this.label5.TabIndex = 221;
@@ -466,7 +475,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(835, 388);
+            this.label6.Location = new System.Drawing.Point(689, 367);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 16);
             this.label6.TabIndex = 223;
@@ -480,9 +489,9 @@
             this.panel1.Controls.Add(this.Logo2);
             this.panel1.Controls.Add(this.CerrarPanel);
             this.panel1.Controls.Add(this.dgvFaltantes);
-            this.panel1.Location = new System.Drawing.Point(398, 193);
+            this.panel1.Location = new System.Drawing.Point(332, 202);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(442, 284);
+            this.panel1.Size = new System.Drawing.Size(577, 284);
             this.panel1.TabIndex = 224;
             this.panel1.Visible = false;
             // 
@@ -494,7 +503,7 @@
             this.label7.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Black;
             this.label7.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label7.Location = new System.Drawing.Point(149, 12);
+            this.label7.Location = new System.Drawing.Point(217, 21);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 22);
             this.label7.TabIndex = 208;
@@ -505,7 +514,7 @@
             this.pictureBox9.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox9.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox9.BackgroundImage")));
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox9.Location = new System.Drawing.Point(45, 3);
+            this.pictureBox9.Location = new System.Drawing.Point(45, 12);
             this.pictureBox9.Name = "pictureBox9";
             this.pictureBox9.Size = new System.Drawing.Size(40, 40);
             this.pictureBox9.TabIndex = 207;
@@ -513,10 +522,11 @@
             // 
             // Logo2
             // 
+            this.Logo2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Logo2.BackColor = System.Drawing.Color.Transparent;
             this.Logo2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("Logo2.BackgroundImage")));
             this.Logo2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Logo2.Location = new System.Drawing.Point(292, 3);
+            this.Logo2.Location = new System.Drawing.Point(427, 12);
             this.Logo2.Name = "Logo2";
             this.Logo2.Size = new System.Drawing.Size(120, 40);
             this.Logo2.TabIndex = 206;
@@ -526,8 +536,9 @@
             // 
             this.dgvFaltantes.AllowUserToAddRows = false;
             this.dgvFaltantes.AllowUserToDeleteRows = false;
+            this.dgvFaltantes.AllowUserToResizeColumns = false;
+            this.dgvFaltantes.AllowUserToResizeRows = false;
             this.dgvFaltantes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvFaltantes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dgvFaltantes.BackgroundColor = System.Drawing.Color.White;
             this.dgvFaltantes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvFaltantes.ColumnHeadersVisible = false;
@@ -535,7 +546,7 @@
             this.dgvFaltantes.Name = "dgvFaltantes";
             this.dgvFaltantes.ReadOnly = true;
             this.dgvFaltantes.RowHeadersVisible = false;
-            this.dgvFaltantes.Size = new System.Drawing.Size(367, 195);
+            this.dgvFaltantes.Size = new System.Drawing.Size(502, 195);
             this.dgvFaltantes.TabIndex = 204;
             // 
             // groupBox1
@@ -549,7 +560,7 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(398, 639);
+            this.groupBox1.Location = new System.Drawing.Point(396, 674);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(465, 47);
             this.groupBox1.TabIndex = 225;
@@ -581,9 +592,6 @@
             // 
             // button1
             // 
-            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackColor = System.Drawing.Color.Red;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Red;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -634,7 +642,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1221, 697);
+            this.ClientSize = new System.Drawing.Size(1221, 732);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label6);
