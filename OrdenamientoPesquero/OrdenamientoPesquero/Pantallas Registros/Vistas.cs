@@ -753,13 +753,13 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     dt = proc.ObtenerPresidenteUnidad(rnpa);
                     if (dt.Rows.Count==0)
                     {
-                        CRED[2] = new ReportParameter("PRESI", "____________________________________________");
+                        CRED[2] = new ReportParameter("PRESI", " ");
                     }
                     else
                     {
                         if (dt.Rows[0]["NOMBREPRESIDENTE"].ToString()=="")
                         {
-                            CRED[2] = new ReportParameter("PRESI", "____________________________________________");
+                            CRED[2] = new ReportParameter("PRESI", " ");
                         }
                         else
                         {

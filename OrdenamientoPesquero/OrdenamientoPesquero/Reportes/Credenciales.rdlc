@@ -11,7 +11,6 @@
               <TextRun>
                 <Value>Asunto: Entrega de Credenciales</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -41,9 +40,7 @@
             <TextRuns>
               <TextRun>
                 <Value>La Paz, BCS, </Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
@@ -51,9 +48,9 @@
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
         <Top>3.07208cm</Top>
-        <Left>12.43625cm</Left>
+        <Left>12.32752cm</Left>
         <Height>0.6cm</Height>
-        <Width>2.60583cm</Width>
+        <Width>2.71456cm</Width>
         <ZIndex>1</ZIndex>
         <Style>
           <Border>
@@ -74,7 +71,6 @@
               <TextRun>
                 <Value>=Today()</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
                   <Format>d' de 'MMMM' de 'yyyy</Format>
                 </Style>
               </TextRun>
@@ -107,7 +103,6 @@
               <TextRun>
                 <Value>=Parameters!ue.Value</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -116,7 +111,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>4.23625cm</Top>
+        <Top>3.91875cm</Top>
         <Height>0.6cm</Height>
         <Width>8.85cm</Width>
         <ZIndex>3</ZIndex>
@@ -139,7 +134,6 @@
               <TextRun>
                 <Value>=Parameters!tipo.Value</Value>
                 <Style>
-                  <FontSize>12pt</FontSize>
                   <FontWeight>Bold</FontWeight>
                 </Style>
               </TextRun>
@@ -148,7 +142,7 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox1</rd:DefaultName>
-        <Top>4.83625cm</Top>
+        <Top>4.51875cm</Top>
         <Height>0.6cm</Height>
         <Width>8.85cm</Width>
         <ZIndex>4</ZIndex>
@@ -169,64 +163,24 @@
           <Paragraph>
             <TextRuns>
               <TextRun>
-                <Value>Por medio del presente me permito hacer entrega de </Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
+                <Value>Por medio del presente, y derivado del Programa de Ordenamiento Pesquero, -Fotocredencialización- hago entrega de </Value>
+                <Style />
               </TextRun>
               <TextRun>
                 <Value>=Parameters!num.Value</Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
+                <Style />
               </TextRun>
               <TextRun>
-                <Value> copias de credenciales con el nombre que se anexa en la relacion; la cual corresponde al Programa de foto credencialización de los pescadores del municipio de </Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>=Parameters!muni.Value</Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
-              </TextRun>
-              <TextRun>
-                <Value>, BCS, dentro del " Programa de Ordenamiento Pesquero".</Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>Sin otro Particular por el momento, le saludo cordialmente.</Value>
-                <Style>
-                  <FontSize>12pt</FontSize>
-                </Style>
+                <Value> copias de credenciales de Pescaderos del Municipio de Mulegé, cuyo detalle se expresa a continuación.</Value>
+                <Style />
               </TextRun>
             </TextRuns>
             <Style />
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox6</rd:DefaultName>
-        <Top>6.05578cm</Top>
-        <Height>2.69021cm</Height>
+        <Top>5.42078cm</Top>
+        <Height>1.02333cm</Height>
         <Width>19.5cm</Width>
         <ZIndex>5</ZIndex>
         <Style>
@@ -489,7 +443,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>9.12495cm</Top>
+        <Top>6.47057cm</Top>
         <Height>0.99956cm</Height>
         <Width>15.70209cm</Width>
         <ZIndex>7</ZIndex>
@@ -519,205 +473,10 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>10.79183cm</Top>
+        <Top>8.56933cm</Top>
         <Height>0.6cm</Height>
         <Width>19.5cm</Width>
         <ZIndex>8</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox14">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>ING. JOSÉ FERNANDO GARCIA ROMERO.</Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>SUBSECRETARIO</Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>13.33792cm</Top>
-        <Left>5.5868cm</Left>
-        <Height>1.12917cm</Height>
-        <Width>8.3473cm</Width>
-        <ZIndex>9</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox15">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>C. DAVID JAVIER NAVARRO NUÑEZ</Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>DIRECTOR DE ORDENAMIENTO PESQUERO</Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>17.33312cm</Top>
-        <Height>1.12917cm</Height>
-        <Width>8.85cm</Width>
-        <ZIndex>10</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox16">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>C. JAIME IRVING VERDUGO DE CASSO</Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>JEFE DE PROGRAMA</Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>17.33312cm</Top>
-        <Left>11.1527cm</Left>
-        <Height>1.12917cm</Height>
-        <Width>8.3473cm</Width>
-        <ZIndex>11</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
-      <Textbox Name="Textbox17">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>=Parameters!PRESI.Value</Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value>TITULAR</Value>
-                <Style>
-                  <FontSize>11pt</FontSize>
-                  <FontWeight>Bold</FontWeight>
-                </Style>
-              </TextRun>
-            </TextRuns>
-            <Style>
-              <TextAlign>Center</TextAlign>
-            </Style>
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox13</rd:DefaultName>
-        <Top>20.71979cm</Top>
-        <Left>5.23403cm</Left>
-        <Height>1.12917cm</Height>
-        <Width>9.97007cm</Width>
-        <ZIndex>12</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -776,10 +535,326 @@
           </Paragraph>
         </Paragraphs>
         <rd:DefaultName>Textbox19</rd:DefaultName>
-        <Top>22.19537cm</Top>
+        <Top>22.51287cm</Top>
         <Height>1.03337cm</Height>
         <Width>11.01958cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Rectangle Name="Rectangle1">
+        <ReportItems>
+          <Textbox Name="Textbox14">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>ING. JOSÉ FERNANDO GARCIA ROMERO.</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>SUBSECRETARIO</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox13</rd:DefaultName>
+            <Top>1.96777cm</Top>
+            <Height>1.12917cm</Height>
+            <Width>8.3473cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line1">
+            <Top>1.96777cm</Top>
+            <Height>0cm</Height>
+            <Width>8.3473cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>9.20461cm</Top>
+        <Left>5.23403cm</Left>
+        <Height>3.14986cm</Height>
+        <Width>8.3473cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+      <Rectangle Name="Rectangle2">
+        <ReportItems>
+          <Textbox Name="Textbox18">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>C. DAVID JAVIER NAVARRO NUÑEZ</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>DIRECTOR DE ORDENAMIENTO PESQUERO</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox13</rd:DefaultName>
+            <Top>2.24903cm</Top>
+            <Height>1.12917cm</Height>
+            <Width>9.40563cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line2">
+            <Top>2.24903cm</Top>
+            <Height>0cm</Height>
+            <Width>9.40563cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>12.54409cm</Top>
+        <Height>3.3782cm</Height>
+        <Width>9.40563cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+      <Rectangle Name="Rectangle3">
+        <ReportItems>
+          <Textbox Name="Textbox20">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>C. JAIME IRVING VERDUGO DE CASSO</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>JEFE DE PROGRAMA</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox13</rd:DefaultName>
+            <Top>2.24903cm</Top>
+            <Height>1.12917cm</Height>
+            <Width>9.40563cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line3">
+            <Top>2.24903cm</Top>
+            <Height>0cm</Height>
+            <Width>9.40563cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>12.54409cm</Top>
+        <Left>10.09437cm</Left>
+        <Height>3.3782cm</Height>
+        <Width>9.40563cm</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+      <Rectangle Name="Rectangle4">
+        <ReportItems>
+          <Textbox Name="Textbox21">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>=Parameters!PRESI.Value</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>TITULAR</Value>
+                    <Style>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox13</rd:DefaultName>
+            <Top>2.1403cm</Top>
+            <Height>1.12917cm</Height>
+            <Width>9.40563cm</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line4">
+            <Top>2.1403cm</Top>
+            <Height>0cm</Height>
+            <Width>9.40563cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>16.30209cm</Top>
+        <Left>5.04718cm</Left>
+        <Height>3.26947cm</Height>
+        <Width>9.40563cm</Width>
         <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+        </Style>
+      </Rectangle>
+      <Textbox Name="Textbox15">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Sin otro particular motivo le mando un cordial saludo.</Value>
+                <Style>
+                  <FontWeight>Normal</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Left</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox13</rd:DefaultName>
+        <Top>7.54069cm</Top>
+        <Height>0.6cm</Height>
+        <Width>19.5cm</Width>
+        <ZIndex>14</ZIndex>
         <Style>
           <Border>
             <Style>None</Style>
@@ -791,7 +866,7 @@
         </Style>
       </Textbox>
     </ReportItems>
-    <Height>25.62367cm</Height>
+    <Height>23.54624cm</Height>
     <Style />
   </Body>
   <Width>19.5cm</Width>

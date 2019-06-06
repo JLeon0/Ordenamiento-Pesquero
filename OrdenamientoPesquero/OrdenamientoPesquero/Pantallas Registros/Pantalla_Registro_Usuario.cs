@@ -25,7 +25,7 @@ namespace OrdenamientoPesquero
         Procedimientos proc = new Procedimientos();
         Validaciones val = new Validaciones();
         DataTable dt, NoOrdenados, Embarcaciones;
-        string RNPA = "", NombreUnidad = "", Usuario = "", NombreUsuario = "", BD= "", matricula = "";
+        string RNPA = "", NombreUnidad = "", Usuario = "", NombreUsuario = "", BD= "", matricula = "", RNPA2="";
         string[] Municipios;
         byte[] imagenBuffer;
         Bitmap huell;
@@ -35,6 +35,7 @@ namespace OrdenamientoPesquero
             InitializeComponent();
             //this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
             RNPA = rnpa;
+            RNPA2 = rnpa;
             if (RNPA == "")
             { uni.Visible = true; uni2.Visible = true; }
             NombreUnidad = nombre;
@@ -1388,7 +1389,7 @@ namespace OrdenamientoPesquero
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Vistas v = new Vistas(CURPPesc.Text, RNPA, 3, huell, proc.bdd);
+            Vistas v = new Vistas(CURPPesc.Text, RNPA2, 3, huell, proc.bdd);
             v.Show(this);
         }
 
