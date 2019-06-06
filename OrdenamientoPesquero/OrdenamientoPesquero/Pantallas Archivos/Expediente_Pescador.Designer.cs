@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.dgvArchivos = new System.Windows.Forms.DataGridView();
             this.Expediente = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,10 +42,10 @@
             this.AbrirPDF = new System.Windows.Forms.PictureBox();
             this.SubirPDF = new System.Windows.Forms.PictureBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.EliminarPDF = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.EliminarPDF = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArchivos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
@@ -70,6 +70,7 @@
             this.Check});
             this.dgvArchivos.Location = new System.Drawing.Point(117, 143);
             this.dgvArchivos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvArchivos.MultiSelect = false;
             this.dgvArchivos.Name = "dgvArchivos";
             this.dgvArchivos.ReadOnly = true;
             this.dgvArchivos.RowHeadersVisible = false;
@@ -88,10 +89,10 @@
             // 
             // Check
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle3.NullValue = false;
-            this.Check.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle1.NullValue = false;
+            this.Check.DefaultCellStyle = dataGridViewCellStyle1;
             this.Check.Frozen = true;
             this.Check.HeaderText = "Check";
             this.Check.Name = "Check";
@@ -182,6 +183,19 @@
             this.SubirPDF.Visible = false;
             this.SubirPDF.Click += new System.EventHandler(this.SubirPDF_Click);
             // 
+            // EliminarPDF
+            // 
+            this.EliminarPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
+            this.EliminarPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.EliminarPDF.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.EliminarPDF.Location = new System.Drawing.Point(470, 306);
+            this.EliminarPDF.Name = "EliminarPDF";
+            this.EliminarPDF.Size = new System.Drawing.Size(50, 50);
+            this.EliminarPDF.TabIndex = 218;
+            this.EliminarPDF.TabStop = false;
+            this.toolTip1.SetToolTip(this.EliminarPDF, "Eliminar Archivo");
+            this.EliminarPDF.Click += new System.EventHandler(this.EliminarPDF_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -210,19 +224,6 @@
             this.label4.TabIndex = 219;
             this.label4.Text = "Eliminar Archivo";
             this.label4.Click += new System.EventHandler(this.label4_Click);
-            // 
-            // EliminarPDF
-            // 
-            this.EliminarPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
-            this.EliminarPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.EliminarPDF.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EliminarPDF.Location = new System.Drawing.Point(470, 306);
-            this.EliminarPDF.Name = "EliminarPDF";
-            this.EliminarPDF.Size = new System.Drawing.Size(50, 50);
-            this.EliminarPDF.TabIndex = 218;
-            this.EliminarPDF.TabStop = false;
-            this.toolTip1.SetToolTip(this.EliminarPDF, "Eliminar Archivo");
-            this.EliminarPDF.Click += new System.EventHandler(this.EliminarPDF_Click);
             // 
             // Expediente_Pescador
             // 

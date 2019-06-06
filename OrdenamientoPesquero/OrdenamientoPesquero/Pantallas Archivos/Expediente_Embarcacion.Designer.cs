@@ -122,6 +122,7 @@
             this.Check});
             this.dgvArchivos.Location = new System.Drawing.Point(128, 137);
             this.dgvArchivos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvArchivos.MultiSelect = false;
             this.dgvArchivos.Name = "dgvArchivos";
             this.dgvArchivos.ReadOnly = true;
             this.dgvArchivos.RowHeadersVisible = false;

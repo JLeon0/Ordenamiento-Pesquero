@@ -188,7 +188,7 @@ namespace OrdenamientoPesquero
                 DataRowView row = (DataRowView)MatriculaPesc.SelectedItem;
                 pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, row[0].ToString().Replace(" ", ""), CorreoPesc.Text, LocalidadPesc.Text, o, RNPA.Replace(" ", ""), Seguro.Text, fechaVenF, fechaExpF);
                 int ret=0;
-                if (ChecarBuzosXEquipoBuceo(ocupacion,row,ref ret))
+                if (ChecarBuzosXEquipoBuceo(ocupacion,ref ret))
                 {
                     if (ChecarCapitan(ocupacion, row, ref ret) && ChecarMarineros(ocupacion, row, ref ret) && ChecarBuzo(ocupacion, row, ref ret) || MatriculaPesc.Text == "NO APLICA")
                     {
@@ -307,7 +307,8 @@ namespace OrdenamientoPesquero
             }
             else { return true; }
         }
-        private bool ChecarBuzosXEquipoBuceo(string ocupacion, DataRowView row, ref int ret)
+
+        private bool ChecarBuzosXEquipoBuceo(string ocupacion, ref int ret)
         {
             DataTable buzos = proc.ChecarBuzosXEquipoBuceo(RNPA);
             if (ocupacion == "Buzo")
@@ -330,6 +331,18 @@ namespace OrdenamientoPesquero
             { return true; }
         }
 
+        private bool ChecarTodo(string ocupacion, DataRowView row) 
+        {
+            int ret = 0;
+            switch (ocupacion)
+            {
+                case "Capitan":
+                    return ChecarCapitan(ocupacion, row, ref ret); 
+                default:
+                    break;
+            }
+            return false;
+        }
         #region Cargar
         private void CargarMunicipios()
         {
@@ -431,6 +444,7 @@ namespace OrdenamientoPesquero
                 string c = curp;
                 dt = proc.Obtener_Pescador(c);
                 DataTable dt2 = proc.obt_uni(c);
+                DataRowView row;
                 limpiarpescador();
                 if (dt2.Rows.Count != 0)
                 {
@@ -474,7 +488,7 @@ namespace OrdenamientoPesquero
                     {
                         for (int i = 0; i < MatriculaPesc.Items.Count; i++)
                         {
-                            DataRowView row = (DataRowView)MatriculaPesc.Items[i];
+                            row = (DataRowView)MatriculaPesc.Items[i];
                             if (row[0].ToString() == matricula)
                             {
                                 MatriculaPesc.Text = row[1].ToString();
@@ -523,7 +537,8 @@ namespace OrdenamientoPesquero
                     Unid.Text = dt.Rows[0]["NOMBRE"].ToString();
                 }
 
-
+                row = (DataRowView)MatriculaPesc.SelectedItem;
+                ChecarTodo(ocupacion,row);
                 this.Cursor = Cursors.Default;
             }
         }
@@ -736,10 +751,7 @@ namespace OrdenamientoPesquero
 
         private void RegistrarUnidad_Click(object sender, EventArgs e)
         {
-            if (threadHandle!=null)
-            {
-                threadHandle.Abort();
-            }
+            if(threadHandle != null){ threadHandle.Abort(); }
             if (CURPPesc.Text != "")
             {
                 if (!val.validaralgo(pescador))
