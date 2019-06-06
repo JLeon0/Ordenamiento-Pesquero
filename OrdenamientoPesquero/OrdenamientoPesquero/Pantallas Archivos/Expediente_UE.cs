@@ -223,7 +223,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             }
             dgvPermisos[2, 0].Value = aperm + "/" + folios.Count;
             if (folios.Count > 0 && aperm == folios.Count) { dgvPermisos[1, 0].Value = true; dgvPermisos[1, 0].Style.BackColor = Color.Green; }
-            else if (folios.Count > 0)
+            else if (aperm > 0)
             { dgvPermisos[1, 0].Style.BackColor = Color.Yellow; }
 
             dgvPermisos.ClearSelection();
@@ -334,62 +334,6 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             }
         }
 
-        private void dgvEmbarcacion_DoubleClick(object sender, EventArgs e)
-        {
-            bool Completo = false;
-            string archivo = "";
-            int entidad = 0;
-            if (dgvEmbarcacion == sender) { dgvPermisos.ClearSelection(); dgvPescadores.ClearSelection(); }
-            else if (dgvPescadores == sender) { dgvEmbarcacion.ClearSelection(); dgvPermisos.ClearSelection(); }
-            else if (dgvPermisos == sender) { dgvEmbarcacion.ClearSelection(); dgvPescadores.ClearSelection(); }
-            if (dgvEmbarcacion.SelectedCells.Count > 0)
-            {
-                if (dgvEmbarcacion[1, dgvEmbarcacion.SelectedCells[0].RowIndex].Value == null)
-                {
-                    switch (dgvEmbarcacion.SelectedCells[0].RowIndex)
-                    {
-                        case 0: archivo = "CERTMATRICULA"; break;
-                        case 1: archivo = "CERTSEGURIDAD"; break;
-                        case 2: archivo = "FACTARTESPESCA"; break;
-                        case 3: archivo = "FACTMOTOR"; break;
-                        case 4: archivo = "FACTEMBARCACION"; break;
-                        case 5: archivo = "PAPELETACHIPEO"; break;
-                        case 6: archivo = "FOTOEMB"; break;
-                    }
-                    entidad = 0;
-                }
-                else { Completo = true; }
-            }
-            else if (dgvPescadores.SelectedCells.Count > 0)
-            {
-                if (dgvPescadores[1, dgvPescadores.SelectedCells[0].RowIndex].Value == null)
-                {
-                    switch (dgvPescadores.SelectedCells[0].RowIndex)
-                    {
-                        case 0: archivo = "ACTANAC"; break;
-                        case 1: archivo = "ACURP"; break;
-                        case 2: archivo = "AINE"; break;
-                        case 3: archivo = "ACOMPDOM"; break;
-                    }
-                    entidad = 1;
-                }
-                else { Completo = true; }
-            }
-            else if (dgvPermisos.SelectedCells.Count > 0)
-            {
-                if (dgvPermisos[1, dgvPermisos.SelectedCells[0].RowIndex].Value == null)
-                {
-                    switch (dgvPermisos.SelectedCells[0].RowIndex)
-                    {
-                        case 0: archivo = "APERMISO"; break;
-                    }
-                    entidad = 2;
-                }
-                else { Completo = true; }
-            }
-            if (!Completo) { AbrirVerificacion(archivo, entidad); }
-        }
-
         private void AbrirPDF_Click(object sender, EventArgs e)
         {
             if (dgvUnidad.CurrentCell.Selected != false)
@@ -489,6 +433,63 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             MostrarPanel(false);
         }
 
+        private void FALTANTES_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            bool Completo = false;
+            string archivo = "";
+            int entidad = 0;
+            if (dgvEmbarcacion == sender) { dgvPermisos.ClearSelection(); dgvPescadores.ClearSelection(); }
+            else if (dgvPescadores == sender) { dgvEmbarcacion.ClearSelection(); dgvPermisos.ClearSelection(); }
+            else if (dgvPermisos == sender) { dgvEmbarcacion.ClearSelection(); dgvPescadores.ClearSelection(); }
+            if (dgvEmbarcacion.SelectedCells.Count > 0)
+            {
+                if (dgvEmbarcacion[1, dgvEmbarcacion.SelectedCells[0].RowIndex].Value == null)
+                {
+                    switch (dgvEmbarcacion.SelectedCells[0].RowIndex)
+                    {
+                        case 0: archivo = "CERTMATRICULA"; break;
+                        case 1: archivo = "CERTSEGURIDAD"; break;
+                        case 2: archivo = "FACTARTESPESCA"; break;
+                        case 3: archivo = "FACTMOTOR"; break;
+                        case 4: archivo = "FACTEMBARCACION"; break;
+                        case 5: archivo = "PAPELETACHIPEO"; break;
+                        case 6: archivo = "FOTOEMB"; break;
+                    }
+                    entidad = 0;
+                }
+                else { Completo = true; }
+            }
+            else if (dgvPescadores.SelectedCells.Count > 0)
+            {
+                if (dgvPescadores[1, dgvPescadores.SelectedCells[0].RowIndex].Value == null)
+                {
+                    switch (dgvPescadores.SelectedCells[0].RowIndex)
+                    {
+                        case 0: archivo = "ACTANAC"; break;
+                        case 1: archivo = "ACURP"; break;
+                        case 2: archivo = "AINE"; break;
+                        case 3: archivo = "ACOMPDOM"; break;
+                    }
+                    entidad = 1;
+                }
+                else { Completo = true; }
+            }
+            else if (dgvPermisos.SelectedCells.Count > 0)
+            {
+                if (dgvPermisos[1, dgvPermisos.SelectedCells[0].RowIndex].Value == null)
+                {
+                    switch (dgvPermisos.SelectedCells[0].RowIndex)
+                    {
+                        case 0: archivo = "APERMISO"; break;
+                    }
+                    entidad = 2;
+                }
+                else { Completo = true; }
+            }
+            if (!Completo && archivo != "") { AbrirVerificacion(archivo, entidad); }
+
+        }
+
         private void AbrirVerificacion(string archivo, int entidad)
         {
             string a = "", b = "";
@@ -499,6 +500,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 DataTable embarcaciones = proc.ObtenerCertMatrXUnidad(RNPA);
                 dgvFaltantes.ColumnCount = 0;
                 dgvFaltantes.Columns.Add("Matricula", "Matricula");
+                dgvFaltantes.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 a = "MATRICULA";
                 dgvFaltantes.Columns.Add("Nombre", "Nombre");
                 b = "NOMBREEMBARCACION";
@@ -530,6 +532,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 DataTable pescadores = proc.BuscarNombre("", RNPA);
                 dgvFaltantes.ColumnCount = 0;
                 dgvFaltantes.Columns.Add("CURP", "CURP");
+                dgvFaltantes.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 a = "CURP";
                 dgvFaltantes.Columns.Add("Nombre Pescador", "Nombre Pescador");
                 b = "NOMBRE";
@@ -556,6 +559,7 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 expediente = proc.ObtenerNoPermisos(RNPA);
                 dgvFaltantes.ColumnCount = 0;
                 dgvFaltantes.Columns.Add("NoPermiso", "NoPermiso");
+                dgvFaltantes.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
                 a = "NPERMISO";
                 dgvFaltantes.Columns.Add("Pesqueria", "Pesqueria");
                 b = "PESQUERIA";
@@ -593,9 +597,12 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
                 }
 
             }
+
+            dgvFaltantes.ClearSelection();
             bool x = panel1.Visible ? true : false;
             MostrarPanel(x);
         }
+
         void MostrarPanel(bool Data)
         {
             if (!Data)
