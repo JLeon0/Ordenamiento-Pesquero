@@ -65,6 +65,7 @@
             this.Marcamotor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Potencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gbDatos = new System.Windows.Forms.GroupBox();
+            this.ActivarPanelPermiso = new System.Windows.Forms.PictureBox();
             this.nPer = new System.Windows.Forms.TextBox();
             this.Deportiva = new System.Windows.Forms.RadioButton();
             this.Acuicola = new System.Windows.Forms.RadioButton();
@@ -130,10 +131,10 @@
             this.NPermisoNuevo = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
-            this.ActivarPanelPermiso = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposPescaPerm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbarcacionesPerm)).BeginInit();
             this.gbDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelPermiso)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
@@ -156,7 +157,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarNPERMISO)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelPermiso)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -534,12 +534,26 @@
             this.gbDatos.TabStop = false;
             this.gbDatos.Text = "Datos del Permiso";
             // 
+            // ActivarPanelPermiso
+            // 
+            this.ActivarPanelPermiso.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.actualizar;
+            this.ActivarPanelPermiso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ActivarPanelPermiso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ActivarPanelPermiso.Location = new System.Drawing.Point(196, 43);
+            this.ActivarPanelPermiso.Name = "ActivarPanelPermiso";
+            this.ActivarPanelPermiso.Size = new System.Drawing.Size(20, 20);
+            this.ActivarPanelPermiso.TabIndex = 188;
+            this.ActivarPanelPermiso.TabStop = false;
+            this.ActivarPanelPermiso.Visible = false;
+            this.ActivarPanelPermiso.Click += new System.EventHandler(this.ActivarPanelPermiso_Click);
+            // 
             // nPer
             // 
             this.nPer.Location = new System.Drawing.Point(10, 44);
             this.nPer.Name = "nPer";
             this.nPer.Size = new System.Drawing.Size(176, 22);
             this.nPer.TabIndex = 1;
+            this.nPer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nPer_KeyPress);
             // 
             // Deportiva
             // 
@@ -1263,19 +1277,6 @@
             this.label41.TabIndex = 128;
             this.label41.Text = "No. PERMISO Actual";
             // 
-            // ActivarPanelPermiso
-            // 
-            this.ActivarPanelPermiso.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.actualizar;
-            this.ActivarPanelPermiso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ActivarPanelPermiso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ActivarPanelPermiso.Location = new System.Drawing.Point(196, 43);
-            this.ActivarPanelPermiso.Name = "ActivarPanelPermiso";
-            this.ActivarPanelPermiso.Size = new System.Drawing.Size(20, 20);
-            this.ActivarPanelPermiso.TabIndex = 188;
-            this.ActivarPanelPermiso.TabStop = false;
-            this.ActivarPanelPermiso.Visible = false;
-            this.ActivarPanelPermiso.Click += new System.EventHandler(this.ActivarPanelPermiso_Click);
-            // 
             // Pantalla_Regitro_permiso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -1333,6 +1334,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbarcacionesPerm)).EndInit();
             this.gbDatos.ResumeLayout(false);
             this.gbDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelPermiso)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.limpiar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
@@ -1359,7 +1361,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarNPERMISO)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelPermiso)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
