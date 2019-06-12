@@ -41,7 +41,7 @@ namespace OrdenamientoPesquero
             NombreUnidad = nombre;
             if (tipo == 1)
             { TipoSocio.Enabled = false; TipoExtra.Enabled = false; }
-            else if(tipo== 0) { TipoTitular.Enabled = false; TipoEventual.Enabled = false; }
+            else if (tipo == 0) { TipoTitular.Enabled = false; TipoEventual.Enabled = false; }
             Usuario = user;
             NombreUsuario = nombreuser;
             NIVEL = nivel;
@@ -79,7 +79,7 @@ namespace OrdenamientoPesquero
             CargarPescadores();
             CargarMatriculas();
             CargarMunicipios();
-            limpiarpescador(); 
+            limpiarpescador();
             cargando = false;
             if (NombreUnidad != "NO APLICA")
             {
@@ -188,8 +188,8 @@ namespace OrdenamientoPesquero
             {
                 DataRowView row = (DataRowView)MatriculaPesc.SelectedItem;
                 pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, tipo_pes, ocupacion, cuerpo, row[0].ToString().Replace(" ", ""), CorreoPesc.Text, LocalidadPesc.Text, o, RNPA.Replace(" ", ""), Seguro.Text, fechaVenF, fechaExpF);
-                int ret=0;
-                if (ChecarBuzosXEquipoBuceo(ocupacion,ref ret))
+                int ret = 0;
+                if (ChecarBuzosXEquipoBuceo(ocupacion, ref ret))
                 {
                     if (ChecarCapitan(ocupacion, row, ref ret) && ChecarMarineros(ocupacion, row, ref ret) && ChecarBuzo(ocupacion, row, ref ret) || MatriculaPesc.Text == "NO APLICA")
                     {
@@ -220,7 +220,7 @@ namespace OrdenamientoPesquero
                 string R = "NO APLICA";
                 if (ListaNombres.SelectedIndex > -1 && RNPA != "") { NOMBRES = proc.BuscarNombre(ListaNombres.SelectedItem.ToString(), ""); R = NOMBRES.Rows[0]["RNPTITULAR"].ToString(); }
                 string matricula = "";
-                if(MatriculaPesc.Text == "NO APLICA") { matricula = "NO APLICA"; } else { matricula = MatriculaRelacion.Text; }
+                if (MatriculaPesc.Text == "NO APLICA") { matricula = "NO APLICA"; } else { matricula = MatriculaRelacion.Text; }
                 pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, "", "Sin Actividad", "", matricula, CorreoPesc.Text, LocalidadPesc.Text, 0, R, Seguro.Text, fechaVenF, fechaExpF);
                 if (registrar)
                 {
@@ -243,14 +243,14 @@ namespace OrdenamientoPesquero
             }
         }
 
-        private bool ChecarCapitan(string ocupacion, DataRowView row,ref int ret)
+        private bool ChecarCapitan(string ocupacion, DataRowView row, ref int ret)
         {
             dt = proc.ChecarCapitan(RNPA, row[0].ToString());
             if (ocupacion != "Capitan" || dt.Rows.Count <= 0 || ocupacion == "Capitan" && dt.Rows[0]["CURP"].ToString() == CURPPesc.Text)
             { return true; }
             else { ret = -10; return false; }
         }
-        private bool ChecarMarineros(string ocupacion, DataRowView row,ref int ret)
+        private bool ChecarMarineros(string ocupacion, DataRowView row, ref int ret)
         {
             dt = proc.ChecarMarineros(RNPA, row[0].ToString());
             if (ocupacion == "Marinero")
@@ -280,7 +280,7 @@ namespace OrdenamientoPesquero
         {
             dt = proc.ChecarBuzo(RNPA, row[0].ToString());
             DataTable embarcaciones = proc.EmbarcaXPermisosBuceo(RNPA);
-            if(ocupacion == "Buzo")
+            if (ocupacion == "Buzo")
             {
                 bool acceso = false;
                 foreach (DataRow fila in embarcaciones.Rows)
@@ -308,7 +308,6 @@ namespace OrdenamientoPesquero
             }
             else { return true; }
         }
-
         private bool ChecarBuzosXEquipoBuceo(string ocupacion, ref int ret)
         {
             DataTable buzos = proc.ChecarBuzosXEquipoBuceo(RNPA);
@@ -332,13 +331,13 @@ namespace OrdenamientoPesquero
             { return true; }
         }
 
-        private bool ChecarTodo(string ocupacion, DataRowView row) 
+        private bool ChecarTodo(string ocupacion, DataRowView row)
         {
             int ret = 0;
             switch (ocupacion)
             {
                 case "Capitan":
-                    return ChecarCapitan(ocupacion, row, ref ret); 
+                    return ChecarCapitan(ocupacion, row, ref ret);
                 default:
                     break;
             }
@@ -539,7 +538,7 @@ namespace OrdenamientoPesquero
                 }
 
                 row = (DataRowView)MatriculaPesc.SelectedItem;
-                ChecarTodo(ocupacion,row);
+                ChecarTodo(ocupacion, row);
                 this.Cursor = Cursors.Default;
             }
         }
@@ -575,10 +574,10 @@ namespace OrdenamientoPesquero
 
         private void CargarSolApo()
         {
-            dt = proc.ObtenerSolicitudes(CURPPesc.Text,"");
+            dt = proc.ObtenerSolicitudes(CURPPesc.Text, "");
             solicitudes.Text = dt.Rows.Count.ToString();
 
-            dt = proc.ObtenerApoyos(CURPPesc.Text,"");
+            dt = proc.ObtenerApoyos(CURPPesc.Text, "");
             apoyos.Text = dt.Rows.Count.ToString();
 
         }
@@ -604,7 +603,7 @@ namespace OrdenamientoPesquero
         }
         #endregion
 
-        
+
         #region TextChanged
         private void CURPPesc_TextChanged(object sender, EventArgs e)
         {
@@ -621,7 +620,7 @@ namespace OrdenamientoPesquero
                 {
                     FemeninoPesc.Checked = true;
                 }
-                if(CURPPesc.TextLength >= 9 && RFCPesc.Text == "") { RFCPesc.Text = CURPPesc.Text.Substring(0,10); }
+                if (CURPPesc.TextLength >= 9 && RFCPesc.Text == "") { RFCPesc.Text = CURPPesc.Text.Substring(0, 10); }
             }
             else
             {
@@ -752,7 +751,7 @@ namespace OrdenamientoPesquero
 
         private void RegistrarUnidad_Click(object sender, EventArgs e)
         {
-            if(threadHandle != null){ threadHandle.Abort(); }
+            if (threadHandle != null) { threadHandle.Abort(); }
             if (CURPPesc.Text != "")
             {
                 if (!val.validaralgo(pescador))
@@ -770,7 +769,7 @@ namespace OrdenamientoPesquero
                 exito = 0;
                 CargarPescadores();
                 CargarNoPescadores();
-               // if (threadHandle.IsAlive) { threadHandle.Abort(); }
+                // if (threadHandle.IsAlive) { threadHandle.Abort(); }
             }
             else { MessageBox.Show("No se puede registrar un pescador sin CURP"); }
         }
@@ -836,11 +835,11 @@ namespace OrdenamientoPesquero
 
         private void RegistrarOcciso_Click(object sender, EventArgs e)
         {
-            if (proc.RegistrarOcciso(CURPPesc.Text,FechaFalle.Value.ToShortDateString(),Beneficiario.Text,Parentesco.Text, NPoliza.Text, Vigencia.Value.ToShortDateString(), MontoOcciso.Text ) >= 1)
+            if (proc.RegistrarOcciso(CURPPesc.Text, FechaFalle.Value.ToShortDateString(), Beneficiario.Text, Parentesco.Text, NPoliza.Text, Vigencia.Value.ToShortDateString(), MontoOcciso.Text) >= 1)
             {
-                MessageBox.Show("Occiso Registrado","EXITO",MessageBoxButtons.OK,MessageBoxIcon.Asterisk);
+                MessageBox.Show("Occiso Registrado", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-            else { MessageBox.Show("Error al Registrar Occuso","ERROR",MessageBoxButtons.OK,MessageBoxIcon.Error); }
+            else { MessageBox.Show("Error al Registrar Occuso", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             CargarPescadores();
             CargarNoPescadores();
         }
@@ -927,6 +926,64 @@ namespace OrdenamientoPesquero
             ObtenerImagen();
         }
 
+
+        private void NombrePesc_Leave(object sender, EventArgs e)
+        {
+            NombrePesc.Text = NombrePesc.Text.Trim();
+        }
+
+        private void ApePatPescador_Leave(object sender, EventArgs e)
+        {
+            ApePatPescador.Text = ApePatPescador.Text.Trim();
+        }
+
+        private void ApeMatPescador_Leave(object sender, EventArgs e)
+        {
+            ApeMatPescador.Text = ApeMatPescador.Text.Trim();
+        }
+
+        private void BuscarNombre_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                if (ListaNombres.SelectedIndex >= 0)
+                {
+                    ListaNombres_MouseDoubleClick(sender, new MouseEventArgs(MouseButtons.Left, 1, 0, 0, 0));
+                }
+            }
+        }
+
+        private void BuscarNombre2_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((int)e.KeyChar == (int)Keys.Enter)
+            {
+                if (ListaNombres2.SelectedIndex >= 0)
+                {
+                    ListaNombres2_MouseDoubleClick(sender, new MouseEventArgs(MouseButtons.Left, 1, 0, 0, 0));
+                }
+            }
+        }
+
+        private void btnEntregar_Click(object sender, EventArgs e)
+        {
+            Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes("", "", false, Usuario, NIVEL, NombreUsuario);
+            pantalla.ShowDialog();
+        }
+
+        private void EliminarRegistro_Click(object sender, EventArgs e)
+        {
+            DialogResult Si = MessageBox.Show("¿Desea eliminar este Pescador de forma definitiva?", "ADVERTENCIA", MessageBoxButtons.YesNo);
+            if (Si == DialogResult.Yes)
+            {
+                exito = proc.Eliminar_Pescador(CURPPesc.Text, 0);
+                if (exito > 0)
+                { val.Exito(-21); limpiarpescador(); exito = 0; }
+                CargarPescadores();
+                CargarNoPescadores();
+            }
+        }
+
+
         private void CURPPesc_SelectionChangeCommitted(object sender, EventArgs e)
         {
             dt = proc.Obtener_Pescador(CURPPesc.Text);
@@ -950,7 +1007,7 @@ namespace OrdenamientoPesquero
                 tipopescador = filas["TIPO_PESCADOR"].ToString();
                 ocupacion = filas["OCUPACION_LABORAL"].ToString();
                 cuerpoagua = filas["CUERPO_DE_AGUA"].ToString();
-                matricula= filas["MATRICULA"].ToString();
+                matricula = filas["MATRICULA"].ToString();
                 MatriculaPesc.Text = filas["MATRICULA"].ToString();
                 CorreoPesc.Text = filas["CORREO"].ToString();
             }
@@ -990,7 +1047,7 @@ namespace OrdenamientoPesquero
             if (matricula != "NO APLICA")
             {
                 DataTable d = proc.ObtenerEmbarca(MatriculaRelacion.Text);
-                if (d.Rows.Count==0)
+                if (d.Rows.Count == 0)
                 {
                     d = proc.Obtener_unidades(matricula);
                     RNPA = matricula;
@@ -999,7 +1056,7 @@ namespace OrdenamientoPesquero
                 {
                     RNPA = proc.ObtenerEmbarca(MatriculaRelacion.Text).Rows[0]["RNPTITULAR"].ToString();
                 }
-                
+
             }
             Vistas vistas = new Vistas(CURPPesc.Text, N, RNPA, ord, 14, proc.bdd);
             vistas.ShowDialog();
@@ -1021,7 +1078,7 @@ namespace OrdenamientoPesquero
                 DialogResult result = MessageBox.Show("Desea capturar una nueva imagen?", "Imagen Pescador", MessageBoxButtons.YesNoCancel);
                 if (result == DialogResult.Yes)
                 {
-                    Pantalla_Fotografia pf = new Pantalla_Fotografia(CURPPesc.Text,Firma.BackgroundImage,Huella.BackgroundImage,this);
+                    Pantalla_Fotografia pf = new Pantalla_Fotografia(CURPPesc.Text, Firma.BackgroundImage, Huella.BackgroundImage, this);
                     pf.ShowDialog();
                     img = true;
                 }
@@ -1051,7 +1108,7 @@ namespace OrdenamientoPesquero
                         { Imagen.BackgroundImage = OrdenamientoPesquero.Properties.Resources.perfil; }
                     }
                 }
-               
+
             }
         }
 
@@ -1096,7 +1153,7 @@ namespace OrdenamientoPesquero
                         huell = CreateBitmap(imagenBuffer, Huella.Width, Huella.Height);
                         System.IO.MemoryStream ms = new System.IO.MemoryStream(imagenBuffer);
                         Huella.BackgroundImage = (Image.FromStream(ms));
-                        if (dt.Rows[0]["lector"].ToString()=="1")
+                        if (dt.Rows[0]["lector"].ToString() == "1")
                         {
                             Huella.BackgroundImageLayout = ImageLayout.Tile;
                             lector = 1;
@@ -1267,7 +1324,7 @@ namespace OrdenamientoPesquero
             {
                 string Nombre = "";
                 if (Ord == 1) { Nombre = ListaNombres.Text; } else { Nombre = ListaNombres2.Text; }
-                Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes(Nombre, CURPPesc.Text,false,Usuario, NIVEL,NombreUsuario);
+                Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes(Nombre, CURPPesc.Text, false, Usuario, NIVEL, NombreUsuario);
                 pantalla.ShowDialog();
             }
             CargarSolApo();
@@ -1278,7 +1335,7 @@ namespace OrdenamientoPesquero
             {
                 string Nombre = "";
                 if (Ord == 1) { Nombre = ListaNombres.Text; } else { Nombre = ListaNombres2.Text; }
-                Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes(Nombre, CURPPesc.Text, true,Usuario, NIVEL, NombreUsuario);
+                Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes(Nombre, CURPPesc.Text, true, Usuario, NIVEL, NombreUsuario);
                 pantalla.ShowDialog();
             }
             CargarSolApo();
@@ -1307,7 +1364,7 @@ namespace OrdenamientoPesquero
             }
             else { MessageBox.Show("Para poder credencilizar debe tener Huella, Firma y Fotografía.", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
         }
-        
+
 
         private void ListaNombres2_MouseDoubleClick(object sender, MouseEventArgs e)
         {
@@ -1325,62 +1382,6 @@ namespace OrdenamientoPesquero
 
         #endregion
 
-        private void NombrePesc_Leave(object sender, EventArgs e)
-        {
-            NombrePesc.Text = NombrePesc.Text.Trim();
-        }
-
-        private void ApePatPescador_Leave(object sender, EventArgs e)
-        {
-            ApePatPescador.Text = ApePatPescador.Text.Trim();
-        }
-
-        private void ApeMatPescador_Leave(object sender, EventArgs e)
-        {
-            ApeMatPescador.Text = ApeMatPescador.Text.Trim();
-        }
-
-        private void BuscarNombre_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((int)e.KeyChar == (int)Keys.Enter)
-            {
-                if (ListaNombres.SelectedIndex >= 0)
-                {
-                    ListaNombres_MouseDoubleClick(sender, new MouseEventArgs(MouseButtons.Left, 1, 0, 0, 0));
-                }
-            }
-        }
-
-        private void BuscarNombre2_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if ((int)e.KeyChar == (int)Keys.Enter)
-            {
-                if (ListaNombres2.SelectedIndex >= 0)
-                {
-                    ListaNombres2_MouseDoubleClick(sender, new MouseEventArgs(MouseButtons.Left, 1, 0, 0, 0));
-                }
-            }
-        }
-
-        private void btnEntregar_Click(object sender, EventArgs e)
-        {
-            Pantalla_Solicitudes pantalla = new Pantalla_Solicitudes("", "", false, Usuario, NIVEL, NombreUsuario);
-            pantalla.ShowDialog();
-        }
-
-        private void EliminarRegistro_Click(object sender, EventArgs e)
-        {
-            DialogResult Si = MessageBox.Show("¿Desea eliminar este Pescador de forma definitiva?", "ADVERTENCIA", MessageBoxButtons.YesNo);
-            if (Si == DialogResult.Yes)
-            {
-                exito = proc.Eliminar_Pescador(CURPPesc.Text, 0);
-                if (exito > 0)
-                { val.Exito(-21); limpiarpescador(); exito = 0; }
-                CargarPescadores();
-                CargarNoPescadores();
-            }
-        }
-
         #region Lector de Huellas
         private Reader currentReader;
         public Reader CurrentReader
@@ -1396,7 +1397,7 @@ namespace OrdenamientoPesquero
         }
 
         public bool streamingOn;
-               
+
         private bool reset = false;
         private Thread threadHandle;
         private bool CARGAR()
@@ -1580,10 +1581,29 @@ namespace OrdenamientoPesquero
         }
 
         #endregion
+
         private void Pantalla_Registro_Usuario_FormClosing(object sender, FormClosingEventArgs e)
         {
             Owner.Show();
             Owner.Refresh();
         }
-}
+
+        private void Imagen_DoubleClick(object sender, EventArgs e)
+        {
+            if (Imagen.BackgroundImage != null) { CrearPNG(); }
+        }
+        void CrearPNG()
+        {
+            try {
+                Bitmap customImage = new Bitmap(Imagen.BackgroundImage);
+                string path = Environment.GetFolderPath(Environment.SpecialFolder.MyPictures) + "\\" + NombrePesc.Text + ".png";
+                customImage.Save(path);
+                MessageBox.Show("Imagen creada con exito en carpeta Imagenes", "EXITO", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Hubo un error al crear la imagen", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+    }
 }

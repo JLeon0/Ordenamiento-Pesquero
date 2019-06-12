@@ -153,8 +153,8 @@
             this.Solicitud = new System.Windows.Forms.Button();
             this.Apoyo = new System.Windows.Forms.Button();
             this.gbBotones = new System.Windows.Forms.GroupBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.VerInforme = new System.Windows.Forms.Button();
             this.PanelCURP = new System.Windows.Forms.Panel();
@@ -597,6 +597,7 @@
             this.Imagen.TabIndex = 118;
             this.Imagen.TabStop = false;
             this.toolTip1.SetToolTip(this.Imagen, "Foto del Usuario");
+            this.Imagen.DoubleClick += new System.EventHandler(this.Imagen_DoubleClick);
             // 
             // limpiar
             // 
@@ -1695,16 +1696,6 @@
             this.gbBotones.Text = " Acciones";
             this.gbBotones.Visible = false;
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(509, 70);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(48, 14);
-            this.label5.TabIndex = 184;
-            this.label5.Text = "Anexo 3";
-            // 
             // label12
             // 
             this.label12.AutoSize = true;
@@ -1714,6 +1705,16 @@
             this.label12.Size = new System.Drawing.Size(83, 14);
             this.label12.TabIndex = 182;
             this.label12.Text = "Eliminar registro";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(509, 70);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(48, 14);
+            this.label5.TabIndex = 184;
+            this.label5.Text = "Anexo 3";
             // 
             // label15
             // 
@@ -2151,7 +2152,7 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1387, 749);
             this.Controls.Add(this.btnEntregar);
             this.Controls.Add(this.gbOtros);
             this.Controls.Add(this.Bienvenido);
