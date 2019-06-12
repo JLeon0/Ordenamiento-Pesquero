@@ -317,11 +317,10 @@ namespace Logica
             string[] Parametros = { "@RNPA" };
             return c.getDatosTabla("RELACION", Parametros, RNPA);
         }
-        public int InsertarImagen(string CURP, byte[] imagen, byte[] firma, byte[] huella, bool lector)
+        public int InsertarImagen(string CURP, byte[] imagen, byte[] firma, byte[] huella, int lector)
         {
-            int lh = lector ? 1 : 0;
             string[] Parametros = { "@curp", "@imagen", "@firma" ,"@huella", "@lector"};
-            return c.Ejecutar("InsertarImagen", Parametros, CURP, imagen, firma, huella, lh);
+            return c.Ejecutar("InsertarImagen", Parametros, CURP, imagen, firma, huella, lector);
         }
         public int InsertarPDFPescador(string CURP, byte[] acta, byte[] acurp, byte[] aine, byte[] acomp)
         {
