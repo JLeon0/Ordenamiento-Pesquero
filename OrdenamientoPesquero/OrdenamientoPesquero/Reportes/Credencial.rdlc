@@ -120,9 +120,9 @@
             <Value>=First(Fields!IMAGEN.Value, "ima")</Value>
             <MIMEType>image/jpeg</MIMEType>
             <Sizing>Fit</Sizing>
-            <Top>3.23846cm</Top>
-            <Left>20.45203cm</Left>
-            <Height>6.732cm</Height>
+            <Top>3.50304cm</Top>
+            <Left>20.38147cm</Left>
+            <Height>6.01763cm</Height>
             <Width>5.48725cm</Width>
             <ZIndex>3</ZIndex>
             <Style>

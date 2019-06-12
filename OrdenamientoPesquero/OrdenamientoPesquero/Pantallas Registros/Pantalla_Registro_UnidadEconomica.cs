@@ -1128,6 +1128,9 @@ namespace OrdenamientoPesquero
                             CrearArchivo(path + @"\PESCADORES\" + nombre + @"\CURP.PDF", pescadores.Rows[i]["ACURP"]);
                             CrearArchivo(path + @"\PESCADORES\" + nombre + @"\INE.PDF", pescadores.Rows[i]["AINE"]);
                             CrearArchivo(path + @"PESCADORES\" + nombre + @"\COMPROBANTE DE DOMICILIO.PDF", pescadores.Rows[i]["ACOMPDOM"]);
+                            CrearArchivo(path + @"PESCADORES\" + nombre + @"\IMAGEN.PNG", pescadores.Rows[i]["IMAGEN"]);
+                            CrearArchivo(path + @"PESCADORES\" + nombre + @"\HUELLA.PNG", pescadores.Rows[i]["HUELLA"]);
+                            CrearArchivo(path + @"PESCADORES\" + nombre + @"\FIRMA.PNG", pescadores.Rows[i]["FIRMA"]);
                     }
                     for (int i = 0; i < embarcaciones.Rows.Count; i++)
                     {
