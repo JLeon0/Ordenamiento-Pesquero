@@ -158,6 +158,7 @@ namespace OrdenamientoPesquero
         }
         public int AccionesPermiso(bool registrar)
         {
+            nPer.Focus();
             string[] Hoy = diaExpPer.Value.ToShortDateString().Split('/');
             string diaExp = "";
             int i = 2;
@@ -221,15 +222,12 @@ namespace OrdenamientoPesquero
                 proc.Actualizar_Permiso(perm);
             }
         }
-        private void pictureBox13_Click_1(object sender, EventArgs e)
-        {
-            
-        }
 
         private void Registrar_Click(object sender, EventArgs e)
         {
             exito = AccionesPermiso(true);
             bool pesqueriacorrecta = true;
+            int exitosembarcaciones = 0;
             if (exito > 0)
             {
                 if (!PesqueriaPer.Items.Contains(PesqueriaPer.Text))
@@ -245,30 +243,24 @@ namespace OrdenamientoPesquero
                 }
                 if (pesqueriacorrecta)
                 {
-                    string a = "";
-                    string b = "";
-                    string c = "";
-                    string d = "";
-                    proc.Borrar_equipo(nPer.Text);
-                    equiposdepesca();
                     if (exito == 1)
-                    {
+                    { 
+                        proc.Borrar_equipo(nPer.Text);
+                        equiposdepesca();
                         for (int i = 0; i < dgvEmbarcacionesPerm.RowCount; i++)
                         {
                             if (dgvEmbarcacionesPerm[0, i].Value != null)
                             {
-                                a = dgvEmbarcacionesPerm[0, i].Value.ToString();
-                                b = dgvEmbarcacionesPerm[1, i].Value.ToString();
-                                c = dgvEmbarcacionesPerm[3, i].Value.ToString();
-                                d = dgvEmbarcacionesPerm[2, i].Value.ToString();
-                                Emb = new Embarcacion(a, b, c, d, Municipio, Rnpa);
-                                exito += proc.registrar_perm_emb(Emb, nPer.Text);
+
+                                Emb = new Embarcacion(dgvEmbarcacionesPerm[0, i].Value.ToString(), dgvEmbarcacionesPerm[1, i].Value.ToString(), dgvEmbarcacionesPerm[3, i].Value.ToString(), dgvEmbarcacionesPerm[2, i].Value.ToString(), Municipio, Rnpa);
+                                exitosembarcaciones += proc.registrar_perm_emb(Emb, nPer.Text);
                             }
                         }
                     }
                 }
             }
             val.Exito(exito);
+            if (dgvEmbarcacionesPerm.RowCount > 0) { if (exitosembarcaciones == dgvEmbarcacionesPerm.RowCount) { val.Exito(-31); } else { val.Exito(-32); } }
             CargarPermisos();
             CargarPesquerias();
         }
@@ -289,20 +281,23 @@ namespace OrdenamientoPesquero
             if (pesqueriacorrecta)
             {
                 exito = AccionesPermiso(false);
-                proc.Borrar_equipo(nPer.Text);
-                equiposdepesca();
-                proc.EliminarRelac(nPer.Text);
                 int exitosembarcaciones = 0;
-                for (int i = 0; i < dgvEmbarcacionesPerm.RowCount; i++)
+                if (exito > 0)
                 {
-                    if (dgvEmbarcacionesPerm[0, i].Value != null)
+                    proc.Borrar_equipo(nPer.Text);
+                    equiposdepesca();
+                    proc.EliminarRelac(nPer.Text);
+                    for (int i = 0; i < dgvEmbarcacionesPerm.RowCount; i++)
                     {
-                        Emb = new Embarcacion(dgvEmbarcacionesPerm[0, i].Value.ToString(), dgvEmbarcacionesPerm[1, i].Value.ToString(), dgvEmbarcacionesPerm[3, i].Value.ToString(), dgvEmbarcacionesPerm[2, i].Value.ToString(), Municipio, Rnpa);
-                        exitosembarcaciones += proc.registrar_perm_emb(Emb, nPer.Text);
+                        if (dgvEmbarcacionesPerm[0, i].Value != null)
+                        {
+                            Emb = new Embarcacion(dgvEmbarcacionesPerm[0, i].Value.ToString(), dgvEmbarcacionesPerm[1, i].Value.ToString(), dgvEmbarcacionesPerm[3, i].Value.ToString(), dgvEmbarcacionesPerm[2, i].Value.ToString(), Municipio, Rnpa);
+                            exitosembarcaciones += proc.registrar_perm_emb(Emb, nPer.Text);
+                        }
                     }
                 }
                 val.Exito(exito);
-                if (exitosembarcaciones == dgvEmbarcacionesPerm.RowCount) { val.Exito(-31); } else { val.Exito(-32); }
+                if (dgvEmbarcacionesPerm.RowCount > 0) { if (exitosembarcaciones == dgvEmbarcacionesPerm.RowCount) { val.Exito(-31); } else { val.Exito(-32); } }
                 CargarPesquerias();
             }
             else { MessageBox.Show("La pesquería no existe y ha decidido no agregarla"); }
@@ -398,10 +393,9 @@ namespace OrdenamientoPesquero
 
         private void nPer_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                pictureBox13_Click_1(sender, e);
-            }
+            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
+            { e.Handled = false; }
+            else { e.Handled = true; }
         }
 
         private void ActivarPanelPermiso_Click(object sender, EventArgs e)
