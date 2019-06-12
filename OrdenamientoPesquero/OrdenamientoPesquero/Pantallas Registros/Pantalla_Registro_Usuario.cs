@@ -1387,11 +1387,6 @@ namespace OrdenamientoPesquero
             set { currentReader = value; }
         }
 
-        private void Imagen_DoubleClick(object sender, EventArgs e)
-        {
-            if (Imagen.BackgroundImage != null) { CrearPNG(); }
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             Vistas v = new Vistas(CURPPesc.Text, RNPA, 3, huell, proc.bdd);
@@ -1590,6 +1585,10 @@ namespace OrdenamientoPesquero
             Owner.Refresh();
         }
 
+        private void Imagen_DoubleClick(object sender, EventArgs e)
+        {
+            if (Imagen.BackgroundImage != null) { CrearPNG(); }
+        }
         void CrearPNG()
         {
             try {
