@@ -166,9 +166,8 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             if (embarcaciones.Rows.Count > 0 && certsegu == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 1].Value = true; dgvEmbarcacion[1, 1].Style.BackColor = Color.Green; }
             else if (certsegu > 0) { dgvEmbarcacion[1, 1].Style.BackColor = Color.Yellow; }
 
-            dgvEmbarcacion[2, 2].Value = factartes + "/" + embarcaciones.Rows.Count;
-            if (embarcaciones.Rows.Count > 0 && factartes == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 2].Value = true; dgvEmbarcacion[1, 2].Style.BackColor = Color.Green; }
-            else if (factartes > 0) { dgvEmbarcacion[1, 2].Style.BackColor = Color.Yellow; }
+            dgvEmbarcacion[2, 2].Value = factartes;
+            if (embarcaciones.Rows.Count > 0 && factartes > 0) { dgvEmbarcacion[1, 2].Value = true; dgvEmbarcacion[1, 2].Style.BackColor = Color.Green; }
 
             dgvEmbarcacion[2, 3].Value = factmotor + "/" + embarcaciones.Rows.Count;
             if (embarcaciones.Rows.Count > 0 && factmotor == embarcaciones.Rows.Count) { dgvEmbarcacion[1, 3].Value = true; dgvEmbarcacion[1, 3].Style.BackColor = Color.Green; }
