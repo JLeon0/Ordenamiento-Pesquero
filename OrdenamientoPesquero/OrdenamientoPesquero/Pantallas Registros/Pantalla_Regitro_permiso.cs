@@ -156,6 +156,7 @@ namespace OrdenamientoPesquero
                 proc.Registrar_Equipo(nPer.Text, dgvEquiposPescaPerm[0, i].Value.ToString(), dgvEquiposPescaPerm[1, i].Value.ToString(), dgvEquiposPescaPerm[2, i].Value.ToString());
             }
         }
+
         public int AccionesPermiso(bool registrar)
         {
             nPer.Focus();
@@ -225,46 +226,50 @@ namespace OrdenamientoPesquero
 
         private void Registrar_Click(object sender, EventArgs e)
         {
-            exito = AccionesPermiso(true);
             bool pesqueriacorrecta = true;
-            int exitosembarcaciones = 0;
-            if (exito > 0)
+            if (!PesqueriaPer.Items.Contains(PesqueriaPer.Text))
             {
-                if (!PesqueriaPer.Items.Contains(PesqueriaPer.Text))
+                pesqueriacorrecta = false;
+                DialogResult result = MessageBox.Show("La pesquería no existe... Desea agregarla como nueva?", "NO EXISTE LA PESQUERÍA", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    pesqueriacorrecta = false;
-                    DialogResult result = MessageBox.Show("La pesquería no existe... Desea agregarla como nueva?", "NO EXISTE LA PESQUERÍA", MessageBoxButtons.YesNo);
-                    if (result == DialogResult.Yes)
-                    {
-                        proc.RegistrarPesqueria(PesqueriaPer.Text);
-                        pesqueriacorrecta = true;
-                    }
-                    else { MessageBox.Show("La pesquería no existe y ha decidido no agregarla"); }
+                    proc.RegistrarPesqueria(PesqueriaPer.Text);
+                    pesqueriacorrecta = true;
                 }
-                if (pesqueriacorrecta)
+                else { MessageBox.Show("La pesquería no existe y ha decidido no agregarla"); }
+            }
+            if (pesqueriacorrecta)
+            {
+                exito = AccionesPermiso(true);
+                int exitosembarcaciones = 0;
+                if (exito > 0)
                 {
-                    if (exito == 1)
-                    { 
-                        proc.Borrar_equipo(nPer.Text);
-                        equiposdepesca();
-                        for (int i = 0; i < dgvEmbarcacionesPerm.RowCount; i++)
+                    proc.Borrar_equipo(nPer.Text);
+                    equiposdepesca();
+                    for (int i = 0; i < dgvEmbarcacionesPerm.RowCount; i++)
+                    {
+                        if (dgvEmbarcacionesPerm[0, i].Value != null)
                         {
-                            if (dgvEmbarcacionesPerm[0, i].Value != null)
-                            {
-
-                                Emb = new Embarcacion(dgvEmbarcacionesPerm[0, i].Value.ToString(), dgvEmbarcacionesPerm[1, i].Value.ToString(), dgvEmbarcacionesPerm[3, i].Value.ToString(), dgvEmbarcacionesPerm[2, i].Value.ToString(), Municipio, Rnpa);
-                                exitosembarcaciones += proc.registrar_perm_emb(Emb, nPer.Text);
-                            }
+                            Emb = new Embarcacion(dgvEmbarcacionesPerm[0, i].Value.ToString(), dgvEmbarcacionesPerm[1, i].Value.ToString(), dgvEmbarcacionesPerm[3, i].Value.ToString(), dgvEmbarcacionesPerm[2, i].Value.ToString(), Municipio, Rnpa);
+                            exitosembarcaciones += proc.registrar_perm_emb(Emb, nPer.Text);
                         }
                     }
                 }
-            }
-            val.Exito(exito);
-            if (dgvEmbarcacionesPerm.RowCount > 0) { if (exitosembarcaciones == dgvEmbarcacionesPerm.RowCount) { val.Exito(-31); } else { val.Exito(-32); } }
-            CargarPermisos();
-            CargarPesquerias();
-        }
 
+                if (exito != -20)
+                {
+                    val.Exito(exito);
+                    if (dgvEmbarcacionesPerm.RowCount > 0) { if (exitosembarcaciones == dgvEmbarcacionesPerm.RowCount) { val.Exito(-31); } else { val.Exito(-32); } }
+                    CargarPermisos();
+                    CargarPesquerias();
+                }
+                else
+                {
+                    dt = proc.ObtenerPermiso(nPer.Text);
+                    if (dt.Rows.Count > 0) { MessageBox.Show("El Numero de Permiso ya está registrado en la Unidad Económica: " + dt.Rows[0]["RNPA"].ToString()); }
+                }
+            }
+        }
         private void Actualizar_Click(object sender, EventArgs e)
         {
             bool pesqueriacorrecta = true;
@@ -277,6 +282,7 @@ namespace OrdenamientoPesquero
                     proc.RegistrarPesqueria(PesqueriaPer.Text);
                     pesqueriacorrecta = true;
                 }
+                else { MessageBox.Show("La pesquería no existe y ha decidido no agregarla"); }
             }
             if (pesqueriacorrecta)
             {
@@ -296,9 +302,17 @@ namespace OrdenamientoPesquero
                         }
                     }
                 }
-                val.Exito(exito);
-                if (dgvEmbarcacionesPerm.RowCount > 0) { if (exitosembarcaciones == dgvEmbarcacionesPerm.RowCount) { val.Exito(-31); } else { val.Exito(-32); } }
-                CargarPesquerias();
+                if (exito != -20)
+                {
+                    val.Exito(exito);
+                    if (dgvEmbarcacionesPerm.RowCount > 0) { if (exitosembarcaciones == dgvEmbarcacionesPerm.RowCount) { val.Exito(-31); } else { val.Exito(-32); } }
+                    CargarPesquerias();
+                }
+                else
+                {
+                    dt = proc.ObtenerPermiso(nPer.Text);
+                    if (dt.Rows.Count > 0) { MessageBox.Show("El Numero de Permiso ya está registrado en la Unidad Económica: " + dt.Rows[0]["RNPA"].ToString()); }
+                }
             }
             else { MessageBox.Show("La pesquería no existe y ha decidido no agregarla"); }
         }
@@ -387,15 +401,6 @@ namespace OrdenamientoPesquero
 
                 dgvCombo.SelectedIndexChanged += new EventHandler(dvgCombo_SelectedIndexChanged);
             }
-        }
-
-       
-
-        private void nPer_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (char.IsNumber(e.KeyChar) || char.IsControl(e.KeyChar))
-            { e.Handled = false; }
-            else { e.Handled = true; }
         }
 
         private void ActivarPanelPermiso_Click(object sender, EventArgs e)
