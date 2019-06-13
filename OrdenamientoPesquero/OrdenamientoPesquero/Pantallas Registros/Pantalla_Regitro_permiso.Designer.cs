@@ -553,7 +553,6 @@
             this.nPer.Name = "nPer";
             this.nPer.Size = new System.Drawing.Size(176, 22);
             this.nPer.TabIndex = 1;
-            this.nPer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nPer_KeyPress);
             // 
             // Deportiva
             // 
