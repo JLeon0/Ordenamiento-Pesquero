@@ -19,13 +19,13 @@ namespace OrdenamientoPesquero
     public partial class Pantalla_Registro_Usuario : Form
     {
         string[,] pescador = { { "0", "CURP" }, { "0", "RFC" }, { "0", "Codigo postal" }, { "0", "Telefono" }, { "0", "Correo Electronico" } };
-        int exito = 0, NIVEL;
-        bool cargando = true, img = false, hue = false, firm = false, lector = false;
+        int exito = 0, NIVEL, lector;
+        bool cargando = true, img = false, hue = false, firm = false;
         Pescador pes;
         Procedimientos proc = new Procedimientos();
         Validaciones val = new Validaciones();
         DataTable dt, NoOrdenados, Embarcaciones;
-        string RNPA = "", NombreUnidad = "", Usuario = "", NombreUsuario = "", BD = "", matricula = "";
+        string RNPA = "", NombreUnidad = "", Usuario = "", NombreUsuario = "", BD= "", matricula = "", RNPA2="";
         string[] Municipios;
         byte[] imagenBuffer;
         Bitmap huell;
@@ -35,6 +35,7 @@ namespace OrdenamientoPesquero
             InitializeComponent();
             //this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
             RNPA = rnpa;
+            RNPA2 = rnpa;
             if (RNPA == "")
             { uni.Visible = true; uni2.Visible = true; }
             NombreUnidad = nombre;
@@ -1155,10 +1156,12 @@ namespace OrdenamientoPesquero
                         if (dt.Rows[0]["lector"].ToString() == "1")
                         {
                             Huella.BackgroundImageLayout = ImageLayout.Tile;
+                            lector = 1;
                         }
                         else
                         {
                             Huella.BackgroundImageLayout = ImageLayout.Stretch;
+                            lector = 0;
                         }
                         Bitmap result = new Bitmap(Huella.Width, Huella.Height);
                         Huella.DrawToBitmap(result, new Rectangle(0, 0, Huella.BackgroundImage.Width, Huella.BackgroundImage.Height));
@@ -1246,7 +1249,7 @@ namespace OrdenamientoPesquero
                     {
                         val.Exito(-40);
                         hue = true;
-                        lector = true;
+                        lector = 1;
                     }
                 }
                 catch (Exception) { MessageBox.Show("Hubo un problema con el sensor, retirelo y vuelva a insertarlo", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
@@ -1264,7 +1267,7 @@ namespace OrdenamientoPesquero
                         Huella.BackgroundImageLayout = ImageLayout.Zoom;
                         bmp2.Save(Application.StartupPath.ToString() + @"\huella.jpg");
                         hue = true;
-                        lector = false;
+                        lector = 0;
                     }
                 }
                 catch (Exception)
@@ -1389,7 +1392,7 @@ namespace OrdenamientoPesquero
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Vistas v = new Vistas(CURPPesc.Text, RNPA, 3, huell, proc.bdd);
+            Vistas v = new Vistas(CURPPesc.Text, RNPA2, 3, huell, proc.bdd);
             v.Show(this);
         }
 

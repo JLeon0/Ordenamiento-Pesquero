@@ -238,6 +238,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     para1[8] = new ReportParameter("RutaImagen",ruta);
                     reportViewer1.LocalReport.EnableExternalImages = true;
                     reportViewer1.LocalReport.SetParameters(para1);
+                    reportViewer1.LocalReport.DisplayName = para1[0].Values[0].ToString();
+                    reportViewer1.LocalReport.DisplayName = reportViewer1.LocalReport.DisplayName.Replace("\"", "");
                     this.reportViewer1.LocalReport.DataSources.Add(datos);
                     this.reportViewer1.LocalReport.DataSources.Add(datos2);
                     this.reportViewer1.RefreshReport();
@@ -751,13 +753,13 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     dt = proc.ObtenerPresidenteUnidad(rnpa);
                     if (dt.Rows.Count==0)
                     {
-                        CRED[2] = new ReportParameter("PRESI", "____________________________________________");
+                        CRED[2] = new ReportParameter("PRESI", " ");
                     }
                     else
                     {
                         if (dt.Rows[0]["NOMBREPRESIDENTE"].ToString()=="")
                         {
-                            CRED[2] = new ReportParameter("PRESI", "____________________________________________");
+                            CRED[2] = new ReportParameter("PRESI", " ");
                         }
                         else
                         {
@@ -777,6 +779,46 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     dt = proc.Obtener_Relacion(rnpa);
                     CRED[3] = new ReportParameter("num", dt.Rows.Count.ToString());
                     reportViewer1.LocalReport.SetParameters(CRED);
+                    reportViewer1.RefreshReport();
+                    break;
+                case 16:
+                    reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Papeleta.rdlc");
+                    reportViewer1.LocalReport.DataSources.Clear();
+                    DataTable dtp=new DataTable("DS1");
+                    dtp.Columns.Add("Ocupacion");
+                    dtp.Columns.Add("Nombre");
+
+                    dt = proc.ChecarCapitan(rnpa, unidad);
+                    if (dt.Rows.Count > 0)
+                    {
+                        string Nombre = dt.Rows[0]["NOMBRE"].ToString() + " " + dt.Rows[0]["AP_PAT"].ToString() + " " + dt.Rows[0]["AP_MAT"].ToString();
+                        dtp.Rows.Add("Capitan", Nombre);
+                    }
+                    dt = proc.ChecarMarineros(rnpa, unidad);
+                    if (dt.Rows.Count > 0)
+                    {
+                        foreach (DataRow r in dt.Rows)
+                        {
+                            string Nombre = r["NOMBRE"].ToString() + " " + r["AP_PAT"].ToString() + " " + r["AP_MAT"].ToString();
+                            dtp.Rows.Add("Marinero", Nombre);
+                        }
+                    }
+                    dt = proc.ChecarBuzo(rnpa, unidad);
+                    if (dt.Rows.Count > 0)
+                    {
+                        foreach (DataRow r in dt.Rows)
+                        {
+                            string Nombre = r["NOMBRE"].ToString() + " " + r["AP_PAT"].ToString() + " " + r["AP_MAT"].ToString();
+                            dtp.Rows.Add("Buzo", Nombre);
+                        }
+                    }
+                    datos.Name = "DS1";
+                    datos.Value = dtp;
+                    datos2.Name = "DS2";
+                    papeletaTableAdapter.Fill(pap.Papeleta,unidad);
+                    datos2.Value = papeletaTableAdapter.GetData(unidad);
+                    this.reportViewer1.LocalReport.DataSources.Add(datos);
+                    this.reportViewer1.LocalReport.DataSources.Add(datos2);
                     reportViewer1.RefreshReport();
                     break;
                 default:

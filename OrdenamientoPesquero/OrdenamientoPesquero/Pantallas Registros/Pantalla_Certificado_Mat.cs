@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Logica;
+using OrdenamientoPesquero.Pantallas_Registros;
 
 namespace OrdenamientoPesquero
 {
@@ -357,6 +358,12 @@ namespace OrdenamientoPesquero
             {
                 return true;
             }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            Vistas v = new Vistas(RNPA, MatriculaCertMat.Text,16, proc.bdd);
+            v.Show(this);
         }
 
         private void AbrirExpediente_Click(object sender, EventArgs e)
