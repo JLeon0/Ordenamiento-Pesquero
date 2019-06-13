@@ -1113,6 +1113,7 @@ namespace OrdenamientoPesquero
                             CrearArchivo(path + "COMPROBANTE DE DOMICILIO.PDF", unidad.Rows[0]["COMPDOM"]);
                             CrearArchivo(path + "CEDULA DE INSCRIPCION.PDF", unidad.Rows[0]["CEDINSCRUE"]);
                             CrearArchivo(path + "CEDULA DE EMBARCACIONES.PDF", unidad.Rows[0]["CEDINSCREMBARCA"]);
+                            CrearArchivo(path + "OTRO.PDF", unidad.Rows[0]["OTRO"]);
                     }
 
                     for (int i = 0; i < pescadores.Rows.Count; i++)
