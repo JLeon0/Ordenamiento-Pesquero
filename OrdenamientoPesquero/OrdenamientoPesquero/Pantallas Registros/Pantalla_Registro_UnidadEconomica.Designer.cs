@@ -124,9 +124,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label61 = new System.Windows.Forms.Label();
             this.label23 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.generarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -140,8 +137,6 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.saveFileDialog2 = new System.Windows.Forms.SaveFileDialog();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.ListaNombres = new System.Windows.Forms.ListBox();
@@ -160,9 +155,6 @@
             this.label28 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.gbBotones = new System.Windows.Forms.GroupBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.Expediente = new System.Windows.Forms.Button();
             this.gbBusqueda = new System.Windows.Forms.GroupBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -174,6 +166,20 @@
             this.Logo2 = new System.Windows.Forms.PictureBox();
             this.label35 = new System.Windows.Forms.Label();
             this.Bienvenido = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label37 = new System.Windows.Forms.Label();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.label38 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.pictureBox16 = new System.Windows.Forms.PictureBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.pictureBox17 = new System.Windows.Forms.PictureBox();
+            this.label43 = new System.Windows.Forms.Label();
+            this.pictureBox15 = new System.Windows.Forms.PictureBox();
             this.gbOrgPes.SuspendLayout();
             this.gbBotonesUE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
@@ -203,6 +209,13 @@
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
             this.SuspendLayout();
             // 
             // label13
@@ -1333,48 +1346,6 @@
             this.label23.TabIndex = 9;
             this.label23.Text = "RESUMEN";
             // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Silver;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(165, 19);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(137, 45);
-            this.button1.TabIndex = 108;
-            this.button1.Text = "PESCADORES";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.Silver;
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(317, 19);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(137, 45);
-            this.button2.TabIndex = 108;
-            this.button2.Text = "PERMISOS";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Silver;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(16, 19);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(137, 45);
-            this.button3.TabIndex = 108;
-            this.button3.Text = "EMBARCACIONES";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -1432,7 +1403,7 @@
             this.servidorToolStripMenuItem.CheckOnClick = true;
             this.servidorToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.servidorToolStripMenuItem.Name = "servidorToolStripMenuItem";
-            this.servidorToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.servidorToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.servidorToolStripMenuItem.Text = "Servidor";
             this.servidorToolStripMenuItem.Click += new System.EventHandler(this.servidorToolStripMenuItem_Click);
             // 
@@ -1440,42 +1411,13 @@
             // 
             this.cambiosToolStripMenuItem.CheckOnClick = true;
             this.cambiosToolStripMenuItem.Name = "cambiosToolStripMenuItem";
-            this.cambiosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.cambiosToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.cambiosToolStripMenuItem.Text = "Cambios";
             this.cambiosToolStripMenuItem.Click += new System.EventHandler(this.cambiosToolStripMenuItem_Click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            // 
-            // button4
-            // 
-            this.button4.BackColor = System.Drawing.Color.Silver;
-            this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button4.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(165, 82);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(137, 45);
-            this.button4.TabIndex = 155;
-            this.button4.Text = "LISTA PESCADORES";
-            this.button4.UseVisualStyleBackColor = false;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // button5
-            // 
-            this.button5.BackColor = System.Drawing.Color.Silver;
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Enabled = false;
-            this.button5.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(317, 82);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(137, 45);
-            this.button5.TabIndex = 156;
-            this.button5.Text = "REPORTES";
-            this.button5.UseVisualStyleBackColor = false;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // Logo
             // 
@@ -1687,63 +1629,27 @@
             // 
             // gbBotones
             // 
-            this.gbBotones.Controls.Add(this.button7);
-            this.gbBotones.Controls.Add(this.button6);
-            this.gbBotones.Controls.Add(this.Expediente);
-            this.gbBotones.Controls.Add(this.button1);
-            this.gbBotones.Controls.Add(this.button2);
-            this.gbBotones.Controls.Add(this.button3);
-            this.gbBotones.Controls.Add(this.button4);
-            this.gbBotones.Controls.Add(this.button5);
+            this.gbBotones.Controls.Add(this.pictureBox17);
+            this.gbBotones.Controls.Add(this.label43);
+            this.gbBotones.Controls.Add(this.pictureBox16);
+            this.gbBotones.Controls.Add(this.label42);
+            this.gbBotones.Controls.Add(this.pictureBox15);
+            this.gbBotones.Controls.Add(this.label41);
+            this.gbBotones.Controls.Add(this.pictureBox14);
+            this.gbBotones.Controls.Add(this.label40);
+            this.gbBotones.Controls.Add(this.pictureBox11);
+            this.gbBotones.Controls.Add(this.label39);
+            this.gbBotones.Controls.Add(this.pictureBox7);
+            this.gbBotones.Controls.Add(this.label38);
+            this.gbBotones.Controls.Add(this.pictureBox1);
+            this.gbBotones.Controls.Add(this.label37);
             this.gbBotones.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbBotones.Location = new System.Drawing.Point(208, 449);
             this.gbBotones.Name = "gbBotones";
-            this.gbBotones.Size = new System.Drawing.Size(893, 150);
+            this.gbBotones.Size = new System.Drawing.Size(542, 166);
             this.gbBotones.TabIndex = 186;
             this.gbBotones.TabStop = false;
             this.gbBotones.Text = "Entidades";
-            // 
-            // button7
-            // 
-            this.button7.BackColor = System.Drawing.Color.Silver;
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.ForeColor = System.Drawing.Color.Black;
-            this.button7.Location = new System.Drawing.Point(465, 82);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(137, 45);
-            this.button7.TabIndex = 159;
-            this.button7.Text = "GENERAR EXPEDIENTE";
-            this.button7.UseVisualStyleBackColor = false;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
-            // 
-            // button6
-            // 
-            this.button6.BackColor = System.Drawing.Color.Silver;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(465, 19);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(137, 45);
-            this.button6.TabIndex = 158;
-            this.button6.Text = "ENTREGA DE CREDENCIALES";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // Expediente
-            // 
-            this.Expediente.BackColor = System.Drawing.Color.Silver;
-            this.Expediente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Expediente.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Expediente.ForeColor = System.Drawing.Color.Black;
-            this.Expediente.Location = new System.Drawing.Point(16, 82);
-            this.Expediente.Name = "Expediente";
-            this.Expediente.Size = new System.Drawing.Size(137, 45);
-            this.Expediente.TabIndex = 157;
-            this.Expediente.Text = "EXPEDIENTE";
-            this.Expediente.UseVisualStyleBackColor = false;
-            this.Expediente.Click += new System.EventHandler(this.Expediente_Click);
             // 
             // gbBusqueda
             // 
@@ -1887,6 +1793,181 @@
             this.Bienvenido.TabIndex = 191;
             this.Bienvenido.Text = "Bienvenido ";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox1.Location = new System.Drawing.Point(27, 20);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox1.TabIndex = 160;
+            this.pictureBox1.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox1, "Guardar Información de la Unidad Econímica");
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label37.ForeColor = System.Drawing.Color.Black;
+            this.label37.Location = new System.Drawing.Point(24, 73);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(81, 14);
+            this.label37.TabIndex = 161;
+            this.label37.Text = "Embarcaciones";
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox7.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
+            this.pictureBox7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox7.Location = new System.Drawing.Point(144, 20);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox7.TabIndex = 162;
+            this.pictureBox7.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox7, "Guardar Información de la Unidad Econímica");
+            this.pictureBox7.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label38.ForeColor = System.Drawing.Color.Black;
+            this.label38.Location = new System.Drawing.Point(141, 73);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(65, 14);
+            this.label38.TabIndex = 163;
+            this.label38.Text = "Pescadores";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox11.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
+            this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox11.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox11.Location = new System.Drawing.Point(271, 20);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox11.TabIndex = 164;
+            this.pictureBox11.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox11, "Guardar Información de la Unidad Econímica");
+            this.pictureBox11.Click += new System.EventHandler(this.pictureBox11_Click);
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label39.ForeColor = System.Drawing.Color.Black;
+            this.label39.Location = new System.Drawing.Point(268, 73);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(51, 14);
+            this.label39.TabIndex = 165;
+            this.label39.Text = "Permisos";
+            // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox14.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
+            this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox14.Location = new System.Drawing.Point(21, 92);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox14.TabIndex = 166;
+            this.pictureBox14.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox14, "Guardar Información de la Unidad Econímica");
+            this.pictureBox14.Click += new System.EventHandler(this.pictureBox14_Click);
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label40.ForeColor = System.Drawing.Color.Black;
+            this.label40.Location = new System.Drawing.Point(18, 145);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(70, 14);
+            this.label40.TabIndex = 167;
+            this.label40.Text = "Credenciales";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label41.ForeColor = System.Drawing.Color.Black;
+            this.label41.Location = new System.Drawing.Point(141, 147);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(60, 14);
+            this.label41.TabIndex = 169;
+            this.label41.Text = "Expediente";
+            // 
+            // pictureBox16
+            // 
+            this.pictureBox16.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox16.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
+            this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox16.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox16.Location = new System.Drawing.Point(420, 20);
+            this.pictureBox16.Name = "pictureBox16";
+            this.pictureBox16.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox16.TabIndex = 170;
+            this.pictureBox16.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox16, "Guardar Información de la Unidad Econímica");
+            this.pictureBox16.Click += new System.EventHandler(this.pictureBox16_Click);
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.Black;
+            this.label42.Location = new System.Drawing.Point(417, 73);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(51, 14);
+            this.label42.TabIndex = 171;
+            this.label42.Text = "Reportes";
+            // 
+            // pictureBox17
+            // 
+            this.pictureBox17.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox17.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
+            this.pictureBox17.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox17.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox17.Location = new System.Drawing.Point(271, 94);
+            this.pictureBox17.Name = "pictureBox17";
+            this.pictureBox17.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox17.TabIndex = 192;
+            this.pictureBox17.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox17, "Guardar Información de la Unidad Econímica");
+            this.pictureBox17.Click += new System.EventHandler(this.pictureBox17_Click);
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.ForeColor = System.Drawing.Color.Black;
+            this.label43.Location = new System.Drawing.Point(248, 147);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(103, 14);
+            this.label43.TabIndex = 193;
+            this.label43.Text = "Generar Expediente";
+            // 
+            // pictureBox15
+            // 
+            this.pictureBox15.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox15.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
+            this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pictureBox15.Location = new System.Drawing.Point(144, 94);
+            this.pictureBox15.Name = "pictureBox15";
+            this.pictureBox15.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox15.TabIndex = 168;
+            this.pictureBox15.TabStop = false;
+            this.toolTip1.SetToolTip(this.pictureBox15, "Guardar Información de la Unidad Econímica");
+            this.pictureBox15.Click += new System.EventHandler(this.pictureBox15_Click);
+            // 
             // Pantalla_Registro_UnidadEconomica
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1947,12 +2028,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo1)).EndInit();
             this.gbBotones.ResumeLayout(false);
+            this.gbBotones.PerformLayout();
             this.gbBusqueda.ResumeLayout(false);
             this.gbBusqueda.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1995,9 +2084,6 @@
         private System.Windows.Forms.Label label63;
         private System.Windows.Forms.Label label61;
         private System.Windows.Forms.DataGridView DataResumen;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label NombreResumen;
         private System.Windows.Forms.LinkLabel TotalEsfuerzos;
         private System.Windows.Forms.LinkLabel TotalSocios;
@@ -2039,8 +2125,6 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog2;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.ListBox ListaNombres;
         private System.Windows.Forms.TextBox BuscarN;
         private System.Windows.Forms.Label label25;
@@ -2072,7 +2156,6 @@
         private System.Windows.Forms.Label Titular;
         private System.Windows.Forms.LinkLabel TotalPermisos;
         private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.Button Expediente;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.MaskedTextBox mtbTelefonoPresidente;
         private System.Windows.Forms.Label label33;
@@ -2089,12 +2172,24 @@
         private System.Windows.Forms.PictureBox Logo2;
         private System.Windows.Forms.PictureBox pictureBox12;
         private System.Windows.Forms.Label label35;
-        private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label Bienvenido;
         private System.Windows.Forms.GroupBox gbBotonesUE;
-        private System.Windows.Forms.Button button7;
         private System.Windows.Forms.LinkLabel vencidos;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.ToolStripMenuItem cargarTotalToolStripMenuItem;
+        private System.Windows.Forms.PictureBox pictureBox16;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.PictureBox pictureBox7;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.PictureBox pictureBox17;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.PictureBox pictureBox15;
     }
 }

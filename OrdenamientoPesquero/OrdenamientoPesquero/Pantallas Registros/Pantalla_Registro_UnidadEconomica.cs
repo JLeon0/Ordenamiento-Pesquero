@@ -253,8 +253,8 @@ namespace OrdenamientoPesquero
                     txtRFC.Text = fila["RFC"].ToString();
                     txtCalleNum.Text = fila["CALLEYNUM"].ToString();
                     txtColonia.Text = fila["COLONIA"].ToString();
-                    txtLocalidad.Text = fila["LOCALIDAD"].ToString();
                     txtMunicipio.Text = fila["MUNICIO"].ToString();
+                    txtLocalidad.Text = fila["LOCALIDAD"].ToString();
                     mtbCP.Text = fila["CODIGO_POSTAL"].ToString();
                     txtCorreo.Text = fila["CORREO"].ToString();
                     mtbTelefono.Text = fila["TELEFONO"].ToString();
@@ -280,8 +280,8 @@ namespace OrdenamientoPesquero
                 txtRFC.Text = fila["RFC"].ToString();
                 txtCalleNum.Text = fila["CALLEYNUM"].ToString();
                 txtColonia.Text = fila["COLONIA"].ToString();
-                txtLocalidad.Text = fila["LOCALIDAD"].ToString();
                 txtMunicipio.Text = fila["MUNICIO"].ToString();
+                txtLocalidad.Text = fila["LOCALIDAD"].ToString();
                 mtbCP.Text = fila["CODIGO_POSTAL"].ToString();
                 txtCorreo.Text = fila["CORREO"].ToString();
                 mtbTelefono.Text = fila["TELEFONO"].ToString();
@@ -780,14 +780,7 @@ namespace OrdenamientoPesquero
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (existe(cbRNPA.Text))
-            {
-                Pantalla_Certificado_Mat certmat = new Pantalla_Certificado_Mat(cbRNPA.Text, NIVEL);
-                certmat.ShowDialog();
-                Resumenes(cbRNPA.Text);
-                BorrarCarpeta();
-            }
-            else { MessageBox.Show("Debe elegir una unidad economica que esté registrada", "Error"); }
+
         }
 
         private void TotalPermisos_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -1178,6 +1171,164 @@ namespace OrdenamientoPesquero
                 }
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            if (existe(cbRNPA.Text))
+            {
+                Pantalla_Certificado_Mat certmat = new Pantalla_Certificado_Mat(cbRNPA.Text, NIVEL);
+                certmat.ShowDialog();
+                Resumenes(cbRNPA.Text);
+                BorrarCarpeta();
+            }
+            else { MessageBox.Show("Debe elegir una unidad economica que esté registrada", "Error"); }
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            if (existe(cbRNPA.Text))
+            {
+                int tipo = 0;
+                if (Privado.Checked) { tipo = 1; }
+                Pantalla_Registro_Usuario pesc = new Pantalla_Registro_Usuario(cbRNPA.Text, txtNombre.Text, tipo, Usuario, NombreUsuario, NIVEL, proc.bdd);
+                this.Hide();
+                pesc.ShowDialog(this);
+                Resumenes(cbRNPA.Text);
+                ResumenSocios(cbRNPA.Text);
+                BorrarCarpeta();
+            }
+            else { MessageBox.Show("Debe elegir una unidad economica que esté registrada", "Error"); }
+        }
+
+        private void pictureBox11_Click(object sender, EventArgs e)
+        {
+            if (existe(cbRNPA.Text))
+            {
+                Pantalla_Regitro_permiso perm = new Pantalla_Regitro_permiso(cbRNPA.Text, txtMunicipio.Text, txtNombre.Text, NIVEL);
+                perm.ShowDialog();
+                Resumenes(cbRNPA.Text);
+                BorrarCarpeta();
+            }
+            else { MessageBox.Show("Debe elegir una unidad economica que esté registrada", "Error"); }
+        }
+
+        private void pictureBox14_Click(object sender, EventArgs e)
+        {
+            Vistas v = new Vistas(cbRNPA.Text, txtNombre.Text, 15, proc.bdd);
+            v.Show(this);
+        }
+
+        private void pictureBox15_Click(object sender, EventArgs e)
+        {
+            if (cbRNPA.Text != "")
+            {
+                int tipo = 0;
+                if (Privado.Checked) { tipo = 1; }
+                Pantallas_Archivos.Expediente_UE expue = new Pantallas_Archivos.Expediente_UE(cbRNPA.Text, txtNombre.Text, tipo, NIVEL);
+                expue.ShowDialog();
+                BorrarCarpeta();
+            }
+        }
+
+        private void pictureBox16_Click(object sender, EventArgs e)
+        {
+            if (Social.Checked)
+            {
+                Pantallas_Menu.MenuReportes mr = new Pantallas_Menu.MenuReportes(cbRNPA.Text, "ReporteXUnidad.rdlc", proc.bdd); mr.Show(this);
+            }
+            else
+            {
+                Pantallas_Menu.MenuReportes mr = new Pantallas_Menu.MenuReportes(cbRNPA.Text, "ReporteXPermicionario.rdlc", proc.bdd); mr.Show(this);
+            }
+        }
+
+        private void pictureBox17_Click(object sender, EventArgs e)
+        {
+            string nombre = "XXXXXX";
+            byte[] file;
+            string path = "";
+            if (cbRNPA.Text != "")
+            {
+                DialogResult result = folderBrowserDialog1.ShowDialog();
+                if (result == DialogResult.OK) // Test result.
+                {
+                    DataTable nom;
+                    DataTable pescadores = proc.ObtenerExpedientePescadorXUnidad(cbRNPA.Text);
+                    DataTable embarcaciones = proc.ObtenerExpedienteEmbarcacionXUnidad(cbRNPA.Text);
+                    DataTable unidad = proc.ObtenerExpedienteUnidad(cbRNPA.Text);
+                    DataTable permisos = proc.ObtenerNoPermisos(cbRNPA.Text);
+
+                    if (!Directory.Exists(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\"))
+                    {
+                        DirectoryInfo di = Directory.CreateDirectory(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\");
+                    }
+                    if (!Directory.Exists(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\" + "PESCADORES" + @"\"))
+                    {
+                        DirectoryInfo di1 = Directory.CreateDirectory(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\" + "PESCADORES" + @"\");
+                    }
+                    if (!Directory.Exists(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\" + "EMBARCACIONES" + @"\"))
+                    {
+                        DirectoryInfo di2 = Directory.CreateDirectory(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\" + "EMBARCACIONES" + @"\");
+                    }
+                    if (!Directory.Exists(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\" + "PERMISOS" + @"\"))
+                    {
+                        DirectoryInfo di3 = Directory.CreateDirectory(folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\" + "PERMISOS" + @"\");
+                    }
+                    path = folderBrowserDialog1.SelectedPath + @"\" + txtNombre.Text + @"\";
+                    if (unidad.Rows.Count != 0)
+                    {
+                        CrearArchivo(path + "ACTA CONSTTUTIVA.PDF", unidad.Rows[0]["ACTACONS"]);
+                        CrearArchivo(path + "ACTA DE ASAMBLEA.PDF", unidad.Rows[0]["ACTAASAMBLEA"]);
+                        CrearArchivo(path + "RFC.PDF", unidad.Rows[0]["RFCUE"]);
+                        CrearArchivo(path + "COMPROBANTE DE DOMICILIO.PDF", unidad.Rows[0]["COMPDOM"]);
+                        CrearArchivo(path + "CEDULA DE INSCRIPCION.PDF", unidad.Rows[0]["CEDINSCRUE"]);
+                        CrearArchivo(path + "CEDULA DE EMBARCACIONES.PDF", unidad.Rows[0]["CEDINSCREMBARCA"]);
+                        CrearArchivo(path + "OTRO.PDF", unidad.Rows[0]["OTRO"]);
+                    }
+
+                    for (int i = 0; i < pescadores.Rows.Count; i++)
+                    {
+
+                        nom = proc.Obtener_Pescador(pescadores.Rows[i]["CURP"].ToString());
+                        nombre = nom.Rows[0]["NOMBRE"].ToString() + " " + nom.Rows[0]["AP_PAT"].ToString() + " " + nom.Rows[0]["AP_MAT"].ToString();
+                        if (!Directory.Exists(path + @"\PESCADORES\" + nombre + @"\"))
+                        {
+                            DirectoryInfo di = Directory.CreateDirectory(path + @"\PESCADORES\" + nombre + @"\");
+                        }
+                        CrearArchivo(path + @"\PESCADORES\" + nombre + @"\ACTA DE NACIMIENTO.PDF", pescadores.Rows[i]["ACTANAC"]);
+                        CrearArchivo(path + @"\PESCADORES\" + nombre + @"\CURP.PDF", pescadores.Rows[i]["ACURP"]);
+                        CrearArchivo(path + @"\PESCADORES\" + nombre + @"\INE.PDF", pescadores.Rows[i]["AINE"]);
+                        CrearArchivo(path + @"PESCADORES\" + nombre + @"\COMPROBANTE DE DOMICILIO.PDF", pescadores.Rows[i]["ACOMPDOM"]);
+                        CrearArchivo(path + @"PESCADORES\" + nombre + @"\IMAGEN.PNG", pescadores.Rows[i]["IMAGEN"]);
+                        CrearArchivo(path + @"PESCADORES\" + nombre + @"\HUELLA.PNG", pescadores.Rows[i]["HUELLA"]);
+                        CrearArchivo(path + @"PESCADORES\" + nombre + @"\FIRMA.PNG", pescadores.Rows[i]["FIRMA"]);
+                    }
+                    for (int i = 0; i < embarcaciones.Rows.Count; i++)
+                    {
+                        nom = proc.ObtenerEmbarca(embarcaciones.Rows[i]["MATRICULA"].ToString());
+                        nombre = nom.Rows[0]["NOMBREEMBARCACION"].ToString();
+                        if (!Directory.Exists(path + @"\PESCADORES\" + nombre + @"\"))
+                        {
+                            DirectoryInfo di = Directory.CreateDirectory(path + @"\EMBARCACIONES\" + nombre + @"\");
+                        }
+                        CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\CERTIFICADO DE MATRICULA.PDF", embarcaciones.Rows[i]["CERTMATRICULA"]);
+                        CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\CERTIFICADO DE SEGURIDAD.PDF", embarcaciones.Rows[i]["CERTSEGURIDAD"]);
+                        CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\FACTURA DE ARTES DE PESCA.PDF", embarcaciones.Rows[i]["FACTARTESPESCA"]);
+                        CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\FACTURA DE MOTOR.PDF", embarcaciones.Rows[i]["FACTMOTOR"]);
+                        CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\FACTURA DE EMBARCACION.PDF", embarcaciones.Rows[i]["FACTEMBARCACION"]);
+                        CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\PAPELETA DE CHIPEO.PDF", embarcaciones.Rows[i]["PAPELETACHIPEO"]);
+                        CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\FOTO DE EMBARCACION.PDF", embarcaciones.Rows[i]["FOTOEMB"]);
+                    }
+                    for (int C = 0; C < permisos.Rows.Count; C++)
+                    {
+                        CrearArchivo(path + @"PERMISOS\" + permisos.Rows[C]["PESQUERIA"].ToString() + ".pdf", permisos.Rows[C]["APERMISO"]);
+                    }
+                }
+            }
+            MessageBox.Show("Expediente Generado Correctamente");
+
+        }
+
         private void BorrarCarpeta()
         {
             string path = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
