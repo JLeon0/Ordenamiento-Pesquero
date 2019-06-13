@@ -78,6 +78,9 @@
             this.comboBox9 = new System.Windows.Forms.ComboBox();
             this.comboBox10 = new System.Windows.Forms.ComboBox();
             this.ColumasUnidad = new System.Windows.Forms.GroupBox();
+            this.checkBox155 = new System.Windows.Forms.CheckBox();
+            this.checkBox154 = new System.Windows.Forms.CheckBox();
+            this.checkBox153 = new System.Windows.Forms.CheckBox();
             this.checkBox100 = new System.Windows.Forms.CheckBox();
             this.checkBox27 = new System.Windows.Forms.CheckBox();
             this.checkBox29 = new System.Windows.Forms.CheckBox();
@@ -260,9 +263,6 @@
             this.checkBox144 = new System.Windows.Forms.CheckBox();
             this.checkBox145 = new System.Windows.Forms.CheckBox();
             this.checkBox146 = new System.Windows.Forms.CheckBox();
-            this.checkBox153 = new System.Windows.Forms.CheckBox();
-            this.checkBox154 = new System.Windows.Forms.CheckBox();
-            this.checkBox155 = new System.Windows.Forms.CheckBox();
             this.ColumasPescador.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.FiltrosPescador.SuspendLayout();
@@ -302,9 +302,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.reportViewer1.DocumentMapWidth = 1;
-            this.reportViewer1.Location = new System.Drawing.Point(328, 0);
+            this.reportViewer1.Location = new System.Drawing.Point(378, 0);
             this.reportViewer1.Name = "reportViewer1";
-            this.reportViewer1.Size = new System.Drawing.Size(735, 560);
+            this.reportViewer1.Size = new System.Drawing.Size(685, 560);
             this.reportViewer1.TabIndex = 0;
             // 
             // checkBox1
@@ -576,7 +576,7 @@
             this.groupBox1.Controls.Add(this.ColumasPescador);
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(302, 511);
+            this.groupBox1.Size = new System.Drawing.Size(348, 511);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pescador";
@@ -765,7 +765,7 @@
             this.tabControl1.Location = new System.Drawing.Point(4, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(322, 560);
+            this.tabControl1.Size = new System.Drawing.Size(368, 560);
             this.tabControl1.TabIndex = 3;
             // 
             // tabPage1
@@ -775,7 +775,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(314, 534);
+            this.tabPage1.Size = new System.Drawing.Size(360, 534);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Pescador";
             // 
@@ -786,7 +786,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(314, 534);
+            this.tabPage2.Size = new System.Drawing.Size(360, 534);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Unidad Economica";
             // 
@@ -802,7 +802,7 @@
             this.groupBox2.Controls.Add(this.ColumasUnidad);
             this.groupBox2.Location = new System.Drawing.Point(6, 6);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(302, 511);
+            this.groupBox2.Size = new System.Drawing.Size(348, 511);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Unidad Economica";
@@ -924,6 +924,42 @@
             this.ColumasUnidad.TabIndex = 1;
             this.ColumasUnidad.TabStop = false;
             this.ColumasUnidad.Text = "Columnas";
+            // 
+            // checkBox155
+            // 
+            this.checkBox155.AutoSize = true;
+            this.checkBox155.Checked = true;
+            this.checkBox155.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox155.Location = new System.Drawing.Point(7, 171);
+            this.checkBox155.Name = "checkBox155";
+            this.checkBox155.Size = new System.Drawing.Size(79, 17);
+            this.checkBox155.TabIndex = 25;
+            this.checkBox155.Text = "Federacion";
+            this.checkBox155.UseVisualStyleBackColor = true;
+            // 
+            // checkBox154
+            // 
+            this.checkBox154.AutoSize = true;
+            this.checkBox154.Checked = true;
+            this.checkBox154.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox154.Location = new System.Drawing.Point(134, 146);
+            this.checkBox154.Name = "checkBox154";
+            this.checkBox154.Size = new System.Drawing.Size(135, 17);
+            this.checkBox154.TabIndex = 24;
+            this.checkBox154.Text = "Telefono de presidente";
+            this.checkBox154.UseVisualStyleBackColor = true;
+            // 
+            // checkBox153
+            // 
+            this.checkBox153.AutoSize = true;
+            this.checkBox153.Checked = true;
+            this.checkBox153.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox153.Location = new System.Drawing.Point(7, 148);
+            this.checkBox153.Name = "checkBox153";
+            this.checkBox153.Size = new System.Drawing.Size(76, 17);
+            this.checkBox153.TabIndex = 23;
+            this.checkBox153.Text = "Presidente";
+            this.checkBox153.UseVisualStyleBackColor = true;
             // 
             // checkBox100
             // 
@@ -1064,7 +1100,7 @@
             this.tabPage3.Controls.Add(this.groupBox5);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Size = new System.Drawing.Size(314, 534);
+            this.tabPage3.Size = new System.Drawing.Size(360, 534);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Permisos";
             // 
@@ -1080,7 +1116,7 @@
             this.groupBox5.Controls.Add(this.ColumnasPermiso);
             this.groupBox5.Location = new System.Drawing.Point(6, 6);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(302, 511);
+            this.groupBox5.Size = new System.Drawing.Size(348, 511);
             this.groupBox5.TabIndex = 3;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Permiso";
@@ -1370,7 +1406,7 @@
             this.tabPage4.Controls.Add(this.groupBox3);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Size = new System.Drawing.Size(314, 534);
+            this.tabPage4.Size = new System.Drawing.Size(360, 534);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Embarcaciones";
             // 
@@ -1386,7 +1422,7 @@
             this.groupBox3.Controls.Add(this.ColumnasEmbarca);
             this.groupBox3.Location = new System.Drawing.Point(6, 6);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(302, 522);
+            this.groupBox3.Size = new System.Drawing.Size(348, 522);
             this.groupBox3.TabIndex = 3;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Embarcaciones";
@@ -3211,42 +3247,6 @@
             this.checkBox146.Text = "Nombre";
             this.checkBox146.UseVisualStyleBackColor = true;
             // 
-            // checkBox153
-            // 
-            this.checkBox153.AutoSize = true;
-            this.checkBox153.Checked = true;
-            this.checkBox153.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox153.Location = new System.Drawing.Point(7, 148);
-            this.checkBox153.Name = "checkBox153";
-            this.checkBox153.Size = new System.Drawing.Size(76, 17);
-            this.checkBox153.TabIndex = 23;
-            this.checkBox153.Text = "Presidente";
-            this.checkBox153.UseVisualStyleBackColor = true;
-            // 
-            // checkBox154
-            // 
-            this.checkBox154.AutoSize = true;
-            this.checkBox154.Checked = true;
-            this.checkBox154.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox154.Location = new System.Drawing.Point(134, 146);
-            this.checkBox154.Name = "checkBox154";
-            this.checkBox154.Size = new System.Drawing.Size(135, 17);
-            this.checkBox154.TabIndex = 24;
-            this.checkBox154.Text = "Telefono de presidente";
-            this.checkBox154.UseVisualStyleBackColor = true;
-            // 
-            // checkBox155
-            // 
-            this.checkBox155.AutoSize = true;
-            this.checkBox155.Checked = true;
-            this.checkBox155.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.checkBox155.Location = new System.Drawing.Point(7, 171);
-            this.checkBox155.Name = "checkBox155";
-            this.checkBox155.Size = new System.Drawing.Size(79, 17);
-            this.checkBox155.TabIndex = 25;
-            this.checkBox155.Text = "Federacion";
-            this.checkBox155.UseVisualStyleBackColor = true;
-            // 
             // Personalizar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -3259,6 +3259,7 @@
             this.Name = "Personalizar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personalizar";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Personalizar_Load);
             this.ColumasPescador.ResumeLayout(false);
             this.ColumasPescador.PerformLayout();
