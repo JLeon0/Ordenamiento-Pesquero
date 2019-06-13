@@ -298,7 +298,7 @@
             this.gbDatosGenerales.Controls.Add(this.label53);
             this.gbDatosGenerales.Controls.Add(this.NombrePesc);
             this.gbDatosGenerales.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosGenerales.Location = new System.Drawing.Point(217, 90);
+            this.gbDatosGenerales.Location = new System.Drawing.Point(244, 90);
             this.gbDatosGenerales.Name = "gbDatosGenerales";
             this.gbDatosGenerales.Size = new System.Drawing.Size(894, 383);
             this.gbDatosGenerales.TabIndex = 7;
@@ -1033,7 +1033,7 @@
             this.gbRelacion.Controls.Add(this.OcupacionEnEmbarPesc);
             this.gbRelacion.Controls.Add(this.TipoPesc);
             this.gbRelacion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbRelacion.Location = new System.Drawing.Point(217, 476);
+            this.gbRelacion.Location = new System.Drawing.Point(244, 476);
             this.gbRelacion.Name = "gbRelacion";
             this.gbRelacion.Size = new System.Drawing.Size(894, 189);
             this.gbRelacion.TabIndex = 8;
@@ -1290,7 +1290,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(515, 31);
+            this.label24.Location = new System.Drawing.Point(542, 31);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(221, 19);
             this.label24.TabIndex = 153;
@@ -1477,7 +1477,7 @@
             this.gbInformacion.Controls.Add(this.label10);
             this.gbInformacion.Controls.Add(this.label9);
             this.gbInformacion.Controls.Add(this.Unid);
-            this.gbInformacion.Location = new System.Drawing.Point(1116, 81);
+            this.gbInformacion.Location = new System.Drawing.Point(1143, 81);
             this.gbInformacion.Name = "gbInformacion";
             this.gbInformacion.Size = new System.Drawing.Size(195, 393);
             this.gbInformacion.TabIndex = 154;
@@ -1606,7 +1606,7 @@
             this.BuscarNombre.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BuscarNombre.Location = new System.Drawing.Point(7, 39);
             this.BuscarNombre.Name = "BuscarNombre";
-            this.BuscarNombre.Size = new System.Drawing.Size(185, 20);
+            this.BuscarNombre.Size = new System.Drawing.Size(212, 20);
             this.BuscarNombre.TabIndex = 160;
             this.BuscarNombre.TextChanged += new System.EventHandler(this.BuscarNombre_TextChanged_1);
             this.BuscarNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BuscarNombre_KeyPress);
@@ -1618,7 +1618,7 @@
             this.ListaNombres.ItemHeight = 15;
             this.ListaNombres.Location = new System.Drawing.Point(7, 66);
             this.ListaNombres.Name = "ListaNombres";
-            this.ListaNombres.Size = new System.Drawing.Size(185, 154);
+            this.ListaNombres.Size = new System.Drawing.Size(212, 154);
             this.ListaNombres.TabIndex = 161;
             this.ListaNombres.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListaNombres_MouseDoubleClick);
             // 
@@ -1630,7 +1630,7 @@
             this.ListaNombres2.Location = new System.Drawing.Point(7, 321);
             this.ListaNombres2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ListaNombres2.Name = "ListaNombres2";
-            this.ListaNombres2.Size = new System.Drawing.Size(185, 169);
+            this.ListaNombres2.Size = new System.Drawing.Size(212, 169);
             this.ListaNombres2.TabIndex = 179;
             this.ListaNombres2.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListaNombres2_MouseDoubleClick);
             // 
@@ -1640,7 +1640,7 @@
             this.BuscarNombre2.Location = new System.Drawing.Point(7, 291);
             this.BuscarNombre2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BuscarNombre2.Name = "BuscarNombre2";
-            this.BuscarNombre2.Size = new System.Drawing.Size(185, 20);
+            this.BuscarNombre2.Size = new System.Drawing.Size(212, 20);
             this.BuscarNombre2.TabIndex = 178;
             this.BuscarNombre2.TextChanged += new System.EventHandler(this.BuscarNombre2_TextChanged);
             this.BuscarNombre2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BuscarNombre2_KeyPress);
@@ -1688,7 +1688,7 @@
             this.gbBotones.Controls.Add(this.label2);
             this.gbBotones.Controls.Add(this.label3);
             this.gbBotones.Controls.Add(this.label4);
-            this.gbBotones.Location = new System.Drawing.Point(788, 665);
+            this.gbBotones.Location = new System.Drawing.Point(815, 665);
             this.gbBotones.Name = "gbBotones";
             this.gbBotones.Size = new System.Drawing.Size(541, 89);
             this.gbBotones.TabIndex = 181;
@@ -1752,7 +1752,7 @@
             this.PanelCURP.Controls.Add(this.label28);
             this.PanelCURP.Controls.Add(this.label27);
             this.PanelCURP.ForeColor = System.Drawing.Color.Black;
-            this.PanelCURP.Location = new System.Drawing.Point(375, 265);
+            this.PanelCURP.Location = new System.Drawing.Point(402, 265);
             this.PanelCURP.Name = "PanelCURP";
             this.PanelCURP.Size = new System.Drawing.Size(477, 212);
             this.PanelCURP.TabIndex = 182;
@@ -1871,7 +1871,7 @@
             this.gbBusqueda.Controls.Add(this.lblNo);
             this.gbBusqueda.Location = new System.Drawing.Point(12, 90);
             this.gbBusqueda.Name = "gbBusqueda";
-            this.gbBusqueda.Size = new System.Drawing.Size(198, 523);
+            this.gbBusqueda.Size = new System.Drawing.Size(225, 523);
             this.gbBusqueda.TabIndex = 188;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
@@ -1901,7 +1901,7 @@
             this.PanelOcciso.Controls.Add(this.label19);
             this.PanelOcciso.Controls.Add(this.label20);
             this.PanelOcciso.ForeColor = System.Drawing.Color.Black;
-            this.PanelOcciso.Location = new System.Drawing.Point(371, 265);
+            this.PanelOcciso.Location = new System.Drawing.Point(398, 265);
             this.PanelOcciso.Name = "PanelOcciso";
             this.PanelOcciso.Size = new System.Drawing.Size(501, 373);
             this.PanelOcciso.TabIndex = 1;
@@ -2089,7 +2089,7 @@
             this.Bienvenido.AutoSize = true;
             this.Bienvenido.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bienvenido.ForeColor = System.Drawing.Color.DimGray;
-            this.Bienvenido.Location = new System.Drawing.Point(1113, 13);
+            this.Bienvenido.Location = new System.Drawing.Point(1140, 13);
             this.Bienvenido.Name = "Bienvenido";
             this.Bienvenido.Size = new System.Drawing.Size(75, 16);
             this.Bienvenido.TabIndex = 192;
@@ -2100,7 +2100,7 @@
             this.Logo.BackColor = System.Drawing.Color.Transparent;
             this.Logo.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Logo.Location = new System.Drawing.Point(881, 13);
+            this.Logo.Location = new System.Drawing.Point(908, 13);
             this.Logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(200, 60);
@@ -2112,7 +2112,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(216, 13);
+            this.pictureBox2.Location = new System.Drawing.Point(243, 13);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 60);
@@ -2128,7 +2128,7 @@
             this.gbOtros.Controls.Add(this.Apoyo);
             this.gbOtros.Controls.Add(this.VerInforme);
             this.gbOtros.Controls.Add(this.AbrirExpediente);
-            this.gbOtros.Location = new System.Drawing.Point(217, 665);
+            this.gbOtros.Location = new System.Drawing.Point(244, 665);
             this.gbOtros.Name = "gbOtros";
             this.gbOtros.Size = new System.Drawing.Size(565, 89);
             this.gbOtros.TabIndex = 197;
@@ -2136,7 +2136,7 @@
             // 
             // btnEntregar
             // 
-            this.btnEntregar.Location = new System.Drawing.Point(12, 619);
+            this.btnEntregar.Location = new System.Drawing.Point(39, 619);
             this.btnEntregar.Name = "btnEntregar";
             this.btnEntregar.Size = new System.Drawing.Size(198, 30);
             this.btnEntregar.TabIndex = 198;
