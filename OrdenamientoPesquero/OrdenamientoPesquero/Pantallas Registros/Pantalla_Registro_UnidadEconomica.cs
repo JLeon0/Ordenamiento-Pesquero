@@ -182,6 +182,7 @@ namespace OrdenamientoPesquero
             {
                 RNPA = proc.Obtener_todas_unidades(BuscarR.Text);
             }
+            label26.Text = "RNPA UNIDADES  " + RNPA.Rows.Count;
             ListaRNPA.DataSource = RNPA;
             ListaRNPA.DisplayMember = "RNPA";
             ListaRNPA.ValueMember = "RNPA";
@@ -190,6 +191,7 @@ namespace OrdenamientoPesquero
             //    ListaRNPA.Items.Add(fila["RNPA"].ToString());
             //}
             NOMBRES = proc.Obtener_todos_los_nombres("");
+            label25.Text = "NOMBRE UNIDADES  " + NOMBRES.Rows.Count;
             ListaNombres.DataSource = NOMBRES;
             ListaNombres.DisplayMember = "NOMBRE";
             ListaNombres.ValueMember = "RNPA";
@@ -253,8 +255,8 @@ namespace OrdenamientoPesquero
                     txtRFC.Text = fila["RFC"].ToString();
                     txtCalleNum.Text = fila["CALLEYNUM"].ToString();
                     txtColonia.Text = fila["COLONIA"].ToString();
-                    txtLocalidad.Text = fila["LOCALIDAD"].ToString();
                     txtMunicipio.Text = fila["MUNICIO"].ToString();
+                    txtLocalidad.Text = fila["LOCALIDAD"].ToString();
                     mtbCP.Text = fila["CODIGO_POSTAL"].ToString();
                     txtCorreo.Text = fila["CORREO"].ToString();
                     mtbTelefono.Text = fila["TELEFONO"].ToString();
@@ -280,8 +282,8 @@ namespace OrdenamientoPesquero
                 txtRFC.Text = fila["RFC"].ToString();
                 txtCalleNum.Text = fila["CALLEYNUM"].ToString();
                 txtColonia.Text = fila["COLONIA"].ToString();
-                txtLocalidad.Text = fila["LOCALIDAD"].ToString();
                 txtMunicipio.Text = fila["MUNICIO"].ToString();
+                txtLocalidad.Text = fila["LOCALIDAD"].ToString();
                 mtbCP.Text = fila["CODIGO_POSTAL"].ToString();
                 txtCorreo.Text = fila["CORREO"].ToString();
                 mtbTelefono.Text = fila["TELEFONO"].ToString();
