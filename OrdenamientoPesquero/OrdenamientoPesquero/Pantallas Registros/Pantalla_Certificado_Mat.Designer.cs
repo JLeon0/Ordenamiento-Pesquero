@@ -449,7 +449,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(266, 40);
+            this.label1.Location = new System.Drawing.Point(336, 40);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(273, 19);
             this.label1.TabIndex = 149;
@@ -544,7 +544,7 @@
             this.gbCertificado.Controls.Add(this.PotenciaMotorCertMat);
             this.gbCertificado.Controls.Add(this.PuntalCertMat);
             this.gbCertificado.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbCertificado.Location = new System.Drawing.Point(186, 95);
+            this.gbCertificado.Location = new System.Drawing.Point(256, 95);
             this.gbCertificado.Name = "gbCertificado";
             this.gbCertificado.Size = new System.Drawing.Size(640, 218);
             this.gbCertificado.TabIndex = 158;
@@ -620,7 +620,7 @@
             this.gbVerificacion.Controls.Add(this.label5);
             this.gbVerificacion.Controls.Add(this.NChipCertMat);
             this.gbVerificacion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbVerificacion.Location = new System.Drawing.Point(186, 319);
+            this.gbVerificacion.Location = new System.Drawing.Point(256, 319);
             this.gbVerificacion.Name = "gbVerificacion";
             this.gbVerificacion.Size = new System.Drawing.Size(640, 232);
             this.gbVerificacion.TabIndex = 159;
@@ -752,7 +752,7 @@
             // 
             this.AbrirExpediente.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Expediente;
             this.AbrirExpediente.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AbrirExpediente.Location = new System.Drawing.Point(191, 575);
+            this.AbrirExpediente.Location = new System.Drawing.Point(261, 575);
             this.AbrirExpediente.Name = "AbrirExpediente";
             this.AbrirExpediente.Size = new System.Drawing.Size(48, 50);
             this.AbrirExpediente.TabIndex = 192;
@@ -797,7 +797,7 @@
             this.ListaMatriculas.ItemHeight = 16;
             this.ListaMatriculas.Location = new System.Drawing.Point(11, 42);
             this.ListaMatriculas.Name = "ListaMatriculas";
-            this.ListaMatriculas.Size = new System.Drawing.Size(136, 228);
+            this.ListaMatriculas.Size = new System.Drawing.Size(222, 404);
             this.ListaMatriculas.TabIndex = 170;
             this.ListaMatriculas.DoubleClick += new System.EventHandler(this.ListaMatriculas_DoubleClick);
             // 
@@ -826,7 +826,7 @@
             this.PanelMATRICULA.Controls.Add(this.label28);
             this.PanelMATRICULA.Controls.Add(this.label27);
             this.PanelMATRICULA.ForeColor = System.Drawing.Color.Black;
-            this.PanelMATRICULA.Location = new System.Drawing.Point(261, 170);
+            this.PanelMATRICULA.Location = new System.Drawing.Point(331, 170);
             this.PanelMATRICULA.Name = "PanelMATRICULA";
             this.PanelMATRICULA.Size = new System.Drawing.Size(477, 212);
             this.PanelMATRICULA.TabIndex = 183;
@@ -942,7 +942,7 @@
             this.gbBotones.Controls.Add(this.label2);
             this.gbBotones.Controls.Add(this.label3);
             this.gbBotones.Controls.Add(this.label4);
-            this.gbBotones.Location = new System.Drawing.Point(597, 554);
+            this.gbBotones.Location = new System.Drawing.Point(667, 554);
             this.gbBotones.Name = "gbBotones";
             this.gbBotones.Size = new System.Drawing.Size(229, 99);
             this.gbBotones.TabIndex = 184;
@@ -993,7 +993,7 @@
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(188, 628);
+            this.label14.Location = new System.Drawing.Point(258, 628);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(60, 14);
             this.label14.TabIndex = 193;
@@ -1005,7 +1005,7 @@
             this.gbBusqueda.Controls.Add(this.lblEmbarca);
             this.gbBusqueda.Location = new System.Drawing.Point(11, 95);
             this.gbBusqueda.Name = "gbBusqueda";
-            this.gbBusqueda.Size = new System.Drawing.Size(168, 456);
+            this.gbBusqueda.Size = new System.Drawing.Size(239, 456);
             this.gbBusqueda.TabIndex = 185;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
@@ -1086,7 +1086,7 @@
             this.groupBox1.Controls.Add(this.FactArtes);
             this.groupBox1.Controls.Add(this.PapChip);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(849, 95);
+            this.groupBox1.Location = new System.Drawing.Point(919, 95);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(169, 186);
             this.groupBox1.TabIndex = 191;
@@ -1110,7 +1110,7 @@
             this.Logo.BackColor = System.Drawing.Color.Transparent;
             this.Logo.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Logo.Location = new System.Drawing.Point(621, 13);
+            this.Logo.Location = new System.Drawing.Point(691, 13);
             this.Logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(200, 60);
@@ -1122,7 +1122,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(186, 13);
+            this.pictureBox2.Location = new System.Drawing.Point(256, 13);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 60);
@@ -1135,7 +1135,7 @@
             this.pictureBox1.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.show;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox1.Location = new System.Drawing.Point(540, 575);
+            this.pictureBox1.Location = new System.Drawing.Point(610, 575);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.TabIndex = 194;
@@ -1146,7 +1146,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(539, 628);
+            this.label10.Location = new System.Drawing.Point(609, 628);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(48, 14);
             this.label10.TabIndex = 195;
@@ -1159,7 +1159,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1030, 664);
+            this.ClientSize = new System.Drawing.Size(1188, 664);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label14);
