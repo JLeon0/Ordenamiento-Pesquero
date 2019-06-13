@@ -1323,9 +1323,9 @@ namespace OrdenamientoPesquero
                     {
                         CrearArchivo(path + @"PERMISOS\" + permisos.Rows[C]["PESQUERIA"].ToString() + ".pdf", permisos.Rows[C]["APERMISO"]);
                     }
+                    MessageBox.Show("Expediente Generado Correctamente");
                 }
             }
-            MessageBox.Show("Expediente Generado Correctamente");
 
         }
 
