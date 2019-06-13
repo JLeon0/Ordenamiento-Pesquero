@@ -65,7 +65,7 @@ namespace OrdenamientoPesquero
                 gbBotonesUE.Visible = true;
                 menuStrip1.Visible = true;
             }
-            if(NIVEL == 0 || NIVEL == 1 || NIVEL == 2) { button5.Enabled = true; }
+            if(NIVEL == 0 || NIVEL == 1 || NIVEL == 2) { Reportes.Enabled = true; }
             if (NIVEL == 0)
             {
                 EliminarUnidad.Visible = true;
@@ -182,6 +182,7 @@ namespace OrdenamientoPesquero
             {
                 RNPA = proc.Obtener_todas_unidades(BuscarR.Text);
             }
+            label26.Text = "RNPA UNIDADES  " + RNPA.Rows.Count;
             ListaRNPA.DataSource = RNPA;
             ListaRNPA.DisplayMember = "RNPA";
             ListaRNPA.ValueMember = "RNPA";
@@ -190,6 +191,7 @@ namespace OrdenamientoPesquero
             //    ListaRNPA.Items.Add(fila["RNPA"].ToString());
             //}
             NOMBRES = proc.Obtener_todos_los_nombres("");
+            label25.Text = "NOMBRE UNIDADES  " + NOMBRES.Rows.Count;
             ListaNombres.DataSource = NOMBRES;
             ListaNombres.DisplayMember = "NOMBRE";
             ListaNombres.ValueMember = "RNPA";
@@ -848,17 +850,17 @@ namespace OrdenamientoPesquero
                     ObtenerPresidente();
                     Resumenes(ListaRNPA.Text);
                     ResumenSocios(ListaRNPA.Text);
-                    button1.Enabled = true;
-                    button2.Enabled = true;
-                    button3.Enabled = true;
+                    Embarcaciones.Enabled = true;
+                    Pescadores.Enabled = true;
+                    Permisos.Enabled = true;
                     cbRNPA.Enabled = false;
                 }
                 else
                 {
                     limpiartodo();
-                    button1.Enabled = false;
-                    button2.Enabled = false;
-                    button3.Enabled = false;
+                    Embarcaciones.Enabled = false;
+                    Pescadores.Enabled = false;
+                    Permisos.Enabled = false;
                 }
                 this.Cursor = Cursors.Default;
             }
@@ -875,9 +877,9 @@ namespace OrdenamientoPesquero
                 ObtenerPresidente();
                 Resumenes(cbRNPA.Text);
                 ResumenSocios(cbRNPA.Text);
-                button1.Enabled = true;
-                button2.Enabled = true;
-                button3.Enabled = true;
+                Embarcaciones.Enabled = true;
+                Pescadores.Enabled = true;
+                Permisos.Enabled = true;
                 cbRNPA.Enabled = false;
                 this.Cursor = Cursors.Default;
             }

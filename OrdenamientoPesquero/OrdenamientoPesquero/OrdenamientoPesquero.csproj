@@ -879,6 +879,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gbcs4x4.ico" />
+    <None Include="Resources\Generar.png" />
+    <None Include="Resources\Expediente1.png" />
+    <None Include="Resources\Credenciales.png" />
+    <None Include="Resources\Reportes.png" />
+    <None Include="Resources\Permisos.png" />
+    <None Include="Resources\Pescadores.png" />
+    <None Include="Resources\Embarcaciones.png" />
     <None Include="Resources\ORDENAM.jpg" />
     <None Include="Resources\APOYOS.jpg" />
     <None Include="Resources\fondo SISTEMA ORD.jpg" />
