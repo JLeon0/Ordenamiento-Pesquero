@@ -118,7 +118,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.ElPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.gbCertificado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelMATRICULA)).BeginInit();
@@ -141,7 +141,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.ElPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label78
@@ -420,7 +420,7 @@
             // 
             this.NombreEmbCerMat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.NombreEmbCerMat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreEmbCerMat.Location = new System.Drawing.Point(209, 40);
+            this.NombreEmbCerMat.Location = new System.Drawing.Point(160, 38);
             this.NombreEmbCerMat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NombreEmbCerMat.MaxLength = 40;
             this.NombreEmbCerMat.Name = "NombreEmbCerMat";
@@ -441,7 +441,7 @@
             // 
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.Location = new System.Drawing.Point(211, 20);
+            this.label60.Location = new System.Drawing.Point(162, 18);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(57, 16);
             this.label60.TabIndex = 117;
@@ -556,6 +556,7 @@
             // MatriculaCertMat
             // 
             this.MatriculaCertMat.Location = new System.Drawing.Point(20, 38);
+            this.MatriculaCertMat.MaxLength = 20;
             this.MatriculaCertMat.Name = "MatriculaCertMat";
             this.MatriculaCertMat.Size = new System.Drawing.Size(105, 22);
             this.MatriculaCertMat.TabIndex = 190;
@@ -565,7 +566,7 @@
             this.ActivarPanelMATRICULA.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.actualizar;
             this.ActivarPanelMATRICULA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ActivarPanelMATRICULA.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ActivarPanelMATRICULA.Location = new System.Drawing.Point(183, 40);
+            this.ActivarPanelMATRICULA.Location = new System.Drawing.Point(134, 38);
             this.ActivarPanelMATRICULA.Name = "ActivarPanelMATRICULA";
             this.ActivarPanelMATRICULA.Size = new System.Drawing.Size(20, 20);
             this.ActivarPanelMATRICULA.TabIndex = 188;
@@ -1154,25 +1155,25 @@
             this.label10.TabIndex = 195;
             this.label10.Text = "Papeleta";
             // 
-            // panel1
+            // ElPanel
             // 
-            this.panel1.Controls.Add(this.gbBusqueda);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.gbCertificado);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.gbVerificacion);
-            this.panel1.Controls.Add(this.AbrirExpediente);
-            this.panel1.Controls.Add(this.Logo);
-            this.panel1.Controls.Add(this.PanelMATRICULA);
-            this.panel1.Controls.Add(this.gbBotones);
-            this.panel1.Location = new System.Drawing.Point(2, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1093, 662);
-            this.panel1.TabIndex = 196;
+            this.ElPanel.Controls.Add(this.gbBusqueda);
+            this.ElPanel.Controls.Add(this.pictureBox1);
+            this.ElPanel.Controls.Add(this.label1);
+            this.ElPanel.Controls.Add(this.label10);
+            this.ElPanel.Controls.Add(this.gbCertificado);
+            this.ElPanel.Controls.Add(this.label14);
+            this.ElPanel.Controls.Add(this.pictureBox2);
+            this.ElPanel.Controls.Add(this.groupBox1);
+            this.ElPanel.Controls.Add(this.gbVerificacion);
+            this.ElPanel.Controls.Add(this.AbrirExpediente);
+            this.ElPanel.Controls.Add(this.Logo);
+            this.ElPanel.Controls.Add(this.PanelMATRICULA);
+            this.ElPanel.Controls.Add(this.gbBotones);
+            this.ElPanel.Location = new System.Drawing.Point(2, 1);
+            this.ElPanel.Name = "ElPanel";
+            this.ElPanel.Size = new System.Drawing.Size(1093, 662);
+            this.ElPanel.TabIndex = 196;
             // 
             // Pantalla_Certificado_Mat
             // 
@@ -1182,7 +1183,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1100, 664);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.ElPanel);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1191,6 +1192,7 @@
             this.Text = "Embarcaciones";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Pantalla_Certificado_Mat_Load);
+            this.Resize += new System.EventHandler(this.Pantalla_Certificado_Mat_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).EndInit();
             this.gbCertificado.ResumeLayout(false);
             this.gbCertificado.PerformLayout();
@@ -1219,8 +1221,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.ElPanel.ResumeLayout(false);
+            this.ElPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1313,6 +1315,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label10;
-        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Panel ElPanel;
     }
 }

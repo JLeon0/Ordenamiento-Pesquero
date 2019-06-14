@@ -180,6 +180,7 @@
             this.Bienvenido = new System.Windows.Forms.Label();
             this.Logo = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.ElPanel = new System.Windows.Forms.Panel();
             this.gbOrgPes.SuspendLayout();
             this.gbBotonesUE.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.EliminarUnidad)).BeginInit();
@@ -216,6 +217,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Logo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.ElPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label13
@@ -364,7 +366,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.Location = new System.Drawing.Point(439, 48);
+            this.label3.Location = new System.Drawing.Point(439, 20);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
@@ -428,7 +430,7 @@
             this.gbOrgPes.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.gbOrgPes.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbOrgPes.ForeColor = System.Drawing.Color.Black;
-            this.gbOrgPes.Location = new System.Drawing.Point(240, 95);
+            this.gbOrgPes.Location = new System.Drawing.Point(240, 67);
             this.gbOrgPes.Name = "gbOrgPes";
             this.gbOrgPes.Size = new System.Drawing.Size(893, 348);
             this.gbOrgPes.TabIndex = 54;
@@ -1018,7 +1020,7 @@
             this.Resumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Resumen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Resumen.ForeColor = System.Drawing.Color.Black;
-            this.Resumen.Location = new System.Drawing.Point(1152, 95);
+            this.Resumen.Location = new System.Drawing.Point(1152, 67);
             this.Resumen.Name = "Resumen";
             this.Resumen.Size = new System.Drawing.Size(381, 685);
             this.Resumen.TabIndex = 101;
@@ -1438,7 +1440,7 @@
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(1165, 80);
+            this.label23.Location = new System.Drawing.Point(1165, 52);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(91, 19);
             this.label23.TabIndex = 9;
@@ -1451,7 +1453,7 @@
             this.caToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1584, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1546, 24);
             this.menuStrip1.TabIndex = 115;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1605,7 +1607,7 @@
             this.PanelRNPA.Controls.Add(this.label28);
             this.PanelRNPA.Controls.Add(this.label27);
             this.PanelRNPA.ForeColor = System.Drawing.Color.Black;
-            this.PanelRNPA.Location = new System.Drawing.Point(411, 182);
+            this.PanelRNPA.Location = new System.Drawing.Point(411, 154);
             this.PanelRNPA.Name = "PanelRNPA";
             this.PanelRNPA.Size = new System.Drawing.Size(477, 217);
             this.PanelRNPA.TabIndex = 127;
@@ -1719,7 +1721,7 @@
             this.gbBotones.Controls.Add(this.label37);
             this.gbBotones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbBotones.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbBotones.Location = new System.Drawing.Point(240, 461);
+            this.gbBotones.Location = new System.Drawing.Point(240, 433);
             this.gbBotones.Name = "gbBotones";
             this.gbBotones.Size = new System.Drawing.Size(479, 167);
             this.gbBotones.TabIndex = 186;
@@ -1811,7 +1813,7 @@
             this.gbBusqueda.Controls.Add(this.BuscarN);
             this.gbBusqueda.Controls.Add(this.ListaNombres);
             this.gbBusqueda.Controls.Add(this.BuscarR);
-            this.gbBusqueda.Location = new System.Drawing.Point(12, 116);
+            this.gbBusqueda.Location = new System.Drawing.Point(12, 88);
             this.gbBusqueda.Name = "gbBusqueda";
             this.gbBusqueda.Size = new System.Drawing.Size(222, 512);
             this.gbBusqueda.TabIndex = 187;
@@ -1833,7 +1835,7 @@
             this.panel1.Controls.Add(this.pictureBox12);
             this.panel1.Controls.Add(this.label35);
             this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(455, 174);
+            this.panel1.Location = new System.Drawing.Point(455, 146);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(388, 244);
             this.panel1.TabIndex = 187;
@@ -1939,7 +1941,7 @@
             this.Bienvenido.AutoSize = true;
             this.Bienvenido.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bienvenido.ForeColor = System.Drawing.Color.DimGray;
-            this.Bienvenido.Location = new System.Drawing.Point(1149, 28);
+            this.Bienvenido.Location = new System.Drawing.Point(1149, 0);
             this.Bienvenido.Name = "Bienvenido";
             this.Bienvenido.Size = new System.Drawing.Size(75, 16);
             this.Bienvenido.TabIndex = 191;
@@ -1950,7 +1952,7 @@
             this.Logo.BackColor = System.Drawing.Color.Transparent;
             this.Logo.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Logo.Location = new System.Drawing.Point(933, 28);
+            this.Logo.Location = new System.Drawing.Point(933, 0);
             this.Logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(200, 60);
@@ -1962,12 +1964,30 @@
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(240, 28);
+            this.pictureBox5.Location = new System.Drawing.Point(240, 0);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(50, 60);
             this.pictureBox5.TabIndex = 153;
             this.pictureBox5.TabStop = false;
+            // 
+            // ElPanel
+            // 
+            this.ElPanel.Controls.Add(this.gbBusqueda);
+            this.ElPanel.Controls.Add(this.Bienvenido);
+            this.ElPanel.Controls.Add(this.label23);
+            this.ElPanel.Controls.Add(this.panel1);
+            this.ElPanel.Controls.Add(this.label3);
+            this.ElPanel.Controls.Add(this.PanelRNPA);
+            this.ElPanel.Controls.Add(this.gbOrgPes);
+            this.ElPanel.Controls.Add(this.Resumen);
+            this.ElPanel.Controls.Add(this.gbBotones);
+            this.ElPanel.Controls.Add(this.pictureBox5);
+            this.ElPanel.Controls.Add(this.Logo);
+            this.ElPanel.Location = new System.Drawing.Point(0, 28);
+            this.ElPanel.Name = "ElPanel";
+            this.ElPanel.Size = new System.Drawing.Size(1542, 762);
+            this.ElPanel.TabIndex = 192;
             // 
             // Pantalla_Registro_UnidadEconomica
             // 
@@ -1975,18 +1995,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1584, 792);
-            this.Controls.Add(this.Bienvenido);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.PanelRNPA);
-            this.Controls.Add(this.gbBusqueda);
-            this.Controls.Add(this.gbBotones);
-            this.Controls.Add(this.Logo);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.Resumen);
-            this.Controls.Add(this.gbOrgPes);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label23);
+            this.ClientSize = new System.Drawing.Size(1546, 792);
+            this.Controls.Add(this.ElPanel);
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.Color.White;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1999,6 +2009,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Pantalla_Registro_UnidadEconomica_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Pantalla_Registro_UnidadEconomica_FormClosed);
             this.Load += new System.EventHandler(this.Pantalla_Registro_UnidadEconomica_Load);
+            this.Resize += new System.EventHandler(this.Pantalla_Registro_UnidadEconomica_Resize);
             this.gbOrgPes.ResumeLayout(false);
             this.gbOrgPes.PerformLayout();
             this.gbBotonesUE.ResumeLayout(false);
@@ -2043,6 +2054,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Logo2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.ElPanel.ResumeLayout(false);
+            this.ElPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2192,5 +2205,6 @@
         private System.Windows.Forms.PictureBox GenerarExpediente;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.PictureBox Expediente;
+        private System.Windows.Forms.Panel ElPanel;
     }
 }

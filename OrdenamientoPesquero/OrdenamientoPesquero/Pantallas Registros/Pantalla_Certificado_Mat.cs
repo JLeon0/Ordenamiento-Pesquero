@@ -33,7 +33,8 @@ namespace OrdenamientoPesquero
         private void Ajustar()
         {
             if(this.WindowState == FormWindowState.Maximized)
-            { panel1.Location = new Point(Screen.PrimaryScreen.Bounds.Width/6,panel1.Location.Y);}
+            { ElPanel.Location = new Point(((Screen.PrimaryScreen.Bounds.Width/100)*20),ElPanel.Location.Y);}
+            else { ElPanel.Location = new Point(0, ElPanel.Location.Y); }
         }
 
         private void CargarLogos()
@@ -377,6 +378,11 @@ namespace OrdenamientoPesquero
         {
             Vistas v = new Vistas(RNPA, MatriculaCertMat.Text,16, proc.bdd);
             v.Show(this);
+        }
+
+        private void Pantalla_Certificado_Mat_Resize(object sender, EventArgs e)
+        {
+            Ajustar();
         }
 
         private void AbrirExpediente_Click(object sender, EventArgs e)
