@@ -420,7 +420,7 @@
             // 
             this.NombreEmbCerMat.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.NombreEmbCerMat.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.NombreEmbCerMat.Location = new System.Drawing.Point(209, 40);
+            this.NombreEmbCerMat.Location = new System.Drawing.Point(160, 38);
             this.NombreEmbCerMat.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.NombreEmbCerMat.MaxLength = 40;
             this.NombreEmbCerMat.Name = "NombreEmbCerMat";
@@ -441,7 +441,7 @@
             // 
             this.label60.AutoSize = true;
             this.label60.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label60.Location = new System.Drawing.Point(211, 20);
+            this.label60.Location = new System.Drawing.Point(162, 18);
             this.label60.Name = "label60";
             this.label60.Size = new System.Drawing.Size(57, 16);
             this.label60.TabIndex = 117;
@@ -556,6 +556,7 @@
             // MatriculaCertMat
             // 
             this.MatriculaCertMat.Location = new System.Drawing.Point(20, 38);
+            this.MatriculaCertMat.MaxLength = 20;
             this.MatriculaCertMat.Name = "MatriculaCertMat";
             this.MatriculaCertMat.Size = new System.Drawing.Size(105, 22);
             this.MatriculaCertMat.TabIndex = 190;
@@ -565,7 +566,7 @@
             this.ActivarPanelMATRICULA.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.actualizar;
             this.ActivarPanelMATRICULA.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ActivarPanelMATRICULA.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.ActivarPanelMATRICULA.Location = new System.Drawing.Point(183, 40);
+            this.ActivarPanelMATRICULA.Location = new System.Drawing.Point(134, 38);
             this.ActivarPanelMATRICULA.Name = "ActivarPanelMATRICULA";
             this.ActivarPanelMATRICULA.Size = new System.Drawing.Size(20, 20);
             this.ActivarPanelMATRICULA.TabIndex = 188;
@@ -1191,6 +1192,7 @@
             this.Text = "Embarcaciones";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Pantalla_Certificado_Mat_Load);
+            this.Resize += new System.EventHandler(this.Pantalla_Certificado_Mat_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).EndInit();
             this.gbCertificado.ResumeLayout(false);
             this.gbCertificado.PerformLayout();
