@@ -33,7 +33,7 @@ namespace OrdenamientoPesquero
         private void Ajustar()
         {
             if(this.WindowState == FormWindowState.Maximized)
-            { ElPanel.Location = new Point(((Screen.PrimaryScreen.Bounds.Width/100)*20),ElPanel.Location.Y);}
+            { ElPanel.Location = new Point(((Screen.PrimaryScreen.Bounds.Width/100)*10),ElPanel.Location.Y);}
             else { ElPanel.Location = new Point(0, ElPanel.Location.Y); }
         }
 
