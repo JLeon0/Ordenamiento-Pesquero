@@ -118,7 +118,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.ElPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.NMotoresCertMat)).BeginInit();
             this.gbCertificado.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelMATRICULA)).BeginInit();
@@ -141,7 +141,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.ElPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label78
@@ -1155,25 +1155,25 @@
             this.label10.TabIndex = 195;
             this.label10.Text = "Papeleta";
             // 
-            // panel1
+            // ElPanel
             // 
-            this.panel1.Controls.Add(this.gbBusqueda);
-            this.panel1.Controls.Add(this.pictureBox1);
-            this.panel1.Controls.Add(this.label1);
-            this.panel1.Controls.Add(this.label10);
-            this.panel1.Controls.Add(this.gbCertificado);
-            this.panel1.Controls.Add(this.label14);
-            this.panel1.Controls.Add(this.pictureBox2);
-            this.panel1.Controls.Add(this.groupBox1);
-            this.panel1.Controls.Add(this.gbVerificacion);
-            this.panel1.Controls.Add(this.AbrirExpediente);
-            this.panel1.Controls.Add(this.Logo);
-            this.panel1.Controls.Add(this.PanelMATRICULA);
-            this.panel1.Controls.Add(this.gbBotones);
-            this.panel1.Location = new System.Drawing.Point(2, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1093, 662);
-            this.panel1.TabIndex = 196;
+            this.ElPanel.Controls.Add(this.gbBusqueda);
+            this.ElPanel.Controls.Add(this.pictureBox1);
+            this.ElPanel.Controls.Add(this.label1);
+            this.ElPanel.Controls.Add(this.label10);
+            this.ElPanel.Controls.Add(this.gbCertificado);
+            this.ElPanel.Controls.Add(this.label14);
+            this.ElPanel.Controls.Add(this.pictureBox2);
+            this.ElPanel.Controls.Add(this.groupBox1);
+            this.ElPanel.Controls.Add(this.gbVerificacion);
+            this.ElPanel.Controls.Add(this.AbrirExpediente);
+            this.ElPanel.Controls.Add(this.Logo);
+            this.ElPanel.Controls.Add(this.PanelMATRICULA);
+            this.ElPanel.Controls.Add(this.gbBotones);
+            this.ElPanel.Location = new System.Drawing.Point(2, 1);
+            this.ElPanel.Name = "ElPanel";
+            this.ElPanel.Size = new System.Drawing.Size(1093, 662);
+            this.ElPanel.TabIndex = 196;
             // 
             // Pantalla_Certificado_Mat
             // 
@@ -1183,7 +1183,7 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1100, 664);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.ElPanel);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -1221,8 +1221,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.ElPanel.ResumeLayout(false);
+            this.ElPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -1315,6 +1315,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label10;
-        public System.Windows.Forms.Panel panel1;
+        public System.Windows.Forms.Panel ElPanel;
     }
 }

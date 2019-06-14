@@ -41,6 +41,14 @@ namespace OrdenamientoPesquero
             Usuario = user;
             NombreUsuario = nombre;
             NIVEL = nivel;
+            CargarLogos();
+            Ajustar();
+        }
+        private void Ajustar()
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            { ElPanel.Location = new Point(((Screen.PrimaryScreen.Bounds.Width / 100) * 10), ElPanel.Location.Y); }
+            else { ElPanel.Location = new Point(0, ElPanel.Location.Y); }
         }
         private void CargarLogos()
         {
@@ -52,7 +60,6 @@ namespace OrdenamientoPesquero
         private void Pantalla_Registro_UnidadEconomica_Load(object sender, EventArgs e)
         {
             this.Cursor = Cursors.WaitCursor; cargando = false;
-            CargarLogos();
             Bienvenido.Text += NombreUsuario;
             txtFecha.Text = DateTime.Today.ToString("dd/MM/yyyy");
             CargarRNPA();
@@ -1329,6 +1336,11 @@ namespace OrdenamientoPesquero
             }
             MessageBox.Show("Expediente Generado Correctamente");
 
+        }
+
+        private void Pantalla_Registro_UnidadEconomica_Resize(object sender, EventArgs e)
+        {
+            Ajustar();
         }
 
         private void BorrarCarpeta()
