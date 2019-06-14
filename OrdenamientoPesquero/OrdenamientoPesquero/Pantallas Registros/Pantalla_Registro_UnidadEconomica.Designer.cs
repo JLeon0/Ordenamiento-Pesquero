@@ -364,7 +364,7 @@
             this.label3.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label3.Location = new System.Drawing.Point(407, 48);
+            this.label3.Location = new System.Drawing.Point(439, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(280, 22);
             this.label3.TabIndex = 34;
@@ -428,9 +428,9 @@
             this.gbOrgPes.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.gbOrgPes.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gbOrgPes.ForeColor = System.Drawing.Color.Black;
-            this.gbOrgPes.Location = new System.Drawing.Point(208, 95);
+            this.gbOrgPes.Location = new System.Drawing.Point(240, 95);
             this.gbOrgPes.Name = "gbOrgPes";
-            this.gbOrgPes.Size = new System.Drawing.Size(893, 344);
+            this.gbOrgPes.Size = new System.Drawing.Size(893, 348);
             this.gbOrgPes.TabIndex = 54;
             this.gbOrgPes.TabStop = false;
             this.gbOrgPes.Text = "DATOS GENERALES DE LA ORGANIZACIÓN PESQUERA";
@@ -443,7 +443,7 @@
             this.gbBotonesUE.Controls.Add(this.label6);
             this.gbBotonesUE.Controls.Add(this.label2);
             this.gbBotonesUE.Controls.Add(this.label1);
-            this.gbBotonesUE.Location = new System.Drawing.Point(676, 244);
+            this.gbBotonesUE.Location = new System.Drawing.Point(676, 248);
             this.gbBotonesUE.Name = "gbBotonesUE";
             this.gbBotonesUE.Size = new System.Drawing.Size(217, 100);
             this.gbBotonesUE.TabIndex = 132;
@@ -905,7 +905,7 @@
             this.Reportes.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Reportes;
             this.Reportes.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Reportes.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Reportes.Location = new System.Drawing.Point(409, 20);
+            this.Reportes.Location = new System.Drawing.Point(420, 20);
             this.Reportes.Name = "Reportes";
             this.Reportes.Size = new System.Drawing.Size(50, 50);
             this.Reportes.TabIndex = 170;
@@ -1018,9 +1018,9 @@
             this.Resumen.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Resumen.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Resumen.ForeColor = System.Drawing.Color.Black;
-            this.Resumen.Location = new System.Drawing.Point(1120, 95);
+            this.Resumen.Location = new System.Drawing.Point(1152, 95);
             this.Resumen.Name = "Resumen";
-            this.Resumen.Size = new System.Drawing.Size(381, 602);
+            this.Resumen.Size = new System.Drawing.Size(381, 685);
             this.Resumen.TabIndex = 101;
             this.Resumen.TabStop = false;
             // 
@@ -1054,10 +1054,10 @@
             this.linkLabel1.LinkColor = System.Drawing.Color.Black;
             this.linkLabel1.Location = new System.Drawing.Point(149, 49);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(15, 16);
+            this.linkLabel1.Size = new System.Drawing.Size(13, 16);
             this.linkLabel1.TabIndex = 18;
             this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "1";
+            this.linkLabel1.Text = "*";
             this.linkLabel1.Visible = false;
             this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Black;
             // 
@@ -1280,7 +1280,7 @@
             dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.DataResumen.DefaultCellStyle = dataGridViewCellStyle5;
             this.DataResumen.GridColor = System.Drawing.Color.White;
-            this.DataResumen.Location = new System.Drawing.Point(0, 319);
+            this.DataResumen.Location = new System.Drawing.Point(0, 353);
             this.DataResumen.MinimumSize = new System.Drawing.Size(100, 50);
             this.DataResumen.Name = "DataResumen";
             this.DataResumen.ReadOnly = true;
@@ -1300,7 +1300,7 @@
             dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle7.SelectionForeColor = System.Drawing.Color.Black;
             this.DataResumen.RowsDefaultCellStyle = dataGridViewCellStyle7;
-            this.DataResumen.Size = new System.Drawing.Size(365, 297);
+            this.DataResumen.Size = new System.Drawing.Size(365, 326);
             this.DataResumen.TabIndex = 8;
             // 
             // Pesquería
@@ -1336,7 +1336,7 @@
             // 
             this.label65.AutoSize = true;
             this.label65.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label65.Location = new System.Drawing.Point(7, 300);
+            this.label65.Location = new System.Drawing.Point(7, 334);
             this.label65.Name = "label65";
             this.label65.Size = new System.Drawing.Size(77, 16);
             this.label65.TabIndex = 6;
@@ -1438,7 +1438,7 @@
             this.label23.BackColor = System.Drawing.Color.Transparent;
             this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label23.ForeColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(1133, 80);
+            this.label23.Location = new System.Drawing.Point(1165, 80);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(91, 19);
             this.label23.TabIndex = 9;
@@ -1451,7 +1451,7 @@
             this.caToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1501, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1584, 24);
             this.menuStrip1.TabIndex = 115;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1525,10 +1525,10 @@
             this.ListaNombres.FormattingEnabled = true;
             this.ListaNombres.HorizontalScrollbar = true;
             this.ListaNombres.ItemHeight = 16;
-            this.ListaNombres.Location = new System.Drawing.Point(4, 332);
+            this.ListaNombres.Location = new System.Drawing.Point(6, 313);
             this.ListaNombres.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.ListaNombres.Name = "ListaNombres";
-            this.ListaNombres.Size = new System.Drawing.Size(165, 180);
+            this.ListaNombres.Size = new System.Drawing.Size(212, 196);
             this.ListaNombres.TabIndex = 185;
             this.ListaNombres.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListaNombres_MouseDoubleClick);
             // 
@@ -1536,11 +1536,11 @@
             // 
             this.BuscarN.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BuscarN.ForeColor = System.Drawing.Color.Black;
-            this.BuscarN.Location = new System.Drawing.Point(4, 303);
+            this.BuscarN.Location = new System.Drawing.Point(6, 284);
             this.BuscarN.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.BuscarN.MaxLength = 100;
             this.BuscarN.Name = "BuscarN";
-            this.BuscarN.Size = new System.Drawing.Size(165, 20);
+            this.BuscarN.Size = new System.Drawing.Size(212, 20);
             this.BuscarN.TabIndex = 184;
             this.BuscarN.TextChanged += new System.EventHandler(this.BuscarN_TextChanged);
             this.BuscarN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BuscarN_KeyPress);
@@ -1549,7 +1549,7 @@
             // 
             this.label25.AutoSize = true;
             this.label25.ForeColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(17, 285);
+            this.label25.Location = new System.Drawing.Point(19, 266);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(113, 13);
             this.label25.TabIndex = 183;
@@ -1564,7 +1564,7 @@
             this.ListaRNPA.ItemHeight = 15;
             this.ListaRNPA.Location = new System.Drawing.Point(4, 68);
             this.ListaRNPA.Name = "ListaRNPA";
-            this.ListaRNPA.Size = new System.Drawing.Size(165, 184);
+            this.ListaRNPA.Size = new System.Drawing.Size(212, 184);
             this.ListaRNPA.TabIndex = 182;
             this.ListaRNPA.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.ListaRNPA_MouseDoubleClick);
             // 
@@ -1575,7 +1575,7 @@
             this.BuscarR.Location = new System.Drawing.Point(4, 42);
             this.BuscarR.MaxLength = 10;
             this.BuscarR.Name = "BuscarR";
-            this.BuscarR.Size = new System.Drawing.Size(165, 20);
+            this.BuscarR.Size = new System.Drawing.Size(212, 20);
             this.BuscarR.TabIndex = 181;
             this.BuscarR.TextChanged += new System.EventHandler(this.BuscarR_TextChanged);
             this.BuscarR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.BuscarR_KeyPress);
@@ -1605,9 +1605,9 @@
             this.PanelRNPA.Controls.Add(this.label28);
             this.PanelRNPA.Controls.Add(this.label27);
             this.PanelRNPA.ForeColor = System.Drawing.Color.Black;
-            this.PanelRNPA.Location = new System.Drawing.Point(379, 182);
+            this.PanelRNPA.Location = new System.Drawing.Point(411, 182);
             this.PanelRNPA.Name = "PanelRNPA";
-            this.PanelRNPA.Size = new System.Drawing.Size(477, 212);
+            this.PanelRNPA.Size = new System.Drawing.Size(477, 217);
             this.PanelRNPA.TabIndex = 127;
             this.PanelRNPA.Visible = false;
             // 
@@ -1717,10 +1717,11 @@
             this.gbBotones.Controls.Add(this.label38);
             this.gbBotones.Controls.Add(this.Embarcaciones);
             this.gbBotones.Controls.Add(this.label37);
+            this.gbBotones.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.gbBotones.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbBotones.Location = new System.Drawing.Point(208, 449);
+            this.gbBotones.Location = new System.Drawing.Point(240, 461);
             this.gbBotones.Name = "gbBotones";
-            this.gbBotones.Size = new System.Drawing.Size(542, 166);
+            this.gbBotones.Size = new System.Drawing.Size(479, 167);
             this.gbBotones.TabIndex = 186;
             this.gbBotones.TabStop = false;
             this.gbBotones.Text = "Entidades";
@@ -1741,7 +1742,7 @@
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label42.ForeColor = System.Drawing.Color.Black;
-            this.label42.Location = new System.Drawing.Point(406, 73);
+            this.label42.Location = new System.Drawing.Point(417, 73);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(51, 14);
             this.label42.TabIndex = 171;
@@ -1763,11 +1764,11 @@
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label40.ForeColor = System.Drawing.Color.Black;
-            this.label40.Location = new System.Drawing.Point(6, 145);
+            this.label40.Location = new System.Drawing.Point(18, 145);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(101, 14);
+            this.label40.Size = new System.Drawing.Size(70, 14);
             this.label40.TabIndex = 167;
-            this.label40.Text = "Oficio Credenciales";
+            this.label40.Text = "Credenciales";
             // 
             // label39
             // 
@@ -1812,7 +1813,7 @@
             this.gbBusqueda.Controls.Add(this.BuscarR);
             this.gbBusqueda.Location = new System.Drawing.Point(12, 116);
             this.gbBusqueda.Name = "gbBusqueda";
-            this.gbBusqueda.Size = new System.Drawing.Size(172, 523);
+            this.gbBusqueda.Size = new System.Drawing.Size(222, 512);
             this.gbBusqueda.TabIndex = 187;
             this.gbBusqueda.TabStop = false;
             this.gbBusqueda.Text = "BUSCAR";
@@ -1832,9 +1833,9 @@
             this.panel1.Controls.Add(this.pictureBox12);
             this.panel1.Controls.Add(this.label35);
             this.panel1.ForeColor = System.Drawing.Color.Black;
-            this.panel1.Location = new System.Drawing.Point(423, 174);
+            this.panel1.Location = new System.Drawing.Point(455, 174);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(388, 232);
+            this.panel1.Size = new System.Drawing.Size(388, 244);
             this.panel1.TabIndex = 187;
             this.panel1.Visible = false;
             // 
@@ -1938,7 +1939,7 @@
             this.Bienvenido.AutoSize = true;
             this.Bienvenido.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bienvenido.ForeColor = System.Drawing.Color.DimGray;
-            this.Bienvenido.Location = new System.Drawing.Point(1117, 28);
+            this.Bienvenido.Location = new System.Drawing.Point(1149, 28);
             this.Bienvenido.Name = "Bienvenido";
             this.Bienvenido.Size = new System.Drawing.Size(75, 16);
             this.Bienvenido.TabIndex = 191;
@@ -1949,7 +1950,7 @@
             this.Logo.BackColor = System.Drawing.Color.Transparent;
             this.Logo.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Logo.Location = new System.Drawing.Point(866, 28);
+            this.Logo.Location = new System.Drawing.Point(933, 28);
             this.Logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(200, 60);
@@ -1961,7 +1962,7 @@
             this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox5.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox5.Location = new System.Drawing.Point(188, 28);
+            this.pictureBox5.Location = new System.Drawing.Point(240, 28);
             this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(50, 60);
@@ -1974,7 +1975,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1370, 749);
+            this.ClientSize = new System.Drawing.Size(1584, 792);
             this.Controls.Add(this.Bienvenido);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.PanelRNPA);
