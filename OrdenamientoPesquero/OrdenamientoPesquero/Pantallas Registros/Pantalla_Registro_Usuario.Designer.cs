@@ -189,6 +189,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.gbOtros = new System.Windows.Forms.GroupBox();
             this.btnEntregar = new System.Windows.Forms.Button();
+            this.ElPanel = new System.Windows.Forms.Panel();
             this.gbDatosGenerales.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Credencial)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActivarPanelCURP)).BeginInit();
@@ -232,6 +233,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.gbOtros.SuspendLayout();
+            this.ElPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // gbDatosGenerales
@@ -298,7 +300,7 @@
             this.gbDatosGenerales.Controls.Add(this.label53);
             this.gbDatosGenerales.Controls.Add(this.NombrePesc);
             this.gbDatosGenerales.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatosGenerales.Location = new System.Drawing.Point(244, 90);
+            this.gbDatosGenerales.Location = new System.Drawing.Point(244, 88);
             this.gbDatosGenerales.Name = "gbDatosGenerales";
             this.gbDatosGenerales.Size = new System.Drawing.Size(894, 383);
             this.gbDatosGenerales.TabIndex = 7;
@@ -1033,7 +1035,7 @@
             this.gbRelacion.Controls.Add(this.OcupacionEnEmbarPesc);
             this.gbRelacion.Controls.Add(this.TipoPesc);
             this.gbRelacion.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbRelacion.Location = new System.Drawing.Point(244, 476);
+            this.gbRelacion.Location = new System.Drawing.Point(244, 474);
             this.gbRelacion.Name = "gbRelacion";
             this.gbRelacion.Size = new System.Drawing.Size(894, 189);
             this.gbRelacion.TabIndex = 8;
@@ -1290,7 +1292,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(542, 31);
+            this.label24.Location = new System.Drawing.Point(542, 29);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(221, 19);
             this.label24.TabIndex = 153;
@@ -1477,7 +1479,7 @@
             this.gbInformacion.Controls.Add(this.label10);
             this.gbInformacion.Controls.Add(this.label9);
             this.gbInformacion.Controls.Add(this.Unid);
-            this.gbInformacion.Location = new System.Drawing.Point(1143, 81);
+            this.gbInformacion.Location = new System.Drawing.Point(1143, 79);
             this.gbInformacion.Name = "gbInformacion";
             this.gbInformacion.Size = new System.Drawing.Size(195, 393);
             this.gbInformacion.TabIndex = 154;
@@ -1688,7 +1690,7 @@
             this.gbBotones.Controls.Add(this.label2);
             this.gbBotones.Controls.Add(this.label3);
             this.gbBotones.Controls.Add(this.label4);
-            this.gbBotones.Location = new System.Drawing.Point(815, 665);
+            this.gbBotones.Location = new System.Drawing.Point(815, 663);
             this.gbBotones.Name = "gbBotones";
             this.gbBotones.Size = new System.Drawing.Size(541, 89);
             this.gbBotones.TabIndex = 181;
@@ -1752,7 +1754,7 @@
             this.PanelCURP.Controls.Add(this.label28);
             this.PanelCURP.Controls.Add(this.label27);
             this.PanelCURP.ForeColor = System.Drawing.Color.Black;
-            this.PanelCURP.Location = new System.Drawing.Point(402, 265);
+            this.PanelCURP.Location = new System.Drawing.Point(402, 263);
             this.PanelCURP.Name = "PanelCURP";
             this.PanelCURP.Size = new System.Drawing.Size(477, 212);
             this.PanelCURP.TabIndex = 182;
@@ -1869,7 +1871,7 @@
             this.gbBusqueda.Controls.Add(this.ListaNombres);
             this.gbBusqueda.Controls.Add(this.BuscarNombre2);
             this.gbBusqueda.Controls.Add(this.lblNo);
-            this.gbBusqueda.Location = new System.Drawing.Point(12, 90);
+            this.gbBusqueda.Location = new System.Drawing.Point(12, 88);
             this.gbBusqueda.Name = "gbBusqueda";
             this.gbBusqueda.Size = new System.Drawing.Size(225, 523);
             this.gbBusqueda.TabIndex = 188;
@@ -1901,7 +1903,7 @@
             this.PanelOcciso.Controls.Add(this.label19);
             this.PanelOcciso.Controls.Add(this.label20);
             this.PanelOcciso.ForeColor = System.Drawing.Color.Black;
-            this.PanelOcciso.Location = new System.Drawing.Point(398, 265);
+            this.PanelOcciso.Location = new System.Drawing.Point(398, 263);
             this.PanelOcciso.Name = "PanelOcciso";
             this.PanelOcciso.Size = new System.Drawing.Size(501, 373);
             this.PanelOcciso.TabIndex = 1;
@@ -2089,7 +2091,7 @@
             this.Bienvenido.AutoSize = true;
             this.Bienvenido.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Bienvenido.ForeColor = System.Drawing.Color.DimGray;
-            this.Bienvenido.Location = new System.Drawing.Point(1140, 13);
+            this.Bienvenido.Location = new System.Drawing.Point(1140, 11);
             this.Bienvenido.Name = "Bienvenido";
             this.Bienvenido.Size = new System.Drawing.Size(75, 16);
             this.Bienvenido.TabIndex = 192;
@@ -2100,7 +2102,7 @@
             this.Logo.BackColor = System.Drawing.Color.Transparent;
             this.Logo.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Logo.Location = new System.Drawing.Point(908, 13);
+            this.Logo.Location = new System.Drawing.Point(908, 11);
             this.Logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(200, 60);
@@ -2112,7 +2114,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(243, 13);
+            this.pictureBox2.Location = new System.Drawing.Point(243, 11);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 60);
@@ -2128,7 +2130,7 @@
             this.gbOtros.Controls.Add(this.Apoyo);
             this.gbOtros.Controls.Add(this.VerInforme);
             this.gbOtros.Controls.Add(this.AbrirExpediente);
-            this.gbOtros.Location = new System.Drawing.Point(244, 665);
+            this.gbOtros.Location = new System.Drawing.Point(244, 663);
             this.gbOtros.Name = "gbOtros";
             this.gbOtros.Size = new System.Drawing.Size(565, 89);
             this.gbOtros.TabIndex = 197;
@@ -2136,7 +2138,7 @@
             // 
             // btnEntregar
             // 
-            this.btnEntregar.Location = new System.Drawing.Point(39, 619);
+            this.btnEntregar.Location = new System.Drawing.Point(39, 617);
             this.btnEntregar.Name = "btnEntregar";
             this.btnEntregar.Size = new System.Drawing.Size(198, 30);
             this.btnEntregar.TabIndex = 198;
@@ -2145,6 +2147,26 @@
             this.btnEntregar.Visible = false;
             this.btnEntregar.Click += new System.EventHandler(this.btnEntregar_Click);
             // 
+            // ElPanel
+            // 
+            this.ElPanel.Controls.Add(this.gbBusqueda);
+            this.ElPanel.Controls.Add(this.btnEntregar);
+            this.ElPanel.Controls.Add(this.PanelCURP);
+            this.ElPanel.Controls.Add(this.gbOtros);
+            this.ElPanel.Controls.Add(this.PanelOcciso);
+            this.ElPanel.Controls.Add(this.Bienvenido);
+            this.ElPanel.Controls.Add(this.gbDatosGenerales);
+            this.ElPanel.Controls.Add(this.gbRelacion);
+            this.ElPanel.Controls.Add(this.gbBotones);
+            this.ElPanel.Controls.Add(this.label24);
+            this.ElPanel.Controls.Add(this.Logo);
+            this.ElPanel.Controls.Add(this.gbInformacion);
+            this.ElPanel.Controls.Add(this.pictureBox2);
+            this.ElPanel.Location = new System.Drawing.Point(0, 2);
+            this.ElPanel.Name = "ElPanel";
+            this.ElPanel.Size = new System.Drawing.Size(1375, 759);
+            this.ElPanel.TabIndex = 199;
+            // 
             // Pantalla_Registro_Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
@@ -2152,20 +2174,8 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1387, 749);
-            this.Controls.Add(this.btnEntregar);
-            this.Controls.Add(this.gbOtros);
-            this.Controls.Add(this.Bienvenido);
-            this.Controls.Add(this.gbBusqueda);
-            this.Controls.Add(this.gbBotones);
-            this.Controls.Add(this.Logo);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.gbInformacion);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.gbRelacion);
-            this.Controls.Add(this.gbDatosGenerales);
-            this.Controls.Add(this.PanelOcciso);
-            this.Controls.Add(this.PanelCURP);
+            this.ClientSize = new System.Drawing.Size(1387, 767);
+            this.Controls.Add(this.ElPanel);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Pantalla_Registro_Usuario";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -2173,6 +2183,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Pantalla_Registro_Usuario_FormClosing);
             this.Load += new System.EventHandler(this.Pantalla_Registro_Usuario_Load);
+            this.Resize += new System.EventHandler(this.Pantalla_Registro_Usuario_Resize);
             this.gbDatosGenerales.ResumeLayout(false);
             this.gbDatosGenerales.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Credencial)).EndInit();
@@ -2228,8 +2239,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.gbOtros.ResumeLayout(false);
             this.gbOtros.PerformLayout();
+            this.ElPanel.ResumeLayout(false);
+            this.ElPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -2393,5 +2405,6 @@
         private System.Windows.Forms.Button btnEntregar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel ElPanel;
     }
 }

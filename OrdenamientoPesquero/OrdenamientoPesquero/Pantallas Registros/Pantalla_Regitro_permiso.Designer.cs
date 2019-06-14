@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Pantalla_Regitro_permiso));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -131,6 +131,7 @@
             this.NPermisoNuevo = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
+            this.ElPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposPescaPerm)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbarcacionesPerm)).BeginInit();
             this.gbDatos.SuspendLayout();
@@ -157,6 +158,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarNPERMISO)).BeginInit();
+            this.ElPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -525,7 +527,7 @@
             this.gbDatos.Controls.Add(this.label29);
             this.gbDatos.Enabled = false;
             this.gbDatos.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gbDatos.Location = new System.Drawing.Point(234, 121);
+            this.gbDatos.Location = new System.Drawing.Point(229, 115);
             this.gbDatos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.gbDatos.Name = "gbDatos";
             this.gbDatos.Padding = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -818,7 +820,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(238, 90);
+            this.label19.Location = new System.Drawing.Point(233, 84);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(120, 16);
             this.label19.TabIndex = 118;
@@ -828,7 +830,7 @@
             // 
             this.Unid.AutoSize = true;
             this.Unid.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Unid.Location = new System.Drawing.Point(361, 88);
+            this.Unid.Location = new System.Drawing.Point(356, 82);
             this.Unid.Name = "Unid";
             this.Unid.Size = new System.Drawing.Size(70, 19);
             this.Unid.TabIndex = 119;
@@ -871,7 +873,7 @@
             // 
             this.label24.AutoSize = true;
             this.label24.Font = new System.Drawing.Font("Arial", 12.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(497, 39);
+            this.label24.Location = new System.Drawing.Point(492, 33);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(214, 19);
             this.label24.TabIndex = 151;
@@ -882,7 +884,7 @@
             this.Logo.BackColor = System.Drawing.Color.Transparent;
             this.Logo.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Logo.Location = new System.Drawing.Point(857, 23);
+            this.Logo.Location = new System.Drawing.Point(852, 17);
             this.Logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(200, 60);
@@ -894,7 +896,7 @@
             this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox2.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(241, 23);
+            this.pictureBox2.Location = new System.Drawing.Point(236, 17);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(50, 60);
@@ -1048,10 +1050,10 @@
             // 
             // dataGridViewCheckBoxColumn3
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle1.NullValue = false;
-            this.dataGridViewCheckBoxColumn3.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle5.NullValue = false;
+            this.dataGridViewCheckBoxColumn3.DefaultCellStyle = dataGridViewCellStyle5;
             this.dataGridViewCheckBoxColumn3.Frozen = true;
             this.dataGridViewCheckBoxColumn3.HeaderText = "Check";
             this.dataGridViewCheckBoxColumn3.Name = "dataGridViewCheckBoxColumn3";
@@ -1070,7 +1072,7 @@
             this.groupBox1.Controls.Add(this.SubirPDF);
             this.groupBox1.Controls.Add(this.label35);
             this.groupBox1.Controls.Add(this.AbrirPDF);
-            this.groupBox1.Location = new System.Drawing.Point(1063, 121);
+            this.groupBox1.Location = new System.Drawing.Point(1058, 115);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(217, 162);
             this.groupBox1.TabIndex = 225;
@@ -1081,7 +1083,7 @@
             // 
             this.gbBusqueda.Controls.Add(this.label11);
             this.gbBusqueda.Controls.Add(this.ListaPermisos);
-            this.gbBusqueda.Location = new System.Drawing.Point(12, 121);
+            this.gbBusqueda.Location = new System.Drawing.Point(7, 115);
             this.gbBusqueda.Name = "gbBusqueda";
             this.gbBusqueda.Size = new System.Drawing.Size(200, 521);
             this.gbBusqueda.TabIndex = 226;
@@ -1096,9 +1098,9 @@
             this.gbBotones.Controls.Add(this.label22);
             this.gbBotones.Controls.Add(this.label21);
             this.gbBotones.Controls.Add(this.label20);
-            this.gbBotones.Location = new System.Drawing.Point(878, 643);
+            this.gbBotones.Location = new System.Drawing.Point(873, 637);
             this.gbBotones.Name = "gbBotones";
-            this.gbBotones.Size = new System.Drawing.Size(179, 91);
+            this.gbBotones.Size = new System.Drawing.Size(179, 86);
             this.gbBotones.TabIndex = 227;
             this.gbBotones.TabStop = false;
             this.gbBotones.Text = "Acciones";
@@ -1107,7 +1109,7 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(1189, 332);
+            this.label36.Location = new System.Drawing.Point(1181, 326);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(100, 16);
             this.label36.TabIndex = 229;
@@ -1118,7 +1120,7 @@
             this.EliminarPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
             this.EliminarPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EliminarPDF.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EliminarPDF.Location = new System.Drawing.Point(1214, 289);
+            this.EliminarPDF.Location = new System.Drawing.Point(1209, 283);
             this.EliminarPDF.Name = "EliminarPDF";
             this.EliminarPDF.Size = new System.Drawing.Size(40, 40);
             this.EliminarPDF.TabIndex = 228;
@@ -1141,7 +1143,7 @@
             this.PanelPermiso.Controls.Add(this.label40);
             this.PanelPermiso.Controls.Add(this.label41);
             this.PanelPermiso.ForeColor = System.Drawing.Color.Black;
-            this.PanelPermiso.Location = new System.Drawing.Point(390, 193);
+            this.PanelPermiso.Location = new System.Drawing.Point(385, 187);
             this.PanelPermiso.Name = "PanelPermiso";
             this.PanelPermiso.Size = new System.Drawing.Size(477, 212);
             this.PanelPermiso.TabIndex = 183;
@@ -1276,25 +1278,33 @@
             this.label41.TabIndex = 128;
             this.label41.Text = "No. PERMISO Actual";
             // 
+            // ElPanel
+            // 
+            this.ElPanel.Controls.Add(this.gbBusqueda);
+            this.ElPanel.Controls.Add(this.PanelPermiso);
+            this.ElPanel.Controls.Add(this.gbDatos);
+            this.ElPanel.Controls.Add(this.label36);
+            this.ElPanel.Controls.Add(this.label19);
+            this.ElPanel.Controls.Add(this.gbBotones);
+            this.ElPanel.Controls.Add(this.Unid);
+            this.ElPanel.Controls.Add(this.pictureBox2);
+            this.ElPanel.Controls.Add(this.groupBox1);
+            this.ElPanel.Controls.Add(this.label24);
+            this.ElPanel.Controls.Add(this.Logo);
+            this.ElPanel.Controls.Add(this.EliminarPDF);
+            this.ElPanel.Location = new System.Drawing.Point(5, 6);
+            this.ElPanel.Name = "ElPanel";
+            this.ElPanel.Size = new System.Drawing.Size(1284, 728);
+            this.ElPanel.TabIndex = 230;
+            // 
             // Pantalla_Regitro_permiso
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1292, 736);
-            this.Controls.Add(this.PanelPermiso);
-            this.Controls.Add(this.label36);
-            this.Controls.Add(this.gbBotones);
-            this.Controls.Add(this.gbBusqueda);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.Logo);
-            this.Controls.Add(this.EliminarPDF);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.Unid);
-            this.Controls.Add(this.label19);
-            this.Controls.Add(this.gbDatos);
+            this.ClientSize = new System.Drawing.Size(1295, 737);
+            this.Controls.Add(this.ElPanel);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.comboBox4);
@@ -1329,6 +1339,7 @@
             this.Text = "Permisos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Pantalla_Regitro_permiso_Load);
+            this.Resize += new System.EventHandler(this.Pantalla_Regitro_permiso_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEquiposPescaPerm)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbarcacionesPerm)).EndInit();
             this.gbDatos.ResumeLayout(false);
@@ -1360,6 +1371,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.CerrarPanel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ActualizarNPERMISO)).EndInit();
+            this.ElPanel.ResumeLayout(false);
+            this.ElPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1468,5 +1481,6 @@
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.PictureBox ActivarPanelPermiso;
+        private System.Windows.Forms.Panel ElPanel;
     }
 }
