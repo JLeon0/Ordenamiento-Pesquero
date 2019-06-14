@@ -36,10 +36,25 @@ namespace OrdenamientoPesquero
             uni = unidad;
             NIVEL = nivel;
             CargarLogos();
+            Ajustar();
         }
         private void CargarLogos()
         {
             Logo.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
+        }
+        private void Pantalla_Regitro_permiso_Resize(object sender, EventArgs e)
+        {
+            Ajustar();
+        }
+        private void Ajustar()
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                int width = Screen.PrimaryScreen.Bounds.Width;
+                if (width > 1900)
+                    ElPanel.Location = new Point(((width / 100) * 10), ElPanel.Location.Y);
+            }
+            else { ElPanel.Location = new Point(0, ElPanel.Location.Y); }
         }
 
         private void ObtenerEmbarcaciones(bool load)
@@ -443,6 +458,8 @@ namespace OrdenamientoPesquero
                 }
             }
         }
+
+
 
         private void ListaPermisos_DoubleClick(object sender, EventArgs e)
         {

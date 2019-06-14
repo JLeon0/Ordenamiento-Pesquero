@@ -2009,6 +2009,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Pantalla_Registro_UnidadEconomica_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Pantalla_Registro_UnidadEconomica_FormClosed);
             this.Load += new System.EventHandler(this.Pantalla_Registro_UnidadEconomica_Load);
+            this.Resize += new System.EventHandler(this.Pantalla_Registro_UnidadEconomica_Resize);
             this.gbOrgPes.ResumeLayout(false);
             this.gbOrgPes.PerformLayout();
             this.gbBotonesUE.ResumeLayout(false);

@@ -45,12 +45,27 @@ namespace OrdenamientoPesquero
             NombreUsuario = nombreuser;
             NIVEL = nivel;
             CargarLogos();
+            Ajustar();
             BD = bdd;
         }
         private void CargarLogos()
         {
             Logo.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
             Logo1.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
+        }
+        private void Pantalla_Registro_Usuario_Resize(object sender, EventArgs e)
+        {
+            Ajustar();
+        }
+        private void Ajustar()
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                int width = Screen.PrimaryScreen.Bounds.Width;
+                if(width > 1900)
+                    ElPanel.Location = new Point(((width / 100) * 10), ElPanel.Location.Y);
+            }
+            else { ElPanel.Location = new Point(0, ElPanel.Location.Y); }
         }
 
         private void Pantalla_Registro_Usuario_Load(object sender, EventArgs e)
@@ -1387,6 +1402,7 @@ namespace OrdenamientoPesquero
             get { return currentReader; }
             set { currentReader = value; }
         }
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
