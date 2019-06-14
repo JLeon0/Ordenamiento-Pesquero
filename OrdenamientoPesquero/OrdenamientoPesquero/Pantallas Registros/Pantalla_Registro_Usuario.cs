@@ -33,7 +33,6 @@ namespace OrdenamientoPesquero
         public Pantalla_Registro_Usuario(string rnpa, string nombre, int tipo, string user, string nombreuser, int nivel, string bdd)
         {
             InitializeComponent();
-            //this.Height = Convert.ToInt32(System.Windows.Forms.SystemInformation.PrimaryMonitorSize.Height * .96);
             RNPA = rnpa;
             RNPA2 = rnpa;
             if (RNPA == "")
@@ -50,15 +49,14 @@ namespace OrdenamientoPesquero
         }
         private void CargarLogos()
         {
-            //Logo.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
-            //Logo1.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
+            Logo.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
+            Logo1.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
         }
 
         private void Pantalla_Registro_Usuario_Load(object sender, EventArgs e)
         {
             proc.bdd = BD;
             proc.cambiarbd(proc.bdd);
-            //val.ajustarResolucion(this);
             if (NIVEL == 0 || NIVEL == 4)
             {
                 ActivarPanelCURP.Visible = true;

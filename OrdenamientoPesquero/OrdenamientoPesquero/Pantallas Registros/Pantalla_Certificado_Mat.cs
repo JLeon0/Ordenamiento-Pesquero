@@ -27,7 +27,15 @@ namespace OrdenamientoPesquero
             RNPA = rnpa;
             NIVEL = nivel;
             CargarLogos();
+            Ajustar();
         }
+
+        private void Ajustar()
+        {
+            if(this.WindowState == FormWindowState.Maximized)
+            { panel1.Location = new Point(Screen.PrimaryScreen.Bounds.Width/6,panel1.Location.Y);}
+        }
+
         private void CargarLogos()
         {
             Logo.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
@@ -36,7 +44,6 @@ namespace OrdenamientoPesquero
 
         private void Pantalla_Certificado_Mat_Load(object sender, EventArgs e)
         {
-            val.ajustarResolucion(this);
             CertMatXUnidad();
             if(NIVEL == 0 || NIVEL == 4)
             {
@@ -50,6 +57,7 @@ namespace OrdenamientoPesquero
                 label4.Visible = true;
             }
         }
+
         void CertMatXUnidad()
         {
             dt = proc.ObtenerCertMatrXUnidad(RNPA);
@@ -123,6 +131,10 @@ namespace OrdenamientoPesquero
             { 
                 item.Text = "";
             }
+            foreach (Label item in groupBox1.Controls.OfType<Label>())
+            {
+                item.ForeColor = Color.Black;
+            }
             foreach (ComboBox item in gbVerificacion.Controls.OfType<ComboBox>())
             {
                 item.Text = "";
@@ -137,6 +149,7 @@ namespace OrdenamientoPesquero
             ArqBrutoCertMat.Text = "1.200";
             ArqNetoCertMat.Text = "0.840";
             PesoMCertMat.Text = "0.000";
+
         }
 
         private void CargarExpediente()
