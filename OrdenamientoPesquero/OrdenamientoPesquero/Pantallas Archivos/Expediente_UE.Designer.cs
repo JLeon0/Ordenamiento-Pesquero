@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Expediente_UE));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle28 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.Nombre = new System.Windows.Forms.Label();
@@ -80,6 +80,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.ElPanel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbarcacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPescadores)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnidad)).BeginInit();
@@ -95,13 +96,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.Logo2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvFaltantes)).BeginInit();
             this.groupBox1.SuspendLayout();
+            this.ElPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(477, 447);
+            this.label1.Location = new System.Drawing.Point(477, 438);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(121, 22);
             this.label1.TabIndex = 0;
@@ -109,13 +111,12 @@
             // 
             // label30
             // 
-            this.label30.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label30.AutoSize = true;
             this.label30.BackColor = System.Drawing.Color.Transparent;
             this.label30.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.Black;
             this.label30.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.label30.Location = new System.Drawing.Point(477, 36);
+            this.label30.Location = new System.Drawing.Point(477, 27);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(216, 22);
             this.label30.TabIndex = 202;
@@ -125,7 +126,7 @@
             // 
             this.Nombre.AutoSize = true;
             this.Nombre.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Nombre.Location = new System.Drawing.Point(463, 89);
+            this.Nombre.Location = new System.Drawing.Point(463, 80);
             this.Nombre.Name = "Nombre";
             this.Nombre.Size = new System.Drawing.Size(28, 17);
             this.Nombre.TabIndex = 203;
@@ -145,7 +146,7 @@
             this.dataGridViewCheckBoxColumn1,
             this.Registrados});
             this.dgvEmbarcacion.GridColor = System.Drawing.Color.White;
-            this.dgvEmbarcacion.Location = new System.Drawing.Point(68, 473);
+            this.dgvEmbarcacion.Location = new System.Drawing.Point(68, 464);
             this.dgvEmbarcacion.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvEmbarcacion.MultiSelect = false;
             this.dgvEmbarcacion.Name = "dgvEmbarcacion";
@@ -167,10 +168,10 @@
             // 
             // dataGridViewCheckBoxColumn1
             // 
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle1.NullValue = false;
-            this.dataGridViewCheckBoxColumn1.DefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle22.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle22.NullValue = false;
+            this.dataGridViewCheckBoxColumn1.DefaultCellStyle = dataGridViewCellStyle22;
             this.dataGridViewCheckBoxColumn1.Frozen = true;
             this.dataGridViewCheckBoxColumn1.HeaderText = "Check";
             this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
@@ -180,8 +181,8 @@
             // 
             // Registrados
             // 
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Registrados.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Registrados.DefaultCellStyle = dataGridViewCellStyle23;
             this.Registrados.Frozen = true;
             this.Registrados.HeaderText = "Registrados";
             this.Registrados.Name = "Registrados";
@@ -193,7 +194,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(64, 447);
+            this.label2.Location = new System.Drawing.Point(64, 438);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(155, 22);
             this.label2.TabIndex = 205;
@@ -213,7 +214,7 @@
             this.dataGridViewCheckBoxColumn2,
             this.dataGridViewTextBoxColumn2});
             this.dgvPescadores.GridColor = System.Drawing.Color.White;
-            this.dgvPescadores.Location = new System.Drawing.Point(481, 473);
+            this.dgvPescadores.Location = new System.Drawing.Point(481, 464);
             this.dgvPescadores.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvPescadores.MultiSelect = false;
             this.dgvPescadores.Name = "dgvPescadores";
@@ -235,10 +236,10 @@
             // 
             // dataGridViewCheckBoxColumn2
             // 
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle3.NullValue = false;
-            this.dataGridViewCheckBoxColumn2.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle24.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle24.NullValue = false;
+            this.dataGridViewCheckBoxColumn2.DefaultCellStyle = dataGridViewCellStyle24;
             this.dataGridViewCheckBoxColumn2.Frozen = true;
             this.dataGridViewCheckBoxColumn2.HeaderText = "Check";
             this.dataGridViewCheckBoxColumn2.Name = "dataGridViewCheckBoxColumn2";
@@ -248,8 +249,8 @@
             // 
             // dataGridViewTextBoxColumn2
             // 
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn2.DefaultCellStyle = dataGridViewCellStyle25;
             this.dataGridViewTextBoxColumn2.Frozen = true;
             this.dataGridViewTextBoxColumn2.HeaderText = "Registrados";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
@@ -270,7 +271,7 @@
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewCheckBoxColumn3});
             this.dgvUnidad.GridColor = System.Drawing.Color.White;
-            this.dgvUnidad.Location = new System.Drawing.Point(455, 110);
+            this.dgvUnidad.Location = new System.Drawing.Point(455, 101);
             this.dgvUnidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvUnidad.Name = "dgvUnidad";
             this.dgvUnidad.ReadOnly = true;
@@ -290,10 +291,10 @@
             // 
             // dataGridViewCheckBoxColumn3
             // 
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle5.NullValue = false;
-            this.dataGridViewCheckBoxColumn3.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle26.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle26.NullValue = false;
+            this.dataGridViewCheckBoxColumn3.DefaultCellStyle = dataGridViewCellStyle26;
             this.dataGridViewCheckBoxColumn3.Frozen = true;
             this.dataGridViewCheckBoxColumn3.HeaderText = "Check";
             this.dataGridViewCheckBoxColumn3.Name = "dataGridViewCheckBoxColumn3";
@@ -310,7 +311,7 @@
             this.AbrirPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.show;
             this.AbrirPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.AbrirPDF.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AbrirPDF.Location = new System.Drawing.Point(542, 314);
+            this.AbrirPDF.Location = new System.Drawing.Point(540, 317);
             this.AbrirPDF.Name = "AbrirPDF";
             this.AbrirPDF.Size = new System.Drawing.Size(50, 50);
             this.AbrirPDF.TabIndex = 211;
@@ -323,7 +324,7 @@
             this.SubirPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.GuardarArchivo;
             this.SubirPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.SubirPDF.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SubirPDF.Location = new System.Drawing.Point(455, 314);
+            this.SubirPDF.Location = new System.Drawing.Point(453, 317);
             this.SubirPDF.Name = "SubirPDF";
             this.SubirPDF.Size = new System.Drawing.Size(50, 50);
             this.SubirPDF.TabIndex = 210;
@@ -337,7 +338,7 @@
             this.EliminarPDF.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.borrar;
             this.EliminarPDF.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.EliminarPDF.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.EliminarPDF.Location = new System.Drawing.Point(715, 314);
+            this.EliminarPDF.Location = new System.Drawing.Point(713, 317);
             this.EliminarPDF.Name = "EliminarPDF";
             this.EliminarPDF.Size = new System.Drawing.Size(50, 50);
             this.EliminarPDF.TabIndex = 222;
@@ -365,7 +366,7 @@
             this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox8.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Logo_BCS__Escudo_estatal_;
             this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox8.Location = new System.Drawing.Point(131, 13);
+            this.pictureBox8.Location = new System.Drawing.Point(131, 4);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(50, 60);
@@ -374,11 +375,10 @@
             // 
             // Logo
             // 
-            this.Logo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.Logo.BackColor = System.Drawing.Color.Transparent;
             this.Logo.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.logo_Gobierno_H_;
             this.Logo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.Logo.Location = new System.Drawing.Point(993, 13);
+            this.Logo.Location = new System.Drawing.Point(993, 4);
             this.Logo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Logo.Name = "Logo";
             this.Logo.Size = new System.Drawing.Size(200, 60);
@@ -388,7 +388,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(531, 367);
+            this.label3.Location = new System.Drawing.Point(529, 370);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(80, 16);
             this.label3.TabIndex = 219;
@@ -397,7 +397,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(443, 367);
+            this.label4.Location = new System.Drawing.Point(441, 370);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(83, 16);
             this.label4.TabIndex = 218;
@@ -418,7 +418,7 @@
             this.dataGridViewCheckBoxColumn4,
             this.dataGridViewTextBoxColumn5});
             this.dgvPermisos.GridColor = System.Drawing.Color.White;
-            this.dgvPermisos.Location = new System.Drawing.Point(859, 473);
+            this.dgvPermisos.Location = new System.Drawing.Point(859, 464);
             this.dgvPermisos.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvPermisos.MultiSelect = false;
             this.dgvPermisos.Name = "dgvPermisos";
@@ -440,10 +440,10 @@
             // 
             // dataGridViewCheckBoxColumn4
             // 
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.Red;
-            dataGridViewCellStyle6.NullValue = false;
-            this.dataGridViewCheckBoxColumn4.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle27.BackColor = System.Drawing.Color.Red;
+            dataGridViewCellStyle27.NullValue = false;
+            this.dataGridViewCheckBoxColumn4.DefaultCellStyle = dataGridViewCellStyle27;
             this.dataGridViewCheckBoxColumn4.Frozen = true;
             this.dataGridViewCheckBoxColumn4.HeaderText = "Check";
             this.dataGridViewCheckBoxColumn4.Name = "dataGridViewCheckBoxColumn4";
@@ -453,8 +453,8 @@
             // 
             // dataGridViewTextBoxColumn5
             // 
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dataGridViewTextBoxColumn5.DefaultCellStyle = dataGridViewCellStyle28;
             this.dataGridViewTextBoxColumn5.Frozen = true;
             this.dataGridViewTextBoxColumn5.HeaderText = "Registrados";
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
@@ -466,7 +466,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(855, 447);
+            this.label5.Location = new System.Drawing.Point(855, 438);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(98, 22);
             this.label5.TabIndex = 221;
@@ -475,7 +475,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(689, 367);
+            this.label6.Location = new System.Drawing.Point(687, 370);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(100, 16);
             this.label6.TabIndex = 223;
@@ -489,7 +489,7 @@
             this.panel1.Controls.Add(this.Logo2);
             this.panel1.Controls.Add(this.CerrarPanel);
             this.panel1.Controls.Add(this.dgvFaltantes);
-            this.panel1.Location = new System.Drawing.Point(332, 202);
+            this.panel1.Location = new System.Drawing.Point(326, 141);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(577, 284);
             this.panel1.TabIndex = 224;
@@ -560,7 +560,7 @@
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(396, 674);
+            this.groupBox1.Location = new System.Drawing.Point(396, 665);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(465, 47);
             this.groupBox1.TabIndex = 225;
@@ -637,37 +637,46 @@
             this.label8.TabIndex = 0;
             this.label8.Text = "Ningún Archivo";
             // 
+            // ElPanel
+            // 
+            this.ElPanel.Controls.Add(this.pictureBox8);
+            this.ElPanel.Controls.Add(this.groupBox1);
+            this.ElPanel.Controls.Add(this.label1);
+            this.ElPanel.Controls.Add(this.panel1);
+            this.ElPanel.Controls.Add(this.Logo);
+            this.ElPanel.Controls.Add(this.label6);
+            this.ElPanel.Controls.Add(this.label30);
+            this.ElPanel.Controls.Add(this.EliminarPDF);
+            this.ElPanel.Controls.Add(this.Nombre);
+            this.ElPanel.Controls.Add(this.label5);
+            this.ElPanel.Controls.Add(this.dgvEmbarcacion);
+            this.ElPanel.Controls.Add(this.dgvPermisos);
+            this.ElPanel.Controls.Add(this.label2);
+            this.ElPanel.Controls.Add(this.label3);
+            this.ElPanel.Controls.Add(this.dgvPescadores);
+            this.ElPanel.Controls.Add(this.label4);
+            this.ElPanel.Controls.Add(this.dgvUnidad);
+            this.ElPanel.Controls.Add(this.AbrirPDF);
+            this.ElPanel.Controls.Add(this.SubirPDF);
+            this.ElPanel.Location = new System.Drawing.Point(2, 3);
+            this.ElPanel.Name = "ElPanel";
+            this.ElPanel.Size = new System.Drawing.Size(1207, 725);
+            this.ElPanel.TabIndex = 226;
+            // 
             // Expediente_UE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(1221, 732);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.panel1);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.EliminarPDF);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.dgvPermisos);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.AbrirPDF);
-            this.Controls.Add(this.SubirPDF);
-            this.Controls.Add(this.dgvUnidad);
-            this.Controls.Add(this.dgvPescadores);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgvEmbarcacion);
-            this.Controls.Add(this.Nombre);
-            this.Controls.Add(this.label30);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.Logo);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ElPanel);
             this.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "Expediente_UE";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Expediente_UE";
             this.Load += new System.EventHandler(this.Expediente_UE_Load);
+            this.Resize += new System.EventHandler(this.Expediente_UE_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.dgvEmbarcacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPescadores)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUnidad)).EndInit();
@@ -685,8 +694,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgvFaltantes)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.ElPanel.ResumeLayout(false);
+            this.ElPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -735,5 +745,6 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel ElPanel;
     }
 }

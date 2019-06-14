@@ -29,11 +29,28 @@ namespace OrdenamientoPesquero.Pantallas_Archivos
             TIPO = tipo;
             NIVEL = nivel;
             CargarLogos();
+            Ajustar();
+        }
+
+        private void Ajustar()
+        {
+            if (this.WindowState == FormWindowState.Maximized)
+            {
+                int width = Screen.PrimaryScreen.Bounds.Width;
+                if(width > 1900)
+                    ElPanel.Location = new Point(((width / 100) * 15), ElPanel.Location.Y);
+            }
+            else { ElPanel.Location = new Point(0, ElPanel.Location.Y); }
+        }
+        private void Expediente_UE_Resize(object sender, EventArgs e)
+        {
+            Ajustar();
         }
         private void CargarLogos()
         {
             Logo.BackgroundImage = Image.FromFile(Path.Combine(Application.StartupPath, "Logo.png"));
         }
+
 
         private void Expediente_UE_Load(object sender, EventArgs e)
         {
