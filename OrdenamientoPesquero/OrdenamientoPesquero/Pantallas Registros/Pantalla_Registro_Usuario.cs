@@ -897,16 +897,21 @@ namespace OrdenamientoPesquero
         {
             if (val.validarcurp(CurpNuevo.Text))
             {
-                pictureBox11.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
-                FechaNacPesc.Value = val.Fechanac(CurpNuevo.Text);
-                if (CurpNuevo.Text[10] == 'H')
+                try
                 {
-                    MasculinoPesc.Checked = true;
+                    pictureBox11.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+                    val.Fechanac(CurpNuevo.Text);
+                    if (CurpNuevo.Text[10] == 'H')
+                    {
+                        MasculinoPesc.Checked = true;
+                    }
+                    else
+                    {
+                        FemeninoPesc.Checked = true;
+                    }
                 }
-                else
-                {
-                    FemeninoPesc.Checked = true;
-                }
+                catch (Exception)
+                { MessageBox.Show("El CURP del pescador tiene mal la Fecha de Nacimiento", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error); }
             }
             else
             {
