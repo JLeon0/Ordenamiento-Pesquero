@@ -326,6 +326,7 @@ namespace OrdenamientoPesquero
             gbVerificacion.Enabled = false;
             PanelMATRICULA.Visible = true;
             PanelMATRICULA.Enabled = true;
+            PanelMATRICULA.BringToFront();
         }
 
         private void CerrarPanel_Click(object sender, EventArgs e)
@@ -336,6 +337,7 @@ namespace OrdenamientoPesquero
             gbVerificacion.Enabled = true;
             PanelMATRICULA.Visible = false;
             PanelMATRICULA.Enabled = false;
+            PanelMATRICULA.SendToBack();
             MatriculaNueva.Text = "";
         }
 
