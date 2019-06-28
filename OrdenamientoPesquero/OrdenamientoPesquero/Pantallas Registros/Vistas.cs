@@ -542,10 +542,18 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                         datos8.Name = "DataSet8";
                         datos8.Value = obtenerSolicitudesxRnpaTableAdapter.GetData(rnpa);
                         this.reportViewer1.LocalReport.DataSources.Add(datos8);
-
                         datos9.Name = "DataSet9";
-                        datos9.Value = obtenerApoyosxRnpaTableAdapter.GetData( rnpa);
-                        this.reportViewer1.LocalReport.DataSources.Add(datos9);
+                        try
+                        {
+                            datos9.Value = obtenerApoyosxRnpaTableAdapter.GetData(rnpa);
+                            this.reportViewer1.LocalReport.DataSources.Add(datos9);
+                        }
+                        catch (Exception)
+                        {
+                            datos9.Value= obtenerSolicitudesxRnpaTableAdapter.GetData(rnpa);
+                            this.reportViewer1.LocalReport.DataSources.Add(datos9);
+                        }
+
 
                         datos10.Name = "DataSet10";
                         datos10.Value = obtenerAtendidasxRnpaTableAdapter.GetData(rnpa);

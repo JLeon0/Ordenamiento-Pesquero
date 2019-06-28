@@ -415,11 +415,19 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             {
                 if (a.Checked)
                 {
-                    if (a.Text != "Tipo"&&a.Text!="Año"&&a.Text!="Unidad")
+                    if (a.Text != "Tipo"&&a.Text!="Año"&&a.Text!="Unidad" && a.Text != "Municipio" && a.Text != "Localidad")
                     {
                         consulta += " AND b." + a.Text.Replace(" ", "_").ToLower() + " = ";
                     }
-                int m = 0;
+                    if (a.Text=="Municipio")
+                    {
+                        consulta += " AND b.curp in (SELECT CURP FROM PESCADOR WHERE MUNICIPIO= '" + comboBox29.Text + "')";
+                    }
+                    if (a.Text == "Localidad")
+                    {
+                        consulta += " AND b.curp in (SELECT CURP FROM PESCADOR WHERE Localidad= '" + comboBox30.Text + "')";
+                    }
+                    int m = 0;
                 foreach (ComboBox cb in FiltrosSolicitudes.Controls.OfType<ComboBox>())
                 {
                     if (a.Text == "Tipo")
@@ -442,7 +450,15 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     }
                     else
                     {
-                        if (a.Text == "Prioridad")
+                            if (a.Text=="Municipio")
+                            {
+                                break;
+                            }
+                            if (a.Text == "Localidad")
+                            {
+                                break;
+                            }
+                            if (a.Text == "Prioridad")
                         {
                             consulta += "'" + numericUpDown1.Text + "'";
                             break;
@@ -682,8 +698,8 @@ namespace OrdenamientoPesquero.Pantallas_Registros
         {
             this.reportViewer1.ProcessingMode = ProcessingMode.Local;
             reportViewer1.LocalReport.ReportPath = Path.Combine(Application.StartupPath, "Occisos_Personal.rdlc");
-            bool[] column = new bool[18];
-            string[] dato = new string[18];
+            bool[] column = new bool[24];
+            string[] dato = new string[24];
             int i = 0;
             foreach (CheckBox a in ColumnasOccisos.Controls)
             {
@@ -701,7 +717,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 para[c] = new ReportParameter(dato[c], column[c].ToString());
             }
             reportViewer1.LocalReport.SetParameters(para);
-            string consulta = "Select FOLIO, OCCISOS.NOMBRE + ' '+OCCISOS.AP_PAT +' '+ OCCISOS.AP_MAT AS 'NOMBRE',OCCISOS.FECHA_NACIMIENTO,SEGURO, CURP, OCCISOS.MUNICIPIO, OCCISOS.LOCALIDAD, TIPO_OCCISOS, OCUPACION_LABORAL, TELEFONO, CORREO, CALLENUM+', Col. '+COLONIA AS 'DIRECCION', ESCOLARIDAD,RFC, ORDENAMIENTO, OCCISOS.MATRICULA, NOMBREEMBARCACION AS EMBARCACION, (SELECT NOMBRE FROM UNIDAD_ECONOMICA WHERE RNPTITULAR=RNPA) As Unidad from OCCISOS, EMBARCACIONES WHERE OCCISOS.MATRICULA = EMBARCACIONES.MATRICULA";
+            string consulta = "Select FOLIO, OCCISOS.NOMBRE + ' '+OCCISOS.AP_PAT +' '+ OCCISOS.AP_MAT AS 'NOMBRE',OCCISOS.FECHA_NACIMIENTO,SEGURO, CURP, OCCISOS.MUNICIPIO, OCCISOS.LOCALIDAD, TIPO_PESCADOR, OCUPACION_LABORAL, TELEFONO, CORREO, CALLENUM+', Col. '+COLONIA AS 'DIRECCION', ESCOLARIDAD,RFC, ORDENAMIENTO, OCCISOS.MATRICULA, NOMBREEMBARCACION AS EMBARCACION, (SELECT NOMBRE FROM UNIDAD_ECONOMICA WHERE RNPTITULAR=RNPA) As Unidad from OCCISOS, EMBARCACIONES WHERE OCCISOS.MATRICULA = EMBARCACIONES.MATRICULA";
             int r = 0;
             foreach (CheckBox a in FiltrosOccisos.Controls.OfType<CheckBox>())
             {
@@ -709,7 +725,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                 {
                     if (a.Text == "Municipio")
                     {
-                        consulta += " AND PESCADOR." + a.Text.Replace(" ", "_").ToLower() + " = ";
+                        consulta += " AND OCCISOS." + a.Text.Replace(" ", "_").ToLower() + " = ";
                     }
                     else
                     {
@@ -726,7 +742,7 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     int m = 0;
                     foreach (ComboBox cb in FiltrosPescador.Controls.OfType<ComboBox>())
                     {
-                        if (m == r)
+                        if (m == r+1)
                         {
                             if (a.Text == "U.E.")
                             {
@@ -735,8 +751,9 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                             }
                             else
                             {
-                                consulta += "'" + cb.Text + "'";
-                                break;
+                                    consulta += "'" + cb.Text + "'";
+                                    break;
+                                
                             }
                         }
                         m++;
@@ -746,8 +763,36 @@ namespace OrdenamientoPesquero.Pantallas_Registros
             }
             consulta += " Order by " + OrdenaPescador.Text.Replace(" ", "_");
             ds.Value = proc.ObtenerTablaConsulta(consulta);
+            ds.Name = "Consulta";
             this.reportViewer1.LocalReport.DataSources.Add(ds);
             this.reportViewer1.RefreshReport();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dt = proc.ObtenerLocalidades(Municipios[comboBox2.SelectedIndex]);
+            comboBox27.DataSource = dt;
+            comboBox27.DisplayMember = "NombreL";
+            comboBox27.ValueMember = "NombreL";
+            comboBox27.Text = "Seleccione una Localidad";
+        }
+
+        private void comboBox9_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dt = proc.ObtenerLocalidades(Municipios[comboBox9.SelectedIndex]);
+            comboBox28.DataSource = dt;
+            comboBox28.DisplayMember = "NombreL";
+            comboBox28.ValueMember = "NombreL";
+            comboBox28.Text = "Seleccione una Localidad";
+        }
+
+        private void comboBox29_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            dt = proc.ObtenerLocalidades(Municipios[comboBox29.SelectedIndex]);
+            comboBox30.DataSource = dt;
+            comboBox30.DisplayMember = "NombreL";
+            comboBox30.ValueMember = "NombreL";
+            comboBox30.Text = "Seleccione una Localidad";
         }
     }
 }
