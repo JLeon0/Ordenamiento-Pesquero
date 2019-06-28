@@ -1766,7 +1766,7 @@
             this.pictureBox11.BackgroundImage = global::OrdenamientoPesquero.Properties.Resources.Equis;
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox11.Image = global::OrdenamientoPesquero.Properties.Resources.verde;
-            this.pictureBox11.Location = new System.Drawing.Point(229, 136);
+            this.pictureBox11.Location = new System.Drawing.Point(249, 136);
             this.pictureBox11.Name = "pictureBox11";
             this.pictureBox11.Size = new System.Drawing.Size(23, 21);
             this.pictureBox11.TabIndex = 187;
@@ -1833,9 +1833,9 @@
             // 
             this.CurpNuevo.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CurpNuevo.Location = new System.Drawing.Point(43, 134);
-            this.CurpNuevo.MaxLength = 20;
+            this.CurpNuevo.MaxLength = 18;
             this.CurpNuevo.Name = "CurpNuevo";
-            this.CurpNuevo.Size = new System.Drawing.Size(180, 25);
+            this.CurpNuevo.Size = new System.Drawing.Size(200, 25);
             this.CurpNuevo.TabIndex = 131;
             this.CurpNuevo.TextChanged += new System.EventHandler(this.CurpNuevo_TextChanged);
             // 

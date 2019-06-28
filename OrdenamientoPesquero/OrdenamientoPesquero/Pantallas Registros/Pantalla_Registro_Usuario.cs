@@ -208,8 +208,6 @@ namespace OrdenamientoPesquero
                     {
                         if (registrar)
                         {
-                            RegistrarImagen();
-                            proc.reg_uni(pes.CURP, uni2.Text);
                             exito = proc.Registrar_Pescador(pes);
                             if (exito > 0)
                             {
@@ -219,11 +217,7 @@ namespace OrdenamientoPesquero
                             else return exito;
                         }
                         else
-                        {
-                            RegistrarImagen();
-                            proc.act_uni(pes.CURP, uni2.Text);
-                            return proc.Actualizar_Pescador(pes);
-                        }
+                        { return proc.Actualizar_Pescador(pes); }
                     }
                 }
                 return ret;
@@ -237,8 +231,6 @@ namespace OrdenamientoPesquero
                 pes = new Pescador(NombrePesc.Text, ApePatPescador.Text, ApeMatPescador.Text, CURPPesc.Text.Replace(" ", ""), RFCPesc.Text.Replace(" ", ""), EscolaridadPesc.Text, TSangrePesc.Text, sexo, LugarNacPesc.Text, fechaNac, CalleYNumPesc.Text, ColoniaPesc.Text, MunicipioPesc.Text, CPPesc.Text, TelefonoPesc.Text, "", "Sin Actividad", "", matricula, CorreoPesc.Text, LocalidadPesc.Text, 0, R, Seguro.Text, fechaVenF, fechaExpF);
                 if (registrar)
                 {
-                    RegistrarImagen();
-                    proc.reg_uni(pes.CURP, uni2.Text);
                     exito = proc.Registrar_Pescador(pes);
                     if (exito > 0)
                     {
@@ -248,11 +240,7 @@ namespace OrdenamientoPesquero
                     else return exito;
                 }
                 else
-                {
-                    RegistrarImagen();
-                    proc.act_uni(pes.CURP, uni2.Text);
-                    return proc.Actualizar_Pescador(pes);
-                }
+                { return proc.Actualizar_Pescador(pes); }
             }
         }
 
@@ -518,6 +506,7 @@ namespace OrdenamientoPesquero
                     if (boton.Text == tipopescador)
                     {
                         boton.Checked = true;
+                        break;
                     }
                 }
                 foreach (RadioButton boton in CuerpoDeAguaPesc.Controls)
@@ -525,6 +514,7 @@ namespace OrdenamientoPesquero
                     if (boton.Text == cuerpoagua)
                     {
                         boton.Checked = true;
+                        break;
                     }
                 }
                 foreach (RadioButton boton in OcupacionEnEmbarPesc.Controls)
@@ -532,6 +522,7 @@ namespace OrdenamientoPesquero
                     if (boton.Text == ocupacion)
                     {
                         boton.Checked = true;
+                        break;
                     }
                 }
                 if (ord == 1) { si.Checked = true; }
@@ -622,18 +613,24 @@ namespace OrdenamientoPesquero
         {
             if (val.validarcurp(CURPPesc.Text))
             {
-                pictureBox9.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
-                pescador[0, 0] = "1";
-                FechaNacPesc.Value = val.Fechanac(CURPPesc.Text);
-                if (CURPPesc.Text[10] == 'H')
+                try
                 {
-                    MasculinoPesc.Checked = true;
+                    pictureBox9.BackgroundImage = OrdenamientoPesquero.Properties.Resources.verde;
+                    pescador[0, 0] = "1";
+                    FechaNacPesc.Value = val.Fechanac(CURPPesc.Text);
+                    if (CURPPesc.Text[10] == 'H')
+                    {
+                        MasculinoPesc.Checked = true;
+                    }
+                    else
+                    {
+                        FemeninoPesc.Checked = true;
+                    }
+                    if (CURPPesc.TextLength >= 9 && RFCPesc.Text == "") { RFCPesc.Text = CURPPesc.Text.Substring(0, 10); }
                 }
-                else
-                {
-                    FemeninoPesc.Checked = true;
+                catch(Exception) {
+                    MessageBox.Show("El CURP del pescador tiene mal la Fecha de Nacimiento", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
-                if (CURPPesc.TextLength >= 9 && RFCPesc.Text == "") { RFCPesc.Text = CURPPesc.Text.Substring(0, 10); }
             }
             else
             {
@@ -887,10 +884,11 @@ namespace OrdenamientoPesquero
                     {
                         CURPPesc.Text = CurpNuevo.Text;
                         MessageBox.Show("CURP Actualizado");
+                        CargarPescadores();
+                        CargarNoPescadores();
                     }
                     else { MessageBox.Show("CURP Ya existe"); }
-                    CargarPescadores();
-                    CargarNoPescadores();
+               
                 }
             }
         }
@@ -928,6 +926,11 @@ namespace OrdenamientoPesquero
                     exito = AccionesPescador(false);
                 }
                 else { exito = -12; }
+            }
+            if(exito > 0)
+            {
+                RegistrarImagen();
+                proc.act_uni(pes.CURP, uni2.Text);
             }
             val.Exito(exito);
             exito = 0;
