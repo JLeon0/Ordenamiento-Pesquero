@@ -829,6 +829,89 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     this.reportViewer1.LocalReport.DataSources.Add(datos2);
                     reportViewer1.RefreshReport();
                     break;
+                case 17:
+                    dtx = proc.RNPAXMunicipio(rnpa);
+                    muni = rnpa;
+                    nombre = "";
+                    for (int r = 0; r < dtx.Rows.Count; r++)
+                    {
+                        nombre = "XXXXXX";
+                        byte[] file;
+                        string path = "";
+
+                                DataTable nom;
+                                DataTable pescadores = proc.ObtenerExpedientePescadorXUnidad(dtx.Rows[r][0].ToString());
+                                DataTable embarcaciones = proc.ObtenerExpedienteEmbarcacionXUnidad(dtx.Rows[r][0].ToString());
+                                DataTable unidad = proc.ObtenerExpedienteUnidad(dtx.Rows[r][0].ToString());
+                                DataTable permisos = proc.ObtenerNoPermisos(dtx.Rows[r][0].ToString());
+                                if (!Directory.Exists(@"C:\EXPEDIENTE\"+muni+@"\" + dtx.Rows[r][1].ToString() + @"\"))
+                                {
+                                    DirectoryInfo di = Directory.CreateDirectory(@"C:\EXPEDIENTE\"+muni+@"\" + dtx.Rows[r][1].ToString() + @"\");
+                                }
+                                if (!Directory.Exists(@"C:\EXPEDIENTE\"+muni+@"\" + dtx.Rows[r][1].ToString() + @"\" + "PESCADORES" + @"\"))
+                                {
+                                    DirectoryInfo di1 = Directory.CreateDirectory(@"C:\EXPEDIENTE\"+muni+@"\" + dtx.Rows[r][1].ToString() + @"\" + "PESCADORES" + @"\");
+                                }
+                                if (!Directory.Exists(@"C:\EXPEDIENTE\"+muni+@"\" + dtx.Rows[r][1].ToString() + @"\" + "EMBARCACIONES" + @"\"))
+                                {
+                                    DirectoryInfo di2 = Directory.CreateDirectory(@"C:\EXPEDIENTE\"+muni+@"\" + dtx.Rows[r][1].ToString() + @"\" + "EMBARCACIONES" + @"\");
+                                }
+                                if (!Directory.Exists(@"C:\EXPEDIENTE\"+muni+@"\" + dtx.Rows[r][1].ToString() + @"\" + "PERMISOS" + @"\"))
+                                {
+                                    DirectoryInfo di3 = Directory.CreateDirectory(@"C:\EXPEDIENTE\"+muni+@"\" + dtx.Rows[r][1].ToString() + @"\" + "PERMISOS" + @"\");
+                                }
+                                path = @"C:\EXPEDIENTE\"+muni+@"\" + dtx.Rows[r][1].ToString() + @"\";
+                                if (unidad.Rows.Count != 0)
+                                {
+                                    CrearArchivo(path + "ACTA CONSTTUTIVA.PDF", unidad.Rows[0]["ACTACONS"]);
+                                    CrearArchivo(path + "ACTA DE ASAMBLEA.PDF", unidad.Rows[0]["ACTAASAMBLEA"]);
+                                    CrearArchivo(path + "RFC.PDF", unidad.Rows[0]["RFCUE"]);
+                                    CrearArchivo(path + "COMPROBANTE DE DOMICILIO.PDF", unidad.Rows[0]["COMPDOM"]);
+                                    CrearArchivo(path + "CEDULA DE INSCRIPCION.PDF", unidad.Rows[0]["CEDINSCRUE"]);
+                                    CrearArchivo(path + "CEDULA DE EMBARCACIONES.PDF", unidad.Rows[0]["CEDINSCREMBARCA"]);
+                                    CrearArchivo(path + "OTRO.PDF", unidad.Rows[0]["OTRO"]);
+                                }
+
+                                for (int i = 0; i < pescadores.Rows.Count; i++)
+                                {
+
+                                    nom = proc.Obtener_Pescador(pescadores.Rows[i]["CURP"].ToString());
+                                    nombre = nom.Rows[0]["NOMBRE"].ToString() + " " + nom.Rows[0]["AP_PAT"].ToString() + " " + nom.Rows[0]["AP_MAT"].ToString();
+                                    if (!Directory.Exists(path + @"\PESCADORES\" + nombre + @"\"))
+                                    {
+                                        DirectoryInfo di = Directory.CreateDirectory(path + @"\PESCADORES\" + nombre + @"\");
+                                    }
+                                    CrearArchivo(path + @"\PESCADORES\" + nombre + @"\ACTA DE NACIMIENTO.PDF", pescadores.Rows[i]["ACTANAC"]);
+                                    CrearArchivo(path + @"\PESCADORES\" + nombre + @"\CURP.PDF", pescadores.Rows[i]["ACURP"]);
+                                    CrearArchivo(path + @"\PESCADORES\" + nombre + @"\INE.PDF", pescadores.Rows[i]["AINE"]);
+                                    CrearArchivo(path + @"PESCADORES\" + nombre + @"\COMPROBANTE DE DOMICILIO.PDF", pescadores.Rows[i]["ACOMPDOM"]);
+                                    CrearArchivo(path + @"PESCADORES\" + nombre + @"\IMAGEN.PNG", pescadores.Rows[i]["IMAGEN"]);
+                                    CrearArchivo(path + @"PESCADORES\" + nombre + @"\HUELLA.PNG", pescadores.Rows[i]["HUELLA"]);
+                                    CrearArchivo(path + @"PESCADORES\" + nombre + @"\FIRMA.PNG", pescadores.Rows[i]["FIRMA"]);
+                                }
+                                for (int i = 0; i < embarcaciones.Rows.Count; i++)
+                                {
+                                    nom = proc.ObtenerEmbarca(embarcaciones.Rows[i]["MATRICULA"].ToString());
+                                    nombre = nom.Rows[0]["NOMBREEMBARCACION"].ToString();
+                                    if (!Directory.Exists(path + @"\PESCADORES\" + nombre + @"\"))
+                                    {
+                                        DirectoryInfo di = Directory.CreateDirectory(path + @"\EMBARCACIONES\" + nombre + @"\");
+                                    }
+                                    CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\CERTIFICADO DE MATRICULA.PDF", embarcaciones.Rows[i]["CERTMATRICULA"]);
+                                    CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\CERTIFICADO DE SEGURIDAD.PDF", embarcaciones.Rows[i]["CERTSEGURIDAD"]);
+                                    CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\FACTURA DE ARTES DE PESCA.PDF", embarcaciones.Rows[i]["FACTARTESPESCA"]);
+                                    CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\FACTURA DE MOTOR.PDF", embarcaciones.Rows[i]["FACTMOTOR"]);
+                                    CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\FACTURA DE EMBARCACION.PDF", embarcaciones.Rows[i]["FACTEMBARCACION"]);
+                                    CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\PAPELETA DE CHIPEO.PDF", embarcaciones.Rows[i]["PAPELETACHIPEO"]);
+                                    CrearArchivo(path + @"EMBARCACIONES\" + nombre + @"\FOTO DE EMBARCACION.PDF", embarcaciones.Rows[i]["FOTOEMB"]);
+                                }
+                                for (int C = 0; C < permisos.Rows.Count; C++)
+                                {
+                                    CrearArchivo(path + @"PERMISOS\" + permisos.Rows[C]["PESQUERIA"].ToString() + ".pdf", permisos.Rows[C]["APERMISO"]);
+                                }
+                            }
+                    MessageBox.Show("Expediente Generado Correctamente");
+                    break;
                 default:
                     break;
             }
@@ -843,6 +926,13 @@ namespace OrdenamientoPesquero.Pantallas_Registros
                     info = extension.GetType().GetField("m_isVisible", BindingFlags.Instance | BindingFlags.NonPublic);
                     info.SetValue(extension, false);
                 }
+            }
+        }
+        private void CrearArchivo(string path, object file)
+        {
+            if (file != System.DBNull.Value)
+            {
+                File.WriteAllBytes(path, (byte[])file);
             }
         }
     }
